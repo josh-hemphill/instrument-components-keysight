@@ -97,7 +97,7 @@ jobs:
           import os,pathlib,subprocess,json,urllib.request,urllib.error,time
           settings=json.loads(pathlib.Path('driver-package.json').read_text());version=settings['version']
           # Allow registry index propagation; no source/artifact substitute.
-          for attempt in range(30):
+          for attempt in range(180):
               try:
                   with urllib.request.urlopen('https://api.nuget.org/v3-flatcontainer/'+settings['nugetPackage'].lower()+'/index.json',timeout=30) as response:found=version in json.load(response)['versions']
                   request=urllib.request.Request('https://crates.io/api/v1/crates/'+settings['rustPackage']+'/'+version,headers={'User-Agent':'instrument-components preview validation'})
