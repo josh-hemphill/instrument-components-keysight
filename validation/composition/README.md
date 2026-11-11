@@ -39,3 +39,14 @@ CI uses sudo only for this isolated execution.
 After previews are published, the driver preview workflows also run fresh
 public-registry package consumers. Record those separately. Physical evidence
 is collected later using the reviewed configuration in `validation/bench`.
+
+## Post-publication registry gate
+
+After all previews are approved and published, dispatch `composition.yml` with
+`public_registry=true`. The same immutable source/case references and artifact
+audits remain, but Cargo and NuGet consumer caches start empty and resolve all
+implementations from crates.io/nuget.org. No artifact feed is configured for those
+consumer restores. The report labels `public-registry` and records actually
+consumed public package hashes separately from reference artifact hashes. This
+mode is prepared but cannot be executed while those package versions are absent.
+A bootstrap run never substitutes for this gate.

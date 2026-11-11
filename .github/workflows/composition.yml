@@ -1,6 +1,11 @@
 name: All-five static application and bench software
 on:
   workflow_dispatch:
+    inputs:
+      public_registry:
+        description: After approved publication, resolve consumer implementations only from public registries
+        type: boolean
+        default: false
   pull_request:
     paths: ['validation/composition/**', 'validation/bench/**', '.github/workflows/composition.yml']
 permissions:
@@ -64,10 +69,11 @@ jobs:
         shell: python
         env:
           PROOF_FRAMEWORK: ${{ matrix.framework }}
+          PUBLIC_REGISTRY: ${{ inputs.public_registry || false }}
         run: |
           import pathlib,os,subprocess,sys
           root=pathlib.Path(os.environ['RUNNER_TEMP']);inputs=root/'composition-inputs'
-          subprocess.run([sys.executable,'validation/composition/validate.py','--sdk-artifacts',str(root/'sdk-artifact'),'--driver-artifacts',str(inputs/'drivers'),'--sources',str(inputs/'sources'),'--output',str(root/'composition-proof'),'--framework',os.environ['PROOF_FRAMEWORK']],check=True)
+          subprocess.run([sys.executable,'validation/composition/validate.py','--sdk-artifacts',str(root/'sdk-artifact'),'--driver-artifacts',str(inputs/'drivers'),'--sources',str(inputs/'sources'),'--output',str(root/'composition-proof'),'--framework',os.environ['PROOF_FRAMEWORK']]+(['--public-registry'] if os.environ['PUBLIC_REGISTRY']=='true' else []),check=True)
       # Bench transport bootstrap is separate from the package-only Native AOT
       # application above. Only this later software gate needs standards VISA.
       - uses: actions/checkout@v4

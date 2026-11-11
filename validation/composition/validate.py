@@ -16,8 +16,11 @@ def source_sha(path):
  # Git's Windows checkout may use CRLF. Compare canonical source text while
  # retaining exact byte hashes for every transferred archive and checksum file.
  return hashlib.sha256(path.read_bytes().replace(b'\r\n',b'\n')).hexdigest()
+def configure_public_registry(env,out,dotnet):
+ publicCargo=out/'public-cargo-home';publicCargo.mkdir();env['CARGO_HOME']=str(publicCargo)
+ (dotnet/'NuGet.Config').write_text('<configuration><packageSources><clear/><add key="nuget" value="https://api.nuget.org/v3/index.json"/></packageSources></configuration>')
 def main():
- p=argparse.ArgumentParser(description=__doc__);p.add_argument('--sdk-artifacts',type=Path,required=True);p.add_argument('--driver-artifacts',type=Path,required=True);p.add_argument('--sources',type=Path,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--framework',choices=['net8.0','net10.0'],required=True);p.add_argument('--development-inputs',action='store_true');a=p.parse_args()
+ p=argparse.ArgumentParser(description=__doc__);p.add_argument('--sdk-artifacts',type=Path,required=True);p.add_argument('--driver-artifacts',type=Path,required=True);p.add_argument('--sources',type=Path,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--framework',choices=['net8.0','net10.0'],required=True);p.add_argument('--development-inputs',action='store_true');p.add_argument('--public-registry',action='store_true',help='Resolve all consumer implementations from public registries with fresh caches; artifacts remain golden/provenance references only');a=p.parse_args()
  out=a.output.resolve()
  if out==ROOT or ROOT in out.parents or out in ROOT.parents:raise ValueError('Separate output directory required')
  if out.exists() and any(out.iterdir()):raise ValueError('Empty output directory required')
@@ -65,7 +68,10 @@ def main():
  manifest='[package]\nname="all-device-composition"\nversion="0.0.0"\nedition="2021"\npublish=false\n[workspace]\n[dependencies]\n'+''.join(n+'="='+VERSION+'"\n' for n in names)+'tokio={version="1",features=["rt","macros"],optional=true}\n[features]\ndefault=[]\nasync=['+','.join(json.dumps(n+'/async') for n in names)+',"dep:tokio"]\n';(rust/'Cargo.toml').write_text(manifest)
  template=(a.sources/'keysight/validation/dotnet/DriverProof.csproj').read_text();template=template[:template.index('<ItemGroup>')]+'<ItemGroup>'+''.join('<PackageReference Include="'+n+'" Version="['+VERSION+']"/>' for n in ['InstrumentComponents','InstrumentComponents.Runtime','InstrumentComponents.TestKit']+['InstrumentComponents.Drivers.'+v.title() for v in VENDORS])+'</ItemGroup></Project>';(dotnet/'Composition.csproj').write_text(template.replace('net8.0',a.framework))
  shutil.copy2(feed['nugetConfig'],dotnet/'NuGet.Config')
- env=dict(os.environ,CARGO_HOME=feed['CARGO_HOME'],CARGO_TARGET_DIR=str(out/'cargo-target'),NUGET_PACKAGES=str(out/'nuget-cache'),DOTNET_CLI_HOME=str(out/'dotnet-home'),DOTNET_NOLOGO='1',DOTNET_CLI_TELEMETRY_OPTOUT='1');records=[]
+ env=dict(os.environ,CARGO_HOME=feed['CARGO_HOME'],CARGO_TARGET_DIR=str(out/'cargo-target'),NUGET_PACKAGES=str(out/'nuget-cache'),DOTNET_CLI_HOME=str(out/'dotnet-home'),DOTNET_NOLOGO='1',DOTNET_CLI_TELEMETRY_OPTOUT='1');records=[];publicPackages=[]
+ if a.public_registry:
+  configure_public_registry(env,out,dotnet)
+ cargoOffline=[] if a.public_registry else ['--offline']
  def run(name,cmd,cwd=out,negative=False):
   print(name,flush=True);log=out/(name+'.log')
   with log.open('w') as stream:r=subprocess.run(list(map(str,cmd)),cwd=cwd,env=env,stdout=stream,stderr=subprocess.STDOUT)
@@ -73,12 +79,24 @@ def main():
   if (r.returncode==0 or any(not re.search(r'\berror '+diagnostic+r'\b',text) for diagnostic in ['IL2026','IL3050'])) if negative else (r.returncode!=0 or re.search(r'\bwarning IL\d+\b',text,re.I)):raise ValueError(name+' failed:\n'+text[-10000:])
   return text
  for feature in [[],['--features','async']]:
-  tag='async' if feature else 'default';run('rust-'+tag,['cargo','run','--offline','--release']+feature,rust);run('rust-'+tag+'-clippy',['cargo','clippy','--offline','--release']+feature+['--','-D','warnings'],rust)
-  metadata=json.loads(run('rust-'+tag+'-metadata',['cargo','metadata','--offline','--format-version','1']+feature,rust))
+  tag='async' if feature else 'default';run('rust-'+tag,['cargo','run']+cargoOffline+['--release']+feature,rust);run('rust-'+tag+'-clippy',['cargo','clippy']+cargoOffline+['--release']+feature+['--','-D','warnings'],rust)
+  metadata=json.loads(run('rust-'+tag+'-metadata',['cargo','metadata']+cargoOffline+['--format-version','1']+feature,rust))
   if any(p['name'] in names and not (p.get('source') or '').startswith('registry+') for p in metadata['packages']):raise ValueError('Source implementation leaked into app')
+ if a.public_registry:
+  lockData=tomllib.loads((rust/'Cargo.lock').read_text())
+  for package in lockData['package']:
+   if package['name'] in names:
+    if package.get('source')!='registry+https://github.com/rust-lang/crates.io-index':raise ValueError('Expected public crates.io implementation')
+    publicPackages.append(dict(ecosystem='Cargo',name=package['name'],version=package['version'],sha256=package['checksum']))
  rid='win-x64' if os.name=='nt' else 'linux-x64';native=out/'native';publish=['dotnet','publish','Composition.csproj','-c','Release','-r',rid,'--self-contained','true','-o',native,'--configfile',dotnet/'NuGet.Config'];run('native-publish',publish,dotnet)
  assets=json.loads((dotnet/'obj/project.assets.json').read_text())
  if any(v['type']!='package' for v in assets['libraries'].values()):raise ValueError('ProjectReference in app')
+ if a.public_registry:
+  for key in assets['libraries']:
+   name,version=key.split('/')
+   if name.startswith('InstrumentComponents'):
+    archive=Path(env['NUGET_PACKAGES'])/name.lower()/version.lower()/(name.lower()+'.'+version.lower()+'.nupkg')
+    publicPackages.append(dict(ecosystem='NuGet',name=name,version=version,sha256=sha(archive)))
  binary=native/('Composition.exe' if os.name=='nt' else 'Composition');data=binary.read_bytes()
  if os.name=='nt':
   offset=struct.unpack_from('<I',data,0x3c)[0];optional=offset+24
@@ -97,6 +115,6 @@ def main():
   run('native-runtime-isolation',command)
  with (dotnet/'Program.cs').open('a') as stream:stream.write('\ninternal static class WarningProbe{[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("intentional gate")][System.Diagnostics.CodeAnalysis.RequiresDynamicCode("intentional AOT gate")]internal static void Trigger(){} internal static void Run()=>Trigger();}\n')
  path=dotnet/'Program.cs';path.write_text(path.read_text().replace('await Composition.Run();','WarningProbe.Run();await Composition.Run();'));run('negative-native-warning',publish,dotnet,negative=True)
- (out/'composition.json').write_text(json.dumps(dict(mode='local-bootstrap-development' if a.development_inputs else 'pinned-ci-artifact-bootstrap',lockSha256=sha(ROOT/'composition-lock.json'),rid=rid,framework=a.framework,nativeExecuted=True,sha256=sha(binary),inputs=inputs,sdkPackages=feed['packages']),indent=2)+'\n')
- print('PASS static all-five app; bootstrap evidence only, not public registry or hardware evidence',flush=True)
+ (out/'composition.json').write_text(json.dumps(dict(mode='public-registry' if a.public_registry else 'local-bootstrap-development' if a.development_inputs else 'pinned-ci-artifact-bootstrap',lockSha256=sha(ROOT/'composition-lock.json'),rid=rid,framework=a.framework,nativeExecuted=True,sha256=sha(binary),referenceArtifactInputs=inputs,consumedPublicPackages=publicPackages,sdkArtifactHashes=feed['packages']),indent=2)+'\n')
+ print('PASS static all-five app; '+('public-registry package execution; physical evidence remains unverified' if a.public_registry else 'bootstrap evidence only, not public registry or hardware evidence'),flush=True)
 if __name__=='__main__':main()
