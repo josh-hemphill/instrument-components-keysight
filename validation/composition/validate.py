@@ -12,6 +12,10 @@ from instrument_driver_tools.feeds import prepare,extract,VERSION
 ROOT=Path(__file__).resolve().parent
 VENDORS=['keysight','keithley','rigol','siglent','tektronix']
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
+def source_sha(path):
+ # Git's Windows checkout may use CRLF. Compare canonical source text while
+ # retaining exact byte hashes for every transferred archive and checksum file.
+ return hashlib.sha256(path.read_bytes().replace(b'\r\n',b'\n')).hexdigest()
 def main():
  p=argparse.ArgumentParser(description=__doc__);p.add_argument('--sdk-artifacts',type=Path,required=True);p.add_argument('--driver-artifacts',type=Path,required=True);p.add_argument('--sources',type=Path,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--framework',choices=['net8.0','net10.0'],required=True);p.add_argument('--development-inputs',action='store_true');a=p.parse_args()
  out=a.output.resolve()
@@ -38,7 +42,7 @@ def main():
     extract(archive,registry);directory=registry/(row['package']+'-'+VERSION);cargo=tomllib.loads((directory/'Cargo.toml').read_text());deps=cargo.get('dependencies',{})
     if set(deps)!={'instrument-api','instrument-scpi'} or any(d.get('version')!='='+VERSION or 'path' in d or 'git' in d for d in deps.values()):raise ValueError('Driver Rust dependency boundary')
     for file in ['src/lib.rs','generated/profiles.rs']:
-     if sha(directory/file)!=entry['goldenFiles'][file]:raise ValueError('Packaged Rust implementation differs from locked source')
+     if source_sha(directory/file)!=entry['goldenFiles'][file]:raise ValueError('Packaged Rust implementation differs from locked source')
     if any('provenance' in part.parts or 'cases' in part.name.lower() for part in directory.rglob('*')):raise ValueError('Development assets bundled in driver')
     files={str(f.relative_to(directory)).replace('\\','/'):sha(f) for f in directory.rglob('*') if f.is_file()}
     (directory/'.cargo-checksum.json').write_text(json.dumps(dict(files=files,package=row['sha256'])))

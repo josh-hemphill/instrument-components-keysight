@@ -49,6 +49,7 @@ jobs:
           row=rows[0];files=list(artifact.rglob(pathlib.PurePosixPath(row['archive'].replace('\\','/')).name))
           if len(files)!=1 or hashlib.sha256(files[0].read_bytes()).hexdigest()!=row['sha256']:raise SystemExit('Tool checksum mismatch')
           subprocess.run([sys.executable,'-m','pip','install',str(files[0])],check=True)
+      - run: python -m unittest discover -s validation/composition -p 'test_*.py'
       - name: Fetch locked independent driver inputs and verify GitHub artifact digests
         shell: python
         env:
