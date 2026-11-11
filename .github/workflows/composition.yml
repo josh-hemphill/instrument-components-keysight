@@ -1,5 +1,15 @@
 name: All-five static application and bench software
 on:
+  workflow_call:
+    inputs:
+      public_registry:
+        description: Resolve implementations only from public registries
+        type: boolean
+        default: false
+      reuse_sdk_artifacts:
+        description: Reuse SDK artifacts already produced by the caller's conformance gate
+        type: boolean
+        default: false
   workflow_dispatch:
     inputs:
       public_registry:
@@ -13,12 +23,14 @@ permissions:
   actions: read
 jobs:
   sdk:
+    if: ${{ !inputs.reuse_sdk_artifacts }}
     uses: josh-hemphill/instrument-components/.github/workflows/driver-sdk.yml@f49baf1bb8e03a179f23d4cb9ba4d4fae4d24f25
     with:
       source_repository: josh-hemphill/instrument-components
       source_ref: f49baf1bb8e03a179f23d4cb9ba4d4fae4d24f25
   composition:
     needs: sdk
+    if: ${{ always() && (needs.sdk.result == 'success' || (inputs.reuse_sdk_artifacts && needs.sdk.result == 'skipped')) }}
     strategy:
       fail-fast: false
       matrix:

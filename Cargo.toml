@@ -5,7 +5,7 @@ edition = "2021"
 license = "MIT OR Apache-2.0"
 description = "Source-derived Keysight device profiles; hardware validation pending"
 repository = "https://github.com/josh-hemphill/instrument-components-keysight"
-include = ["src/**", "generated/profiles.rs", "LICENSE-*", "README.md"]
+include = ["src/**", "generated/profiles.rs", "/LICENSE-*", "/README.md"]
 [dependencies]
 instrument-api = "=0.2.0-alpha.1"
 instrument-scpi = "=0.2.0-alpha.1"

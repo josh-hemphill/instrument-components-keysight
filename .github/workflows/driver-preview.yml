@@ -113,3 +113,9 @@ jobs:
           rid='win-x64' if os.name=='nt' else 'linux-x64';out=temp/'public-native'
           subprocess.run(['dotnet','publish',str(project),'-c','Release','-r',rid,'--self-contained','true','-o',str(out)],env=env,check=True)
           subprocess.run([str(out/('DriverProof.exe' if os.name=='nt' else 'DriverProof'))],env=env,check=True)
+  all-five-public:
+    needs: public-consumer
+    uses: ./.github/workflows/composition.yml
+    with:
+      public_registry: true
+      reuse_sdk_artifacts: true
