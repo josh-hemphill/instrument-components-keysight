@@ -1,0 +1,99 @@
+name: All-five static application and bench software
+on:
+  workflow_dispatch:
+  pull_request:
+    paths: ['validation/composition/**', 'validation/bench/**', '.github/workflows/composition.yml']
+permissions:
+  contents: read
+  actions: read
+jobs:
+  sdk:
+    uses: josh-hemphill/instrument-components/.github/workflows/driver-sdk.yml@8b0a6714f72b022a8f764ff4bc4f6e2f390f077b
+    with:
+      source_repository: josh-hemphill/instrument-components
+      source_ref: 8b0a6714f72b022a8f764ff4bc4f6e2f390f077b
+  composition:
+    needs: sdk
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        framework: [net8.0, net10.0]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            8.0.x
+            10.0.x
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y clang zlib1g-dev bubblewrap
+      - uses: actions/download-artifact@v4
+        with:
+          name: driver-sdk-${{ matrix.os }}-${{ matrix.framework }}
+          path: ${{ runner.temp }}/sdk-artifact
+      - name: Verify and install the pinned SDK tool
+        shell: python
+        run: |
+          import hashlib,json,pathlib,os,subprocess,sys
+          artifact=pathlib.Path(os.environ['RUNNER_TEMP'])/'sdk-artifact'
+          rows=[r for r in json.loads((artifact/'packages.json').read_text()) if r['package']=='instrument-driver-tools']
+          if len(rows)!=1:raise SystemExit('Expected one SDK wheel')
+          row=rows[0];files=list(artifact.rglob(pathlib.PurePosixPath(row['archive'].replace('\\','/')).name))
+          if len(files)!=1 or hashlib.sha256(files[0].read_bytes()).hexdigest()!=row['sha256']:raise SystemExit('Tool checksum mismatch')
+          subprocess.run([sys.executable,'-m','pip','install',str(files[0])],check=True)
+      - name: Fetch locked independent driver inputs and verify GitHub artifact digests
+        shell: python
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PROOF_OS: ${{ matrix.os }}
+          PROOF_FRAMEWORK: ${{ matrix.framework }}
+        run: |
+          import pathlib,os,subprocess,sys
+          out=pathlib.Path(os.environ['RUNNER_TEMP'])/'composition-inputs'
+          subprocess.run([sys.executable,'validation/composition/fetch-inputs.py','--output',str(out),'--os',os.environ['PROOF_OS'],'--framework',os.environ['PROOF_FRAMEWORK']],check=True)
+      - name: Package-only all-five app, four frontends, Native AOT and warning gate
+        shell: python
+        env:
+          PROOF_FRAMEWORK: ${{ matrix.framework }}
+        run: |
+          import pathlib,os,subprocess,sys
+          root=pathlib.Path(os.environ['RUNNER_TEMP']);inputs=root/'composition-inputs'
+          subprocess.run([sys.executable,'validation/composition/validate.py','--sdk-artifacts',str(root/'sdk-artifact'),'--driver-artifacts',str(inputs/'drivers'),'--sources',str(inputs/'sources'),'--output',str(root/'composition-proof'),'--framework',os.environ['PROOF_FRAMEWORK']],check=True)
+      # Bench transport bootstrap is separate from the package-only Native AOT
+      # application above. Only this later software gate needs standards VISA.
+      - uses: actions/checkout@v4
+        with:
+          repository: josh-hemphill/instrument-components
+          ref: 8b0a6714f72b022a8f764ff4bc4f6e2f390f077b
+          path: standards-bootstrap
+          persist-credentials: false
+      - name: Pack the standards transport, then run bench self-test and config validation
+        shell: python
+        run: |
+          import os,pathlib,shutil,subprocess
+          root=pathlib.Path(os.environ['RUNNER_TEMP']);proof=root/'composition-proof';feed=proof/'feeds/nuget-feed';source=pathlib.Path('standards-bootstrap')
+          subprocess.run(['dotnet','pack',str(source/'dotnet/src/InstrumentComponents.Visa/InstrumentComponents.Visa.csproj'),'-c','Release','-o',str(feed)],check=True)
+          shutil.rmtree(source)
+          bench=root/'bench-software';shutil.copytree('validation/bench',bench,ignore=shutil.ignore_patterns('bin','obj','packages.lock.json'))
+          shutil.copy2(proof/'feeds/NuGet.Config',bench/'NuGet.Config')
+          for args in [['--self-test'],['--validate-config','--config',str(bench/'configs/example.json')]]:
+              subprocess.run(['dotnet','run','--project',str(bench/'Bench.csproj'),'-c','Release','--']+args,check=True)
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: composition-${{ matrix.os }}-${{ matrix.framework }}
+          path: |
+            ${{ runner.temp }}/composition-proof/*.json
+            ${{ runner.temp }}/composition-proof/*.log
+            ${{ runner.temp }}/composition-proof/native/Composition*
+            ${{ runner.temp }}/composition-inputs/verified-inputs.json
+            ${{ runner.temp }}/bench-software/packages.lock.json
+          if-no-files-found: error
