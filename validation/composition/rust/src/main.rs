@@ -34,7 +34,13 @@ fn matching()->Result<()>{
     let same=Identity{manufacturer:Some("Keysight Technologies".into()),model:Some("34401A".into()),vendor_id:Some(0x0957),product_id:Some(0x0607),..Identity::default()};
     assert_eq!(registry.select(&candidate(same.clone()),&Selection::default())?.driver_id,"keysight.34401a");
     let conflict=Identity{manufacturer:Some("Keithley Instruments".into()),model:Some("2602B".into()),..same};
-    assert_eq!(registry.select(&candidate(conflict),&Selection::default()).unwrap_err().kind,ErrorKind::AmbiguousDriver);
+    let conflict=candidate(conflict);
+    assert_eq!(registry.select(&conflict,&Selection::default()).unwrap_err().kind,ErrorKind::AmbiguousDriver);
+    let preferred=Selection{preferences:[("keithley.2602b".into(),7)].into_iter().collect(),..Selection::default()};
+    let evidence=registry.select(&conflict,&preferred)?;assert_eq!(evidence.driver_id,"keithley.2602b");assert!(!evidence.explicit);
+    let forced=Selection{driver_id:Some("keysight.34401a".into()),..preferred};
+    let evidence=registry.select(&conflict,&forced)?;assert_eq!(evidence.driver_id,"keysight.34401a");assert!(evidence.explicit);
+    assert_eq!(registry.select(&conflict,&Selection{driver_id:Some("synthetic.not-registered".into()),..Selection::default()}).unwrap_err().kind,ErrorKind::DriverNotFound);
     let mut a=all[0].descriptor();a.id="synthetic.equal-a".into();let mut b=a.clone();b.id="synthetic.equal-b".into();
     let c=match &a.rules[0]{MatchRule::ExactIdentity{manufacturer,model,..}=>candidate(Identity{manufacturer:Some(manufacturer.clone()),model:Some(model.clone()),..Identity::default()}),_=>panic!("Expected model")};
     assert_eq!(DriverRegistry::new([Arc::new(Alias(a)) as Arc<dyn DriverFactory>,Arc::new(Alias(b))])?.select(&c,&Selection::default()).unwrap_err().kind,ErrorKind::AmbiguousDriver);

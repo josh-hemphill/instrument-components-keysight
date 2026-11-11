@@ -23,7 +23,12 @@ internal static class Composition{
     Require(hints==47&&usb==1,"Hint coverage");
     var same=new Identity("Keysight Technologies","34401A",VendorId:0x0957,ProductId:0x0607);
     Require(registry.Select(Candidate(same)).DriverId=="keysight.34401a","Combined identity");
-    ExpectAmbiguous(()=>registry.Select(Candidate(same with{Manufacturer="Keithley Instruments",Model="2602B"})));
+    var conflict=Candidate(same with{Manufacturer="Keithley Instruments",Model="2602B"});
+    ExpectAmbiguous(()=>registry.Select(conflict));
+    var preferences=new Dictionary<string,int>{{"keithley.2602b",7}};
+    var preferred=registry.Select(conflict,new(Preferences:preferences));Require(preferred.DriverId=="keithley.2602b"&&!preferred.Explicit,"Composed preference");
+    var forced=registry.Select(conflict,new(DriverId:"keysight.34401a",Preferences:preferences));Require(forced.DriverId=="keysight.34401a"&&forced.Explicit,"Explicit override must take precedence over preferences");
+    try{registry.Select(conflict,new(DriverId:"synthetic.not-registered"));throw new InvalidOperationException("Unknown explicit driver accepted");}catch(DriverException error)when(error.Kind==DriverErrorKind.DriverNotFound){}
     var original=factories[0].Descriptor;var rule0=(ExactIdentityRule)original.Rules[0];
     var duplicate=new DriverRegistry([new Alias(new("synthetic.equal-a",original.ContractMajor,original.Rules,original.Operations)),new Alias(new("synthetic.equal-b",original.ContractMajor,original.Rules,original.Operations))]);
     ExpectAmbiguous(()=>duplicate.Select(Candidate(new(rule0.Manufacturer,rule0.Model))));Require(empty.Opens==0,"Passive matching used IO");
