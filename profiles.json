@@ -1,0 +1,5436 @@
+{
+  "schemaVersion": 1,
+  "contractMajor": 1,
+  "profiles": [
+    {
+      "id": "keysight.33220a",
+      "channels": [
+        1
+      ],
+      "outputs": null,
+      "rules": [
+        {
+          "manufacturer": "Agilent Technologies",
+          "model": "33220A"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "FunctionGeneratorSetWaveform",
+          "steps": [
+            {
+              "command": ":SOUR:FUNC {waveform}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "waveform": {
+              "Sine": "SIN",
+              "Square": "SQU",
+              "Ramp": "RAMP",
+              "Pulse": "PULS",
+              "Noise": "NOIS",
+              "Dc": "DC"
+            }
+          }
+        },
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "steps": [
+            {
+              "command": ":SOUR:FREQ {hz}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "FunctionGeneratorSetAmplitude",
+          "steps": [
+            {
+              "command": ":SOUR:VOLT {vpp}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "FunctionGeneratorSetOffset",
+          "steps": [
+            {
+              "command": ":SOUR:VOLT:OFFS {volts}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "FunctionGeneratorSetDutyCycle",
+          "steps": [
+            {
+              "command": ":SOUR:FUNC:SQU:DCYC {percent}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "FunctionGeneratorSetLoad",
+          "steps": [
+            {
+              "command": ":OUTP:LOAD {ohms}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "FunctionGeneratorOutputEnable",
+          "steps": [
+            {
+              "command": ":OUTP {enabled}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "enabled": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "FunctionGeneratorSetBurstCount",
+          "steps": [
+            {
+              "command": ":SOUR:BURS:NCYC {count}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "FunctionGeneratorSetBurstState",
+          "steps": [
+            {
+              "command": ":SOUR:BURS:STAT {enabled}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "enabled": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "FunctionGeneratorSetBurstTriggerSource",
+          "steps": [
+            {
+              "command": ":TRIG:SOUR {source}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "source": {
+              "IMM": "IMM",
+              "EXT": "EXT",
+              "BUS": "BUS"
+            }
+          }
+        },
+        {
+          "operation": "FunctionGeneratorReadFrequency",
+          "steps": [
+            {
+              "command": ":SOUR:FREQ?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "keysight.33522b",
+      "channels": [
+        1
+      ],
+      "outputs": null,
+      "rules": [
+        {
+          "manufacturer": "Keysight Technologies",
+          "model": "33522B"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "FunctionGeneratorSetWaveform",
+          "steps": [
+            {
+              "command": ":SOUR:FUNC {waveform}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "waveform": {
+              "Sine": "SIN",
+              "Square": "SQU",
+              "Ramp": "RAMP",
+              "Pulse": "PULS",
+              "Noise": "NOIS",
+              "Dc": "DC"
+            }
+          }
+        },
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "steps": [
+            {
+              "command": ":SOUR:FREQ {hz}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "FunctionGeneratorSetAmplitude",
+          "steps": [
+            {
+              "command": ":SOUR:VOLT {vpp}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "FunctionGeneratorSetOffset",
+          "steps": [
+            {
+              "command": ":SOUR:VOLT:OFFS {volts}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "FunctionGeneratorSetDutyCycle",
+          "steps": [
+            {
+              "command": ":SOUR:FUNC:SQU:DCYC {percent}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "FunctionGeneratorSetLoad",
+          "steps": [
+            {
+              "command": ":OUTP:LOAD {ohms}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "FunctionGeneratorOutputEnable",
+          "steps": [
+            {
+              "command": ":OUTP {enabled}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "enabled": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "FunctionGeneratorSetBurstCount",
+          "steps": [
+            {
+              "command": ":SOUR:BURS:NCYC {count}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "FunctionGeneratorSetBurstState",
+          "steps": [
+            {
+              "command": ":SOUR:BURS:STAT {enabled}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "enabled": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "FunctionGeneratorSetBurstTriggerSource",
+          "steps": [
+            {
+              "command": ":TRIG:SOUR {source}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "source": {
+              "IMM": "IMM",
+              "EXT": "EXT",
+              "BUS": "BUS"
+            }
+          }
+        },
+        {
+          "operation": "FunctionGeneratorReadFrequency",
+          "steps": [
+            {
+              "command": ":SOUR:FREQ?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "keysight.33622a",
+      "channels": [
+        1
+      ],
+      "outputs": null,
+      "rules": [
+        {
+          "manufacturer": "Keysight Technologies",
+          "model": "33622A"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "FunctionGeneratorSetWaveform",
+          "steps": [
+            {
+              "command": ":SOUR:FUNC {waveform}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "waveform": {
+              "Sine": "SIN",
+              "Square": "SQU",
+              "Ramp": "RAMP",
+              "Pulse": "PULS",
+              "Noise": "NOIS",
+              "Dc": "DC"
+            }
+          }
+        },
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "steps": [
+            {
+              "command": ":SOUR:FREQ {hz}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "FunctionGeneratorSetAmplitude",
+          "steps": [
+            {
+              "command": ":SOUR:VOLT {vpp}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "FunctionGeneratorSetOffset",
+          "steps": [
+            {
+              "command": ":SOUR:VOLT:OFFS {volts}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "FunctionGeneratorSetDutyCycle",
+          "steps": [
+            {
+              "command": ":SOUR:FUNC:SQU:DCYC {percent}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "FunctionGeneratorSetLoad",
+          "steps": [
+            {
+              "command": ":OUTP:LOAD {ohms}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "FunctionGeneratorOutputEnable",
+          "steps": [
+            {
+              "command": ":OUTP {enabled}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "enabled": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "FunctionGeneratorSetBurstCount",
+          "steps": [
+            {
+              "command": ":SOUR:BURS:NCYC {count}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "FunctionGeneratorSetBurstState",
+          "steps": [
+            {
+              "command": ":SOUR:BURS:STAT {enabled}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "enabled": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "FunctionGeneratorSetBurstTriggerSource",
+          "steps": [
+            {
+              "command": ":TRIG:SOUR {source}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "source": {
+              "IMM": "IMM",
+              "EXT": "EXT",
+              "BUS": "BUS"
+            }
+          }
+        },
+        {
+          "operation": "FunctionGeneratorReadFrequency",
+          "steps": [
+            {
+              "command": ":SOUR:FREQ?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "keysight.34401a",
+      "channels": [
+        1
+      ],
+      "outputs": [],
+      "rules": [
+        {
+          "manufacturer": "Agilent Technologies",
+          "model": "34401A"
+        },
+        {
+          "manufacturer": "Keysight Technologies",
+          "model": "34401A"
+        },
+        {
+          "vendorId": 2391,
+          "productId": 1543
+        }
+      ],
+      "plans": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:VOLT:DC?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:VOLT:DC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureVoltageAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:VOLT:AC?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:VOLT:AC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureCurrentDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:CURR:DC?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:CURR:DC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureCurrentAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:CURR:AC?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:CURR:AC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureResistance",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:RES?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:RES? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureResistance2Wire",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:RES?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:RES? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureResistance4Wire",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:FRES?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:FRES? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureTemperature",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:TEMP?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:TEMP? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureVoltageDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureVoltageAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureCurrentDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureCurrentAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureResistance",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureResistance4Wire",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmInitiate",
+          "steps": [
+            {
+              "command": "INIT",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DmmFetch",
+          "steps": [
+            {
+              "command": "FETC?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DmmRead",
+          "steps": [
+            {
+              "command": "READ?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DmmSoftwareTrigger",
+          "steps": [
+            {
+              "command": "*TRG",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        },
+        {
+          "operation": "Shutdown",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "id": "keysight.34410a",
+      "channels": [
+        1
+      ],
+      "outputs": [],
+      "rules": [
+        {
+          "manufacturer": "Keysight Technologies",
+          "model": "34410A"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:VOLT:DC?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:VOLT:DC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureVoltageAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:VOLT:AC?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:VOLT:AC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureCurrentDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:CURR:DC?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:CURR:DC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureCurrentAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:CURR:AC?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:CURR:AC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureResistance",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:RES?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:RES? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureResistance2Wire",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:RES?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:RES? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureResistance4Wire",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:FRES?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:FRES? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureTemperature",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:TEMP?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:TEMP? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureVoltageDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureVoltageAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureCurrentDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureCurrentAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureResistance",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureResistance4Wire",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmInitiate",
+          "steps": [
+            {
+              "command": "INIT",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DmmFetch",
+          "steps": [
+            {
+              "command": "FETC?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DmmRead",
+          "steps": [
+            {
+              "command": "READ?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DmmSoftwareTrigger",
+          "steps": [
+            {
+              "command": "*TRG",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        },
+        {
+          "operation": "Shutdown",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "id": "keysight.34461a",
+      "channels": [
+        1
+      ],
+      "outputs": [],
+      "rules": [
+        {
+          "manufacturer": "Keysight Technologies",
+          "model": "34461A"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:VOLT:DC?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:VOLT:DC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureVoltageAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:VOLT:AC?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:VOLT:AC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureCurrentDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:CURR:DC?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:CURR:DC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureCurrentAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:CURR:AC?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:CURR:AC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureResistance",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:RES?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:RES? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureResistance2Wire",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:RES?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:RES? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureResistance4Wire",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:FRES?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:FRES? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureTemperature",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:TEMP?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:TEMP? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureVoltageDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureVoltageAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureCurrentDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureCurrentAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureResistance",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureResistance4Wire",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmInitiate",
+          "steps": [
+            {
+              "command": "INIT",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DmmFetch",
+          "steps": [
+            {
+              "command": "FETC?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DmmRead",
+          "steps": [
+            {
+              "command": "READ?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DmmSoftwareTrigger",
+          "steps": [
+            {
+              "command": "*TRG",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        },
+        {
+          "operation": "Shutdown",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "id": "keysight.34465a",
+      "channels": [
+        1
+      ],
+      "outputs": [],
+      "rules": [
+        {
+          "manufacturer": "Keysight Technologies",
+          "model": "34465A"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:VOLT:DC?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:VOLT:DC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureVoltageAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:VOLT:AC?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:VOLT:AC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureCurrentDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:CURR:DC?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:CURR:DC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureCurrentAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:CURR:AC?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:CURR:AC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureResistance",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:RES?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:RES? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureResistance2Wire",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:RES?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:RES? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureResistance4Wire",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:FRES?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:FRES? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureTemperature",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:TEMP?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:TEMP? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureVoltageDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureVoltageAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureCurrentDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureCurrentAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureResistance",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureResistance4Wire",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmInitiate",
+          "steps": [
+            {
+              "command": "INIT",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DmmFetch",
+          "steps": [
+            {
+              "command": "FETC?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DmmRead",
+          "steps": [
+            {
+              "command": "READ?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DmmSoftwareTrigger",
+          "steps": [
+            {
+              "command": "*TRG",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        },
+        {
+          "operation": "Shutdown",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "id": "keysight.34970a",
+      "channels": [
+        1
+      ],
+      "outputs": [],
+      "rules": [
+        {
+          "manufacturer": "Keysight Technologies",
+          "model": "34970A"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "SwitchCloseRoute",
+          "steps": [
+            {
+              "command": ":ROUTe:CLOS (@({ch1},{ch2}))",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SwitchOpenRoute",
+          "steps": [
+            {
+              "command": ":ROUTe:OPEN (@({ch1},{ch2}))",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SwitchIsClosed",
+          "steps": [
+            {
+              "command": ":ROUTe:CLOS? (@({ch1},{ch2}))",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SwitchOpenAll",
+          "steps": [
+            {
+              "command": ":ROUTe:OPEN:ALL",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        },
+        {
+          "operation": "Shutdown",
+          "steps": [
+            {
+              "command": ":ROUTe:OPEN:ALL",
+              "response": "Write"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "keysight.34972a",
+      "channels": [
+        1
+      ],
+      "outputs": [],
+      "rules": [
+        {
+          "manufacturer": "Keysight Technologies",
+          "model": "34972A"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "SwitchCloseRoute",
+          "steps": [
+            {
+              "command": ":ROUTe:CLOS (@({ch1},{ch2}))",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SwitchOpenRoute",
+          "steps": [
+            {
+              "command": ":ROUTe:OPEN (@({ch1},{ch2}))",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SwitchIsClosed",
+          "steps": [
+            {
+              "command": ":ROUTe:CLOS? (@({ch1},{ch2}))",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SwitchOpenAll",
+          "steps": [
+            {
+              "command": ":ROUTe:OPEN:ALL",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        },
+        {
+          "operation": "Shutdown",
+          "steps": [
+            {
+              "command": ":ROUTe:OPEN:ALL",
+              "response": "Write"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "keysight.53131a",
+      "channels": [
+        1
+      ],
+      "outputs": [],
+      "rules": [
+        {
+          "manufacturer": "Agilent Technologies",
+          "model": "53131A"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "steps": [
+            {
+              "command": ":MEASure:FREQuency?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "CounterMeasurePeriod",
+          "steps": [
+            {
+              "command": ":MEASure:PERiod?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "CounterSetGateTime",
+          "steps": [
+            {
+              "command": ":SENSe:FREQuency:APERture {seconds}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "CounterSelectChannel",
+          "steps": [
+            {
+              "command": ":SENSe:FUNCtion:ON \"FREQ {channel}\"",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "CounterResetTotalize",
+          "steps": [
+            {
+              "command": ":COUNter:CRESet",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "CounterReadTotalize",
+          "steps": [
+            {
+              "command": ":COUNter:DATA?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        },
+        {
+          "operation": "Shutdown",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "id": "keysight.53220a",
+      "channels": [
+        1
+      ],
+      "outputs": [],
+      "rules": [
+        {
+          "manufacturer": "Keysight Technologies",
+          "model": "53220A"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "steps": [
+            {
+              "command": ":MEASure:FREQuency?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "CounterMeasurePeriod",
+          "steps": [
+            {
+              "command": ":MEASure:PERiod?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "CounterSetGateTime",
+          "steps": [
+            {
+              "command": ":SENSe:FREQuency:APERture {seconds}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "CounterSelectChannel",
+          "steps": [
+            {
+              "command": ":SENSe:FUNCtion:ON \"FREQ {channel}\"",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "CounterResetTotalize",
+          "steps": [
+            {
+              "command": ":COUNter:CRESet",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "CounterReadTotalize",
+          "steps": [
+            {
+              "command": ":COUNter:DATA?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        },
+        {
+          "operation": "Shutdown",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "id": "keysight.53230a",
+      "channels": [
+        1
+      ],
+      "outputs": [],
+      "rules": [
+        {
+          "manufacturer": "Keysight Technologies",
+          "model": "53230A"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "steps": [
+            {
+              "command": ":MEASure:FREQuency?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "CounterMeasurePeriod",
+          "steps": [
+            {
+              "command": ":MEASure:PERiod?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "CounterSetGateTime",
+          "steps": [
+            {
+              "command": ":SENSe:FREQuency:APERture {seconds}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "CounterSelectChannel",
+          "steps": [
+            {
+              "command": ":SENSe:FUNCtion:ON \"FREQ {channel}\"",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "CounterResetTotalize",
+          "steps": [
+            {
+              "command": ":COUNter:CRESet",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "CounterReadTotalize",
+          "steps": [
+            {
+              "command": ":COUNter:DATA?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        },
+        {
+          "operation": "Shutdown",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "id": "keysight.dsox2024a",
+      "channels": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "outputs": [],
+      "rules": [
+        {
+          "manufacturer": "Keysight Technologies",
+          "model": "DSOX2024A"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "OscilloscopeSetTimebaseScale",
+          "steps": [
+            {
+              "command": ":TIMebase:SCALe {seconds_per_div}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "OscilloscopeReadTimebaseScale",
+          "steps": [
+            {
+              "command": ":TIMebase:SCALe?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "OscilloscopeSetChannelScale",
+          "steps": [
+            {
+              "command": ":CHANnel{channel}:SCALe {volts_per_div}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "OscilloscopeSetChannelDisplay",
+          "steps": [
+            {
+              "command": ":CHANnel{channel}:DISP {enabled}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "enabled": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "OscilloscopeSetChannelCoupling",
+          "steps": [
+            {
+              "command": ":CHANnel{channel}:COUP {coupling}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "coupling": {
+              "DC": "DC",
+              "AC": "AC",
+              "GND": "GND"
+            }
+          }
+        },
+        {
+          "operation": "OscilloscopeSetTriggerSource",
+          "steps": [
+            {
+              "command": ":TRIGger:EDGE:SOURce {source}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "source": {
+              "CHAN1": "CHAN1",
+              "CHAN2": "CHAN2",
+              "CHAN3": "CHAN3",
+              "CHAN4": "CHAN4",
+              "EXT": "EXT",
+              "LINE": "LINE"
+            }
+          }
+        },
+        {
+          "operation": "OscilloscopeSetTriggerLevel",
+          "steps": [
+            {
+              "command": ":TRIGger:EDGE:LEVel {volts}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "OscilloscopeSetTriggerSlope",
+          "steps": [
+            {
+              "command": ":TRIGger:EDGE:SLOPe {slope}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "slope": {
+              "POS": "POS",
+              "NEG": "NEG",
+              "EITH": "EITH"
+            }
+          }
+        },
+        {
+          "operation": "OscilloscopeRun",
+          "steps": [
+            {
+              "command": ":RUN",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "OscilloscopeStop",
+          "steps": [
+            {
+              "command": ":STOP",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "OscilloscopeSingle",
+          "steps": [
+            {
+              "command": ":SINGle",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "OscilloscopeMeasureVpp",
+          "steps": [
+            {
+              "command": ":MEASure:VPP? CHAN{channel}",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "OscilloscopeMeasureFrequency",
+          "steps": [
+            {
+              "command": ":MEASure:FREQuency? CHAN{channel}",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "OscilloscopeCaptureVoltageTrace",
+          "steps": [
+            {
+              "command": ":WAVeform:SOURce CHAN{channel}",
+              "response": "Write"
+            },
+            {
+              "command": ":WAVeform:FORMat ASCii",
+              "response": "Write"
+            },
+            {
+              "command": ":WAVeform:PREamble?",
+              "response": "Preamble"
+            },
+            {
+              "command": ":WAVeform:DATA?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        },
+        {
+          "operation": "Shutdown",
+          "steps": [
+            {
+              "command": ":STOP",
+              "response": "Write"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "keysight.dsox3024t",
+      "channels": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "outputs": [],
+      "rules": [
+        {
+          "manufacturer": "Keysight Technologies",
+          "model": "DSOX3024T"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "OscilloscopeSetTimebaseScale",
+          "steps": [
+            {
+              "command": ":TIMebase:SCALe {seconds_per_div}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "OscilloscopeReadTimebaseScale",
+          "steps": [
+            {
+              "command": ":TIMebase:SCALe?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "OscilloscopeSetChannelScale",
+          "steps": [
+            {
+              "command": ":CHANnel{channel}:SCALe {volts_per_div}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "OscilloscopeSetChannelDisplay",
+          "steps": [
+            {
+              "command": ":CHANnel{channel}:DISP {enabled}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "enabled": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "OscilloscopeSetChannelCoupling",
+          "steps": [
+            {
+              "command": ":CHANnel{channel}:COUP {coupling}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "coupling": {
+              "DC": "DC",
+              "AC": "AC",
+              "GND": "GND"
+            }
+          }
+        },
+        {
+          "operation": "OscilloscopeSetTriggerSource",
+          "steps": [
+            {
+              "command": ":TRIGger:EDGE:SOURce {source}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "source": {
+              "CHAN1": "CHAN1",
+              "CHAN2": "CHAN2",
+              "CHAN3": "CHAN3",
+              "CHAN4": "CHAN4",
+              "EXT": "EXT",
+              "LINE": "LINE"
+            }
+          }
+        },
+        {
+          "operation": "OscilloscopeSetTriggerLevel",
+          "steps": [
+            {
+              "command": ":TRIGger:EDGE:LEVel {volts}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "OscilloscopeSetTriggerSlope",
+          "steps": [
+            {
+              "command": ":TRIGger:EDGE:SLOPe {slope}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "slope": {
+              "POS": "POS",
+              "NEG": "NEG",
+              "EITH": "EITH"
+            }
+          }
+        },
+        {
+          "operation": "OscilloscopeRun",
+          "steps": [
+            {
+              "command": ":RUN",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "OscilloscopeStop",
+          "steps": [
+            {
+              "command": ":STOP",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "OscilloscopeSingle",
+          "steps": [
+            {
+              "command": ":SINGle",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "OscilloscopeMeasureVpp",
+          "steps": [
+            {
+              "command": ":MEASure:VPP? CHAN{channel}",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "OscilloscopeMeasureFrequency",
+          "steps": [
+            {
+              "command": ":MEASure:FREQuency? CHAN{channel}",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "OscilloscopeCaptureVoltageTrace",
+          "steps": [
+            {
+              "command": ":WAVeform:SOURce CHAN{channel}",
+              "response": "Write"
+            },
+            {
+              "command": ":WAVeform:FORMat ASCii",
+              "response": "Write"
+            },
+            {
+              "command": ":WAVeform:PREamble?",
+              "response": "Preamble"
+            },
+            {
+              "command": ":WAVeform:DATA?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        },
+        {
+          "operation": "Shutdown",
+          "steps": [
+            {
+              "command": ":STOP",
+              "response": "Write"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "keysight.e36312a",
+      "channels": [
+        1
+      ],
+      "outputs": null,
+      "rules": [
+        {
+          "manufacturer": "Keysight Technologies",
+          "model": "E36312A"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "DcPowerSupplySetVoltage",
+          "steps": [
+            {
+              "command": ":SOUR{channel}:VOLT {volts}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplySetCurrentLimit",
+          "steps": [
+            {
+              "command": ":SOUR{channel}:CURR {amps}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyOutputEnable",
+          "steps": [
+            {
+              "command": ":OUTP{channel} {enabled}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "enabled": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "DcPowerSupplyOutputStateQuery",
+          "steps": [
+            {
+              "command": ":OUTP{channel}?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyOvpLevel",
+          "steps": [
+            {
+              "command": ":SOUR{channel}:VOLT:PROT {volts}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyOvpEnable",
+          "steps": [
+            {
+              "command": ":SOUR{channel}:VOLT:PROT:STAT {enabled}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "enabled": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "DcPowerSupplyOvpQuery",
+          "steps": [
+            {
+              "command": ":SOUR{channel}:VOLT:PROT:STAT?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyReadVoltage",
+          "steps": [
+            {
+              "command": ":MEAS:VOLT? {channel}",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyReadCurrent",
+          "steps": [
+            {
+              "command": ":MEAS:CURR? {channel}",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplySetSenseMode",
+          "steps": [
+            {
+              "command": ":OUTP{channel}:SENS {mode}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "mode": {
+              "Internal": "OFF",
+              "External": "ON"
+            }
+          }
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "keysight.e3631a",
+      "channels": [
+        1
+      ],
+      "outputs": null,
+      "rules": [
+        {
+          "manufacturer": "Keysight Technologies",
+          "model": "E3631A"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "DcPowerSupplySetVoltage",
+          "steps": [
+            {
+              "command": ":SOUR{channel}:VOLT {volts}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplySetCurrentLimit",
+          "steps": [
+            {
+              "command": ":SOUR{channel}:CURR {amps}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyOutputEnable",
+          "steps": [
+            {
+              "command": ":OUTP{channel} {enabled}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "enabled": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "DcPowerSupplyOutputStateQuery",
+          "steps": [
+            {
+              "command": ":OUTP{channel}?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyOvpLevel",
+          "steps": [
+            {
+              "command": ":SOUR{channel}:VOLT:PROT {volts}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyOvpEnable",
+          "steps": [
+            {
+              "command": ":SOUR{channel}:VOLT:PROT:STAT {enabled}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "enabled": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "DcPowerSupplyOvpQuery",
+          "steps": [
+            {
+              "command": ":SOUR{channel}:VOLT:PROT:STAT?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyReadVoltage",
+          "steps": [
+            {
+              "command": ":MEAS:VOLT? {channel}",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyReadCurrent",
+          "steps": [
+            {
+              "command": ":MEAS:CURR? {channel}",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplySetSenseMode",
+          "steps": [
+            {
+              "command": ":OUTP{channel}:SENS {mode}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "mode": {
+              "Internal": "OFF",
+              "External": "ON"
+            }
+          }
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "keysight.e3640a",
+      "channels": [
+        1
+      ],
+      "outputs": null,
+      "rules": [
+        {
+          "manufacturer": "Agilent Technologies",
+          "model": "E3640A"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "DcPowerSupplySetVoltage",
+          "steps": [
+            {
+              "command": ":SOUR{channel}:VOLT {volts}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplySetCurrentLimit",
+          "steps": [
+            {
+              "command": ":SOUR{channel}:CURR {amps}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyOutputEnable",
+          "steps": [
+            {
+              "command": ":OUTP{channel} {enabled}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "enabled": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "DcPowerSupplyOutputStateQuery",
+          "steps": [
+            {
+              "command": ":OUTP{channel}?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyOvpLevel",
+          "steps": [
+            {
+              "command": ":SOUR{channel}:VOLT:PROT {volts}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyOvpEnable",
+          "steps": [
+            {
+              "command": ":SOUR{channel}:VOLT:PROT:STAT {enabled}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "enabled": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "DcPowerSupplyOvpQuery",
+          "steps": [
+            {
+              "command": ":SOUR{channel}:VOLT:PROT:STAT?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyReadVoltage",
+          "steps": [
+            {
+              "command": ":MEAS:VOLT? {channel}",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyReadCurrent",
+          "steps": [
+            {
+              "command": ":MEAS:CURR? {channel}",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplySetSenseMode",
+          "steps": [
+            {
+              "command": ":OUTP{channel}:SENS {mode}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "mode": {
+              "Internal": "OFF",
+              "External": "ON"
+            }
+          }
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "keysight.n6705c",
+      "channels": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "outputs": null,
+      "rules": [
+        {
+          "manufacturer": "Keysight Technologies",
+          "model": "N6705C"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "DcPowerSupplySetVoltage",
+          "steps": [
+            {
+              "command": ":VOLT {volts}, (@{channel})",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplySetCurrentLimit",
+          "steps": [
+            {
+              "command": ":CURR {amps}, (@{channel})",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyOutputEnable",
+          "steps": [
+            {
+              "command": ":OUTP {enabled}, (@{channel})",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "enabled": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "DcPowerSupplyOutputStateQuery",
+          "steps": [
+            {
+              "command": ":OUTP? (@{channel})",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyOvpLevel",
+          "steps": [
+            {
+              "command": ":VOLT:PROT {volts}, (@{channel})",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyOvpEnable",
+          "steps": [
+            {
+              "command": ":VOLT:PROT:STAT {enabled}, (@{channel})",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "enabled": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "DcPowerSupplyOvpQuery",
+          "steps": [
+            {
+              "command": ":VOLT:PROT:STAT? (@{channel})",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyReadVoltage",
+          "steps": [
+            {
+              "command": ":MEAS:VOLT? (@{channel})",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyReadCurrent",
+          "steps": [
+            {
+              "command": ":MEAS:CURR? (@{channel})",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "keysight.n9010b",
+      "channels": [
+        1
+      ],
+      "outputs": [],
+      "rules": [
+        {
+          "manufacturer": "Keysight Technologies",
+          "model": "N9010B"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "SpectrumAnalyzerSetCenterFrequency",
+          "steps": [
+            {
+              "command": ":FREQ:CENT {hz}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerSetSpan",
+          "steps": [
+            {
+              "command": ":FREQ:SPAN {hz}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerSetRbw",
+          "steps": [
+            {
+              "command": ":BAND {hz}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerSetVbw",
+          "steps": [
+            {
+              "command": ":BAND:VID {hz}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerSetRefLevel",
+          "steps": [
+            {
+              "command": ":DISP:WIND:TRAC:Y:RLEV {dbm}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerFetchTraceAscii",
+          "steps": [
+            {
+              "command": ":TRAC:DATA? TRACE1",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerMarkerPeak",
+          "steps": [
+            {
+              "command": ":CALC:MARK:MAX",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "steps": [
+            {
+              "command": ":CALC:MARK:X?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "steps": [
+            {
+              "command": ":CALC:MARK:Y?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerSweepContinuous",
+          "steps": [
+            {
+              "command": ":INIT:CONT {enabled}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "enabled": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "SpectrumAnalyzerSingleSweep",
+          "steps": [
+            {
+              "command": ":INIT:IMM",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerWaitOpc",
+          "steps": [
+            {
+              "command": "*OPC?",
+              "response": "Completion"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        },
+        {
+          "operation": "Shutdown",
+          "steps": [
+            {
+              "command": ":INIT:CONT OFF",
+              "response": "Write"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "keysight.n9020b",
+      "channels": [
+        1
+      ],
+      "outputs": [],
+      "rules": [
+        {
+          "manufacturer": "Keysight Technologies",
+          "model": "N9020B"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "SpectrumAnalyzerSetCenterFrequency",
+          "steps": [
+            {
+              "command": ":FREQ:CENT {hz}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerSetSpan",
+          "steps": [
+            {
+              "command": ":FREQ:SPAN {hz}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerSetRbw",
+          "steps": [
+            {
+              "command": ":BAND {hz}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerSetVbw",
+          "steps": [
+            {
+              "command": ":BAND:VID {hz}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerSetRefLevel",
+          "steps": [
+            {
+              "command": ":DISP:WIND:TRAC:Y:RLEV {dbm}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerFetchTraceAscii",
+          "steps": [
+            {
+              "command": ":TRAC:DATA? TRACE1",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerMarkerPeak",
+          "steps": [
+            {
+              "command": ":CALC:MARK:MAX",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "steps": [
+            {
+              "command": ":CALC:MARK:X?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "steps": [
+            {
+              "command": ":CALC:MARK:Y?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerSweepContinuous",
+          "steps": [
+            {
+              "command": ":INIT:CONT {enabled}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "enabled": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "SpectrumAnalyzerSingleSweep",
+          "steps": [
+            {
+              "command": ":INIT:IMM",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerWaitOpc",
+          "steps": [
+            {
+              "command": "*OPC?",
+              "response": "Completion"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        },
+        {
+          "operation": "Shutdown",
+          "steps": [
+            {
+              "command": ":INIT:CONT OFF",
+              "response": "Write"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "keysight.n9030b",
+      "channels": [
+        1
+      ],
+      "outputs": [],
+      "rules": [
+        {
+          "manufacturer": "Keysight Technologies",
+          "model": "N9030B"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "SpectrumAnalyzerSetCenterFrequency",
+          "steps": [
+            {
+              "command": ":FREQ:CENT {hz}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerSetSpan",
+          "steps": [
+            {
+              "command": ":FREQ:SPAN {hz}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerSetRbw",
+          "steps": [
+            {
+              "command": ":BAND {hz}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerSetVbw",
+          "steps": [
+            {
+              "command": ":BAND:VID {hz}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerSetRefLevel",
+          "steps": [
+            {
+              "command": ":DISP:WIND:TRAC:Y:RLEV {dbm}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerFetchTraceAscii",
+          "steps": [
+            {
+              "command": ":TRAC:DATA? TRACE1",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerMarkerPeak",
+          "steps": [
+            {
+              "command": ":CALC:MARK:MAX",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "steps": [
+            {
+              "command": ":CALC:MARK:X?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "steps": [
+            {
+              "command": ":CALC:MARK:Y?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerSweepContinuous",
+          "steps": [
+            {
+              "command": ":INIT:CONT {enabled}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "enabled": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "SpectrumAnalyzerSingleSweep",
+          "steps": [
+            {
+              "command": ":INIT:IMM",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerWaitOpc",
+          "steps": [
+            {
+              "command": "*OPC?",
+              "response": "Completion"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        },
+        {
+          "operation": "Shutdown",
+          "steps": [
+            {
+              "command": ":INIT:CONT OFF",
+              "response": "Write"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "keysight.u2000a",
+      "channels": [
+        1
+      ],
+      "outputs": [],
+      "rules": [
+        {
+          "manufacturer": "Agilent Technologies",
+          "model": "U2000A"
+        },
+        {
+          "manufacturer": "Keysight Technologies",
+          "model": "U2000A"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "PowerMeterConfigureMeasurement",
+          "steps": [
+            {
+              "command": ":UNIT:POW {unit}",
+              "response": "Write"
+            },
+            {
+              "command": ":SENS:POW:RANG:AUTO {auto_range}",
+              "response": "Write"
+            },
+            {
+              "command": ":SENS:AVER:COUN:AUTO {auto_average}",
+              "response": "Write"
+            },
+            {
+              "command": ":SENS:FREQ {correction_freq_hz}",
+              "response": "Write",
+              "when": "correction_freq_hz"
+            },
+            {
+              "command": ":SENS:CORR:GAIN2 {offset_db}",
+              "response": "Write",
+              "when": "offset_db"
+            }
+          ],
+          "tokens": {
+            "unit": {
+              "Watt": "W",
+              "Dbm": "DBM"
+            },
+            "auto_range": {
+              "true": "ON",
+              "false": "OFF"
+            },
+            "auto_average": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "PowerMeterInitiate",
+          "steps": [
+            {
+              "command": "INIT",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "PowerMeterFetch",
+          "steps": [
+            {
+              "command": "FETC?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "PowerMeterRead",
+          "steps": [
+            {
+              "command": "READ?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        },
+        {
+          "operation": "Shutdown",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "id": "keysight.u2001a",
+      "channels": [
+        1
+      ],
+      "outputs": [],
+      "rules": [
+        {
+          "manufacturer": "Keysight Technologies",
+          "model": "U2001A"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "PowerMeterConfigureMeasurement",
+          "steps": [
+            {
+              "command": ":UNIT:POW {unit}",
+              "response": "Write"
+            },
+            {
+              "command": ":SENS:POW:RANG:AUTO {auto_range}",
+              "response": "Write"
+            },
+            {
+              "command": ":SENS:AVER:COUN:AUTO {auto_average}",
+              "response": "Write"
+            },
+            {
+              "command": ":SENS:FREQ {correction_freq_hz}",
+              "response": "Write",
+              "when": "correction_freq_hz"
+            },
+            {
+              "command": ":SENS:CORR:GAIN2 {offset_db}",
+              "response": "Write",
+              "when": "offset_db"
+            }
+          ],
+          "tokens": {
+            "unit": {
+              "Watt": "W",
+              "Dbm": "DBM"
+            },
+            "auto_range": {
+              "true": "ON",
+              "false": "OFF"
+            },
+            "auto_average": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "PowerMeterInitiate",
+          "steps": [
+            {
+              "command": "INIT",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "PowerMeterFetch",
+          "steps": [
+            {
+              "command": "FETC?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "PowerMeterRead",
+          "steps": [
+            {
+              "command": "READ?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        },
+        {
+          "operation": "Shutdown",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "id": "keysight.u2002a",
+      "channels": [
+        1
+      ],
+      "outputs": [],
+      "rules": [
+        {
+          "manufacturer": "Keysight Technologies",
+          "model": "U2002A"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "PowerMeterConfigureMeasurement",
+          "steps": [
+            {
+              "command": ":UNIT:POW {unit}",
+              "response": "Write"
+            },
+            {
+              "command": ":SENS:POW:RANG:AUTO {auto_range}",
+              "response": "Write"
+            },
+            {
+              "command": ":SENS:AVER:COUN:AUTO {auto_average}",
+              "response": "Write"
+            },
+            {
+              "command": ":SENS:FREQ {correction_freq_hz}",
+              "response": "Write",
+              "when": "correction_freq_hz"
+            },
+            {
+              "command": ":SENS:CORR:GAIN2 {offset_db}",
+              "response": "Write",
+              "when": "offset_db"
+            }
+          ],
+          "tokens": {
+            "unit": {
+              "Watt": "W",
+              "Dbm": "DBM"
+            },
+            "auto_range": {
+              "true": "ON",
+              "false": "OFF"
+            },
+            "auto_average": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "PowerMeterInitiate",
+          "steps": [
+            {
+              "command": "INIT",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "PowerMeterFetch",
+          "steps": [
+            {
+              "command": "FETC?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "PowerMeterRead",
+          "steps": [
+            {
+              "command": "READ?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        },
+        {
+          "operation": "Shutdown",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "id": "keysight.u2004a",
+      "channels": [
+        1
+      ],
+      "outputs": [],
+      "rules": [
+        {
+          "manufacturer": "Keysight Technologies",
+          "model": "U2004A"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "PowerMeterConfigureMeasurement",
+          "steps": [
+            {
+              "command": ":UNIT:POW {unit}",
+              "response": "Write"
+            },
+            {
+              "command": ":SENS:POW:RANG:AUTO {auto_range}",
+              "response": "Write"
+            },
+            {
+              "command": ":SENS:AVER:COUN:AUTO {auto_average}",
+              "response": "Write"
+            },
+            {
+              "command": ":SENS:FREQ {correction_freq_hz}",
+              "response": "Write",
+              "when": "correction_freq_hz"
+            },
+            {
+              "command": ":SENS:CORR:GAIN2 {offset_db}",
+              "response": "Write",
+              "when": "offset_db"
+            }
+          ],
+          "tokens": {
+            "unit": {
+              "Watt": "W",
+              "Dbm": "DBM"
+            },
+            "auto_range": {
+              "true": "ON",
+              "false": "OFF"
+            },
+            "auto_average": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "PowerMeterInitiate",
+          "steps": [
+            {
+              "command": "INIT",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "PowerMeterFetch",
+          "steps": [
+            {
+              "command": "FETC?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "PowerMeterRead",
+          "steps": [
+            {
+              "command": "READ?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        },
+        {
+          "operation": "Shutdown",
+          "steps": []
+        }
+      ]
+    }
+  ]
+}

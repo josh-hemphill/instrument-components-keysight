@@ -1,0 +1,19 @@
+name: Driver packages and native proof
+on:
+  push:
+    branches: [latest]
+  pull_request:
+    branches: [latest]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  sdk:
+    uses: josh-hemphill/instrument-components/.github/workflows/driver-sdk.yml@51a37aa798d4d863b8d23fd6c3ed15199d18f4ab
+    with:
+      source_repository: josh-hemphill/instrument-components
+      source_ref: 51a37aa798d4d863b8d23fd6c3ed15199d18f4ab
+  package:
+    needs: sdk
+    uses: josh-hemphill/instrument-components/.github/workflows/driver-package-bootstrap.yml@51a37aa798d4d863b8d23fd6c3ed15199d18f4ab

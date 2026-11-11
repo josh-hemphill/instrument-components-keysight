@@ -1,0 +1,18 @@
+[package]
+name = "instrument-driver-keysight"
+version = "0.2.0-alpha.1"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "Source-derived Keysight device profiles; hardware validation pending"
+repository = "https://github.com/josh-hemphill/instrument-components-keysight"
+include = ["src/**", "generated/profiles.rs", "LICENSE-*", "README.md"]
+[dependencies]
+instrument-api = "=0.2.0-alpha.1"
+instrument-scpi = "=0.2.0-alpha.1"
+[features]
+default = []
+async = ["instrument-api/async", "instrument-scpi/async"]
+[dev-dependencies]
+instrument-runtime = "=0.2.0-alpha.1"
+instrument-testkit = "=0.2.0-alpha.1"
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
