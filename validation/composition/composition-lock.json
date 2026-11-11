@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "version": "0.2.0-alpha.1",
-  "sdkCommit": "545583d91852b1ec91310853f8ef10b0ece70a3d",
+  "sdkCommit": "f49baf1bb8e03a179f23d4cb9ba4d4fae4d24f25",
   "drivers": [
     {
       "vendor": "keysight",
       "repository": "josh-hemphill/instrument-components-keysight",
-      "sourceCommit": "e60404c0d0d80c01c589f850d3ef32b1f217ce38",
-      "runId": 43001099513,
+      "sourceCommit": "ad041a3be5f3dcc1cc0f2f73fb54ff69847ba5b9",
+      "runId": 43008068363,
       "goldenFiles": {
         "generated/cases.rs": "7feaa9022cc094010efd84011ed20cbeb1172cdb0ba0ee2d4f4f9680997fadd4",
         "generated/GeneratedCases.cs": "fc8db758954960ee282826d7d47db71a0eac31dc367d22c1f89ebea625fa923e",
@@ -15,7 +15,7 @@
         "validation/dotnet/Program.cs": "58dec0230c4def1dfd15bde7cfd6c2d49695b2cac2d81373e39456aff24cf800",
         "validation/dotnet/DriverProof.csproj": "58dfc66f937b466b637e0c488fba79521bd8a2e2923e69448f7787b5b01e88fa",
         "provenance/identities.json": "b41fae7b559238097546d08e119aae798b15e58ab5df617c31b960ac7e968623",
-        ".github/workflows/ci.yml": "ba035a012f1dab03c4f488cb85273f8ce1faf552bd2230b7d524cb3bd462e8d2",
+        ".github/workflows/ci.yml": "ee49acdd18204037eb95afd9afd7ccc74a3a87059329470951fc49f709aa7398",
         "src/lib.rs": "a7e9baafe362ffe4a7af83c6796915f8a1bd67d1376778a3b92d91349c51863b",
         "generated/profiles.rs": "c806816ed59318d68026ec9477c31a7864c5b9994320d92ef898ea3920962cec",
         "generated/GeneratedProfiles.cs": "14c0583b24780562692328ca06b57f83babc5518b6b7c9099c422efa97588874",
@@ -28,8 +28,8 @@
     {
       "vendor": "keithley",
       "repository": "josh-hemphill/instrument-components-keithley",
-      "sourceCommit": "1165631ae8929219e058cb9a0e0a1b6676ccee45",
-      "runId": 43001095945,
+      "sourceCommit": "082efa823001a56390dea1123c46f929953fb854",
+      "runId": 43008079977,
       "goldenFiles": {
         "generated/cases.rs": "72d66bc3c1616591ea801f4a8266ae4660a4d7751598cefcce621ece8d2730f6",
         "generated/GeneratedCases.cs": "9b69ff4819c9e7c3d6ceeb522a69d79ab093552f724c817a4b981bec191e5310",
@@ -37,7 +37,7 @@
         "validation/dotnet/Program.cs": "d77bbca4536fa2f855e03f5c439b378c6b854e79784d6332ceab5bcad0028991",
         "validation/dotnet/DriverProof.csproj": "d0fdaa7c27dfda3afeb8e6fc8cd15d8d96920c6abc101c3bfe3ea9589bd33d66",
         "provenance/identities.json": "7282563e71784815d0607f2e0d846fd9462522bd56fe98e0643f855ca0c13e2e",
-        ".github/workflows/ci.yml": "ba035a012f1dab03c4f488cb85273f8ce1faf552bd2230b7d524cb3bd462e8d2",
+        ".github/workflows/ci.yml": "ee49acdd18204037eb95afd9afd7ccc74a3a87059329470951fc49f709aa7398",
         "src/lib.rs": "a7e9baafe362ffe4a7af83c6796915f8a1bd67d1376778a3b92d91349c51863b",
         "generated/profiles.rs": "8ca6b2970704cabbc1dd51bf47c8c0d26da7d388fee8977b9c46a7de38e9ec52",
         "generated/GeneratedProfiles.cs": "08c8ae5aa8e53d1e7b666d2ef9778ec1041505c8fb6d06c504c596a3c2c07364",
@@ -50,8 +50,8 @@
     {
       "vendor": "rigol",
       "repository": "josh-hemphill/instrument-components-rigol",
-      "sourceCommit": "471923bc5fb248b10a81a36a17728da317d21691",
-      "runId": 43001095148,
+      "sourceCommit": "9c5f0c8a29087cbe89ed90c36cddd97868cab250",
+      "runId": 43008073858,
       "goldenFiles": {
         "generated/cases.rs": "c2a83b158de489e4f8362c2ee9e3f2e5b141049780f1c76815082bd59c069dc7",
         "generated/GeneratedCases.cs": "33d4b9206f9a392b96a9a002eb85e27b6f901eb404ea8756bbe4c22190e5a22f",
@@ -59,7 +59,7 @@
         "validation/dotnet/Program.cs": "bfaebc17dabab5f80f1d89ff8599d565a769fd272b0fdcf7c191e3b77949cb7b",
         "validation/dotnet/DriverProof.csproj": "0c1eb24830c88fff26df82fb893240f474417a08c94efef5b1ca64e204123b29",
         "provenance/identities.json": "c38fbf6924414dd7a95a6890041a57fc3d7feda32032bf8801e46c9e7965586e",
-        ".github/workflows/ci.yml": "ba035a012f1dab03c4f488cb85273f8ce1faf552bd2230b7d524cb3bd462e8d2",
+        ".github/workflows/ci.yml": "ee49acdd18204037eb95afd9afd7ccc74a3a87059329470951fc49f709aa7398",
         "src/lib.rs": "a7e9baafe362ffe4a7af83c6796915f8a1bd67d1376778a3b92d91349c51863b",
         "generated/profiles.rs": "385a4c0ae82dd6c641066875d2693fe3df42202d7cd7358575633d30e0eea373",
         "generated/GeneratedProfiles.cs": "ac6986b100b7f1ecf162d120b8d5510f0b6bbade6fe505b6b19a7c9a27681ffb",
@@ -72,8 +72,8 @@
     {
       "vendor": "siglent",
       "repository": "josh-hemphill/instrument-components-siglent",
-      "sourceCommit": "88151f7c8b405726d2a2c86c8a003570efd509dc",
-      "runId": 43001098119,
+      "sourceCommit": "1766e8b7291c335902301e559eaf3e4c9fd72348",
+      "runId": 43008079193,
       "goldenFiles": {
         "generated/cases.rs": "8f4c9fca606f9c1f6251120a9f209a7957c7dad08ae9d5ec824f2da94d230017",
         "generated/GeneratedCases.cs": "643b3e30a20e5e9615dde2ef1d293f4477918b1928023a43e8121da1675c8d18",
@@ -81,7 +81,7 @@
         "validation/dotnet/Program.cs": "71e39e76784d17952e3c00faeb6fd78a9e17dd165288d576df8e4910143579f7",
         "validation/dotnet/DriverProof.csproj": "afaee6efd985bf3e666c7d7041ae021aa3e45ffef6c7c147aeab4e4c2abc5e1e",
         "provenance/identities.json": "4353696c172df87a8e46caab2f4f1aa251ae2868685f4f3939d8dae5b9493481",
-        ".github/workflows/ci.yml": "ba035a012f1dab03c4f488cb85273f8ce1faf552bd2230b7d524cb3bd462e8d2",
+        ".github/workflows/ci.yml": "ee49acdd18204037eb95afd9afd7ccc74a3a87059329470951fc49f709aa7398",
         "src/lib.rs": "a7e9baafe362ffe4a7af83c6796915f8a1bd67d1376778a3b92d91349c51863b",
         "generated/profiles.rs": "b0cb1dd34f6dd1129174a313cef95baf7f7dbe7cc02325889430f108137726ce",
         "generated/GeneratedProfiles.cs": "cb359358ccd6b20538b47ad2a6c7e396b5ea7318962df1f934334e9683dc37de",
@@ -94,8 +94,8 @@
     {
       "vendor": "tektronix",
       "repository": "josh-hemphill/instrument-components-tektronix",
-      "sourceCommit": "5a262531ab1a41a167b9ad724dda97fa7891574b",
-      "runId": 43001096335,
+      "sourceCommit": "4a895168186fbaaf146f4008051a8c395181a96d",
+      "runId": 43008080939,
       "goldenFiles": {
         "generated/cases.rs": "a6968a8d1f0e7118905220b898d3dea6ec575137444b8c33199310f387d580a5",
         "generated/GeneratedCases.cs": "08fd29ad8759654ab0c08a304e25ebd5327f400fe1186b826c919b596dfb5a4e",
@@ -103,7 +103,7 @@
         "validation/dotnet/Program.cs": "27d4be176953391432d3a44517ce297a4548b480780c2b6d8dafeeb62b8c9795",
         "validation/dotnet/DriverProof.csproj": "182dcbab70c3595a7b23590acf67aab32c8746bcfd2853e7c209b8e44dad74c3",
         "provenance/identities.json": "2c926b39da4cc3c5c8d06be58b4a651abc3aa076a74b8a95f15eac0bbf7ed5d1",
-        ".github/workflows/ci.yml": "ba035a012f1dab03c4f488cb85273f8ce1faf552bd2230b7d524cb3bd462e8d2",
+        ".github/workflows/ci.yml": "ee49acdd18204037eb95afd9afd7ccc74a3a87059329470951fc49f709aa7398",
         "src/lib.rs": "a7e9baafe362ffe4a7af83c6796915f8a1bd67d1376778a3b92d91349c51863b",
         "generated/profiles.rs": "7715f189d2fd45eced99109f9f125b87f51ab70a56565d80337bd125b7fa4a77",
         "generated/GeneratedProfiles.cs": "e07fe18fceb46f999b3687b668b79612d9e92c5999c7be93a7c1ec913f4ba7bd",
