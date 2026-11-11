@@ -18,6 +18,11 @@ fn bindings() -> Result<BTreeMap<String, InventoryBinding>> {
             let fgen = p.operations().contains(&Operation::Catalog(
                 CatalogOperation::FunctionGeneratorOutputEnable,
             ));
+            let sparse = p.operations().contains(&Operation::Catalog(
+                CatalogOperation::OscilloscopeSetTriggerSource,
+            )) || p
+                .operations()
+                .contains(&Operation::Catalog(CatalogOperation::SwitchCloseRoute));
             let mut outputs = Vec::new();
             if psu {
                 outputs.extend([Output::DcPowerSupply(1), Output::DcPowerSupply(3)]);
@@ -28,7 +33,7 @@ fn bindings() -> Result<BTreeMap<String, InventoryBinding>> {
             (
                 p.id().to_owned(),
                 InventoryBinding {
-                    channels: if psu {
+                    channels: if psu || sparse {
                         Some(vec![1, 3])
                     } else {
                         p.channel_ids().map(|v| v.to_vec())
@@ -60,6 +65,16 @@ fn binding_for(case: &CatalogCase) -> Result<BTreeMap<String, InventoryBinding>>
     } else {
         bindings()
     }
+}
+fn connections_for(case: &CatalogCase) -> Result<Vec<driver::ConnectionBinding>> {
+    Ok(binding_for(case)?
+        .into_iter()
+        .map(|(driver_id, inventory)| driver::ConnectionBinding {
+            driver_id,
+            endpoint: candidate().endpoint,
+            inventory,
+        })
+        .collect())
 }
 fn check(actual: Result<CatalogReply>, case: &CatalogCase, last: bool) {
     if last {
@@ -122,9 +137,10 @@ fn synchronous() -> Result<()> {
     identities()?;
     for case in generated_cases::cases() {
         let script = Script::new(case.script.clone());
-        let registry = DriverRegistry::new(driver::sync_factories(
+        let registry = DriverRegistry::new(driver::sync_factories_for_connections(
             Arc::new(script.clone()),
-            &binding_for(&case)?,
+            &BTreeMap::new(),
+            &connections_for(&case)?,
         )?)?;
         let h = registry.open(
             &candidate(),
@@ -137,6 +153,12 @@ fn synchronous() -> Result<()> {
             check(h.invoke(request.clone()), &case, i + 1 == case.calls.len());
         }
         h.close(false)?;
+        assert_eq!(
+            h.invoke(CatalogRequest::QueryIdentity).unwrap_err().kind,
+            ErrorKind::SessionClosed,
+            "{} closed",
+            case.id
+        );
         script.assert_complete()?;
         script.assert_thread_affinity()?;
         assert_eq!(script.opens(), 1);
@@ -150,9 +172,17 @@ async fn asynchronous() -> Result<()> {
         for case in generated_cases::cases() {
             let script = Script::new(case.script.clone());
             let factories = if mode == 0 {
-                driver::native_factories(Arc::new(script.clone()), &binding_for(&case)?)?
+                driver::native_factories_for_connections(
+                    Arc::new(script.clone()),
+                    &BTreeMap::new(),
+                    &connections_for(&case)?,
+                )?
             } else {
-                driver::sync_factories(Arc::new(script.clone()), &binding_for(&case)?)?
+                driver::sync_factories_for_connections(
+                    Arc::new(script.clone()),
+                    &BTreeMap::new(),
+                    &connections_for(&case)?,
+                )?
             };
             let registry = DriverRegistry::new(factories)?;
             let native = if mode == 0 {
@@ -195,8 +225,20 @@ async fn asynchronous() -> Result<()> {
             }
             if let Some(h) = native {
                 h.close(false).await?;
+                assert_eq!(
+                    h.invoke_async(CatalogRequest::QueryIdentity)
+                        .await
+                        .unwrap_err()
+                        .kind,
+                    ErrorKind::SessionClosed
+                );
             } else {
-                worker.unwrap().close(false).await?;
+                let h = worker.unwrap();
+                h.close(false).await?;
+                assert_eq!(
+                    h.invoke(CatalogRequest::QueryIdentity).unwrap_err().kind,
+                    ErrorKind::SessionClosed
+                );
                 script.assert_thread_affinity()?;
             }
             script.assert_complete()?;

@@ -1779,23 +1779,23 @@ new ScriptStep("close", "", "", null),
 },
 new CatalogReply.Numeric(new Quantity(3.3, Unit.Unknown, MeasurementStatus.Valid))),
 new CatalogCase("keysight.34970a|B|SwitchCloseRoute-0", new CatalogRequest[] {
-new SwitchCloseRouteRequest(1, 1),
+new SwitchCloseRouteRequest(1, 3),
 }, new ScriptStep[] {
-new ScriptStep("write", ":ROUTe:CLOS (@(1,1))", "", null),
+new ScriptStep("write", ":ROUTe:CLOS (@(1,3))", "", null),
 new ScriptStep("close", "", "", null),
 },
 new CatalogReply.Empty()),
 new CatalogCase("keysight.34970a|B|SwitchOpenRoute-0", new CatalogRequest[] {
-new SwitchOpenRouteRequest(1, 1),
+new SwitchOpenRouteRequest(1, 3),
 }, new ScriptStep[] {
-new ScriptStep("write", ":ROUTe:OPEN (@(1,1))", "", null),
+new ScriptStep("write", ":ROUTe:OPEN (@(1,3))", "", null),
 new ScriptStep("close", "", "", null),
 },
 new CatalogReply.Empty()),
 new CatalogCase("keysight.34970a|B|SwitchIsClosed-0", new CatalogRequest[] {
-new SwitchIsClosedRequest(1, 1),
+new SwitchIsClosedRequest(1, 3),
 }, new ScriptStep[] {
-new ScriptStep("query", ":ROUTe:CLOS? (@(1,1))", "1", null),
+new ScriptStep("query", ":ROUTe:CLOS? (@(1,3))", "1", null),
 new ScriptStep("close", "", "", null),
 },
 new CatalogReply.State(true)),
@@ -1828,23 +1828,23 @@ new ScriptStep("close", "", "", null),
 },
 new CatalogReply.Empty()),
 new CatalogCase("keysight.34972a|B|SwitchCloseRoute-0", new CatalogRequest[] {
-new SwitchCloseRouteRequest(1, 1),
+new SwitchCloseRouteRequest(1, 3),
 }, new ScriptStep[] {
-new ScriptStep("write", ":ROUTe:CLOS (@(1,1))", "", null),
+new ScriptStep("write", ":ROUTe:CLOS (@(1,3))", "", null),
 new ScriptStep("close", "", "", null),
 },
 new CatalogReply.Empty()),
 new CatalogCase("keysight.34972a|B|SwitchOpenRoute-0", new CatalogRequest[] {
-new SwitchOpenRouteRequest(1, 1),
+new SwitchOpenRouteRequest(1, 3),
 }, new ScriptStep[] {
-new ScriptStep("write", ":ROUTe:OPEN (@(1,1))", "", null),
+new ScriptStep("write", ":ROUTe:OPEN (@(1,3))", "", null),
 new ScriptStep("close", "", "", null),
 },
 new CatalogReply.Empty()),
 new CatalogCase("keysight.34972a|B|SwitchIsClosed-0", new CatalogRequest[] {
-new SwitchIsClosedRequest(1, 1),
+new SwitchIsClosedRequest(1, 3),
 }, new ScriptStep[] {
-new ScriptStep("query", ":ROUTe:CLOS? (@(1,1))", "1", null),
+new ScriptStep("query", ":ROUTe:CLOS? (@(1,3))", "1", null),
 new ScriptStep("close", "", "", null),
 },
 new CatalogReply.State(true)),
@@ -3746,4 +3746,2296 @@ new ShutdownRequest(),
 new ScriptStep("close", "", "", null),
 },
 new CatalogReply.Empty()),
+new CatalogCase("keysight.33220a|B|FunctionGeneratorSetWaveform-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorSetWaveformRequest(Waveform.Sine),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR:FUNC SIN", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33220a|B|FunctionGeneratorSetFrequency-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR:FREQ 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33220a|B|FunctionGeneratorSetAmplitude-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorSetAmplitudeRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR:VOLT 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33220a|B|FunctionGeneratorSetOffset-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorSetOffsetRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR:VOLT:OFFS 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33220a|B|FunctionGeneratorSetDutyCycle-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorSetDutyCycleRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR:FUNC:SQU:DCYC 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33220a|B|FunctionGeneratorSetLoad-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorSetLoadRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":OUTP:LOAD 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33220a|B|FunctionGeneratorOutputEnable-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorOutputEnableRequest(true),
+}, new ScriptStep[] {
+new ScriptStep("write", ":OUTP ON", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33220a|B|FunctionGeneratorSetBurstCount-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorSetBurstCountRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR:BURS:NCYC 1", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33220a|B|FunctionGeneratorSetBurstState-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorSetBurstStateRequest(true),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR:BURS:STAT ON", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33220a|B|FunctionGeneratorSetBurstTriggerSource-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorSetBurstTriggerSourceRequest("IMM"),
+}, new ScriptStep[] {
+new ScriptStep("write", ":TRIG:SOUR IMM", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33220a|B|FunctionGeneratorReadFrequency-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorReadFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":SOUR:FREQ?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33220a|B|QueryIdentity-0-transport-failure", new CatalogRequest[] {
+new QueryIdentityRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*IDN?", "Validation,Device,SN,1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33220a|B|Reset-0-transport-failure", new CatalogRequest[] {
+new ResetRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*RST", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33220a|B|Shutdown-0-transport-failure", new CatalogRequest[] {
+new ShutdownRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":OUTP OFF", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Shutdown),
+new CatalogCase("keysight.33522b|B|FunctionGeneratorSetWaveform-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorSetWaveformRequest(Waveform.Sine),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR:FUNC SIN", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33522b|B|FunctionGeneratorSetFrequency-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR:FREQ 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33522b|B|FunctionGeneratorSetAmplitude-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorSetAmplitudeRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR:VOLT 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33522b|B|FunctionGeneratorSetOffset-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorSetOffsetRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR:VOLT:OFFS 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33522b|B|FunctionGeneratorSetDutyCycle-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorSetDutyCycleRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR:FUNC:SQU:DCYC 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33522b|B|FunctionGeneratorSetLoad-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorSetLoadRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":OUTP:LOAD 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33522b|B|FunctionGeneratorOutputEnable-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorOutputEnableRequest(true),
+}, new ScriptStep[] {
+new ScriptStep("write", ":OUTP ON", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33522b|B|FunctionGeneratorSetBurstCount-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorSetBurstCountRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR:BURS:NCYC 1", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33522b|B|FunctionGeneratorSetBurstState-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorSetBurstStateRequest(true),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR:BURS:STAT ON", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33522b|B|FunctionGeneratorSetBurstTriggerSource-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorSetBurstTriggerSourceRequest("IMM"),
+}, new ScriptStep[] {
+new ScriptStep("write", ":TRIG:SOUR IMM", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33522b|B|FunctionGeneratorReadFrequency-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorReadFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":SOUR:FREQ?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33522b|B|QueryIdentity-0-transport-failure", new CatalogRequest[] {
+new QueryIdentityRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*IDN?", "Validation,Device,SN,1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33522b|B|Reset-0-transport-failure", new CatalogRequest[] {
+new ResetRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*RST", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33522b|B|Shutdown-0-transport-failure", new CatalogRequest[] {
+new ShutdownRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":OUTP OFF", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Shutdown),
+new CatalogCase("keysight.33622a|B|FunctionGeneratorSetWaveform-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorSetWaveformRequest(Waveform.Sine),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR:FUNC SIN", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33622a|B|FunctionGeneratorSetFrequency-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR:FREQ 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33622a|B|FunctionGeneratorSetAmplitude-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorSetAmplitudeRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR:VOLT 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33622a|B|FunctionGeneratorSetOffset-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorSetOffsetRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR:VOLT:OFFS 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33622a|B|FunctionGeneratorSetDutyCycle-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorSetDutyCycleRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR:FUNC:SQU:DCYC 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33622a|B|FunctionGeneratorSetLoad-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorSetLoadRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":OUTP:LOAD 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33622a|B|FunctionGeneratorOutputEnable-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorOutputEnableRequest(true),
+}, new ScriptStep[] {
+new ScriptStep("write", ":OUTP ON", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33622a|B|FunctionGeneratorSetBurstCount-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorSetBurstCountRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR:BURS:NCYC 1", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33622a|B|FunctionGeneratorSetBurstState-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorSetBurstStateRequest(true),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR:BURS:STAT ON", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33622a|B|FunctionGeneratorSetBurstTriggerSource-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorSetBurstTriggerSourceRequest("IMM"),
+}, new ScriptStep[] {
+new ScriptStep("write", ":TRIG:SOUR IMM", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33622a|B|FunctionGeneratorReadFrequency-0-transport-failure", new CatalogRequest[] {
+new FunctionGeneratorReadFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":SOUR:FREQ?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33622a|B|QueryIdentity-0-transport-failure", new CatalogRequest[] {
+new QueryIdentityRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*IDN?", "Validation,Device,SN,1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33622a|B|Reset-0-transport-failure", new CatalogRequest[] {
+new ResetRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*RST", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33622a|B|Shutdown-0-transport-failure", new CatalogRequest[] {
+new ShutdownRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":OUTP OFF", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Shutdown),
+new CatalogCase("keysight.34401a|B|DmmMeasureVoltageDc-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34401a|B|DmmMeasureVoltageAc-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureVoltageAcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:AC?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34401a|B|DmmMeasureCurrentDc-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureCurrentDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:CURR:DC?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34401a|B|DmmMeasureCurrentAc-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureCurrentAcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:CURR:AC?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34401a|B|DmmMeasureResistance-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureResistanceRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:RES?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34401a|B|DmmMeasureResistance2Wire-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureResistance2WireRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:RES?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34401a|B|DmmMeasureResistance4Wire-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureResistance4WireRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:FRES?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34401a|B|DmmMeasureTemperature-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureTemperatureRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:TEMP?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34401a|B|DmmConfigureVoltageDc-0-transport-failure", new CatalogRequest[] {
+new DmmConfigureVoltageDcRequest(null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:VOLT:DC", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34401a|B|DmmConfigureVoltageAc-0-transport-failure", new CatalogRequest[] {
+new DmmConfigureVoltageAcRequest(null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:VOLT:AC", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34401a|B|DmmConfigureCurrentDc-0-transport-failure", new CatalogRequest[] {
+new DmmConfigureCurrentDcRequest(null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:CURR:DC", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34401a|B|DmmConfigureCurrentAc-0-transport-failure", new CatalogRequest[] {
+new DmmConfigureCurrentAcRequest(null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:CURR:AC", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34401a|B|DmmConfigureResistance-0-transport-failure", new CatalogRequest[] {
+new DmmConfigureResistanceRequest(null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:RES", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34401a|B|DmmConfigureResistance4Wire-0-transport-failure", new CatalogRequest[] {
+new DmmConfigureResistance4WireRequest(null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FRES", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34401a|B|DmmInitiate-0-transport-failure", new CatalogRequest[] {
+new DmmInitiateRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "INIT", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34401a|B|DmmFetch-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+new DmmFetchRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC?", "3.3", null),
+new ScriptStep("query", "FETC?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34401a|B|DmmRead-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+new DmmReadRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC?", "3.3", null),
+new ScriptStep("query", "READ?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34401a|B|DmmSoftwareTrigger-0-transport-failure", new CatalogRequest[] {
+new DmmSoftwareTriggerRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*TRG", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34401a|B|QueryIdentity-0-transport-failure", new CatalogRequest[] {
+new QueryIdentityRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*IDN?", "Validation,Device,SN,1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34401a|B|Reset-0-transport-failure", new CatalogRequest[] {
+new ResetRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*RST", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34410a|B|DmmMeasureVoltageDc-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34410a|B|DmmMeasureVoltageAc-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureVoltageAcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:AC?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34410a|B|DmmMeasureCurrentDc-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureCurrentDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:CURR:DC?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34410a|B|DmmMeasureCurrentAc-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureCurrentAcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:CURR:AC?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34410a|B|DmmMeasureResistance-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureResistanceRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:RES?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34410a|B|DmmMeasureResistance2Wire-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureResistance2WireRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:RES?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34410a|B|DmmMeasureResistance4Wire-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureResistance4WireRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:FRES?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34410a|B|DmmMeasureTemperature-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureTemperatureRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:TEMP?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34410a|B|DmmConfigureVoltageDc-0-transport-failure", new CatalogRequest[] {
+new DmmConfigureVoltageDcRequest(null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:VOLT:DC", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34410a|B|DmmConfigureVoltageAc-0-transport-failure", new CatalogRequest[] {
+new DmmConfigureVoltageAcRequest(null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:VOLT:AC", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34410a|B|DmmConfigureCurrentDc-0-transport-failure", new CatalogRequest[] {
+new DmmConfigureCurrentDcRequest(null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:CURR:DC", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34410a|B|DmmConfigureCurrentAc-0-transport-failure", new CatalogRequest[] {
+new DmmConfigureCurrentAcRequest(null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:CURR:AC", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34410a|B|DmmConfigureResistance-0-transport-failure", new CatalogRequest[] {
+new DmmConfigureResistanceRequest(null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:RES", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34410a|B|DmmConfigureResistance4Wire-0-transport-failure", new CatalogRequest[] {
+new DmmConfigureResistance4WireRequest(null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FRES", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34410a|B|DmmInitiate-0-transport-failure", new CatalogRequest[] {
+new DmmInitiateRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "INIT", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34410a|B|DmmFetch-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+new DmmFetchRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC?", "3.3", null),
+new ScriptStep("query", "FETC?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34410a|B|DmmRead-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+new DmmReadRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC?", "3.3", null),
+new ScriptStep("query", "READ?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34410a|B|DmmSoftwareTrigger-0-transport-failure", new CatalogRequest[] {
+new DmmSoftwareTriggerRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*TRG", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34410a|B|QueryIdentity-0-transport-failure", new CatalogRequest[] {
+new QueryIdentityRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*IDN?", "Validation,Device,SN,1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34410a|B|Reset-0-transport-failure", new CatalogRequest[] {
+new ResetRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*RST", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34461a|B|DmmMeasureVoltageDc-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34461a|B|DmmMeasureVoltageAc-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureVoltageAcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:AC?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34461a|B|DmmMeasureCurrentDc-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureCurrentDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:CURR:DC?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34461a|B|DmmMeasureCurrentAc-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureCurrentAcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:CURR:AC?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34461a|B|DmmMeasureResistance-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureResistanceRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:RES?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34461a|B|DmmMeasureResistance2Wire-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureResistance2WireRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:RES?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34461a|B|DmmMeasureResistance4Wire-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureResistance4WireRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:FRES?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34461a|B|DmmMeasureTemperature-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureTemperatureRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:TEMP?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34461a|B|DmmConfigureVoltageDc-0-transport-failure", new CatalogRequest[] {
+new DmmConfigureVoltageDcRequest(null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:VOLT:DC", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34461a|B|DmmConfigureVoltageAc-0-transport-failure", new CatalogRequest[] {
+new DmmConfigureVoltageAcRequest(null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:VOLT:AC", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34461a|B|DmmConfigureCurrentDc-0-transport-failure", new CatalogRequest[] {
+new DmmConfigureCurrentDcRequest(null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:CURR:DC", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34461a|B|DmmConfigureCurrentAc-0-transport-failure", new CatalogRequest[] {
+new DmmConfigureCurrentAcRequest(null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:CURR:AC", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34461a|B|DmmConfigureResistance-0-transport-failure", new CatalogRequest[] {
+new DmmConfigureResistanceRequest(null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:RES", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34461a|B|DmmConfigureResistance4Wire-0-transport-failure", new CatalogRequest[] {
+new DmmConfigureResistance4WireRequest(null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FRES", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34461a|B|DmmInitiate-0-transport-failure", new CatalogRequest[] {
+new DmmInitiateRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "INIT", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34461a|B|DmmFetch-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+new DmmFetchRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC?", "3.3", null),
+new ScriptStep("query", "FETC?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34461a|B|DmmRead-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+new DmmReadRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC?", "3.3", null),
+new ScriptStep("query", "READ?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34461a|B|DmmSoftwareTrigger-0-transport-failure", new CatalogRequest[] {
+new DmmSoftwareTriggerRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*TRG", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34461a|B|QueryIdentity-0-transport-failure", new CatalogRequest[] {
+new QueryIdentityRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*IDN?", "Validation,Device,SN,1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34461a|B|Reset-0-transport-failure", new CatalogRequest[] {
+new ResetRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*RST", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34465a|B|DmmMeasureVoltageDc-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34465a|B|DmmMeasureVoltageAc-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureVoltageAcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:AC?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34465a|B|DmmMeasureCurrentDc-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureCurrentDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:CURR:DC?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34465a|B|DmmMeasureCurrentAc-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureCurrentAcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:CURR:AC?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34465a|B|DmmMeasureResistance-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureResistanceRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:RES?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34465a|B|DmmMeasureResistance2Wire-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureResistance2WireRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:RES?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34465a|B|DmmMeasureResistance4Wire-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureResistance4WireRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:FRES?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34465a|B|DmmMeasureTemperature-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureTemperatureRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:TEMP?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34465a|B|DmmConfigureVoltageDc-0-transport-failure", new CatalogRequest[] {
+new DmmConfigureVoltageDcRequest(null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:VOLT:DC", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34465a|B|DmmConfigureVoltageAc-0-transport-failure", new CatalogRequest[] {
+new DmmConfigureVoltageAcRequest(null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:VOLT:AC", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34465a|B|DmmConfigureCurrentDc-0-transport-failure", new CatalogRequest[] {
+new DmmConfigureCurrentDcRequest(null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:CURR:DC", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34465a|B|DmmConfigureCurrentAc-0-transport-failure", new CatalogRequest[] {
+new DmmConfigureCurrentAcRequest(null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:CURR:AC", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34465a|B|DmmConfigureResistance-0-transport-failure", new CatalogRequest[] {
+new DmmConfigureResistanceRequest(null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:RES", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34465a|B|DmmConfigureResistance4Wire-0-transport-failure", new CatalogRequest[] {
+new DmmConfigureResistance4WireRequest(null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FRES", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34465a|B|DmmInitiate-0-transport-failure", new CatalogRequest[] {
+new DmmInitiateRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "INIT", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34465a|B|DmmFetch-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+new DmmFetchRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC?", "3.3", null),
+new ScriptStep("query", "FETC?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34465a|B|DmmRead-0-transport-failure", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+new DmmReadRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC?", "3.3", null),
+new ScriptStep("query", "READ?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34465a|B|DmmSoftwareTrigger-0-transport-failure", new CatalogRequest[] {
+new DmmSoftwareTriggerRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*TRG", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34465a|B|QueryIdentity-0-transport-failure", new CatalogRequest[] {
+new QueryIdentityRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*IDN?", "Validation,Device,SN,1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34465a|B|Reset-0-transport-failure", new CatalogRequest[] {
+new ResetRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*RST", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34970a|B|SwitchCloseRoute-0-transport-failure", new CatalogRequest[] {
+new SwitchCloseRouteRequest(1, 3),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUTe:CLOS (@(1,3))", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34970a|B|SwitchOpenRoute-0-transport-failure", new CatalogRequest[] {
+new SwitchOpenRouteRequest(1, 3),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUTe:OPEN (@(1,3))", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34970a|B|SwitchIsClosed-0-transport-failure", new CatalogRequest[] {
+new SwitchIsClosedRequest(1, 3),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUTe:CLOS? (@(1,3))", "1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34970a|B|SwitchOpenAll-0-transport-failure", new CatalogRequest[] {
+new SwitchOpenAllRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUTe:OPEN:ALL", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34970a|B|QueryIdentity-0-transport-failure", new CatalogRequest[] {
+new QueryIdentityRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*IDN?", "Validation,Device,SN,1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34970a|B|Reset-0-transport-failure", new CatalogRequest[] {
+new ResetRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*RST", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34970a|B|Shutdown-0-transport-failure", new CatalogRequest[] {
+new ShutdownRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUTe:OPEN:ALL", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Shutdown),
+new CatalogCase("keysight.34972a|B|SwitchCloseRoute-0-transport-failure", new CatalogRequest[] {
+new SwitchCloseRouteRequest(1, 3),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUTe:CLOS (@(1,3))", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34972a|B|SwitchOpenRoute-0-transport-failure", new CatalogRequest[] {
+new SwitchOpenRouteRequest(1, 3),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUTe:OPEN (@(1,3))", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34972a|B|SwitchIsClosed-0-transport-failure", new CatalogRequest[] {
+new SwitchIsClosedRequest(1, 3),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUTe:CLOS? (@(1,3))", "1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34972a|B|SwitchOpenAll-0-transport-failure", new CatalogRequest[] {
+new SwitchOpenAllRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUTe:OPEN:ALL", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34972a|B|QueryIdentity-0-transport-failure", new CatalogRequest[] {
+new QueryIdentityRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*IDN?", "Validation,Device,SN,1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34972a|B|Reset-0-transport-failure", new CatalogRequest[] {
+new ResetRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*RST", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34972a|B|Shutdown-0-transport-failure", new CatalogRequest[] {
+new ShutdownRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUTe:OPEN:ALL", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Shutdown),
+new CatalogCase("keysight.53131a|B|CounterMeasureFrequency-0-transport-failure", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEASure:FREQuency?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53131a|B|CounterMeasurePeriod-0-transport-failure", new CatalogRequest[] {
+new CounterMeasurePeriodRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEASure:PERiod?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53131a|B|CounterSetGateTime-0-transport-failure", new CatalogRequest[] {
+new CounterSetGateTimeRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SENSe:FREQuency:APERture 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53131a|B|CounterSelectChannel-0-transport-failure", new CatalogRequest[] {
+new CounterSelectChannelRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SENSe:FUNCtion:ON \"FREQ 1\"", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53131a|B|CounterResetTotalize-0-transport-failure", new CatalogRequest[] {
+new CounterResetTotalizeRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":COUNter:CRESet", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53131a|B|CounterReadTotalize-0-transport-failure", new CatalogRequest[] {
+new CounterReadTotalizeRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":COUNter:DATA?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53131a|B|QueryIdentity-0-transport-failure", new CatalogRequest[] {
+new QueryIdentityRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*IDN?", "Validation,Device,SN,1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53131a|B|Reset-0-transport-failure", new CatalogRequest[] {
+new ResetRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*RST", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53220a|B|CounterMeasureFrequency-0-transport-failure", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEASure:FREQuency?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53220a|B|CounterMeasurePeriod-0-transport-failure", new CatalogRequest[] {
+new CounterMeasurePeriodRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEASure:PERiod?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53220a|B|CounterSetGateTime-0-transport-failure", new CatalogRequest[] {
+new CounterSetGateTimeRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SENSe:FREQuency:APERture 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53220a|B|CounterSelectChannel-0-transport-failure", new CatalogRequest[] {
+new CounterSelectChannelRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SENSe:FUNCtion:ON \"FREQ 1\"", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53220a|B|CounterResetTotalize-0-transport-failure", new CatalogRequest[] {
+new CounterResetTotalizeRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":COUNter:CRESet", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53220a|B|CounterReadTotalize-0-transport-failure", new CatalogRequest[] {
+new CounterReadTotalizeRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":COUNter:DATA?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53220a|B|QueryIdentity-0-transport-failure", new CatalogRequest[] {
+new QueryIdentityRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*IDN?", "Validation,Device,SN,1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53220a|B|Reset-0-transport-failure", new CatalogRequest[] {
+new ResetRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*RST", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53230a|B|CounterMeasureFrequency-0-transport-failure", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEASure:FREQuency?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53230a|B|CounterMeasurePeriod-0-transport-failure", new CatalogRequest[] {
+new CounterMeasurePeriodRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEASure:PERiod?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53230a|B|CounterSetGateTime-0-transport-failure", new CatalogRequest[] {
+new CounterSetGateTimeRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SENSe:FREQuency:APERture 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53230a|B|CounterSelectChannel-0-transport-failure", new CatalogRequest[] {
+new CounterSelectChannelRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SENSe:FUNCtion:ON \"FREQ 1\"", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53230a|B|CounterResetTotalize-0-transport-failure", new CatalogRequest[] {
+new CounterResetTotalizeRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":COUNter:CRESet", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53230a|B|CounterReadTotalize-0-transport-failure", new CatalogRequest[] {
+new CounterReadTotalizeRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":COUNter:DATA?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53230a|B|QueryIdentity-0-transport-failure", new CatalogRequest[] {
+new QueryIdentityRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*IDN?", "Validation,Device,SN,1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53230a|B|Reset-0-transport-failure", new CatalogRequest[] {
+new ResetRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*RST", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox2024a|B|OscilloscopeSetTimebaseScale-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeSetTimebaseScaleRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":TIMebase:SCALe 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox2024a|B|OscilloscopeReadTimebaseScale-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeReadTimebaseScaleRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":TIMebase:SCALe?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox2024a|B|OscilloscopeSetChannelScale-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeSetChannelScaleRequest(1, 2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CHANnel1:SCALe 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox2024a|B|OscilloscopeSetChannelDisplay-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeSetChannelDisplayRequest(1, true),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CHANnel1:DISP ON", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox2024a|B|OscilloscopeSetChannelCoupling-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeSetChannelCouplingRequest(1, "DC"),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CHANnel1:COUP DC", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox2024a|B|OscilloscopeSetTriggerSource-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeSetTriggerSourceRequest("CHAN1"),
+}, new ScriptStep[] {
+new ScriptStep("write", ":TRIGger:EDGE:SOURce CHAN1", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox2024a|B|OscilloscopeSetTriggerLevel-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeSetTriggerLevelRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":TRIGger:EDGE:LEVel 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox2024a|B|OscilloscopeSetTriggerSlope-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeSetTriggerSlopeRequest("POS"),
+}, new ScriptStep[] {
+new ScriptStep("write", ":TRIGger:EDGE:SLOPe POS", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox2024a|B|OscilloscopeRun-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeRunRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":RUN", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox2024a|B|OscilloscopeStop-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeStopRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":STOP", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox2024a|B|OscilloscopeSingle-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeSingleRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SINGle", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox2024a|B|OscilloscopeMeasureVpp-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeMeasureVppRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEASure:VPP? CHAN1", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox2024a|B|OscilloscopeMeasureFrequency-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeMeasureFrequencyRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEASure:FREQuency? CHAN1", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox2024a|B|OscilloscopeCaptureVoltageTrace-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeCaptureVoltageTraceRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("write", ":WAVeform:SOURce CHAN1", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox2024a|B|QueryIdentity-0-transport-failure", new CatalogRequest[] {
+new QueryIdentityRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*IDN?", "Validation,Device,SN,1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox2024a|B|Reset-0-transport-failure", new CatalogRequest[] {
+new ResetRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*RST", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox2024a|B|Shutdown-0-transport-failure", new CatalogRequest[] {
+new ShutdownRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":STOP", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Shutdown),
+new CatalogCase("keysight.dsox3024t|B|OscilloscopeSetTimebaseScale-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeSetTimebaseScaleRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":TIMebase:SCALe 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox3024t|B|OscilloscopeReadTimebaseScale-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeReadTimebaseScaleRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":TIMebase:SCALe?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox3024t|B|OscilloscopeSetChannelScale-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeSetChannelScaleRequest(1, 2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CHANnel1:SCALe 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox3024t|B|OscilloscopeSetChannelDisplay-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeSetChannelDisplayRequest(1, true),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CHANnel1:DISP ON", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox3024t|B|OscilloscopeSetChannelCoupling-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeSetChannelCouplingRequest(1, "DC"),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CHANnel1:COUP DC", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox3024t|B|OscilloscopeSetTriggerSource-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeSetTriggerSourceRequest("CHAN1"),
+}, new ScriptStep[] {
+new ScriptStep("write", ":TRIGger:EDGE:SOURce CHAN1", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox3024t|B|OscilloscopeSetTriggerLevel-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeSetTriggerLevelRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":TRIGger:EDGE:LEVel 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox3024t|B|OscilloscopeSetTriggerSlope-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeSetTriggerSlopeRequest("POS"),
+}, new ScriptStep[] {
+new ScriptStep("write", ":TRIGger:EDGE:SLOPe POS", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox3024t|B|OscilloscopeRun-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeRunRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":RUN", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox3024t|B|OscilloscopeStop-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeStopRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":STOP", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox3024t|B|OscilloscopeSingle-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeSingleRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SINGle", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox3024t|B|OscilloscopeMeasureVpp-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeMeasureVppRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEASure:VPP? CHAN1", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox3024t|B|OscilloscopeMeasureFrequency-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeMeasureFrequencyRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEASure:FREQuency? CHAN1", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox3024t|B|OscilloscopeCaptureVoltageTrace-0-transport-failure", new CatalogRequest[] {
+new OscilloscopeCaptureVoltageTraceRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("write", ":WAVeform:SOURce CHAN1", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox3024t|B|QueryIdentity-0-transport-failure", new CatalogRequest[] {
+new QueryIdentityRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*IDN?", "Validation,Device,SN,1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox3024t|B|Reset-0-transport-failure", new CatalogRequest[] {
+new ResetRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*RST", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox3024t|B|Shutdown-0-transport-failure", new CatalogRequest[] {
+new ShutdownRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":STOP", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Shutdown),
+new CatalogCase("keysight.e36312a|B|DcPowerSupplySetVoltage-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplySetVoltageRequest(1, 2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR1:VOLT 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e36312a|B|DcPowerSupplySetCurrentLimit-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplySetCurrentLimitRequest(1, 2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR1:CURR 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e36312a|B|DcPowerSupplyOutputEnable-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyOutputEnableRequest(1, true),
+}, new ScriptStep[] {
+new ScriptStep("write", ":OUTP1 ON", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e36312a|B|DcPowerSupplyOutputStateQuery-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyOutputStateQueryRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("query", ":OUTP1?", "1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e36312a|B|DcPowerSupplyOvpLevel-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyOvpLevelRequest(1, 2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR1:VOLT:PROT 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e36312a|B|DcPowerSupplyOvpEnable-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyOvpEnableRequest(1, true),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR1:VOLT:PROT:STAT ON", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e36312a|B|DcPowerSupplyOvpQuery-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyOvpQueryRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("query", ":SOUR1:VOLT:PROT:STAT?", "1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e36312a|B|DcPowerSupplyReadVoltage-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyReadVoltageRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT? 1", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e36312a|B|DcPowerSupplyReadCurrent-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyReadCurrentRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:CURR? 1", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e36312a|B|DcPowerSupplySetSenseMode-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplySetSenseModeRequest(1, SenseMode.Internal),
+}, new ScriptStep[] {
+new ScriptStep("write", ":OUTP1:SENS OFF", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e36312a|B|QueryIdentity-0-transport-failure", new CatalogRequest[] {
+new QueryIdentityRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*IDN?", "Validation,Device,SN,1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e36312a|B|Reset-0-transport-failure", new CatalogRequest[] {
+new ResetRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*RST", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e36312a|B|Shutdown-0-transport-failure", new CatalogRequest[] {
+new ShutdownRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":OUTP1 OFF", "", DriverErrorKind.Transport),
+new ScriptStep("write", ":OUTP3 OFF", "", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Shutdown),
+new CatalogCase("keysight.e3631a|B|DcPowerSupplySetVoltage-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplySetVoltageRequest(1, 2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR1:VOLT 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e3631a|B|DcPowerSupplySetCurrentLimit-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplySetCurrentLimitRequest(1, 2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR1:CURR 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e3631a|B|DcPowerSupplyOutputEnable-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyOutputEnableRequest(1, true),
+}, new ScriptStep[] {
+new ScriptStep("write", ":OUTP1 ON", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e3631a|B|DcPowerSupplyOutputStateQuery-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyOutputStateQueryRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("query", ":OUTP1?", "1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e3631a|B|DcPowerSupplyOvpLevel-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyOvpLevelRequest(1, 2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR1:VOLT:PROT 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e3631a|B|DcPowerSupplyOvpEnable-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyOvpEnableRequest(1, true),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR1:VOLT:PROT:STAT ON", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e3631a|B|DcPowerSupplyOvpQuery-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyOvpQueryRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("query", ":SOUR1:VOLT:PROT:STAT?", "1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e3631a|B|DcPowerSupplyReadVoltage-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyReadVoltageRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT? 1", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e3631a|B|DcPowerSupplyReadCurrent-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyReadCurrentRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:CURR? 1", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e3631a|B|DcPowerSupplySetSenseMode-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplySetSenseModeRequest(1, SenseMode.Internal),
+}, new ScriptStep[] {
+new ScriptStep("write", ":OUTP1:SENS OFF", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e3631a|B|QueryIdentity-0-transport-failure", new CatalogRequest[] {
+new QueryIdentityRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*IDN?", "Validation,Device,SN,1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e3631a|B|Reset-0-transport-failure", new CatalogRequest[] {
+new ResetRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*RST", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e3631a|B|Shutdown-0-transport-failure", new CatalogRequest[] {
+new ShutdownRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":OUTP1 OFF", "", DriverErrorKind.Transport),
+new ScriptStep("write", ":OUTP3 OFF", "", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Shutdown),
+new CatalogCase("keysight.e3640a|B|DcPowerSupplySetVoltage-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplySetVoltageRequest(1, 2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR1:VOLT 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e3640a|B|DcPowerSupplySetCurrentLimit-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplySetCurrentLimitRequest(1, 2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR1:CURR 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e3640a|B|DcPowerSupplyOutputEnable-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyOutputEnableRequest(1, true),
+}, new ScriptStep[] {
+new ScriptStep("write", ":OUTP1 ON", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e3640a|B|DcPowerSupplyOutputStateQuery-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyOutputStateQueryRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("query", ":OUTP1?", "1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e3640a|B|DcPowerSupplyOvpLevel-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyOvpLevelRequest(1, 2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR1:VOLT:PROT 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e3640a|B|DcPowerSupplyOvpEnable-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyOvpEnableRequest(1, true),
+}, new ScriptStep[] {
+new ScriptStep("write", ":SOUR1:VOLT:PROT:STAT ON", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e3640a|B|DcPowerSupplyOvpQuery-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyOvpQueryRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("query", ":SOUR1:VOLT:PROT:STAT?", "1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e3640a|B|DcPowerSupplyReadVoltage-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyReadVoltageRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT? 1", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e3640a|B|DcPowerSupplyReadCurrent-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyReadCurrentRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:CURR? 1", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e3640a|B|DcPowerSupplySetSenseMode-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplySetSenseModeRequest(1, SenseMode.Internal),
+}, new ScriptStep[] {
+new ScriptStep("write", ":OUTP1:SENS OFF", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e3640a|B|QueryIdentity-0-transport-failure", new CatalogRequest[] {
+new QueryIdentityRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*IDN?", "Validation,Device,SN,1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e3640a|B|Reset-0-transport-failure", new CatalogRequest[] {
+new ResetRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*RST", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.e3640a|B|Shutdown-0-transport-failure", new CatalogRequest[] {
+new ShutdownRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":OUTP1 OFF", "", DriverErrorKind.Transport),
+new ScriptStep("write", ":OUTP3 OFF", "", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Shutdown),
+new CatalogCase("keysight.n6705c|B|DcPowerSupplySetVoltage-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplySetVoltageRequest(1, 2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":VOLT 2.5, (@1)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n6705c|B|DcPowerSupplySetCurrentLimit-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplySetCurrentLimitRequest(1, 2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CURR 2.5, (@1)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n6705c|B|DcPowerSupplyOutputEnable-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyOutputEnableRequest(1, true),
+}, new ScriptStep[] {
+new ScriptStep("write", ":OUTP ON, (@1)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n6705c|B|DcPowerSupplyOutputStateQuery-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyOutputStateQueryRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("query", ":OUTP? (@1)", "1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n6705c|B|DcPowerSupplyOvpLevel-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyOvpLevelRequest(1, 2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":VOLT:PROT 2.5, (@1)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n6705c|B|DcPowerSupplyOvpEnable-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyOvpEnableRequest(1, true),
+}, new ScriptStep[] {
+new ScriptStep("write", ":VOLT:PROT:STAT ON, (@1)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n6705c|B|DcPowerSupplyOvpQuery-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyOvpQueryRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("query", ":VOLT:PROT:STAT? (@1)", "1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n6705c|B|DcPowerSupplyReadVoltage-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyReadVoltageRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT? (@1)", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n6705c|B|DcPowerSupplyReadCurrent-0-transport-failure", new CatalogRequest[] {
+new DcPowerSupplyReadCurrentRequest(1),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:CURR? (@1)", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n6705c|B|QueryIdentity-0-transport-failure", new CatalogRequest[] {
+new QueryIdentityRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*IDN?", "Validation,Device,SN,1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n6705c|B|Reset-0-transport-failure", new CatalogRequest[] {
+new ResetRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*RST", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n6705c|B|Shutdown-0-transport-failure", new CatalogRequest[] {
+new ShutdownRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":OUTP OFF, (@1)", "", DriverErrorKind.Transport),
+new ScriptStep("write", ":OUTP OFF, (@3)", "", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Shutdown),
+new CatalogCase("keysight.n9010b|B|SpectrumAnalyzerSetCenterFrequency-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerSetCenterFrequencyRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":FREQ:CENT 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9010b|B|SpectrumAnalyzerSetSpan-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerSetSpanRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":FREQ:SPAN 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9010b|B|SpectrumAnalyzerSetRbw-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerSetRbwRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":BAND 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9010b|B|SpectrumAnalyzerSetVbw-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerSetVbwRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":BAND:VID 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9010b|B|SpectrumAnalyzerSetRefLevel-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerSetRefLevelRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":DISP:WIND:TRAC:Y:RLEV 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9010b|B|SpectrumAnalyzerFetchTraceAscii-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerFetchTraceAsciiRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":TRAC:DATA? TRACE1", "1,2,3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9010b|B|SpectrumAnalyzerMarkerPeak-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerPeakRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CALC:MARK:MAX", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9010b|B|SpectrumAnalyzerMarkerX-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CALC:MARK:X?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9010b|B|SpectrumAnalyzerMarkerY-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CALC:MARK:Y?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9010b|B|SpectrumAnalyzerSweepContinuous-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerSweepContinuousRequest(true),
+}, new ScriptStep[] {
+new ScriptStep("write", ":INIT:CONT ON", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9010b|B|SpectrumAnalyzerSingleSweep-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerSingleSweepRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":INIT:IMM", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9010b|B|SpectrumAnalyzerWaitOpc-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerWaitOpcRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*OPC?", "1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9010b|B|QueryIdentity-0-transport-failure", new CatalogRequest[] {
+new QueryIdentityRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*IDN?", "Validation,Device,SN,1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9010b|B|Reset-0-transport-failure", new CatalogRequest[] {
+new ResetRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*RST", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9010b|B|Shutdown-0-transport-failure", new CatalogRequest[] {
+new ShutdownRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":INIT:CONT OFF", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Shutdown),
+new CatalogCase("keysight.n9020b|B|SpectrumAnalyzerSetCenterFrequency-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerSetCenterFrequencyRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":FREQ:CENT 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9020b|B|SpectrumAnalyzerSetSpan-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerSetSpanRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":FREQ:SPAN 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9020b|B|SpectrumAnalyzerSetRbw-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerSetRbwRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":BAND 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9020b|B|SpectrumAnalyzerSetVbw-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerSetVbwRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":BAND:VID 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9020b|B|SpectrumAnalyzerSetRefLevel-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerSetRefLevelRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":DISP:WIND:TRAC:Y:RLEV 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9020b|B|SpectrumAnalyzerFetchTraceAscii-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerFetchTraceAsciiRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":TRAC:DATA? TRACE1", "1,2,3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9020b|B|SpectrumAnalyzerMarkerPeak-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerPeakRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CALC:MARK:MAX", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9020b|B|SpectrumAnalyzerMarkerX-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CALC:MARK:X?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9020b|B|SpectrumAnalyzerMarkerY-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CALC:MARK:Y?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9020b|B|SpectrumAnalyzerSweepContinuous-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerSweepContinuousRequest(true),
+}, new ScriptStep[] {
+new ScriptStep("write", ":INIT:CONT ON", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9020b|B|SpectrumAnalyzerSingleSweep-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerSingleSweepRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":INIT:IMM", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9020b|B|SpectrumAnalyzerWaitOpc-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerWaitOpcRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*OPC?", "1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9020b|B|QueryIdentity-0-transport-failure", new CatalogRequest[] {
+new QueryIdentityRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*IDN?", "Validation,Device,SN,1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9020b|B|Reset-0-transport-failure", new CatalogRequest[] {
+new ResetRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*RST", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9020b|B|Shutdown-0-transport-failure", new CatalogRequest[] {
+new ShutdownRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":INIT:CONT OFF", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Shutdown),
+new CatalogCase("keysight.n9030b|B|SpectrumAnalyzerSetCenterFrequency-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerSetCenterFrequencyRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":FREQ:CENT 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9030b|B|SpectrumAnalyzerSetSpan-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerSetSpanRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":FREQ:SPAN 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9030b|B|SpectrumAnalyzerSetRbw-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerSetRbwRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":BAND 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9030b|B|SpectrumAnalyzerSetVbw-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerSetVbwRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":BAND:VID 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9030b|B|SpectrumAnalyzerSetRefLevel-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerSetRefLevelRequest(2.5),
+}, new ScriptStep[] {
+new ScriptStep("write", ":DISP:WIND:TRAC:Y:RLEV 2.5", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9030b|B|SpectrumAnalyzerFetchTraceAscii-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerFetchTraceAsciiRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":TRAC:DATA? TRACE1", "1,2,3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9030b|B|SpectrumAnalyzerMarkerPeak-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerPeakRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CALC:MARK:MAX", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9030b|B|SpectrumAnalyzerMarkerX-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CALC:MARK:X?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9030b|B|SpectrumAnalyzerMarkerY-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CALC:MARK:Y?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9030b|B|SpectrumAnalyzerSweepContinuous-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerSweepContinuousRequest(true),
+}, new ScriptStep[] {
+new ScriptStep("write", ":INIT:CONT ON", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9030b|B|SpectrumAnalyzerSingleSweep-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerSingleSweepRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":INIT:IMM", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9030b|B|SpectrumAnalyzerWaitOpc-0-transport-failure", new CatalogRequest[] {
+new SpectrumAnalyzerWaitOpcRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*OPC?", "1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9030b|B|QueryIdentity-0-transport-failure", new CatalogRequest[] {
+new QueryIdentityRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*IDN?", "Validation,Device,SN,1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9030b|B|Reset-0-transport-failure", new CatalogRequest[] {
+new ResetRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*RST", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.n9030b|B|Shutdown-0-transport-failure", new CatalogRequest[] {
+new ShutdownRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":INIT:CONT OFF", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Shutdown),
+new CatalogCase("keysight.u2000a|B|PowerMeterConfigureMeasurement-0-transport-failure", new CatalogRequest[] {
+new PowerMeterConfigureMeasurementRequest(PowerUnit.Watt, true, true, null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":UNIT:POW W", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.u2000a|B|PowerMeterInitiate-0-transport-failure", new CatalogRequest[] {
+new PowerMeterInitiateRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "INIT", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.u2000a|B|PowerMeterFetch-0-transport-failure", new CatalogRequest[] {
+new PowerMeterConfigureMeasurementRequest(PowerUnit.Watt, true, true, 2.5, 2.5),
+new PowerMeterFetchRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":UNIT:POW W", "", null),
+new ScriptStep("write", ":SENS:POW:RANG:AUTO ON", "", null),
+new ScriptStep("write", ":SENS:AVER:COUN:AUTO ON", "", null),
+new ScriptStep("write", ":SENS:FREQ 2.5", "", null),
+new ScriptStep("write", ":SENS:CORR:GAIN2 2.5", "", null),
+new ScriptStep("query", "FETC?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.u2000a|B|PowerMeterRead-0-transport-failure", new CatalogRequest[] {
+new PowerMeterConfigureMeasurementRequest(PowerUnit.Watt, true, true, 2.5, 2.5),
+new PowerMeterReadRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":UNIT:POW W", "", null),
+new ScriptStep("write", ":SENS:POW:RANG:AUTO ON", "", null),
+new ScriptStep("write", ":SENS:AVER:COUN:AUTO ON", "", null),
+new ScriptStep("write", ":SENS:FREQ 2.5", "", null),
+new ScriptStep("write", ":SENS:CORR:GAIN2 2.5", "", null),
+new ScriptStep("query", "READ?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.u2000a|B|QueryIdentity-0-transport-failure", new CatalogRequest[] {
+new QueryIdentityRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*IDN?", "Validation,Device,SN,1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.u2000a|B|Reset-0-transport-failure", new CatalogRequest[] {
+new ResetRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*RST", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.u2001a|B|PowerMeterConfigureMeasurement-0-transport-failure", new CatalogRequest[] {
+new PowerMeterConfigureMeasurementRequest(PowerUnit.Watt, true, true, null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":UNIT:POW W", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.u2001a|B|PowerMeterInitiate-0-transport-failure", new CatalogRequest[] {
+new PowerMeterInitiateRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "INIT", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.u2001a|B|PowerMeterFetch-0-transport-failure", new CatalogRequest[] {
+new PowerMeterConfigureMeasurementRequest(PowerUnit.Watt, true, true, 2.5, 2.5),
+new PowerMeterFetchRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":UNIT:POW W", "", null),
+new ScriptStep("write", ":SENS:POW:RANG:AUTO ON", "", null),
+new ScriptStep("write", ":SENS:AVER:COUN:AUTO ON", "", null),
+new ScriptStep("write", ":SENS:FREQ 2.5", "", null),
+new ScriptStep("write", ":SENS:CORR:GAIN2 2.5", "", null),
+new ScriptStep("query", "FETC?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.u2001a|B|PowerMeterRead-0-transport-failure", new CatalogRequest[] {
+new PowerMeterConfigureMeasurementRequest(PowerUnit.Watt, true, true, 2.5, 2.5),
+new PowerMeterReadRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":UNIT:POW W", "", null),
+new ScriptStep("write", ":SENS:POW:RANG:AUTO ON", "", null),
+new ScriptStep("write", ":SENS:AVER:COUN:AUTO ON", "", null),
+new ScriptStep("write", ":SENS:FREQ 2.5", "", null),
+new ScriptStep("write", ":SENS:CORR:GAIN2 2.5", "", null),
+new ScriptStep("query", "READ?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.u2001a|B|QueryIdentity-0-transport-failure", new CatalogRequest[] {
+new QueryIdentityRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*IDN?", "Validation,Device,SN,1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.u2001a|B|Reset-0-transport-failure", new CatalogRequest[] {
+new ResetRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*RST", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.u2002a|B|PowerMeterConfigureMeasurement-0-transport-failure", new CatalogRequest[] {
+new PowerMeterConfigureMeasurementRequest(PowerUnit.Watt, true, true, null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":UNIT:POW W", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.u2002a|B|PowerMeterInitiate-0-transport-failure", new CatalogRequest[] {
+new PowerMeterInitiateRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "INIT", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.u2002a|B|PowerMeterFetch-0-transport-failure", new CatalogRequest[] {
+new PowerMeterConfigureMeasurementRequest(PowerUnit.Watt, true, true, 2.5, 2.5),
+new PowerMeterFetchRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":UNIT:POW W", "", null),
+new ScriptStep("write", ":SENS:POW:RANG:AUTO ON", "", null),
+new ScriptStep("write", ":SENS:AVER:COUN:AUTO ON", "", null),
+new ScriptStep("write", ":SENS:FREQ 2.5", "", null),
+new ScriptStep("write", ":SENS:CORR:GAIN2 2.5", "", null),
+new ScriptStep("query", "FETC?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.u2002a|B|PowerMeterRead-0-transport-failure", new CatalogRequest[] {
+new PowerMeterConfigureMeasurementRequest(PowerUnit.Watt, true, true, 2.5, 2.5),
+new PowerMeterReadRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":UNIT:POW W", "", null),
+new ScriptStep("write", ":SENS:POW:RANG:AUTO ON", "", null),
+new ScriptStep("write", ":SENS:AVER:COUN:AUTO ON", "", null),
+new ScriptStep("write", ":SENS:FREQ 2.5", "", null),
+new ScriptStep("write", ":SENS:CORR:GAIN2 2.5", "", null),
+new ScriptStep("query", "READ?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.u2002a|B|QueryIdentity-0-transport-failure", new CatalogRequest[] {
+new QueryIdentityRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*IDN?", "Validation,Device,SN,1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.u2002a|B|Reset-0-transport-failure", new CatalogRequest[] {
+new ResetRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*RST", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.u2004a|B|PowerMeterConfigureMeasurement-0-transport-failure", new CatalogRequest[] {
+new PowerMeterConfigureMeasurementRequest(PowerUnit.Watt, true, true, null, null),
+}, new ScriptStep[] {
+new ScriptStep("write", ":UNIT:POW W", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.u2004a|B|PowerMeterInitiate-0-transport-failure", new CatalogRequest[] {
+new PowerMeterInitiateRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "INIT", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.u2004a|B|PowerMeterFetch-0-transport-failure", new CatalogRequest[] {
+new PowerMeterConfigureMeasurementRequest(PowerUnit.Watt, true, true, 2.5, 2.5),
+new PowerMeterFetchRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":UNIT:POW W", "", null),
+new ScriptStep("write", ":SENS:POW:RANG:AUTO ON", "", null),
+new ScriptStep("write", ":SENS:AVER:COUN:AUTO ON", "", null),
+new ScriptStep("write", ":SENS:FREQ 2.5", "", null),
+new ScriptStep("write", ":SENS:CORR:GAIN2 2.5", "", null),
+new ScriptStep("query", "FETC?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.u2004a|B|PowerMeterRead-0-transport-failure", new CatalogRequest[] {
+new PowerMeterConfigureMeasurementRequest(PowerUnit.Watt, true, true, 2.5, 2.5),
+new PowerMeterReadRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":UNIT:POW W", "", null),
+new ScriptStep("write", ":SENS:POW:RANG:AUTO ON", "", null),
+new ScriptStep("write", ":SENS:AVER:COUN:AUTO ON", "", null),
+new ScriptStep("write", ":SENS:FREQ 2.5", "", null),
+new ScriptStep("write", ":SENS:CORR:GAIN2 2.5", "", null),
+new ScriptStep("query", "READ?", "3.3", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.u2004a|B|QueryIdentity-0-transport-failure", new CatalogRequest[] {
+new QueryIdentityRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "*IDN?", "Validation,Device,SN,1", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.u2004a|B|Reset-0-transport-failure", new CatalogRequest[] {
+new ResetRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "*RST", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.dsox2024a|B|bound-source-CHAN3", new CatalogRequest[] {
+new OscilloscopeSetTriggerSourceRequest("CHAN3"),
+}, new ScriptStep[] {
+new ScriptStep("write", ":TRIGger:EDGE:SOURce CHAN3", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.dsox2024a|B|bound-source-CHAN2", new CatalogRequest[] {
+new OscilloscopeSetTriggerSourceRequest("CHAN2"),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.UnsupportedOperation),
+new CatalogCase("keysight.dsox3024t|B|bound-source-CHAN3", new CatalogRequest[] {
+new OscilloscopeSetTriggerSourceRequest("CHAN3"),
+}, new ScriptStep[] {
+new ScriptStep("write", ":TRIGger:EDGE:SOURce CHAN3", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.dsox3024t|B|bound-source-CHAN2", new CatalogRequest[] {
+new OscilloscopeSetTriggerSourceRequest("CHAN2"),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.UnsupportedOperation),
 }; }

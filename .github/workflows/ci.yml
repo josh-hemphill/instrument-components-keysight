@@ -5,15 +5,16 @@ on:
   pull_request:
     branches: [latest]
   workflow_dispatch:
+  workflow_call:
 permissions:
   contents: read
   actions: read
 jobs:
   sdk:
-    uses: josh-hemphill/instrument-components/.github/workflows/driver-sdk.yml@51a37aa798d4d863b8d23fd6c3ed15199d18f4ab
+    uses: josh-hemphill/instrument-components/.github/workflows/driver-sdk.yml@8b0a6714f72b022a8f764ff4bc4f6e2f390f077b
     with:
       source_repository: josh-hemphill/instrument-components
-      source_ref: 51a37aa798d4d863b8d23fd6c3ed15199d18f4ab
+      source_ref: 8b0a6714f72b022a8f764ff4bc4f6e2f390f077b
   package:
     needs: sdk
-    uses: josh-hemphill/instrument-components/.github/workflows/driver-package-bootstrap.yml@51a37aa798d4d863b8d23fd6c3ed15199d18f4ab
+    uses: josh-hemphill/instrument-components/.github/workflows/driver-package-bootstrap.yml@8b0a6714f72b022a8f764ff4bc4f6e2f390f077b

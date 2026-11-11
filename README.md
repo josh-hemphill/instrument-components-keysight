@@ -55,3 +55,9 @@ the intentional trimming-warning probe to fail. No hardware access occurs.
 Core applications that do not select this package need none of its artifacts.
 Do not publish tags until native gates and the cross-repository council review
 are complete and the trusted publishers/registry ownership are configured.
+
+## Connection-specific inventories
+
+Use a `ConnectionBinding` containing the canonical driver ID, exact endpoint and inventory. C# accepts `connections:` in `Drivers.Factories`/`NativeFactories`. Rust exports `sync_factories_for_connections`, `native_factories_for_connections` and `combined_factories_for_connections`. All bindings are frozen and validated before IO. Two endpoints may use the same driver with different inventories. Unknown output inventory never inherits another endpoint's complete output list. Model-wide defaults remain available separately. Unknown driver IDs and normalized duplicate endpoints fail explicitly.
+
+The committed exact wire cases now execute through endpoint bindings, including sparse channel IDs, per-operation transport failures and closed-handle checks. Source evidence remains distinct from physical evidence. All model hints in this repository are in initial scope; physical validation is pending.

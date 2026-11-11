@@ -1,2550 +1,3654 @@
 [
   {
-    "driver": "keysight.33220a",
-    "operation": "FunctionGeneratorSetWaveform",
     "cases": [
-      "keysight.33220a|B|FunctionGeneratorSetWaveform-0"
+      "keysight.33220a|B|FunctionGeneratorSetWaveform-0",
+      "keysight.33220a|B|FunctionGeneratorSetWaveform-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.33220a",
+    "negativeCases": [
+      "keysight.33220a|B|FunctionGeneratorSetWaveform-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetWaveform"
   },
   {
-    "driver": "keysight.33220a",
-    "operation": "FunctionGeneratorSetFrequency",
     "cases": [
-      "keysight.33220a|B|FunctionGeneratorSetFrequency-0"
+      "keysight.33220a|B|FunctionGeneratorSetFrequency-0",
+      "keysight.33220a|B|invalid-FunctionGeneratorSetFrequency",
+      "keysight.33220a|B|FunctionGeneratorSetFrequency-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.33220a",
+    "negativeCases": [
+      "keysight.33220a|B|invalid-FunctionGeneratorSetFrequency",
+      "keysight.33220a|B|FunctionGeneratorSetFrequency-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetFrequency"
   },
   {
-    "driver": "keysight.33220a",
-    "operation": "FunctionGeneratorSetAmplitude",
     "cases": [
-      "keysight.33220a|B|FunctionGeneratorSetAmplitude-0"
+      "keysight.33220a|B|FunctionGeneratorSetAmplitude-0",
+      "keysight.33220a|B|FunctionGeneratorSetAmplitude-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.33220a",
+    "negativeCases": [
+      "keysight.33220a|B|FunctionGeneratorSetAmplitude-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetAmplitude"
   },
   {
-    "driver": "keysight.33220a",
-    "operation": "FunctionGeneratorSetOffset",
     "cases": [
-      "keysight.33220a|B|FunctionGeneratorSetOffset-0"
+      "keysight.33220a|B|FunctionGeneratorSetOffset-0",
+      "keysight.33220a|B|FunctionGeneratorSetOffset-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.33220a",
+    "negativeCases": [
+      "keysight.33220a|B|FunctionGeneratorSetOffset-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetOffset"
   },
   {
-    "driver": "keysight.33220a",
-    "operation": "FunctionGeneratorSetDutyCycle",
     "cases": [
-      "keysight.33220a|B|FunctionGeneratorSetDutyCycle-0"
+      "keysight.33220a|B|FunctionGeneratorSetDutyCycle-0",
+      "keysight.33220a|B|FunctionGeneratorSetDutyCycle-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.33220a",
+    "negativeCases": [
+      "keysight.33220a|B|FunctionGeneratorSetDutyCycle-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetDutyCycle"
   },
   {
-    "driver": "keysight.33220a",
-    "operation": "FunctionGeneratorSetLoad",
     "cases": [
-      "keysight.33220a|B|FunctionGeneratorSetLoad-0"
+      "keysight.33220a|B|FunctionGeneratorSetLoad-0",
+      "keysight.33220a|B|FunctionGeneratorSetLoad-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.33220a",
+    "negativeCases": [
+      "keysight.33220a|B|FunctionGeneratorSetLoad-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetLoad"
   },
   {
-    "driver": "keysight.33220a",
-    "operation": "FunctionGeneratorOutputEnable",
     "cases": [
       "keysight.33220a|B|FunctionGeneratorOutputEnable-0",
-      "keysight.33220a|B|FunctionGeneratorOutputEnable-1"
+      "keysight.33220a|B|FunctionGeneratorOutputEnable-1",
+      "keysight.33220a|B|FunctionGeneratorOutputEnable-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.33220a",
+    "negativeCases": [
+      "keysight.33220a|B|FunctionGeneratorOutputEnable-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorOutputEnable"
   },
   {
-    "driver": "keysight.33220a",
-    "operation": "FunctionGeneratorSetBurstCount",
     "cases": [
-      "keysight.33220a|B|FunctionGeneratorSetBurstCount-0"
+      "keysight.33220a|B|FunctionGeneratorSetBurstCount-0",
+      "keysight.33220a|B|FunctionGeneratorSetBurstCount-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.33220a",
+    "negativeCases": [
+      "keysight.33220a|B|FunctionGeneratorSetBurstCount-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetBurstCount"
   },
   {
-    "driver": "keysight.33220a",
-    "operation": "FunctionGeneratorSetBurstState",
     "cases": [
       "keysight.33220a|B|FunctionGeneratorSetBurstState-0",
-      "keysight.33220a|B|FunctionGeneratorSetBurstState-1"
+      "keysight.33220a|B|FunctionGeneratorSetBurstState-1",
+      "keysight.33220a|B|FunctionGeneratorSetBurstState-0-transport-failure"
     ],
-    "disposition": "implemented"
-  },
-  {
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.33220a",
-    "operation": "FunctionGeneratorSetBurstTriggerSource",
-    "cases": [
-      "keysight.33220a|B|FunctionGeneratorSetBurstTriggerSource-0"
+    "negativeCases": [
+      "keysight.33220a|B|FunctionGeneratorSetBurstState-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "FunctionGeneratorSetBurstState"
   },
   {
+    "cases": [
+      "keysight.33220a|B|FunctionGeneratorSetBurstTriggerSource-0",
+      "keysight.33220a|B|FunctionGeneratorSetBurstTriggerSource-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.33220a",
-    "operation": "FunctionGeneratorReadFrequency",
-    "cases": [
-      "keysight.33220a|B|FunctionGeneratorReadFrequency-0"
+    "negativeCases": [
+      "keysight.33220a|B|FunctionGeneratorSetBurstTriggerSource-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "FunctionGeneratorSetBurstTriggerSource"
   },
   {
+    "cases": [
+      "keysight.33220a|B|FunctionGeneratorReadFrequency-0",
+      "keysight.33220a|B|FunctionGeneratorReadFrequency-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.33220a",
-    "operation": "QueryIdentity",
-    "cases": [
-      "keysight.33220a|B|QueryIdentity-0"
+    "negativeCases": [
+      "keysight.33220a|B|FunctionGeneratorReadFrequency-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "FunctionGeneratorReadFrequency"
   },
   {
+    "cases": [
+      "keysight.33220a|B|QueryIdentity-0",
+      "keysight.33220a|B|QueryIdentity-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.33220a",
-    "operation": "Reset",
-    "cases": [
-      "keysight.33220a|B|Reset-0"
+    "negativeCases": [
+      "keysight.33220a|B|QueryIdentity-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "QueryIdentity"
   },
   {
+    "cases": [
+      "keysight.33220a|B|Reset-0",
+      "keysight.33220a|B|Reset-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.33220a",
-    "operation": "Shutdown",
-    "cases": [
-      "keysight.33220a|B|Shutdown-0"
+    "negativeCases": [
+      "keysight.33220a|B|Reset-0-transport-failure"
     ],
-    "disposition": "implemented-with-explicit-inventory-binding"
+    "operation": "Reset"
   },
   {
-    "driver": "keysight.33522b",
-    "operation": "FunctionGeneratorSetWaveform",
     "cases": [
-      "keysight.33522b|B|FunctionGeneratorSetWaveform-0"
+      "keysight.33522b|B|FunctionGeneratorSetWaveform-0",
+      "keysight.33522b|B|FunctionGeneratorSetWaveform-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.33522b",
+    "negativeCases": [
+      "keysight.33522b|B|FunctionGeneratorSetWaveform-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetWaveform"
   },
   {
-    "driver": "keysight.33522b",
-    "operation": "FunctionGeneratorSetFrequency",
     "cases": [
-      "keysight.33522b|B|FunctionGeneratorSetFrequency-0"
+      "keysight.33522b|B|FunctionGeneratorSetFrequency-0",
+      "keysight.33522b|B|invalid-FunctionGeneratorSetFrequency",
+      "keysight.33522b|B|FunctionGeneratorSetFrequency-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.33522b",
+    "negativeCases": [
+      "keysight.33522b|B|invalid-FunctionGeneratorSetFrequency",
+      "keysight.33522b|B|FunctionGeneratorSetFrequency-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetFrequency"
   },
   {
-    "driver": "keysight.33522b",
-    "operation": "FunctionGeneratorSetAmplitude",
     "cases": [
-      "keysight.33522b|B|FunctionGeneratorSetAmplitude-0"
+      "keysight.33522b|B|FunctionGeneratorSetAmplitude-0",
+      "keysight.33522b|B|FunctionGeneratorSetAmplitude-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.33522b",
+    "negativeCases": [
+      "keysight.33522b|B|FunctionGeneratorSetAmplitude-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetAmplitude"
   },
   {
-    "driver": "keysight.33522b",
-    "operation": "FunctionGeneratorSetOffset",
     "cases": [
-      "keysight.33522b|B|FunctionGeneratorSetOffset-0"
+      "keysight.33522b|B|FunctionGeneratorSetOffset-0",
+      "keysight.33522b|B|FunctionGeneratorSetOffset-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.33522b",
+    "negativeCases": [
+      "keysight.33522b|B|FunctionGeneratorSetOffset-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetOffset"
   },
   {
-    "driver": "keysight.33522b",
-    "operation": "FunctionGeneratorSetDutyCycle",
     "cases": [
-      "keysight.33522b|B|FunctionGeneratorSetDutyCycle-0"
+      "keysight.33522b|B|FunctionGeneratorSetDutyCycle-0",
+      "keysight.33522b|B|FunctionGeneratorSetDutyCycle-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.33522b",
+    "negativeCases": [
+      "keysight.33522b|B|FunctionGeneratorSetDutyCycle-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetDutyCycle"
   },
   {
-    "driver": "keysight.33522b",
-    "operation": "FunctionGeneratorSetLoad",
     "cases": [
-      "keysight.33522b|B|FunctionGeneratorSetLoad-0"
+      "keysight.33522b|B|FunctionGeneratorSetLoad-0",
+      "keysight.33522b|B|FunctionGeneratorSetLoad-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.33522b",
+    "negativeCases": [
+      "keysight.33522b|B|FunctionGeneratorSetLoad-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetLoad"
   },
   {
-    "driver": "keysight.33522b",
-    "operation": "FunctionGeneratorOutputEnable",
     "cases": [
       "keysight.33522b|B|FunctionGeneratorOutputEnable-0",
-      "keysight.33522b|B|FunctionGeneratorOutputEnable-1"
+      "keysight.33522b|B|FunctionGeneratorOutputEnable-1",
+      "keysight.33522b|B|FunctionGeneratorOutputEnable-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.33522b",
+    "negativeCases": [
+      "keysight.33522b|B|FunctionGeneratorOutputEnable-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorOutputEnable"
   },
   {
-    "driver": "keysight.33522b",
-    "operation": "FunctionGeneratorSetBurstCount",
     "cases": [
-      "keysight.33522b|B|FunctionGeneratorSetBurstCount-0"
+      "keysight.33522b|B|FunctionGeneratorSetBurstCount-0",
+      "keysight.33522b|B|FunctionGeneratorSetBurstCount-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.33522b",
+    "negativeCases": [
+      "keysight.33522b|B|FunctionGeneratorSetBurstCount-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetBurstCount"
   },
   {
-    "driver": "keysight.33522b",
-    "operation": "FunctionGeneratorSetBurstState",
     "cases": [
       "keysight.33522b|B|FunctionGeneratorSetBurstState-0",
-      "keysight.33522b|B|FunctionGeneratorSetBurstState-1"
+      "keysight.33522b|B|FunctionGeneratorSetBurstState-1",
+      "keysight.33522b|B|FunctionGeneratorSetBurstState-0-transport-failure"
     ],
-    "disposition": "implemented"
-  },
-  {
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.33522b",
-    "operation": "FunctionGeneratorSetBurstTriggerSource",
-    "cases": [
-      "keysight.33522b|B|FunctionGeneratorSetBurstTriggerSource-0"
+    "negativeCases": [
+      "keysight.33522b|B|FunctionGeneratorSetBurstState-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "FunctionGeneratorSetBurstState"
   },
   {
+    "cases": [
+      "keysight.33522b|B|FunctionGeneratorSetBurstTriggerSource-0",
+      "keysight.33522b|B|FunctionGeneratorSetBurstTriggerSource-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.33522b",
-    "operation": "FunctionGeneratorReadFrequency",
-    "cases": [
-      "keysight.33522b|B|FunctionGeneratorReadFrequency-0"
+    "negativeCases": [
+      "keysight.33522b|B|FunctionGeneratorSetBurstTriggerSource-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "FunctionGeneratorSetBurstTriggerSource"
   },
   {
+    "cases": [
+      "keysight.33522b|B|FunctionGeneratorReadFrequency-0",
+      "keysight.33522b|B|FunctionGeneratorReadFrequency-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.33522b",
-    "operation": "QueryIdentity",
-    "cases": [
-      "keysight.33522b|B|QueryIdentity-0"
+    "negativeCases": [
+      "keysight.33522b|B|FunctionGeneratorReadFrequency-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "FunctionGeneratorReadFrequency"
   },
   {
+    "cases": [
+      "keysight.33522b|B|QueryIdentity-0",
+      "keysight.33522b|B|QueryIdentity-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.33522b",
-    "operation": "Reset",
-    "cases": [
-      "keysight.33522b|B|Reset-0"
+    "negativeCases": [
+      "keysight.33522b|B|QueryIdentity-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "QueryIdentity"
   },
   {
+    "cases": [
+      "keysight.33522b|B|Reset-0",
+      "keysight.33522b|B|Reset-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.33522b",
-    "operation": "Shutdown",
-    "cases": [
-      "keysight.33522b|B|Shutdown-0"
+    "negativeCases": [
+      "keysight.33522b|B|Reset-0-transport-failure"
     ],
-    "disposition": "implemented-with-explicit-inventory-binding"
+    "operation": "Reset"
   },
   {
-    "driver": "keysight.33622a",
-    "operation": "FunctionGeneratorSetWaveform",
     "cases": [
-      "keysight.33622a|B|FunctionGeneratorSetWaveform-0"
+      "keysight.33622a|B|FunctionGeneratorSetWaveform-0",
+      "keysight.33622a|B|FunctionGeneratorSetWaveform-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.33622a",
+    "negativeCases": [
+      "keysight.33622a|B|FunctionGeneratorSetWaveform-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetWaveform"
   },
   {
-    "driver": "keysight.33622a",
-    "operation": "FunctionGeneratorSetFrequency",
     "cases": [
-      "keysight.33622a|B|FunctionGeneratorSetFrequency-0"
+      "keysight.33622a|B|FunctionGeneratorSetFrequency-0",
+      "keysight.33622a|B|invalid-FunctionGeneratorSetFrequency",
+      "keysight.33622a|B|FunctionGeneratorSetFrequency-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.33622a",
+    "negativeCases": [
+      "keysight.33622a|B|invalid-FunctionGeneratorSetFrequency",
+      "keysight.33622a|B|FunctionGeneratorSetFrequency-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetFrequency"
   },
   {
-    "driver": "keysight.33622a",
-    "operation": "FunctionGeneratorSetAmplitude",
     "cases": [
-      "keysight.33622a|B|FunctionGeneratorSetAmplitude-0"
+      "keysight.33622a|B|FunctionGeneratorSetAmplitude-0",
+      "keysight.33622a|B|FunctionGeneratorSetAmplitude-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.33622a",
+    "negativeCases": [
+      "keysight.33622a|B|FunctionGeneratorSetAmplitude-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetAmplitude"
   },
   {
-    "driver": "keysight.33622a",
-    "operation": "FunctionGeneratorSetOffset",
     "cases": [
-      "keysight.33622a|B|FunctionGeneratorSetOffset-0"
+      "keysight.33622a|B|FunctionGeneratorSetOffset-0",
+      "keysight.33622a|B|FunctionGeneratorSetOffset-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.33622a",
+    "negativeCases": [
+      "keysight.33622a|B|FunctionGeneratorSetOffset-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetOffset"
   },
   {
-    "driver": "keysight.33622a",
-    "operation": "FunctionGeneratorSetDutyCycle",
     "cases": [
-      "keysight.33622a|B|FunctionGeneratorSetDutyCycle-0"
+      "keysight.33622a|B|FunctionGeneratorSetDutyCycle-0",
+      "keysight.33622a|B|FunctionGeneratorSetDutyCycle-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.33622a",
+    "negativeCases": [
+      "keysight.33622a|B|FunctionGeneratorSetDutyCycle-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetDutyCycle"
   },
   {
-    "driver": "keysight.33622a",
-    "operation": "FunctionGeneratorSetLoad",
     "cases": [
-      "keysight.33622a|B|FunctionGeneratorSetLoad-0"
+      "keysight.33622a|B|FunctionGeneratorSetLoad-0",
+      "keysight.33622a|B|FunctionGeneratorSetLoad-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.33622a",
+    "negativeCases": [
+      "keysight.33622a|B|FunctionGeneratorSetLoad-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetLoad"
   },
   {
-    "driver": "keysight.33622a",
-    "operation": "FunctionGeneratorOutputEnable",
     "cases": [
       "keysight.33622a|B|FunctionGeneratorOutputEnable-0",
-      "keysight.33622a|B|FunctionGeneratorOutputEnable-1"
+      "keysight.33622a|B|FunctionGeneratorOutputEnable-1",
+      "keysight.33622a|B|FunctionGeneratorOutputEnable-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.33622a",
+    "negativeCases": [
+      "keysight.33622a|B|FunctionGeneratorOutputEnable-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorOutputEnable"
   },
   {
-    "driver": "keysight.33622a",
-    "operation": "FunctionGeneratorSetBurstCount",
     "cases": [
-      "keysight.33622a|B|FunctionGeneratorSetBurstCount-0"
+      "keysight.33622a|B|FunctionGeneratorSetBurstCount-0",
+      "keysight.33622a|B|FunctionGeneratorSetBurstCount-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.33622a",
+    "negativeCases": [
+      "keysight.33622a|B|FunctionGeneratorSetBurstCount-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetBurstCount"
   },
   {
-    "driver": "keysight.33622a",
-    "operation": "FunctionGeneratorSetBurstState",
     "cases": [
       "keysight.33622a|B|FunctionGeneratorSetBurstState-0",
-      "keysight.33622a|B|FunctionGeneratorSetBurstState-1"
+      "keysight.33622a|B|FunctionGeneratorSetBurstState-1",
+      "keysight.33622a|B|FunctionGeneratorSetBurstState-0-transport-failure"
     ],
-    "disposition": "implemented"
-  },
-  {
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.33622a",
-    "operation": "FunctionGeneratorSetBurstTriggerSource",
-    "cases": [
-      "keysight.33622a|B|FunctionGeneratorSetBurstTriggerSource-0"
+    "negativeCases": [
+      "keysight.33622a|B|FunctionGeneratorSetBurstState-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "FunctionGeneratorSetBurstState"
   },
   {
+    "cases": [
+      "keysight.33622a|B|FunctionGeneratorSetBurstTriggerSource-0",
+      "keysight.33622a|B|FunctionGeneratorSetBurstTriggerSource-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.33622a",
-    "operation": "FunctionGeneratorReadFrequency",
-    "cases": [
-      "keysight.33622a|B|FunctionGeneratorReadFrequency-0"
+    "negativeCases": [
+      "keysight.33622a|B|FunctionGeneratorSetBurstTriggerSource-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "FunctionGeneratorSetBurstTriggerSource"
   },
   {
+    "cases": [
+      "keysight.33622a|B|FunctionGeneratorReadFrequency-0",
+      "keysight.33622a|B|FunctionGeneratorReadFrequency-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.33622a",
-    "operation": "QueryIdentity",
-    "cases": [
-      "keysight.33622a|B|QueryIdentity-0"
+    "negativeCases": [
+      "keysight.33622a|B|FunctionGeneratorReadFrequency-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "FunctionGeneratorReadFrequency"
   },
   {
+    "cases": [
+      "keysight.33622a|B|QueryIdentity-0",
+      "keysight.33622a|B|QueryIdentity-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.33622a",
-    "operation": "Reset",
-    "cases": [
-      "keysight.33622a|B|Reset-0"
+    "negativeCases": [
+      "keysight.33622a|B|QueryIdentity-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "QueryIdentity"
   },
   {
+    "cases": [
+      "keysight.33622a|B|Reset-0",
+      "keysight.33622a|B|Reset-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.33622a",
-    "operation": "Shutdown",
-    "cases": [
-      "keysight.33622a|B|Shutdown-0"
+    "negativeCases": [
+      "keysight.33622a|B|Reset-0-transport-failure"
     ],
-    "disposition": "implemented-with-explicit-inventory-binding"
+    "operation": "Reset"
   },
   {
-    "driver": "keysight.34401a",
-    "operation": "DmmMeasureVoltageDc",
     "cases": [
       "keysight.34401a|B|DmmMeasureVoltageDc-0",
-      "keysight.34401a|B|DmmMeasureVoltageDc-1"
+      "keysight.34401a|B|DmmMeasureVoltageDc-1",
+      "keysight.34401a|B|DmmFetch-0",
+      "keysight.34401a|B|DmmRead-0",
+      "keysight.34401a|B|DmmMeasureVoltageDc-0-transport-failure",
+      "keysight.34401a|B|DmmFetch-0-transport-failure",
+      "keysight.34401a|B|DmmRead-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34401a",
+    "negativeCases": [
+      "keysight.34401a|B|DmmMeasureVoltageDc-0-transport-failure",
+      "keysight.34401a|B|DmmFetch-0-transport-failure",
+      "keysight.34401a|B|DmmRead-0-transport-failure"
+    ],
+    "operation": "DmmMeasureVoltageDc"
   },
   {
-    "driver": "keysight.34401a",
-    "operation": "DmmMeasureVoltageAc",
     "cases": [
       "keysight.34401a|B|DmmMeasureVoltageAc-0",
-      "keysight.34401a|B|DmmMeasureVoltageAc-1"
+      "keysight.34401a|B|DmmMeasureVoltageAc-1",
+      "keysight.34401a|B|DmmMeasureVoltageAc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34401a",
+    "negativeCases": [
+      "keysight.34401a|B|DmmMeasureVoltageAc-0-transport-failure"
+    ],
+    "operation": "DmmMeasureVoltageAc"
   },
   {
-    "driver": "keysight.34401a",
-    "operation": "DmmMeasureCurrentDc",
     "cases": [
       "keysight.34401a|B|DmmMeasureCurrentDc-0",
-      "keysight.34401a|B|DmmMeasureCurrentDc-1"
+      "keysight.34401a|B|DmmMeasureCurrentDc-1",
+      "keysight.34401a|B|DmmMeasureCurrentDc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34401a",
+    "negativeCases": [
+      "keysight.34401a|B|DmmMeasureCurrentDc-0-transport-failure"
+    ],
+    "operation": "DmmMeasureCurrentDc"
   },
   {
-    "driver": "keysight.34401a",
-    "operation": "DmmMeasureCurrentAc",
     "cases": [
       "keysight.34401a|B|DmmMeasureCurrentAc-0",
-      "keysight.34401a|B|DmmMeasureCurrentAc-1"
+      "keysight.34401a|B|DmmMeasureCurrentAc-1",
+      "keysight.34401a|B|DmmMeasureCurrentAc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34401a",
+    "negativeCases": [
+      "keysight.34401a|B|DmmMeasureCurrentAc-0-transport-failure"
+    ],
+    "operation": "DmmMeasureCurrentAc"
   },
   {
-    "driver": "keysight.34401a",
-    "operation": "DmmMeasureResistance",
     "cases": [
       "keysight.34401a|B|DmmMeasureResistance-0",
-      "keysight.34401a|B|DmmMeasureResistance-1"
+      "keysight.34401a|B|DmmMeasureResistance-1",
+      "keysight.34401a|B|DmmMeasureResistance-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34401a",
+    "negativeCases": [
+      "keysight.34401a|B|DmmMeasureResistance-0-transport-failure"
+    ],
+    "operation": "DmmMeasureResistance"
   },
   {
-    "driver": "keysight.34401a",
-    "operation": "DmmMeasureResistance2Wire",
     "cases": [
       "keysight.34401a|B|DmmMeasureResistance2Wire-0",
-      "keysight.34401a|B|DmmMeasureResistance2Wire-1"
+      "keysight.34401a|B|DmmMeasureResistance2Wire-1",
+      "keysight.34401a|B|DmmMeasureResistance2Wire-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34401a",
+    "negativeCases": [
+      "keysight.34401a|B|DmmMeasureResistance2Wire-0-transport-failure"
+    ],
+    "operation": "DmmMeasureResistance2Wire"
   },
   {
-    "driver": "keysight.34401a",
-    "operation": "DmmMeasureResistance4Wire",
     "cases": [
       "keysight.34401a|B|DmmMeasureResistance4Wire-0",
-      "keysight.34401a|B|DmmMeasureResistance4Wire-1"
+      "keysight.34401a|B|DmmMeasureResistance4Wire-1",
+      "keysight.34401a|B|DmmMeasureResistance4Wire-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34401a",
+    "negativeCases": [
+      "keysight.34401a|B|DmmMeasureResistance4Wire-0-transport-failure"
+    ],
+    "operation": "DmmMeasureResistance4Wire"
   },
   {
-    "driver": "keysight.34401a",
-    "operation": "DmmMeasureTemperature",
     "cases": [
       "keysight.34401a|B|DmmMeasureTemperature-0",
-      "keysight.34401a|B|DmmMeasureTemperature-1"
+      "keysight.34401a|B|DmmMeasureTemperature-1",
+      "keysight.34401a|B|temperature-DmmRead",
+      "keysight.34401a|B|temperature-DmmFetch",
+      "keysight.34401a|B|DmmMeasureTemperature-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34401a",
+    "negativeCases": [
+      "keysight.34401a|B|DmmMeasureTemperature-0-transport-failure"
+    ],
+    "operation": "DmmMeasureTemperature"
   },
   {
-    "driver": "keysight.34401a",
-    "operation": "DmmConfigureVoltageDc",
     "cases": [
       "keysight.34401a|B|DmmConfigureVoltageDc-0",
       "keysight.34401a|B|DmmConfigureVoltageDc-1",
       "keysight.34401a|B|DmmConfigureVoltageDc-2",
-      "keysight.34401a|B|DmmConfigureVoltageDc-3"
+      "keysight.34401a|B|DmmConfigureVoltageDc-3",
+      "keysight.34401a|B|DmmConfigureVoltageDc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34401a",
+    "negativeCases": [
+      "keysight.34401a|B|DmmConfigureVoltageDc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureVoltageDc"
   },
   {
-    "driver": "keysight.34401a",
-    "operation": "DmmConfigureVoltageAc",
     "cases": [
       "keysight.34401a|B|DmmConfigureVoltageAc-0",
       "keysight.34401a|B|DmmConfigureVoltageAc-1",
       "keysight.34401a|B|DmmConfigureVoltageAc-2",
-      "keysight.34401a|B|DmmConfigureVoltageAc-3"
+      "keysight.34401a|B|DmmConfigureVoltageAc-3",
+      "keysight.34401a|B|DmmConfigureVoltageAc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34401a",
+    "negativeCases": [
+      "keysight.34401a|B|DmmConfigureVoltageAc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureVoltageAc"
   },
   {
-    "driver": "keysight.34401a",
-    "operation": "DmmConfigureCurrentDc",
     "cases": [
       "keysight.34401a|B|DmmConfigureCurrentDc-0",
       "keysight.34401a|B|DmmConfigureCurrentDc-1",
       "keysight.34401a|B|DmmConfigureCurrentDc-2",
-      "keysight.34401a|B|DmmConfigureCurrentDc-3"
+      "keysight.34401a|B|DmmConfigureCurrentDc-3",
+      "keysight.34401a|B|DmmConfigureCurrentDc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34401a",
+    "negativeCases": [
+      "keysight.34401a|B|DmmConfigureCurrentDc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureCurrentDc"
   },
   {
-    "driver": "keysight.34401a",
-    "operation": "DmmConfigureCurrentAc",
     "cases": [
       "keysight.34401a|B|DmmConfigureCurrentAc-0",
       "keysight.34401a|B|DmmConfigureCurrentAc-1",
       "keysight.34401a|B|DmmConfigureCurrentAc-2",
-      "keysight.34401a|B|DmmConfigureCurrentAc-3"
+      "keysight.34401a|B|DmmConfigureCurrentAc-3",
+      "keysight.34401a|B|DmmConfigureCurrentAc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34401a",
+    "negativeCases": [
+      "keysight.34401a|B|DmmConfigureCurrentAc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureCurrentAc"
   },
   {
-    "driver": "keysight.34401a",
-    "operation": "DmmConfigureResistance",
     "cases": [
       "keysight.34401a|B|DmmConfigureResistance-0",
       "keysight.34401a|B|DmmConfigureResistance-1",
       "keysight.34401a|B|DmmConfigureResistance-2",
-      "keysight.34401a|B|DmmConfigureResistance-3"
+      "keysight.34401a|B|DmmConfigureResistance-3",
+      "keysight.34401a|B|DmmConfigureResistance-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34401a",
+    "negativeCases": [
+      "keysight.34401a|B|DmmConfigureResistance-0-transport-failure"
+    ],
+    "operation": "DmmConfigureResistance"
   },
   {
-    "driver": "keysight.34401a",
-    "operation": "DmmConfigureResistance4Wire",
     "cases": [
       "keysight.34401a|B|DmmConfigureResistance4Wire-0",
       "keysight.34401a|B|DmmConfigureResistance4Wire-1",
       "keysight.34401a|B|DmmConfigureResistance4Wire-2",
-      "keysight.34401a|B|DmmConfigureResistance4Wire-3"
+      "keysight.34401a|B|DmmConfigureResistance4Wire-3",
+      "keysight.34401a|B|DmmConfigureResistance4Wire-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34401a",
+    "negativeCases": [
+      "keysight.34401a|B|DmmConfigureResistance4Wire-0-transport-failure"
+    ],
+    "operation": "DmmConfigureResistance4Wire"
   },
   {
-    "driver": "keysight.34401a",
-    "operation": "DmmInitiate",
     "cases": [
-      "keysight.34401a|B|DmmInitiate-0"
+      "keysight.34401a|B|DmmInitiate-0",
+      "keysight.34401a|B|DmmInitiate-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34401a",
+    "negativeCases": [
+      "keysight.34401a|B|DmmInitiate-0-transport-failure"
+    ],
+    "operation": "DmmInitiate"
   },
   {
-    "driver": "keysight.34401a",
-    "operation": "DmmFetch",
     "cases": [
-      "keysight.34401a|B|DmmFetch-0"
+      "keysight.34401a|B|DmmFetch-0",
+      "keysight.34401a|B|temperature-DmmFetch",
+      "keysight.34401a|B|DmmFetch-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34401a",
+    "negativeCases": [
+      "keysight.34401a|B|DmmFetch-0-transport-failure"
+    ],
+    "operation": "DmmFetch"
   },
   {
-    "driver": "keysight.34401a",
-    "operation": "DmmRead",
     "cases": [
-      "keysight.34401a|B|DmmRead-0"
+      "keysight.34401a|B|DmmRead-0",
+      "keysight.34401a|B|temperature-DmmRead",
+      "keysight.34401a|B|DmmRead-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34401a",
+    "negativeCases": [
+      "keysight.34401a|B|DmmRead-0-transport-failure"
+    ],
+    "operation": "DmmRead"
   },
   {
-    "driver": "keysight.34401a",
-    "operation": "DmmSoftwareTrigger",
     "cases": [
-      "keysight.34401a|B|DmmSoftwareTrigger-0"
+      "keysight.34401a|B|DmmSoftwareTrigger-0",
+      "keysight.34401a|B|DmmSoftwareTrigger-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34401a",
+    "negativeCases": [
+      "keysight.34401a|B|DmmSoftwareTrigger-0-transport-failure"
+    ],
+    "operation": "DmmSoftwareTrigger"
   },
   {
-    "driver": "keysight.34401a",
-    "operation": "QueryIdentity",
     "cases": [
-      "keysight.34401a|B|QueryIdentity-0"
+      "keysight.34401a|B|QueryIdentity-0",
+      "keysight.34401a|B|QueryIdentity-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34401a",
+    "negativeCases": [
+      "keysight.34401a|B|QueryIdentity-0-transport-failure"
+    ],
+    "operation": "QueryIdentity"
   },
   {
-    "driver": "keysight.34401a",
-    "operation": "Reset",
     "cases": [
-      "keysight.34401a|B|Reset-0"
+      "keysight.34401a|B|Reset-0",
+      "keysight.34401a|B|Reset-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34401a",
+    "negativeCases": [
+      "keysight.34401a|B|Reset-0-transport-failure"
+    ],
+    "operation": "Reset"
   },
   {
-    "driver": "keysight.34401a",
-    "operation": "Shutdown",
     "cases": [
       "keysight.34401a|B|Shutdown-0"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34401a",
+    "negativeCases": [],
+    "operation": "Shutdown"
   },
   {
-    "driver": "keysight.34410a",
-    "operation": "DmmMeasureVoltageDc",
     "cases": [
       "keysight.34410a|B|DmmMeasureVoltageDc-0",
-      "keysight.34410a|B|DmmMeasureVoltageDc-1"
+      "keysight.34410a|B|DmmMeasureVoltageDc-1",
+      "keysight.34410a|B|DmmFetch-0",
+      "keysight.34410a|B|DmmRead-0",
+      "keysight.34410a|B|DmmMeasureVoltageDc-0-transport-failure",
+      "keysight.34410a|B|DmmFetch-0-transport-failure",
+      "keysight.34410a|B|DmmRead-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34410a",
+    "negativeCases": [
+      "keysight.34410a|B|DmmMeasureVoltageDc-0-transport-failure",
+      "keysight.34410a|B|DmmFetch-0-transport-failure",
+      "keysight.34410a|B|DmmRead-0-transport-failure"
+    ],
+    "operation": "DmmMeasureVoltageDc"
   },
   {
-    "driver": "keysight.34410a",
-    "operation": "DmmMeasureVoltageAc",
     "cases": [
       "keysight.34410a|B|DmmMeasureVoltageAc-0",
-      "keysight.34410a|B|DmmMeasureVoltageAc-1"
+      "keysight.34410a|B|DmmMeasureVoltageAc-1",
+      "keysight.34410a|B|DmmMeasureVoltageAc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34410a",
+    "negativeCases": [
+      "keysight.34410a|B|DmmMeasureVoltageAc-0-transport-failure"
+    ],
+    "operation": "DmmMeasureVoltageAc"
   },
   {
-    "driver": "keysight.34410a",
-    "operation": "DmmMeasureCurrentDc",
     "cases": [
       "keysight.34410a|B|DmmMeasureCurrentDc-0",
-      "keysight.34410a|B|DmmMeasureCurrentDc-1"
+      "keysight.34410a|B|DmmMeasureCurrentDc-1",
+      "keysight.34410a|B|DmmMeasureCurrentDc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34410a",
+    "negativeCases": [
+      "keysight.34410a|B|DmmMeasureCurrentDc-0-transport-failure"
+    ],
+    "operation": "DmmMeasureCurrentDc"
   },
   {
-    "driver": "keysight.34410a",
-    "operation": "DmmMeasureCurrentAc",
     "cases": [
       "keysight.34410a|B|DmmMeasureCurrentAc-0",
-      "keysight.34410a|B|DmmMeasureCurrentAc-1"
+      "keysight.34410a|B|DmmMeasureCurrentAc-1",
+      "keysight.34410a|B|DmmMeasureCurrentAc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34410a",
+    "negativeCases": [
+      "keysight.34410a|B|DmmMeasureCurrentAc-0-transport-failure"
+    ],
+    "operation": "DmmMeasureCurrentAc"
   },
   {
-    "driver": "keysight.34410a",
-    "operation": "DmmMeasureResistance",
     "cases": [
       "keysight.34410a|B|DmmMeasureResistance-0",
-      "keysight.34410a|B|DmmMeasureResistance-1"
+      "keysight.34410a|B|DmmMeasureResistance-1",
+      "keysight.34410a|B|DmmMeasureResistance-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34410a",
+    "negativeCases": [
+      "keysight.34410a|B|DmmMeasureResistance-0-transport-failure"
+    ],
+    "operation": "DmmMeasureResistance"
   },
   {
-    "driver": "keysight.34410a",
-    "operation": "DmmMeasureResistance2Wire",
     "cases": [
       "keysight.34410a|B|DmmMeasureResistance2Wire-0",
-      "keysight.34410a|B|DmmMeasureResistance2Wire-1"
+      "keysight.34410a|B|DmmMeasureResistance2Wire-1",
+      "keysight.34410a|B|DmmMeasureResistance2Wire-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34410a",
+    "negativeCases": [
+      "keysight.34410a|B|DmmMeasureResistance2Wire-0-transport-failure"
+    ],
+    "operation": "DmmMeasureResistance2Wire"
   },
   {
-    "driver": "keysight.34410a",
-    "operation": "DmmMeasureResistance4Wire",
     "cases": [
       "keysight.34410a|B|DmmMeasureResistance4Wire-0",
-      "keysight.34410a|B|DmmMeasureResistance4Wire-1"
+      "keysight.34410a|B|DmmMeasureResistance4Wire-1",
+      "keysight.34410a|B|DmmMeasureResistance4Wire-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34410a",
+    "negativeCases": [
+      "keysight.34410a|B|DmmMeasureResistance4Wire-0-transport-failure"
+    ],
+    "operation": "DmmMeasureResistance4Wire"
   },
   {
-    "driver": "keysight.34410a",
-    "operation": "DmmMeasureTemperature",
     "cases": [
       "keysight.34410a|B|DmmMeasureTemperature-0",
-      "keysight.34410a|B|DmmMeasureTemperature-1"
+      "keysight.34410a|B|DmmMeasureTemperature-1",
+      "keysight.34410a|B|temperature-DmmRead",
+      "keysight.34410a|B|temperature-DmmFetch",
+      "keysight.34410a|B|DmmMeasureTemperature-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34410a",
+    "negativeCases": [
+      "keysight.34410a|B|DmmMeasureTemperature-0-transport-failure"
+    ],
+    "operation": "DmmMeasureTemperature"
   },
   {
-    "driver": "keysight.34410a",
-    "operation": "DmmConfigureVoltageDc",
     "cases": [
       "keysight.34410a|B|DmmConfigureVoltageDc-0",
       "keysight.34410a|B|DmmConfigureVoltageDc-1",
       "keysight.34410a|B|DmmConfigureVoltageDc-2",
-      "keysight.34410a|B|DmmConfigureVoltageDc-3"
+      "keysight.34410a|B|DmmConfigureVoltageDc-3",
+      "keysight.34410a|B|DmmConfigureVoltageDc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34410a",
+    "negativeCases": [
+      "keysight.34410a|B|DmmConfigureVoltageDc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureVoltageDc"
   },
   {
-    "driver": "keysight.34410a",
-    "operation": "DmmConfigureVoltageAc",
     "cases": [
       "keysight.34410a|B|DmmConfigureVoltageAc-0",
       "keysight.34410a|B|DmmConfigureVoltageAc-1",
       "keysight.34410a|B|DmmConfigureVoltageAc-2",
-      "keysight.34410a|B|DmmConfigureVoltageAc-3"
+      "keysight.34410a|B|DmmConfigureVoltageAc-3",
+      "keysight.34410a|B|DmmConfigureVoltageAc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34410a",
+    "negativeCases": [
+      "keysight.34410a|B|DmmConfigureVoltageAc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureVoltageAc"
   },
   {
-    "driver": "keysight.34410a",
-    "operation": "DmmConfigureCurrentDc",
     "cases": [
       "keysight.34410a|B|DmmConfigureCurrentDc-0",
       "keysight.34410a|B|DmmConfigureCurrentDc-1",
       "keysight.34410a|B|DmmConfigureCurrentDc-2",
-      "keysight.34410a|B|DmmConfigureCurrentDc-3"
+      "keysight.34410a|B|DmmConfigureCurrentDc-3",
+      "keysight.34410a|B|DmmConfigureCurrentDc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34410a",
+    "negativeCases": [
+      "keysight.34410a|B|DmmConfigureCurrentDc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureCurrentDc"
   },
   {
-    "driver": "keysight.34410a",
-    "operation": "DmmConfigureCurrentAc",
     "cases": [
       "keysight.34410a|B|DmmConfigureCurrentAc-0",
       "keysight.34410a|B|DmmConfigureCurrentAc-1",
       "keysight.34410a|B|DmmConfigureCurrentAc-2",
-      "keysight.34410a|B|DmmConfigureCurrentAc-3"
+      "keysight.34410a|B|DmmConfigureCurrentAc-3",
+      "keysight.34410a|B|DmmConfigureCurrentAc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34410a",
+    "negativeCases": [
+      "keysight.34410a|B|DmmConfigureCurrentAc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureCurrentAc"
   },
   {
-    "driver": "keysight.34410a",
-    "operation": "DmmConfigureResistance",
     "cases": [
       "keysight.34410a|B|DmmConfigureResistance-0",
       "keysight.34410a|B|DmmConfigureResistance-1",
       "keysight.34410a|B|DmmConfigureResistance-2",
-      "keysight.34410a|B|DmmConfigureResistance-3"
+      "keysight.34410a|B|DmmConfigureResistance-3",
+      "keysight.34410a|B|DmmConfigureResistance-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34410a",
+    "negativeCases": [
+      "keysight.34410a|B|DmmConfigureResistance-0-transport-failure"
+    ],
+    "operation": "DmmConfigureResistance"
   },
   {
-    "driver": "keysight.34410a",
-    "operation": "DmmConfigureResistance4Wire",
     "cases": [
       "keysight.34410a|B|DmmConfigureResistance4Wire-0",
       "keysight.34410a|B|DmmConfigureResistance4Wire-1",
       "keysight.34410a|B|DmmConfigureResistance4Wire-2",
-      "keysight.34410a|B|DmmConfigureResistance4Wire-3"
+      "keysight.34410a|B|DmmConfigureResistance4Wire-3",
+      "keysight.34410a|B|DmmConfigureResistance4Wire-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34410a",
+    "negativeCases": [
+      "keysight.34410a|B|DmmConfigureResistance4Wire-0-transport-failure"
+    ],
+    "operation": "DmmConfigureResistance4Wire"
   },
   {
-    "driver": "keysight.34410a",
-    "operation": "DmmInitiate",
     "cases": [
-      "keysight.34410a|B|DmmInitiate-0"
+      "keysight.34410a|B|DmmInitiate-0",
+      "keysight.34410a|B|DmmInitiate-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34410a",
+    "negativeCases": [
+      "keysight.34410a|B|DmmInitiate-0-transport-failure"
+    ],
+    "operation": "DmmInitiate"
   },
   {
-    "driver": "keysight.34410a",
-    "operation": "DmmFetch",
     "cases": [
-      "keysight.34410a|B|DmmFetch-0"
+      "keysight.34410a|B|DmmFetch-0",
+      "keysight.34410a|B|temperature-DmmFetch",
+      "keysight.34410a|B|DmmFetch-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34410a",
+    "negativeCases": [
+      "keysight.34410a|B|DmmFetch-0-transport-failure"
+    ],
+    "operation": "DmmFetch"
   },
   {
-    "driver": "keysight.34410a",
-    "operation": "DmmRead",
     "cases": [
-      "keysight.34410a|B|DmmRead-0"
+      "keysight.34410a|B|DmmRead-0",
+      "keysight.34410a|B|temperature-DmmRead",
+      "keysight.34410a|B|DmmRead-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34410a",
+    "negativeCases": [
+      "keysight.34410a|B|DmmRead-0-transport-failure"
+    ],
+    "operation": "DmmRead"
   },
   {
-    "driver": "keysight.34410a",
-    "operation": "DmmSoftwareTrigger",
     "cases": [
-      "keysight.34410a|B|DmmSoftwareTrigger-0"
+      "keysight.34410a|B|DmmSoftwareTrigger-0",
+      "keysight.34410a|B|DmmSoftwareTrigger-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34410a",
+    "negativeCases": [
+      "keysight.34410a|B|DmmSoftwareTrigger-0-transport-failure"
+    ],
+    "operation": "DmmSoftwareTrigger"
   },
   {
-    "driver": "keysight.34410a",
-    "operation": "QueryIdentity",
     "cases": [
-      "keysight.34410a|B|QueryIdentity-0"
+      "keysight.34410a|B|QueryIdentity-0",
+      "keysight.34410a|B|QueryIdentity-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34410a",
+    "negativeCases": [
+      "keysight.34410a|B|QueryIdentity-0-transport-failure"
+    ],
+    "operation": "QueryIdentity"
   },
   {
-    "driver": "keysight.34410a",
-    "operation": "Reset",
     "cases": [
-      "keysight.34410a|B|Reset-0"
+      "keysight.34410a|B|Reset-0",
+      "keysight.34410a|B|Reset-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34410a",
+    "negativeCases": [
+      "keysight.34410a|B|Reset-0-transport-failure"
+    ],
+    "operation": "Reset"
   },
   {
-    "driver": "keysight.34410a",
-    "operation": "Shutdown",
     "cases": [
       "keysight.34410a|B|Shutdown-0"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34410a",
+    "negativeCases": [],
+    "operation": "Shutdown"
   },
   {
-    "driver": "keysight.34461a",
-    "operation": "DmmMeasureVoltageDc",
     "cases": [
       "keysight.34461a|B|DmmMeasureVoltageDc-0",
-      "keysight.34461a|B|DmmMeasureVoltageDc-1"
+      "keysight.34461a|B|DmmMeasureVoltageDc-1",
+      "keysight.34461a|B|DmmFetch-0",
+      "keysight.34461a|B|DmmRead-0",
+      "keysight.34461a|B|DmmMeasureVoltageDc-0-transport-failure",
+      "keysight.34461a|B|DmmFetch-0-transport-failure",
+      "keysight.34461a|B|DmmRead-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34461a",
+    "negativeCases": [
+      "keysight.34461a|B|DmmMeasureVoltageDc-0-transport-failure",
+      "keysight.34461a|B|DmmFetch-0-transport-failure",
+      "keysight.34461a|B|DmmRead-0-transport-failure"
+    ],
+    "operation": "DmmMeasureVoltageDc"
   },
   {
-    "driver": "keysight.34461a",
-    "operation": "DmmMeasureVoltageAc",
     "cases": [
       "keysight.34461a|B|DmmMeasureVoltageAc-0",
-      "keysight.34461a|B|DmmMeasureVoltageAc-1"
+      "keysight.34461a|B|DmmMeasureVoltageAc-1",
+      "keysight.34461a|B|DmmMeasureVoltageAc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34461a",
+    "negativeCases": [
+      "keysight.34461a|B|DmmMeasureVoltageAc-0-transport-failure"
+    ],
+    "operation": "DmmMeasureVoltageAc"
   },
   {
-    "driver": "keysight.34461a",
-    "operation": "DmmMeasureCurrentDc",
     "cases": [
       "keysight.34461a|B|DmmMeasureCurrentDc-0",
-      "keysight.34461a|B|DmmMeasureCurrentDc-1"
+      "keysight.34461a|B|DmmMeasureCurrentDc-1",
+      "keysight.34461a|B|DmmMeasureCurrentDc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34461a",
+    "negativeCases": [
+      "keysight.34461a|B|DmmMeasureCurrentDc-0-transport-failure"
+    ],
+    "operation": "DmmMeasureCurrentDc"
   },
   {
-    "driver": "keysight.34461a",
-    "operation": "DmmMeasureCurrentAc",
     "cases": [
       "keysight.34461a|B|DmmMeasureCurrentAc-0",
-      "keysight.34461a|B|DmmMeasureCurrentAc-1"
+      "keysight.34461a|B|DmmMeasureCurrentAc-1",
+      "keysight.34461a|B|DmmMeasureCurrentAc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34461a",
+    "negativeCases": [
+      "keysight.34461a|B|DmmMeasureCurrentAc-0-transport-failure"
+    ],
+    "operation": "DmmMeasureCurrentAc"
   },
   {
-    "driver": "keysight.34461a",
-    "operation": "DmmMeasureResistance",
     "cases": [
       "keysight.34461a|B|DmmMeasureResistance-0",
-      "keysight.34461a|B|DmmMeasureResistance-1"
+      "keysight.34461a|B|DmmMeasureResistance-1",
+      "keysight.34461a|B|DmmMeasureResistance-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34461a",
+    "negativeCases": [
+      "keysight.34461a|B|DmmMeasureResistance-0-transport-failure"
+    ],
+    "operation": "DmmMeasureResistance"
   },
   {
-    "driver": "keysight.34461a",
-    "operation": "DmmMeasureResistance2Wire",
     "cases": [
       "keysight.34461a|B|DmmMeasureResistance2Wire-0",
-      "keysight.34461a|B|DmmMeasureResistance2Wire-1"
+      "keysight.34461a|B|DmmMeasureResistance2Wire-1",
+      "keysight.34461a|B|DmmMeasureResistance2Wire-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34461a",
+    "negativeCases": [
+      "keysight.34461a|B|DmmMeasureResistance2Wire-0-transport-failure"
+    ],
+    "operation": "DmmMeasureResistance2Wire"
   },
   {
-    "driver": "keysight.34461a",
-    "operation": "DmmMeasureResistance4Wire",
     "cases": [
       "keysight.34461a|B|DmmMeasureResistance4Wire-0",
-      "keysight.34461a|B|DmmMeasureResistance4Wire-1"
+      "keysight.34461a|B|DmmMeasureResistance4Wire-1",
+      "keysight.34461a|B|DmmMeasureResistance4Wire-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34461a",
+    "negativeCases": [
+      "keysight.34461a|B|DmmMeasureResistance4Wire-0-transport-failure"
+    ],
+    "operation": "DmmMeasureResistance4Wire"
   },
   {
-    "driver": "keysight.34461a",
-    "operation": "DmmMeasureTemperature",
     "cases": [
       "keysight.34461a|B|DmmMeasureTemperature-0",
-      "keysight.34461a|B|DmmMeasureTemperature-1"
+      "keysight.34461a|B|DmmMeasureTemperature-1",
+      "keysight.34461a|B|temperature-DmmRead",
+      "keysight.34461a|B|temperature-DmmFetch",
+      "keysight.34461a|B|DmmMeasureTemperature-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34461a",
+    "negativeCases": [
+      "keysight.34461a|B|DmmMeasureTemperature-0-transport-failure"
+    ],
+    "operation": "DmmMeasureTemperature"
   },
   {
-    "driver": "keysight.34461a",
-    "operation": "DmmConfigureVoltageDc",
     "cases": [
       "keysight.34461a|B|DmmConfigureVoltageDc-0",
       "keysight.34461a|B|DmmConfigureVoltageDc-1",
       "keysight.34461a|B|DmmConfigureVoltageDc-2",
-      "keysight.34461a|B|DmmConfigureVoltageDc-3"
+      "keysight.34461a|B|DmmConfigureVoltageDc-3",
+      "keysight.34461a|B|DmmConfigureVoltageDc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34461a",
+    "negativeCases": [
+      "keysight.34461a|B|DmmConfigureVoltageDc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureVoltageDc"
   },
   {
-    "driver": "keysight.34461a",
-    "operation": "DmmConfigureVoltageAc",
     "cases": [
       "keysight.34461a|B|DmmConfigureVoltageAc-0",
       "keysight.34461a|B|DmmConfigureVoltageAc-1",
       "keysight.34461a|B|DmmConfigureVoltageAc-2",
-      "keysight.34461a|B|DmmConfigureVoltageAc-3"
+      "keysight.34461a|B|DmmConfigureVoltageAc-3",
+      "keysight.34461a|B|DmmConfigureVoltageAc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34461a",
+    "negativeCases": [
+      "keysight.34461a|B|DmmConfigureVoltageAc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureVoltageAc"
   },
   {
-    "driver": "keysight.34461a",
-    "operation": "DmmConfigureCurrentDc",
     "cases": [
       "keysight.34461a|B|DmmConfigureCurrentDc-0",
       "keysight.34461a|B|DmmConfigureCurrentDc-1",
       "keysight.34461a|B|DmmConfigureCurrentDc-2",
-      "keysight.34461a|B|DmmConfigureCurrentDc-3"
+      "keysight.34461a|B|DmmConfigureCurrentDc-3",
+      "keysight.34461a|B|DmmConfigureCurrentDc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34461a",
+    "negativeCases": [
+      "keysight.34461a|B|DmmConfigureCurrentDc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureCurrentDc"
   },
   {
-    "driver": "keysight.34461a",
-    "operation": "DmmConfigureCurrentAc",
     "cases": [
       "keysight.34461a|B|DmmConfigureCurrentAc-0",
       "keysight.34461a|B|DmmConfigureCurrentAc-1",
       "keysight.34461a|B|DmmConfigureCurrentAc-2",
-      "keysight.34461a|B|DmmConfigureCurrentAc-3"
+      "keysight.34461a|B|DmmConfigureCurrentAc-3",
+      "keysight.34461a|B|DmmConfigureCurrentAc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34461a",
+    "negativeCases": [
+      "keysight.34461a|B|DmmConfigureCurrentAc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureCurrentAc"
   },
   {
-    "driver": "keysight.34461a",
-    "operation": "DmmConfigureResistance",
     "cases": [
       "keysight.34461a|B|DmmConfigureResistance-0",
       "keysight.34461a|B|DmmConfigureResistance-1",
       "keysight.34461a|B|DmmConfigureResistance-2",
-      "keysight.34461a|B|DmmConfigureResistance-3"
+      "keysight.34461a|B|DmmConfigureResistance-3",
+      "keysight.34461a|B|DmmConfigureResistance-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34461a",
+    "negativeCases": [
+      "keysight.34461a|B|DmmConfigureResistance-0-transport-failure"
+    ],
+    "operation": "DmmConfigureResistance"
   },
   {
-    "driver": "keysight.34461a",
-    "operation": "DmmConfigureResistance4Wire",
     "cases": [
       "keysight.34461a|B|DmmConfigureResistance4Wire-0",
       "keysight.34461a|B|DmmConfigureResistance4Wire-1",
       "keysight.34461a|B|DmmConfigureResistance4Wire-2",
-      "keysight.34461a|B|DmmConfigureResistance4Wire-3"
+      "keysight.34461a|B|DmmConfigureResistance4Wire-3",
+      "keysight.34461a|B|DmmConfigureResistance4Wire-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34461a",
+    "negativeCases": [
+      "keysight.34461a|B|DmmConfigureResistance4Wire-0-transport-failure"
+    ],
+    "operation": "DmmConfigureResistance4Wire"
   },
   {
-    "driver": "keysight.34461a",
-    "operation": "DmmInitiate",
     "cases": [
-      "keysight.34461a|B|DmmInitiate-0"
+      "keysight.34461a|B|DmmInitiate-0",
+      "keysight.34461a|B|DmmInitiate-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34461a",
+    "negativeCases": [
+      "keysight.34461a|B|DmmInitiate-0-transport-failure"
+    ],
+    "operation": "DmmInitiate"
   },
   {
-    "driver": "keysight.34461a",
-    "operation": "DmmFetch",
     "cases": [
-      "keysight.34461a|B|DmmFetch-0"
+      "keysight.34461a|B|DmmFetch-0",
+      "keysight.34461a|B|temperature-DmmFetch",
+      "keysight.34461a|B|DmmFetch-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34461a",
+    "negativeCases": [
+      "keysight.34461a|B|DmmFetch-0-transport-failure"
+    ],
+    "operation": "DmmFetch"
   },
   {
-    "driver": "keysight.34461a",
-    "operation": "DmmRead",
     "cases": [
-      "keysight.34461a|B|DmmRead-0"
+      "keysight.34461a|B|DmmRead-0",
+      "keysight.34461a|B|temperature-DmmRead",
+      "keysight.34461a|B|DmmRead-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34461a",
+    "negativeCases": [
+      "keysight.34461a|B|DmmRead-0-transport-failure"
+    ],
+    "operation": "DmmRead"
   },
   {
-    "driver": "keysight.34461a",
-    "operation": "DmmSoftwareTrigger",
     "cases": [
-      "keysight.34461a|B|DmmSoftwareTrigger-0"
+      "keysight.34461a|B|DmmSoftwareTrigger-0",
+      "keysight.34461a|B|DmmSoftwareTrigger-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34461a",
+    "negativeCases": [
+      "keysight.34461a|B|DmmSoftwareTrigger-0-transport-failure"
+    ],
+    "operation": "DmmSoftwareTrigger"
   },
   {
-    "driver": "keysight.34461a",
-    "operation": "QueryIdentity",
     "cases": [
-      "keysight.34461a|B|QueryIdentity-0"
+      "keysight.34461a|B|QueryIdentity-0",
+      "keysight.34461a|B|QueryIdentity-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34461a",
+    "negativeCases": [
+      "keysight.34461a|B|QueryIdentity-0-transport-failure"
+    ],
+    "operation": "QueryIdentity"
   },
   {
-    "driver": "keysight.34461a",
-    "operation": "Reset",
     "cases": [
-      "keysight.34461a|B|Reset-0"
+      "keysight.34461a|B|Reset-0",
+      "keysight.34461a|B|Reset-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34461a",
+    "negativeCases": [
+      "keysight.34461a|B|Reset-0-transport-failure"
+    ],
+    "operation": "Reset"
   },
   {
-    "driver": "keysight.34461a",
-    "operation": "Shutdown",
     "cases": [
       "keysight.34461a|B|Shutdown-0"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34461a",
+    "negativeCases": [],
+    "operation": "Shutdown"
   },
   {
-    "driver": "keysight.34465a",
-    "operation": "DmmMeasureVoltageDc",
     "cases": [
       "keysight.34465a|B|DmmMeasureVoltageDc-0",
-      "keysight.34465a|B|DmmMeasureVoltageDc-1"
+      "keysight.34465a|B|DmmMeasureVoltageDc-1",
+      "keysight.34465a|B|DmmFetch-0",
+      "keysight.34465a|B|DmmRead-0",
+      "keysight.34465a|B|DmmMeasureVoltageDc-0-transport-failure",
+      "keysight.34465a|B|DmmFetch-0-transport-failure",
+      "keysight.34465a|B|DmmRead-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34465a",
+    "negativeCases": [
+      "keysight.34465a|B|DmmMeasureVoltageDc-0-transport-failure",
+      "keysight.34465a|B|DmmFetch-0-transport-failure",
+      "keysight.34465a|B|DmmRead-0-transport-failure"
+    ],
+    "operation": "DmmMeasureVoltageDc"
   },
   {
-    "driver": "keysight.34465a",
-    "operation": "DmmMeasureVoltageAc",
     "cases": [
       "keysight.34465a|B|DmmMeasureVoltageAc-0",
-      "keysight.34465a|B|DmmMeasureVoltageAc-1"
+      "keysight.34465a|B|DmmMeasureVoltageAc-1",
+      "keysight.34465a|B|DmmMeasureVoltageAc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34465a",
+    "negativeCases": [
+      "keysight.34465a|B|DmmMeasureVoltageAc-0-transport-failure"
+    ],
+    "operation": "DmmMeasureVoltageAc"
   },
   {
-    "driver": "keysight.34465a",
-    "operation": "DmmMeasureCurrentDc",
     "cases": [
       "keysight.34465a|B|DmmMeasureCurrentDc-0",
-      "keysight.34465a|B|DmmMeasureCurrentDc-1"
+      "keysight.34465a|B|DmmMeasureCurrentDc-1",
+      "keysight.34465a|B|DmmMeasureCurrentDc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34465a",
+    "negativeCases": [
+      "keysight.34465a|B|DmmMeasureCurrentDc-0-transport-failure"
+    ],
+    "operation": "DmmMeasureCurrentDc"
   },
   {
-    "driver": "keysight.34465a",
-    "operation": "DmmMeasureCurrentAc",
     "cases": [
       "keysight.34465a|B|DmmMeasureCurrentAc-0",
-      "keysight.34465a|B|DmmMeasureCurrentAc-1"
+      "keysight.34465a|B|DmmMeasureCurrentAc-1",
+      "keysight.34465a|B|DmmMeasureCurrentAc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34465a",
+    "negativeCases": [
+      "keysight.34465a|B|DmmMeasureCurrentAc-0-transport-failure"
+    ],
+    "operation": "DmmMeasureCurrentAc"
   },
   {
-    "driver": "keysight.34465a",
-    "operation": "DmmMeasureResistance",
     "cases": [
       "keysight.34465a|B|DmmMeasureResistance-0",
-      "keysight.34465a|B|DmmMeasureResistance-1"
+      "keysight.34465a|B|DmmMeasureResistance-1",
+      "keysight.34465a|B|DmmMeasureResistance-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34465a",
+    "negativeCases": [
+      "keysight.34465a|B|DmmMeasureResistance-0-transport-failure"
+    ],
+    "operation": "DmmMeasureResistance"
   },
   {
-    "driver": "keysight.34465a",
-    "operation": "DmmMeasureResistance2Wire",
     "cases": [
       "keysight.34465a|B|DmmMeasureResistance2Wire-0",
-      "keysight.34465a|B|DmmMeasureResistance2Wire-1"
+      "keysight.34465a|B|DmmMeasureResistance2Wire-1",
+      "keysight.34465a|B|DmmMeasureResistance2Wire-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34465a",
+    "negativeCases": [
+      "keysight.34465a|B|DmmMeasureResistance2Wire-0-transport-failure"
+    ],
+    "operation": "DmmMeasureResistance2Wire"
   },
   {
-    "driver": "keysight.34465a",
-    "operation": "DmmMeasureResistance4Wire",
     "cases": [
       "keysight.34465a|B|DmmMeasureResistance4Wire-0",
-      "keysight.34465a|B|DmmMeasureResistance4Wire-1"
+      "keysight.34465a|B|DmmMeasureResistance4Wire-1",
+      "keysight.34465a|B|DmmMeasureResistance4Wire-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34465a",
+    "negativeCases": [
+      "keysight.34465a|B|DmmMeasureResistance4Wire-0-transport-failure"
+    ],
+    "operation": "DmmMeasureResistance4Wire"
   },
   {
-    "driver": "keysight.34465a",
-    "operation": "DmmMeasureTemperature",
     "cases": [
       "keysight.34465a|B|DmmMeasureTemperature-0",
-      "keysight.34465a|B|DmmMeasureTemperature-1"
+      "keysight.34465a|B|DmmMeasureTemperature-1",
+      "keysight.34465a|B|temperature-DmmRead",
+      "keysight.34465a|B|temperature-DmmFetch",
+      "keysight.34465a|B|DmmMeasureTemperature-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34465a",
+    "negativeCases": [
+      "keysight.34465a|B|DmmMeasureTemperature-0-transport-failure"
+    ],
+    "operation": "DmmMeasureTemperature"
   },
   {
-    "driver": "keysight.34465a",
-    "operation": "DmmConfigureVoltageDc",
     "cases": [
       "keysight.34465a|B|DmmConfigureVoltageDc-0",
       "keysight.34465a|B|DmmConfigureVoltageDc-1",
       "keysight.34465a|B|DmmConfigureVoltageDc-2",
-      "keysight.34465a|B|DmmConfigureVoltageDc-3"
+      "keysight.34465a|B|DmmConfigureVoltageDc-3",
+      "keysight.34465a|B|DmmConfigureVoltageDc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34465a",
+    "negativeCases": [
+      "keysight.34465a|B|DmmConfigureVoltageDc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureVoltageDc"
   },
   {
-    "driver": "keysight.34465a",
-    "operation": "DmmConfigureVoltageAc",
     "cases": [
       "keysight.34465a|B|DmmConfigureVoltageAc-0",
       "keysight.34465a|B|DmmConfigureVoltageAc-1",
       "keysight.34465a|B|DmmConfigureVoltageAc-2",
-      "keysight.34465a|B|DmmConfigureVoltageAc-3"
+      "keysight.34465a|B|DmmConfigureVoltageAc-3",
+      "keysight.34465a|B|DmmConfigureVoltageAc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34465a",
+    "negativeCases": [
+      "keysight.34465a|B|DmmConfigureVoltageAc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureVoltageAc"
   },
   {
-    "driver": "keysight.34465a",
-    "operation": "DmmConfigureCurrentDc",
     "cases": [
       "keysight.34465a|B|DmmConfigureCurrentDc-0",
       "keysight.34465a|B|DmmConfigureCurrentDc-1",
       "keysight.34465a|B|DmmConfigureCurrentDc-2",
-      "keysight.34465a|B|DmmConfigureCurrentDc-3"
+      "keysight.34465a|B|DmmConfigureCurrentDc-3",
+      "keysight.34465a|B|DmmConfigureCurrentDc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34465a",
+    "negativeCases": [
+      "keysight.34465a|B|DmmConfigureCurrentDc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureCurrentDc"
   },
   {
-    "driver": "keysight.34465a",
-    "operation": "DmmConfigureCurrentAc",
     "cases": [
       "keysight.34465a|B|DmmConfigureCurrentAc-0",
       "keysight.34465a|B|DmmConfigureCurrentAc-1",
       "keysight.34465a|B|DmmConfigureCurrentAc-2",
-      "keysight.34465a|B|DmmConfigureCurrentAc-3"
+      "keysight.34465a|B|DmmConfigureCurrentAc-3",
+      "keysight.34465a|B|DmmConfigureCurrentAc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34465a",
+    "negativeCases": [
+      "keysight.34465a|B|DmmConfigureCurrentAc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureCurrentAc"
   },
   {
-    "driver": "keysight.34465a",
-    "operation": "DmmConfigureResistance",
     "cases": [
       "keysight.34465a|B|DmmConfigureResistance-0",
       "keysight.34465a|B|DmmConfigureResistance-1",
       "keysight.34465a|B|DmmConfigureResistance-2",
-      "keysight.34465a|B|DmmConfigureResistance-3"
+      "keysight.34465a|B|DmmConfigureResistance-3",
+      "keysight.34465a|B|DmmConfigureResistance-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34465a",
+    "negativeCases": [
+      "keysight.34465a|B|DmmConfigureResistance-0-transport-failure"
+    ],
+    "operation": "DmmConfigureResistance"
   },
   {
-    "driver": "keysight.34465a",
-    "operation": "DmmConfigureResistance4Wire",
     "cases": [
       "keysight.34465a|B|DmmConfigureResistance4Wire-0",
       "keysight.34465a|B|DmmConfigureResistance4Wire-1",
       "keysight.34465a|B|DmmConfigureResistance4Wire-2",
-      "keysight.34465a|B|DmmConfigureResistance4Wire-3"
+      "keysight.34465a|B|DmmConfigureResistance4Wire-3",
+      "keysight.34465a|B|DmmConfigureResistance4Wire-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34465a",
+    "negativeCases": [
+      "keysight.34465a|B|DmmConfigureResistance4Wire-0-transport-failure"
+    ],
+    "operation": "DmmConfigureResistance4Wire"
   },
   {
-    "driver": "keysight.34465a",
-    "operation": "DmmInitiate",
     "cases": [
-      "keysight.34465a|B|DmmInitiate-0"
+      "keysight.34465a|B|DmmInitiate-0",
+      "keysight.34465a|B|DmmInitiate-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34465a",
+    "negativeCases": [
+      "keysight.34465a|B|DmmInitiate-0-transport-failure"
+    ],
+    "operation": "DmmInitiate"
   },
   {
-    "driver": "keysight.34465a",
-    "operation": "DmmFetch",
     "cases": [
-      "keysight.34465a|B|DmmFetch-0"
+      "keysight.34465a|B|DmmFetch-0",
+      "keysight.34465a|B|temperature-DmmFetch",
+      "keysight.34465a|B|DmmFetch-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34465a",
+    "negativeCases": [
+      "keysight.34465a|B|DmmFetch-0-transport-failure"
+    ],
+    "operation": "DmmFetch"
   },
   {
-    "driver": "keysight.34465a",
-    "operation": "DmmRead",
     "cases": [
-      "keysight.34465a|B|DmmRead-0"
+      "keysight.34465a|B|DmmRead-0",
+      "keysight.34465a|B|temperature-DmmRead",
+      "keysight.34465a|B|DmmRead-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34465a",
+    "negativeCases": [
+      "keysight.34465a|B|DmmRead-0-transport-failure"
+    ],
+    "operation": "DmmRead"
   },
   {
-    "driver": "keysight.34465a",
-    "operation": "DmmSoftwareTrigger",
     "cases": [
-      "keysight.34465a|B|DmmSoftwareTrigger-0"
+      "keysight.34465a|B|DmmSoftwareTrigger-0",
+      "keysight.34465a|B|DmmSoftwareTrigger-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34465a",
+    "negativeCases": [
+      "keysight.34465a|B|DmmSoftwareTrigger-0-transport-failure"
+    ],
+    "operation": "DmmSoftwareTrigger"
   },
   {
-    "driver": "keysight.34465a",
-    "operation": "QueryIdentity",
     "cases": [
-      "keysight.34465a|B|QueryIdentity-0"
+      "keysight.34465a|B|QueryIdentity-0",
+      "keysight.34465a|B|QueryIdentity-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34465a",
+    "negativeCases": [
+      "keysight.34465a|B|QueryIdentity-0-transport-failure"
+    ],
+    "operation": "QueryIdentity"
   },
   {
-    "driver": "keysight.34465a",
-    "operation": "Reset",
     "cases": [
-      "keysight.34465a|B|Reset-0"
+      "keysight.34465a|B|Reset-0",
+      "keysight.34465a|B|Reset-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34465a",
+    "negativeCases": [
+      "keysight.34465a|B|Reset-0-transport-failure"
+    ],
+    "operation": "Reset"
   },
   {
-    "driver": "keysight.34465a",
-    "operation": "Shutdown",
     "cases": [
       "keysight.34465a|B|Shutdown-0"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.34465a",
+    "negativeCases": [],
+    "operation": "Shutdown"
   },
   {
+    "cases": [
+      "keysight.34970a|B|SwitchCloseRoute-0",
+      "keysight.34970a|B|SwitchCloseRoute-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.34970a",
-    "operation": "SwitchCloseRoute",
-    "cases": [
-      "keysight.34970a|B|SwitchCloseRoute-0"
+    "negativeCases": [
+      "keysight.34970a|B|SwitchCloseRoute-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "SwitchCloseRoute"
   },
   {
+    "cases": [
+      "keysight.34970a|B|SwitchOpenRoute-0",
+      "keysight.34970a|B|SwitchOpenRoute-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.34970a",
-    "operation": "SwitchOpenRoute",
-    "cases": [
-      "keysight.34970a|B|SwitchOpenRoute-0"
+    "negativeCases": [
+      "keysight.34970a|B|SwitchOpenRoute-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "SwitchOpenRoute"
   },
   {
+    "cases": [
+      "keysight.34970a|B|SwitchIsClosed-0",
+      "keysight.34970a|B|SwitchIsClosed-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.34970a",
-    "operation": "SwitchIsClosed",
-    "cases": [
-      "keysight.34970a|B|SwitchIsClosed-0"
+    "negativeCases": [
+      "keysight.34970a|B|SwitchIsClosed-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "SwitchIsClosed"
   },
   {
+    "cases": [
+      "keysight.34970a|B|SwitchOpenAll-0",
+      "keysight.34970a|B|SwitchOpenAll-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.34970a",
-    "operation": "SwitchOpenAll",
-    "cases": [
-      "keysight.34970a|B|SwitchOpenAll-0"
+    "negativeCases": [
+      "keysight.34970a|B|SwitchOpenAll-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "SwitchOpenAll"
   },
   {
+    "cases": [
+      "keysight.34970a|B|QueryIdentity-0",
+      "keysight.34970a|B|QueryIdentity-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.34970a",
-    "operation": "QueryIdentity",
-    "cases": [
-      "keysight.34970a|B|QueryIdentity-0"
+    "negativeCases": [
+      "keysight.34970a|B|QueryIdentity-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "QueryIdentity"
   },
   {
+    "cases": [
+      "keysight.34970a|B|Reset-0",
+      "keysight.34970a|B|Reset-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.34970a",
-    "operation": "Reset",
-    "cases": [
-      "keysight.34970a|B|Reset-0"
+    "negativeCases": [
+      "keysight.34970a|B|Reset-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "Reset"
   },
   {
+    "cases": [
+      "keysight.34970a|B|Shutdown-0",
+      "keysight.34970a|B|Shutdown-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.34970a",
-    "operation": "Shutdown",
-    "cases": [
-      "keysight.34970a|B|Shutdown-0"
+    "negativeCases": [
+      "keysight.34970a|B|Shutdown-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "Shutdown"
   },
   {
+    "cases": [
+      "keysight.34972a|B|SwitchCloseRoute-0",
+      "keysight.34972a|B|SwitchCloseRoute-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.34972a",
-    "operation": "SwitchCloseRoute",
-    "cases": [
-      "keysight.34972a|B|SwitchCloseRoute-0"
+    "negativeCases": [
+      "keysight.34972a|B|SwitchCloseRoute-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "SwitchCloseRoute"
   },
   {
+    "cases": [
+      "keysight.34972a|B|SwitchOpenRoute-0",
+      "keysight.34972a|B|SwitchOpenRoute-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.34972a",
-    "operation": "SwitchOpenRoute",
-    "cases": [
-      "keysight.34972a|B|SwitchOpenRoute-0"
+    "negativeCases": [
+      "keysight.34972a|B|SwitchOpenRoute-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "SwitchOpenRoute"
   },
   {
+    "cases": [
+      "keysight.34972a|B|SwitchIsClosed-0",
+      "keysight.34972a|B|SwitchIsClosed-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.34972a",
-    "operation": "SwitchIsClosed",
-    "cases": [
-      "keysight.34972a|B|SwitchIsClosed-0"
+    "negativeCases": [
+      "keysight.34972a|B|SwitchIsClosed-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "SwitchIsClosed"
   },
   {
+    "cases": [
+      "keysight.34972a|B|SwitchOpenAll-0",
+      "keysight.34972a|B|SwitchOpenAll-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.34972a",
-    "operation": "SwitchOpenAll",
-    "cases": [
-      "keysight.34972a|B|SwitchOpenAll-0"
+    "negativeCases": [
+      "keysight.34972a|B|SwitchOpenAll-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "SwitchOpenAll"
   },
   {
+    "cases": [
+      "keysight.34972a|B|QueryIdentity-0",
+      "keysight.34972a|B|QueryIdentity-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.34972a",
-    "operation": "QueryIdentity",
-    "cases": [
-      "keysight.34972a|B|QueryIdentity-0"
+    "negativeCases": [
+      "keysight.34972a|B|QueryIdentity-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "QueryIdentity"
   },
   {
+    "cases": [
+      "keysight.34972a|B|Reset-0",
+      "keysight.34972a|B|Reset-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.34972a",
-    "operation": "Reset",
-    "cases": [
-      "keysight.34972a|B|Reset-0"
+    "negativeCases": [
+      "keysight.34972a|B|Reset-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "Reset"
   },
   {
+    "cases": [
+      "keysight.34972a|B|Shutdown-0",
+      "keysight.34972a|B|Shutdown-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.34972a",
-    "operation": "Shutdown",
-    "cases": [
-      "keysight.34972a|B|Shutdown-0"
+    "negativeCases": [
+      "keysight.34972a|B|Shutdown-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "Shutdown"
   },
   {
-    "driver": "keysight.53131a",
-    "operation": "CounterMeasureFrequency",
     "cases": [
-      "keysight.53131a|B|CounterMeasureFrequency-0"
+      "keysight.53131a|B|CounterMeasureFrequency-0",
+      "keysight.53131a|B|CounterMeasureFrequency-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.53131a",
+    "negativeCases": [
+      "keysight.53131a|B|CounterMeasureFrequency-0-transport-failure"
+    ],
+    "operation": "CounterMeasureFrequency"
   },
   {
-    "driver": "keysight.53131a",
-    "operation": "CounterMeasurePeriod",
     "cases": [
-      "keysight.53131a|B|CounterMeasurePeriod-0"
+      "keysight.53131a|B|CounterMeasurePeriod-0",
+      "keysight.53131a|B|CounterMeasurePeriod-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.53131a",
+    "negativeCases": [
+      "keysight.53131a|B|CounterMeasurePeriod-0-transport-failure"
+    ],
+    "operation": "CounterMeasurePeriod"
   },
   {
-    "driver": "keysight.53131a",
-    "operation": "CounterSetGateTime",
     "cases": [
-      "keysight.53131a|B|CounterSetGateTime-0"
+      "keysight.53131a|B|CounterSetGateTime-0",
+      "keysight.53131a|B|CounterSetGateTime-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.53131a",
+    "negativeCases": [
+      "keysight.53131a|B|CounterSetGateTime-0-transport-failure"
+    ],
+    "operation": "CounterSetGateTime"
   },
   {
-    "driver": "keysight.53131a",
-    "operation": "CounterSelectChannel",
     "cases": [
-      "keysight.53131a|B|CounterSelectChannel-0"
+      "keysight.53131a|B|CounterSelectChannel-0",
+      "keysight.53131a|B|CounterSelectChannel-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.53131a",
+    "negativeCases": [
+      "keysight.53131a|B|CounterSelectChannel-0-transport-failure"
+    ],
+    "operation": "CounterSelectChannel"
   },
   {
-    "driver": "keysight.53131a",
-    "operation": "CounterResetTotalize",
     "cases": [
-      "keysight.53131a|B|CounterResetTotalize-0"
+      "keysight.53131a|B|CounterResetTotalize-0",
+      "keysight.53131a|B|CounterResetTotalize-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.53131a",
+    "negativeCases": [
+      "keysight.53131a|B|CounterResetTotalize-0-transport-failure"
+    ],
+    "operation": "CounterResetTotalize"
   },
   {
-    "driver": "keysight.53131a",
-    "operation": "CounterReadTotalize",
     "cases": [
-      "keysight.53131a|B|CounterReadTotalize-0"
+      "keysight.53131a|B|CounterReadTotalize-0",
+      "keysight.53131a|B|CounterReadTotalize-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.53131a",
+    "negativeCases": [
+      "keysight.53131a|B|CounterReadTotalize-0-transport-failure"
+    ],
+    "operation": "CounterReadTotalize"
   },
   {
-    "driver": "keysight.53131a",
-    "operation": "QueryIdentity",
     "cases": [
-      "keysight.53131a|B|QueryIdentity-0"
+      "keysight.53131a|B|QueryIdentity-0",
+      "keysight.53131a|B|QueryIdentity-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.53131a",
+    "negativeCases": [
+      "keysight.53131a|B|QueryIdentity-0-transport-failure"
+    ],
+    "operation": "QueryIdentity"
   },
   {
-    "driver": "keysight.53131a",
-    "operation": "Reset",
     "cases": [
-      "keysight.53131a|B|Reset-0"
+      "keysight.53131a|B|Reset-0",
+      "keysight.53131a|B|Reset-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.53131a",
+    "negativeCases": [
+      "keysight.53131a|B|Reset-0-transport-failure"
+    ],
+    "operation": "Reset"
   },
   {
-    "driver": "keysight.53131a",
-    "operation": "Shutdown",
     "cases": [
       "keysight.53131a|B|Shutdown-0"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.53131a",
+    "negativeCases": [],
+    "operation": "Shutdown"
   },
   {
-    "driver": "keysight.53220a",
-    "operation": "CounterMeasureFrequency",
     "cases": [
-      "keysight.53220a|B|CounterMeasureFrequency-0"
+      "keysight.53220a|B|CounterMeasureFrequency-0",
+      "keysight.53220a|B|CounterMeasureFrequency-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.53220a",
+    "negativeCases": [
+      "keysight.53220a|B|CounterMeasureFrequency-0-transport-failure"
+    ],
+    "operation": "CounterMeasureFrequency"
   },
   {
-    "driver": "keysight.53220a",
-    "operation": "CounterMeasurePeriod",
     "cases": [
-      "keysight.53220a|B|CounterMeasurePeriod-0"
+      "keysight.53220a|B|CounterMeasurePeriod-0",
+      "keysight.53220a|B|CounterMeasurePeriod-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.53220a",
+    "negativeCases": [
+      "keysight.53220a|B|CounterMeasurePeriod-0-transport-failure"
+    ],
+    "operation": "CounterMeasurePeriod"
   },
   {
-    "driver": "keysight.53220a",
-    "operation": "CounterSetGateTime",
     "cases": [
-      "keysight.53220a|B|CounterSetGateTime-0"
+      "keysight.53220a|B|CounterSetGateTime-0",
+      "keysight.53220a|B|CounterSetGateTime-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.53220a",
+    "negativeCases": [
+      "keysight.53220a|B|CounterSetGateTime-0-transport-failure"
+    ],
+    "operation": "CounterSetGateTime"
   },
   {
-    "driver": "keysight.53220a",
-    "operation": "CounterSelectChannel",
     "cases": [
-      "keysight.53220a|B|CounterSelectChannel-0"
+      "keysight.53220a|B|CounterSelectChannel-0",
+      "keysight.53220a|B|CounterSelectChannel-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.53220a",
+    "negativeCases": [
+      "keysight.53220a|B|CounterSelectChannel-0-transport-failure"
+    ],
+    "operation": "CounterSelectChannel"
   },
   {
-    "driver": "keysight.53220a",
-    "operation": "CounterResetTotalize",
     "cases": [
-      "keysight.53220a|B|CounterResetTotalize-0"
+      "keysight.53220a|B|CounterResetTotalize-0",
+      "keysight.53220a|B|CounterResetTotalize-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.53220a",
+    "negativeCases": [
+      "keysight.53220a|B|CounterResetTotalize-0-transport-failure"
+    ],
+    "operation": "CounterResetTotalize"
   },
   {
-    "driver": "keysight.53220a",
-    "operation": "CounterReadTotalize",
     "cases": [
-      "keysight.53220a|B|CounterReadTotalize-0"
+      "keysight.53220a|B|CounterReadTotalize-0",
+      "keysight.53220a|B|CounterReadTotalize-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.53220a",
+    "negativeCases": [
+      "keysight.53220a|B|CounterReadTotalize-0-transport-failure"
+    ],
+    "operation": "CounterReadTotalize"
   },
   {
-    "driver": "keysight.53220a",
-    "operation": "QueryIdentity",
     "cases": [
-      "keysight.53220a|B|QueryIdentity-0"
+      "keysight.53220a|B|QueryIdentity-0",
+      "keysight.53220a|B|QueryIdentity-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.53220a",
+    "negativeCases": [
+      "keysight.53220a|B|QueryIdentity-0-transport-failure"
+    ],
+    "operation": "QueryIdentity"
   },
   {
-    "driver": "keysight.53220a",
-    "operation": "Reset",
     "cases": [
-      "keysight.53220a|B|Reset-0"
+      "keysight.53220a|B|Reset-0",
+      "keysight.53220a|B|Reset-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.53220a",
+    "negativeCases": [
+      "keysight.53220a|B|Reset-0-transport-failure"
+    ],
+    "operation": "Reset"
   },
   {
-    "driver": "keysight.53220a",
-    "operation": "Shutdown",
     "cases": [
       "keysight.53220a|B|Shutdown-0"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.53220a",
+    "negativeCases": [],
+    "operation": "Shutdown"
   },
   {
-    "driver": "keysight.53230a",
-    "operation": "CounterMeasureFrequency",
     "cases": [
-      "keysight.53230a|B|CounterMeasureFrequency-0"
+      "keysight.53230a|B|CounterMeasureFrequency-0",
+      "keysight.53230a|B|CounterMeasureFrequency-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.53230a",
+    "negativeCases": [
+      "keysight.53230a|B|CounterMeasureFrequency-0-transport-failure"
+    ],
+    "operation": "CounterMeasureFrequency"
   },
   {
-    "driver": "keysight.53230a",
-    "operation": "CounterMeasurePeriod",
     "cases": [
-      "keysight.53230a|B|CounterMeasurePeriod-0"
+      "keysight.53230a|B|CounterMeasurePeriod-0",
+      "keysight.53230a|B|CounterMeasurePeriod-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.53230a",
+    "negativeCases": [
+      "keysight.53230a|B|CounterMeasurePeriod-0-transport-failure"
+    ],
+    "operation": "CounterMeasurePeriod"
   },
   {
-    "driver": "keysight.53230a",
-    "operation": "CounterSetGateTime",
     "cases": [
-      "keysight.53230a|B|CounterSetGateTime-0"
+      "keysight.53230a|B|CounterSetGateTime-0",
+      "keysight.53230a|B|CounterSetGateTime-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.53230a",
+    "negativeCases": [
+      "keysight.53230a|B|CounterSetGateTime-0-transport-failure"
+    ],
+    "operation": "CounterSetGateTime"
   },
   {
-    "driver": "keysight.53230a",
-    "operation": "CounterSelectChannel",
     "cases": [
-      "keysight.53230a|B|CounterSelectChannel-0"
+      "keysight.53230a|B|CounterSelectChannel-0",
+      "keysight.53230a|B|CounterSelectChannel-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.53230a",
+    "negativeCases": [
+      "keysight.53230a|B|CounterSelectChannel-0-transport-failure"
+    ],
+    "operation": "CounterSelectChannel"
   },
   {
-    "driver": "keysight.53230a",
-    "operation": "CounterResetTotalize",
     "cases": [
-      "keysight.53230a|B|CounterResetTotalize-0"
+      "keysight.53230a|B|CounterResetTotalize-0",
+      "keysight.53230a|B|CounterResetTotalize-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.53230a",
+    "negativeCases": [
+      "keysight.53230a|B|CounterResetTotalize-0-transport-failure"
+    ],
+    "operation": "CounterResetTotalize"
   },
   {
-    "driver": "keysight.53230a",
-    "operation": "CounterReadTotalize",
     "cases": [
-      "keysight.53230a|B|CounterReadTotalize-0"
+      "keysight.53230a|B|CounterReadTotalize-0",
+      "keysight.53230a|B|CounterReadTotalize-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.53230a",
+    "negativeCases": [
+      "keysight.53230a|B|CounterReadTotalize-0-transport-failure"
+    ],
+    "operation": "CounterReadTotalize"
   },
   {
-    "driver": "keysight.53230a",
-    "operation": "QueryIdentity",
     "cases": [
-      "keysight.53230a|B|QueryIdentity-0"
+      "keysight.53230a|B|QueryIdentity-0",
+      "keysight.53230a|B|QueryIdentity-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.53230a",
+    "negativeCases": [
+      "keysight.53230a|B|QueryIdentity-0-transport-failure"
+    ],
+    "operation": "QueryIdentity"
   },
   {
-    "driver": "keysight.53230a",
-    "operation": "Reset",
     "cases": [
-      "keysight.53230a|B|Reset-0"
+      "keysight.53230a|B|Reset-0",
+      "keysight.53230a|B|Reset-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.53230a",
+    "negativeCases": [
+      "keysight.53230a|B|Reset-0-transport-failure"
+    ],
+    "operation": "Reset"
   },
   {
-    "driver": "keysight.53230a",
-    "operation": "Shutdown",
     "cases": [
       "keysight.53230a|B|Shutdown-0"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.53230a",
+    "negativeCases": [],
+    "operation": "Shutdown"
   },
   {
-    "driver": "keysight.dsox2024a",
-    "operation": "OscilloscopeSetTimebaseScale",
     "cases": [
-      "keysight.dsox2024a|B|OscilloscopeSetTimebaseScale-0"
+      "keysight.dsox2024a|B|OscilloscopeSetTimebaseScale-0",
+      "keysight.dsox2024a|B|OscilloscopeSetTimebaseScale-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.dsox2024a",
+    "negativeCases": [
+      "keysight.dsox2024a|B|OscilloscopeSetTimebaseScale-0-transport-failure"
+    ],
+    "operation": "OscilloscopeSetTimebaseScale"
   },
   {
-    "driver": "keysight.dsox2024a",
-    "operation": "OscilloscopeReadTimebaseScale",
     "cases": [
-      "keysight.dsox2024a|B|OscilloscopeReadTimebaseScale-0"
+      "keysight.dsox2024a|B|OscilloscopeReadTimebaseScale-0",
+      "keysight.dsox2024a|B|OscilloscopeReadTimebaseScale-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.dsox2024a",
+    "negativeCases": [
+      "keysight.dsox2024a|B|OscilloscopeReadTimebaseScale-0-transport-failure"
+    ],
+    "operation": "OscilloscopeReadTimebaseScale"
   },
   {
-    "driver": "keysight.dsox2024a",
-    "operation": "OscilloscopeSetChannelScale",
     "cases": [
-      "keysight.dsox2024a|B|OscilloscopeSetChannelScale-0"
+      "keysight.dsox2024a|B|OscilloscopeSetChannelScale-0",
+      "keysight.dsox2024a|B|invalid-OscilloscopeSetChannelScale",
+      "keysight.dsox2024a|B|OscilloscopeSetChannelScale-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.dsox2024a",
+    "negativeCases": [
+      "keysight.dsox2024a|B|invalid-OscilloscopeSetChannelScale",
+      "keysight.dsox2024a|B|OscilloscopeSetChannelScale-0-transport-failure"
+    ],
+    "operation": "OscilloscopeSetChannelScale"
   },
   {
-    "driver": "keysight.dsox2024a",
-    "operation": "OscilloscopeSetChannelDisplay",
     "cases": [
       "keysight.dsox2024a|B|OscilloscopeSetChannelDisplay-0",
-      "keysight.dsox2024a|B|OscilloscopeSetChannelDisplay-1"
+      "keysight.dsox2024a|B|OscilloscopeSetChannelDisplay-1",
+      "keysight.dsox2024a|B|OscilloscopeSetChannelDisplay-0-transport-failure"
     ],
-    "disposition": "implemented"
-  },
-  {
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.dsox2024a",
-    "operation": "OscilloscopeSetChannelCoupling",
-    "cases": [
-      "keysight.dsox2024a|B|OscilloscopeSetChannelCoupling-0"
+    "negativeCases": [
+      "keysight.dsox2024a|B|OscilloscopeSetChannelDisplay-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "OscilloscopeSetChannelDisplay"
   },
   {
+    "cases": [
+      "keysight.dsox2024a|B|OscilloscopeSetChannelCoupling-0",
+      "keysight.dsox2024a|B|OscilloscopeSetChannelCoupling-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.dsox2024a",
-    "operation": "OscilloscopeSetTriggerSource",
-    "cases": [
-      "keysight.dsox2024a|B|OscilloscopeSetTriggerSource-0"
+    "negativeCases": [
+      "keysight.dsox2024a|B|OscilloscopeSetChannelCoupling-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "OscilloscopeSetChannelCoupling"
   },
   {
+    "cases": [
+      "keysight.dsox2024a|B|OscilloscopeSetTriggerSource-0",
+      "keysight.dsox2024a|B|OscilloscopeSetTriggerSource-0-transport-failure",
+      "keysight.dsox2024a|B|bound-source-CHAN3",
+      "keysight.dsox2024a|B|bound-source-CHAN2"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.dsox2024a",
-    "operation": "OscilloscopeSetTriggerLevel",
-    "cases": [
-      "keysight.dsox2024a|B|OscilloscopeSetTriggerLevel-0"
+    "negativeCases": [
+      "keysight.dsox2024a|B|OscilloscopeSetTriggerSource-0-transport-failure",
+      "keysight.dsox2024a|B|bound-source-CHAN2"
     ],
-    "disposition": "implemented"
+    "operation": "OscilloscopeSetTriggerSource"
   },
   {
+    "cases": [
+      "keysight.dsox2024a|B|OscilloscopeSetTriggerLevel-0",
+      "keysight.dsox2024a|B|OscilloscopeSetTriggerLevel-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.dsox2024a",
-    "operation": "OscilloscopeSetTriggerSlope",
-    "cases": [
-      "keysight.dsox2024a|B|OscilloscopeSetTriggerSlope-0"
+    "negativeCases": [
+      "keysight.dsox2024a|B|OscilloscopeSetTriggerLevel-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "OscilloscopeSetTriggerLevel"
   },
   {
+    "cases": [
+      "keysight.dsox2024a|B|OscilloscopeSetTriggerSlope-0",
+      "keysight.dsox2024a|B|OscilloscopeSetTriggerSlope-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.dsox2024a",
-    "operation": "OscilloscopeRun",
-    "cases": [
-      "keysight.dsox2024a|B|OscilloscopeRun-0"
+    "negativeCases": [
+      "keysight.dsox2024a|B|OscilloscopeSetTriggerSlope-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "OscilloscopeSetTriggerSlope"
   },
   {
+    "cases": [
+      "keysight.dsox2024a|B|OscilloscopeRun-0",
+      "keysight.dsox2024a|B|OscilloscopeRun-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.dsox2024a",
-    "operation": "OscilloscopeStop",
-    "cases": [
-      "keysight.dsox2024a|B|OscilloscopeStop-0"
+    "negativeCases": [
+      "keysight.dsox2024a|B|OscilloscopeRun-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "OscilloscopeRun"
   },
   {
+    "cases": [
+      "keysight.dsox2024a|B|OscilloscopeStop-0",
+      "keysight.dsox2024a|B|OscilloscopeStop-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.dsox2024a",
-    "operation": "OscilloscopeSingle",
-    "cases": [
-      "keysight.dsox2024a|B|OscilloscopeSingle-0"
+    "negativeCases": [
+      "keysight.dsox2024a|B|OscilloscopeStop-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "OscilloscopeStop"
   },
   {
+    "cases": [
+      "keysight.dsox2024a|B|OscilloscopeSingle-0",
+      "keysight.dsox2024a|B|OscilloscopeSingle-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.dsox2024a",
-    "operation": "OscilloscopeMeasureVpp",
-    "cases": [
-      "keysight.dsox2024a|B|OscilloscopeMeasureVpp-0"
+    "negativeCases": [
+      "keysight.dsox2024a|B|OscilloscopeSingle-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "OscilloscopeSingle"
   },
   {
+    "cases": [
+      "keysight.dsox2024a|B|OscilloscopeMeasureVpp-0",
+      "keysight.dsox2024a|B|OscilloscopeMeasureVpp-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.dsox2024a",
-    "operation": "OscilloscopeMeasureFrequency",
-    "cases": [
-      "keysight.dsox2024a|B|OscilloscopeMeasureFrequency-0"
+    "negativeCases": [
+      "keysight.dsox2024a|B|OscilloscopeMeasureVpp-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "OscilloscopeMeasureVpp"
   },
   {
+    "cases": [
+      "keysight.dsox2024a|B|OscilloscopeMeasureFrequency-0",
+      "keysight.dsox2024a|B|OscilloscopeMeasureFrequency-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.dsox2024a",
-    "operation": "OscilloscopeCaptureVoltageTrace",
-    "cases": [
-      "keysight.dsox2024a|B|OscilloscopeCaptureVoltageTrace-0"
+    "negativeCases": [
+      "keysight.dsox2024a|B|OscilloscopeMeasureFrequency-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "OscilloscopeMeasureFrequency"
   },
   {
+    "cases": [
+      "keysight.dsox2024a|B|OscilloscopeCaptureVoltageTrace-0",
+      "keysight.dsox2024a|B|OscilloscopeCaptureVoltageTrace-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.dsox2024a",
-    "operation": "QueryIdentity",
-    "cases": [
-      "keysight.dsox2024a|B|QueryIdentity-0"
+    "negativeCases": [
+      "keysight.dsox2024a|B|OscilloscopeCaptureVoltageTrace-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "OscilloscopeCaptureVoltageTrace"
   },
   {
+    "cases": [
+      "keysight.dsox2024a|B|QueryIdentity-0",
+      "keysight.dsox2024a|B|QueryIdentity-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.dsox2024a",
-    "operation": "Reset",
-    "cases": [
-      "keysight.dsox2024a|B|Reset-0"
+    "negativeCases": [
+      "keysight.dsox2024a|B|QueryIdentity-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "QueryIdentity"
   },
   {
+    "cases": [
+      "keysight.dsox2024a|B|Reset-0",
+      "keysight.dsox2024a|B|Reset-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.dsox2024a",
-    "operation": "Shutdown",
-    "cases": [
-      "keysight.dsox2024a|B|Shutdown-0"
+    "negativeCases": [
+      "keysight.dsox2024a|B|Reset-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "Reset"
   },
   {
+    "cases": [
+      "keysight.dsox2024a|B|Shutdown-0",
+      "keysight.dsox2024a|B|Shutdown-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.dsox2024a",
+    "negativeCases": [
+      "keysight.dsox2024a|B|Shutdown-0-transport-failure"
+    ],
+    "operation": "Shutdown"
+  },
+  {
+    "cases": [
+      "keysight.dsox3024t|B|OscilloscopeSetTimebaseScale-0",
+      "keysight.dsox3024t|B|OscilloscopeSetTimebaseScale-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.dsox3024t",
-    "operation": "OscilloscopeSetTimebaseScale",
-    "cases": [
-      "keysight.dsox3024t|B|OscilloscopeSetTimebaseScale-0"
+    "negativeCases": [
+      "keysight.dsox3024t|B|OscilloscopeSetTimebaseScale-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "OscilloscopeSetTimebaseScale"
   },
   {
-    "driver": "keysight.dsox3024t",
-    "operation": "OscilloscopeReadTimebaseScale",
     "cases": [
-      "keysight.dsox3024t|B|OscilloscopeReadTimebaseScale-0"
+      "keysight.dsox3024t|B|OscilloscopeReadTimebaseScale-0",
+      "keysight.dsox3024t|B|OscilloscopeReadTimebaseScale-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.dsox3024t",
+    "negativeCases": [
+      "keysight.dsox3024t|B|OscilloscopeReadTimebaseScale-0-transport-failure"
+    ],
+    "operation": "OscilloscopeReadTimebaseScale"
   },
   {
-    "driver": "keysight.dsox3024t",
-    "operation": "OscilloscopeSetChannelScale",
     "cases": [
-      "keysight.dsox3024t|B|OscilloscopeSetChannelScale-0"
+      "keysight.dsox3024t|B|OscilloscopeSetChannelScale-0",
+      "keysight.dsox3024t|B|invalid-OscilloscopeSetChannelScale",
+      "keysight.dsox3024t|B|OscilloscopeSetChannelScale-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.dsox3024t",
+    "negativeCases": [
+      "keysight.dsox3024t|B|invalid-OscilloscopeSetChannelScale",
+      "keysight.dsox3024t|B|OscilloscopeSetChannelScale-0-transport-failure"
+    ],
+    "operation": "OscilloscopeSetChannelScale"
   },
   {
-    "driver": "keysight.dsox3024t",
-    "operation": "OscilloscopeSetChannelDisplay",
     "cases": [
       "keysight.dsox3024t|B|OscilloscopeSetChannelDisplay-0",
-      "keysight.dsox3024t|B|OscilloscopeSetChannelDisplay-1"
+      "keysight.dsox3024t|B|OscilloscopeSetChannelDisplay-1",
+      "keysight.dsox3024t|B|OscilloscopeSetChannelDisplay-0-transport-failure"
     ],
-    "disposition": "implemented"
-  },
-  {
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.dsox3024t",
-    "operation": "OscilloscopeSetChannelCoupling",
-    "cases": [
-      "keysight.dsox3024t|B|OscilloscopeSetChannelCoupling-0"
+    "negativeCases": [
+      "keysight.dsox3024t|B|OscilloscopeSetChannelDisplay-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "OscilloscopeSetChannelDisplay"
   },
   {
+    "cases": [
+      "keysight.dsox3024t|B|OscilloscopeSetChannelCoupling-0",
+      "keysight.dsox3024t|B|OscilloscopeSetChannelCoupling-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.dsox3024t",
-    "operation": "OscilloscopeSetTriggerSource",
-    "cases": [
-      "keysight.dsox3024t|B|OscilloscopeSetTriggerSource-0"
+    "negativeCases": [
+      "keysight.dsox3024t|B|OscilloscopeSetChannelCoupling-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "OscilloscopeSetChannelCoupling"
   },
   {
+    "cases": [
+      "keysight.dsox3024t|B|OscilloscopeSetTriggerSource-0",
+      "keysight.dsox3024t|B|OscilloscopeSetTriggerSource-0-transport-failure",
+      "keysight.dsox3024t|B|bound-source-CHAN3",
+      "keysight.dsox3024t|B|bound-source-CHAN2"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.dsox3024t",
-    "operation": "OscilloscopeSetTriggerLevel",
-    "cases": [
-      "keysight.dsox3024t|B|OscilloscopeSetTriggerLevel-0"
+    "negativeCases": [
+      "keysight.dsox3024t|B|OscilloscopeSetTriggerSource-0-transport-failure",
+      "keysight.dsox3024t|B|bound-source-CHAN2"
     ],
-    "disposition": "implemented"
+    "operation": "OscilloscopeSetTriggerSource"
   },
   {
+    "cases": [
+      "keysight.dsox3024t|B|OscilloscopeSetTriggerLevel-0",
+      "keysight.dsox3024t|B|OscilloscopeSetTriggerLevel-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.dsox3024t",
-    "operation": "OscilloscopeSetTriggerSlope",
-    "cases": [
-      "keysight.dsox3024t|B|OscilloscopeSetTriggerSlope-0"
+    "negativeCases": [
+      "keysight.dsox3024t|B|OscilloscopeSetTriggerLevel-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "OscilloscopeSetTriggerLevel"
   },
   {
+    "cases": [
+      "keysight.dsox3024t|B|OscilloscopeSetTriggerSlope-0",
+      "keysight.dsox3024t|B|OscilloscopeSetTriggerSlope-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.dsox3024t",
-    "operation": "OscilloscopeRun",
-    "cases": [
-      "keysight.dsox3024t|B|OscilloscopeRun-0"
+    "negativeCases": [
+      "keysight.dsox3024t|B|OscilloscopeSetTriggerSlope-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "OscilloscopeSetTriggerSlope"
   },
   {
+    "cases": [
+      "keysight.dsox3024t|B|OscilloscopeRun-0",
+      "keysight.dsox3024t|B|OscilloscopeRun-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.dsox3024t",
-    "operation": "OscilloscopeStop",
-    "cases": [
-      "keysight.dsox3024t|B|OscilloscopeStop-0"
+    "negativeCases": [
+      "keysight.dsox3024t|B|OscilloscopeRun-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "OscilloscopeRun"
   },
   {
+    "cases": [
+      "keysight.dsox3024t|B|OscilloscopeStop-0",
+      "keysight.dsox3024t|B|OscilloscopeStop-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.dsox3024t",
-    "operation": "OscilloscopeSingle",
-    "cases": [
-      "keysight.dsox3024t|B|OscilloscopeSingle-0"
+    "negativeCases": [
+      "keysight.dsox3024t|B|OscilloscopeStop-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "OscilloscopeStop"
   },
   {
+    "cases": [
+      "keysight.dsox3024t|B|OscilloscopeSingle-0",
+      "keysight.dsox3024t|B|OscilloscopeSingle-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.dsox3024t",
-    "operation": "OscilloscopeMeasureVpp",
-    "cases": [
-      "keysight.dsox3024t|B|OscilloscopeMeasureVpp-0"
+    "negativeCases": [
+      "keysight.dsox3024t|B|OscilloscopeSingle-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "OscilloscopeSingle"
   },
   {
+    "cases": [
+      "keysight.dsox3024t|B|OscilloscopeMeasureVpp-0",
+      "keysight.dsox3024t|B|OscilloscopeMeasureVpp-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.dsox3024t",
-    "operation": "OscilloscopeMeasureFrequency",
-    "cases": [
-      "keysight.dsox3024t|B|OscilloscopeMeasureFrequency-0"
+    "negativeCases": [
+      "keysight.dsox3024t|B|OscilloscopeMeasureVpp-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "OscilloscopeMeasureVpp"
   },
   {
+    "cases": [
+      "keysight.dsox3024t|B|OscilloscopeMeasureFrequency-0",
+      "keysight.dsox3024t|B|OscilloscopeMeasureFrequency-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.dsox3024t",
-    "operation": "OscilloscopeCaptureVoltageTrace",
-    "cases": [
-      "keysight.dsox3024t|B|OscilloscopeCaptureVoltageTrace-0"
+    "negativeCases": [
+      "keysight.dsox3024t|B|OscilloscopeMeasureFrequency-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "OscilloscopeMeasureFrequency"
   },
   {
+    "cases": [
+      "keysight.dsox3024t|B|OscilloscopeCaptureVoltageTrace-0",
+      "keysight.dsox3024t|B|OscilloscopeCaptureVoltageTrace-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.dsox3024t",
-    "operation": "QueryIdentity",
-    "cases": [
-      "keysight.dsox3024t|B|QueryIdentity-0"
+    "negativeCases": [
+      "keysight.dsox3024t|B|OscilloscopeCaptureVoltageTrace-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "OscilloscopeCaptureVoltageTrace"
   },
   {
+    "cases": [
+      "keysight.dsox3024t|B|QueryIdentity-0",
+      "keysight.dsox3024t|B|QueryIdentity-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.dsox3024t",
-    "operation": "Reset",
-    "cases": [
-      "keysight.dsox3024t|B|Reset-0"
+    "negativeCases": [
+      "keysight.dsox3024t|B|QueryIdentity-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "QueryIdentity"
   },
   {
+    "cases": [
+      "keysight.dsox3024t|B|Reset-0",
+      "keysight.dsox3024t|B|Reset-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.dsox3024t",
-    "operation": "Shutdown",
-    "cases": [
-      "keysight.dsox3024t|B|Shutdown-0"
+    "negativeCases": [
+      "keysight.dsox3024t|B|Reset-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "Reset"
   },
   {
+    "cases": [
+      "keysight.dsox3024t|B|Shutdown-0",
+      "keysight.dsox3024t|B|Shutdown-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.dsox3024t",
+    "negativeCases": [
+      "keysight.dsox3024t|B|Shutdown-0-transport-failure"
+    ],
+    "operation": "Shutdown"
+  },
+  {
+    "cases": [
+      "keysight.e36312a|B|DcPowerSupplySetVoltage-0",
+      "keysight.e36312a|B|invalid-DcPowerSupplySetVoltage",
+      "keysight.e36312a|B|DcPowerSupplySetVoltage-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.e36312a",
-    "operation": "DcPowerSupplyChannelCount",
-    "cases": [
-      "keysight.e36312a|B|DcPowerSupplyChannelCount-0"
+    "negativeCases": [
+      "keysight.e36312a|B|invalid-DcPowerSupplySetVoltage",
+      "keysight.e36312a|B|DcPowerSupplySetVoltage-0-transport-failure"
     ],
-    "disposition": "implemented-with-explicit-inventory-binding"
+    "operation": "DcPowerSupplySetVoltage"
   },
   {
-    "driver": "keysight.e36312a",
-    "operation": "DcPowerSupplySetVoltage",
     "cases": [
-      "keysight.e36312a|B|DcPowerSupplySetVoltage-0"
+      "keysight.e36312a|B|DcPowerSupplySetCurrentLimit-0",
+      "keysight.e36312a|B|DcPowerSupplySetCurrentLimit-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.e36312a",
+    "negativeCases": [
+      "keysight.e36312a|B|DcPowerSupplySetCurrentLimit-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplySetCurrentLimit"
   },
   {
-    "driver": "keysight.e36312a",
-    "operation": "DcPowerSupplySetCurrentLimit",
-    "cases": [
-      "keysight.e36312a|B|DcPowerSupplySetCurrentLimit-0"
-    ],
-    "disposition": "implemented"
-  },
-  {
-    "driver": "keysight.e36312a",
-    "operation": "DcPowerSupplyOutputEnable",
     "cases": [
       "keysight.e36312a|B|DcPowerSupplyOutputEnable-0",
-      "keysight.e36312a|B|DcPowerSupplyOutputEnable-1"
+      "keysight.e36312a|B|DcPowerSupplyOutputEnable-1",
+      "keysight.e36312a|B|DcPowerSupplyOutputEnable-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.e36312a",
+    "negativeCases": [
+      "keysight.e36312a|B|DcPowerSupplyOutputEnable-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyOutputEnable"
   },
   {
-    "driver": "keysight.e36312a",
-    "operation": "DcPowerSupplyOutputStateQuery",
     "cases": [
-      "keysight.e36312a|B|DcPowerSupplyOutputStateQuery-0"
+      "keysight.e36312a|B|DcPowerSupplyOutputStateQuery-0",
+      "keysight.e36312a|B|DcPowerSupplyOutputStateQuery-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.e36312a",
+    "negativeCases": [
+      "keysight.e36312a|B|DcPowerSupplyOutputStateQuery-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyOutputStateQuery"
   },
   {
-    "driver": "keysight.e36312a",
-    "operation": "DcPowerSupplyOvpLevel",
     "cases": [
-      "keysight.e36312a|B|DcPowerSupplyOvpLevel-0"
+      "keysight.e36312a|B|DcPowerSupplyOvpLevel-0",
+      "keysight.e36312a|B|DcPowerSupplyOvpLevel-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.e36312a",
+    "negativeCases": [
+      "keysight.e36312a|B|DcPowerSupplyOvpLevel-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyOvpLevel"
   },
   {
-    "driver": "keysight.e36312a",
-    "operation": "DcPowerSupplyOvpEnable",
     "cases": [
       "keysight.e36312a|B|DcPowerSupplyOvpEnable-0",
-      "keysight.e36312a|B|DcPowerSupplyOvpEnable-1"
+      "keysight.e36312a|B|DcPowerSupplyOvpEnable-1",
+      "keysight.e36312a|B|DcPowerSupplyOvpEnable-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.e36312a",
+    "negativeCases": [
+      "keysight.e36312a|B|DcPowerSupplyOvpEnable-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyOvpEnable"
   },
   {
-    "driver": "keysight.e36312a",
-    "operation": "DcPowerSupplyOvpQuery",
     "cases": [
-      "keysight.e36312a|B|DcPowerSupplyOvpQuery-0"
+      "keysight.e36312a|B|DcPowerSupplyOvpQuery-0",
+      "keysight.e36312a|B|DcPowerSupplyOvpQuery-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.e36312a",
+    "negativeCases": [
+      "keysight.e36312a|B|DcPowerSupplyOvpQuery-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyOvpQuery"
   },
   {
-    "driver": "keysight.e36312a",
-    "operation": "DcPowerSupplyReadVoltage",
     "cases": [
-      "keysight.e36312a|B|DcPowerSupplyReadVoltage-0"
+      "keysight.e36312a|B|DcPowerSupplyReadVoltage-0",
+      "keysight.e36312a|B|DcPowerSupplyReadVoltage-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.e36312a",
+    "negativeCases": [
+      "keysight.e36312a|B|DcPowerSupplyReadVoltage-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyReadVoltage"
   },
   {
-    "driver": "keysight.e36312a",
-    "operation": "DcPowerSupplyReadCurrent",
     "cases": [
-      "keysight.e36312a|B|DcPowerSupplyReadCurrent-0"
+      "keysight.e36312a|B|DcPowerSupplyReadCurrent-0",
+      "keysight.e36312a|B|DcPowerSupplyReadCurrent-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.e36312a",
+    "negativeCases": [
+      "keysight.e36312a|B|DcPowerSupplyReadCurrent-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyReadCurrent"
   },
   {
-    "driver": "keysight.e36312a",
-    "operation": "DcPowerSupplySetSenseMode",
     "cases": [
       "keysight.e36312a|B|DcPowerSupplySetSenseMode-0",
-      "keysight.e36312a|B|DcPowerSupplySetSenseMode-1"
+      "keysight.e36312a|B|DcPowerSupplySetSenseMode-1",
+      "keysight.e36312a|B|DcPowerSupplySetSenseMode-0-transport-failure"
     ],
-    "disposition": "implemented"
-  },
-  {
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.e36312a",
-    "operation": "QueryIdentity",
-    "cases": [
-      "keysight.e36312a|B|QueryIdentity-0"
+    "negativeCases": [
+      "keysight.e36312a|B|DcPowerSupplySetSenseMode-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "DcPowerSupplySetSenseMode"
   },
   {
+    "cases": [
+      "keysight.e36312a|B|QueryIdentity-0",
+      "keysight.e36312a|B|QueryIdentity-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.e36312a",
-    "operation": "Reset",
-    "cases": [
-      "keysight.e36312a|B|Reset-0"
+    "negativeCases": [
+      "keysight.e36312a|B|QueryIdentity-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "QueryIdentity"
   },
   {
+    "cases": [
+      "keysight.e36312a|B|Reset-0",
+      "keysight.e36312a|B|Reset-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.e36312a",
-    "operation": "Shutdown",
-    "cases": [
-      "keysight.e36312a|B|Shutdown-0"
+    "negativeCases": [
+      "keysight.e36312a|B|Reset-0-transport-failure"
     ],
-    "disposition": "implemented-with-explicit-inventory-binding"
+    "operation": "Reset"
   },
   {
-    "driver": "keysight.e3631a",
-    "operation": "DcPowerSupplyChannelCount",
     "cases": [
-      "keysight.e3631a|B|DcPowerSupplyChannelCount-0"
+      "keysight.e3631a|B|DcPowerSupplySetVoltage-0",
+      "keysight.e3631a|B|invalid-DcPowerSupplySetVoltage",
+      "keysight.e3631a|B|DcPowerSupplySetVoltage-0-transport-failure"
     ],
-    "disposition": "implemented-with-explicit-inventory-binding"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.e3631a",
+    "negativeCases": [
+      "keysight.e3631a|B|invalid-DcPowerSupplySetVoltage",
+      "keysight.e3631a|B|DcPowerSupplySetVoltage-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplySetVoltage"
   },
   {
-    "driver": "keysight.e3631a",
-    "operation": "DcPowerSupplySetVoltage",
     "cases": [
-      "keysight.e3631a|B|DcPowerSupplySetVoltage-0"
+      "keysight.e3631a|B|DcPowerSupplySetCurrentLimit-0",
+      "keysight.e3631a|B|DcPowerSupplySetCurrentLimit-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.e3631a",
+    "negativeCases": [
+      "keysight.e3631a|B|DcPowerSupplySetCurrentLimit-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplySetCurrentLimit"
   },
   {
-    "driver": "keysight.e3631a",
-    "operation": "DcPowerSupplySetCurrentLimit",
-    "cases": [
-      "keysight.e3631a|B|DcPowerSupplySetCurrentLimit-0"
-    ],
-    "disposition": "implemented"
-  },
-  {
-    "driver": "keysight.e3631a",
-    "operation": "DcPowerSupplyOutputEnable",
     "cases": [
       "keysight.e3631a|B|DcPowerSupplyOutputEnable-0",
-      "keysight.e3631a|B|DcPowerSupplyOutputEnable-1"
+      "keysight.e3631a|B|DcPowerSupplyOutputEnable-1",
+      "keysight.e3631a|B|DcPowerSupplyOutputEnable-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.e3631a",
+    "negativeCases": [
+      "keysight.e3631a|B|DcPowerSupplyOutputEnable-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyOutputEnable"
   },
   {
-    "driver": "keysight.e3631a",
-    "operation": "DcPowerSupplyOutputStateQuery",
     "cases": [
-      "keysight.e3631a|B|DcPowerSupplyOutputStateQuery-0"
+      "keysight.e3631a|B|DcPowerSupplyOutputStateQuery-0",
+      "keysight.e3631a|B|DcPowerSupplyOutputStateQuery-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.e3631a",
+    "negativeCases": [
+      "keysight.e3631a|B|DcPowerSupplyOutputStateQuery-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyOutputStateQuery"
   },
   {
-    "driver": "keysight.e3631a",
-    "operation": "DcPowerSupplyOvpLevel",
     "cases": [
-      "keysight.e3631a|B|DcPowerSupplyOvpLevel-0"
+      "keysight.e3631a|B|DcPowerSupplyOvpLevel-0",
+      "keysight.e3631a|B|DcPowerSupplyOvpLevel-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.e3631a",
+    "negativeCases": [
+      "keysight.e3631a|B|DcPowerSupplyOvpLevel-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyOvpLevel"
   },
   {
-    "driver": "keysight.e3631a",
-    "operation": "DcPowerSupplyOvpEnable",
     "cases": [
       "keysight.e3631a|B|DcPowerSupplyOvpEnable-0",
-      "keysight.e3631a|B|DcPowerSupplyOvpEnable-1"
+      "keysight.e3631a|B|DcPowerSupplyOvpEnable-1",
+      "keysight.e3631a|B|DcPowerSupplyOvpEnable-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.e3631a",
+    "negativeCases": [
+      "keysight.e3631a|B|DcPowerSupplyOvpEnable-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyOvpEnable"
   },
   {
-    "driver": "keysight.e3631a",
-    "operation": "DcPowerSupplyOvpQuery",
     "cases": [
-      "keysight.e3631a|B|DcPowerSupplyOvpQuery-0"
+      "keysight.e3631a|B|DcPowerSupplyOvpQuery-0",
+      "keysight.e3631a|B|DcPowerSupplyOvpQuery-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.e3631a",
+    "negativeCases": [
+      "keysight.e3631a|B|DcPowerSupplyOvpQuery-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyOvpQuery"
   },
   {
-    "driver": "keysight.e3631a",
-    "operation": "DcPowerSupplyReadVoltage",
     "cases": [
-      "keysight.e3631a|B|DcPowerSupplyReadVoltage-0"
+      "keysight.e3631a|B|DcPowerSupplyReadVoltage-0",
+      "keysight.e3631a|B|DcPowerSupplyReadVoltage-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.e3631a",
+    "negativeCases": [
+      "keysight.e3631a|B|DcPowerSupplyReadVoltage-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyReadVoltage"
   },
   {
-    "driver": "keysight.e3631a",
-    "operation": "DcPowerSupplyReadCurrent",
     "cases": [
-      "keysight.e3631a|B|DcPowerSupplyReadCurrent-0"
+      "keysight.e3631a|B|DcPowerSupplyReadCurrent-0",
+      "keysight.e3631a|B|DcPowerSupplyReadCurrent-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.e3631a",
+    "negativeCases": [
+      "keysight.e3631a|B|DcPowerSupplyReadCurrent-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyReadCurrent"
   },
   {
-    "driver": "keysight.e3631a",
-    "operation": "DcPowerSupplySetSenseMode",
     "cases": [
       "keysight.e3631a|B|DcPowerSupplySetSenseMode-0",
-      "keysight.e3631a|B|DcPowerSupplySetSenseMode-1"
+      "keysight.e3631a|B|DcPowerSupplySetSenseMode-1",
+      "keysight.e3631a|B|DcPowerSupplySetSenseMode-0-transport-failure"
     ],
-    "disposition": "implemented"
-  },
-  {
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.e3631a",
-    "operation": "QueryIdentity",
-    "cases": [
-      "keysight.e3631a|B|QueryIdentity-0"
+    "negativeCases": [
+      "keysight.e3631a|B|DcPowerSupplySetSenseMode-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "DcPowerSupplySetSenseMode"
   },
   {
+    "cases": [
+      "keysight.e3631a|B|QueryIdentity-0",
+      "keysight.e3631a|B|QueryIdentity-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.e3631a",
-    "operation": "Reset",
-    "cases": [
-      "keysight.e3631a|B|Reset-0"
+    "negativeCases": [
+      "keysight.e3631a|B|QueryIdentity-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "QueryIdentity"
   },
   {
+    "cases": [
+      "keysight.e3631a|B|Reset-0",
+      "keysight.e3631a|B|Reset-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.e3631a",
-    "operation": "Shutdown",
-    "cases": [
-      "keysight.e3631a|B|Shutdown-0"
+    "negativeCases": [
+      "keysight.e3631a|B|Reset-0-transport-failure"
     ],
-    "disposition": "implemented-with-explicit-inventory-binding"
+    "operation": "Reset"
   },
   {
-    "driver": "keysight.e3640a",
-    "operation": "DcPowerSupplyChannelCount",
     "cases": [
-      "keysight.e3640a|B|DcPowerSupplyChannelCount-0"
+      "keysight.e3640a|B|DcPowerSupplySetVoltage-0",
+      "keysight.e3640a|B|invalid-DcPowerSupplySetVoltage",
+      "keysight.e3640a|B|DcPowerSupplySetVoltage-0-transport-failure"
     ],
-    "disposition": "implemented-with-explicit-inventory-binding"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.e3640a",
+    "negativeCases": [
+      "keysight.e3640a|B|invalid-DcPowerSupplySetVoltage",
+      "keysight.e3640a|B|DcPowerSupplySetVoltage-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplySetVoltage"
   },
   {
-    "driver": "keysight.e3640a",
-    "operation": "DcPowerSupplySetVoltage",
     "cases": [
-      "keysight.e3640a|B|DcPowerSupplySetVoltage-0"
+      "keysight.e3640a|B|DcPowerSupplySetCurrentLimit-0",
+      "keysight.e3640a|B|DcPowerSupplySetCurrentLimit-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.e3640a",
+    "negativeCases": [
+      "keysight.e3640a|B|DcPowerSupplySetCurrentLimit-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplySetCurrentLimit"
   },
   {
-    "driver": "keysight.e3640a",
-    "operation": "DcPowerSupplySetCurrentLimit",
-    "cases": [
-      "keysight.e3640a|B|DcPowerSupplySetCurrentLimit-0"
-    ],
-    "disposition": "implemented"
-  },
-  {
-    "driver": "keysight.e3640a",
-    "operation": "DcPowerSupplyOutputEnable",
     "cases": [
       "keysight.e3640a|B|DcPowerSupplyOutputEnable-0",
-      "keysight.e3640a|B|DcPowerSupplyOutputEnable-1"
+      "keysight.e3640a|B|DcPowerSupplyOutputEnable-1",
+      "keysight.e3640a|B|DcPowerSupplyOutputEnable-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.e3640a",
+    "negativeCases": [
+      "keysight.e3640a|B|DcPowerSupplyOutputEnable-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyOutputEnable"
   },
   {
-    "driver": "keysight.e3640a",
-    "operation": "DcPowerSupplyOutputStateQuery",
     "cases": [
-      "keysight.e3640a|B|DcPowerSupplyOutputStateQuery-0"
+      "keysight.e3640a|B|DcPowerSupplyOutputStateQuery-0",
+      "keysight.e3640a|B|DcPowerSupplyOutputStateQuery-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.e3640a",
+    "negativeCases": [
+      "keysight.e3640a|B|DcPowerSupplyOutputStateQuery-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyOutputStateQuery"
   },
   {
-    "driver": "keysight.e3640a",
-    "operation": "DcPowerSupplyOvpLevel",
     "cases": [
-      "keysight.e3640a|B|DcPowerSupplyOvpLevel-0"
+      "keysight.e3640a|B|DcPowerSupplyOvpLevel-0",
+      "keysight.e3640a|B|DcPowerSupplyOvpLevel-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.e3640a",
+    "negativeCases": [
+      "keysight.e3640a|B|DcPowerSupplyOvpLevel-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyOvpLevel"
   },
   {
-    "driver": "keysight.e3640a",
-    "operation": "DcPowerSupplyOvpEnable",
     "cases": [
       "keysight.e3640a|B|DcPowerSupplyOvpEnable-0",
-      "keysight.e3640a|B|DcPowerSupplyOvpEnable-1"
+      "keysight.e3640a|B|DcPowerSupplyOvpEnable-1",
+      "keysight.e3640a|B|DcPowerSupplyOvpEnable-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.e3640a",
+    "negativeCases": [
+      "keysight.e3640a|B|DcPowerSupplyOvpEnable-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyOvpEnable"
   },
   {
-    "driver": "keysight.e3640a",
-    "operation": "DcPowerSupplyOvpQuery",
     "cases": [
-      "keysight.e3640a|B|DcPowerSupplyOvpQuery-0"
+      "keysight.e3640a|B|DcPowerSupplyOvpQuery-0",
+      "keysight.e3640a|B|DcPowerSupplyOvpQuery-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.e3640a",
+    "negativeCases": [
+      "keysight.e3640a|B|DcPowerSupplyOvpQuery-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyOvpQuery"
   },
   {
-    "driver": "keysight.e3640a",
-    "operation": "DcPowerSupplyReadVoltage",
     "cases": [
-      "keysight.e3640a|B|DcPowerSupplyReadVoltage-0"
+      "keysight.e3640a|B|DcPowerSupplyReadVoltage-0",
+      "keysight.e3640a|B|DcPowerSupplyReadVoltage-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.e3640a",
+    "negativeCases": [
+      "keysight.e3640a|B|DcPowerSupplyReadVoltage-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyReadVoltage"
   },
   {
-    "driver": "keysight.e3640a",
-    "operation": "DcPowerSupplyReadCurrent",
     "cases": [
-      "keysight.e3640a|B|DcPowerSupplyReadCurrent-0"
+      "keysight.e3640a|B|DcPowerSupplyReadCurrent-0",
+      "keysight.e3640a|B|DcPowerSupplyReadCurrent-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.e3640a",
+    "negativeCases": [
+      "keysight.e3640a|B|DcPowerSupplyReadCurrent-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyReadCurrent"
   },
   {
-    "driver": "keysight.e3640a",
-    "operation": "DcPowerSupplySetSenseMode",
     "cases": [
       "keysight.e3640a|B|DcPowerSupplySetSenseMode-0",
-      "keysight.e3640a|B|DcPowerSupplySetSenseMode-1"
+      "keysight.e3640a|B|DcPowerSupplySetSenseMode-1",
+      "keysight.e3640a|B|DcPowerSupplySetSenseMode-0-transport-failure"
     ],
-    "disposition": "implemented"
-  },
-  {
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.e3640a",
-    "operation": "QueryIdentity",
-    "cases": [
-      "keysight.e3640a|B|QueryIdentity-0"
+    "negativeCases": [
+      "keysight.e3640a|B|DcPowerSupplySetSenseMode-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "DcPowerSupplySetSenseMode"
   },
   {
+    "cases": [
+      "keysight.e3640a|B|QueryIdentity-0",
+      "keysight.e3640a|B|QueryIdentity-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.e3640a",
-    "operation": "Reset",
-    "cases": [
-      "keysight.e3640a|B|Reset-0"
+    "negativeCases": [
+      "keysight.e3640a|B|QueryIdentity-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "QueryIdentity"
   },
   {
+    "cases": [
+      "keysight.e3640a|B|Reset-0",
+      "keysight.e3640a|B|Reset-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.e3640a",
-    "operation": "Shutdown",
-    "cases": [
-      "keysight.e3640a|B|Shutdown-0"
+    "negativeCases": [
+      "keysight.e3640a|B|Reset-0-transport-failure"
     ],
-    "disposition": "implemented-with-explicit-inventory-binding"
+    "operation": "Reset"
   },
   {
-    "driver": "keysight.n6705c",
-    "operation": "DcPowerSupplyChannelCount",
     "cases": [
-      "keysight.n6705c|B|DcPowerSupplyChannelCount-0"
+      "keysight.n6705c|B|DcPowerSupplySetVoltage-0",
+      "keysight.n6705c|B|invalid-DcPowerSupplySetVoltage",
+      "keysight.n6705c|B|DcPowerSupplySetVoltage-0-transport-failure"
     ],
-    "disposition": "implemented-with-explicit-inventory-binding"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n6705c",
+    "negativeCases": [
+      "keysight.n6705c|B|invalid-DcPowerSupplySetVoltage",
+      "keysight.n6705c|B|DcPowerSupplySetVoltage-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplySetVoltage"
   },
   {
-    "driver": "keysight.n6705c",
-    "operation": "DcPowerSupplySetVoltage",
     "cases": [
-      "keysight.n6705c|B|DcPowerSupplySetVoltage-0"
+      "keysight.n6705c|B|DcPowerSupplySetCurrentLimit-0",
+      "keysight.n6705c|B|DcPowerSupplySetCurrentLimit-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n6705c",
+    "negativeCases": [
+      "keysight.n6705c|B|DcPowerSupplySetCurrentLimit-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplySetCurrentLimit"
   },
   {
-    "driver": "keysight.n6705c",
-    "operation": "DcPowerSupplySetCurrentLimit",
-    "cases": [
-      "keysight.n6705c|B|DcPowerSupplySetCurrentLimit-0"
-    ],
-    "disposition": "implemented"
-  },
-  {
-    "driver": "keysight.n6705c",
-    "operation": "DcPowerSupplyOutputEnable",
     "cases": [
       "keysight.n6705c|B|DcPowerSupplyOutputEnable-0",
-      "keysight.n6705c|B|DcPowerSupplyOutputEnable-1"
+      "keysight.n6705c|B|DcPowerSupplyOutputEnable-1",
+      "keysight.n6705c|B|DcPowerSupplyOutputEnable-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n6705c",
+    "negativeCases": [
+      "keysight.n6705c|B|DcPowerSupplyOutputEnable-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyOutputEnable"
   },
   {
-    "driver": "keysight.n6705c",
-    "operation": "DcPowerSupplyOutputStateQuery",
     "cases": [
-      "keysight.n6705c|B|DcPowerSupplyOutputStateQuery-0"
+      "keysight.n6705c|B|DcPowerSupplyOutputStateQuery-0",
+      "keysight.n6705c|B|DcPowerSupplyOutputStateQuery-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n6705c",
+    "negativeCases": [
+      "keysight.n6705c|B|DcPowerSupplyOutputStateQuery-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyOutputStateQuery"
   },
   {
-    "driver": "keysight.n6705c",
-    "operation": "DcPowerSupplyOvpLevel",
     "cases": [
-      "keysight.n6705c|B|DcPowerSupplyOvpLevel-0"
+      "keysight.n6705c|B|DcPowerSupplyOvpLevel-0",
+      "keysight.n6705c|B|DcPowerSupplyOvpLevel-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n6705c",
+    "negativeCases": [
+      "keysight.n6705c|B|DcPowerSupplyOvpLevel-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyOvpLevel"
   },
   {
-    "driver": "keysight.n6705c",
-    "operation": "DcPowerSupplyOvpEnable",
     "cases": [
       "keysight.n6705c|B|DcPowerSupplyOvpEnable-0",
-      "keysight.n6705c|B|DcPowerSupplyOvpEnable-1"
+      "keysight.n6705c|B|DcPowerSupplyOvpEnable-1",
+      "keysight.n6705c|B|DcPowerSupplyOvpEnable-0-transport-failure"
     ],
-    "disposition": "implemented"
-  },
-  {
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.n6705c",
-    "operation": "DcPowerSupplyOvpQuery",
-    "cases": [
-      "keysight.n6705c|B|DcPowerSupplyOvpQuery-0"
+    "negativeCases": [
+      "keysight.n6705c|B|DcPowerSupplyOvpEnable-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "DcPowerSupplyOvpEnable"
   },
   {
+    "cases": [
+      "keysight.n6705c|B|DcPowerSupplyOvpQuery-0",
+      "keysight.n6705c|B|DcPowerSupplyOvpQuery-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.n6705c",
-    "operation": "DcPowerSupplyReadVoltage",
-    "cases": [
-      "keysight.n6705c|B|DcPowerSupplyReadVoltage-0"
+    "negativeCases": [
+      "keysight.n6705c|B|DcPowerSupplyOvpQuery-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "DcPowerSupplyOvpQuery"
   },
   {
+    "cases": [
+      "keysight.n6705c|B|DcPowerSupplyReadVoltage-0",
+      "keysight.n6705c|B|DcPowerSupplyReadVoltage-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.n6705c",
-    "operation": "DcPowerSupplyReadCurrent",
-    "cases": [
-      "keysight.n6705c|B|DcPowerSupplyReadCurrent-0"
+    "negativeCases": [
+      "keysight.n6705c|B|DcPowerSupplyReadVoltage-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "DcPowerSupplyReadVoltage"
   },
   {
+    "cases": [
+      "keysight.n6705c|B|DcPowerSupplyReadCurrent-0",
+      "keysight.n6705c|B|DcPowerSupplyReadCurrent-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.n6705c",
-    "operation": "DcPowerSupplySetSenseMode",
-    "cases": [
-      "keysight.n6705c|B|DcPowerSupplySetSenseMode-0",
-      "keysight.n6705c|B|DcPowerSupplySetSenseMode-1"
+    "negativeCases": [
+      "keysight.n6705c|B|DcPowerSupplyReadCurrent-0-transport-failure"
     ],
-    "disposition": "explicit-source-unsupported"
+    "operation": "DcPowerSupplyReadCurrent"
   },
   {
+    "cases": [
+      "keysight.n6705c|B|QueryIdentity-0",
+      "keysight.n6705c|B|QueryIdentity-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.n6705c",
-    "operation": "QueryIdentity",
-    "cases": [
-      "keysight.n6705c|B|QueryIdentity-0"
+    "negativeCases": [
+      "keysight.n6705c|B|QueryIdentity-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "QueryIdentity"
   },
   {
+    "cases": [
+      "keysight.n6705c|B|Reset-0",
+      "keysight.n6705c|B|Reset-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.n6705c",
-    "operation": "Reset",
-    "cases": [
-      "keysight.n6705c|B|Reset-0"
+    "negativeCases": [
+      "keysight.n6705c|B|Reset-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "Reset"
   },
   {
-    "driver": "keysight.n6705c",
-    "operation": "Shutdown",
     "cases": [
-      "keysight.n6705c|B|Shutdown-0"
+      "keysight.n9010b|B|SpectrumAnalyzerSetCenterFrequency-0",
+      "keysight.n9010b|B|SpectrumAnalyzerSetCenterFrequency-0-transport-failure"
     ],
-    "disposition": "implemented-with-explicit-inventory-binding"
-  },
-  {
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.n9010b",
-    "operation": "SpectrumAnalyzerSetCenterFrequency",
-    "cases": [
-      "keysight.n9010b|B|SpectrumAnalyzerSetCenterFrequency-0"
+    "negativeCases": [
+      "keysight.n9010b|B|SpectrumAnalyzerSetCenterFrequency-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "SpectrumAnalyzerSetCenterFrequency"
   },
   {
-    "driver": "keysight.n9010b",
-    "operation": "SpectrumAnalyzerSetSpan",
     "cases": [
-      "keysight.n9010b|B|SpectrumAnalyzerSetSpan-0"
+      "keysight.n9010b|B|SpectrumAnalyzerSetSpan-0",
+      "keysight.n9010b|B|SpectrumAnalyzerSetSpan-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n9010b",
+    "negativeCases": [
+      "keysight.n9010b|B|SpectrumAnalyzerSetSpan-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSetSpan"
   },
   {
-    "driver": "keysight.n9010b",
-    "operation": "SpectrumAnalyzerSetRbw",
     "cases": [
-      "keysight.n9010b|B|SpectrumAnalyzerSetRbw-0"
+      "keysight.n9010b|B|SpectrumAnalyzerSetRbw-0",
+      "keysight.n9010b|B|SpectrumAnalyzerSetRbw-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n9010b",
+    "negativeCases": [
+      "keysight.n9010b|B|SpectrumAnalyzerSetRbw-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSetRbw"
   },
   {
-    "driver": "keysight.n9010b",
-    "operation": "SpectrumAnalyzerSetVbw",
     "cases": [
-      "keysight.n9010b|B|SpectrumAnalyzerSetVbw-0"
+      "keysight.n9010b|B|SpectrumAnalyzerSetVbw-0",
+      "keysight.n9010b|B|SpectrumAnalyzerSetVbw-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n9010b",
+    "negativeCases": [
+      "keysight.n9010b|B|SpectrumAnalyzerSetVbw-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSetVbw"
   },
   {
-    "driver": "keysight.n9010b",
-    "operation": "SpectrumAnalyzerSetRefLevel",
     "cases": [
-      "keysight.n9010b|B|SpectrumAnalyzerSetRefLevel-0"
+      "keysight.n9010b|B|SpectrumAnalyzerSetRefLevel-0",
+      "keysight.n9010b|B|SpectrumAnalyzerSetRefLevel-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n9010b",
+    "negativeCases": [
+      "keysight.n9010b|B|SpectrumAnalyzerSetRefLevel-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSetRefLevel"
   },
   {
-    "driver": "keysight.n9010b",
-    "operation": "SpectrumAnalyzerFetchTraceAscii",
     "cases": [
-      "keysight.n9010b|B|SpectrumAnalyzerFetchTraceAscii-0"
+      "keysight.n9010b|B|SpectrumAnalyzerFetchTraceAscii-0",
+      "keysight.n9010b|B|SpectrumAnalyzerFetchTraceAscii-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n9010b",
+    "negativeCases": [
+      "keysight.n9010b|B|SpectrumAnalyzerFetchTraceAscii-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerFetchTraceAscii"
   },
   {
-    "driver": "keysight.n9010b",
-    "operation": "SpectrumAnalyzerMarkerPeak",
     "cases": [
-      "keysight.n9010b|B|SpectrumAnalyzerMarkerPeak-0"
+      "keysight.n9010b|B|SpectrumAnalyzerMarkerPeak-0",
+      "keysight.n9010b|B|SpectrumAnalyzerMarkerPeak-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n9010b",
+    "negativeCases": [
+      "keysight.n9010b|B|SpectrumAnalyzerMarkerPeak-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerMarkerPeak"
   },
   {
-    "driver": "keysight.n9010b",
-    "operation": "SpectrumAnalyzerMarkerX",
     "cases": [
-      "keysight.n9010b|B|SpectrumAnalyzerMarkerX-0"
+      "keysight.n9010b|B|SpectrumAnalyzerMarkerX-0",
+      "keysight.n9010b|B|SpectrumAnalyzerMarkerX-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n9010b",
+    "negativeCases": [
+      "keysight.n9010b|B|SpectrumAnalyzerMarkerX-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerMarkerX"
   },
   {
-    "driver": "keysight.n9010b",
-    "operation": "SpectrumAnalyzerMarkerY",
     "cases": [
-      "keysight.n9010b|B|SpectrumAnalyzerMarkerY-0"
+      "keysight.n9010b|B|SpectrumAnalyzerMarkerY-0",
+      "keysight.n9010b|B|SpectrumAnalyzerMarkerY-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n9010b",
+    "negativeCases": [
+      "keysight.n9010b|B|SpectrumAnalyzerMarkerY-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerMarkerY"
   },
   {
-    "driver": "keysight.n9010b",
-    "operation": "SpectrumAnalyzerSweepContinuous",
     "cases": [
       "keysight.n9010b|B|SpectrumAnalyzerSweepContinuous-0",
-      "keysight.n9010b|B|SpectrumAnalyzerSweepContinuous-1"
+      "keysight.n9010b|B|SpectrumAnalyzerSweepContinuous-1",
+      "keysight.n9010b|B|SpectrumAnalyzerSweepContinuous-0-transport-failure"
     ],
-    "disposition": "implemented"
-  },
-  {
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.n9010b",
-    "operation": "SpectrumAnalyzerSingleSweep",
-    "cases": [
-      "keysight.n9010b|B|SpectrumAnalyzerSingleSweep-0"
+    "negativeCases": [
+      "keysight.n9010b|B|SpectrumAnalyzerSweepContinuous-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "SpectrumAnalyzerSweepContinuous"
   },
   {
+    "cases": [
+      "keysight.n9010b|B|SpectrumAnalyzerSingleSweep-0",
+      "keysight.n9010b|B|SpectrumAnalyzerSingleSweep-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.n9010b",
-    "operation": "SpectrumAnalyzerWaitOpc",
-    "cases": [
-      "keysight.n9010b|B|SpectrumAnalyzerWaitOpc-0"
+    "negativeCases": [
+      "keysight.n9010b|B|SpectrumAnalyzerSingleSweep-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "SpectrumAnalyzerSingleSweep"
   },
   {
+    "cases": [
+      "keysight.n9010b|B|SpectrumAnalyzerWaitOpc-0",
+      "keysight.n9010b|B|SpectrumAnalyzerWaitOpc-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.n9010b",
-    "operation": "QueryIdentity",
-    "cases": [
-      "keysight.n9010b|B|QueryIdentity-0"
+    "negativeCases": [
+      "keysight.n9010b|B|SpectrumAnalyzerWaitOpc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "SpectrumAnalyzerWaitOpc"
   },
   {
+    "cases": [
+      "keysight.n9010b|B|QueryIdentity-0",
+      "keysight.n9010b|B|QueryIdentity-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.n9010b",
-    "operation": "Reset",
-    "cases": [
-      "keysight.n9010b|B|Reset-0"
+    "negativeCases": [
+      "keysight.n9010b|B|QueryIdentity-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "QueryIdentity"
   },
   {
+    "cases": [
+      "keysight.n9010b|B|Reset-0",
+      "keysight.n9010b|B|Reset-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.n9010b",
-    "operation": "Shutdown",
-    "cases": [
-      "keysight.n9010b|B|Shutdown-0"
+    "negativeCases": [
+      "keysight.n9010b|B|Reset-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "Reset"
   },
   {
-    "driver": "keysight.n9020b",
-    "operation": "SpectrumAnalyzerSetCenterFrequency",
     "cases": [
-      "keysight.n9020b|B|SpectrumAnalyzerSetCenterFrequency-0"
+      "keysight.n9010b|B|Shutdown-0",
+      "keysight.n9010b|B|Shutdown-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n9010b",
+    "negativeCases": [
+      "keysight.n9010b|B|Shutdown-0-transport-failure"
+    ],
+    "operation": "Shutdown"
   },
   {
-    "driver": "keysight.n9020b",
-    "operation": "SpectrumAnalyzerSetSpan",
     "cases": [
-      "keysight.n9020b|B|SpectrumAnalyzerSetSpan-0"
+      "keysight.n9020b|B|SpectrumAnalyzerSetCenterFrequency-0",
+      "keysight.n9020b|B|SpectrumAnalyzerSetCenterFrequency-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n9020b",
+    "negativeCases": [
+      "keysight.n9020b|B|SpectrumAnalyzerSetCenterFrequency-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSetCenterFrequency"
   },
   {
-    "driver": "keysight.n9020b",
-    "operation": "SpectrumAnalyzerSetRbw",
     "cases": [
-      "keysight.n9020b|B|SpectrumAnalyzerSetRbw-0"
+      "keysight.n9020b|B|SpectrumAnalyzerSetSpan-0",
+      "keysight.n9020b|B|SpectrumAnalyzerSetSpan-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n9020b",
+    "negativeCases": [
+      "keysight.n9020b|B|SpectrumAnalyzerSetSpan-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSetSpan"
   },
   {
-    "driver": "keysight.n9020b",
-    "operation": "SpectrumAnalyzerSetVbw",
     "cases": [
-      "keysight.n9020b|B|SpectrumAnalyzerSetVbw-0"
+      "keysight.n9020b|B|SpectrumAnalyzerSetRbw-0",
+      "keysight.n9020b|B|SpectrumAnalyzerSetRbw-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n9020b",
+    "negativeCases": [
+      "keysight.n9020b|B|SpectrumAnalyzerSetRbw-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSetRbw"
   },
   {
-    "driver": "keysight.n9020b",
-    "operation": "SpectrumAnalyzerSetRefLevel",
     "cases": [
-      "keysight.n9020b|B|SpectrumAnalyzerSetRefLevel-0"
+      "keysight.n9020b|B|SpectrumAnalyzerSetVbw-0",
+      "keysight.n9020b|B|SpectrumAnalyzerSetVbw-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n9020b",
+    "negativeCases": [
+      "keysight.n9020b|B|SpectrumAnalyzerSetVbw-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSetVbw"
   },
   {
-    "driver": "keysight.n9020b",
-    "operation": "SpectrumAnalyzerFetchTraceAscii",
     "cases": [
-      "keysight.n9020b|B|SpectrumAnalyzerFetchTraceAscii-0"
+      "keysight.n9020b|B|SpectrumAnalyzerSetRefLevel-0",
+      "keysight.n9020b|B|SpectrumAnalyzerSetRefLevel-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n9020b",
+    "negativeCases": [
+      "keysight.n9020b|B|SpectrumAnalyzerSetRefLevel-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSetRefLevel"
   },
   {
-    "driver": "keysight.n9020b",
-    "operation": "SpectrumAnalyzerMarkerPeak",
     "cases": [
-      "keysight.n9020b|B|SpectrumAnalyzerMarkerPeak-0"
+      "keysight.n9020b|B|SpectrumAnalyzerFetchTraceAscii-0",
+      "keysight.n9020b|B|SpectrumAnalyzerFetchTraceAscii-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n9020b",
+    "negativeCases": [
+      "keysight.n9020b|B|SpectrumAnalyzerFetchTraceAscii-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerFetchTraceAscii"
   },
   {
-    "driver": "keysight.n9020b",
-    "operation": "SpectrumAnalyzerMarkerX",
     "cases": [
-      "keysight.n9020b|B|SpectrumAnalyzerMarkerX-0"
+      "keysight.n9020b|B|SpectrumAnalyzerMarkerPeak-0",
+      "keysight.n9020b|B|SpectrumAnalyzerMarkerPeak-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n9020b",
+    "negativeCases": [
+      "keysight.n9020b|B|SpectrumAnalyzerMarkerPeak-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerMarkerPeak"
   },
   {
-    "driver": "keysight.n9020b",
-    "operation": "SpectrumAnalyzerMarkerY",
     "cases": [
-      "keysight.n9020b|B|SpectrumAnalyzerMarkerY-0"
+      "keysight.n9020b|B|SpectrumAnalyzerMarkerX-0",
+      "keysight.n9020b|B|SpectrumAnalyzerMarkerX-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n9020b",
+    "negativeCases": [
+      "keysight.n9020b|B|SpectrumAnalyzerMarkerX-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerMarkerX"
   },
   {
+    "cases": [
+      "keysight.n9020b|B|SpectrumAnalyzerMarkerY-0",
+      "keysight.n9020b|B|SpectrumAnalyzerMarkerY-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.n9020b",
-    "operation": "SpectrumAnalyzerSweepContinuous",
+    "negativeCases": [
+      "keysight.n9020b|B|SpectrumAnalyzerMarkerY-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerMarkerY"
+  },
+  {
     "cases": [
       "keysight.n9020b|B|SpectrumAnalyzerSweepContinuous-0",
-      "keysight.n9020b|B|SpectrumAnalyzerSweepContinuous-1"
+      "keysight.n9020b|B|SpectrumAnalyzerSweepContinuous-1",
+      "keysight.n9020b|B|SpectrumAnalyzerSweepContinuous-0-transport-failure"
     ],
-    "disposition": "implemented"
-  },
-  {
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.n9020b",
-    "operation": "SpectrumAnalyzerSingleSweep",
-    "cases": [
-      "keysight.n9020b|B|SpectrumAnalyzerSingleSweep-0"
+    "negativeCases": [
+      "keysight.n9020b|B|SpectrumAnalyzerSweepContinuous-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "SpectrumAnalyzerSweepContinuous"
   },
   {
+    "cases": [
+      "keysight.n9020b|B|SpectrumAnalyzerSingleSweep-0",
+      "keysight.n9020b|B|SpectrumAnalyzerSingleSweep-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.n9020b",
-    "operation": "SpectrumAnalyzerWaitOpc",
-    "cases": [
-      "keysight.n9020b|B|SpectrumAnalyzerWaitOpc-0"
+    "negativeCases": [
+      "keysight.n9020b|B|SpectrumAnalyzerSingleSweep-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "SpectrumAnalyzerSingleSweep"
   },
   {
+    "cases": [
+      "keysight.n9020b|B|SpectrumAnalyzerWaitOpc-0",
+      "keysight.n9020b|B|SpectrumAnalyzerWaitOpc-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.n9020b",
-    "operation": "QueryIdentity",
-    "cases": [
-      "keysight.n9020b|B|QueryIdentity-0"
+    "negativeCases": [
+      "keysight.n9020b|B|SpectrumAnalyzerWaitOpc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "SpectrumAnalyzerWaitOpc"
   },
   {
+    "cases": [
+      "keysight.n9020b|B|QueryIdentity-0",
+      "keysight.n9020b|B|QueryIdentity-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.n9020b",
-    "operation": "Reset",
-    "cases": [
-      "keysight.n9020b|B|Reset-0"
+    "negativeCases": [
+      "keysight.n9020b|B|QueryIdentity-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "QueryIdentity"
   },
   {
+    "cases": [
+      "keysight.n9020b|B|Reset-0",
+      "keysight.n9020b|B|Reset-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.n9020b",
-    "operation": "Shutdown",
-    "cases": [
-      "keysight.n9020b|B|Shutdown-0"
+    "negativeCases": [
+      "keysight.n9020b|B|Reset-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "Reset"
   },
   {
-    "driver": "keysight.n9030b",
-    "operation": "SpectrumAnalyzerSetCenterFrequency",
     "cases": [
-      "keysight.n9030b|B|SpectrumAnalyzerSetCenterFrequency-0"
+      "keysight.n9020b|B|Shutdown-0",
+      "keysight.n9020b|B|Shutdown-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n9020b",
+    "negativeCases": [
+      "keysight.n9020b|B|Shutdown-0-transport-failure"
+    ],
+    "operation": "Shutdown"
   },
   {
-    "driver": "keysight.n9030b",
-    "operation": "SpectrumAnalyzerSetSpan",
     "cases": [
-      "keysight.n9030b|B|SpectrumAnalyzerSetSpan-0"
+      "keysight.n9030b|B|SpectrumAnalyzerSetCenterFrequency-0",
+      "keysight.n9030b|B|SpectrumAnalyzerSetCenterFrequency-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n9030b",
+    "negativeCases": [
+      "keysight.n9030b|B|SpectrumAnalyzerSetCenterFrequency-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSetCenterFrequency"
   },
   {
-    "driver": "keysight.n9030b",
-    "operation": "SpectrumAnalyzerSetRbw",
     "cases": [
-      "keysight.n9030b|B|SpectrumAnalyzerSetRbw-0"
+      "keysight.n9030b|B|SpectrumAnalyzerSetSpan-0",
+      "keysight.n9030b|B|SpectrumAnalyzerSetSpan-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n9030b",
+    "negativeCases": [
+      "keysight.n9030b|B|SpectrumAnalyzerSetSpan-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSetSpan"
   },
   {
-    "driver": "keysight.n9030b",
-    "operation": "SpectrumAnalyzerSetVbw",
     "cases": [
-      "keysight.n9030b|B|SpectrumAnalyzerSetVbw-0"
+      "keysight.n9030b|B|SpectrumAnalyzerSetRbw-0",
+      "keysight.n9030b|B|SpectrumAnalyzerSetRbw-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n9030b",
+    "negativeCases": [
+      "keysight.n9030b|B|SpectrumAnalyzerSetRbw-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSetRbw"
   },
   {
-    "driver": "keysight.n9030b",
-    "operation": "SpectrumAnalyzerSetRefLevel",
     "cases": [
-      "keysight.n9030b|B|SpectrumAnalyzerSetRefLevel-0"
+      "keysight.n9030b|B|SpectrumAnalyzerSetVbw-0",
+      "keysight.n9030b|B|SpectrumAnalyzerSetVbw-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n9030b",
+    "negativeCases": [
+      "keysight.n9030b|B|SpectrumAnalyzerSetVbw-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSetVbw"
   },
   {
-    "driver": "keysight.n9030b",
-    "operation": "SpectrumAnalyzerFetchTraceAscii",
     "cases": [
-      "keysight.n9030b|B|SpectrumAnalyzerFetchTraceAscii-0"
+      "keysight.n9030b|B|SpectrumAnalyzerSetRefLevel-0",
+      "keysight.n9030b|B|SpectrumAnalyzerSetRefLevel-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n9030b",
+    "negativeCases": [
+      "keysight.n9030b|B|SpectrumAnalyzerSetRefLevel-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSetRefLevel"
   },
   {
-    "driver": "keysight.n9030b",
-    "operation": "SpectrumAnalyzerMarkerPeak",
     "cases": [
-      "keysight.n9030b|B|SpectrumAnalyzerMarkerPeak-0"
+      "keysight.n9030b|B|SpectrumAnalyzerFetchTraceAscii-0",
+      "keysight.n9030b|B|SpectrumAnalyzerFetchTraceAscii-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n9030b",
+    "negativeCases": [
+      "keysight.n9030b|B|SpectrumAnalyzerFetchTraceAscii-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerFetchTraceAscii"
   },
   {
-    "driver": "keysight.n9030b",
-    "operation": "SpectrumAnalyzerMarkerX",
     "cases": [
-      "keysight.n9030b|B|SpectrumAnalyzerMarkerX-0"
+      "keysight.n9030b|B|SpectrumAnalyzerMarkerPeak-0",
+      "keysight.n9030b|B|SpectrumAnalyzerMarkerPeak-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n9030b",
+    "negativeCases": [
+      "keysight.n9030b|B|SpectrumAnalyzerMarkerPeak-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerMarkerPeak"
   },
   {
-    "driver": "keysight.n9030b",
-    "operation": "SpectrumAnalyzerMarkerY",
     "cases": [
-      "keysight.n9030b|B|SpectrumAnalyzerMarkerY-0"
+      "keysight.n9030b|B|SpectrumAnalyzerMarkerX-0",
+      "keysight.n9030b|B|SpectrumAnalyzerMarkerX-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n9030b",
+    "negativeCases": [
+      "keysight.n9030b|B|SpectrumAnalyzerMarkerX-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerMarkerX"
   },
   {
+    "cases": [
+      "keysight.n9030b|B|SpectrumAnalyzerMarkerY-0",
+      "keysight.n9030b|B|SpectrumAnalyzerMarkerY-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.n9030b",
-    "operation": "SpectrumAnalyzerSweepContinuous",
+    "negativeCases": [
+      "keysight.n9030b|B|SpectrumAnalyzerMarkerY-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerMarkerY"
+  },
+  {
     "cases": [
       "keysight.n9030b|B|SpectrumAnalyzerSweepContinuous-0",
-      "keysight.n9030b|B|SpectrumAnalyzerSweepContinuous-1"
+      "keysight.n9030b|B|SpectrumAnalyzerSweepContinuous-1",
+      "keysight.n9030b|B|SpectrumAnalyzerSweepContinuous-0-transport-failure"
     ],
-    "disposition": "implemented"
-  },
-  {
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.n9030b",
-    "operation": "SpectrumAnalyzerSingleSweep",
-    "cases": [
-      "keysight.n9030b|B|SpectrumAnalyzerSingleSweep-0"
+    "negativeCases": [
+      "keysight.n9030b|B|SpectrumAnalyzerSweepContinuous-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "SpectrumAnalyzerSweepContinuous"
   },
   {
+    "cases": [
+      "keysight.n9030b|B|SpectrumAnalyzerSingleSweep-0",
+      "keysight.n9030b|B|SpectrumAnalyzerSingleSweep-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.n9030b",
-    "operation": "SpectrumAnalyzerWaitOpc",
-    "cases": [
-      "keysight.n9030b|B|SpectrumAnalyzerWaitOpc-0"
+    "negativeCases": [
+      "keysight.n9030b|B|SpectrumAnalyzerSingleSweep-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "SpectrumAnalyzerSingleSweep"
   },
   {
+    "cases": [
+      "keysight.n9030b|B|SpectrumAnalyzerWaitOpc-0",
+      "keysight.n9030b|B|SpectrumAnalyzerWaitOpc-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.n9030b",
-    "operation": "QueryIdentity",
-    "cases": [
-      "keysight.n9030b|B|QueryIdentity-0"
+    "negativeCases": [
+      "keysight.n9030b|B|SpectrumAnalyzerWaitOpc-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "SpectrumAnalyzerWaitOpc"
   },
   {
+    "cases": [
+      "keysight.n9030b|B|QueryIdentity-0",
+      "keysight.n9030b|B|QueryIdentity-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.n9030b",
-    "operation": "Reset",
-    "cases": [
-      "keysight.n9030b|B|Reset-0"
+    "negativeCases": [
+      "keysight.n9030b|B|QueryIdentity-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "QueryIdentity"
   },
   {
+    "cases": [
+      "keysight.n9030b|B|Reset-0",
+      "keysight.n9030b|B|Reset-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keysight.n9030b",
-    "operation": "Shutdown",
-    "cases": [
-      "keysight.n9030b|B|Shutdown-0"
+    "negativeCases": [
+      "keysight.n9030b|B|Reset-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "operation": "Reset"
   },
   {
-    "driver": "keysight.u2000a",
-    "operation": "PowerMeterConfigureMeasurement",
+    "cases": [
+      "keysight.n9030b|B|Shutdown-0",
+      "keysight.n9030b|B|Shutdown-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.n9030b",
+    "negativeCases": [
+      "keysight.n9030b|B|Shutdown-0-transport-failure"
+    ],
+    "operation": "Shutdown"
+  },
+  {
     "cases": [
       "keysight.u2000a|B|PowerMeterConfigureMeasurement-0",
       "keysight.u2000a|B|PowerMeterConfigureMeasurement-1",
@@ -2553,61 +3657,92 @@
       "keysight.u2000a|B|PowerMeterConfigureMeasurement-4",
       "keysight.u2000a|B|PowerMeterConfigureMeasurement-5",
       "keysight.u2000a|B|PowerMeterConfigureMeasurement-6",
-      "keysight.u2000a|B|PowerMeterConfigureMeasurement-7"
+      "keysight.u2000a|B|PowerMeterConfigureMeasurement-7",
+      "keysight.u2000a|B|PowerMeterFetch-0",
+      "keysight.u2000a|B|PowerMeterRead-0",
+      "keysight.u2000a|B|PowerMeterConfigureMeasurement-0-transport-failure",
+      "keysight.u2000a|B|PowerMeterFetch-0-transport-failure",
+      "keysight.u2000a|B|PowerMeterRead-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2000a",
+    "negativeCases": [
+      "keysight.u2000a|B|PowerMeterConfigureMeasurement-0-transport-failure",
+      "keysight.u2000a|B|PowerMeterFetch-0-transport-failure",
+      "keysight.u2000a|B|PowerMeterRead-0-transport-failure"
+    ],
+    "operation": "PowerMeterConfigureMeasurement"
   },
   {
-    "driver": "keysight.u2000a",
-    "operation": "PowerMeterInitiate",
     "cases": [
-      "keysight.u2000a|B|PowerMeterInitiate-0"
+      "keysight.u2000a|B|PowerMeterInitiate-0",
+      "keysight.u2000a|B|PowerMeterInitiate-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2000a",
+    "negativeCases": [
+      "keysight.u2000a|B|PowerMeterInitiate-0-transport-failure"
+    ],
+    "operation": "PowerMeterInitiate"
   },
   {
-    "driver": "keysight.u2000a",
-    "operation": "PowerMeterFetch",
     "cases": [
-      "keysight.u2000a|B|PowerMeterFetch-0"
+      "keysight.u2000a|B|PowerMeterFetch-0",
+      "keysight.u2000a|B|PowerMeterFetch-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2000a",
+    "negativeCases": [
+      "keysight.u2000a|B|PowerMeterFetch-0-transport-failure"
+    ],
+    "operation": "PowerMeterFetch"
   },
   {
-    "driver": "keysight.u2000a",
-    "operation": "PowerMeterRead",
     "cases": [
-      "keysight.u2000a|B|PowerMeterRead-0"
+      "keysight.u2000a|B|PowerMeterRead-0",
+      "keysight.u2000a|B|PowerMeterRead-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2000a",
+    "negativeCases": [
+      "keysight.u2000a|B|PowerMeterRead-0-transport-failure"
+    ],
+    "operation": "PowerMeterRead"
   },
   {
-    "driver": "keysight.u2000a",
-    "operation": "QueryIdentity",
     "cases": [
-      "keysight.u2000a|B|QueryIdentity-0"
+      "keysight.u2000a|B|QueryIdentity-0",
+      "keysight.u2000a|B|QueryIdentity-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2000a",
+    "negativeCases": [
+      "keysight.u2000a|B|QueryIdentity-0-transport-failure"
+    ],
+    "operation": "QueryIdentity"
   },
   {
-    "driver": "keysight.u2000a",
-    "operation": "Reset",
     "cases": [
-      "keysight.u2000a|B|Reset-0"
+      "keysight.u2000a|B|Reset-0",
+      "keysight.u2000a|B|Reset-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2000a",
+    "negativeCases": [
+      "keysight.u2000a|B|Reset-0-transport-failure"
+    ],
+    "operation": "Reset"
   },
   {
-    "driver": "keysight.u2000a",
-    "operation": "Shutdown",
     "cases": [
       "keysight.u2000a|B|Shutdown-0"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2000a",
+    "negativeCases": [],
+    "operation": "Shutdown"
   },
   {
-    "driver": "keysight.u2001a",
-    "operation": "PowerMeterConfigureMeasurement",
     "cases": [
       "keysight.u2001a|B|PowerMeterConfigureMeasurement-0",
       "keysight.u2001a|B|PowerMeterConfigureMeasurement-1",
@@ -2616,61 +3751,92 @@
       "keysight.u2001a|B|PowerMeterConfigureMeasurement-4",
       "keysight.u2001a|B|PowerMeterConfigureMeasurement-5",
       "keysight.u2001a|B|PowerMeterConfigureMeasurement-6",
-      "keysight.u2001a|B|PowerMeterConfigureMeasurement-7"
+      "keysight.u2001a|B|PowerMeterConfigureMeasurement-7",
+      "keysight.u2001a|B|PowerMeterFetch-0",
+      "keysight.u2001a|B|PowerMeterRead-0",
+      "keysight.u2001a|B|PowerMeterConfigureMeasurement-0-transport-failure",
+      "keysight.u2001a|B|PowerMeterFetch-0-transport-failure",
+      "keysight.u2001a|B|PowerMeterRead-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2001a",
+    "negativeCases": [
+      "keysight.u2001a|B|PowerMeterConfigureMeasurement-0-transport-failure",
+      "keysight.u2001a|B|PowerMeterFetch-0-transport-failure",
+      "keysight.u2001a|B|PowerMeterRead-0-transport-failure"
+    ],
+    "operation": "PowerMeterConfigureMeasurement"
   },
   {
-    "driver": "keysight.u2001a",
-    "operation": "PowerMeterInitiate",
     "cases": [
-      "keysight.u2001a|B|PowerMeterInitiate-0"
+      "keysight.u2001a|B|PowerMeterInitiate-0",
+      "keysight.u2001a|B|PowerMeterInitiate-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2001a",
+    "negativeCases": [
+      "keysight.u2001a|B|PowerMeterInitiate-0-transport-failure"
+    ],
+    "operation": "PowerMeterInitiate"
   },
   {
-    "driver": "keysight.u2001a",
-    "operation": "PowerMeterFetch",
     "cases": [
-      "keysight.u2001a|B|PowerMeterFetch-0"
+      "keysight.u2001a|B|PowerMeterFetch-0",
+      "keysight.u2001a|B|PowerMeterFetch-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2001a",
+    "negativeCases": [
+      "keysight.u2001a|B|PowerMeterFetch-0-transport-failure"
+    ],
+    "operation": "PowerMeterFetch"
   },
   {
-    "driver": "keysight.u2001a",
-    "operation": "PowerMeterRead",
     "cases": [
-      "keysight.u2001a|B|PowerMeterRead-0"
+      "keysight.u2001a|B|PowerMeterRead-0",
+      "keysight.u2001a|B|PowerMeterRead-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2001a",
+    "negativeCases": [
+      "keysight.u2001a|B|PowerMeterRead-0-transport-failure"
+    ],
+    "operation": "PowerMeterRead"
   },
   {
-    "driver": "keysight.u2001a",
-    "operation": "QueryIdentity",
     "cases": [
-      "keysight.u2001a|B|QueryIdentity-0"
+      "keysight.u2001a|B|QueryIdentity-0",
+      "keysight.u2001a|B|QueryIdentity-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2001a",
+    "negativeCases": [
+      "keysight.u2001a|B|QueryIdentity-0-transport-failure"
+    ],
+    "operation": "QueryIdentity"
   },
   {
-    "driver": "keysight.u2001a",
-    "operation": "Reset",
     "cases": [
-      "keysight.u2001a|B|Reset-0"
+      "keysight.u2001a|B|Reset-0",
+      "keysight.u2001a|B|Reset-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2001a",
+    "negativeCases": [
+      "keysight.u2001a|B|Reset-0-transport-failure"
+    ],
+    "operation": "Reset"
   },
   {
-    "driver": "keysight.u2001a",
-    "operation": "Shutdown",
     "cases": [
       "keysight.u2001a|B|Shutdown-0"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2001a",
+    "negativeCases": [],
+    "operation": "Shutdown"
   },
   {
-    "driver": "keysight.u2002a",
-    "operation": "PowerMeterConfigureMeasurement",
     "cases": [
       "keysight.u2002a|B|PowerMeterConfigureMeasurement-0",
       "keysight.u2002a|B|PowerMeterConfigureMeasurement-1",
@@ -2679,61 +3845,92 @@
       "keysight.u2002a|B|PowerMeterConfigureMeasurement-4",
       "keysight.u2002a|B|PowerMeterConfigureMeasurement-5",
       "keysight.u2002a|B|PowerMeterConfigureMeasurement-6",
-      "keysight.u2002a|B|PowerMeterConfigureMeasurement-7"
+      "keysight.u2002a|B|PowerMeterConfigureMeasurement-7",
+      "keysight.u2002a|B|PowerMeterFetch-0",
+      "keysight.u2002a|B|PowerMeterRead-0",
+      "keysight.u2002a|B|PowerMeterConfigureMeasurement-0-transport-failure",
+      "keysight.u2002a|B|PowerMeterFetch-0-transport-failure",
+      "keysight.u2002a|B|PowerMeterRead-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2002a",
+    "negativeCases": [
+      "keysight.u2002a|B|PowerMeterConfigureMeasurement-0-transport-failure",
+      "keysight.u2002a|B|PowerMeterFetch-0-transport-failure",
+      "keysight.u2002a|B|PowerMeterRead-0-transport-failure"
+    ],
+    "operation": "PowerMeterConfigureMeasurement"
   },
   {
-    "driver": "keysight.u2002a",
-    "operation": "PowerMeterInitiate",
     "cases": [
-      "keysight.u2002a|B|PowerMeterInitiate-0"
+      "keysight.u2002a|B|PowerMeterInitiate-0",
+      "keysight.u2002a|B|PowerMeterInitiate-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2002a",
+    "negativeCases": [
+      "keysight.u2002a|B|PowerMeterInitiate-0-transport-failure"
+    ],
+    "operation": "PowerMeterInitiate"
   },
   {
-    "driver": "keysight.u2002a",
-    "operation": "PowerMeterFetch",
     "cases": [
-      "keysight.u2002a|B|PowerMeterFetch-0"
+      "keysight.u2002a|B|PowerMeterFetch-0",
+      "keysight.u2002a|B|PowerMeterFetch-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2002a",
+    "negativeCases": [
+      "keysight.u2002a|B|PowerMeterFetch-0-transport-failure"
+    ],
+    "operation": "PowerMeterFetch"
   },
   {
-    "driver": "keysight.u2002a",
-    "operation": "PowerMeterRead",
     "cases": [
-      "keysight.u2002a|B|PowerMeterRead-0"
+      "keysight.u2002a|B|PowerMeterRead-0",
+      "keysight.u2002a|B|PowerMeterRead-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2002a",
+    "negativeCases": [
+      "keysight.u2002a|B|PowerMeterRead-0-transport-failure"
+    ],
+    "operation": "PowerMeterRead"
   },
   {
-    "driver": "keysight.u2002a",
-    "operation": "QueryIdentity",
     "cases": [
-      "keysight.u2002a|B|QueryIdentity-0"
+      "keysight.u2002a|B|QueryIdentity-0",
+      "keysight.u2002a|B|QueryIdentity-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2002a",
+    "negativeCases": [
+      "keysight.u2002a|B|QueryIdentity-0-transport-failure"
+    ],
+    "operation": "QueryIdentity"
   },
   {
-    "driver": "keysight.u2002a",
-    "operation": "Reset",
     "cases": [
-      "keysight.u2002a|B|Reset-0"
+      "keysight.u2002a|B|Reset-0",
+      "keysight.u2002a|B|Reset-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2002a",
+    "negativeCases": [
+      "keysight.u2002a|B|Reset-0-transport-failure"
+    ],
+    "operation": "Reset"
   },
   {
-    "driver": "keysight.u2002a",
-    "operation": "Shutdown",
     "cases": [
       "keysight.u2002a|B|Shutdown-0"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2002a",
+    "negativeCases": [],
+    "operation": "Shutdown"
   },
   {
-    "driver": "keysight.u2004a",
-    "operation": "PowerMeterConfigureMeasurement",
     "cases": [
       "keysight.u2004a|B|PowerMeterConfigureMeasurement-0",
       "keysight.u2004a|B|PowerMeterConfigureMeasurement-1",
@@ -2742,56 +3939,89 @@
       "keysight.u2004a|B|PowerMeterConfigureMeasurement-4",
       "keysight.u2004a|B|PowerMeterConfigureMeasurement-5",
       "keysight.u2004a|B|PowerMeterConfigureMeasurement-6",
-      "keysight.u2004a|B|PowerMeterConfigureMeasurement-7"
+      "keysight.u2004a|B|PowerMeterConfigureMeasurement-7",
+      "keysight.u2004a|B|PowerMeterFetch-0",
+      "keysight.u2004a|B|PowerMeterRead-0",
+      "keysight.u2004a|B|PowerMeterConfigureMeasurement-0-transport-failure",
+      "keysight.u2004a|B|PowerMeterFetch-0-transport-failure",
+      "keysight.u2004a|B|PowerMeterRead-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2004a",
+    "negativeCases": [
+      "keysight.u2004a|B|PowerMeterConfigureMeasurement-0-transport-failure",
+      "keysight.u2004a|B|PowerMeterFetch-0-transport-failure",
+      "keysight.u2004a|B|PowerMeterRead-0-transport-failure"
+    ],
+    "operation": "PowerMeterConfigureMeasurement"
   },
   {
-    "driver": "keysight.u2004a",
-    "operation": "PowerMeterInitiate",
     "cases": [
-      "keysight.u2004a|B|PowerMeterInitiate-0"
+      "keysight.u2004a|B|PowerMeterInitiate-0",
+      "keysight.u2004a|B|PowerMeterInitiate-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2004a",
+    "negativeCases": [
+      "keysight.u2004a|B|PowerMeterInitiate-0-transport-failure"
+    ],
+    "operation": "PowerMeterInitiate"
   },
   {
-    "driver": "keysight.u2004a",
-    "operation": "PowerMeterFetch",
     "cases": [
-      "keysight.u2004a|B|PowerMeterFetch-0"
+      "keysight.u2004a|B|PowerMeterFetch-0",
+      "keysight.u2004a|B|PowerMeterFetch-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2004a",
+    "negativeCases": [
+      "keysight.u2004a|B|PowerMeterFetch-0-transport-failure"
+    ],
+    "operation": "PowerMeterFetch"
   },
   {
-    "driver": "keysight.u2004a",
-    "operation": "PowerMeterRead",
     "cases": [
-      "keysight.u2004a|B|PowerMeterRead-0"
+      "keysight.u2004a|B|PowerMeterRead-0",
+      "keysight.u2004a|B|PowerMeterRead-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2004a",
+    "negativeCases": [
+      "keysight.u2004a|B|PowerMeterRead-0-transport-failure"
+    ],
+    "operation": "PowerMeterRead"
   },
   {
-    "driver": "keysight.u2004a",
-    "operation": "QueryIdentity",
     "cases": [
-      "keysight.u2004a|B|QueryIdentity-0"
+      "keysight.u2004a|B|QueryIdentity-0",
+      "keysight.u2004a|B|QueryIdentity-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2004a",
+    "negativeCases": [
+      "keysight.u2004a|B|QueryIdentity-0-transport-failure"
+    ],
+    "operation": "QueryIdentity"
   },
   {
-    "driver": "keysight.u2004a",
-    "operation": "Reset",
     "cases": [
-      "keysight.u2004a|B|Reset-0"
+      "keysight.u2004a|B|Reset-0",
+      "keysight.u2004a|B|Reset-0-transport-failure"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2004a",
+    "negativeCases": [
+      "keysight.u2004a|B|Reset-0-transport-failure"
+    ],
+    "operation": "Reset"
   },
   {
-    "driver": "keysight.u2004a",
-    "operation": "Shutdown",
     "cases": [
       "keysight.u2004a|B|Shutdown-0"
     ],
-    "disposition": "implemented"
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keysight.u2004a",
+    "negativeCases": [],
+    "operation": "Shutdown"
   }
 ]

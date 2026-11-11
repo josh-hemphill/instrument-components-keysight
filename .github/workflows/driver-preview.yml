@@ -1,0 +1,112 @@
+name: Driver preview release
+on:
+  push:
+    tags: ['driver-v*']
+permissions:
+  contents: read
+  actions: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate exact preview identity
+        shell: python
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          import json,os,tomllib,xml.etree.ElementTree as ET
+          from pathlib import Path
+          settings=json.loads(Path('driver-package.json').read_text());version=settings['version']
+          if os.environ['RELEASE_TAG']!='driver-v'+version or settings['hardwareValidated'] or '-alpha.' not in version:raise SystemExit('Expected unvalidated alpha preview tag')
+          if tomllib.loads(Path('Cargo.toml').read_text())['package']['version']!=version:raise SystemExit('Crate version mismatch')
+          if ET.parse(settings['dotnetProject']).getroot().findtext('.//Version')!=version:raise SystemExit('NuGet version mismatch')
+  conformance:
+    needs: validate
+    uses: ./.github/workflows/ci.yml
+  crates:
+    needs: [validate, conformance]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: rust-lang/crates-io-auth-action@v1
+        id: auth
+      - run: cargo publish -p instrument-driver-keysight
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ steps.auth.outputs.token }}
+  nuget:
+    needs: [validate, conformance]
+    runs-on: windows-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - run: dotnet pack dotnet/InstrumentComponents.Drivers.Keysight/InstrumentComponents.Drivers.Keysight.csproj -c Release -o packages
+      - uses: NuGet/login@v1
+        id: auth
+        with:
+          user: josh-hemphill
+      - shell: pwsh
+        env:
+          NUGET_API_KEY: ${{ steps.auth.outputs.NUGET_API_KEY }}
+        run: |
+          $packages = @(Get-ChildItem packages -Filter '*.nupkg')
+          if ($packages.Count -ne 1) { throw 'Expected one independent driver package' }
+          dotnet nuget push $packages[0].FullName --source https://api.nuget.org/v3/index.json --api-key $env:NUGET_API_KEY --skip-duplicate
+          if ($LASTEXITCODE -ne 0) { throw 'NuGet push failed' }
+  public-consumer:
+    needs: [crates, nuget]
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        framework: [net8.0, net10.0]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            8.0.x
+            10.0.x
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y clang zlib1g-dev
+      - name: Fresh public package consumers and native execution
+        shell: python
+        env:
+          TARGET_FRAMEWORK: ${{ matrix.framework }}
+        run: |
+          import os,pathlib,subprocess,json,urllib.request,urllib.error,time
+          settings=json.loads(pathlib.Path('driver-package.json').read_text());version=settings['version']
+          # Allow registry index propagation; no source/artifact substitute.
+          for attempt in range(30):
+              try:
+                  with urllib.request.urlopen('https://api.nuget.org/v3-flatcontainer/'+settings['nugetPackage'].lower()+'/index.json',timeout=30) as response:found=version in json.load(response)['versions']
+                  request=urllib.request.Request('https://crates.io/api/v1/crates/'+settings['rustPackage']+'/'+version,headers={'User-Agent':'instrument-components preview validation'})
+                  with urllib.request.urlopen(request,timeout=30) as response:found=found and json.load(response)['version']['num']==version
+                  if found:break
+              except urllib.error.HTTPError as error:
+                  if error.code!=404:raise
+              time.sleep(5)
+          else:raise SystemExit('Public package versions did not become available')
+          temp=pathlib.Path(os.environ['RUNNER_TEMP']);env=dict(os.environ,CARGO_HOME=str(temp/'public-cargo'),CARGO_TARGET_DIR=str(temp/'public-target'),NUGET_PACKAGES=str(temp/'public-nuget'))
+          for feature in [[],['--features','async']]:subprocess.run(['cargo','run','--manifest-path','validation/rust/Cargo.toml','--release']+feature,env=env,check=True)
+          project=pathlib.Path('validation/dotnet/DriverProof.csproj');project.write_text(project.read_text().replace('net8.0',os.environ['TARGET_FRAMEWORK']))
+          rid='win-x64' if os.name=='nt' else 'linux-x64';out=temp/'public-native'
+          subprocess.run(['dotnet','publish',str(project),'-c','Release','-r',rid,'--self-contained','true','-o',str(out)],env=env,check=True)
+          subprocess.run([str(out/('DriverProof.exe' if os.name=='nt' else 'DriverProof'))],env=env,check=True)
