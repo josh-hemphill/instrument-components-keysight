@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Fetch locked public source goldens and successful CI artifacts; verify transfers."""
-import argparse,hashlib,json,re,subprocess,urllib.request,zipfile
+import argparse,hashlib,json,re,subprocess,time,urllib.request,zipfile
 from pathlib import Path,PurePosixPath
 from instrument_driver_tools.feeds import extract
 ROOT=Path(__file__).resolve().parent
@@ -25,6 +25,11 @@ for row in lock['drivers']:
  record=dict(vendor=vendor,sourceCommit=commit,sourceArchiveSha256=sha(archive))
  if not a.sources_only:
   run=api('repos/'+repo+'/actions/runs/'+str(row['runId']))
+  deadline=time.monotonic()+1200
+  while run['status']!='completed':
+   if run['head_sha']!=commit or run['path']!='.github/workflows/ci.yml':raise ValueError('Pinned CI source/workflow mismatch')
+   if time.monotonic()>=deadline:raise ValueError('Timed out waiting for pinned producer proof')
+   time.sleep(20);run=api('repos/'+repo+'/actions/runs/'+str(row['runId']))
   if run['head_sha']!=commit or run['conclusion']!='success' or run['path']!='.github/workflows/ci.yml':raise ValueError('Pinned vendor CI must have succeeded at exact source commit')
   name='driver-proof-'+a.os+'-'+a.framework;artifacts=api('repos/'+repo+'/actions/runs/'+str(row['runId'])+'/artifacts?per_page=100')['artifacts'];found=[artifact for artifact in artifacts if artifact['name']==name and not artifact['expired']]
   if len(found)!=1:raise ValueError('Missing/duplicate proof artifact')
