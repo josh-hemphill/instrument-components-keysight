@@ -56,7 +56,7 @@ internal static class Bench{
   foreach(var s in c.Steps){
    if(s.Operation=="PowerMeterConfigureMeasurement"){if(s.PowerUnit is not "Watt" and not "Dbm")throw new ArgumentException("Explicit power configuration unit required");}
    else if(s.Operation=="SwitchIsClosed"){if(s.ExpectedBoolean is null)throw new ArgumentException("Switch query requires ExpectedBoolean");}
-   else if(!Enum.TryParse<Unit>(s.ExpectedUnit,out var physicalUnit)||physicalUnit is Unit.Unknown or Unit.Temperature||s.ExpectedBoolean is not null||!double.IsFinite(s.Minimum)||!double.IsFinite(s.Maximum)||s.Minimum>s.Maximum||s.ExpectedUnit is "" or "Unknown")throw new ArgumentException("Scalar acceptance needs finite ordered bounds and a known expected unit");
+   else if(!Enum.TryParse<Unit>(s.ExpectedUnit,out var physicalUnit)||!Enum.IsDefined(physicalUnit)||physicalUnit.ToString()!=s.ExpectedUnit||physicalUnit is Unit.Unknown or Unit.Temperature or Unit.ConfiguredDmm or Unit.ConfiguredPower||s.ExpectedBoolean is not null||!double.IsFinite(s.Minimum)||!double.IsFinite(s.Maximum)||s.Minimum>s.Maximum||s.ExpectedUnit is "" or "Unknown")throw new ArgumentException("Scalar acceptance needs finite ordered bounds and a known expected unit");
   }
  }
  private static CatalogRequest Request(BenchStep s)=>s.Operation switch{
@@ -67,7 +67,11 @@ internal static class Bench{
   var q=reply.IntoQuantity();return new(){Operation=step.Operation,Value=q.Value,Unit=q.Unit.ToString(),Status=q.Status.ToString(),Passed=q.Status==MeasurementStatus.Valid&&q.Unit.ToString()==step.ExpectedUnit&&double.IsFinite(q.Value)&&q.Value>=step.Minimum&&q.Value<=step.Maximum};
  }
  private static string Hash(string file)=>Convert.ToHexString(SHA256.HashData(File.ReadAllBytes(file))).ToLowerInvariant();
- private static int SelfTest(){var io=new SelfConnector();var registry=new DriverRegistry(Factories(io));var candidate=new DeviceCandidate(new("scpi","self-test"),new());using var h=registry.Open(candidate,new(DriverId:"keysight.34401a"));
+ private static int SelfTest(){
+  foreach(var unit in new[]{"999","1","ConfiguredDmm","ConfiguredPower","Unknown","Temperature","volt"}){
+   try{Validate(new(){DriverId="fixture",Resource="fixture",Steps=[new(){Operation="DmmMeasureVoltageDc",ExpectedUnit=unit,Minimum=0,Maximum=2}]});throw new InvalidOperationException("Invalid physical unit accepted");}catch(ArgumentException){}
+  }
+  var io=new SelfConnector();var registry=new DriverRegistry(Factories(io));var candidate=new DeviceCandidate(new("scpi","self-test"),new());using var h=registry.Open(candidate,new(DriverId:"keysight.34401a"));
   var identity=h.Invoke(new QueryIdentityRequest()).IntoIdentity();var step=new BenchStep{Operation="DmmMeasureVoltageDc",ExpectedUnit="Volt",Minimum=1.2,Maximum=1.3};Validate(new(){DriverId="keysight.34401a",Resource="fixture",Steps=[step]});
   if(identity.Model!="34401A"||!Evaluate(step,h.Invoke(Request(step))).Passed)throw new InvalidOperationException("Bench evaluator");h.Close();if(io.Calls!=3)throw new InvalidOperationException("Unexpected bench traffic");Console.WriteLine("PASS bench executable self-test; no VISA session opened");return 0;}
  private sealed class NoIo:IScpiConnector{public IMessageIo Open(DriverOpenContext context)=>throw new InvalidOperationException("Validation must not open IO");}

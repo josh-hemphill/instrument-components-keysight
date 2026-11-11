@@ -29,7 +29,9 @@ for row in lock['drivers']:
   name='driver-proof-'+a.os+'-'+a.framework;artifacts=api('repos/'+repo+'/actions/runs/'+str(row['runId'])+'/artifacts?per_page=100')['artifacts'];found=[artifact for artifact in artifacts if artifact['name']==name and not artifact['expired']]
   if len(found)!=1:raise ValueError('Missing/duplicate proof artifact')
   artifact=found[0];packed=out/(vendor+'-proof.zip')
-  with packed.open('wb') as stream:subprocess.run(['gh','api','repos/'+repo+'/actions/artifacts/'+str(artifact['id'])+'/zip'],stdout=stream,check=True)
+  with packed.open('wb') as stream:
+   result=subprocess.run(['gh','api','repos/'+repo+'/actions/artifacts/'+str(artifact['id'])+'/zip'],stdout=stream,stderr=subprocess.PIPE)
+   if result.returncode:raise ValueError('Hosted artifact download failed; no signed redirect URL is logged')
   if artifact.get('digest')!='sha256:'+sha(packed):raise ValueError('Hosted artifact transfer digest mismatch')
   destination=out/'drivers'/vendor;destination.mkdir(parents=True)
   with zipfile.ZipFile(packed) as z:

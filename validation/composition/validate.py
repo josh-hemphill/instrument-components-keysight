@@ -70,7 +70,7 @@ def main():
   print(name,flush=True);log=out/(name+'.log')
   with log.open('w') as stream:r=subprocess.run(list(map(str,cmd)),cwd=cwd,env=env,stdout=stream,stderr=subprocess.STDOUT)
   text=log.read_text(errors='replace');records.append(dict(name=name,exitCode=r.returncode,expectedFailure=negative,log=log.name,sha256=sha(log)));(out/'execution.json').write_text(json.dumps(records,indent=2)+'\n')
-  if (r.returncode==0 or not re.search(r'\berror IL2026\b',text)) if negative else (r.returncode!=0 or re.search(r'\bwarning IL\d+\b',text,re.I)):raise ValueError(name+' failed:\n'+text[-10000:])
+  if (r.returncode==0 or any(not re.search(r'\berror '+diagnostic+r'\b',text) for diagnostic in ['IL2026','IL3050'])) if negative else (r.returncode!=0 or re.search(r'\bwarning IL\d+\b',text,re.I)):raise ValueError(name+' failed:\n'+text[-10000:])
   return text
  for feature in [[],['--features','async']]:
   tag='async' if feature else 'default';run('rust-'+tag,['cargo','run','--offline','--release']+feature,rust);run('rust-'+tag+'-clippy',['cargo','clippy','--offline','--release']+feature+['--','-D','warnings'],rust)
@@ -95,7 +95,7 @@ def main():
   command+=['--ro-bind',str(native),'/app','--clearenv','--setenv','PATH','/usr/bin:/bin','--','/app/Composition']
   if os.environ.get('CI')=='true':command=['sudo','--']+command
   run('native-runtime-isolation',command)
- with (dotnet/'Program.cs').open('a') as stream:stream.write('\ninternal static class WarningProbe{[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("intentional gate")]internal static void Trigger(){} internal static void Run()=>Trigger();}\n')
+ with (dotnet/'Program.cs').open('a') as stream:stream.write('\ninternal static class WarningProbe{[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("intentional gate")][System.Diagnostics.CodeAnalysis.RequiresDynamicCode("intentional AOT gate")]internal static void Trigger(){} internal static void Run()=>Trigger();}\n')
  path=dotnet/'Program.cs';path.write_text(path.read_text().replace('await Composition.Run();','WarningProbe.Run();await Composition.Run();'));run('negative-native-warning',publish,dotnet,negative=True)
  (out/'composition.json').write_text(json.dumps(dict(mode='local-bootstrap-development' if a.development_inputs else 'pinned-ci-artifact-bootstrap',lockSha256=sha(ROOT/'composition-lock.json'),rid=rid,framework=a.framework,nativeExecuted=True,sha256=sha(binary),inputs=inputs,sdkPackages=feed['packages']),indent=2)+'\n')
  print('PASS static all-five app; bootstrap evidence only, not public registry or hardware evidence',flush=True)

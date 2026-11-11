@@ -79,10 +79,12 @@ jobs:
       - name: Pack the standards transport, then run bench self-test and config validation
         shell: python
         run: |
-          import os,pathlib,shutil,subprocess
+          import os,pathlib,shutil,stat,subprocess
           root=pathlib.Path(os.environ['RUNNER_TEMP']);proof=root/'composition-proof';feed=proof/'feeds/nuget-feed';source=pathlib.Path('standards-bootstrap')
           subprocess.run(['dotnet','pack',str(source/'dotnet/src/InstrumentComponents.Visa/InstrumentComponents.Visa.csproj'),'-c','Release','-o',str(feed)],check=True)
-          shutil.rmtree(source)
+          def remove_readonly(call,path,error):
+              os.chmod(path,stat.S_IWRITE);call(path)
+          shutil.rmtree(source,onexc=remove_readonly)
           bench=root/'bench-software';shutil.copytree('validation/bench',bench,ignore=shutil.ignore_patterns('bin','obj','packages.lock.json'))
           shutil.copy2(proof/'feeds/NuGet.Config',bench/'NuGet.Config')
           for args in [['--self-test'],['--validate-config','--config',str(bench/'configs/example.json')]]:
