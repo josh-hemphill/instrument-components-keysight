@@ -6698,4 +6698,156 @@ new ScriptStep("write", "IN", "", DriverErrorKind.Transport),
 new ScriptStep("close", "", "", null),
 },
 null, DriverErrorKind.Transport),
+new CatalogCase("keysight.hp5334a|H|binary64-gate-rounding-0", new CatalogRequest[] {
+new CounterSetGateTimeRequest(0.01234567890125),
+}, new ScriptStep[] {
+new ScriptStep("write", "GA1.23456789013E-02", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp5334a|H|binary64-gate-rounding-1", new CatalogRequest[] {
+new CounterSetGateTimeRequest(1.234567890125),
+}, new ScriptStep[] {
+new ScriptStep("write", "GA1.23456789012E+00", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp5334a|H|binary64-gate-rounding-2", new CatalogRequest[] {
+new CounterSetGateTimeRequest(9.999999999995),
+}, new ScriptStep[] {
+new ScriptStep("write", "GA9.99999999999E+00", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp5334a|H|binary64-gate-rounding-3", new CatalogRequest[] {
+new CounterSetGateTimeRequest(99.99899999995),
+}, new ScriptStep[] {
+new ScriptStep("write", "GA9.99990000000E+01", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp5334a|H|binary64-gate-rounding-4", new CatalogRequest[] {
+new CounterSetGateTimeRequest(0.9999999999995),
+}, new ScriptStep[] {
+new ScriptStep("write", "GA9.99999999999E-01", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp5334a|H|binary64-gate-rounding-5", new CatalogRequest[] {
+new CounterSetGateTimeRequest(1.234567890115),
+}, new ScriptStep[] {
+new ScriptStep("write", "GA1.23456789011E+00", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp5334a|H|binary64-gate-rounding-6", new CatalogRequest[] {
+new CounterSetGateTimeRequest(1.234567890135),
+}, new ScriptStep[] {
+new ScriptStep("write", "GA1.23456789013E+00", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp5334b|H|binary64-gate-rounding-0", new CatalogRequest[] {
+new CounterSetGateTimeRequest(0.01234567890125),
+}, new ScriptStep[] {
+new ScriptStep("write", "GA1.23456789013E-02", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp5334b|H|binary64-gate-rounding-1", new CatalogRequest[] {
+new CounterSetGateTimeRequest(1.234567890125),
+}, new ScriptStep[] {
+new ScriptStep("write", "GA1.23456789012E+00", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp5334b|H|binary64-gate-rounding-2", new CatalogRequest[] {
+new CounterSetGateTimeRequest(9.999999999995),
+}, new ScriptStep[] {
+new ScriptStep("write", "GA9.99999999999E+00", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp5334b|H|binary64-gate-rounding-3", new CatalogRequest[] {
+new CounterSetGateTimeRequest(99.99899999995),
+}, new ScriptStep[] {
+new ScriptStep("write", "GA9.99990000000E+01", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp5334b|H|binary64-gate-rounding-4", new CatalogRequest[] {
+new CounterSetGateTimeRequest(0.9999999999995),
+}, new ScriptStep[] {
+new ScriptStep("write", "GA9.99999999999E-01", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp5334b|H|binary64-gate-rounding-5", new CatalogRequest[] {
+new CounterSetGateTimeRequest(1.234567890115),
+}, new ScriptStep[] {
+new ScriptStep("write", "GA1.23456789011E+00", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp5334b|H|binary64-gate-rounding-6", new CatalogRequest[] {
+new CounterSetGateTimeRequest(1.234567890135),
+}, new ScriptStep[] {
+new ScriptStep("write", "GA1.23456789013E+00", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp5334a|H|exact-midpoint-gate-reapply-0", new CatalogRequest[] {
+new CounterSetGateTimeRequest(1.000244140625),
+new CounterSelectChannelRequest(2),
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "GA1.00024414062E+00", "", null),
+new ScriptStep("query", "FN2,HS0,MD1,WA1,GA1.00024414062E+00,RE", "F   +4.58341265E+05", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(458341.265, Unit.Hertz, MeasurementStatus.Valid))),
+new CatalogCase("keysight.hp5334a|H|exact-midpoint-gate-reapply-1", new CatalogRequest[] {
+new CounterSetGateTimeRequest(1.000732421875),
+new CounterSelectChannelRequest(2),
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "GA1.00073242188E+00", "", null),
+new ScriptStep("query", "FN2,HS0,MD1,WA1,GA1.00073242188E+00,RE", "F   +4.58341265E+05", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(458341.265, Unit.Hertz, MeasurementStatus.Valid))),
+new CatalogCase("keysight.hp5334a|H|period-prefix-only", new CatalogRequest[] {
+new CounterMeasurePeriodRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "FN4,HS0,MD1,WA1,RE", "S", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp5334b|H|exact-midpoint-gate-reapply-0", new CatalogRequest[] {
+new CounterSetGateTimeRequest(1.000244140625),
+new CounterSelectChannelRequest(2),
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "GA1.00024414062E+00", "", null),
+new ScriptStep("query", "FN2,HS0,MD1,WA1,GA1.00024414062E+00,RE", "F   +4.58341265E+05", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(458341.265, Unit.Hertz, MeasurementStatus.Valid))),
+new CatalogCase("keysight.hp5334b|H|exact-midpoint-gate-reapply-1", new CatalogRequest[] {
+new CounterSetGateTimeRequest(1.000732421875),
+new CounterSelectChannelRequest(2),
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "GA1.00073242188E+00", "", null),
+new ScriptStep("query", "FN2,HS0,MD1,WA1,GA1.00073242188E+00,RE", "F   +4.58341265E+05", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(458341.265, Unit.Hertz, MeasurementStatus.Valid))),
+new CatalogCase("keysight.hp5334b|H|period-prefix-only", new CatalogRequest[] {
+new CounterMeasurePeriodRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", "FN4,HS0,MD1,WA1,RE", "S", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
 }; }

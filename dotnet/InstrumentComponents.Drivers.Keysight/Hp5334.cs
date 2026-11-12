@@ -77,7 +77,17 @@ public sealed class Hp5334Factory : IDriverFactory
         private uint _channel = 1;
         private double? _gate;
         public bool Healthy { get; set; } = true;
-        private static string GateText(double value) => value.ToString("0.00000000000E+00", CultureInfo.InvariantCulture);
+        private static string GateText(double value)
+        {
+            // Standard E11 rounds the actual binary64 value like Rust's .11E.
+            // Custom numeric formatting first rounds to a decimal precision that
+            // changes midpoint decisions, producing different wire values.
+            var text = value.ToString("E11", CultureInfo.InvariantCulture);
+            var marker = text.IndexOf('E');
+            var exponent = int.Parse(text.AsSpan(marker + 1), CultureInfo.InvariantCulture);
+            return text[..(marker + 1)] + (exponent < 0 ? "-" : "+")
+                + Math.Abs(exponent).ToString("00", CultureInfo.InvariantCulture);
+        }
 
         public Prepared Prepare(CatalogRequest request)
         {
