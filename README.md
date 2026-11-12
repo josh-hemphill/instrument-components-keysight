@@ -1,8 +1,18 @@
 # Instrument Components Keysight drivers
 
 Independently packaged Rust (`instrument-driver-keysight`) and .NET (`InstrumentComponents.Drivers.Keysight`)
-source-derived profiles, version `0.2.0-alpha.1`. These are preview candidates;
+source-derived profiles, version `0.2.0-alpha.1`. These are published previews;
 no devices in this library have physical bench validation yet.
+
+## Install and try the preview
+
+```sh
+cargo add instrument-driver-keysight@=0.2.0-alpha.1
+dotnet add package InstrumentComponents.Drivers.Keysight --version 0.2.0-alpha.1
+```
+
+Use the [complete hardware-free Rust/C# guide](https://github.com/josh-hemphill/instrument-components/blob/e9549a19a86428b020bf65799563a7bd5ad39a9b/docs-site/docs/getting-started.md) before connecting equipment. It uses exact public package versions and an in-memory development connector. Select this family's factories explicitly; adding a package never probes or opens hardware. The [published source tag](https://github.com/josh-hemphill/instrument-components-keysight/tree/driver-v0.2.0-alpha.1) contains this release; the default branch remains a scaffold until its implementation PR is merged.
+
 
 Models and aliases are passive hints carried forward from main commit
 `5eb92b17f775d326e5a3542ee40855b156321745`: 33220A, 33522B, 33622A, 34401A, 34410A, 34461A, 34465A, 34970A, 34972A, 53131A, 53220A, 53230A, DSOX2024A, DSOX3024T, E36312A, E3631A, E3640A, N6705C, N9010B, N9020B, N9030B, U2000A, U2001A, U2002A, U2004A.
@@ -43,7 +53,9 @@ plans. Generated Rust/C# files contain static data and require no runtime JSON.
 `provenance/source/` is historical audit evidence, excluded from production
 packages. The SDK TestKit and Tokio consumers are development-only dependencies.
 
-Before public SDK publication, CI uses checksummed release-form SDK archives from
+The public 0.2.0-alpha.1 SDK and driver packages are available on crates.io and NuGet. The release workflow tests fresh public-package consumers on Linux/Windows x64 and .NET 8/10.
+
+For pre-publication development, CI also uses checksummed release-form SDK archives from
 a pinned main workflow. The consumer job checks out only this repository and
 resolves exact versioned SDK dependencies from fresh verified development feeds.
 This is explicitly bootstrap validation, not public registry availability.
@@ -53,8 +65,7 @@ with all four frontends on Linux/Windows x64 and net8.0/net10.0. It also require
 the intentional trimming-warning probe to fail. No hardware access occurs.
 
 Core applications that do not select this package need none of its artifacts.
-Do not publish tags until native gates and the cross-repository council review
-are complete and the trusted publishers/registry ownership are configured.
+Release tags are immutable. A subsequent release needs a new version, matching SDK pins, passing native gates and council review.
 
 ## Connection-specific inventories
 
