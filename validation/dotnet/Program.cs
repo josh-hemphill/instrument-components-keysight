@@ -17,6 +17,8 @@ internal static class Proof {
     private static DeviceCandidate Candidate=>new(new("scpi","fixture"),new());
     public static async Task Run(){
         await HpCounterProof.Run();
+        HpLegacyProof.Run();
+        await HpAsyncProof.Run();
         var empty=new Script([]);var registration=Vendor.Factories(empty);var passive=new DriverRegistry(registration);
         foreach(var factory in registration)foreach(var rule in factory.Descriptor.Rules){
             var identity=rule switch {ExactIdentityRule r=>new Identity(r.Manufacturer,r.Model),ExactProductRule r=>new Identity(VendorId:r.VendorId,ProductId:r.ProductId),_=>throw new InvalidOperationException("Expected exact migrated hint")};
@@ -27,8 +29,9 @@ internal static class Proof {
             var script=new Script(test.Script);var bindings=test.Id.Split('|')[1]=="U"?null:Bindings();
             var connections=bindings?.Select(p=>new InstrumentComponents.Drivers.Keysight.ConnectionBinding(p.Key,Candidate.Endpoint,p.Value)).ToArray();
             var hpModel=test.Id.StartsWith("keysight.hp5334a|",StringComparison.Ordinal)?Hp5334Model.Hp5334A:test.Id.StartsWith("keysight.hp5334b|",StringComparison.Ordinal)?Hp5334Model.Hp5334B:(Hp5334Model?)null;
-            var candidate=hpModel is null?Candidate:Candidate with{Endpoint=new("hpib","fixture")};
-            var factories=hpModel is {} model?new IDriverFactory[]{new Hp5334Factory(model,Hp5334Commissioning.NativeInternalGatingConfirmed,script,mode==1?script:null)}:mode==1?Vendor.NativeFactories(script,connections:connections):Vendor.Factories(script,connections:connections);
+            var candidate=test.Id.StartsWith("keysight.hp",StringComparison.Ordinal)?Candidate with{Endpoint=new("hpib","fixture")}:Candidate;
+            var hpFactory=HpFixture.Factory(test.Id,script,mode==1);
+            var factories=hpFactory is not null?new[]{hpFactory}:hpModel is {} model?new IDriverFactory[]{new Hp5334Factory(model,Hp5334Commissioning.NativeInternalGatingConfirmed,script,mode==1?script:null)}:mode==1?Vendor.NativeFactories(script,connections:connections):Vendor.Factories(script,connections:connections);
             var registry=new DriverRegistry(factories);var selection=new DriverSelection(DriverId:test.Id.Split('|')[0]);
             var sync=mode==0?registry.Open(candidate,selection):null;var native=mode==1?await registry.OpenNativeAsync(candidate,selection):null;var worker=mode>=2?await registry.OpenWorkerAsync(candidate,selection):null;
             for(var i=0;i<test.Calls.Count;i++){

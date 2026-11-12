@@ -8,7 +8,11 @@ use std::{
     sync::Arc,
 };
 include!("../../../generated/cases.rs");
+#[cfg(feature = "async")]
+mod hp_async_proof;
 mod hp_counter_proof;
+mod hp_fixture;
+mod hp_legacy_proof;
 fn bindings() -> Result<BTreeMap<String, InventoryBinding>> {
     Ok(driver::profiles()?
         .into_iter()
@@ -144,7 +148,7 @@ fn hp_model(id: &str) -> Option<driver::hp5334::Model> {
 }
 fn case_candidate(case: &CatalogCase) -> Candidate {
     let mut c = candidate();
-    if hp_model(case.id).is_some() {
+    if case.id.starts_with("keysight.hp") {
         c.endpoint.scheme = "hpib".into();
     }
     c
@@ -154,6 +158,9 @@ fn case_factories(
     script: &Script,
     native: bool,
 ) -> Result<Vec<Arc<dyn DriverFactory>>> {
+    if let Some(factory) = hp_fixture::factory(case.id, script, native)? {
+        return Ok(vec![factory]);
+    }
     if let Some(model) = hp_model(case.id) {
         let factory = driver::hp5334::Factory::new(
             model,
@@ -188,6 +195,7 @@ fn case_factories(
 fn synchronous() -> Result<()> {
     identities()?;
     hp_counter_proof::synchronous()?;
+    hp_legacy_proof::synchronous()?;
     for case in generated_cases::cases() {
         let script = Script::new(case.script.clone());
         let registry = DriverRegistry::new(case_factories(&case, &script, false)?)?;
@@ -218,6 +226,7 @@ fn synchronous() -> Result<()> {
 #[cfg(feature = "async")]
 async fn asynchronous() -> Result<()> {
     hp_counter_proof::asynchronous().await?;
+    hp_async_proof::run().await?;
     for mode in 0..3 {
         for case in generated_cases::cases() {
             let script = Script::new(case.script.clone());
@@ -290,6 +299,7 @@ fn main() -> Result<()> {
     synchronous()?;
     #[cfg(feature = "async")]
     tokio::runtime::Builder::new_current_thread()
+        .enable_time()
         .build()
         .unwrap()
         .block_on(asynchronous())?;

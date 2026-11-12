@@ -10,7 +10,7 @@ instrument-api="=0.2.0-alpha.1"
 instrument-runtime="=0.2.0-alpha.1"
 instrument-scpi="=0.2.0-alpha.1"
 instrument-testkit="=0.2.0-alpha.1"
-tokio={version="1",features=["rt","macros"],optional=true}
+tokio={version="1",features=["rt","macros","time"],optional=true}
 [features]
 default=[]
 async=["instrument-driver-keysight/async","instrument-api/async","instrument-runtime/async","instrument-scpi/async","instrument-testkit/async","dep:tokio"]

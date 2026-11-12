@@ -11,10 +11,10 @@ permissions:
   actions: read
 jobs:
   sdk:
-    uses: josh-hemphill/instrument-components/.github/workflows/driver-sdk.yml@f82de0936a32a35e98e1c1df1d0bc9370888c43e
+    uses: josh-hemphill/instrument-components/.github/workflows/driver-sdk.yml@ea2ffc61a1d308c13f4af41a3e34f8698ed7f065
     with:
       source_repository: josh-hemphill/instrument-components
-      source_ref: f82de0936a32a35e98e1c1df1d0bc9370888c43e
+      source_ref: ea2ffc61a1d308c13f4af41a3e34f8698ed7f065
   package:
     needs: sdk
-    uses: josh-hemphill/instrument-components/.github/workflows/driver-package-bootstrap.yml@f82de0936a32a35e98e1c1df1d0bc9370888c43e
+    uses: josh-hemphill/instrument-components/.github/workflows/driver-package-bootstrap.yml@ea2ffc61a1d308c13f4af41a3e34f8698ed7f065
