@@ -1,0 +1,1211 @@
+{
+  "schemaVersion": 1,
+  "contractMajor": 1,
+  "description": "Manual-derived HP3497A acceptance recovered from prior v4 extraction; reconstructed v8 spec requires re-review. Owned IO. Synthetic responses; no hardware claim.",
+  "cases": [
+    {
+      "id": "keysight.hp3497a|D|range-0.1",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": 0.1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR1AI0",
+          "response": "+1.25000E+0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1.25,
+        "unit": "Volt",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp3497a|D|range-1",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": 1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR2AI0",
+          "response": "+1.25000E+0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1.25,
+        "unit": "Volt",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp3497a|D|range-10",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": 10
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR3AI0",
+          "response": "+1.25000E+0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1.25,
+        "unit": "Volt",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp3497a|D|range-100",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": 100
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR4AI0",
+          "response": "+1.25000E+0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1.25,
+        "unit": "Volt",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp3497a|D|range-auto",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": "+1.25000E+0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1.25,
+        "unit": "Volt",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp3497a|D|public-13-native-19",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 13,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI19",
+          "response": "+1.25000E+0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1.25,
+        "unit": "Volt",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp3497a|D|public-29-native-38",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 29,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI38",
+          "response": "+1.25000E+0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1.25,
+        "unit": "Volt",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp3497a|D|public-61-native-99",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 61,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI99",
+          "response": "+1.25000E+0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1.25,
+        "unit": "Volt",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp3497a|D|negative",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": "-1.25000E+0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": -1.25,
+        "unit": "Volt",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp3497a|D|zero",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": "+0.00000E+0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Volt",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp3497a|D|negative-zero",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": "-0.00000E+0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Volt",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp3497a|D|negative-exponent",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": "+1.25000E-1"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0.125,
+        "unit": "Volt",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp3497a|D|positive-120v",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": "+1.20000E+2"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 120,
+        "unit": "Volt",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp3497a|D|negative-120v",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": "-1.20000E+2"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": -120,
+        "unit": "Volt",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp3497a|D|positive-overflow-only",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": "+9.00000E+9"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Volt",
+        "status": "Overload"
+      }
+    },
+    {
+      "id": "keysight.hp3497a|D|invalid-channel-0",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 0,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3497a|D|invalid-channel-1",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 1,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3497a|D|invalid-channel-8",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 8,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3497a|D|invalid-channel-100",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 100,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3497a|D|invalid-channel-4294967295",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 4294967295,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3497a|D|invalid-range-0",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3497a|D|invalid-range--1",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": -1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3497a|D|invalid-range-0.2",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": 0.2
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3497a|D|invalid-range-0.1000000001",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": 0.1000000001
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3497a|D|invalid-range-2",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": 2
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3497a|D|invalid-range-101",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": 101
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-negative-overflow",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": "-9.00000E+9"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-over-120v",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": "+1.20001E+2"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-below-negative-120v",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": "-1.20001E+2"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-no-sign",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": "1.25000E+0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-two-integral-digits",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": "+12.5000E+0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-four-fraction-digits",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": "+1.2500E+0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-six-fraction-digits",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": "+1.250000E+0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-lowercase-e",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": "+1.25000e+0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-two-exponent-digits",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": "+1.25000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-no-exponent-sign",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": "+1.25000E0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-leading-space",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": " +1.25000E+0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-trailing-space",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": "+1.25000E+0 "
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-extra-scalar",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": "+1.25000E+0,+2.00000E+0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-embedded-control",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": "+1.2\u0000000E+0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-framing-not-removed",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": "+1.25000E+0\r\n"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-non-ascii",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": "+1.25000E+\u0660"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-nan",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": "NaN"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-infinity",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": "Infinity"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-empty",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": ""
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-overlong",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "response": "+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3497a|D|timeout",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.hp3497a|D|transport",
+      "calls": [
+        {
+          "operation": "DataAcquisitionMeasureVoltageDc",
+          "arguments": {
+            "channel": 7,
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.hp3497a|D|unsupported-DmmMeasureVoltageDc",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "UnsupportedOperation"
+    },
+    {
+      "id": "keysight.hp3497a|D|unsupported-SwitchCloseRoute",
+      "calls": [
+        {
+          "operation": "SwitchCloseRoute",
+          "arguments": {
+            "ch1": 7,
+            "ch2": 13
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "UnsupportedOperation"
+    },
+    {
+      "id": "keysight.hp3497a|D|unsupported-Reset",
+      "calls": [
+        {
+          "operation": "Reset",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "UnsupportedOperation"
+    },
+    {
+      "id": "keysight.hp3497a|D|unsupported-QueryIdentity",
+      "calls": [
+        {
+          "operation": "QueryIdentity",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "UnsupportedOperation"
+    },
+    {
+      "id": "keysight.hp3497a|D|unsupported-Shutdown",
+      "calls": [
+        {
+          "operation": "Shutdown",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "UnsupportedOperation"
+    }
+  ]
+}

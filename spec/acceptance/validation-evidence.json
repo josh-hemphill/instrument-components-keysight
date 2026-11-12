@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-schema-and-generation-only-no-backend-execution-no-hardware-claim",
+  "neutralManifestSha256": "f1fc3131b5324cd400e173c590f52b0ec91b880cb0e14372fcac56985e8a00aa",
+  "suites": [
+    {
+      "file": "hp3497a.catalog-cases.json",
+      "cases": 53,
+      "sha256": "2e0325b4489adb1c4ddee6cbd5dc41124ba530238d753efd2072f2098e020761",
+      "provenanceSha256": "54e946a051c59b26ef15309923f950487367b77d1de38c5951ede7c2c38584f2",
+      "sdkEmitter": "pass",
+      "strictFields": "pass",
+      "ownedCloseExactlyOncePerCase": "pass",
+      "neutralOperationMetadata": "pass",
+      "provenanceJoin": "pass",
+      "specHashJoin": "pass"
+    },
+    {
+      "file": "hp8920a.catalog-cases.json",
+      "cases": 152,
+      "sha256": "a43fbff5266efeb2872ca7102dc9b8a6f837d69b9884ac9af09c6c54bce9c5d4",
+      "provenanceSha256": "56144883ecc29cc5a1af76ccd415529a2104520e21f30403f15b98a6babbd4d1",
+      "sdkEmitter": "pass",
+      "strictFields": "pass",
+      "ownedCloseExactlyOncePerCase": "pass",
+      "neutralOperationMetadata": "pass",
+      "provenanceJoin": "pass",
+      "specHashJoin": "pass"
+    },
+    {
+      "file": "hp8920b.catalog-cases.json",
+      "cases": 152,
+      "sha256": "d593118eaec1064ace22610f310b5f9d0b505825a874a50be6f93e5b041b468e",
+      "provenanceSha256": "2e3ad19d10a20ea19b8edf415ab30942a51acae200f20d923b6ec93a3045687c",
+      "sdkEmitter": "pass",
+      "strictFields": "pass",
+      "ownedCloseExactlyOncePerCase": "pass",
+      "neutralOperationMetadata": "pass",
+      "provenanceJoin": "pass",
+      "specHashJoin": "pass"
+    },
+    {
+      "file": "hp8921a.catalog-cases.json",
+      "cases": 128,
+      "sha256": "520a3ad2796c9c8b7f1b166f855d793d05930ccc944c6955eab82d967483ee41",
+      "provenanceSha256": "6edc5d4349e3d331d88d4d411efa3bd55e486a221013eae6ba1c31d3d788bb1c",
+      "sdkEmitter": "pass",
+      "strictFields": "pass",
+      "ownedCloseExactlyOncePerCase": "pass",
+      "neutralOperationMetadata": "pass",
+      "provenanceJoin": "pass",
+      "specHashJoin": "pass"
+    }
+  ]
+}
