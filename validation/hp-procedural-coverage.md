@@ -27,3 +27,14 @@ The SDK runtime supplies the whole-operation serialization lease used by every t
 DAQ representation refinement: native address is derived from validated slot/local, so inconsistent redundant native addresses and negative byte coordinates are unrepresentable. Logical channel uses u32/uint. The constructor also bounds endpoint bindings to4096, matching RF. Hardware/input limits and commissioning remain application responsibilities.
 
 Evidence scope: public0.2.0-alpha.1 packages lack these additions. CI feeds are checksummed development packages from the immutable producer; successful bootstrap consumption does not establish new public package availability. No hardware validation, merge or release has occurred as part of this work.
+
+The Rust validation manifest sets only the `keysight-package-proof` consumer to
+release opt-level0, avoiding expensive optimization of its1424-object generated
+fixture constructor. Actual driver and SDK dependency crates retain their normal
+release optimization; no production manifest or global RUSTFLAGS override is
+used. Downstream generic wrapper instantiations in this fixture consumer can also
+use opt0. The independently packed SDK producer consumers remain normal release
+builds and exercise the typed wrappers. All source/packed/default/async cases and
+procedural assertions remain enabled; C# NativeAOT settings are unchanged. This
+is an explicit validation-consumer profile, not a claim that its entire executable
+uses opt3. The fixture consumer is excluded from distributed driver archives.
