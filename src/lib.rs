@@ -4,6 +4,7 @@ use instrument_scpi::{Connector, InventoryBinding, Profile, ScpiFactory};
 use std::{collections::BTreeMap, sync::Arc};
 include!("../generated/profiles.rs");
 pub use generated_profiles::profiles;
+pub mod hp5334;
 /// A complete inventory for one endpoint under its canonical driver identity.
 /// Endpoint schemes are ASCII case-insensitive; addresses are exact.
 #[derive(Clone, Debug)]

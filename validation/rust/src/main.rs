@@ -8,6 +8,7 @@ use std::{
     sync::Arc,
 };
 include!("../../../generated/cases.rs");
+mod hp_counter_proof;
 fn bindings() -> Result<BTreeMap<String, InventoryBinding>> {
     Ok(driver::profiles()?
         .into_iter()
@@ -133,17 +134,65 @@ fn identities() -> Result<()> {
     assert_eq!(script.opens(), 0);
     Ok(())
 }
-fn synchronous() -> Result<()> {
-    identities()?;
-    for case in generated_cases::cases() {
-        let script = Script::new(case.script.clone());
-        let registry = DriverRegistry::new(driver::sync_factories_for_connections(
+
+fn hp_model(id: &str) -> Option<driver::hp5334::Model> {
+    match id.split('|').next().unwrap() {
+        "keysight.hp5334a" => Some(driver::hp5334::Model::Hp5334A),
+        "keysight.hp5334b" => Some(driver::hp5334::Model::Hp5334B),
+        _ => None,
+    }
+}
+fn case_candidate(case: &CatalogCase) -> Candidate {
+    let mut c = candidate();
+    if hp_model(case.id).is_some() {
+        c.endpoint.scheme = "hpib".into();
+    }
+    c
+}
+fn case_factories(
+    case: &CatalogCase,
+    script: &Script,
+    native: bool,
+) -> Result<Vec<Arc<dyn DriverFactory>>> {
+    if let Some(model) = hp_model(case.id) {
+        let factory = driver::hp5334::Factory::new(
+            model,
+            driver::hp5334::Commissioning::NativeInternalGatingConfirmed,
+            Arc::new(script.clone()),
+        )?;
+        #[cfg(feature = "async")]
+        let factory = if native {
+            factory.with_native_connector(Arc::new(script.clone()))
+        } else {
+            factory
+        };
+        #[cfg(not(feature = "async"))]
+        let _ = native;
+        return Ok(vec![Arc::new(factory)]);
+    }
+    #[cfg(feature = "async")]
+    if native {
+        return driver::native_factories_for_connections(
             Arc::new(script.clone()),
             &BTreeMap::new(),
-            &connections_for(&case)?,
-        )?)?;
+            &connections_for(case)?,
+        );
+    }
+    driver::sync_factories_for_connections(
+        Arc::new(script.clone()),
+        &BTreeMap::new(),
+        &connections_for(case)?,
+    )
+}
+
+fn synchronous() -> Result<()> {
+    identities()?;
+    hp_counter_proof::synchronous()?;
+    for case in generated_cases::cases() {
+        let script = Script::new(case.script.clone());
+        let registry = DriverRegistry::new(case_factories(&case, &script, false)?)?;
         let h = registry.open(
-            &candidate(),
+            &case_candidate(&case),
             &selection(case.id),
             &BTreeSet::new(),
             ExecutionMode::Sync,
@@ -168,28 +217,17 @@ fn synchronous() -> Result<()> {
 }
 #[cfg(feature = "async")]
 async fn asynchronous() -> Result<()> {
+    hp_counter_proof::asynchronous().await?;
     for mode in 0..3 {
         for case in generated_cases::cases() {
             let script = Script::new(case.script.clone());
-            let factories = if mode == 0 {
-                driver::native_factories_for_connections(
-                    Arc::new(script.clone()),
-                    &BTreeMap::new(),
-                    &connections_for(&case)?,
-                )?
-            } else {
-                driver::sync_factories_for_connections(
-                    Arc::new(script.clone()),
-                    &BTreeMap::new(),
-                    &connections_for(&case)?,
-                )?
-            };
+            let factories = case_factories(&case, &script, mode == 0)?;
             let registry = DriverRegistry::new(factories)?;
             let native = if mode == 0 {
                 Some(
                     registry
                         .open_native(
-                            &candidate(),
+                            &case_candidate(&case),
                             &selection(case.id),
                             &BTreeSet::new(),
                             ConnectionOwnership::Owned,
@@ -203,7 +241,7 @@ async fn asynchronous() -> Result<()> {
                 Some(
                     registry
                         .open_worker(
-                            &candidate(),
+                            &case_candidate(&case),
                             &selection(case.id),
                             &BTreeSet::new(),
                             ConnectionOwnership::Owned,

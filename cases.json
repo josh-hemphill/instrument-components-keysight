@@ -20203,6 +20203,2124 @@
         }
       ],
       "expectedError": "UnsupportedOperation"
+    },
+    {
+      "id": "keysight.hp5334a|H|frequency-a",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F   +4.58341265E+05"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 458341.265,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp5334a|H|frequency-b",
+      "calls": [
+        {
+          "operation": "CounterSelectChannel",
+          "arguments": {
+            "channel": 2
+          }
+        },
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN2,HS0,MD1,WA1,RE",
+          "response": "F   +4.58341265E+05"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 458341.265,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp5334a|H|period-a",
+      "calls": [
+        {
+          "operation": "CounterMeasurePeriod",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN4,HS0,MD1,WA1,RE",
+          "response": "S   +4.58341265E-05"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 4.58341265e-05,
+        "unit": "Second",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp5334a|H|period-b-rejected",
+      "calls": [
+        {
+          "operation": "CounterSelectChannel",
+          "arguments": {
+            "channel": 2
+          }
+        },
+        {
+          "operation": "CounterMeasurePeriod",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "UnsupportedOperation"
+    },
+    {
+      "id": "keysight.hp5334a|H|invalid-channel-0",
+      "calls": [
+        {
+          "operation": "CounterSelectChannel",
+          "arguments": {
+            "channel": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp5334a|H|invalid-channel-3",
+      "calls": [
+        {
+          "operation": "CounterSelectChannel",
+          "arguments": {
+            "channel": 3
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp5334a|H|invalid-channel-4294967295",
+      "calls": [
+        {
+          "operation": "CounterSelectChannel",
+          "arguments": {
+            "channel": 4294967295
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp5334a|H|gate-0.001",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 0.001
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "GA1.00000000000E-03"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp5334a|H|gate-reapply-0.001",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 0.001
+          }
+        },
+        {
+          "operation": "CounterSelectChannel",
+          "arguments": {
+            "channel": 2
+          }
+        },
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "GA1.00000000000E-03"
+        },
+        {
+          "kind": "query",
+          "message": "FN2,HS0,MD1,WA1,GA1.00000000000E-03,RE",
+          "response": "F   +4.58341265E+05"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 458341.265,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp5334a|H|gate-99.999",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 99.999
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "GA9.99990000000E+01"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp5334a|H|gate-reapply-99.999",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 99.999
+          }
+        },
+        {
+          "operation": "CounterSelectChannel",
+          "arguments": {
+            "channel": 2
+          }
+        },
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "GA9.99990000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": "FN2,HS0,MD1,WA1,GA9.99990000000E+01,RE",
+          "response": "F   +4.58341265E+05"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 458341.265,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp5334a|H|gate-0.01",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 0.01
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "GA1.00000000000E-02"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp5334a|H|gate-reapply-0.01",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 0.01
+          }
+        },
+        {
+          "operation": "CounterSelectChannel",
+          "arguments": {
+            "channel": 2
+          }
+        },
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "GA1.00000000000E-02"
+        },
+        {
+          "kind": "query",
+          "message": "FN2,HS0,MD1,WA1,GA1.00000000000E-02,RE",
+          "response": "F   +4.58341265E+05"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 458341.265,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp5334a|H|gate-reject-0",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp5334a|H|gate-reject--1",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": -1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp5334a|H|gate-reject-0.000999",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 0.000999
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp5334a|H|gate-reject-100",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 100
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp5334a|H|reset-restores-a-and-gate",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 0.01
+          }
+        },
+        {
+          "operation": "CounterSelectChannel",
+          "arguments": {
+            "channel": 2
+          }
+        },
+        {
+          "operation": "Reset",
+          "arguments": {}
+        },
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "GA1.00000000000E-02"
+        },
+        {
+          "kind": "write",
+          "message": "IN"
+        },
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F 0E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp5334a|H|negative",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F   -4.58341265E+05"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": -458341.265,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp5334a|H|zero-short",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F 0E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp5334a|H|zero-padded",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F             0E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp5334a|H|decimal-omitted",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F            +1E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp5334a|H|period-zero",
+      "calls": [
+        {
+          "operation": "CounterMeasurePeriod",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN4,HS0,MD1,WA1,RE",
+          "response": "S 0E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Second",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp5334a|H|frequency-overload",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "O+9.99999999999E+99"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Hertz",
+        "status": "Overload"
+      }
+    },
+    {
+      "id": "keysight.hp5334a|H|period-overload",
+      "calls": [
+        {
+          "operation": "CounterMeasurePeriod",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN4,HS0,MD1,WA1,RE",
+          "response": "O+9.99999999999E+99"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Second",
+        "status": "Overload"
+      }
+    },
+    {
+      "id": "keysight.hp5334a|H|parse-reject-0",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": ""
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334a|H|parse-reject-1",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334a|H|parse-reject-2",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F+1E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334a|H|parse-reject-3",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F   4.58341265E+05"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334a|H|parse-reject-4",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "S   +4.58341265E+05"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334a|H|parse-reject-5",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F   +4.58341265e+05"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334a|H|parse-reject-6",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F   +4.58341265E+0X"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334a|H|parse-reject-7",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F   +4.58341265E+05x"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334a|H|parse-reject-8",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F   +4.58341265E+05\r\n"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334a|H|parse-reject-9",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F   +4.58341265E+05,2"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334a|H|parse-reject-10",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "O+9.99999999998E+99"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334a|H|parse-reject-11",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "0+9.99999999999E+99"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334a|H|parse-reject-12",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F NaNE+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334a|H|parse-reject-13",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F InfinityE+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334a|H|parse-reject-14",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F   +4.58341265E+\uff105"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334a|H|parse-reject-15",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F\u0000  +4.58341265E+05"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334a|H|parse-reject-16",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F                                                                                                                                                                                                                                                                0E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334a|H|query-timeout",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.hp5334a|H|query-transport",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.hp5334a|H|gate-write-timeout",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 0.01
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "GA1.00000000000E-02",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.hp5334a|H|reset-write-failure",
+      "calls": [
+        {
+          "operation": "Reset",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "IN",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.hp5334b|H|frequency-a",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F   +4.58341265E+05"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 458341.265,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp5334b|H|frequency-b",
+      "calls": [
+        {
+          "operation": "CounterSelectChannel",
+          "arguments": {
+            "channel": 2
+          }
+        },
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN2,HS0,MD1,WA1,RE",
+          "response": "F   +4.58341265E+05"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 458341.265,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp5334b|H|period-a",
+      "calls": [
+        {
+          "operation": "CounterMeasurePeriod",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN4,HS0,MD1,WA1,RE",
+          "response": "S   +4.58341265E-05"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 4.58341265e-05,
+        "unit": "Second",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp5334b|H|period-b-rejected",
+      "calls": [
+        {
+          "operation": "CounterSelectChannel",
+          "arguments": {
+            "channel": 2
+          }
+        },
+        {
+          "operation": "CounterMeasurePeriod",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "UnsupportedOperation"
+    },
+    {
+      "id": "keysight.hp5334b|H|invalid-channel-0",
+      "calls": [
+        {
+          "operation": "CounterSelectChannel",
+          "arguments": {
+            "channel": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp5334b|H|invalid-channel-3",
+      "calls": [
+        {
+          "operation": "CounterSelectChannel",
+          "arguments": {
+            "channel": 3
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp5334b|H|invalid-channel-4294967295",
+      "calls": [
+        {
+          "operation": "CounterSelectChannel",
+          "arguments": {
+            "channel": 4294967295
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp5334b|H|gate-0.001",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 0.001
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "GA1.00000000000E-03"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp5334b|H|gate-reapply-0.001",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 0.001
+          }
+        },
+        {
+          "operation": "CounterSelectChannel",
+          "arguments": {
+            "channel": 2
+          }
+        },
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "GA1.00000000000E-03"
+        },
+        {
+          "kind": "query",
+          "message": "FN2,HS0,MD1,WA1,GA1.00000000000E-03,RE",
+          "response": "F   +4.58341265E+05"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 458341.265,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp5334b|H|gate-99.999",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 99.999
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "GA9.99990000000E+01"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp5334b|H|gate-reapply-99.999",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 99.999
+          }
+        },
+        {
+          "operation": "CounterSelectChannel",
+          "arguments": {
+            "channel": 2
+          }
+        },
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "GA9.99990000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": "FN2,HS0,MD1,WA1,GA9.99990000000E+01,RE",
+          "response": "F   +4.58341265E+05"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 458341.265,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp5334b|H|gate-0.01",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 0.01
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "GA1.00000000000E-02"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp5334b|H|gate-reapply-0.01",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 0.01
+          }
+        },
+        {
+          "operation": "CounterSelectChannel",
+          "arguments": {
+            "channel": 2
+          }
+        },
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "GA1.00000000000E-02"
+        },
+        {
+          "kind": "query",
+          "message": "FN2,HS0,MD1,WA1,GA1.00000000000E-02,RE",
+          "response": "F   +4.58341265E+05"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 458341.265,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp5334b|H|gate-reject-0",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp5334b|H|gate-reject--1",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": -1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp5334b|H|gate-reject-0.000999",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 0.000999
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp5334b|H|gate-reject-100",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 100
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp5334b|H|reset-restores-a-and-gate",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 0.01
+          }
+        },
+        {
+          "operation": "CounterSelectChannel",
+          "arguments": {
+            "channel": 2
+          }
+        },
+        {
+          "operation": "Reset",
+          "arguments": {}
+        },
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "GA1.00000000000E-02"
+        },
+        {
+          "kind": "write",
+          "message": "IN"
+        },
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F 0E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp5334b|H|negative",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F   -4.58341265E+05"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": -458341.265,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp5334b|H|zero-short",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F 0E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp5334b|H|zero-padded",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F             0E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp5334b|H|decimal-omitted",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F            +1E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp5334b|H|period-zero",
+      "calls": [
+        {
+          "operation": "CounterMeasurePeriod",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN4,HS0,MD1,WA1,RE",
+          "response": "S 0E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Second",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp5334b|H|frequency-overload",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "O+9.99999999999E+99"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Hertz",
+        "status": "Overload"
+      }
+    },
+    {
+      "id": "keysight.hp5334b|H|period-overload",
+      "calls": [
+        {
+          "operation": "CounterMeasurePeriod",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN4,HS0,MD1,WA1,RE",
+          "response": "O+9.99999999999E+99"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Second",
+        "status": "Overload"
+      }
+    },
+    {
+      "id": "keysight.hp5334b|H|parse-reject-0",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": ""
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334b|H|parse-reject-1",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334b|H|parse-reject-2",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F+1E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334b|H|parse-reject-3",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F   4.58341265E+05"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334b|H|parse-reject-4",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "S   +4.58341265E+05"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334b|H|parse-reject-5",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F   +4.58341265e+05"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334b|H|parse-reject-6",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F   +4.58341265E+0X"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334b|H|parse-reject-7",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F   +4.58341265E+05x"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334b|H|parse-reject-8",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F   +4.58341265E+05\r\n"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334b|H|parse-reject-9",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F   +4.58341265E+05,2"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334b|H|parse-reject-10",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "O+9.99999999998E+99"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334b|H|parse-reject-11",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "0+9.99999999999E+99"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334b|H|parse-reject-12",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F NaNE+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334b|H|parse-reject-13",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F InfinityE+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334b|H|parse-reject-14",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F   +4.58341265E+\uff105"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334b|H|parse-reject-15",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F\u0000  +4.58341265E+05"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334b|H|parse-reject-16",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "response": "F                                                                                                                                                                                                                                                                0E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp5334b|H|query-timeout",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.hp5334b|H|query-transport",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "FN1,HS0,MD1,WA1,RE",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.hp5334b|H|gate-write-timeout",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 0.01
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "GA1.00000000000E-02",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.hp5334b|H|reset-write-failure",
+      "calls": [
+        {
+          "operation": "Reset",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "IN",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
     }
   ]
 }

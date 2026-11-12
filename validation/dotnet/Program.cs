@@ -3,6 +3,7 @@ using InstrumentComponents.Drivers.Catalog;
 using InstrumentComponents.Runtime;
 using InstrumentComponents.Scpi;
 using InstrumentComponents.TestKit;
+using InstrumentComponents.Drivers.Keysight;
 using Vendor=InstrumentComponents.Drivers.Keysight.Drivers;
 using Identity=InstrumentComponents.Drivers.DeviceIdentity;
 await Proof.Run();
@@ -15,6 +16,7 @@ internal static class Proof {
     });
     private static DeviceCandidate Candidate=>new(new("scpi","fixture"),new());
     public static async Task Run(){
+        await HpCounterProof.Run();
         var empty=new Script([]);var registration=Vendor.Factories(empty);var passive=new DriverRegistry(registration);
         foreach(var factory in registration)foreach(var rule in factory.Descriptor.Rules){
             var identity=rule switch {ExactIdentityRule r=>new Identity(r.Manufacturer,r.Model),ExactProductRule r=>new Identity(VendorId:r.VendorId,ProductId:r.ProductId),_=>throw new InvalidOperationException("Expected exact migrated hint")};
@@ -24,8 +26,11 @@ internal static class Proof {
         for(var mode=0;mode<4;mode++)foreach(var test in GeneratedDrivers.GeneratedCases.Create()){
             var script=new Script(test.Script);var bindings=test.Id.Split('|')[1]=="U"?null:Bindings();
             var connections=bindings?.Select(p=>new InstrumentComponents.Drivers.Keysight.ConnectionBinding(p.Key,Candidate.Endpoint,p.Value)).ToArray();
-            var registry=new DriverRegistry(mode==1?Vendor.NativeFactories(script,connections:connections):Vendor.Factories(script,connections:connections));var selection=new DriverSelection(DriverId:test.Id.Split('|')[0]);
-            var sync=mode==0?registry.Open(Candidate,selection):null;var native=mode==1?await registry.OpenNativeAsync(Candidate,selection):null;var worker=mode>=2?await registry.OpenWorkerAsync(Candidate,selection):null;
+            var hpModel=test.Id.StartsWith("keysight.hp5334a|",StringComparison.Ordinal)?Hp5334Model.Hp5334A:test.Id.StartsWith("keysight.hp5334b|",StringComparison.Ordinal)?Hp5334Model.Hp5334B:(Hp5334Model?)null;
+            var candidate=hpModel is null?Candidate:Candidate with{Endpoint=new("hpib","fixture")};
+            var factories=hpModel is {} model?new IDriverFactory[]{new Hp5334Factory(model,Hp5334Commissioning.NativeInternalGatingConfirmed,script,mode==1?script:null)}:mode==1?Vendor.NativeFactories(script,connections:connections):Vendor.Factories(script,connections:connections);
+            var registry=new DriverRegistry(factories);var selection=new DriverSelection(DriverId:test.Id.Split('|')[0]);
+            var sync=mode==0?registry.Open(candidate,selection):null;var native=mode==1?await registry.OpenNativeAsync(candidate,selection):null;var worker=mode>=2?await registry.OpenWorkerAsync(candidate,selection):null;
             for(var i=0;i<test.Calls.Count;i++){
                 CatalogReply? actual=null;DriverException? failure=null;
                 try{actual=mode switch{0=>sync!.Invoke(test.Calls[i]),1=>await native!.InvokeAsync(test.Calls[i]),2=>await worker!.InvokeAsync(test.Calls[i]),_=>worker!.Invoke(test.Calls[i])};}catch(DriverException error){failure=error;}
@@ -37,7 +42,7 @@ internal static class Proof {
             if(closed?.Kind!=DriverErrorKind.SessionClosed)throw new InvalidOperationException(test.Id+": closed handle accepted operation");
             script.AssertComplete();if(script.Opens!=1 || script.Closes!=1)throw new InvalidOperationException("Resource lifetime");
         }
-        Console.WriteLine($"PASS Keysight packaged Native AOT: {GeneratedDrivers.GeneratedCases.Create().Count} independent cases x 4 frontends; exact traffic, values, units, errors and lifetime");
+        Console.WriteLine($"PASS Keysight conformance: {GeneratedDrivers.GeneratedCases.Create().Count} independent cases x 4 frontends; exact traffic, values, units, errors and lifetime");
     }
     private static bool Equal(CatalogReply actual,CatalogReply expected)=>(actual,expected) switch{(CatalogReply.Trace a,CatalogReply.Trace b)=>a.Value.Unit==b.Value.Unit && a.Value.SampleIntervalS==b.Value.SampleIntervalS && a.Value.Values.SequenceEqual(b.Value.Values),_=>actual==expected};
 }

@@ -6035,5 +6035,665 @@ CatalogRequest::OscilloscopeSetTriggerSource { source: "CHAN2".into() },
 ScriptStep::Close(Ok(())),
 ],
 expected: None, expected_error: Some(ErrorKind::UnsupportedOperation) },
+CatalogCase { id: "keysight.hp5334a|H|frequency-a", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F   +4.58341265E+05".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 458341.265, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp5334a|H|frequency-b", calls: vec![
+CatalogRequest::CounterSelectChannel { channel: 2 },
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN2,HS0,MD1,WA1,RE".into(), Ok("F   +4.58341265E+05".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 458341.265, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp5334a|H|period-a", calls: vec![
+CatalogRequest::CounterMeasurePeriod,
+], script: vec![
+ScriptStep::Query("FN4,HS0,MD1,WA1,RE".into(), Ok("S   +4.58341265E-05".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 4.58341265e-05, unit: Unit::Second, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp5334a|H|period-b-rejected", calls: vec![
+CatalogRequest::CounterSelectChannel { channel: 2 },
+CatalogRequest::CounterMeasurePeriod,
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::UnsupportedOperation) },
+CatalogCase { id: "keysight.hp5334a|H|invalid-channel-0", calls: vec![
+CatalogRequest::CounterSelectChannel { channel: 0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp5334a|H|invalid-channel-3", calls: vec![
+CatalogRequest::CounterSelectChannel { channel: 3 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp5334a|H|invalid-channel-4294967295", calls: vec![
+CatalogRequest::CounterSelectChannel { channel: 4294967295 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp5334a|H|gate-0.001", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 0.001 },
+], script: vec![
+ScriptStep::Write("GA1.00000000000E-03".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp5334a|H|gate-reapply-0.001", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 0.001 },
+CatalogRequest::CounterSelectChannel { channel: 2 },
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write("GA1.00000000000E-03".into()),
+ScriptStep::Query("FN2,HS0,MD1,WA1,GA1.00000000000E-03,RE".into(), Ok("F   +4.58341265E+05".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 458341.265, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp5334a|H|gate-99.999", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 99.999 },
+], script: vec![
+ScriptStep::Write("GA9.99990000000E+01".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp5334a|H|gate-reapply-99.999", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 99.999 },
+CatalogRequest::CounterSelectChannel { channel: 2 },
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write("GA9.99990000000E+01".into()),
+ScriptStep::Query("FN2,HS0,MD1,WA1,GA9.99990000000E+01,RE".into(), Ok("F   +4.58341265E+05".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 458341.265, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp5334a|H|gate-0.01", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 0.01 },
+], script: vec![
+ScriptStep::Write("GA1.00000000000E-02".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp5334a|H|gate-reapply-0.01", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 0.01 },
+CatalogRequest::CounterSelectChannel { channel: 2 },
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write("GA1.00000000000E-02".into()),
+ScriptStep::Query("FN2,HS0,MD1,WA1,GA1.00000000000E-02,RE".into(), Ok("F   +4.58341265E+05".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 458341.265, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp5334a|H|gate-reject-0", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 0.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp5334a|H|gate-reject--1", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: -1.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp5334a|H|gate-reject-0.000999", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 0.000999 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp5334a|H|gate-reject-100", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 100.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp5334a|H|reset-restores-a-and-gate", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 0.01 },
+CatalogRequest::CounterSelectChannel { channel: 2 },
+CatalogRequest::Reset,
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write("GA1.00000000000E-02".into()),
+ScriptStep::Write("IN".into()),
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F 0E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.0, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp5334a|H|negative", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F   -4.58341265E+05".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: -458341.265, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp5334a|H|zero-short", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F 0E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.0, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp5334a|H|zero-padded", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F             0E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.0, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp5334a|H|decimal-omitted", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F            +1E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1.0, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp5334a|H|period-zero", calls: vec![
+CatalogRequest::CounterMeasurePeriod,
+], script: vec![
+ScriptStep::Query("FN4,HS0,MD1,WA1,RE".into(), Ok("S 0E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.0, unit: Unit::Second, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp5334a|H|frequency-overload", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("O+9.99999999999E+99".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.0, unit: Unit::Hertz, status: MeasurementStatus::Overload })), expected_error: None },
+CatalogCase { id: "keysight.hp5334a|H|period-overload", calls: vec![
+CatalogRequest::CounterMeasurePeriod,
+], script: vec![
+ScriptStep::Query("FN4,HS0,MD1,WA1,RE".into(), Ok("O+9.99999999999E+99".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.0, unit: Unit::Second, status: MeasurementStatus::Overload })), expected_error: None },
+CatalogCase { id: "keysight.hp5334a|H|parse-reject-0", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334a|H|parse-reject-1", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334a|H|parse-reject-2", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F+1E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334a|H|parse-reject-3", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F   4.58341265E+05".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334a|H|parse-reject-4", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("S   +4.58341265E+05".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334a|H|parse-reject-5", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F   +4.58341265e+05".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334a|H|parse-reject-6", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F   +4.58341265E+0X".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334a|H|parse-reject-7", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F   +4.58341265E+05x".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334a|H|parse-reject-8", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F   +4.58341265E+05\r\n".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334a|H|parse-reject-9", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F   +4.58341265E+05,2".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334a|H|parse-reject-10", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("O+9.99999999998E+99".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334a|H|parse-reject-11", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("0+9.99999999999E+99".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334a|H|parse-reject-12", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F NaNE+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334a|H|parse-reject-13", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F InfinityE+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334a|H|parse-reject-14", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F   +4.58341265E+０5".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334a|H|parse-reject-15", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F\u{0}  +4.58341265E+05".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334a|H|parse-reject-16", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F                                                                                                                                                                                                                                                                0E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334a|H|query-timeout", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.hp5334a|H|query-transport", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.hp5334a|H|gate-write-timeout", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 0.01 },
+], script: vec![
+ScriptStep::WriteFailure("GA1.00000000000E-02".into(), instrument_api::DriverError::new(ErrorKind::Timeout, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.hp5334a|H|reset-write-failure", calls: vec![
+CatalogRequest::Reset,
+], script: vec![
+ScriptStep::WriteFailure("IN".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.hp5334b|H|frequency-a", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F   +4.58341265E+05".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 458341.265, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp5334b|H|frequency-b", calls: vec![
+CatalogRequest::CounterSelectChannel { channel: 2 },
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN2,HS0,MD1,WA1,RE".into(), Ok("F   +4.58341265E+05".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 458341.265, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp5334b|H|period-a", calls: vec![
+CatalogRequest::CounterMeasurePeriod,
+], script: vec![
+ScriptStep::Query("FN4,HS0,MD1,WA1,RE".into(), Ok("S   +4.58341265E-05".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 4.58341265e-05, unit: Unit::Second, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp5334b|H|period-b-rejected", calls: vec![
+CatalogRequest::CounterSelectChannel { channel: 2 },
+CatalogRequest::CounterMeasurePeriod,
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::UnsupportedOperation) },
+CatalogCase { id: "keysight.hp5334b|H|invalid-channel-0", calls: vec![
+CatalogRequest::CounterSelectChannel { channel: 0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp5334b|H|invalid-channel-3", calls: vec![
+CatalogRequest::CounterSelectChannel { channel: 3 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp5334b|H|invalid-channel-4294967295", calls: vec![
+CatalogRequest::CounterSelectChannel { channel: 4294967295 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp5334b|H|gate-0.001", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 0.001 },
+], script: vec![
+ScriptStep::Write("GA1.00000000000E-03".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp5334b|H|gate-reapply-0.001", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 0.001 },
+CatalogRequest::CounterSelectChannel { channel: 2 },
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write("GA1.00000000000E-03".into()),
+ScriptStep::Query("FN2,HS0,MD1,WA1,GA1.00000000000E-03,RE".into(), Ok("F   +4.58341265E+05".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 458341.265, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp5334b|H|gate-99.999", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 99.999 },
+], script: vec![
+ScriptStep::Write("GA9.99990000000E+01".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp5334b|H|gate-reapply-99.999", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 99.999 },
+CatalogRequest::CounterSelectChannel { channel: 2 },
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write("GA9.99990000000E+01".into()),
+ScriptStep::Query("FN2,HS0,MD1,WA1,GA9.99990000000E+01,RE".into(), Ok("F   +4.58341265E+05".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 458341.265, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp5334b|H|gate-0.01", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 0.01 },
+], script: vec![
+ScriptStep::Write("GA1.00000000000E-02".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp5334b|H|gate-reapply-0.01", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 0.01 },
+CatalogRequest::CounterSelectChannel { channel: 2 },
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write("GA1.00000000000E-02".into()),
+ScriptStep::Query("FN2,HS0,MD1,WA1,GA1.00000000000E-02,RE".into(), Ok("F   +4.58341265E+05".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 458341.265, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp5334b|H|gate-reject-0", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 0.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp5334b|H|gate-reject--1", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: -1.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp5334b|H|gate-reject-0.000999", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 0.000999 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp5334b|H|gate-reject-100", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 100.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp5334b|H|reset-restores-a-and-gate", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 0.01 },
+CatalogRequest::CounterSelectChannel { channel: 2 },
+CatalogRequest::Reset,
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write("GA1.00000000000E-02".into()),
+ScriptStep::Write("IN".into()),
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F 0E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.0, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp5334b|H|negative", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F   -4.58341265E+05".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: -458341.265, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp5334b|H|zero-short", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F 0E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.0, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp5334b|H|zero-padded", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F             0E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.0, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp5334b|H|decimal-omitted", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F            +1E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1.0, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp5334b|H|period-zero", calls: vec![
+CatalogRequest::CounterMeasurePeriod,
+], script: vec![
+ScriptStep::Query("FN4,HS0,MD1,WA1,RE".into(), Ok("S 0E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.0, unit: Unit::Second, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp5334b|H|frequency-overload", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("O+9.99999999999E+99".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.0, unit: Unit::Hertz, status: MeasurementStatus::Overload })), expected_error: None },
+CatalogCase { id: "keysight.hp5334b|H|period-overload", calls: vec![
+CatalogRequest::CounterMeasurePeriod,
+], script: vec![
+ScriptStep::Query("FN4,HS0,MD1,WA1,RE".into(), Ok("O+9.99999999999E+99".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.0, unit: Unit::Second, status: MeasurementStatus::Overload })), expected_error: None },
+CatalogCase { id: "keysight.hp5334b|H|parse-reject-0", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334b|H|parse-reject-1", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334b|H|parse-reject-2", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F+1E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334b|H|parse-reject-3", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F   4.58341265E+05".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334b|H|parse-reject-4", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("S   +4.58341265E+05".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334b|H|parse-reject-5", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F   +4.58341265e+05".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334b|H|parse-reject-6", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F   +4.58341265E+0X".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334b|H|parse-reject-7", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F   +4.58341265E+05x".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334b|H|parse-reject-8", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F   +4.58341265E+05\r\n".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334b|H|parse-reject-9", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F   +4.58341265E+05,2".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334b|H|parse-reject-10", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("O+9.99999999998E+99".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334b|H|parse-reject-11", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("0+9.99999999999E+99".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334b|H|parse-reject-12", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F NaNE+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334b|H|parse-reject-13", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F InfinityE+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334b|H|parse-reject-14", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F   +4.58341265E+０5".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334b|H|parse-reject-15", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F\u{0}  +4.58341265E+05".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334b|H|parse-reject-16", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Ok("F                                                                                                                                                                                                                                                                0E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp5334b|H|query-timeout", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.hp5334b|H|query-transport", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query("FN1,HS0,MD1,WA1,RE".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.hp5334b|H|gate-write-timeout", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 0.01 },
+], script: vec![
+ScriptStep::WriteFailure("GA1.00000000000E-02".into(), instrument_api::DriverError::new(ErrorKind::Timeout, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.hp5334b|H|reset-write-failure", calls: vec![
+CatalogRequest::Reset,
+], script: vec![
+ScriptStep::WriteFailure("IN".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
 ] }
 }
