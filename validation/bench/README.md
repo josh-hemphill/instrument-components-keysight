@@ -6,7 +6,13 @@ It is a bench host, separate from the Native AOT application proof in
 commands for some model hints, including the 2602B, are source evidence only;
 review device manuals and each driver's provenance before physical execution.
 
-From the repository root, after the reviewed previews are public:
+This branch includes unpublished response-limit APIs. Before corrected packages
+are published, the composition workflow supplies isolated candidate feeds and
+records their exact hashes; its bench self-test uses those feeds. A restore of
+public alpha.1 alone cannot compile the updated adapter. Prepare new version pins
+and use the commands below only after the corrected preview is public.
+
+From the repository root, after that release:
 
 ```sh
 dotnet restore validation/bench/Bench.csproj
@@ -16,7 +22,9 @@ dotnet run --project validation/bench/Bench.csproj -- --validate-config --config
 ```
 
 These modes never open VISA. The self-test exercises exact fake identity and
-measurement traffic, bounds, units and one connection lifetime. Commit the
+measurement traffic, bounds, units and one connection lifetime. It also injects a
+fake byte transport to verify the adapter's 1 MiB payload cap, early block-header
+rejection and typed parse errors without opening VISA. Commit the
 resolved `packages.lock.json` after public restore; subsequent bench execution
 uses `dotnet restore --locked-mode`. Artifact-bootstrap software validation is
 recorded separately and is not a public-registry or physical-evidence claim.

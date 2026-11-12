@@ -11,7 +11,7 @@ cargo add instrument-driver-keysight@=0.2.0-alpha.1
 dotnet add package InstrumentComponents.Drivers.Keysight --version 0.2.0-alpha.1
 ```
 
-Use the [complete hardware-free Rust/C# guide](https://github.com/josh-hemphill/instrument-components/blob/f1d5da50226265f527342a3cb82b89a2c7c32784/docs-site/docs/getting-started.md) before connecting equipment. It uses exact public package versions and an in-memory development connector. Select this family's factories explicitly; adding a package never probes or opens hardware. The [published source tag](https://github.com/josh-hemphill/instrument-components-keysight/tree/driver-v0.2.0-alpha.1) contains this release; the default branch remains a scaffold until its implementation PR is merged.
+Use the [complete hardware-free Rust/C# guide](https://github.com/josh-hemphill/instrument-components/blob/72015932f9b168ac7d182fcb5ca7a367318505b8/docs-site/docs/getting-started.md) before connecting equipment. It uses exact public package versions and an in-memory development connector. Select this family's factories explicitly; adding a package never probes or opens hardware. The [published source tag](https://github.com/josh-hemphill/instrument-components-keysight/tree/driver-v0.2.0-alpha.1) contains this release; the default branch remains a scaffold until its implementation PR is merged.
 
 
 Models and aliases are passive hints carried forward from main commit

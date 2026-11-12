@@ -1,3 +1,5 @@
+using InstrumentComponents.Errors;
+using InstrumentComponents.Transport;
 using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Text.Json;
@@ -68,23 +70,46 @@ internal static class Bench{
  }
  private static string Hash(string file)=>Convert.ToHexString(SHA256.HashData(File.ReadAllBytes(file))).ToLowerInvariant();
  private static int SelfTest(){
+  CheckBoundedConnector();
   foreach(var unit in new[]{"999","1","ConfiguredDmm","ConfiguredPower","Unknown","Temperature","volt"}){
    try{Validate(new(){DriverId="fixture",Resource="fixture",Steps=[new(){Operation="DmmMeasureVoltageDc",ExpectedUnit=unit,Minimum=0,Maximum=2}]});throw new InvalidOperationException("Invalid physical unit accepted");}catch(ArgumentException){}
   }
   var io=new SelfConnector();var registry=new DriverRegistry(Factories(io));var candidate=new DeviceCandidate(new("scpi","self-test"),new());using var h=registry.Open(candidate,new(DriverId:"keysight.34401a"));
   var identity=h.Invoke(new QueryIdentityRequest()).IntoIdentity();var step=new BenchStep{Operation="DmmMeasureVoltageDc",ExpectedUnit="Volt",Minimum=1.2,Maximum=1.3};Validate(new(){DriverId="keysight.34401a",Resource="fixture",Steps=[step]});
   if(identity.Model!="34401A"||!Evaluate(step,h.Invoke(Request(step))).Passed)throw new InvalidOperationException("Bench evaluator");h.Close();if(io.Calls!=3)throw new InvalidOperationException("Unexpected bench traffic");Console.WriteLine("PASS bench executable self-test; no VISA session opened");return 0;}
+ private static void CheckBoundedConnector(){
+  var opener=new BoundedOpener();var connector=new BenchConnector(1000,[],opener);
+  using var io=connector.Open(new(new(new("scpi","TCPIP0::192.0.2.1::inst0::INSTR"),new()),ConnectionOwnership.Owned));
+  try{io.Query("READ?");throw new InvalidOperationException("Oversize bench response accepted");}
+  catch(DriverException error)when(error.Kind==DriverErrorKind.Parse&&error.InnerException is ParseException){}
+  if(opener.Options?.MaxResponseBytes!=ScpiNumbers.MaxResponseBytes||opener.Wire.Reads!=1)throw new InvalidOperationException("Bench message bound missing or oversized body read");
+ }
+ private sealed class BoundedOpener:ISessionOpener{
+  internal readonly BoundedWire Wire=new();internal ConnectOptions? Options;
+  public ITransport Open(ResourceAddress address,ConnectOptions options){Options=options;return Wire;}
+ }
+ private sealed class BoundedWire:TransportBase{
+  internal int Reads;
+  public override void Write(ReadOnlySpan<byte> data){}
+  public override int Read(Span<byte> buffer){if(++Reads>1)throw new InvalidOperationException("Oversize body must not be read");var header="#71048577"u8;header.CopyTo(buffer);return header.Length;}
+  public override void Clear(){}public override void SetReadTimeout(TimeSpan timeout){}
+ }
  private sealed class NoIo:IScpiConnector{public IMessageIo Open(DriverOpenContext context)=>throw new InvalidOperationException("Validation must not open IO");}
  private sealed class SelfConnector:IScpiConnector,IMessageIo{
   internal int Calls;public IMessageIo Open(DriverOpenContext context)=>this;public void Write(string message)=>throw new InvalidOperationException("Unexpected write");
   public string Query(string message)=>++Calls switch{1 when message=="*IDN?"=>"Keysight Technologies,34401A,self-test,fixture",2 when message==":MEAS:VOLT:DC?"=>"1.25",_=>throw new InvalidOperationException("Unexpected query")};public void Dispose()=>Calls++;
  }
 }
-internal sealed class BenchConnector(int timeoutMs,List<BenchTraffic> traffic):IScpiConnector{
- public IMessageIo Open(DriverOpenContext context){var timeout=TimeSpan.FromMilliseconds(timeoutMs);var options=new ConnectOptions{OpenTimeout=timeout,ReadTimeout=timeout,WriteTimeout=timeout,PerOpTimeout=timeout,ResetOnConnect=false,Retries=0,ReconnectOnFailure=false};var transport=new VisaSessionOpener().Open(ResourceAddress.Parse(context.Candidate.Endpoint.Address),options);return new Message(new ScpiSession(transport,options),traffic);}
+internal sealed class BenchConnector(int timeoutMs,List<BenchTraffic> traffic,ISessionOpener? opener=null):IScpiConnector{
+ public IMessageIo Open(DriverOpenContext context){try{var timeout=TimeSpan.FromMilliseconds(timeoutMs);var options=new ConnectOptions{MaxResponseBytes=ScpiNumbers.MaxResponseBytes,OpenTimeout=timeout,ReadTimeout=timeout,WriteTimeout=timeout,PerOpTimeout=timeout,ResetOnConnect=false,Retries=0,ReconnectOnFailure=false};var transport=(opener??new VisaSessionOpener()).Open(ResourceAddress.Parse(context.Candidate.Endpoint.Address),options);return new Message(new ScpiSession(transport,options),traffic);}catch(InstrumentException error){throw Translate(error);}}
+ private static DriverException Translate(InstrumentException error){
+  var kind=error is InvalidAddressException?DriverErrorKind.InvalidArgument:error is ParseException?DriverErrorKind.Parse:DriverErrorKind.Transport;
+  for(Exception? current=error;current is not null;current=current.InnerException)if(current is InstrumentTimeoutException or TimeoutException)kind=DriverErrorKind.Timeout;
+  return new(kind,error.Message,error);
+ }
  private sealed class Message(ScpiSession session,List<BenchTraffic> traffic):IMessageIo{
-  public void Write(string message){traffic.Add(new(DateTimeOffset.UtcNow,"write",message,null));session.Write(message);}
-  public string Query(string message){traffic.Add(new(DateTimeOffset.UtcNow,"query",message,null));var result=session.Query(message);traffic.Add(new(DateTimeOffset.UtcNow,"reply",message,result));return result;}
+  public void Write(string message){traffic.Add(new(DateTimeOffset.UtcNow,"write",message,null));try{session.Write(message);}catch(InstrumentException error){throw Translate(error);}}
+  public string Query(string message){traffic.Add(new(DateTimeOffset.UtcNow,"query",message,null));try{var result=session.Query(message);traffic.Add(new(DateTimeOffset.UtcNow,"reply",message,result));return result;}catch(InstrumentException error){throw Translate(error);}}
   public void Dispose()=>session.Dispose();
  }
 }
