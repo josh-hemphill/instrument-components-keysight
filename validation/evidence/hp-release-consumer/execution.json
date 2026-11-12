@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "evidenceLevel": "local source only; no public registry, Windows or hardware claim; final hosted source+packed matrix remains required",
+  "caseCount": 1424,
+  "boundedConsumerStackBytes": 33554432,
+  "compilerOptLevels": {
+    "instrument_api": 3,
+    "instrument_scpi": 3,
+    "instrument_testkit": 3,
+    "instrument_driver_keysight": 3,
+    "instrument_runtime": 3,
+    "keysight_package_proof": 0
+  },
+  "normalReleaseSupplement": "Full original normal-release Rust proof passed before profile change; production code and all cases/assertions unchanged",
+  "nativeSource": {
+    "rid": "linux-x64",
+    "framework": "net8.0",
+    "executed": true,
+    "sha256": "3fd5256eee65bac3d32538b95f6d81d732dc20a1ac76e0b29e71e6a72b403320",
+    "bytes": 5594824
+  },
+  "sourceFileSha256": {
+    "validation/rust/Cargo.toml": "232891f649e8bbd12eac2e368921c1a4778d752ac0416d8a7e694889e788e2cc",
+    "validation/rust/src/main.rs": "415c07ca44cb5909f4595ba7f2a6eccc347f0dcd80e5394e013e58eb2f564e93"
+  },
+  "logs": [
+    {
+      "log": "validation/evidence/hp-release-consumer/rust-normal-release.log",
+      "sha256": "6df994c900392590bd00fc4602de7fceab1b94fd5c7b8f0a4843cb85e9e1f851",
+      "scope": "completed local source check"
+    },
+    {
+      "log": "validation/evidence/hp-release-consumer/rust-fixture-profile-compiler.log",
+      "sha256": "7decba48dc34727ae1e2855b35bfb706a402c6740f2e853d5e5109d70d4991ff",
+      "scope": "compiler-profile-only; execution interrupted by workspace outage"
+    },
+    {
+      "log": "validation/evidence/hp-release-consumer/rust-bounded-stack.log",
+      "sha256": "a1074edd6102ee728031f261acdf55fb42757832aea0b8e750f6cd359afbe036",
+      "scope": "completed local source check"
+    },
+    {
+      "log": "validation/evidence/hp-release-consumer/rust-bounded-stack-clippy.log",
+      "sha256": "9e6fe0f53b33dfdaceddb2426773045f0a7e5548ae90aaf7baf3acc284381036",
+      "scope": "completed local source check"
+    },
+    {
+      "log": "validation/evidence/hp-release-consumer/native-source-publish.log",
+      "sha256": "1b2ecbccdac2d8b76898fcbf0e9ddf621f3d77613f89c33be3225274d6a0c634",
+      "scope": "completed local source check"
+    },
+    {
+      "log": "validation/evidence/hp-release-consumer/native-source-execute.log",
+      "sha256": "a34ff3d4b32b50d177ae6e79318973c366f36d26479ca3bc0f8dd34966b71148",
+      "scope": "completed local source check"
+    }
+  ]
+}

@@ -298,7 +298,7 @@ async fn asynchronous() -> Result<()> {
     }
     Ok(())
 }
-fn main() -> Result<()> {
+fn run() -> Result<()> {
     synchronous()?;
     #[cfg(feature = "async")]
     tokio::runtime::Builder::new_current_thread()
@@ -308,4 +308,16 @@ fn main() -> Result<()> {
         .block_on(asynchronous())?;
     println!("PASS Keysight package: {} independent cases; exact traffic, values, units, errors and resource lifetime",generated_cases::cases().len());
     Ok(())
+}
+
+fn main() -> Result<()> {
+    // The generated unoptimized fixture constructor exceeds Windows' default
+    // main-thread stack. This bounded stack belongs only to the test consumer.
+    std::thread::Builder::new()
+        .name("keysight-fixture-proof".into())
+        .stack_size(32 * 1024 * 1024)
+        .spawn(run)
+        .expect("create bounded fixture proof thread")
+        .join()
+        .unwrap_or_else(|panic| std::panic::resume_unwind(panic))
 }

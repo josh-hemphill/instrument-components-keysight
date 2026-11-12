@@ -1,0 +1,22 @@
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.27
+   Compiling instrument-api v0.2.0-alpha.1 (/workspace/instrument-components/crates/instrument-api)
+   Compiling pin-project-lite v0.2.17
+   Compiling instrument-scpi v0.2.0-alpha.1 (/workspace/instrument-components/crates/instrument-scpi)
+   Compiling syn v3.0.10
+   Compiling instrument-testkit v0.2.0-alpha.1 (/workspace/instrument-components/crates/instrument-testkit)
+   Compiling instrument-driver-keysight v0.2.0-alpha.1 (/workspace/instrument-components-keysight)
+   Compiling tokio-macros v2.7.2
+   Compiling tokio v1.54.1
+   Compiling instrument-runtime v0.2.0-alpha.1 (/workspace/instrument-components/crates/instrument-runtime)
+   Compiling keysight-package-proof v0.0.0 (/workspace/instrument-components-keysight/validation/rust)
+    Finished `release` profile [optimized] target(s) in 6m 50s
+     Running `/workspace/instrument-components/target/release/keysight-package-proof`
+PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine
+PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine
+PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up
+PASS HP5334A/B native cancellation before and during IO; quarantine and no detached host accesses
+PASS all six HP models native abandonment, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries
+PASS HP selected-route admission before native/worker acquisition; no unbound or ANT capability fallback
+PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime

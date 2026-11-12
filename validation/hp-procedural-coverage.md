@@ -38,3 +38,10 @@ builds and exercise the typed wrappers. All source/packed/default/async cases an
 procedural assertions remain enabled; C# NativeAOT settings are unchanged. This
 is an explicit validation-consumer profile, not a claim that its entire executable
 uses opt3. The fixture consumer is excluded from distributed driver archives.
+
+The complete Rust proof runs on one explicitly bounded32MiB consumer thread.
+This accommodates the large unoptimized fixture constructor on Windows, whose
+default main stack is smaller. Sync/native checks stay on this consumer thread;
+SDK worker ownership and affinity checks continue using their own worker threads.
+Spawn/join errors and panics fail the process; every assertion remains enabled.
+Production application/driver stack settings are unaffected.
