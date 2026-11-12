@@ -298,7 +298,7 @@ pub async fn run() -> Result<()> {
                     handle.close(false)?;
                 }
                 assert!(
-                started.elapsed() >= Duration::from_millis(15)
+                    started.elapsed() >= Duration::from_millis(15)
                         && started.elapsed() < Duration::from_secs(5)
                 );
                 assert_eq!(
@@ -306,6 +306,7 @@ pub async fn run() -> Result<()> {
                     if stall_write || index < 3 { 1 } else { 3 }
                 );
                 assert_eq!(host.closes.load(Ordering::SeqCst), 1);
+                assert_eq!(host.active.load(Ordering::SeqCst), 0);
             }
         }
     }

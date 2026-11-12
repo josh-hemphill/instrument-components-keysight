@@ -64,6 +64,7 @@ internal static class HpAsyncProof
                 }
                 Require(started.Elapsed >= TimeSpan.FromMilliseconds(15) && started.Elapsed < TimeSpan.FromSeconds(5), "Independent deadline expires pending IO (timer-resolution tolerance)");
                 Require(host.Calls == (stallWrite || index < 3 ? 1 : 3) && host.Closes == 1, "No retry after stalled IO; one close");
+                Require(host.Active == 0, "Deadline completion ends native host access");
             }
             }
         }

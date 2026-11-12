@@ -10,11 +10,19 @@ permissions:
   contents: read
   actions: read
 jobs:
+  acceptance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python spec/acceptance/compose.py --check
   sdk:
-    uses: josh-hemphill/instrument-components/.github/workflows/driver-sdk.yml@ea2ffc61a1d308c13f4af41a3e34f8698ed7f065
+    uses: josh-hemphill/instrument-components/.github/workflows/driver-sdk.yml@6524d9a3c1a1627f3fed8e4fbdca0f577220434c
     with:
       source_repository: josh-hemphill/instrument-components
-      source_ref: ea2ffc61a1d308c13f4af41a3e34f8698ed7f065
+      source_ref: 6524d9a3c1a1627f3fed8e4fbdca0f577220434c
   package:
-    needs: sdk
-    uses: josh-hemphill/instrument-components/.github/workflows/driver-package-bootstrap.yml@ea2ffc61a1d308c13f4af41a3e34f8698ed7f065
+    needs: [acceptance, sdk]
+    uses: josh-hemphill/instrument-components/.github/workflows/driver-package-bootstrap.yml@6524d9a3c1a1627f3fed8e4fbdca0f577220434c
