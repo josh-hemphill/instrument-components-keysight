@@ -1,0 +1,21 @@
+{
+  "ApprovedForHardware": false,
+  "DriverId": "keysight.34401a",
+  "Resource": "<operator-reviewed VISA address>",
+  "TimeoutMs": 5000,
+  "Operator": "",
+  "Wiring": "",
+  "Reference": "",
+  "VisaRuntimeVersion": "",
+  "Steps": [
+    {
+      "Operation": "DmmMeasureVoltageDc",
+      "ExpectedUnit": "Volt",
+      "Minimum": 1.2,
+      "Maximum": 1.3
+    }
+  ],
+  "ExpectedManufacturer": "Keysight Technologies",
+  "ExpectedModel": "34401A",
+  "ExpectedSerial": null
+}

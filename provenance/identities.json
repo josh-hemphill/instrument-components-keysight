@@ -1,0 +1,1170 @@
+[
+  {
+    "driver": "keysight.33220a",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "FunctionGenerator"
+        ],
+        "legacyResolution": {
+          "FunctionGenerator": {
+            "commandKeys": [
+              "burst_count",
+              "burst_state",
+              "burst_trigger",
+              "output_enable",
+              "set_amplitude",
+              "set_duty_cycle",
+              "set_frequency",
+              "set_load",
+              "set_offset",
+              "set_waveform"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_fgen"
+          }
+        },
+        "manufacturer": "Agilent Technologies",
+        "migration": "required",
+        "model": "33220A",
+        "repository": "instrument-components-keysight"
+      }
+    ],
+    "kinds": [
+      "FunctionGenerator"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "unknown",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": []
+  },
+  {
+    "driver": "keysight.33522b",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "FunctionGenerator"
+        ],
+        "legacyResolution": {
+          "FunctionGenerator": {
+            "commandKeys": [
+              "burst_count",
+              "burst_state",
+              "burst_trigger",
+              "output_enable",
+              "set_amplitude",
+              "set_duty_cycle",
+              "set_frequency",
+              "set_load",
+              "set_offset",
+              "set_waveform"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_fgen"
+          }
+        },
+        "manufacturer": "Keysight Technologies",
+        "migration": "required",
+        "model": "33522B",
+        "repository": "instrument-components-keysight"
+      }
+    ],
+    "kinds": [
+      "FunctionGenerator"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "unknown",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": []
+  },
+  {
+    "driver": "keysight.33622a",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "FunctionGenerator"
+        ],
+        "legacyResolution": {
+          "FunctionGenerator": {
+            "commandKeys": [
+              "burst_count",
+              "burst_state",
+              "burst_trigger",
+              "output_enable",
+              "set_amplitude",
+              "set_duty_cycle",
+              "set_frequency",
+              "set_load",
+              "set_offset",
+              "set_waveform"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_fgen"
+          }
+        },
+        "manufacturer": "Keysight Technologies",
+        "migration": "required",
+        "model": "33622A",
+        "repository": "instrument-components-keysight"
+      }
+    ],
+    "kinds": [
+      "FunctionGenerator"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "unknown",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": []
+  },
+  {
+    "driver": "keysight.34401a",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "Dmm"
+        ],
+        "legacyResolution": {
+          "Dmm": {
+            "commandKeys": [
+              "configure_voltage_dc",
+              "fetch",
+              "initiate",
+              "measure_current_ac",
+              "measure_current_dc",
+              "measure_resistance_2w",
+              "measure_resistance_4w",
+              "measure_temperature",
+              "measure_voltage_ac",
+              "measure_voltage_dc",
+              "read",
+              "software_trigger"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_dmm"
+          }
+        },
+        "manufacturer": "Agilent Technologies",
+        "migration": "required",
+        "model": "34401A",
+        "repository": "instrument-components-keysight"
+      },
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "Dmm"
+        ],
+        "legacyResolution": {
+          "Dmm": {
+            "commandKeys": [
+              "configure_voltage_dc",
+              "fetch",
+              "initiate",
+              "measure_current_ac",
+              "measure_current_dc",
+              "measure_resistance_2w",
+              "measure_resistance_4w",
+              "measure_temperature",
+              "measure_voltage_ac",
+              "measure_voltage_dc",
+              "read",
+              "software_trigger"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_dmm"
+          }
+        },
+        "manufacturer": "Keysight Technologies",
+        "migration": "required",
+        "model": "34401A",
+        "repository": "instrument-components-keysight"
+      }
+    ],
+    "kinds": [
+      "Dmm"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "modeled outputless class",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": []
+  },
+  {
+    "driver": "keysight.34410a",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "Dmm"
+        ],
+        "legacyResolution": {
+          "Dmm": {
+            "commandKeys": [
+              "configure_voltage_dc",
+              "fetch",
+              "initiate",
+              "measure_current_ac",
+              "measure_current_dc",
+              "measure_resistance_2w",
+              "measure_resistance_4w",
+              "measure_temperature",
+              "measure_voltage_ac",
+              "measure_voltage_dc",
+              "read",
+              "software_trigger"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_dmm"
+          }
+        },
+        "manufacturer": "Keysight Technologies",
+        "migration": "required",
+        "model": "34410A",
+        "repository": "instrument-components-keysight"
+      }
+    ],
+    "kinds": [
+      "Dmm"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "modeled outputless class",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": []
+  },
+  {
+    "driver": "keysight.34461a",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "Dmm"
+        ],
+        "legacyResolution": {
+          "Dmm": {
+            "commandKeys": [
+              "configure_voltage_dc",
+              "fetch",
+              "initiate",
+              "measure_current_ac",
+              "measure_current_dc",
+              "measure_resistance_2w",
+              "measure_resistance_4w",
+              "measure_temperature",
+              "measure_voltage_ac",
+              "measure_voltage_dc",
+              "read",
+              "software_trigger"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_dmm"
+          }
+        },
+        "manufacturer": "Keysight Technologies",
+        "migration": "required",
+        "model": "34461A",
+        "repository": "instrument-components-keysight"
+      }
+    ],
+    "kinds": [
+      "Dmm"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "modeled outputless class",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": []
+  },
+  {
+    "driver": "keysight.34465a",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "Dmm"
+        ],
+        "legacyResolution": {
+          "Dmm": {
+            "commandKeys": [
+              "configure_voltage_dc",
+              "fetch",
+              "initiate",
+              "measure_current_ac",
+              "measure_current_dc",
+              "measure_resistance_2w",
+              "measure_resistance_4w",
+              "measure_temperature",
+              "measure_voltage_ac",
+              "measure_voltage_dc",
+              "read",
+              "software_trigger"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_dmm"
+          }
+        },
+        "manufacturer": "Keysight Technologies",
+        "migration": "required",
+        "model": "34465A",
+        "repository": "instrument-components-keysight"
+      }
+    ],
+    "kinds": [
+      "Dmm"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "modeled outputless class",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": []
+  },
+  {
+    "driver": "keysight.34970a",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "Switch"
+        ],
+        "legacyResolution": {
+          "Switch": {
+            "commandKeys": [
+              "close_route",
+              "is_closed",
+              "open_all",
+              "open_route"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_switch"
+          }
+        },
+        "manufacturer": "Keysight Technologies",
+        "migration": "required",
+        "model": "34970A",
+        "repository": "instrument-components-keysight"
+      }
+    ],
+    "kinds": [
+      "Switch"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "modeled outputless class",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": [
+      {
+        "command": ":ROUTe:OPEN:ALL",
+        "response": "Write"
+      }
+    ]
+  },
+  {
+    "driver": "keysight.34972a",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "Switch"
+        ],
+        "legacyResolution": {
+          "Switch": {
+            "commandKeys": [
+              "close_route",
+              "is_closed",
+              "open_all",
+              "open_route"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_switch"
+          }
+        },
+        "manufacturer": "Keysight Technologies",
+        "migration": "required",
+        "model": "34972A",
+        "repository": "instrument-components-keysight"
+      }
+    ],
+    "kinds": [
+      "Switch"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "modeled outputless class",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": [
+      {
+        "command": ":ROUTe:OPEN:ALL",
+        "response": "Write"
+      }
+    ]
+  },
+  {
+    "driver": "keysight.53131a",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "Counter"
+        ],
+        "legacyResolution": {
+          "Counter": {
+            "commandKeys": [
+              "channel_select",
+              "gate_time",
+              "measure_frequency",
+              "measure_period",
+              "read_totalize",
+              "reset_totalize"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_counter"
+          }
+        },
+        "manufacturer": "Agilent Technologies",
+        "migration": "required",
+        "model": "53131A",
+        "repository": "instrument-components-keysight"
+      }
+    ],
+    "kinds": [
+      "Counter"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "modeled outputless class",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": []
+  },
+  {
+    "driver": "keysight.53220a",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "Counter"
+        ],
+        "legacyResolution": {
+          "Counter": {
+            "commandKeys": [
+              "channel_select",
+              "gate_time",
+              "measure_frequency",
+              "measure_period",
+              "read_totalize",
+              "reset_totalize"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_counter"
+          }
+        },
+        "manufacturer": "Keysight Technologies",
+        "migration": "required",
+        "model": "53220A",
+        "repository": "instrument-components-keysight"
+      }
+    ],
+    "kinds": [
+      "Counter"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "modeled outputless class",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": []
+  },
+  {
+    "driver": "keysight.53230a",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "Counter"
+        ],
+        "legacyResolution": {
+          "Counter": {
+            "commandKeys": [
+              "channel_select",
+              "gate_time",
+              "measure_frequency",
+              "measure_period",
+              "read_totalize",
+              "reset_totalize"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_counter"
+          }
+        },
+        "manufacturer": "Keysight Technologies",
+        "migration": "required",
+        "model": "53230A",
+        "repository": "instrument-components-keysight"
+      }
+    ],
+    "kinds": [
+      "Counter"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "modeled outputless class",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": []
+  },
+  {
+    "driver": "keysight.dsox2024a",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "Oscilloscope"
+        ],
+        "legacyResolution": {
+          "Oscilloscope": {
+            "commandKeys": [
+              "channel_coupling",
+              "channel_display",
+              "measure_frequency",
+              "measure_vpp",
+              "run",
+              "set_channel_scale",
+              "set_timebase_scale",
+              "single",
+              "stop",
+              "trigger_level",
+              "trigger_slope",
+              "trigger_source",
+              "waveform_data",
+              "waveform_format_ascii",
+              "waveform_preamble",
+              "waveform_source"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_scope"
+          }
+        },
+        "manufacturer": "Keysight Technologies",
+        "migration": "required",
+        "model": "DSOX2024A",
+        "repository": "instrument-components-keysight"
+      }
+    ],
+    "kinds": [
+      "Oscilloscope"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "modeled outputless class",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": [
+      {
+        "command": ":STOP",
+        "response": "Write"
+      }
+    ]
+  },
+  {
+    "driver": "keysight.dsox3024t",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "Oscilloscope"
+        ],
+        "legacyResolution": {
+          "Oscilloscope": {
+            "commandKeys": [
+              "channel_coupling",
+              "channel_display",
+              "measure_frequency",
+              "measure_vpp",
+              "run",
+              "set_channel_scale",
+              "set_timebase_scale",
+              "single",
+              "stop",
+              "trigger_level",
+              "trigger_slope",
+              "trigger_source",
+              "waveform_data",
+              "waveform_format_ascii",
+              "waveform_preamble",
+              "waveform_source"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_scope"
+          }
+        },
+        "manufacturer": "Keysight Technologies",
+        "migration": "required",
+        "model": "DSOX3024T",
+        "repository": "instrument-components-keysight"
+      }
+    ],
+    "kinds": [
+      "Oscilloscope"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "modeled outputless class",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": [
+      {
+        "command": ":STOP",
+        "response": "Write"
+      }
+    ]
+  },
+  {
+    "driver": "keysight.e36312a",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "DcPowerSupply"
+        ],
+        "legacyResolution": {
+          "DcPowerSupply": {
+            "commandKeys": [
+              "output_enable",
+              "output_state_query",
+              "ovp_enable",
+              "ovp_level",
+              "ovp_query",
+              "read_current",
+              "read_voltage",
+              "sense_enable",
+              "set_current_limit",
+              "set_voltage"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_dcpwr"
+          }
+        },
+        "manufacturer": "Keysight Technologies",
+        "migration": "required",
+        "model": "E36312A",
+        "repository": "instrument-components-keysight"
+      }
+    ],
+    "kinds": [
+      "DcPowerSupply"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "unknown",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": []
+  },
+  {
+    "driver": "keysight.e3631a",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "DcPowerSupply"
+        ],
+        "legacyResolution": {
+          "DcPowerSupply": {
+            "commandKeys": [
+              "output_enable",
+              "output_state_query",
+              "ovp_enable",
+              "ovp_level",
+              "ovp_query",
+              "read_current",
+              "read_voltage",
+              "sense_enable",
+              "set_current_limit",
+              "set_voltage"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_dcpwr"
+          }
+        },
+        "manufacturer": "Keysight Technologies",
+        "migration": "required",
+        "model": "E3631A",
+        "repository": "instrument-components-keysight"
+      }
+    ],
+    "kinds": [
+      "DcPowerSupply"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "unknown",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": []
+  },
+  {
+    "driver": "keysight.e3640a",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "DcPowerSupply"
+        ],
+        "legacyResolution": {
+          "DcPowerSupply": {
+            "commandKeys": [
+              "output_enable",
+              "output_state_query",
+              "ovp_enable",
+              "ovp_level",
+              "ovp_query",
+              "read_current",
+              "read_voltage",
+              "sense_enable",
+              "set_current_limit",
+              "set_voltage"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_dcpwr"
+          }
+        },
+        "manufacturer": "Agilent Technologies",
+        "migration": "required",
+        "model": "E3640A",
+        "repository": "instrument-components-keysight"
+      }
+    ],
+    "kinds": [
+      "DcPowerSupply"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "unknown",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": []
+  },
+  {
+    "driver": "keysight.n6705c",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "DcPowerSupply"
+        ],
+        "legacyResolution": {
+          "DcPowerSupply": {
+            "commandKeys": [
+              "output_enable",
+              "output_state_query",
+              "ovp_enable",
+              "ovp_level",
+              "ovp_query",
+              "read_current",
+              "read_voltage",
+              "set_current_limit",
+              "set_voltage"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "keysight_n6705c"
+          }
+        },
+        "manufacturer": "Keysight Technologies",
+        "migration": "required",
+        "model": "N6705C",
+        "repository": "instrument-components-keysight"
+      }
+    ],
+    "kinds": [
+      "DcPowerSupply"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "unknown",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": []
+  },
+  {
+    "driver": "keysight.n9010b",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "SpectrumAnalyzer"
+        ],
+        "legacyResolution": {
+          "SpectrumAnalyzer": {
+            "commandKeys": [
+              "center_frequency",
+              "marker_peak",
+              "marker_x",
+              "marker_y",
+              "rbw",
+              "ref_level",
+              "single_sweep",
+              "span",
+              "sweep_continuous",
+              "trace_data",
+              "vbw",
+              "wait_opc"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "keysight_xseries"
+          }
+        },
+        "manufacturer": "Keysight Technologies",
+        "migration": "required",
+        "model": "N9010B",
+        "repository": "instrument-components-keysight"
+      }
+    ],
+    "kinds": [
+      "SpectrumAnalyzer"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "modeled outputless class",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": [
+      {
+        "command": ":INIT:CONT OFF",
+        "response": "Write"
+      }
+    ]
+  },
+  {
+    "driver": "keysight.n9020b",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "SpectrumAnalyzer"
+        ],
+        "legacyResolution": {
+          "SpectrumAnalyzer": {
+            "commandKeys": [
+              "center_frequency",
+              "marker_peak",
+              "marker_x",
+              "marker_y",
+              "rbw",
+              "ref_level",
+              "single_sweep",
+              "span",
+              "sweep_continuous",
+              "trace_data",
+              "vbw",
+              "wait_opc"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "keysight_xseries"
+          }
+        },
+        "manufacturer": "Keysight Technologies",
+        "migration": "required",
+        "model": "N9020B",
+        "repository": "instrument-components-keysight"
+      }
+    ],
+    "kinds": [
+      "SpectrumAnalyzer"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "modeled outputless class",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": [
+      {
+        "command": ":INIT:CONT OFF",
+        "response": "Write"
+      }
+    ]
+  },
+  {
+    "driver": "keysight.n9030b",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "SpectrumAnalyzer"
+        ],
+        "legacyResolution": {
+          "SpectrumAnalyzer": {
+            "commandKeys": [
+              "center_frequency",
+              "marker_peak",
+              "marker_x",
+              "marker_y",
+              "rbw",
+              "ref_level",
+              "single_sweep",
+              "span",
+              "sweep_continuous",
+              "trace_data",
+              "vbw",
+              "wait_opc"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "keysight_xseries"
+          }
+        },
+        "manufacturer": "Keysight Technologies",
+        "migration": "required",
+        "model": "N9030B",
+        "repository": "instrument-components-keysight"
+      }
+    ],
+    "kinds": [
+      "SpectrumAnalyzer"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "modeled outputless class",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": [
+      {
+        "command": ":INIT:CONT OFF",
+        "response": "Write"
+      }
+    ]
+  },
+  {
+    "driver": "keysight.u2000a",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "PowerMeter"
+        ],
+        "legacyResolution": {
+          "PowerMeter": {
+            "commandKeys": [
+              "auto_average",
+              "auto_range",
+              "configure",
+              "correction_frequency",
+              "fetch",
+              "initiate",
+              "offset",
+              "read",
+              "unit"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_pwrmeter"
+          }
+        },
+        "manufacturer": "Agilent Technologies",
+        "migration": "required",
+        "model": "U2000A",
+        "repository": "instrument-components-keysight"
+      },
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "PowerMeter"
+        ],
+        "legacyResolution": {
+          "PowerMeter": {
+            "commandKeys": [
+              "auto_average",
+              "auto_range",
+              "configure",
+              "correction_frequency",
+              "fetch",
+              "initiate",
+              "offset",
+              "read",
+              "unit"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "keysight_sensor"
+          }
+        },
+        "manufacturer": "Keysight Technologies",
+        "migration": "required",
+        "model": "U2000A",
+        "repository": "instrument-components-keysight"
+      }
+    ],
+    "kinds": [
+      "PowerMeter"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "modeled outputless class",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": []
+  },
+  {
+    "driver": "keysight.u2001a",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "PowerMeter"
+        ],
+        "legacyResolution": {
+          "PowerMeter": {
+            "commandKeys": [
+              "auto_average",
+              "auto_range",
+              "configure",
+              "correction_frequency",
+              "fetch",
+              "initiate",
+              "offset",
+              "read",
+              "unit"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "keysight_sensor"
+          }
+        },
+        "manufacturer": "Keysight Technologies",
+        "migration": "required",
+        "model": "U2001A",
+        "repository": "instrument-components-keysight"
+      }
+    ],
+    "kinds": [
+      "PowerMeter"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "modeled outputless class",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": []
+  },
+  {
+    "driver": "keysight.u2002a",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "PowerMeter"
+        ],
+        "legacyResolution": {
+          "PowerMeter": {
+            "commandKeys": [
+              "auto_average",
+              "auto_range",
+              "configure",
+              "correction_frequency",
+              "fetch",
+              "initiate",
+              "offset",
+              "read",
+              "unit"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "keysight_sensor"
+          }
+        },
+        "manufacturer": "Keysight Technologies",
+        "migration": "required",
+        "model": "U2002A",
+        "repository": "instrument-components-keysight"
+      }
+    ],
+    "kinds": [
+      "PowerMeter"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "modeled outputless class",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": []
+  },
+  {
+    "driver": "keysight.u2004a",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "PowerMeter"
+        ],
+        "legacyResolution": {
+          "PowerMeter": {
+            "commandKeys": [
+              "auto_average",
+              "auto_range",
+              "configure",
+              "correction_frequency",
+              "fetch",
+              "initiate",
+              "offset",
+              "read",
+              "unit"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "keysight_sensor"
+          }
+        },
+        "manufacturer": "Keysight Technologies",
+        "migration": "required",
+        "model": "U2004A",
+        "repository": "instrument-components-keysight"
+      }
+    ],
+    "kinds": [
+      "PowerMeter"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "modeled outputless class",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": []
+  }
+]

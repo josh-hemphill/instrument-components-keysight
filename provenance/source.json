@@ -1,0 +1,58 @@
+{
+  "mainCommit": "5eb92b17f775d326e5a3542ee40855b156321745",
+  "files": [
+    {
+      "path": "crates/instrument-core/data/model_registry.toml",
+      "sha256": "46603d30261596bc96faa205fd1b65338432054cb9aeb7a8aec812d818f1004d"
+    },
+    {
+      "path": "crates/instrument-core/data/dialects/profiles.toml",
+      "sha256": "44814efe718c25f44552fad7fd822d9aaeb55eb87d482080f73a303dd58306d3"
+    },
+    {
+      "path": "crates/instrument-core/data/scpi_commands.toml",
+      "sha256": "48d43999d03f71a4462cb7fed86cdc21ecace2d546b8d94d82142ba39a9cab30"
+    },
+    {
+      "path": "spec/generic-scpi-map.json",
+      "sha256": "00a8db7ddbfe9063e4dc906a1f0f4a6f635346d8399073688a2c15e1960e8af5"
+    },
+    {
+      "path": "spec/vendors/keysight-n6705c.json",
+      "sha256": "501e4959d0f21af7bb786fe772a3055eb9e5537e63ee41928c73a95a495d2063"
+    },
+    {
+      "path": "crates/instrument/src/classes/counter.rs",
+      "sha256": "55a53d7572b5ecb14752162ba1a572da7a437cede0380d2212b109e4ab026703"
+    },
+    {
+      "path": "crates/instrument/src/classes/dc_psu.rs",
+      "sha256": "3c07ea59a0cb3d6e4f401b3dc3c4ddd89527d972f78cff8edb710233a58b7e04"
+    },
+    {
+      "path": "crates/instrument/src/classes/dmm.rs",
+      "sha256": "88639e2c36b0bb23dcf9960c464109bc20b172a95fd6d49c208dc413001e1eb0"
+    },
+    {
+      "path": "crates/instrument/src/classes/fgen.rs",
+      "sha256": "a8971ead62cc4f0917b8f98e0523a1a63c8da6dfde88c62b2dd15ca8e6013981"
+    },
+    {
+      "path": "crates/instrument/src/classes/power_meter.rs",
+      "sha256": "8bbcab5ae8763bcf96f96c7a2a399083ae71ebc549c7f87572031988f0f65934"
+    },
+    {
+      "path": "crates/instrument/src/classes/scope.rs",
+      "sha256": "9d19caf4e0bc34470ccbd36dd2e989c06fd68397fec064ae962c3e2c566497f0"
+    },
+    {
+      "path": "crates/instrument/src/classes/spectrum_analyzer.rs",
+      "sha256": "6a745c7192d54c0833863726e0c48ce11141104d41ba85ad7f3491e47dd6083d"
+    },
+    {
+      "path": "crates/instrument/src/classes/switch.rs",
+      "sha256": "415e4542e2315812292e1ddfd3f5e1af39ce4f78bc8801d45052c0cc5a95825a"
+    }
+  ],
+  "hardwareValidated": false
+}
