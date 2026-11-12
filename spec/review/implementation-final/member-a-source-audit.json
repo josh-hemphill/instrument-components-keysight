@@ -1,0 +1,21 @@
+{
+  "reviewer": "A",
+  "rubric": "v1",
+  "main": "1b0704dbb2c4a9f4ffda9f6b1665de12654f672d",
+  "vendor": "3d384a42a3dbb460314b77a4174abefdd4015190",
+  "frozenSourceFilesRehashed": 824,
+  "hashMismatches": [],
+  "boundedStackBytes": 33554432,
+  "allCasesAndAssertionsUnchanged": true,
+  "panicResultPropagationVerified": true,
+  "localEvidenceHashesVerified": true,
+  "numericBallot": "WITHHELD pending identical final hosted matrix and audit evidence",
+  "actualCompilerOptLevels": {
+    "instrument_api": "3",
+    "instrument_scpi": "3",
+    "instrument_testkit": "3",
+    "instrument_driver_keysight": "3",
+    "instrument_runtime": "3",
+    "keysight_package_proof": "0 (rustc default)"
+  }
+}

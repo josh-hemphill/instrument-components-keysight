@@ -1,0 +1,11 @@
+# Member B r6 source recheck
+
+Identity: hp_council_b_final, gpt-6.1-sol/high. Rubric v1 remains APPROVE; neutral framing boundary guarantees and evidence. Numeric ballot withheld pending the common final successful matrix and artifact audit manifest.
+
+Independently verified all824 file hashes, zero mismatch, and both HEAD identities in source-manifest.json: main1b0704dbb2c4a9f4ffda9f6b1665de12654f672d and vendor3d384a42a3dbb460314b77a4174abefdd4015190. Source-manifest SHA256:13a78c6c6956e0fec18a3934a4b337d2eb3d9ea8ac2807acdb2e3e82c66bc530.
+
+Read full source delta from4b8ff92. Only executable change is validation entrypoint: main body renamed run; main spawns named keysight-fixture-proof thread with explicit32MiB stack, calls run, joins, resumes panic or propagates Result. Spawn failure panics, test failure cannot become success, full existing corpus/procedural assertions remain in run. This is a reasonable bounded fixture-only resolution to independently observed Windowsopt0 constructor stack overflow. Worker paths still create and check their own affine owner. Actual Windows success remains pending; source change is not itself execution evidence.
+
+Independently verified every source/log hash in hp-release-consumer/execution.json and parsed actual rustc command lines: instrument_api, instrument_scpi, instrument_testkit, instrument_driver_keysight and instrument_runtime all compile with opt-level3; fixture consumer defaults opt-level0. Read normal-release historical full corpus PASS, bounded-thread full corpus PASS, clippy-Dwarnings completion and native C#linux8 publish/execute1424x4 PASS logs. Profile-only interrupted execution is explicitly labeled and not counted as a successful corpus run. Local source logs do not satisfy packed Windows/Linux hosted matrix.
+
+No new production/API/spec/parser changes occurred after previously inspected artifacts. Current ownership guard remains resolved. Required next evidence: final current-revision source/packed/default/async/fourfrontend execution on both Windows/Linux and net8/net10, actual ZIP/native binary/package inventory audit and main current-source checks. Numeric all36category/model scores will be fresh against that common evidence.

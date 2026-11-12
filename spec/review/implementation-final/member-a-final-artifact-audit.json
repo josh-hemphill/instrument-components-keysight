@@ -1,0 +1,84 @@
+{
+  "reviewer": "A",
+  "sourcesHashed": 824,
+  "evidenceManifestSha256": "4ff9bffc3d4b198ac2924a471628163f5d74401ff7489e01d0cdde88952d9c25",
+  "artifacts": [
+    {
+      "artifact": "driver-proof-windows-latest-net10.0",
+      "id": 13992515568,
+      "zipSha256": "d7780dc4cf3fa82d5310d16d9e299b4878e1096451ed1ff3081eadefa7d39346",
+      "phaseCount": 19,
+      "nativeBinariesVerified": 2,
+      "packagesHashed": 2,
+      "caseLogsVerified": true
+    },
+    {
+      "artifact": "driver-sdk-ubuntu-latest-net8.0",
+      "id": 13991486481,
+      "zipSha256": "596b3aa0f6289398072bbf7414ca05fa44774cb16f0d499683e3d58d028f74d6",
+      "phaseCount": 47,
+      "nativeBinariesVerified": 1,
+      "packagesHashed": 14,
+      "caseLogsVerified": false
+    },
+    {
+      "artifact": "driver-proof-ubuntu-latest-net8.0",
+      "id": 13991458163,
+      "zipSha256": "1cb6967856a139f3d61fb63eb382d509e669a0fadf94297a03c55a960c7b3a23",
+      "phaseCount": 21,
+      "nativeBinariesVerified": 2,
+      "packagesHashed": 2,
+      "caseLogsVerified": true
+    },
+    {
+      "artifact": "driver-sdk-windows-latest-net10.0",
+      "id": 13991278021,
+      "zipSha256": "17cdc4c0e93d099b7f94e859e1c96e471683c92625d3798f338d650f3eddcd24",
+      "phaseCount": 45,
+      "nativeBinariesVerified": 1,
+      "packagesHashed": 14,
+      "caseLogsVerified": false
+    },
+    {
+      "artifact": "driver-proof-ubuntu-latest-net10.0",
+      "id": 13990928706,
+      "zipSha256": "8954d64b225941137583ca14f8ba4566533707308cf2f7d6910c911d3c2e409f",
+      "phaseCount": 21,
+      "nativeBinariesVerified": 2,
+      "packagesHashed": 2,
+      "caseLogsVerified": true
+    },
+    {
+      "artifact": "driver-proof-windows-latest-net8.0",
+      "id": 13990689310,
+      "zipSha256": "55a5c72198d0c7905e07fe1f0745defcba4b5e5a7fab972e8ed7629d45cacb1b",
+      "phaseCount": 19,
+      "nativeBinariesVerified": 2,
+      "packagesHashed": 2,
+      "caseLogsVerified": true
+    },
+    {
+      "artifact": "driver-sdk-windows-latest-net8.0",
+      "id": 13990598373,
+      "zipSha256": "ceb46467d7a62d37e539d88f2ec983ee506833ce4778ab0e35beb68bc4c7e85f",
+      "phaseCount": 45,
+      "nativeBinariesVerified": 1,
+      "packagesHashed": 14,
+      "caseLogsVerified": false
+    },
+    {
+      "artifact": "driver-sdk-ubuntu-latest-net10.0",
+      "id": 13990303376,
+      "zipSha256": "9bc0df58b502a0c629558aee6a77bf5ea4e26d9837c4878a490011ca49360a95",
+      "phaseCount": 47,
+      "nativeBinariesVerified": 1,
+      "packagesHashed": 14,
+      "caseLogsVerified": false
+    }
+  ],
+  "totalPhases": 264,
+  "totalNativeBinaries": 12,
+  "sdkCoreChecksumJoins": 40,
+  "windowsArchiveSourceComparison": "CRLF normalized to frozen LF source; contents otherwise identical",
+  "allChecksPassed": true
+}

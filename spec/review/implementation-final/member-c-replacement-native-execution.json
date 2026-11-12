@@ -1,0 +1,26 @@
+[
+  {
+    "archive": "member-c-13991458163.zip",
+    "member": "driver-proof/generated-native/DriverProof",
+    "sha256": "460e34efd895c89ba1deb0136dd7373de9d41e908c87f332cd545efc60140556",
+    "exit": 0,
+    "stdout": "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, owned/borrowed lifetime, quarantine and native cancellation\nPASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, immutable configuration, ownership and fail-fast quarantine\nPASS all six HP models native pre/during cancellation, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries\nPASS HP isolated inventory invariants,4097 unique route bounds,native-mode absence,valid inventory after mutation,RF nonfinite usable follow-up and native/worker selected-route admission\nPASS Keysight conformance: 1424 independent cases x 4 frontends; exact traffic, values, units, errors and lifetime\n",
+    "stderr": ""
+  },
+  {
+    "archive": "member-c-13991458163.zip",
+    "member": "driver-proof/packed-native/DriverProof",
+    "sha256": "ea093a36e0264d31c52878a3c9d14ecb2927f7c0844e7aa3d7dc67fd23e6d42e",
+    "exit": 0,
+    "stdout": "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, owned/borrowed lifetime, quarantine and native cancellation\nPASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, immutable configuration, ownership and fail-fast quarantine\nPASS all six HP models native pre/during cancellation, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries\nPASS HP isolated inventory invariants,4097 unique route bounds,native-mode absence,valid inventory after mutation,RF nonfinite usable follow-up and native/worker selected-route admission\nPASS Keysight conformance: 1424 independent cases x 4 frontends; exact traffic, values, units, errors and lifetime\n",
+    "stderr": ""
+  },
+  {
+    "archive": "member-c-13991486481.zip",
+    "member": "native/AotConsumer",
+    "sha256": "19a01099feda0e536915b6f6f4b850a6f457ee6d1f7838653ab1578526ef07f1",
+    "exit": 0,
+    "stdout": "PASS retained checked-close outcomes and ASCII catalog keys in packed Native AOT\nPASS Native AOT packaged provider: binary 3.3 V, PSU, unsupported mode/operation, recovery, shutdown, close, core-only selection\nPASS Native AOT native/worker modes: async values, cancellation quarantine, mixed worker frontends, recovery, shutdown, affinity\nPASS SCPI packages: 185 shared cases x 4 frontends, all eight typed classes, exact traffic, units, errors, cleanup\nPASS three added neutral typed classes: six operations, sync/async request and unit contracts\nPASS immutable endpoint profiles: one canonical ID, connection-specific capabilities, pre-open requirements, four frontends\nPASS bounded byte-session cleanup, no unsafe retry, and payload limits in packed Native AOT\nPASS strict SCPI block headers and saturated retry limits in packed Native AOT facade\n",
+    "stderr": ""
+  }
+]

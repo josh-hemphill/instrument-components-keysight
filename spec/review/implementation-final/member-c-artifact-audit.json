@@ -1,0 +1,1139 @@
+{
+  "member": "C",
+  "sourceRun": 43322642590,
+  "sourceRevision": "3d384a42a3dbb460314b77a4174abefdd4015190",
+  "zipCount": 8,
+  "phaseCount": 264,
+  "binaryCount": 12,
+  "corePackageJoins": 40,
+  "artifacts": [
+    {
+      "artifactId": 13992515568,
+      "name": "driver-proof-windows-latest-net10.0",
+      "zipSha256": "d7780dc4cf3fa82d5310d16d9e299b4878e1096451ed1ff3081eadefa7d39346",
+      "phaseCount": 19,
+      "phaseHashesAndExitsVerified": true,
+      "binaries": [
+        {
+          "mode": "generated",
+          "rid": "win-x64",
+          "framework": "net10.0",
+          "sha256": "5828ad1e0eea76469a95fdd09c46243a8e1858178837a78be6285ec1b1a2620c",
+          "bytes": 4868608,
+          "format": "PE-x64-no-CLR",
+          "executionChecked": true
+        },
+        {
+          "mode": "packed",
+          "rid": "win-x64",
+          "framework": "net10.0",
+          "sha256": "f1dbdf3fa4268f9de0cf7c4c981edcbbcb44cb44b4be8dba3c3acf59ffe9a272",
+          "bytes": 4868608,
+          "format": "PE-x64-no-CLR",
+          "executionChecked": true
+        }
+      ],
+      "packages": [
+        {
+          "package": "instrument-driver-keysight",
+          "sha256": "2aab676c9547854e8dcc6f7c51792ec0b0c7ce2f9ae9214072b9d4fb5236f2f6",
+          "dependencies": [
+            "instrument-api",
+            "instrument-scpi"
+          ],
+          "memberCount": 12
+        },
+        {
+          "package": "InstrumentComponents.Drivers.Keysight",
+          "sha256": "bebaa576a8086f2930ab02ecce7eadd777d242399e12f43482576a545efa367f",
+          "dependencies": [
+            "InstrumentComponents.Scpi"
+          ],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Drivers.Keysight.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Drivers.Keysight.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        }
+      ],
+      "execution": [
+        {
+          "mode": "generated",
+          "phase": "rust-default",
+          "passLines": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ]
+        },
+        {
+          "mode": "generated",
+          "phase": "rust-async",
+          "passLines": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS HP5334A/B native cancellation before and during IO; quarantine and no detached host accesses",
+            "PASS all six HP models native abandonment, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP selected-route admission before native/worker acquisition; no unbound or ANT capability fallback",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ]
+        },
+        {
+          "mode": "generated",
+          "phase": "native-execute",
+          "passLines": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, owned/borrowed lifetime, quarantine and native cancellation",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, immutable configuration, ownership and fail-fast quarantine",
+            "PASS all six HP models native pre/during cancellation, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP isolated inventory invariants,4097 unique route bounds,native-mode absence,valid inventory after mutation,RF nonfinite usable follow-up and native/worker selected-route admission",
+            "PASS Keysight conformance: 1424 independent cases x 4 frontends; exact traffic, values, units, errors and lifetime"
+          ]
+        },
+        {
+          "mode": "packed",
+          "phase": "rust-default",
+          "passLines": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ]
+        },
+        {
+          "mode": "packed",
+          "phase": "rust-async",
+          "passLines": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS HP5334A/B native cancellation before and during IO; quarantine and no detached host accesses",
+            "PASS all six HP models native abandonment, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP selected-route admission before native/worker acquisition; no unbound or ANT capability fallback",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ]
+        },
+        {
+          "mode": "packed",
+          "phase": "native-execute",
+          "passLines": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, owned/borrowed lifetime, quarantine and native cancellation",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, immutable configuration, ownership and fail-fast quarantine",
+            "PASS all six HP models native pre/during cancellation, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP isolated inventory invariants,4097 unique route bounds,native-mode absence,valid inventory after mutation,RF nonfinite usable follow-up and native/worker selected-route admission",
+            "PASS Keysight conformance: 1424 independent cases x 4 frontends; exact traffic, values, units, errors and lifetime"
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": 13991486481,
+      "name": "driver-sdk-ubuntu-latest-net8.0",
+      "zipSha256": "596b3aa0f6289398072bbf7414ca05fa44774cb16f0d499683e3d58d028f74d6",
+      "phaseCount": 47,
+      "phaseHashesAndExitsVerified": true,
+      "binaries": [
+        {
+          "mode": "sdk",
+          "rid": "linux-x64",
+          "framework": "net8.0",
+          "sha256": "19a01099feda0e536915b6f6f4b850a6f457ee6d1f7838653ab1578526ef07f1",
+          "bytes": 5718128,
+          "format": "ELF64-x64",
+          "executionChecked": true
+        }
+      ],
+      "packages": [
+        {
+          "package": "instrument-api",
+          "sha256": "ba0b84f696f80707b5b7a730b3cf547cff1b81b9ca8070148d943aa078151e9b",
+          "dependencies": [],
+          "memberCount": 7
+        },
+        {
+          "package": "instrument-runtime",
+          "sha256": "316a71bacfbfae6b637bbac61aae912af353cc952239bb1a76ab14746974ac8f",
+          "dependencies": [
+            "instrument-api",
+            "tokio"
+          ],
+          "memberCount": 7
+        },
+        {
+          "package": "instrument-scpi",
+          "sha256": "fb740761a77c07f36268a5f9ab203c695b685790f07feabe57e44348d89c09a1",
+          "dependencies": [
+            "instrument-api"
+          ],
+          "memberCount": 6
+        },
+        {
+          "package": "instrument-testkit",
+          "sha256": "dc95a2bc856a4e027f8c922f18fb745ad140d017765d1792ab6db65ad0544cb4",
+          "dependencies": [
+            "instrument-api",
+            "instrument-scpi"
+          ],
+          "memberCount": 4
+        },
+        {
+          "package": "instrument-components",
+          "sha256": "b2c8e0e8ce487e1fd275623c772b811905621c8ab6628843bd48b99f0e109aeb",
+          "dependencies": [
+            "instrument-api",
+            "instrument-runtime"
+          ],
+          "memberCount": 6
+        },
+        {
+          "package": "instrument-synthetic-driver",
+          "sha256": "34b700ab2c7a0095d1a518b1f368112dbcae66e79aafada10edd1bc6d44e505b",
+          "dependencies": [
+            "instrument-api",
+            "tokio"
+          ],
+          "memberCount": 5
+        },
+        {
+          "package": "InstrumentComponents",
+          "sha256": "de52c6d6dc30f73f23c47ffe23d5518a6e2e8b33a5a471d85773954859360f53",
+          "dependencies": [
+            "InstrumentComponents.Runtime"
+          ],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.dll",
+            "lib/net8.0/InstrumentComponents.xml",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Abstractions",
+          "sha256": "8d32b52c210aaec72c46f414dbb8a750cbc8097261b46067619dc07fdc2cb299",
+          "dependencies": [],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Abstractions.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Abstractions.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Runtime",
+          "sha256": "cba924641d9507868747ba1ab0a20d19e63ee71b270dd65342712888aaa6620e",
+          "dependencies": [
+            "InstrumentComponents.Abstractions"
+          ],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Runtime.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Runtime.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Scpi",
+          "sha256": "8f04ac0babfb1d989c7c27beb200af6a953c3ddbe31b60a955d29fc989718c9b",
+          "dependencies": [
+            "InstrumentComponents.Abstractions"
+          ],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Scpi.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Scpi.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.SyntheticDriver",
+          "sha256": "fdb58da72568ef468861138d9ae17efbff7b684d7be436d580d7053d8f9e19e7",
+          "dependencies": [
+            "InstrumentComponents.Abstractions"
+          ],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.SyntheticDriver.nuspec",
+            "lib/net8.0/InstrumentComponents.SyntheticDriver.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.TestKit",
+          "sha256": "9b6694346e657e33224d7816866d0e7bc89f33a553d26b9a5d46b17ef84e1694",
+          "dependencies": [
+            "InstrumentComponents.Scpi"
+          ],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.TestKit.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.TestKit.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        }
+      ],
+      "execution": []
+    },
+    {
+      "artifactId": 13991458163,
+      "name": "driver-proof-ubuntu-latest-net8.0",
+      "zipSha256": "1cb6967856a139f3d61fb63eb382d509e669a0fadf94297a03c55a960c7b3a23",
+      "phaseCount": 21,
+      "phaseHashesAndExitsVerified": true,
+      "binaries": [
+        {
+          "mode": "generated",
+          "rid": "linux-x64",
+          "framework": "net8.0",
+          "sha256": "460e34efd895c89ba1deb0136dd7373de9d41e908c87f332cd545efc60140556",
+          "bytes": 5590736,
+          "format": "ELF64-x64",
+          "executionChecked": true
+        },
+        {
+          "mode": "packed",
+          "rid": "linux-x64",
+          "framework": "net8.0",
+          "sha256": "ea093a36e0264d31c52878a3c9d14ecb2927f7c0844e7aa3d7dc67fd23e6d42e",
+          "bytes": 5590736,
+          "format": "ELF64-x64",
+          "executionChecked": true
+        }
+      ],
+      "packages": [
+        {
+          "package": "instrument-driver-keysight",
+          "sha256": "16dc0f4c51bb307e4192298e5e70993de11036b31c50c043690fa72a09f766dc",
+          "dependencies": [
+            "instrument-api",
+            "instrument-scpi"
+          ],
+          "memberCount": 12
+        },
+        {
+          "package": "InstrumentComponents.Drivers.Keysight",
+          "sha256": "8622b92f263cf89943236e61b7933519d9cee54d8cbe1847780d7ae36c4de70f",
+          "dependencies": [
+            "InstrumentComponents.Scpi"
+          ],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Drivers.Keysight.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Drivers.Keysight.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        }
+      ],
+      "execution": [
+        {
+          "mode": "generated",
+          "phase": "rust-default",
+          "passLines": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ]
+        },
+        {
+          "mode": "generated",
+          "phase": "rust-async",
+          "passLines": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS HP5334A/B native cancellation before and during IO; quarantine and no detached host accesses",
+            "PASS all six HP models native abandonment, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP selected-route admission before native/worker acquisition; no unbound or ANT capability fallback",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ]
+        },
+        {
+          "mode": "generated",
+          "phase": "native-execute",
+          "passLines": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, owned/borrowed lifetime, quarantine and native cancellation",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, immutable configuration, ownership and fail-fast quarantine",
+            "PASS all six HP models native pre/during cancellation, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP isolated inventory invariants,4097 unique route bounds,native-mode absence,valid inventory after mutation,RF nonfinite usable follow-up and native/worker selected-route admission",
+            "PASS Keysight conformance: 1424 independent cases x 4 frontends; exact traffic, values, units, errors and lifetime"
+          ]
+        },
+        {
+          "mode": "packed",
+          "phase": "rust-default",
+          "passLines": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ]
+        },
+        {
+          "mode": "packed",
+          "phase": "rust-async",
+          "passLines": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS HP5334A/B native cancellation before and during IO; quarantine and no detached host accesses",
+            "PASS all six HP models native abandonment, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP selected-route admission before native/worker acquisition; no unbound or ANT capability fallback",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ]
+        },
+        {
+          "mode": "packed",
+          "phase": "native-execute",
+          "passLines": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, owned/borrowed lifetime, quarantine and native cancellation",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, immutable configuration, ownership and fail-fast quarantine",
+            "PASS all six HP models native pre/during cancellation, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP isolated inventory invariants,4097 unique route bounds,native-mode absence,valid inventory after mutation,RF nonfinite usable follow-up and native/worker selected-route admission",
+            "PASS Keysight conformance: 1424 independent cases x 4 frontends; exact traffic, values, units, errors and lifetime"
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": 13991278021,
+      "name": "driver-sdk-windows-latest-net10.0",
+      "zipSha256": "17cdc4c0e93d099b7f94e859e1c96e471683c92625d3798f338d650f3eddcd24",
+      "phaseCount": 45,
+      "phaseHashesAndExitsVerified": true,
+      "binaries": [
+        {
+          "mode": "sdk",
+          "rid": "win-x64",
+          "framework": "net10.0",
+          "sha256": "68d6a9cf642c920c60c8b641778f147de76b94ac0146844b40435eaa82353b30",
+          "bytes": 4285440,
+          "format": "PE-x64-no-CLR",
+          "executionChecked": true
+        }
+      ],
+      "packages": [
+        {
+          "package": "instrument-api",
+          "sha256": "9de0aac34d166348720473da9320a44ecd6f25bd9183f77223ac3d35ee46a625",
+          "dependencies": [],
+          "memberCount": 7
+        },
+        {
+          "package": "instrument-runtime",
+          "sha256": "4b00407ba7f76737fcf05f8c3696cdf6168ff11d3b26682f7074c4b94983ced3",
+          "dependencies": [
+            "instrument-api",
+            "tokio"
+          ],
+          "memberCount": 7
+        },
+        {
+          "package": "instrument-scpi",
+          "sha256": "fde66688d22015c02c00546d9c5e36cdd8c249f711863ae3731f7518d56cd40d",
+          "dependencies": [
+            "instrument-api"
+          ],
+          "memberCount": 6
+        },
+        {
+          "package": "instrument-testkit",
+          "sha256": "f7094b0a37f2ea20c5113a41a7a75c3e9c9701d135fc9a51ab0ca7f61011982c",
+          "dependencies": [
+            "instrument-api",
+            "instrument-scpi"
+          ],
+          "memberCount": 4
+        },
+        {
+          "package": "instrument-components",
+          "sha256": "234c3603f4fedb2008fdb716a456338954523404ca38268913f93f3f52734f90",
+          "dependencies": [
+            "instrument-api",
+            "instrument-runtime"
+          ],
+          "memberCount": 6
+        },
+        {
+          "package": "instrument-synthetic-driver",
+          "sha256": "d39e6ad7acc37f9a888c1de1e299980ecacb6ca9a6b107d200af1dd818199804",
+          "dependencies": [
+            "instrument-api",
+            "tokio"
+          ],
+          "memberCount": 5
+        },
+        {
+          "package": "InstrumentComponents",
+          "sha256": "eb3a5fb7187cee0c864962e3d081c70b115eff3ab8f993d78b79ecd46f7250a5",
+          "dependencies": [
+            "InstrumentComponents.Runtime"
+          ],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.dll",
+            "lib/net8.0/InstrumentComponents.xml",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Abstractions",
+          "sha256": "4110c1708bcba9d3ebdeda43fce6a55ad7ced36ed6ab2e7fe02299a618efcdc9",
+          "dependencies": [],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Abstractions.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Abstractions.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Runtime",
+          "sha256": "5a92c91058b76211a61189d19b448f1e00b85154971834618b57055492fb9ec4",
+          "dependencies": [
+            "InstrumentComponents.Abstractions"
+          ],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Runtime.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Runtime.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Scpi",
+          "sha256": "adf5cd576983bc1dff110c92af2479a4c793c58ef7c4927cbc6fde8a7fc52e44",
+          "dependencies": [
+            "InstrumentComponents.Abstractions"
+          ],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Scpi.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Scpi.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.SyntheticDriver",
+          "sha256": "24f2bacb0ad13ff012cd1dffe4dc2219b7d121ab7cc8ea4cec51d50453545a95",
+          "dependencies": [
+            "InstrumentComponents.Abstractions"
+          ],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.SyntheticDriver.nuspec",
+            "lib/net8.0/InstrumentComponents.SyntheticDriver.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.TestKit",
+          "sha256": "3e966fef8aa17682d3ba809e15561e040f2a6abd4c706a4778bef96cee305b7d",
+          "dependencies": [
+            "InstrumentComponents.Scpi"
+          ],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.TestKit.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.TestKit.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        }
+      ],
+      "execution": []
+    },
+    {
+      "artifactId": 13990928706,
+      "name": "driver-proof-ubuntu-latest-net10.0",
+      "zipSha256": "8954d64b225941137583ca14f8ba4566533707308cf2f7d6910c911d3c2e409f",
+      "phaseCount": 21,
+      "phaseHashesAndExitsVerified": true,
+      "binaries": [
+        {
+          "mode": "generated",
+          "rid": "linux-x64",
+          "framework": "net10.0",
+          "sha256": "8c384e7f3f1dd0b24b3cfc8b4916850e2c7d6f641e97479154585e3adee89b13",
+          "bytes": 4757712,
+          "format": "ELF64-x64",
+          "executionChecked": true
+        },
+        {
+          "mode": "packed",
+          "rid": "linux-x64",
+          "framework": "net10.0",
+          "sha256": "66f43b6b3647cf2958e6e3f04fb84555f769fd3d29a1aee0fcbb8e3b5866f5da",
+          "bytes": 4757712,
+          "format": "ELF64-x64",
+          "executionChecked": true
+        }
+      ],
+      "packages": [
+        {
+          "package": "instrument-driver-keysight",
+          "sha256": "16dc0f4c51bb307e4192298e5e70993de11036b31c50c043690fa72a09f766dc",
+          "dependencies": [
+            "instrument-api",
+            "instrument-scpi"
+          ],
+          "memberCount": 12
+        },
+        {
+          "package": "InstrumentComponents.Drivers.Keysight",
+          "sha256": "2cea141c2532e345461a5cb5296170f1ffb04402a21df7057c8641df5fae4b83",
+          "dependencies": [
+            "InstrumentComponents.Scpi"
+          ],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Drivers.Keysight.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Drivers.Keysight.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        }
+      ],
+      "execution": [
+        {
+          "mode": "generated",
+          "phase": "rust-default",
+          "passLines": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ]
+        },
+        {
+          "mode": "generated",
+          "phase": "rust-async",
+          "passLines": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS HP5334A/B native cancellation before and during IO; quarantine and no detached host accesses",
+            "PASS all six HP models native abandonment, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP selected-route admission before native/worker acquisition; no unbound or ANT capability fallback",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ]
+        },
+        {
+          "mode": "generated",
+          "phase": "native-execute",
+          "passLines": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, owned/borrowed lifetime, quarantine and native cancellation",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, immutable configuration, ownership and fail-fast quarantine",
+            "PASS all six HP models native pre/during cancellation, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP isolated inventory invariants,4097 unique route bounds,native-mode absence,valid inventory after mutation,RF nonfinite usable follow-up and native/worker selected-route admission",
+            "PASS Keysight conformance: 1424 independent cases x 4 frontends; exact traffic, values, units, errors and lifetime"
+          ]
+        },
+        {
+          "mode": "packed",
+          "phase": "rust-default",
+          "passLines": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ]
+        },
+        {
+          "mode": "packed",
+          "phase": "rust-async",
+          "passLines": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS HP5334A/B native cancellation before and during IO; quarantine and no detached host accesses",
+            "PASS all six HP models native abandonment, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP selected-route admission before native/worker acquisition; no unbound or ANT capability fallback",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ]
+        },
+        {
+          "mode": "packed",
+          "phase": "native-execute",
+          "passLines": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, owned/borrowed lifetime, quarantine and native cancellation",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, immutable configuration, ownership and fail-fast quarantine",
+            "PASS all six HP models native pre/during cancellation, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP isolated inventory invariants,4097 unique route bounds,native-mode absence,valid inventory after mutation,RF nonfinite usable follow-up and native/worker selected-route admission",
+            "PASS Keysight conformance: 1424 independent cases x 4 frontends; exact traffic, values, units, errors and lifetime"
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": 13990689310,
+      "name": "driver-proof-windows-latest-net8.0",
+      "zipSha256": "55a5c72198d0c7905e07fe1f0745defcba4b5e5a7fab972e8ed7629d45cacb1b",
+      "phaseCount": 19,
+      "phaseHashesAndExitsVerified": true,
+      "binaries": [
+        {
+          "mode": "generated",
+          "rid": "win-x64",
+          "framework": "net8.0",
+          "sha256": "bc924f6629baec1500957f7f9f0685c41b51bad4b2a8851b76b177ae1a89a00a",
+          "bytes": 5223424,
+          "format": "PE-x64-no-CLR",
+          "executionChecked": true
+        },
+        {
+          "mode": "packed",
+          "rid": "win-x64",
+          "framework": "net8.0",
+          "sha256": "2323150be685b8191ea44b0ace3f2c1200a40d6e73007670b65784ef45f75f1d",
+          "bytes": 5223424,
+          "format": "PE-x64-no-CLR",
+          "executionChecked": true
+        }
+      ],
+      "packages": [
+        {
+          "package": "instrument-driver-keysight",
+          "sha256": "2aab676c9547854e8dcc6f7c51792ec0b0c7ce2f9ae9214072b9d4fb5236f2f6",
+          "dependencies": [
+            "instrument-api",
+            "instrument-scpi"
+          ],
+          "memberCount": 12
+        },
+        {
+          "package": "InstrumentComponents.Drivers.Keysight",
+          "sha256": "9b36b8df716420850910bcf99de16eb94b10914c86e128e03085fb047b3a8adb",
+          "dependencies": [
+            "InstrumentComponents.Scpi"
+          ],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Drivers.Keysight.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Drivers.Keysight.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        }
+      ],
+      "execution": [
+        {
+          "mode": "generated",
+          "phase": "rust-default",
+          "passLines": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ]
+        },
+        {
+          "mode": "generated",
+          "phase": "rust-async",
+          "passLines": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS HP5334A/B native cancellation before and during IO; quarantine and no detached host accesses",
+            "PASS all six HP models native abandonment, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP selected-route admission before native/worker acquisition; no unbound or ANT capability fallback",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ]
+        },
+        {
+          "mode": "generated",
+          "phase": "native-execute",
+          "passLines": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, owned/borrowed lifetime, quarantine and native cancellation",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, immutable configuration, ownership and fail-fast quarantine",
+            "PASS all six HP models native pre/during cancellation, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP isolated inventory invariants,4097 unique route bounds,native-mode absence,valid inventory after mutation,RF nonfinite usable follow-up and native/worker selected-route admission",
+            "PASS Keysight conformance: 1424 independent cases x 4 frontends; exact traffic, values, units, errors and lifetime"
+          ]
+        },
+        {
+          "mode": "packed",
+          "phase": "rust-default",
+          "passLines": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ]
+        },
+        {
+          "mode": "packed",
+          "phase": "rust-async",
+          "passLines": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS HP5334A/B native cancellation before and during IO; quarantine and no detached host accesses",
+            "PASS all six HP models native abandonment, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP selected-route admission before native/worker acquisition; no unbound or ANT capability fallback",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ]
+        },
+        {
+          "mode": "packed",
+          "phase": "native-execute",
+          "passLines": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, owned/borrowed lifetime, quarantine and native cancellation",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, immutable configuration, ownership and fail-fast quarantine",
+            "PASS all six HP models native pre/during cancellation, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP isolated inventory invariants,4097 unique route bounds,native-mode absence,valid inventory after mutation,RF nonfinite usable follow-up and native/worker selected-route admission",
+            "PASS Keysight conformance: 1424 independent cases x 4 frontends; exact traffic, values, units, errors and lifetime"
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": 13990598373,
+      "name": "driver-sdk-windows-latest-net8.0",
+      "zipSha256": "ceb46467d7a62d37e539d88f2ec983ee506833ce4778ab0e35beb68bc4c7e85f",
+      "phaseCount": 45,
+      "phaseHashesAndExitsVerified": true,
+      "binaries": [
+        {
+          "mode": "sdk",
+          "rid": "win-x64",
+          "framework": "net8.0",
+          "sha256": "a827d7d6c87a650e10f3eaaa77e227d04947d4cd698b5417204f8b4d15e17ff1",
+          "bytes": 5009408,
+          "format": "PE-x64-no-CLR",
+          "executionChecked": true
+        }
+      ],
+      "packages": [
+        {
+          "package": "instrument-api",
+          "sha256": "9de0aac34d166348720473da9320a44ecd6f25bd9183f77223ac3d35ee46a625",
+          "dependencies": [],
+          "memberCount": 7
+        },
+        {
+          "package": "instrument-runtime",
+          "sha256": "4b00407ba7f76737fcf05f8c3696cdf6168ff11d3b26682f7074c4b94983ced3",
+          "dependencies": [
+            "instrument-api",
+            "tokio"
+          ],
+          "memberCount": 7
+        },
+        {
+          "package": "instrument-scpi",
+          "sha256": "fde66688d22015c02c00546d9c5e36cdd8c249f711863ae3731f7518d56cd40d",
+          "dependencies": [
+            "instrument-api"
+          ],
+          "memberCount": 6
+        },
+        {
+          "package": "instrument-testkit",
+          "sha256": "f7094b0a37f2ea20c5113a41a7a75c3e9c9701d135fc9a51ab0ca7f61011982c",
+          "dependencies": [
+            "instrument-api",
+            "instrument-scpi"
+          ],
+          "memberCount": 4
+        },
+        {
+          "package": "instrument-components",
+          "sha256": "234c3603f4fedb2008fdb716a456338954523404ca38268913f93f3f52734f90",
+          "dependencies": [
+            "instrument-api",
+            "instrument-runtime"
+          ],
+          "memberCount": 6
+        },
+        {
+          "package": "instrument-synthetic-driver",
+          "sha256": "d39e6ad7acc37f9a888c1de1e299980ecacb6ca9a6b107d200af1dd818199804",
+          "dependencies": [
+            "instrument-api",
+            "tokio"
+          ],
+          "memberCount": 5
+        },
+        {
+          "package": "InstrumentComponents",
+          "sha256": "81ea7c943fae81c51decdb528257b43fee5c84918c359e1460145dbf9c573e3a",
+          "dependencies": [
+            "InstrumentComponents.Runtime"
+          ],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.dll",
+            "lib/net8.0/InstrumentComponents.xml",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Abstractions",
+          "sha256": "adf9e16408e512db49e6a839ab3fb3d97decdb7f38134341bd4efa81b1dad1e9",
+          "dependencies": [],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Abstractions.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Abstractions.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Runtime",
+          "sha256": "8d1732c9854ac3e00bec2b34438c536d5a79f64de072707111566d9ef976cca1",
+          "dependencies": [
+            "InstrumentComponents.Abstractions"
+          ],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Runtime.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Runtime.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Scpi",
+          "sha256": "2abe84a2daee9e4bb3d90f8843f8836695cf3eceab09ffe6eeefcbbf088c5df2",
+          "dependencies": [
+            "InstrumentComponents.Abstractions"
+          ],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Scpi.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Scpi.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.SyntheticDriver",
+          "sha256": "88e2f629a4c24b46f87af38f524f378c21374caccec330bd04f246432af387ad",
+          "dependencies": [
+            "InstrumentComponents.Abstractions"
+          ],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.SyntheticDriver.nuspec",
+            "lib/net8.0/InstrumentComponents.SyntheticDriver.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.TestKit",
+          "sha256": "be17d9da7c71dd02cdd57c2b6d0b9c4f22403594e8b0dacd5f704b1b26f43b2c",
+          "dependencies": [
+            "InstrumentComponents.Scpi"
+          ],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.TestKit.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.TestKit.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        }
+      ],
+      "execution": []
+    },
+    {
+      "artifactId": 13990303376,
+      "name": "driver-sdk-ubuntu-latest-net10.0",
+      "zipSha256": "9bc0df58b502a0c629558aee6a77bf5ea4e26d9837c4878a490011ca49360a95",
+      "phaseCount": 47,
+      "phaseHashesAndExitsVerified": true,
+      "binaries": [
+        {
+          "mode": "sdk",
+          "rid": "linux-x64",
+          "framework": "net10.0",
+          "sha256": "758d0d97ca674a2197ba21c0c883c5fc578612ce750f309ffe04cbd3cb508b37",
+          "bytes": 4255456,
+          "format": "ELF64-x64",
+          "executionChecked": true
+        }
+      ],
+      "packages": [
+        {
+          "package": "instrument-api",
+          "sha256": "ba0b84f696f80707b5b7a730b3cf547cff1b81b9ca8070148d943aa078151e9b",
+          "dependencies": [],
+          "memberCount": 7
+        },
+        {
+          "package": "instrument-runtime",
+          "sha256": "316a71bacfbfae6b637bbac61aae912af353cc952239bb1a76ab14746974ac8f",
+          "dependencies": [
+            "instrument-api",
+            "tokio"
+          ],
+          "memberCount": 7
+        },
+        {
+          "package": "instrument-scpi",
+          "sha256": "fb740761a77c07f36268a5f9ab203c695b685790f07feabe57e44348d89c09a1",
+          "dependencies": [
+            "instrument-api"
+          ],
+          "memberCount": 6
+        },
+        {
+          "package": "instrument-testkit",
+          "sha256": "dc95a2bc856a4e027f8c922f18fb745ad140d017765d1792ab6db65ad0544cb4",
+          "dependencies": [
+            "instrument-api",
+            "instrument-scpi"
+          ],
+          "memberCount": 4
+        },
+        {
+          "package": "instrument-components",
+          "sha256": "b2c8e0e8ce487e1fd275623c772b811905621c8ab6628843bd48b99f0e109aeb",
+          "dependencies": [
+            "instrument-api",
+            "instrument-runtime"
+          ],
+          "memberCount": 6
+        },
+        {
+          "package": "instrument-synthetic-driver",
+          "sha256": "34b700ab2c7a0095d1a518b1f368112dbcae66e79aafada10edd1bc6d44e505b",
+          "dependencies": [
+            "instrument-api",
+            "tokio"
+          ],
+          "memberCount": 5
+        },
+        {
+          "package": "InstrumentComponents",
+          "sha256": "8a8ff6b7d128645810871323133a9fd093b2ec86bac0eb71baf69d2841022aa6",
+          "dependencies": [
+            "InstrumentComponents.Runtime"
+          ],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.dll",
+            "lib/net8.0/InstrumentComponents.xml",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Abstractions",
+          "sha256": "33f95c033417f4288d93088da237b845b8f7c72de8b76e8d466b2ae817c655b9",
+          "dependencies": [],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Abstractions.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Abstractions.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Runtime",
+          "sha256": "0d4ab18847bba008d9113e1ce421674d6c1c79d86e65787bc2406201d2f92888",
+          "dependencies": [
+            "InstrumentComponents.Abstractions"
+          ],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Runtime.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Runtime.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Scpi",
+          "sha256": "90c905ef9e9b45d2ca9e954de0417e06d39765dc19828d7d3f9e3d2f638f195b",
+          "dependencies": [
+            "InstrumentComponents.Abstractions"
+          ],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Scpi.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Scpi.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.SyntheticDriver",
+          "sha256": "5e1c3076b003b73b80228c23da163f39fce2b274d069c69dc2ac30f24960b4fb",
+          "dependencies": [
+            "InstrumentComponents.Abstractions"
+          ],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.SyntheticDriver.nuspec",
+            "lib/net8.0/InstrumentComponents.SyntheticDriver.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.TestKit",
+          "sha256": "6d1b8d5cba44293c25fb92909dcd6f6ef213c474b260ff2a84be37fa511729b8",
+          "dependencies": [
+            "InstrumentComponents.Scpi"
+          ],
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.TestKit.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.TestKit.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        }
+      ],
+      "execution": []
+    }
+  ]
+}

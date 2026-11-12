@@ -1,0 +1,68 @@
+{
+  "member": "C",
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "rubric": "v1",
+  "sourceManifestSha256": "13a78c6c6956e0fec18a3934a4b337d2eb3d9ea8ac2807acdb2e3e82c66bc530",
+  "evidenceManifestSha256": "4ff9bffc3d4b198ac2924a471628163f5d74401ff7489e01d0cdde88952d9c25",
+  "scores": {
+    "HP5334A": {
+      "EVIDENCE": 9.4,
+      "API": 9.4,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.5,
+      "VALIDATION": 9.4,
+      "DELIVERY": 9.3
+    },
+    "HP5334B": {
+      "EVIDENCE": 9.4,
+      "API": 9.4,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.5,
+      "VALIDATION": 9.4,
+      "DELIVERY": 9.3
+    },
+    "HP3497A": {
+      "EVIDENCE": 9.3,
+      "API": 9.4,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.5,
+      "VALIDATION": 9.4,
+      "DELIVERY": 9.3
+    },
+    "HP8920A": {
+      "EVIDENCE": 9.4,
+      "API": 9.4,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.5,
+      "VALIDATION": 9.4,
+      "DELIVERY": 9.3
+    },
+    "HP8920B": {
+      "EVIDENCE": 9.3,
+      "API": 9.4,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.5,
+      "VALIDATION": 9.4,
+      "DELIVERY": 9.3
+    },
+    "HP8921A": {
+      "EVIDENCE": 9.4,
+      "API": 9.4,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.5,
+      "VALIDATION": 9.4,
+      "DELIVERY": 9.3
+    }
+  },
+  "mandatoryDefects": [],
+  "requiredChanges": [],
+  "limitations": [
+    "No physical hardware evidence; all six models remain manual/simulator validated.",
+    "Physical options, firmware, exclusive access, initial clean response boundary and carrier/port safety require truthful application commissioning and a bounded finite connector.",
+    "Windows execution is verified from actual hosted phase logs and binaries, not locally rerun by this replacement member.",
+    "Rust fixture consumer alone opt0 on a bounded32MiB thread; dependency crates opt3; downstream generic wrapper monomorphizations can opt0; separate normal-release SDK typed consumers retained.",
+    "Public0.2.0-alpha.1 lacks additions; coordinated new versions required; no publication, merge or hardware qualification claim.",
+    "OpenTAP host separately tested; driver NativeAOT proof does not establish OpenTAP itself AOT compatible."
+  ]
+}
