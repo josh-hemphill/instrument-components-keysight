@@ -80,7 +80,7 @@ internal static class HpCounterProof
             using (var during = new CancellationTokenSource())
             {
                 var task = native.InvokeAsync(new CounterMeasureFrequencyRequest(), during.Token);
-                await pending.Started.Task;
+                await pending.Started.Task.WaitAsync(TimeSpan.FromSeconds(5));
                 during.Cancel();
                 try { await task; throw new InvalidOperationException("Expected cancellation"); } catch (OperationCanceledException) { }
                 Require(pending.Active == 0 && pending.Queries == 1 && native.RecoveryRequired, "Cancellation ends host access and quarantines");

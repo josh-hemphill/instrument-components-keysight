@@ -8,6 +8,7 @@ use std::{
     sync::Arc,
 };
 include!("../../../generated/cases.rs");
+mod hp_admission_proof;
 #[cfg(feature = "async")]
 mod hp_async_proof;
 mod hp_counter_proof;
@@ -196,6 +197,7 @@ fn synchronous() -> Result<()> {
     identities()?;
     hp_counter_proof::synchronous()?;
     hp_legacy_proof::synchronous()?;
+    hp_admission_proof::synchronous()?;
     for case in generated_cases::cases() {
         let script = Script::new(case.script.clone());
         let registry = DriverRegistry::new(case_factories(&case, &script, false)?)?;
@@ -227,6 +229,7 @@ fn synchronous() -> Result<()> {
 async fn asynchronous() -> Result<()> {
     hp_counter_proof::asynchronous().await?;
     hp_async_proof::run().await?;
+    hp_admission_proof::asynchronous().await?;
     for mode in 0..3 {
         for case in generated_cases::cases() {
             let script = Script::new(case.script.clone());

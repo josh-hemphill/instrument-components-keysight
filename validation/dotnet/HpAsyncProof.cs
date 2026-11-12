@@ -27,7 +27,7 @@ internal static class HpAsyncProof
             if (stallWrite && index < 3) continue;
             foreach (var ownership in new[] { ConnectionOwnership.Owned, ConnectionOwnership.Borrowed })
             {
-                var host = new Host { StallWrite = stallWrite }; var factory = Factory(index, host); var selection = new DriverSelection(DriverId: factory.Descriptor.Id);
+                var host = new Host { StallWrite = stallWrite, NativeOnly = true }; var factory = Factory(index, host); var selection = new DriverSelection(DriverId: factory.Descriptor.Id);
                 var handle = await new DriverRegistry([factory]).OpenNativeAsync(candidate, selection, ownership: ownership);
                 using (var before = new CancellationTokenSource())
                 {
@@ -36,7 +36,7 @@ internal static class HpAsyncProof
                 }
                 using (var during = new CancellationTokenSource())
                 {
-                    var task = handle.InvokeAsync(Request(index), during.Token); await host.Started.Task; during.Cancel();
+                    var task = handle.InvokeAsync(Request(index), during.Token); await host.Started.Task.WaitAsync(TimeSpan.FromSeconds(5)); during.Cancel();
                     try { await task; throw new InvalidOperationException("Expected cancellation"); } catch (OperationCanceledException) { }
                     Require(host.Active == 0 && handle.RecoveryRequired, "Native cancellation ends accesses and quarantines");
                 }
@@ -46,7 +46,7 @@ internal static class HpAsyncProof
             }
             foreach (var native in new[] { false, true })
             {
-                var host = new Host { Deadline = true, StallWrite = stallWrite }; var factory = Factory(index, host); var registry = new DriverRegistry([factory]); var selection = new DriverSelection(DriverId: factory.Descriptor.Id);
+                var host = new Host { Deadline = true, StallWrite = stallWrite, NativeOnly = native }; var factory = Factory(index, host); var registry = new DriverRegistry([factory]); var selection = new DriverSelection(DriverId: factory.Descriptor.Id);
                 var started = Stopwatch.StartNew();
                 if (native)
                 {
@@ -72,13 +72,14 @@ internal static class HpAsyncProof
     }
     private sealed class Host : IScpiConnector, IMessageIo, IAsyncScpiConnector, IAsyncMessageIo
     {
-        public bool Deadline, StallWrite; public int Calls, Active, Closes;
+        public bool Deadline, StallWrite, NativeOnly; public int Calls, Active, Closes;
         public TaskCompletionSource Started { get; } = new(TaskCreationOptions.RunContinuationsAsynchronously);
-        public IMessageIo Open(DriverOpenContext context) => this;
+        public IMessageIo Open(DriverOpenContext context) { Require(!NativeOnly,"Native execution must not use sync acquisition"); return this; }
         public ValueTask<IAsyncMessageIo> OpenAsync(DriverOpenContext context, CancellationToken cancellationToken = default) => ValueTask.FromResult<IAsyncMessageIo>(this);
-        public void Write(string message) { if (StallWrite) { Query(message); return; } Interlocked.Increment(ref Calls); }
+        public void Write(string message) { Require(!NativeOnly,"Native execution must not use sync write"); if (StallWrite) { Query(message); return; } Interlocked.Increment(ref Calls); }
         public string Query(string message)
         {
+            Require(!NativeOnly,"Native execution must not use sync query");
             Interlocked.Increment(ref Calls); using var pending = new ManualResetEventSlim(false);
             if (!pending.Wait(TimeSpan.FromMilliseconds(20))) throw new DriverException(DriverErrorKind.Timeout, "Independent deadline expired while response remained pending");
             throw new InvalidOperationException("Pending response unexpectedly completed");

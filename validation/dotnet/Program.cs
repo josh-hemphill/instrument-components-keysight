@@ -19,6 +19,7 @@ internal static class Proof {
         await HpCounterProof.Run();
         HpLegacyProof.Run();
         await HpAsyncProof.Run();
+        await HpAdmissionProof.Run();
         var empty=new Script([]);var registration=Vendor.Factories(empty);var passive=new DriverRegistry(registration);
         foreach(var factory in registration)foreach(var rule in factory.Descriptor.Rules){
             var identity=rule switch {ExactIdentityRule r=>new Identity(r.Manufacturer,r.Model),ExactProductRule r=>new Identity(VendorId:r.VendorId,ProductId:r.ProductId),_=>throw new InvalidOperationException("Expected exact migrated hint")};

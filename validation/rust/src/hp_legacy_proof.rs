@@ -241,7 +241,15 @@ pub fn synchronous() -> Result<()> {
         "keysight.hp8921a|R:E:Standard:RfInOut:RfInOut|proof",
     ] {
         let daq = id.contains("3497");
-        for kind in [ErrorKind::Timeout, ErrorKind::Transport, ErrorKind::Parse] {
+        for kind in [
+            ErrorKind::Timeout,
+            ErrorKind::Transport,
+            ErrorKind::Parse,
+            ErrorKind::Device,
+        ] {
+            if daq && kind == ErrorKind::Device {
+                continue;
+            }
             let first = if daq {
                 ScriptStep::Query(
                     "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0".into(),
@@ -251,17 +259,25 @@ pub fn synchronous() -> Result<()> {
                         Err(DriverError::new(kind, "injected"))
                     },
                 )
-            } else if kind == ErrorKind::Parse {
+            } else if matches!(kind, ErrorKind::Parse | ErrorKind::Device) {
                 // Parse occurs at first verification; no CONFIG command may follow.
                 ScriptStep::Write("DISP RFG".into())
             } else {
                 ScriptStep::WriteFailure("DISP RFG".into(), DriverError::new(kind, "injected"))
             };
             let mut steps = vec![first];
-            if !daq && kind == ErrorKind::Parse {
+            if !daq && matches!(kind, ErrorKind::Parse | ErrorKind::Device) {
                 steps.extend([
                     ScriptStep::Write("RFG:AMPL:STAT OFF".into()),
-                    ScriptStep::Query("RFG:AMPL:STAT?".into(), Ok("bad".into())),
+                    ScriptStep::Query(
+                        "RFG:AMPL:STAT?".into(),
+                        Ok(if kind == ErrorKind::Device {
+                            "1"
+                        } else {
+                            "bad"
+                        }
+                        .into()),
+                    ),
                 ]);
             }
             steps.push(ScriptStep::Close(Ok(())));

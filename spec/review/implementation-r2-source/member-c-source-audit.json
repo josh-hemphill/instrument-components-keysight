@@ -1,0 +1,35 @@
+{
+  "stage": "source inspection only; final numeric ballot withheld",
+  "reviewer": "C-resume",
+  "configuredModel": "gpt-6.1-sol",
+  "reasoningEffort": "high",
+  "repositories": {
+    "instrument-components": {
+      "revision": "6524d9a3c1a1627f3fed8e4fbdca0f577220434c",
+      "fileCount": 595,
+      "mismatches": []
+    },
+    "instrument-components-keysight": {
+      "revision": "8729fea9161367816a82c816f4275b165d1b18b2",
+      "fileCount": 206,
+      "mismatches": []
+    }
+  },
+  "totalCases": 1424,
+  "hpCases": {
+    "keysight.hp5334a": 56,
+    "keysight.hp5334b": 56,
+    "keysight.hp3497a": 53,
+    "keysight.hp8920a": 152,
+    "keysight.hp8920b": 148,
+    "keysight.hp8921a": 128
+  },
+  "localTargetedVerification": {
+    "command": "cargo test -p instrument-core --test message_body --features async",
+    "repository": "instrument-components",
+    "exitCode": 0,
+    "passed": 7,
+    "failed": 0,
+    "scope": "Rust strict complete-message/framing and independent empty/incomplete deadline tests; not package/AOT/hardware proof"
+  }
+}

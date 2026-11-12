@@ -56,15 +56,16 @@ internal static class HpLegacyProof
         var frozen = Daq(baseline); inputs.Clear();
         using (var borrowed = new DriverRegistry([frozen]).Open(new(new("hpib", "fixture"), new()), new(DriverId: "keysight.hp3497a"), ownership: ConnectionOwnership.Borrowed))
             Error(() => borrowed.Invoke(new DataAcquisitionMeasureVoltageDcRequest(99, null)));
-        Require(idle.Opens == 1 && idle.Closes == 0, "DAQ immutable input list, borrowed resource"); idle.AssertComplete();
+        Require(idle.Opens == 1 && idle.Closes == 0, "DAQ borrowed resource preserved"); idle.AssertComplete();
         foreach (var id in new[] { "keysight.hp3497a|D|proof", "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|proof", "keysight.hp8920b|R:E:Standard:RfInOut:RfInOut|proof", "keysight.hp8921a|R:E:Standard:RfInOut:RfInOut|proof" })
         {
             var daq = id.Contains("3497", StringComparison.Ordinal);
-            foreach (var failure in new[] { DriverErrorKind.Timeout, DriverErrorKind.Transport, DriverErrorKind.Parse })
+            foreach (var failure in new[] { DriverErrorKind.Timeout, DriverErrorKind.Transport, DriverErrorKind.Parse, DriverErrorKind.Device })
             {
+                if (daq && failure == DriverErrorKind.Device) continue;
                 var steps = new List<ScriptStep>();
                 if (daq) steps.Add(new("query", "VT4AE0VC0VS0VF1VN1VW0SO1VR5AI0", failure == DriverErrorKind.Parse ? "bad" : "", failure == DriverErrorKind.Parse ? null : failure));
-                else if (failure == DriverErrorKind.Parse) steps.AddRange([new("write", "DISP RFG"), new("write", "RFG:AMPL:STAT OFF"), new("query", "RFG:AMPL:STAT?", "bad")]);
+                else if (failure is DriverErrorKind.Parse or DriverErrorKind.Device) steps.AddRange([new("write", "DISP RFG"), new("write", "RFG:AMPL:STAT OFF"), new("query", "RFG:AMPL:STAT?", failure == DriverErrorKind.Device ? "1" : "bad")]);
                 else steps.Add(new("write", "DISP RFG", Failure: failure));
                 steps.Add(new("close")); var script = new Script(steps); var factory = HpFixture.Factory(id, script, false)!;
                 var handle = new DriverRegistry([factory]).Open(new(new("hpib", "fixture"), new()), new(DriverId: id.Split('|')[0]));

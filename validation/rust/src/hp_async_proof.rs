@@ -19,6 +19,7 @@ use std::{
 struct Host {
     deadline: bool,
     stall_write: bool,
+    native_only: bool,
     calls: Arc<AtomicUsize>,
     active: Arc<AtomicUsize>,
     closes: Arc<AtomicUsize>,
@@ -31,11 +32,19 @@ impl Drop for Active {
 }
 impl Connector for Host {
     fn open(&self, _: &OpenContext<'_>) -> Result<Box<dyn MessageIo>> {
+        assert!(
+            !self.native_only,
+            "Native execution must not use sync acquisition"
+        );
         Ok(Box::new(self.clone()))
     }
 }
 impl MessageIo for Host {
     fn write(&mut self, _: &str) -> Result<()> {
+        assert!(
+            !self.native_only,
+            "Native execution must not use sync write"
+        );
         self.calls.fetch_add(1, Ordering::SeqCst);
         if self.stall_write {
             let (_sender, receiver) = std::sync::mpsc::channel::<()>();
@@ -48,6 +57,10 @@ impl MessageIo for Host {
         Ok(())
     }
     fn query(&mut self, _: &str) -> Result<String> {
+        assert!(
+            !self.native_only,
+            "Native execution must not use sync query"
+        );
         self.calls.fetch_add(1, Ordering::SeqCst);
         let (_sender, receiver) = std::sync::mpsc::channel::<String>();
         receiver
@@ -214,6 +227,7 @@ pub async fn run() -> Result<()> {
             for ownership in [ConnectionOwnership::Owned, ConnectionOwnership::Borrowed] {
                 let host = Host {
                     stall_write,
+                    native_only: true,
                     ..Default::default()
                 };
                 let f = factory(index, &host)?;
@@ -252,6 +266,7 @@ pub async fn run() -> Result<()> {
                 let host = Host {
                     deadline: true,
                     stall_write,
+                    native_only: native,
                     ..Default::default()
                 };
                 let f = factory(index, &host)?;
