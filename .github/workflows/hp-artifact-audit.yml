@@ -1,0 +1,112 @@
+name: HP current artifact inspection
+on:
+  push:
+    branches: ['audit/hp-artifacts-20261112']
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Inspect current source and packed native proof artifacts
+        shell: python
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_RUN: '43320508571'
+          SOURCE_SHA: '4b8ff92d57ffebc351996d4d059584ac1d5b8fdb'
+        run: |
+          import hashlib,io,json,os,re,struct,subprocess,tarfile,time,tomllib,zipfile
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+          repo=os.environ["GITHUB_REPOSITORY"];run=int(os.environ["SOURCE_RUN"]);expected=os.environ["SOURCE_SHA"]
+          def api(path): return json.loads(subprocess.check_output(["gh","api",path]))
+          for attempt in range(120):
+              status=api(f"repos/{repo}/actions/runs/{run}")
+              assert status["head_sha"]==expected
+              if status["conclusion"] in ("failure","cancelled","timed_out"): raise RuntimeError("Source proof did not pass")
+              artifacts=api(f"repos/{repo}/actions/runs/{run}/artifacts?per_page=100")["artifacts"]
+              selected=[a for a in artifacts if a["name"].startswith(("driver-proof-","driver-sdk-"))]
+              if len(selected)==8 and status["conclusion"]=="success": break
+              time.sleep(10)
+          else: raise RuntimeError("Current proof artifacts not yet complete")
+          jobs=api(f"repos/{repo}/actions/runs/{run}/jobs?per_page=100")["jobs"]
+          assert len(jobs)==9 and all(j["conclusion"]=="success" for j in jobs)
+          sha=lambda b:hashlib.sha256(b).hexdigest()
+          records=[]
+          root=Path(os.environ["RUNNER_TEMP"])/"hp-audit";root.mkdir()
+          rust_core={"instrument-api":set(),"instrument-runtime":{"instrument-api","tokio"},"instrument-scpi":{"instrument-api"},"instrument-testkit":{"instrument-api","instrument-scpi"},"instrument-components":{"instrument-api","instrument-runtime"}}
+          net_core={"InstrumentComponents":{"InstrumentComponents.Runtime"},"InstrumentComponents.Abstractions":set(),"InstrumentComponents.Runtime":{"InstrumentComponents.Abstractions"},"InstrumentComponents.Scpi":{"InstrumentComponents.Abstractions"},"InstrumentComponents.TestKit":{"InstrumentComponents.Scpi"}}
+          for a in selected:
+              target=root/(a["name"]+".zip")
+              with target.open("wb") as stream: subprocess.run(["gh","api",f"repos/{repo}/actions/artifacts/{a['id']}/zip"],stdout=stream,check=True)
+              raw=target.read_bytes();assert a["digest"]=="sha256:"+sha(raw)
+              with zipfile.ZipFile(io.BytesIO(raw)) as z:
+                  names=z.namelist()
+                  def read(suffix):
+                      matches=[n for n in names if n.endswith(suffix)];assert len(matches)==1,(suffix,matches)
+                      return z.read(matches[0])
+                  driver=a["name"].startswith("driver-proof-")
+                  phases=json.loads(read("driver-proof/execution.json" if driver else "validation.json"))
+                  byname={p["name"]:p for p in phases};assert len(byname)==len(phases)
+                  for p in phases:
+                      logname=p["log"].replace("\\","/").split("/")[-1]
+                      log=read(("driver-proof/" if driver else "")+logname)
+                      assert sha(log)==p["sha256"] and p["exitCode"]==(1 if p["expectedFailure"] else 0)
+                      if p["expectedFailure"]:
+                          text=log.decode(errors="replace");assert re.search(r"\berror IL2026\b",text) and re.search(r"\berror IL3050\b",text)
+                  binaries=[]
+                  for mode in (["generated","packed"] if driver else ["sdk"]):
+                      info=json.loads(read("driver-proof/"+mode+"-native.json" if driver else "platform.json"))
+                      assert info["executed"] if driver else info["nativeExecuted"]
+                      binary=read("driver-proof/"+mode+"-native/DriverProof"+(".exe" if info["rid"]=="win-x64" else "") if driver else "native/AotConsumer"+(".exe" if info["rid"]=="win-x64" else ""))
+                      assert sha(binary)==info["sha256"]
+                      if info["rid"]=="win-x64":
+                          assert binary[:2]==b"MZ";offset=struct.unpack_from("<I",binary,0x3c)[0]
+                          assert binary[offset:offset+4]==b"PE\0\0" and struct.unpack_from("<H",binary,offset+4)[0]==0x8664
+                          assert struct.unpack_from("<H",binary,offset+24)[0]==0x20b and struct.unpack_from("<II",binary,offset+24+112+14*8)==(0,0)
+                      else:
+                          assert binary[:5]==b"\x7fELF\x02" and struct.unpack_from("<H",binary,18)[0]==62
+                          deps=read("driver-proof/"+byname[mode+"-native-dependencies"]["log"] if driver else "native-dependencies.log").decode().lower()
+                          assert not any(s in deps for s in ("coreclr","hostfxr","dotnet"))
+                      if driver:
+                          for phase in ("rust-default","rust-async","native-execute"):
+                              assert "1424 independent cases" in read("driver-proof/"+byname[mode+"-"+phase]["log"]).decode(errors="replace")
+                      else: assert "six operations, sync/async request and unit contracts" in read("native-aot-behavior.log").decode()
+                      binaries.append({"mode":mode,"rid":info["rid"],"framework":info["framework"],"sha256":info["sha256"],"bytes":len(binary),"nativeFormatVerified":True,"executed":True})
+                  inventory=json.loads(read("driver-proof/packages.json" if driver else "packages.json"));packages=[]
+                  for p in (inventory["driverPackages"] if driver else inventory):
+                      filename=p["file"] if driver else p["archive"].replace("\\","/").split("/")[-1]
+                      body=read("driver-proof/packages/"+filename if driver else filename);assert sha(body)==p["sha256"]
+                      name=p["package"]
+                      if filename.endswith(".crate") and (driver or name in rust_core):
+                          with tarfile.open(fileobj=io.BytesIO(body)) as t:
+                              members=t.getnames();manifest=tomllib.loads(t.extractfile(next(n for n in members if n.endswith("/Cargo.toml"))).read().decode())
+                              deps=manifest.get("dependencies",{});assert set(deps)==({"instrument-api","instrument-scpi"} if driver else rust_core[name])
+                              assert all(not any(k in d for k in ("path","git")) for d in deps.values())
+                              if driver:
+                                  for file in ("hp5334.rs","hp3497.rs","hp_radio.rs","message_backend.rs"): assert any(n.endswith("/src/"+file) for n in members)
+                                  assert not any("/spec/" in n or "/validation/" in n for n in members)
+                              else: assert not any("/hp5334" in n or "/hp3497" in n or "/hp_radio" in n or "instrument-driver-keysight" in n for n in members)
+                          packages.append({"package":name,"sha256":p["sha256"],"dependencies":sorted(deps),"members":members})
+                      elif filename.endswith(".nupkg") and (driver or name in net_core):
+                          with zipfile.ZipFile(io.BytesIO(body)) as n:
+                              members=n.namelist();doc=ET.fromstring(n.read(next(f for f in members if f.endswith(".nuspec"))))
+                              deps={d.attrib["id"]:d.attrib["version"] for d in doc.findall(".//{*}dependency")}
+                              assert set(deps)==({"InstrumentComponents.Scpi"} if driver else net_core[name]) and all(v=="[0.2.0-alpha.1]" for v in deps.values())
+                              assert {Path(f).name for f in members if f.endswith(".dll")}=={name+".dll"}
+                          packages.append({"package":name,"sha256":p["sha256"],"dependencies":deps,"members":members})
+                  records.append({"artifact":{k:a[k] for k in ("id","name","digest","size_in_bytes")},"zipSha256":sha(raw),"phaseCount":len(phases),"allPhaseHashesVerified":True,"casesPerFrontend":1424 if driver else None,"binaries":binaries,"packages":packages,"sdkPackageJoins":inventory["sdkPackages"] if driver else None})
+          report={"schemaVersion":1,"sourceRun":run,"sourceRevision":expected,"sdkProducerRevision":"6524d9a3c1a1627f3fed8e4fbdca0f577220434c","currentMainRevision":"1b0704dbb2c4a9f4ffda9f6b1665de12654f672d","jobs":jobs,"artifacts":records,"hardwareValidated":False,"publicRelease":False}
+          (root/"audit.json").write_text(json.dumps(report,indent=2)+"\n")
+          print("HP_AUDIT_JSON:"+json.dumps(report,separators=(",",":")))
+          print("PASS independent actual8ZIP,12native-binary,phase-log-hash and package-boundary audit")
+          
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hp-artifact-audit
+          path: ${{ runner.temp }}/hp-audit/audit.json
