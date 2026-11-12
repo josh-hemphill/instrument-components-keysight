@@ -1,6 +1,6 @@
 # Procedural acceptance matrix accompanying recovered CatalogCase drafts
 
-These checks require runtime/factory/lifecycle/cancellation control beyond CatalogCase's scripted calls and single final outcome. They are independent acceptance requirements, not claims of completed testing or hardware validation. Reconstructed v8 specs require Council re-review. Shared golden suites carry synthetic manual-derived transcripts and resource-only owned close. No production source was inspected to derive expected bytes.
+These checks require runtime/factory/lifecycle/cancellation control beyond CatalogCase's scripted calls and single final outcome. They are independent acceptance requirements, not claims of completed testing or hardware validation. This v9 correction batch requires a new all-four Council review; unchanged A/C v8 bytes retain their identities without substituting prior grades. Shared golden suites carry synthetic manual-derived transcripts and resource-only owned close. No production source was inspected to derive expected bytes.
 
 ## DAQ immutable inventory and opening
 
@@ -39,7 +39,10 @@ Every model requires exact immutable endpoint binding; all invalid scenarios rej
 | Address case/text differs | Exact address remains distinct;no guessedalias | Exact address policy |
 | A Option006;B Option008;8921A any006/007/008/016 | Reject unsupported option | Model-specific datasheet source tables |
 | Unknown attenuator/inputpower/sourceport/receiverinput enum | Reject | Frozen explicit finite configuration |
-| Mechanical055 combined with exactly one supportedpoweroption | Accept;055 orthogonal | Per-model datasheets |
+| 8920A Mechanical055 with Standard/007/008/016 | Accept; independently named combined configurations | 5968-5385E p2 and full option descriptions |
+| 8920B Mechanical055 with Standard/016 | Accept | 5968-1376E p9 |
+| 8920B Mechanical055+006 or+007 | InvalidArgument at registration/open before connector; zero connector calls in sync/worker/native modes and exact selected-endpoint gating even when another route is valid; no ordinary request attempted | 5968-1376E p9 explicit availability exclusion overrides conflicting numeric rows |
+| 8921A Electronic or Mechanical055 with Standard only | Accept; do not inherit A/B power options | 5968-5820E |
 | Below-minimum revision,unknown format or wrong native firmware family | Reject before connector open;accept documented minimum and later same-family native revisions | Manual applicability;no exact-baseline narrowing |
 | 8921A firmware older than A.15.00 | Reject full source/receiver route before connector open | Own-model08921-90031 A.15.00+ p43 proves OFF preservation,p61 SDC ordering;p81 expanded RFG units |
 | Any commissioning assertion false/unknown | Reject | Manual-switching-before-screen,frequencydisplay,independentRF,PTTinhibited,exclusiveaccess,cleanboundary/nativeGPIB |
@@ -68,3 +71,7 @@ Run these for DAQ and all3RF models in Rust/C# sync,worker,nativeasync where app
 ## Delivery evidence still required
 
 Run generator/API/runtime/SCPI/vendor regression suites. Execute independently composed source/generated and packed consumer binaries on Linuxx64/Windowsx64 for Rust and .NET NativeAOT with trim/AOT warnings aserrors. Retain commands,exitcodes,source/artifacthashes,SDKpins,archive/dependency inventories and staticregistration evidence. Do not infer anotherdevice's acceptance from counterCI;do not claim hardwarevalidation from these fixtures.
+
+## V9 correction audit
+
+Frozen v8 had485 CatalogCases. V9 has481: DAQ53,A152,B148,C128. Four B execution cases using unavailable Mechanical055+006/007 routes were removed and replaced with the explicit zero-connector factory cases above. Those factory failures cannot be expressed by the CatalogCase last-call outcome schema. A/C case/spec/provenance bytes remain unchanged. DAQ VR1/VR2 positive literals now fit the selected range;±120V cases explicitly test synthetic parser policy rather than a physical displayed-value oracle.

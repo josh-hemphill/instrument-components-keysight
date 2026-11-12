@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "contractMajor": 1,
-  "description": "Manual-derived HP3497A acceptance recovered from prior v4 extraction; reconstructed v8 spec requires re-review. Owned IO. Synthetic responses; no hardware claim.",
+  "description": "Manual-derived HP3497A acceptance recovered from prior v4 extraction; reconstructed v8 spec requires re-review. Owned IO. Synthetic responses; no hardware claim. V9 uses in-range VR1/VR2 positives and labels absolute120V literals as synthetic parser-policy tests.",
   "cases": [
     {
       "id": "keysight.hp3497a|D|range-0.1",
@@ -18,7 +18,7 @@
         {
           "kind": "query",
           "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR1AI0",
-          "response": "+1.25000E+0"
+          "response": "+1.25000E-2"
         },
         {
           "kind": "close"
@@ -26,7 +26,7 @@
       ],
       "expected": {
         "kind": "quantity",
-        "value": 1.25,
+        "value": 0.0125,
         "unit": "Volt",
         "status": "Valid"
       }
@@ -46,7 +46,7 @@
         {
           "kind": "query",
           "message": "VT4AE0VC0VS0VF1VN1VW0SO1VR2AI0",
-          "response": "+1.25000E+0"
+          "response": "+1.25000E-1"
         },
         {
           "kind": "close"
@@ -54,7 +54,7 @@
       ],
       "expected": {
         "kind": "quantity",
-        "value": 1.25,
+        "value": 0.125,
         "unit": "Volt",
         "status": "Valid"
       }
@@ -340,7 +340,7 @@
       }
     },
     {
-      "id": "keysight.hp3497a|D|positive-120v",
+      "id": "keysight.hp3497a|D|parser-policy-positive-120v",
       "calls": [
         {
           "operation": "DataAcquisitionMeasureVoltageDc",
@@ -368,7 +368,7 @@
       }
     },
     {
-      "id": "keysight.hp3497a|D|negative-120v",
+      "id": "keysight.hp3497a|D|parser-policy-negative-120v",
       "calls": [
         {
           "operation": "DataAcquisitionMeasureVoltageDc",

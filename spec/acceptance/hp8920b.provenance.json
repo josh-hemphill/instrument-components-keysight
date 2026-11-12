@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "reconstructedSpecSha256": "43c1ad235ce6a805473995f9c9c90886b9db7e20328d056d2b27bb3c3700cab6",
+  "reconstructedSpecSha256": "76391946421a0667707cb22d7132c63205f832b1dfd03789e1b90490c9e0d583",
   "powerResultBinary64Endpoints": {
     "Standard": {
       "minimum": {
@@ -72,7 +72,8 @@
     "sha256": "c512f874ec1f4296aa1d7c77e48d1d44a32fa5eec8c469bee9e5cebef78a27ab",
     "printedPages": [
       "3",
-      "5"
+      "5",
+      "9"
     ]
   },
   "factory": {
@@ -202,46 +203,6 @@
         }
       },
       {
-        "idSegment": "R:M:Option006:RfInOut:RfInOut",
-        "attenuator": "Mechanical055",
-        "inputPowerOption": "Option006",
-        "sourcePort": "RfInOut",
-        "receiverInput": "RfInOut",
-        "firmware": "B.06.00",
-        "qualifiedMinimumFirmware": "B.06.00",
-        "sameNativeFamilyLaterRevisionsAccepted": true,
-        "commissioning": {
-          "nativeGpib": true,
-          "manualSwitchingBeforeScreenChange": true,
-          "frequencyDisplay": true,
-          "ordinaryIndependentRf": true,
-          "externalPttInhibited": true,
-          "exclusiveAccess": true,
-          "cleanResponseBoundary": true,
-          "qualifiedStableSingleCarrierWithinPowerBand": true
-        }
-      },
-      {
-        "idSegment": "R:M:Option007:RfInOut:RfInOut",
-        "attenuator": "Mechanical055",
-        "inputPowerOption": "Option007",
-        "sourcePort": "RfInOut",
-        "receiverInput": "RfInOut",
-        "firmware": "B.06.00",
-        "qualifiedMinimumFirmware": "B.06.00",
-        "sameNativeFamilyLaterRevisionsAccepted": true,
-        "commissioning": {
-          "nativeGpib": true,
-          "manualSwitchingBeforeScreenChange": true,
-          "frequencyDisplay": true,
-          "ordinaryIndependentRf": true,
-          "externalPttInhibited": true,
-          "exclusiveAccess": true,
-          "cleanResponseBoundary": true,
-          "qualifiedStableSingleCarrierWithinPowerBand": true
-        }
-      },
-      {
         "idSegment": "R:M:Option016:RfInOut:RfInOut",
         "attenuator": "Mechanical055",
         "inputPowerOption": "Option016",
@@ -321,7 +282,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -337,7 +299,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -353,7 +316,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -369,7 +333,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -385,7 +350,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -401,7 +367,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -418,7 +385,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Settings confirmed; no physical settling/calibration or modulation claim."
@@ -437,7 +405,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Settings confirmed; no physical settling/calibration or modulation claim."
@@ -456,7 +425,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
@@ -475,7 +445,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
@@ -494,7 +465,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Settings confirmed; no physical settling/calibration or modulation claim."
@@ -513,7 +485,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Settings confirmed; no physical settling/calibration or modulation claim."
@@ -532,7 +505,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
@@ -551,7 +525,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
@@ -570,7 +545,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Settings confirmed; no physical settling/calibration or modulation claim."
@@ -589,7 +565,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
@@ -608,7 +585,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Settings confirmed; no physical settling/calibration or modulation claim."
@@ -627,7 +605,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
@@ -646,7 +625,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Settings confirmed; no physical settling/calibration or modulation claim."
@@ -665,7 +645,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
@@ -684,7 +665,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Settings confirmed; no physical settling/calibration or modulation claim."
@@ -703,7 +685,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
@@ -722,7 +705,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Settings confirmed; no physical settling/calibration or modulation claim."
@@ -741,7 +725,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
@@ -760,7 +745,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Settings confirmed; no physical settling/calibration or modulation claim."
@@ -779,7 +765,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Settings confirmed; no physical settling/calibration or modulation claim."
@@ -798,7 +785,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
@@ -817,7 +805,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
@@ -836,7 +825,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Settings confirmed; no physical settling/calibration or modulation claim."
@@ -855,7 +845,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Settings confirmed; no physical settling/calibration or modulation claim."
@@ -874,7 +865,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
@@ -893,7 +885,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
@@ -912,7 +905,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Settings confirmed; no physical settling/calibration or modulation claim."
@@ -931,83 +925,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
-      ],
-      "syntheticPolicy": [
-        "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
-      ],
-      "hardwareValidated": false
-    },
-    {
-      "id": "keysight.hp8920b|R:M:Option006:RfInOut:RfInOut|source-rfinout-option-max",
-      "model": "8920B",
-      "reconstructedSpec": "HP8920B.md",
-      "manualPages": [
-        "113-115",
-        "179-181",
-        "193",
-        "195-196",
-        "191",
-        "258-261",
-        "71-76",
-        "5968-1376E source p3"
-      ],
-      "syntheticPolicy": [
-        "Settings confirmed; no physical settling/calibration or modulation claim."
-      ],
-      "hardwareValidated": false
-    },
-    {
-      "id": "keysight.hp8920b|R:M:Option006:RfInOut:RfInOut|source-rfinout-option-over-max",
-      "model": "8920B",
-      "reconstructedSpec": "HP8920B.md",
-      "manualPages": [
-        "113-115",
-        "179-181",
-        "193",
-        "195-196",
-        "191",
-        "258-261",
-        "71-76",
-        "5968-1376E source p3"
-      ],
-      "syntheticPolicy": [
-        "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
-      ],
-      "hardwareValidated": false
-    },
-    {
-      "id": "keysight.hp8920b|R:M:Option007:RfInOut:RfInOut|source-rfinout-option-max",
-      "model": "8920B",
-      "reconstructedSpec": "HP8920B.md",
-      "manualPages": [
-        "113-115",
-        "179-181",
-        "193",
-        "195-196",
-        "191",
-        "258-261",
-        "71-76",
-        "5968-1376E source p3"
-      ],
-      "syntheticPolicy": [
-        "Settings confirmed; no physical settling/calibration or modulation claim."
-      ],
-      "hardwareValidated": false
-    },
-    {
-      "id": "keysight.hp8920b|R:M:Option007:RfInOut:RfInOut|source-rfinout-option-over-max",
-      "model": "8920B",
-      "reconstructedSpec": "HP8920B.md",
-      "manualPages": [
-        "113-115",
-        "179-181",
-        "193",
-        "195-196",
-        "191",
-        "258-261",
-        "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
@@ -1026,7 +945,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Settings confirmed; no physical settling/calibration or modulation claim."
@@ -1045,7 +965,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
@@ -1064,7 +985,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Settings confirmed; no physical settling/calibration or modulation claim."
@@ -1083,7 +1005,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
@@ -1102,7 +1025,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
@@ -1121,7 +1045,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
@@ -1140,7 +1065,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
@@ -1159,7 +1085,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
@@ -1178,7 +1105,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
@@ -1197,7 +1125,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
@@ -1216,7 +1145,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
@@ -1235,7 +1165,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E source p3"
+        "5968-1376E source p3",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Settings confirmed; no physical settling/calibration or modulation claim."
@@ -1254,7 +1185,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Single stable input carrier, independent model receiver envelope."
@@ -1273,7 +1205,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Single stable input carrier, independent model receiver envelope."
@@ -1292,7 +1225,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Single stable input carrier, independent model receiver envelope."
@@ -1311,7 +1245,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Single stable input carrier, independent model receiver envelope."
@@ -1330,7 +1265,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Single stable input carrier, independent model receiver envelope."
@@ -1349,7 +1285,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Single stable input carrier, independent model receiver envelope."
@@ -1368,7 +1305,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Single stable input carrier, independent model receiver envelope."
@@ -1387,7 +1325,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Single stable input carrier, independent model receiver envelope."
@@ -1406,7 +1345,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Single stable input carrier, independent model receiver envelope."
@@ -1424,7 +1364,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "ANT omits TX-power capability; required-operation checks also reject before connector open."
@@ -1443,7 +1384,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Power carrier band is caller commissioning precondition; no extra frequency query."
@@ -1462,7 +1404,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Power carrier band is caller commissioning precondition; no extra frequency query."
@@ -1481,7 +1424,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Power carrier band is caller commissioning precondition; no extra frequency query."
@@ -1500,7 +1444,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Power carrier band is caller commissioning precondition; no extra frequency query."
@@ -1519,7 +1464,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Power carrier band is caller commissioning precondition; no extra frequency query."
@@ -1538,7 +1484,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Power carrier band is caller commissioning precondition; no extra frequency query."
@@ -1557,7 +1504,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Power carrier band is caller commissioning precondition; no extra frequency query."
@@ -1576,7 +1524,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Power carrier band is caller commissioning precondition; no extra frequency query."
@@ -1595,7 +1544,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Power carrier band is caller commissioning precondition; no extra frequency query."
@@ -1614,7 +1564,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Power carrier band is caller commissioning precondition; no extra frequency query."
@@ -1633,7 +1584,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Power carrier band is caller commissioning precondition; no extra frequency query."
@@ -1652,7 +1604,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Power carrier band is caller commissioning precondition; no extra frequency query."
@@ -1671,7 +1624,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Power carrier band is caller commissioning precondition; no extra frequency query."
@@ -1690,7 +1644,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Power carrier band is caller commissioning precondition; no extra frequency query."
@@ -1709,7 +1664,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Power carrier band is caller commissioning precondition; no extra frequency query."
@@ -1728,7 +1684,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Power carrier band is caller commissioning precondition; no extra frequency query."
@@ -1746,7 +1703,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -1762,7 +1720,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -1778,7 +1737,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Successful receiver call clears source readiness; blocked enable emits no IO."
@@ -1796,7 +1756,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -1812,7 +1773,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Case/outer0x20 normalization; unit bare-or-quoted tolerance is software decoder policy."
@@ -1830,7 +1792,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -1846,7 +1809,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -1862,7 +1826,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -1878,7 +1843,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -1894,7 +1860,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -1910,7 +1877,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -1926,7 +1894,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -1942,7 +1911,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -1958,7 +1928,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -1974,7 +1945,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -1990,7 +1962,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2006,7 +1979,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2022,7 +1996,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2038,7 +2013,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2054,7 +2030,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2070,7 +2047,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2086,7 +2064,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2102,7 +2081,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2118,7 +2098,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2134,7 +2115,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2150,7 +2132,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2166,7 +2149,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2182,7 +2166,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Source readbacks must lie in selected route source envelope before digital tolerance comparison."
@@ -2200,7 +2185,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Source readbacks must lie in selected route source envelope before digital tolerance comparison."
@@ -2218,7 +2204,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Source readbacks must lie in selected route source envelope before digital tolerance comparison."
@@ -2236,7 +2223,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Source readbacks must lie in selected route source envelope before digital tolerance comparison."
@@ -2254,7 +2242,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Source readbacks must lie in selected route source envelope before digital tolerance comparison."
@@ -2272,7 +2261,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Source readbacks must lie in selected route source envelope before digital tolerance comparison."
@@ -2290,7 +2280,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Source readbacks must lie in selected route source envelope before digital tolerance comparison."
@@ -2308,7 +2299,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Inclusive halfstep setting comparison must not reject mathematically exact0.5Hz/0.05dB through binary roundoff."
@@ -2326,7 +2318,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Inclusive halfstep setting comparison must not reject mathematically exact0.5Hz/0.05dB through binary roundoff."
@@ -2344,7 +2337,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2360,7 +2354,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2376,7 +2371,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2392,7 +2388,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2408,7 +2405,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2424,7 +2422,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2440,7 +2439,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2456,7 +2456,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2472,7 +2473,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2488,7 +2490,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2504,7 +2507,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2520,7 +2524,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2536,7 +2541,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2552,7 +2558,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2568,7 +2575,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2584,7 +2592,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2600,7 +2609,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2616,7 +2626,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2632,7 +2643,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2648,7 +2660,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2664,7 +2677,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2681,7 +2695,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Single stable input carrier, independent model receiver envelope."
@@ -2700,7 +2715,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Single stable input carrier, independent model receiver envelope."
@@ -2719,7 +2735,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Single stable input carrier, independent model receiver envelope."
@@ -2738,7 +2755,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Single stable input carrier, independent model receiver envelope."
@@ -2757,7 +2775,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Single stable input carrier, independent model receiver envelope."
@@ -2776,7 +2795,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Single stable input carrier, independent model receiver envelope."
@@ -2795,7 +2815,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Single stable input carrier, independent model receiver envelope."
@@ -2814,7 +2835,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Single stable input carrier, independent model receiver envelope."
@@ -2833,7 +2855,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Single stable input carrier, independent model receiver envelope."
@@ -2852,7 +2875,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Single stable input carrier, independent model receiver envelope."
@@ -2871,7 +2895,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Single stable input carrier, independent model receiver envelope."
@@ -2890,7 +2915,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Power carrier band is caller commissioning precondition; no extra frequency query."
@@ -2909,7 +2935,8 @@
         "191",
         "258-261",
         "71-76",
-        "5968-1376E receiver/power pp5"
+        "5968-1376E receiver/power pp5",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Power carrier band is caller commissioning precondition; no extra frequency query."
@@ -2927,7 +2954,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Immediate host fault injection; real stalled deadline and quarantined reuse belong to procedural matrix."
@@ -2945,7 +2973,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [
         "Immediate host fault injection; real stalled deadline and quarantined reuse belong to procedural matrix."
@@ -2963,7 +2992,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2979,7 +3009,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -2995,7 +3026,8 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
@@ -3011,10 +3043,36 @@
         "195-196",
         "191",
         "258-261",
-        "71-76"
+        "71-76",
+        "5968-1376E p9 option055 availability restriction"
       ],
       "syntheticPolicy": [],
       "hardwareValidated": false
     }
-  ]
+  ],
+  "optionCompatibility": {
+    "primary": "5968-1376E November2000 p9",
+    "electronic": [
+      "Standard",
+      "Option006",
+      "Option007",
+      "Option016"
+    ],
+    "mechanical055": [
+      "Standard",
+      "Option016"
+    ],
+    "rejectedBeforeConnectorOpen": [
+      "Mechanical055+Option006",
+      "Mechanical055+Option007"
+    ],
+    "conflictResolution": "Numeric rows under055 do not establish an availability exception to p9 explicit006/007 exclusion; no reviewed primary qualifies an exception.",
+    "removedV8CatalogCaseIds": [
+      "keysight.hp8920b|R:M:Option006:RfInOut:RfInOut|source-rfinout-option-max",
+      "keysight.hp8920b|R:M:Option006:RfInOut:RfInOut|source-rfinout-option-over-max",
+      "keysight.hp8920b|R:M:Option007:RfInOut:RfInOut|source-rfinout-option-max",
+      "keysight.hp8920b|R:M:Option007:RfInOut:RfInOut|source-rfinout-option-over-max"
+    ]
+  },
+  "correctionBatchVersion": 9
 }

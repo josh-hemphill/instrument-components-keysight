@@ -1,55 +1,48 @@
 {
   "schemaVersion": 1,
-  "status": "draft-schema-and-generation-only-no-backend-execution-no-hardware-claim",
-  "neutralManifestSha256": "f1fc3131b5324cd400e173c590f52b0ec91b880cb0e14372fcac56985e8a00aa",
+  "batchVersion": 9,
+  "cases": 481,
+  "scope": "SDK schema and language generation only; no backend or hardware validation",
   "suites": [
     {
-      "file": "hp3497a.catalog-cases.json",
+      "model": "3497A",
       "cases": 53,
-      "sha256": "2e0325b4489adb1c4ddee6cbd5dc41124ba530238d753efd2072f2098e020761",
-      "provenanceSha256": "54e946a051c59b26ef15309923f950487367b77d1de38c5951ede7c2c38584f2",
+      "caseSha256": "c7d7a0366f616a0e7f1026a498aea8399dc61bad2989f074a5d53d52fbb0a14f",
+      "provenanceSha256": "3d19d44fbef2dc5dfdaa6ff0cc948e644b0b91fc881cf25e867f406434a8140f",
+      "specSha256": "66870a951b15188d39b1126d272311860d97bd8e61122c210e5067a1d9df6fef",
       "sdkEmitter": "pass",
-      "strictFields": "pass",
-      "ownedCloseExactlyOncePerCase": "pass",
-      "neutralOperationMetadata": "pass",
       "provenanceJoin": "pass",
-      "specHashJoin": "pass"
+      "ownedClose": "pass"
     },
     {
-      "file": "hp8920a.catalog-cases.json",
+      "model": "8920A",
       "cases": 152,
-      "sha256": "a43fbff5266efeb2872ca7102dc9b8a6f837d69b9884ac9af09c6c54bce9c5d4",
+      "caseSha256": "a43fbff5266efeb2872ca7102dc9b8a6f837d69b9884ac9af09c6c54bce9c5d4",
       "provenanceSha256": "56144883ecc29cc5a1af76ccd415529a2104520e21f30403f15b98a6babbd4d1",
+      "specSha256": "c3e32d3d577ea53e7b7a62fb6da55adb0d09b959cbbdd66b69d7db58f870be59",
       "sdkEmitter": "pass",
-      "strictFields": "pass",
-      "ownedCloseExactlyOncePerCase": "pass",
-      "neutralOperationMetadata": "pass",
       "provenanceJoin": "pass",
-      "specHashJoin": "pass"
+      "ownedClose": "pass"
     },
     {
-      "file": "hp8920b.catalog-cases.json",
-      "cases": 152,
-      "sha256": "d593118eaec1064ace22610f310b5f9d0b505825a874a50be6f93e5b041b468e",
-      "provenanceSha256": "2e3ad19d10a20ea19b8edf415ab30942a51acae200f20d923b6ec93a3045687c",
+      "model": "8920B",
+      "cases": 148,
+      "caseSha256": "c6b3755d93006c10b95e013ac0fe5e2c958c16dd6d67277441ec0e84ec065caa",
+      "provenanceSha256": "4015c15b51ede9cf94569fe635c52fe7d75258942cfe14a9cc7c95f575298b15",
+      "specSha256": "76391946421a0667707cb22d7132c63205f832b1dfd03789e1b90490c9e0d583",
       "sdkEmitter": "pass",
-      "strictFields": "pass",
-      "ownedCloseExactlyOncePerCase": "pass",
-      "neutralOperationMetadata": "pass",
       "provenanceJoin": "pass",
-      "specHashJoin": "pass"
+      "ownedClose": "pass"
     },
     {
-      "file": "hp8921a.catalog-cases.json",
+      "model": "8921A",
       "cases": 128,
-      "sha256": "520a3ad2796c9c8b7f1b166f855d793d05930ccc944c6955eab82d967483ee41",
+      "caseSha256": "520a3ad2796c9c8b7f1b166f855d793d05930ccc944c6955eab82d967483ee41",
       "provenanceSha256": "6edc5d4349e3d331d88d4d411efa3bd55e486a221013eae6ba1c31d3d788bb1c",
+      "specSha256": "c0db97000cee047396776372aab0aab8143013c26562c6a123fba2d1a67e433c",
       "sdkEmitter": "pass",
-      "strictFields": "pass",
-      "ownedCloseExactlyOncePerCase": "pass",
-      "neutralOperationMetadata": "pass",
       "provenanceJoin": "pass",
-      "specHashJoin": "pass"
+      "ownedClose": "pass"
     }
   ]
 }

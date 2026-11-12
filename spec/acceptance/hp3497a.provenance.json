@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "reconstructedSpecSha256": "300bc77fbfdf0af243db44f913250cf1b4ad179ec3bdf55abf33050ad454e7e3",
+  "reconstructedSpecSha256": "66870a951b15188d39b1126d272311860d97bd8e61122c210e5067a1d9df6fef",
   "manual": {
     "part": "03497-99000",
     "revision": "April 20, 1981",
@@ -61,9 +61,12 @@
         "161-168",
         "172-173",
         "186",
-        "288"
+        "288",
+        "167-168 ranges and maximum displayed magnitudes"
       ],
-      "syntheticPolicy": [],
+      "syntheticPolicy": [
+        "Successful synthetic acquisition literal fits selected range including documented20% overrange; not a hardware measurement."
+      ],
       "hardwareValidated": false
     },
     {
@@ -76,9 +79,12 @@
         "161-168",
         "172-173",
         "186",
-        "288"
+        "288",
+        "167-168 ranges and maximum displayed magnitudes"
       ],
-      "syntheticPolicy": [],
+      "syntheticPolicy": [
+        "Successful synthetic acquisition literal fits selected range including documented20% overrange; not a hardware measurement."
+      ],
       "hardwareValidated": false
     },
     {
@@ -232,7 +238,7 @@
       "hardwareValidated": false
     },
     {
-      "id": "keysight.hp3497a|D|positive-120v",
+      "id": "keysight.hp3497a|D|parser-policy-positive-120v",
       "model": "3497A",
       "reconstructedSpec": "HP3497A.md",
       "manualPages": [
@@ -243,11 +249,13 @@
         "186",
         "288"
       ],
-      "syntheticPolicy": [],
+      "syntheticPolicy": [
+        "Parser-policy-only boundary literal at absolute120V input limit. Not a physically plausible in-range DVM output oracle; documented100V-range maximum display119.999V."
+      ],
       "hardwareValidated": false
     },
     {
-      "id": "keysight.hp3497a|D|negative-120v",
+      "id": "keysight.hp3497a|D|parser-policy-negative-120v",
       "model": "3497A",
       "reconstructedSpec": "HP3497A.md",
       "manualPages": [
@@ -258,7 +266,9 @@
         "186",
         "288"
       ],
-      "syntheticPolicy": [],
+      "syntheticPolicy": [
+        "Parser-policy-only boundary literal at absolute120V input limit. Not a physically plausible in-range DVM output oracle; documented100V-range maximum display119.999V."
+      ],
       "hardwareValidated": false
     },
     {
@@ -903,5 +913,17 @@
       ],
       "hardwareValidated": false
     }
-  ]
+  ],
+  "fixtureLiteralPolicy": {
+    "range0.1": {
+      "response": "+1.25000E-2",
+      "valueVolt": 0.0125
+    },
+    "range1": {
+      "response": "+1.25000E-1",
+      "valueVolt": 0.125
+    },
+    "absolute120V": "Synthetic parser policy boundary only; not a physical displayed-value oracle."
+  },
+  "correctionBatchVersion": 9
 }
