@@ -1,0 +1,638 @@
+{
+  "rubric": "v1",
+  "round": "implementation-r6",
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "sourceManifestSha256": "13a78c6c6956e0fec18a3934a4b337d2eb3d9ea8ac2807acdb2e3e82c66bc530",
+  "evidenceManifestSha256": "4ff9bffc3d4b198ac2924a471628163f5d74401ff7489e01d0cdde88952d9c25",
+  "allCategoriesPass": true,
+  "rows": [
+    {
+      "model": "HP5334A",
+      "category": "EVIDENCE",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.4,
+        "B": 9.4,
+        "C": 9.4
+      },
+      "median": 9.4,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.4,
+        9.4
+      ]
+    },
+    {
+      "model": "HP5334A",
+      "category": "API",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.4,
+        "B": 9.4,
+        "C": 9.4
+      },
+      "median": 9.4,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.4,
+        9.4
+      ]
+    },
+    {
+      "model": "HP5334A",
+      "category": "PROTOCOL",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.4,
+        "B": 9.4,
+        "C": 9.4
+      },
+      "median": 9.4,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.4,
+        9.4
+      ]
+    },
+    {
+      "model": "HP5334A",
+      "category": "PARITY",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.5,
+        "B": 9.5,
+        "C": 9.5
+      },
+      "median": 9.5,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.5,
+        9.5
+      ]
+    },
+    {
+      "model": "HP5334A",
+      "category": "VALIDATION",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.5,
+        "B": 9.5,
+        "C": 9.4
+      },
+      "median": 9.5,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.4,
+        9.5
+      ]
+    },
+    {
+      "model": "HP5334A",
+      "category": "DELIVERY",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.3,
+        9.3
+      ]
+    },
+    {
+      "model": "HP5334B",
+      "category": "EVIDENCE",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.4,
+        "B": 9.4,
+        "C": 9.4
+      },
+      "median": 9.4,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.4,
+        9.4
+      ]
+    },
+    {
+      "model": "HP5334B",
+      "category": "API",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.4,
+        "B": 9.4,
+        "C": 9.4
+      },
+      "median": 9.4,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.4,
+        9.4
+      ]
+    },
+    {
+      "model": "HP5334B",
+      "category": "PROTOCOL",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.4,
+        "B": 9.4,
+        "C": 9.4
+      },
+      "median": 9.4,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.4,
+        9.4
+      ]
+    },
+    {
+      "model": "HP5334B",
+      "category": "PARITY",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.5,
+        "B": 9.5,
+        "C": 9.5
+      },
+      "median": 9.5,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.5,
+        9.5
+      ]
+    },
+    {
+      "model": "HP5334B",
+      "category": "VALIDATION",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.5,
+        "B": 9.5,
+        "C": 9.4
+      },
+      "median": 9.5,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.4,
+        9.5
+      ]
+    },
+    {
+      "model": "HP5334B",
+      "category": "DELIVERY",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.3,
+        9.3
+      ]
+    },
+    {
+      "model": "HP3497A",
+      "category": "EVIDENCE",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.3,
+        9.3
+      ]
+    },
+    {
+      "model": "HP3497A",
+      "category": "API",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.4,
+        "C": 9.4
+      },
+      "median": 9.4,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.3,
+        9.4
+      ]
+    },
+    {
+      "model": "HP3497A",
+      "category": "PROTOCOL",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.4,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.3,
+        9.4
+      ]
+    },
+    {
+      "model": "HP3497A",
+      "category": "PARITY",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.5,
+        "B": 9.5,
+        "C": 9.5
+      },
+      "median": 9.5,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.5,
+        9.5
+      ]
+    },
+    {
+      "model": "HP3497A",
+      "category": "VALIDATION",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.5,
+        "B": 9.5,
+        "C": 9.4
+      },
+      "median": 9.5,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.4,
+        9.5
+      ]
+    },
+    {
+      "model": "HP3497A",
+      "category": "DELIVERY",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.3,
+        9.3
+      ]
+    },
+    {
+      "model": "HP8920A",
+      "category": "EVIDENCE",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.4,
+        "B": 9.4,
+        "C": 9.4
+      },
+      "median": 9.4,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.4,
+        9.4
+      ]
+    },
+    {
+      "model": "HP8920A",
+      "category": "API",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.4
+      },
+      "median": 9.3,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.3,
+        9.4
+      ]
+    },
+    {
+      "model": "HP8920A",
+      "category": "PROTOCOL",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.4,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.3,
+        9.4
+      ]
+    },
+    {
+      "model": "HP8920A",
+      "category": "PARITY",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.5,
+        "B": 9.5,
+        "C": 9.5
+      },
+      "median": 9.5,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.5,
+        9.5
+      ]
+    },
+    {
+      "model": "HP8920A",
+      "category": "VALIDATION",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.5,
+        "B": 9.5,
+        "C": 9.4
+      },
+      "median": 9.5,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.4,
+        9.5
+      ]
+    },
+    {
+      "model": "HP8920A",
+      "category": "DELIVERY",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.3,
+        9.3
+      ]
+    },
+    {
+      "model": "HP8920B",
+      "category": "EVIDENCE",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.3,
+        9.3
+      ]
+    },
+    {
+      "model": "HP8920B",
+      "category": "API",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.4
+      },
+      "median": 9.3,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.3,
+        9.4
+      ]
+    },
+    {
+      "model": "HP8920B",
+      "category": "PROTOCOL",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.4,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.3,
+        9.4
+      ]
+    },
+    {
+      "model": "HP8920B",
+      "category": "PARITY",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.5,
+        "B": 9.5,
+        "C": 9.5
+      },
+      "median": 9.5,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.5,
+        9.5
+      ]
+    },
+    {
+      "model": "HP8920B",
+      "category": "VALIDATION",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.5,
+        "B": 9.5,
+        "C": 9.4
+      },
+      "median": 9.5,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.4,
+        9.5
+      ]
+    },
+    {
+      "model": "HP8920B",
+      "category": "DELIVERY",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.3,
+        9.3
+      ]
+    },
+    {
+      "model": "HP8921A",
+      "category": "EVIDENCE",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.4,
+        "B": 9.4,
+        "C": 9.4
+      },
+      "median": 9.4,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.4,
+        9.4
+      ]
+    },
+    {
+      "model": "HP8921A",
+      "category": "API",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.4
+      },
+      "median": 9.3,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.3,
+        9.4
+      ]
+    },
+    {
+      "model": "HP8921A",
+      "category": "PROTOCOL",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.4,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.3,
+        9.4
+      ]
+    },
+    {
+      "model": "HP8921A",
+      "category": "PARITY",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.5,
+        "B": 9.5,
+        "C": 9.5
+      },
+      "median": 9.5,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.5,
+        9.5
+      ]
+    },
+    {
+      "model": "HP8921A",
+      "category": "VALIDATION",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.5,
+        "B": 9.5,
+        "C": 9.4
+      },
+      "median": 9.5,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.4,
+        9.5
+      ]
+    },
+    {
+      "model": "HP8921A",
+      "category": "DELIVERY",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "passVotes": 3,
+      "status": "PASS",
+      "range": [
+        9.3,
+        9.3
+      ]
+    }
+  ],
+  "mandatoryDefects": [],
+  "ballots": [
+    {
+      "member": "A",
+      "sha256": "f7b9d304c99d020be657afd3675a65e0f58981b481250b6fd5abb7aaad1524cb"
+    },
+    {
+      "member": "B",
+      "sha256": "8886a3f5548e5a0f79f5a0addd8d5577e9e93d7854cbe0888f95161c815d8df4"
+    },
+    {
+      "member": "C",
+      "sha256": "2cd7fa304932a008d7969679690e3d3a4fc07997efe4b5617be261f126d07ee8"
+    }
+  ]
+}

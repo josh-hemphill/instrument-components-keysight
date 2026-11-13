@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "round": "implementation-r6",
+  "rubric": "v1",
+  "target": ">=9.2 every category EACH model",
+  "sourceManifest": {
+    "path": "/workspace/scratch/instrument-components-hp/council/implementation-r6/source-manifest.json",
+    "sha256": "13a78c6c6956e0fec18a3934a4b337d2eb3d9ea8ac2807acdb2e3e82c66bc530",
+    "trackedFiles": 824
+  },
+  "sourceRevisions": {
+    "instrument-components": "1b0704dbb2c4a9f4ffda9f6b1665de12654f672d",
+    "instrument-components-keysight": "3d384a42a3dbb460314b77a4174abefdd4015190"
+  },
+  "sdkProducerRevision": "6524d9a3c1a1627f3fed8e4fbdca0f577220434c",
+  "requiredVendorMatrix": {
+    "runId": 43322642590,
+    "url": "https://github.com/josh-hemphill/instrument-components-keysight/actions/runs/43322642590",
+    "status": "PASS",
+    "jobs": 9,
+    "cells": [
+      "linux-x64/net8.0",
+      "linux-x64/net10.0",
+      "win-x64/net8.0",
+      "win-x64/net10.0"
+    ],
+    "modes": [
+      "generated-source",
+      "packed"
+    ],
+    "frontends": [
+      "Sync",
+      "NativeAsync",
+      "WorkerAsync",
+      "WorkerBlocking"
+    ],
+    "casesPerFrontend": 1424
+  },
+  "independentArtifactAudit": {
+    "runId": 43322968632,
+    "jobId": 131548112911,
+    "branchCommit": "c3d7453f08e1ca56959f2fa8b1e02059582dcf84",
+    "url": "https://github.com/josh-hemphill/instrument-components-keysight/actions/runs/43322968632",
+    "status": "PASS",
+    "zipCount": 8,
+    "nativeBinaryCount": 12,
+    "verifiedPhaseCount": 264,
+    "sdkPackageJoins": [
+      {
+        "driver": "driver-proof-windows-latest-net10.0",
+        "sdk": "driver-sdk-windows-latest-net10.0",
+        "verifiedCorePackageJoins": 10
+      },
+      {
+        "driver": "driver-proof-ubuntu-latest-net8.0",
+        "sdk": "driver-sdk-ubuntu-latest-net8.0",
+        "verifiedCorePackageJoins": 10
+      },
+      {
+        "driver": "driver-proof-ubuntu-latest-net10.0",
+        "sdk": "driver-sdk-ubuntu-latest-net10.0",
+        "verifiedCorePackageJoins": 10
+      },
+      {
+        "driver": "driver-proof-windows-latest-net8.0",
+        "sdk": "driver-sdk-windows-latest-net8.0",
+        "verifiedCorePackageJoins": 10
+      }
+    ]
+  },
+  "mainCurrentChecks": [
+    {
+      "path": "/workspace/scratch/instrument-components-hp/evidence/main-ci-1b0704d.json",
+      "sha256": "54c8538e41693c6e7dbf60a832fbde95b215ea4b03cd931558cccbd888fc2a81",
+      "run": "https://github.com/josh-hemphill/instrument-components/actions/runs/43314190052",
+      "jobs": 11,
+      "status": "PASS"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-hp/evidence/main-dotnet-1b0704d.json",
+      "sha256": "c027ec021251f8c09621949f06e0c839cc430847a0f988d52a847d4832e36a2f",
+      "run": "https://github.com/josh-hemphill/instrument-components/actions/runs/43314190048",
+      "jobs": 8,
+      "status": "PASS"
+    }
+  ],
+  "caseCounts": {
+    "HP5334A": 56,
+    "HP5334B": 56,
+    "HP3497A": 53,
+    "HP8920A": 152,
+    "HP8920B": 148,
+    "HP8921A": 128
+  },
+  "existingRegressionCases": 831,
+  "compilerScope": "Validation consumer alone releaseopt0 on bounded32MiB thread; all actual driver/SDK dependency crates normalreleaseopt3, C#NativeAOT unchanged. NormalO3 SDK typed consumers and supplementary fulloriginalnormalO3 localRust proof retained. No assertions/cases/frontends suppressed.",
+  "limitations": [
+    "No physical hardware evidence; all6models remain manual/simulator validated.",
+    "Public0.2.0-alpha.1 lacks additions; coordinated new versions required; no publication or merge.",
+    "OpenTAP host is separately tested; driver NativeAOT proof does not claim OpenTAP itself is AOT-compatible."
+  ],
+  "evidenceFiles": [
+    {
+      "path": "/workspace/scratch/instrument-components-hp/evidence/hp-3d384a4/github-run.json",
+      "sha256": "fbf9a904ffd90782cdb73dcb7320d98233fdd5b471b14c8c0c502761f63df20f"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-hp/evidence/hp-3d384a4/github-jobs.json",
+      "sha256": "27798645fcebb847271b4d05d818c8a6b5b400b07d86906c17cac428ed891d87"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-hp/evidence/hp-3d384a4/github-artifacts.json",
+      "sha256": "3075eac930491c0e60c1e1a61553a09b058cdb2b34c202e9dde5e18b06291ebf"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-hp/evidence/hp-3d384a4/remote-audit.json",
+      "sha256": "3b3fd4c377bb7981d671385cce4da0949a27fd564b233b4318bc98840d4ae3d6"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-hp/evidence/hp-3d384a4/remote-audit-job.log",
+      "sha256": "256c27efbfb101fe7ddbb28a172cade224958b828d560b0ec9a173b873cbf30d"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-hp/council/implementation-r6/member-b-sdk-artifact-audit.json",
+      "sha256": "43dc7646df54ee5969fb1ff9edcabb9d51a682e52dda3fd504d79b49ac8fb812"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-hp/council/implementation-r6/member-b-driver-artifact-audit.json",
+      "sha256": "46d9c09002790b41f804abe53a48657ccd2b12ca1bd52e4b58361de7b9b70737"
+    }
+  ]
+}

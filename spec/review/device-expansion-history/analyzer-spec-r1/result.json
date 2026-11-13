@@ -1,0 +1,123 @@
+{
+  "stage": "SPEC",
+  "round": "analyzer-spec-r1",
+  "rubric": "v1",
+  "manifestSha256": "8b853b3d5a22481e98558032a9997a9ba9ec30a41789ecc1eed5e4768411bec5",
+  "completeBallots": 3,
+  "items": [
+    "3585B"
+  ],
+  "allCategoriesPass": true,
+  "gatePass": true,
+  "rows": [
+    {
+      "item": "3585B",
+      "category": "EVIDENCE",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.4,
+        "B": 9.4,
+        "C": 9.3
+      },
+      "median": 9.4,
+      "range": [
+        9.3,
+        9.4
+      ],
+      "votes": 3,
+      "status": "PASS"
+    },
+    {
+      "item": "3585B",
+      "category": "API",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "range": [
+        9.3,
+        9.3
+      ],
+      "votes": 3,
+      "status": "PASS"
+    },
+    {
+      "item": "3585B",
+      "category": "PROTOCOL",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.4,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "range": [
+        9.3,
+        9.4
+      ],
+      "votes": 3,
+      "status": "PASS"
+    },
+    {
+      "item": "3585B",
+      "category": "PARITY",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.2
+      },
+      "median": 9.3,
+      "range": [
+        9.2,
+        9.3
+      ],
+      "votes": 3,
+      "status": "PASS"
+    },
+    {
+      "item": "3585B",
+      "category": "VALIDATION",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.2,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "range": [
+        9.2,
+        9.3
+      ],
+      "votes": 3,
+      "status": "PASS"
+    },
+    {
+      "item": "3585B",
+      "category": "DELIVERY",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.2,
+        "C": 9.2
+      },
+      "median": 9.2,
+      "range": [
+        9.2,
+        9.3
+      ],
+      "votes": 3,
+      "status": "PASS"
+    }
+  ],
+  "mandatoryDefects": [],
+  "requiredChanges": [],
+  "ballotSha256": {
+    "A": "147cbf3aa9a230d10cfffb119637cf167adca8621278bcdd84abe16919b9f65c",
+    "B": "ce1252939d3071e799a7884bec96b560c73f4004800262a377b280cd78b5fd95",
+    "C": "c39db5b8cb34eb0a0b46d94029f9148b32563e14e31ac6945ec67612e419c7eb"
+  }
+}

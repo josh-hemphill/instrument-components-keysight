@@ -1,0 +1,40 @@
+{
+  "member": "B",
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "rubric": "v1",
+  "stage": "SPEC",
+  "manifestSha256": "8b853b3d5a22481e98558032a9997a9ba9ec30a41789ecc1eed5e4768411bec5",
+  "scores": {
+    "3585B": {
+      "EVIDENCE": 9.4,
+      "API": 9.3,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.3,
+      "VALIDATION": 9.2,
+      "DELIVERY": 9.2
+    }
+  },
+  "votes": {
+    "3585B": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    }
+  },
+  "mandatoryDefects": [],
+  "requiredChanges": [],
+  "limitations": [
+    "SPEC-only judgment; actual implementation, procedural execution, packed/native platform evidence and hardware qualification remain future requirements.",
+    "Raw replies are synthetic manual-diagram instantiations, not observed device transcripts.",
+    "FixedR12/50ohm/dBm/liveA and serial applicability are externally commissioned; no overload/protection/calibration proof is inferred.",
+    "SP selects stored-trace peak;D2,T6 validates selected-marker data, not an entire fresh sweep/global peak.",
+    "Actual implementation must verify analyzer multi-message transaction noninterleaving and real pendingCL/query cancellation/deadlines.",
+    "ExactTDS1002A remains pending; no overall expansion completion.",
+    "No peer ballots/scores read; high confidence in primary evidence/hashes and moderate-high in planned qualification."
+  ],
+  "report": "member-b.md"
+}

@@ -1,0 +1,9 @@
+    Checking instrument-api v0.2.0-alpha.1 (/workspace/instrument-components/crates/instrument-api)
+    Checking pin-project-lite v0.2.17
+    Checking tokio v1.54.1
+    Checking instrument-scpi v0.2.0-alpha.1 (/workspace/instrument-components/crates/instrument-scpi)
+    Checking instrument-testkit v0.2.0-alpha.1 (/workspace/instrument-components/crates/instrument-testkit)
+    Checking instrument-driver-keysight v0.2.0-alpha.1 (/workspace/instrument-components-keysight)
+    Checking instrument-runtime v0.2.0-alpha.1 (/workspace/instrument-components/crates/instrument-runtime)
+    Checking keysight-package-proof v0.0.0 (/workspace/instrument-components-keysight/validation/rust)
+    Finished `release` profile [optimized] target(s) in 7.34s

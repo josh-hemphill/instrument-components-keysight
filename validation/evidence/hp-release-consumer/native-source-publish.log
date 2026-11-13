@@ -1,0 +1,15 @@
+  Determining projects to restore...
+  Restored /workspace/instrument-components/dotnet/src/InstrumentComponents.TestKit/InstrumentComponents.TestKit.csproj (in 1.46 sec).
+  Restored /workspace/instrument-components/dotnet/src/InstrumentComponents.Abstractions/InstrumentComponents.Abstractions.csproj (in 1.46 sec).
+  Restored /workspace/instrument-components/dotnet/src/InstrumentComponents.Runtime/InstrumentComponents.Runtime.csproj (in 1.46 sec).
+  Restored /workspace/scratch/instrument-components-hp/source-dotnet/validation/dotnet/DriverProof.csproj (in 1.47 sec).
+  Restored /workspace/scratch/instrument-components-hp/source-dotnet/dotnet/InstrumentComponents.Drivers.Keysight/InstrumentComponents.Drivers.Keysight.csproj (in 5 ms).
+  Restored /workspace/instrument-components/dotnet/src/InstrumentComponents.Scpi/InstrumentComponents.Scpi.csproj (in 5 ms).
+  InstrumentComponents.Abstractions -> /workspace/instrument-components/dotnet/src/InstrumentComponents.Abstractions/bin/Release/net8.0/InstrumentComponents.Abstractions.dll
+  InstrumentComponents.Scpi -> /workspace/instrument-components/dotnet/src/InstrumentComponents.Scpi/bin/Release/net8.0/InstrumentComponents.Scpi.dll
+  InstrumentComponents.Runtime -> /workspace/instrument-components/dotnet/src/InstrumentComponents.Runtime/bin/Release/net8.0/InstrumentComponents.Runtime.dll
+  InstrumentComponents.TestKit -> /workspace/instrument-components/dotnet/src/InstrumentComponents.TestKit/bin/Release/net8.0/InstrumentComponents.TestKit.dll
+  InstrumentComponents.Drivers.Keysight -> /workspace/scratch/instrument-components-hp/source-dotnet/dotnet/InstrumentComponents.Drivers.Keysight/bin/Release/net8.0/InstrumentComponents.Drivers.Keysight.dll
+  DriverProof -> /workspace/scratch/instrument-components-hp/source-dotnet/validation/dotnet/bin/Release/net8.0/linux-x64/DriverProof.dll
+  Generating native code
+  DriverProof -> /workspace/scratch/instrument-components-hp/evidence/hp-3d18e03/local-source-native/

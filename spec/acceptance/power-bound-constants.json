@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "policy": "Compute mathematical10*log10(watts/0.001) with80decimaldigits then round nearest IEEE754binary64 ties-to-even; frozen decimals/hex authoritative crosslanguage constants.",
+  "constants": {
+    "0.001": {
+      "watts": "0.001",
+      "highPrecisionDbm": "0",
+      "binary64Decimal": "0.0",
+      "binary64Hex": "0x0.0p+0"
+    },
+    "60.0": {
+      "watts": "60",
+      "highPrecisionDbm": "47.781512503836436325087667979796083359683187456528044061402931014323373420580856",
+      "binary64Decimal": "47.78151250383644",
+      "binary64Hex": "0x1.7e4089a0ab240p+5"
+    },
+    "4e-05": {
+      "watts": "0.000040",
+      "highPrecisionDbm": "-13.979400086720376095725222105510139464636202370757829173791450777457836214511510",
+      "binary64Decimal": "-13.979400086720377",
+      "binary64Hex": "-0x1.bf573ed9c53c1p+3"
+    },
+    "2.4": {
+      "watts": "2.4",
+      "highPrecisionDbm": "33.802112417116060229362445874285943895046985085770214887611480236865537206069347",
+      "binary64Decimal": "33.802112417116064",
+      "binary64Hex": "0x1.0e6ab9ea39d50p+5"
+    },
+    "0.0001": {
+      "watts": "0.000100",
+      "highPrecisionDbm": "-10",
+      "binary64Decimal": "-10.0",
+      "binary64Hex": "-0x1.4000000000000p+3"
+    },
+    "6.0": {
+      "watts": "6",
+      "highPrecisionDbm": "37.781512503836436325087667979796083359683187456528044061402931014323373420580856",
+      "binary64Decimal": "37.78151250383644",
+      "binary64Hex": "0x1.2e4089a0ab240p+5"
+    },
+    "0.0016": {
+      "watts": "0.001600",
+      "highPrecisionDbm": "2.0411998265592478085495557889797210707275952584843416524170984450843275709769804",
+      "binary64Decimal": "2.041199826559248",
+      "binary64Hex": "0x1.05460931d61fbp+1"
+    },
+    "100.0": {
+      "watts": "100",
+      "highPrecisionDbm": "50",
+      "binary64Decimal": "50.0",
+      "binary64Hex": "0x1.9000000000000p+5"
+    },
+    "5e-05": {
+      "watts": "0.000050",
+      "highPrecisionDbm": "-13.010299956639811952137388947244930267681898814621085413104274611271081892744245",
+      "binary64Decimal": "-13.010299956639813",
+      "binary64Hex": "-0x1.a05460931d620p+3"
+    },
+    "10.0": {
+      "watts": "10",
+      "highPrecisionDbm": "40",
+      "binary64Decimal": "40.0",
+      "binary64Hex": "0x1.4000000000000p+5"
+    }
+  }
+}

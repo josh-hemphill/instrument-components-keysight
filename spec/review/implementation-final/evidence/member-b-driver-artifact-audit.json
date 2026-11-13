@@ -1,0 +1,474 @@
+[
+  {
+    "artifactId": 13990928706,
+    "zipSha256": "8954d64b225941137583ca14f8ba4566533707308cf2f7d6910c911d3c2e409f",
+    "phaseCount": 21,
+    "phaseHashesAndExitsVerified": true,
+    "sdkPackageJoinVerified": true,
+    "binaries": [
+      {
+        "mode": "generated",
+        "rid": "linux-x64",
+        "framework": "net10.0",
+        "sha256": "8c384e7f3f1dd0b24b3cfc8b4916850e2c7d6f641e97479154585e3adee89b13",
+        "executed": true,
+        "actualNativeFormatAndHashVerified": true,
+        "conformance": {
+          "rust-default": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ],
+          "rust-async": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS HP5334A/B native cancellation before and during IO; quarantine and no detached host accesses",
+            "PASS all six HP models native abandonment, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP selected-route admission before native/worker acquisition; no unbound or ANT capability fallback",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ],
+          "native-execute": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, owned/borrowed lifetime, quarantine and native cancellation",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, immutable configuration, ownership and fail-fast quarantine",
+            "PASS all six HP models native pre/during cancellation, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP isolated inventory invariants,4097 unique route bounds,native-mode absence,valid inventory after mutation,RF nonfinite usable follow-up and native/worker selected-route admission",
+            "PASS Keysight conformance: 1424 independent cases x 4 frontends; exact traffic, values, units, errors and lifetime"
+          ]
+        }
+      },
+      {
+        "mode": "packed",
+        "rid": "linux-x64",
+        "framework": "net10.0",
+        "sha256": "66f43b6b3647cf2958e6e3f04fb84555f769fd3d29a1aee0fcbb8e3b5866f5da",
+        "executed": true,
+        "actualNativeFormatAndHashVerified": true,
+        "conformance": {
+          "rust-default": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ],
+          "rust-async": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS HP5334A/B native cancellation before and during IO; quarantine and no detached host accesses",
+            "PASS all six HP models native abandonment, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP selected-route admission before native/worker acquisition; no unbound or ANT capability fallback",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ],
+          "native-execute": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, owned/borrowed lifetime, quarantine and native cancellation",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, immutable configuration, ownership and fail-fast quarantine",
+            "PASS all six HP models native pre/during cancellation, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP isolated inventory invariants,4097 unique route bounds,native-mode absence,valid inventory after mutation,RF nonfinite usable follow-up and native/worker selected-route admission",
+            "PASS Keysight conformance: 1424 independent cases x 4 frontends; exact traffic, values, units, errors and lifetime"
+          ]
+        }
+      }
+    ],
+    "packages": [
+      {
+        "package": "instrument-driver-keysight",
+        "file": "instrument-driver-keysight-0.2.0-alpha.1.crate",
+        "sha256": "16dc0f4c51bb307e4192298e5e70993de11036b31c50c043690fa72a09f766dc",
+        "dependencies": {
+          "instrument-api": {
+            "version": "=0.2.0-alpha.1"
+          },
+          "instrument-scpi": {
+            "version": "=0.2.0-alpha.1"
+          }
+        },
+        "members": [
+          "instrument-driver-keysight-0.2.0-alpha.1/Cargo.lock",
+          "instrument-driver-keysight-0.2.0-alpha.1/Cargo.toml",
+          "instrument-driver-keysight-0.2.0-alpha.1/Cargo.toml.orig",
+          "instrument-driver-keysight-0.2.0-alpha.1/LICENSE-APACHE",
+          "instrument-driver-keysight-0.2.0-alpha.1/LICENSE-MIT",
+          "instrument-driver-keysight-0.2.0-alpha.1/README.md",
+          "instrument-driver-keysight-0.2.0-alpha.1/generated/profiles.rs",
+          "instrument-driver-keysight-0.2.0-alpha.1/src/hp3497.rs",
+          "instrument-driver-keysight-0.2.0-alpha.1/src/hp5334.rs",
+          "instrument-driver-keysight-0.2.0-alpha.1/src/hp_radio.rs",
+          "instrument-driver-keysight-0.2.0-alpha.1/src/lib.rs",
+          "instrument-driver-keysight-0.2.0-alpha.1/src/message_backend.rs"
+        ]
+      },
+      {
+        "package": "InstrumentComponents.Drivers.Keysight",
+        "file": "InstrumentComponents.Drivers.Keysight.0.2.0-alpha.1.nupkg",
+        "sha256": "2cea141c2532e345461a5cb5296170f1ffb04402a21df7057c8641df5fae4b83",
+        "dependencies": {
+          "InstrumentComponents.Scpi": "[0.2.0-alpha.1]"
+        },
+        "members": [
+          "_rels/.rels",
+          "InstrumentComponents.Drivers.Keysight.nuspec",
+          "README.md",
+          "lib/net8.0/InstrumentComponents.Drivers.Keysight.dll",
+          "[Content_Types].xml",
+          "package/services/metadata/core-properties/nuget.psmdcp"
+        ]
+      }
+    ]
+  },
+  {
+    "artifactId": 13991458163,
+    "zipSha256": "1cb6967856a139f3d61fb63eb382d509e669a0fadf94297a03c55a960c7b3a23",
+    "phaseCount": 21,
+    "phaseHashesAndExitsVerified": true,
+    "sdkPackageJoinVerified": true,
+    "binaries": [
+      {
+        "mode": "generated",
+        "rid": "linux-x64",
+        "framework": "net8.0",
+        "sha256": "460e34efd895c89ba1deb0136dd7373de9d41e908c87f332cd545efc60140556",
+        "executed": true,
+        "actualNativeFormatAndHashVerified": true,
+        "conformance": {
+          "rust-default": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ],
+          "rust-async": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS HP5334A/B native cancellation before and during IO; quarantine and no detached host accesses",
+            "PASS all six HP models native abandonment, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP selected-route admission before native/worker acquisition; no unbound or ANT capability fallback",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ],
+          "native-execute": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, owned/borrowed lifetime, quarantine and native cancellation",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, immutable configuration, ownership and fail-fast quarantine",
+            "PASS all six HP models native pre/during cancellation, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP isolated inventory invariants,4097 unique route bounds,native-mode absence,valid inventory after mutation,RF nonfinite usable follow-up and native/worker selected-route admission",
+            "PASS Keysight conformance: 1424 independent cases x 4 frontends; exact traffic, values, units, errors and lifetime"
+          ]
+        }
+      },
+      {
+        "mode": "packed",
+        "rid": "linux-x64",
+        "framework": "net8.0",
+        "sha256": "ea093a36e0264d31c52878a3c9d14ecb2927f7c0844e7aa3d7dc67fd23e6d42e",
+        "executed": true,
+        "actualNativeFormatAndHashVerified": true,
+        "conformance": {
+          "rust-default": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ],
+          "rust-async": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS HP5334A/B native cancellation before and during IO; quarantine and no detached host accesses",
+            "PASS all six HP models native abandonment, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP selected-route admission before native/worker acquisition; no unbound or ANT capability fallback",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ],
+          "native-execute": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, owned/borrowed lifetime, quarantine and native cancellation",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, immutable configuration, ownership and fail-fast quarantine",
+            "PASS all six HP models native pre/during cancellation, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP isolated inventory invariants,4097 unique route bounds,native-mode absence,valid inventory after mutation,RF nonfinite usable follow-up and native/worker selected-route admission",
+            "PASS Keysight conformance: 1424 independent cases x 4 frontends; exact traffic, values, units, errors and lifetime"
+          ]
+        }
+      }
+    ],
+    "packages": [
+      {
+        "package": "instrument-driver-keysight",
+        "file": "instrument-driver-keysight-0.2.0-alpha.1.crate",
+        "sha256": "16dc0f4c51bb307e4192298e5e70993de11036b31c50c043690fa72a09f766dc",
+        "dependencies": {
+          "instrument-api": {
+            "version": "=0.2.0-alpha.1"
+          },
+          "instrument-scpi": {
+            "version": "=0.2.0-alpha.1"
+          }
+        },
+        "members": [
+          "instrument-driver-keysight-0.2.0-alpha.1/Cargo.lock",
+          "instrument-driver-keysight-0.2.0-alpha.1/Cargo.toml",
+          "instrument-driver-keysight-0.2.0-alpha.1/Cargo.toml.orig",
+          "instrument-driver-keysight-0.2.0-alpha.1/LICENSE-APACHE",
+          "instrument-driver-keysight-0.2.0-alpha.1/LICENSE-MIT",
+          "instrument-driver-keysight-0.2.0-alpha.1/README.md",
+          "instrument-driver-keysight-0.2.0-alpha.1/generated/profiles.rs",
+          "instrument-driver-keysight-0.2.0-alpha.1/src/hp3497.rs",
+          "instrument-driver-keysight-0.2.0-alpha.1/src/hp5334.rs",
+          "instrument-driver-keysight-0.2.0-alpha.1/src/hp_radio.rs",
+          "instrument-driver-keysight-0.2.0-alpha.1/src/lib.rs",
+          "instrument-driver-keysight-0.2.0-alpha.1/src/message_backend.rs"
+        ]
+      },
+      {
+        "package": "InstrumentComponents.Drivers.Keysight",
+        "file": "InstrumentComponents.Drivers.Keysight.0.2.0-alpha.1.nupkg",
+        "sha256": "8622b92f263cf89943236e61b7933519d9cee54d8cbe1847780d7ae36c4de70f",
+        "dependencies": {
+          "InstrumentComponents.Scpi": "[0.2.0-alpha.1]"
+        },
+        "members": [
+          "_rels/.rels",
+          "InstrumentComponents.Drivers.Keysight.nuspec",
+          "README.md",
+          "lib/net8.0/InstrumentComponents.Drivers.Keysight.dll",
+          "[Content_Types].xml",
+          "package/services/metadata/core-properties/nuget.psmdcp"
+        ]
+      }
+    ]
+  },
+  {
+    "artifactId": 13992515568,
+    "zipSha256": "d7780dc4cf3fa82d5310d16d9e299b4878e1096451ed1ff3081eadefa7d39346",
+    "phaseCount": 19,
+    "phaseHashesAndExitsVerified": true,
+    "sdkPackageJoinVerified": true,
+    "binaries": [
+      {
+        "mode": "generated",
+        "rid": "win-x64",
+        "framework": "net10.0",
+        "sha256": "5828ad1e0eea76469a95fdd09c46243a8e1858178837a78be6285ec1b1a2620c",
+        "executed": true,
+        "actualNativeFormatAndHashVerified": true,
+        "conformance": {
+          "rust-default": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ],
+          "rust-async": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS HP5334A/B native cancellation before and during IO; quarantine and no detached host accesses",
+            "PASS all six HP models native abandonment, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP selected-route admission before native/worker acquisition; no unbound or ANT capability fallback",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ],
+          "native-execute": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, owned/borrowed lifetime, quarantine and native cancellation",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, immutable configuration, ownership and fail-fast quarantine",
+            "PASS all six HP models native pre/during cancellation, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP isolated inventory invariants,4097 unique route bounds,native-mode absence,valid inventory after mutation,RF nonfinite usable follow-up and native/worker selected-route admission",
+            "PASS Keysight conformance: 1424 independent cases x 4 frontends; exact traffic, values, units, errors and lifetime"
+          ]
+        }
+      },
+      {
+        "mode": "packed",
+        "rid": "win-x64",
+        "framework": "net10.0",
+        "sha256": "f1dbdf3fa4268f9de0cf7c4c981edcbbcb44cb44b4be8dba3c3acf59ffe9a272",
+        "executed": true,
+        "actualNativeFormatAndHashVerified": true,
+        "conformance": {
+          "rust-default": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ],
+          "rust-async": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS HP5334A/B native cancellation before and during IO; quarantine and no detached host accesses",
+            "PASS all six HP models native abandonment, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP selected-route admission before native/worker acquisition; no unbound or ANT capability fallback",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ],
+          "native-execute": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, owned/borrowed lifetime, quarantine and native cancellation",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, immutable configuration, ownership and fail-fast quarantine",
+            "PASS all six HP models native pre/during cancellation, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP isolated inventory invariants,4097 unique route bounds,native-mode absence,valid inventory after mutation,RF nonfinite usable follow-up and native/worker selected-route admission",
+            "PASS Keysight conformance: 1424 independent cases x 4 frontends; exact traffic, values, units, errors and lifetime"
+          ]
+        }
+      }
+    ],
+    "packages": [
+      {
+        "package": "instrument-driver-keysight",
+        "file": "instrument-driver-keysight-0.2.0-alpha.1.crate",
+        "sha256": "2aab676c9547854e8dcc6f7c51792ec0b0c7ce2f9ae9214072b9d4fb5236f2f6",
+        "dependencies": {
+          "instrument-api": {
+            "version": "=0.2.0-alpha.1"
+          },
+          "instrument-scpi": {
+            "version": "=0.2.0-alpha.1"
+          }
+        },
+        "members": [
+          "instrument-driver-keysight-0.2.0-alpha.1/Cargo.lock",
+          "instrument-driver-keysight-0.2.0-alpha.1/Cargo.toml",
+          "instrument-driver-keysight-0.2.0-alpha.1/Cargo.toml.orig",
+          "instrument-driver-keysight-0.2.0-alpha.1/LICENSE-APACHE",
+          "instrument-driver-keysight-0.2.0-alpha.1/LICENSE-MIT",
+          "instrument-driver-keysight-0.2.0-alpha.1/README.md",
+          "instrument-driver-keysight-0.2.0-alpha.1/generated/profiles.rs",
+          "instrument-driver-keysight-0.2.0-alpha.1/src/hp3497.rs",
+          "instrument-driver-keysight-0.2.0-alpha.1/src/hp5334.rs",
+          "instrument-driver-keysight-0.2.0-alpha.1/src/hp_radio.rs",
+          "instrument-driver-keysight-0.2.0-alpha.1/src/lib.rs",
+          "instrument-driver-keysight-0.2.0-alpha.1/src/message_backend.rs"
+        ]
+      },
+      {
+        "package": "InstrumentComponents.Drivers.Keysight",
+        "file": "InstrumentComponents.Drivers.Keysight.0.2.0-alpha.1.nupkg",
+        "sha256": "bebaa576a8086f2930ab02ecce7eadd777d242399e12f43482576a545efa367f",
+        "dependencies": {
+          "InstrumentComponents.Scpi": "[0.2.0-alpha.1]"
+        },
+        "members": [
+          "_rels/.rels",
+          "InstrumentComponents.Drivers.Keysight.nuspec",
+          "README.md",
+          "lib/net8.0/InstrumentComponents.Drivers.Keysight.dll",
+          "[Content_Types].xml",
+          "package/services/metadata/core-properties/nuget.psmdcp"
+        ]
+      }
+    ]
+  },
+  {
+    "artifactId": 13990689310,
+    "zipSha256": "55a5c72198d0c7905e07fe1f0745defcba4b5e5a7fab972e8ed7629d45cacb1b",
+    "phaseCount": 19,
+    "phaseHashesAndExitsVerified": true,
+    "sdkPackageJoinVerified": true,
+    "binaries": [
+      {
+        "mode": "generated",
+        "rid": "win-x64",
+        "framework": "net8.0",
+        "sha256": "bc924f6629baec1500957f7f9f0685c41b51bad4b2a8851b76b177ae1a89a00a",
+        "executed": true,
+        "actualNativeFormatAndHashVerified": true,
+        "conformance": {
+          "rust-default": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ],
+          "rust-async": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS HP5334A/B native cancellation before and during IO; quarantine and no detached host accesses",
+            "PASS all six HP models native abandonment, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP selected-route admission before native/worker acquisition; no unbound or ANT capability fallback",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ],
+          "native-execute": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, owned/borrowed lifetime, quarantine and native cancellation",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, immutable configuration, ownership and fail-fast quarantine",
+            "PASS all six HP models native pre/during cancellation, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP isolated inventory invariants,4097 unique route bounds,native-mode absence,valid inventory after mutation,RF nonfinite usable follow-up and native/worker selected-route admission",
+            "PASS Keysight conformance: 1424 independent cases x 4 frontends; exact traffic, values, units, errors and lifetime"
+          ]
+        }
+      },
+      {
+        "mode": "packed",
+        "rid": "win-x64",
+        "framework": "net8.0",
+        "sha256": "2323150be685b8191ea44b0ace3f2c1200a40d6e73007670b65784ef45f75f1d",
+        "executed": true,
+        "actualNativeFormatAndHashVerified": true,
+        "conformance": {
+          "rust-default": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ],
+          "rust-async": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine",
+            "PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up",
+            "PASS HP5334A/B native cancellation before and during IO; quarantine and no detached host accesses",
+            "PASS all six HP models native abandonment, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP selected-route admission before native/worker acquisition; no unbound or ANT capability fallback",
+            "PASS Keysight package: 1424 independent cases; exact traffic, values, units, errors and resource lifetime"
+          ],
+          "native-execute": [
+            "PASS HP5334A/B passive selection, commissioning, nonfinite arguments, owned/borrowed lifetime, quarantine and native cancellation",
+            "PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, immutable configuration, ownership and fail-fast quarantine",
+            "PASS all six HP models native pre/during cancellation, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries",
+            "PASS HP isolated inventory invariants,4097 unique route bounds,native-mode absence,valid inventory after mutation,RF nonfinite usable follow-up and native/worker selected-route admission",
+            "PASS Keysight conformance: 1424 independent cases x 4 frontends; exact traffic, values, units, errors and lifetime"
+          ]
+        }
+      }
+    ],
+    "packages": [
+      {
+        "package": "instrument-driver-keysight",
+        "file": "instrument-driver-keysight-0.2.0-alpha.1.crate",
+        "sha256": "2aab676c9547854e8dcc6f7c51792ec0b0c7ce2f9ae9214072b9d4fb5236f2f6",
+        "dependencies": {
+          "instrument-api": {
+            "version": "=0.2.0-alpha.1"
+          },
+          "instrument-scpi": {
+            "version": "=0.2.0-alpha.1"
+          }
+        },
+        "members": [
+          "instrument-driver-keysight-0.2.0-alpha.1/Cargo.lock",
+          "instrument-driver-keysight-0.2.0-alpha.1/Cargo.toml",
+          "instrument-driver-keysight-0.2.0-alpha.1/Cargo.toml.orig",
+          "instrument-driver-keysight-0.2.0-alpha.1/LICENSE-APACHE",
+          "instrument-driver-keysight-0.2.0-alpha.1/LICENSE-MIT",
+          "instrument-driver-keysight-0.2.0-alpha.1/README.md",
+          "instrument-driver-keysight-0.2.0-alpha.1/generated/profiles.rs",
+          "instrument-driver-keysight-0.2.0-alpha.1/src/hp3497.rs",
+          "instrument-driver-keysight-0.2.0-alpha.1/src/hp5334.rs",
+          "instrument-driver-keysight-0.2.0-alpha.1/src/hp_radio.rs",
+          "instrument-driver-keysight-0.2.0-alpha.1/src/lib.rs",
+          "instrument-driver-keysight-0.2.0-alpha.1/src/message_backend.rs"
+        ]
+      },
+      {
+        "package": "InstrumentComponents.Drivers.Keysight",
+        "file": "InstrumentComponents.Drivers.Keysight.0.2.0-alpha.1.nupkg",
+        "sha256": "9b36b8df716420850910bcf99de16eb94b10914c86e128e03085fb047b3a8adb",
+        "dependencies": {
+          "InstrumentComponents.Scpi": "[0.2.0-alpha.1]"
+        },
+        "members": [
+          "_rels/.rels",
+          "InstrumentComponents.Drivers.Keysight.nuspec",
+          "README.md",
+          "lib/net8.0/InstrumentComponents.Drivers.Keysight.dll",
+          "[Content_Types].xml",
+          "package/services/metadata/core-properties/nuget.psmdcp"
+        ]
+      }
+    ]
+  }
+]

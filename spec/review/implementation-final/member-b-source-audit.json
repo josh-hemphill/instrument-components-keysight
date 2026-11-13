@@ -1,0 +1,15 @@
+{
+  "filesVerified": 824,
+  "mismatches": [],
+  "manifestSha256": "13a78c6c6956e0fec18a3934a4b337d2eb3d9ea8ac2807acdb2e3e82c66bc530",
+  "verifiedCompilerOptLevels": {
+    "instrument_api": 3,
+    "instrument_scpi": 3,
+    "instrument_testkit": 3,
+    "instrument_driver_keysight": 3,
+    "instrument_runtime": 3,
+    "keysight_package_proof": 0
+  },
+  "localSourceAndLogHashesVerified": true,
+  "finalNumericBallot": "WITHHELD"
+}

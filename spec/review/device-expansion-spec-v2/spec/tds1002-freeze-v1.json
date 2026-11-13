@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "stage": "independent TDS1002 spec/oracle v1 freeze for full-nine rubric-v2 Council review",
+  "scope": [
+    "TDS1002"
+  ],
+  "caseCount": 334,
+  "hardwareValidated": false,
+  "files": [
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/spec/TDS1002.md",
+      "sha256": "ad1258bac027c6628d47ef8db492acb5b83879f9b2eece12e076aaacaffc2926"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/spec/TDS1002-COMPOSITION.md",
+      "sha256": "1b1cffe2e59c810ce7cc049a4bd579adbcf65718017a51df575d674e92ba904f"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/spec/TDS1002-EXAMPLES.md",
+      "sha256": "82f879dc7625aa524fdaded09eea2c513b8c512346624d40baeb4d6b6d70d223"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/spec/acceptance/tds1002.catalog-cases.json",
+      "sha256": "7d715c1416e65ffe60ae273732985f090cb569a23fa24be4ee8f91f535491393"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/spec/acceptance/build-tds1002-oracle.py",
+      "sha256": "f455dbffa6200864547b27cdfe252554e79d072b7bdef8dccbd3c8572c9311b1"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/spec/acceptance/tds1002-fixture.json",
+      "sha256": "02b7d1231742b2adc55fff78e6358fd80541d085f2b2a6004f735e4480e78bd6"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/spec/acceptance/tds1002.provenance.json",
+      "sha256": "63be0ee7fdfca734d2ac31c5a28b558860d4506a403b5d5ab778a406f447d308"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/research/TDS1002-SOURCES.json",
+      "sha256": "7e1bbe5c5c540e4fe4258dba5143cc7d97822ecdb746fa83c20fe1c7a5804053"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/research/TDS1002-RESEARCH.md",
+      "sha256": "ebbbb5b5e815010f541ba3c82c631bd2477727adb1b8de6ad02a192abbd9d097"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/research/TDS1002-FAQ-tool-evidence.json",
+      "sha256": "e34677c525b17c5061b77efef2c46cf098d7854e74b85285445b1c1c0b555573"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/review/TDS1002-PRIMARY-AUDIT.md",
+      "sha256": "04dd54ff7e1cc097e56831dc9d32fcdcdd2e48b3c6ad0a742358aa05416efc6b"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/review/TDS1002-ORACLE-CHECK.json",
+      "sha256": "fcb53a9ce5e59876d5e6f35879db61c9ec01c2a53d1c9cbe61f4e027d6588932"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/research/TDS1002-programmer-071107504.pdf",
+      "sha256": "659af48133a18ed9e0d5c3d16d5657a291edb15b3f71f69848473e9496d9d028"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/research/TDS1002-user-071106400.pdf",
+      "sha256": "4367b631e30b285bf3810b65df3bbf4a484ec8ebf9b1cbade60a7f03441a66f3"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/research/TDS1002-programmer-077044401.pdf",
+      "sha256": "e8f252e2709ff20f9593f90731851a5028946481a5553e4fed548364c52d9c71"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/research/TDS1002-supplement-071185801.pdf",
+      "sha256": "2f314ea93a9e6a00ad15c7990eb038d7caf4329c946099207654e68c8144574f"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/review/TDS1002-clearance.json",
+      "sha256": "8db2ff7c3c1cd020bc977cf73a97ef6af009226474c5cf4bd46cb78d5bd3b312"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/review/TDS1002-FINAL-SPEC-REVIEW.md",
+      "sha256": "c37b7b248e8c89cd5a5b472e1996a704735786d27586974f8eec5afa5e161b45"
+    }
+  ]
+}

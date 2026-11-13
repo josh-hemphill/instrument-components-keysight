@@ -1,0 +1,3021 @@
+{
+  "schemaVersion": 1,
+  "reconstructedSpecSha256": "c3e32d3d577ea53e7b7a62fb6da55adb0d09b959cbbdd66b69d7db58f870be59",
+  "powerResultBinary64Endpoints": {
+    "Standard": {
+      "minimum": {
+        "watts": "0.001",
+        "highPrecisionDbm": "0",
+        "binary64Decimal": "0.0",
+        "binary64Hex": "0x0.0p+0"
+      },
+      "maximum": {
+        "watts": "60",
+        "highPrecisionDbm": "47.781512503836436325087667979796083359683187456528044061402931014323373420580856",
+        "binary64Decimal": "47.78151250383644",
+        "binary64Hex": "0x1.7e4089a0ab240p+5"
+      }
+    },
+    "Option007": {
+      "minimum": {
+        "watts": "0.000040",
+        "highPrecisionDbm": "-13.979400086720376095725222105510139464636202370757829173791450777457836214511510",
+        "binary64Decimal": "-13.979400086720377",
+        "binary64Hex": "-0x1.bf573ed9c53c1p+3"
+      },
+      "maximum": {
+        "watts": "2.4",
+        "highPrecisionDbm": "33.802112417116060229362445874285943895046985085770214887611480236865537206069347",
+        "binary64Decimal": "33.802112417116064",
+        "binary64Hex": "0x1.0e6ab9ea39d50p+5"
+      }
+    },
+    "Option008": {
+      "minimum": {
+        "watts": "0.000100",
+        "highPrecisionDbm": "-10",
+        "binary64Decimal": "-10.0",
+        "binary64Hex": "-0x1.4000000000000p+3"
+      },
+      "maximum": {
+        "watts": "6",
+        "highPrecisionDbm": "37.781512503836436325087667979796083359683187456528044061402931014323373420580856",
+        "binary64Decimal": "37.78151250383644",
+        "binary64Hex": "0x1.2e4089a0ab240p+5"
+      }
+    },
+    "Option016": {
+      "minimum": {
+        "watts": "0.001600",
+        "highPrecisionDbm": "2.0411998265592478085495557889797210707275952584843416524170984450843275709769804",
+        "binary64Decimal": "2.041199826559248",
+        "binary64Hex": "0x1.05460931d61fbp+1"
+      },
+      "maximum": {
+        "watts": "100",
+        "highPrecisionDbm": "50",
+        "binary64Decimal": "50.0",
+        "binary64Hex": "0x1.9000000000000p+5"
+      }
+    }
+  },
+  "historicalV7Sha256": "c4650ff2ba6334199124fc9a9a608bfb8d6a5fb76c26ae75a949e4ffb62004f4",
+  "priorReviewNotInherited": true,
+  "manual": {
+    "part": "08920-90220",
+    "url": "https://www.keysight.com/content/dam/keysight/en/doc/gate/programming-guides/9018-40244.pdf",
+    "sha256": "4fd4cce8703f91eff51702547dbfa7f2c571dd13cfef8de5742a6903f0dbf629"
+  },
+  "datasheet": {
+    "part": "5968-5385E",
+    "url": "https://www.testunlimited.com/pdf/Agilent-8920A-Specs.pdf",
+    "sha256": "c901c9250bf2fedfb2fbf7bc112508a261349a44a72bd07976d4b467574dba77",
+    "printedPages": [
+      "2",
+      "3",
+      "4"
+    ]
+  },
+  "factory": {
+    "id": "keysight.hp8920a",
+    "owned": true,
+    "operationTimeoutMs": 1000,
+    "responseLimitBytes": 256,
+    "routes": [
+      {
+        "idSegment": "R:E:Option007:RfInOut:RfInOut",
+        "attenuator": "Electronic",
+        "inputPowerOption": "Option007",
+        "sourcePort": "RfInOut",
+        "receiverInput": "RfInOut",
+        "firmware": "A.18.00",
+        "qualifiedMinimumFirmware": "A.18.00",
+        "sameNativeFamilyLaterRevisionsAccepted": true,
+        "commissioning": {
+          "nativeGpib": true,
+          "manualSwitchingBeforeScreenChange": true,
+          "frequencyDisplay": true,
+          "ordinaryIndependentRf": true,
+          "externalPttInhibited": true,
+          "exclusiveAccess": true,
+          "cleanResponseBoundary": true,
+          "qualifiedStableSingleCarrierWithinPowerBand": true
+        }
+      },
+      {
+        "idSegment": "R:E:Option008:RfInOut:RfInOut",
+        "attenuator": "Electronic",
+        "inputPowerOption": "Option008",
+        "sourcePort": "RfInOut",
+        "receiverInput": "RfInOut",
+        "firmware": "A.18.00",
+        "qualifiedMinimumFirmware": "A.18.00",
+        "sameNativeFamilyLaterRevisionsAccepted": true,
+        "commissioning": {
+          "nativeGpib": true,
+          "manualSwitchingBeforeScreenChange": true,
+          "frequencyDisplay": true,
+          "ordinaryIndependentRf": true,
+          "externalPttInhibited": true,
+          "exclusiveAccess": true,
+          "cleanResponseBoundary": true,
+          "qualifiedStableSingleCarrierWithinPowerBand": true
+        }
+      },
+      {
+        "idSegment": "R:E:Option016:RfInOut:RfInOut",
+        "attenuator": "Electronic",
+        "inputPowerOption": "Option016",
+        "sourcePort": "RfInOut",
+        "receiverInput": "RfInOut",
+        "firmware": "A.18.00",
+        "qualifiedMinimumFirmware": "A.18.00",
+        "sameNativeFamilyLaterRevisionsAccepted": true,
+        "commissioning": {
+          "nativeGpib": true,
+          "manualSwitchingBeforeScreenChange": true,
+          "frequencyDisplay": true,
+          "ordinaryIndependentRf": true,
+          "externalPttInhibited": true,
+          "exclusiveAccess": true,
+          "cleanResponseBoundary": true,
+          "qualifiedStableSingleCarrierWithinPowerBand": true
+        }
+      },
+      {
+        "idSegment": "R:E:Standard:DuplexOut:RfInOut",
+        "attenuator": "Electronic",
+        "inputPowerOption": "Standard",
+        "sourcePort": "DuplexOut",
+        "receiverInput": "RfInOut",
+        "firmware": "A.18.00",
+        "qualifiedMinimumFirmware": "A.18.00",
+        "sameNativeFamilyLaterRevisionsAccepted": true,
+        "commissioning": {
+          "nativeGpib": true,
+          "manualSwitchingBeforeScreenChange": true,
+          "frequencyDisplay": true,
+          "ordinaryIndependentRf": true,
+          "externalPttInhibited": true,
+          "exclusiveAccess": true,
+          "cleanResponseBoundary": true,
+          "qualifiedStableSingleCarrierWithinPowerBand": true
+        }
+      },
+      {
+        "idSegment": "R:E:Standard:RfInOut:Antenna",
+        "attenuator": "Electronic",
+        "inputPowerOption": "Standard",
+        "sourcePort": "RfInOut",
+        "receiverInput": "Antenna",
+        "firmware": "A.18.00",
+        "qualifiedMinimumFirmware": "A.18.00",
+        "sameNativeFamilyLaterRevisionsAccepted": true,
+        "commissioning": {
+          "nativeGpib": true,
+          "manualSwitchingBeforeScreenChange": true,
+          "frequencyDisplay": true,
+          "ordinaryIndependentRf": true,
+          "externalPttInhibited": true,
+          "exclusiveAccess": true,
+          "cleanResponseBoundary": true,
+          "qualifiedStableSingleCarrierWithinPowerBand": true
+        }
+      },
+      {
+        "idSegment": "R:E:Standard:RfInOut:RfInOut",
+        "attenuator": "Electronic",
+        "inputPowerOption": "Standard",
+        "sourcePort": "RfInOut",
+        "receiverInput": "RfInOut",
+        "firmware": "A.18.00",
+        "qualifiedMinimumFirmware": "A.18.00",
+        "sameNativeFamilyLaterRevisionsAccepted": true,
+        "commissioning": {
+          "nativeGpib": true,
+          "manualSwitchingBeforeScreenChange": true,
+          "frequencyDisplay": true,
+          "ordinaryIndependentRf": true,
+          "externalPttInhibited": true,
+          "exclusiveAccess": true,
+          "cleanResponseBoundary": true,
+          "qualifiedStableSingleCarrierWithinPowerBand": true
+        }
+      },
+      {
+        "idSegment": "R:M:Option007:RfInOut:RfInOut",
+        "attenuator": "Mechanical055",
+        "inputPowerOption": "Option007",
+        "sourcePort": "RfInOut",
+        "receiverInput": "RfInOut",
+        "firmware": "A.18.00",
+        "qualifiedMinimumFirmware": "A.18.00",
+        "sameNativeFamilyLaterRevisionsAccepted": true,
+        "commissioning": {
+          "nativeGpib": true,
+          "manualSwitchingBeforeScreenChange": true,
+          "frequencyDisplay": true,
+          "ordinaryIndependentRf": true,
+          "externalPttInhibited": true,
+          "exclusiveAccess": true,
+          "cleanResponseBoundary": true,
+          "qualifiedStableSingleCarrierWithinPowerBand": true
+        }
+      },
+      {
+        "idSegment": "R:M:Option008:RfInOut:RfInOut",
+        "attenuator": "Mechanical055",
+        "inputPowerOption": "Option008",
+        "sourcePort": "RfInOut",
+        "receiverInput": "RfInOut",
+        "firmware": "A.18.00",
+        "qualifiedMinimumFirmware": "A.18.00",
+        "sameNativeFamilyLaterRevisionsAccepted": true,
+        "commissioning": {
+          "nativeGpib": true,
+          "manualSwitchingBeforeScreenChange": true,
+          "frequencyDisplay": true,
+          "ordinaryIndependentRf": true,
+          "externalPttInhibited": true,
+          "exclusiveAccess": true,
+          "cleanResponseBoundary": true,
+          "qualifiedStableSingleCarrierWithinPowerBand": true
+        }
+      },
+      {
+        "idSegment": "R:M:Option016:RfInOut:RfInOut",
+        "attenuator": "Mechanical055",
+        "inputPowerOption": "Option016",
+        "sourcePort": "RfInOut",
+        "receiverInput": "RfInOut",
+        "firmware": "A.18.00",
+        "qualifiedMinimumFirmware": "A.18.00",
+        "sameNativeFamilyLaterRevisionsAccepted": true,
+        "commissioning": {
+          "nativeGpib": true,
+          "manualSwitchingBeforeScreenChange": true,
+          "frequencyDisplay": true,
+          "ordinaryIndependentRf": true,
+          "externalPttInhibited": true,
+          "exclusiveAccess": true,
+          "cleanResponseBoundary": true,
+          "qualifiedStableSingleCarrierWithinPowerBand": true
+        }
+      },
+      {
+        "idSegment": "R:M:Standard:DuplexOut:RfInOut",
+        "attenuator": "Mechanical055",
+        "inputPowerOption": "Standard",
+        "sourcePort": "DuplexOut",
+        "receiverInput": "RfInOut",
+        "firmware": "A.18.00",
+        "qualifiedMinimumFirmware": "A.18.00",
+        "sameNativeFamilyLaterRevisionsAccepted": true,
+        "commissioning": {
+          "nativeGpib": true,
+          "manualSwitchingBeforeScreenChange": true,
+          "frequencyDisplay": true,
+          "ordinaryIndependentRf": true,
+          "externalPttInhibited": true,
+          "exclusiveAccess": true,
+          "cleanResponseBoundary": true,
+          "qualifiedStableSingleCarrierWithinPowerBand": true
+        }
+      },
+      {
+        "idSegment": "R:M:Standard:RfInOut:RfInOut",
+        "attenuator": "Mechanical055",
+        "inputPowerOption": "Standard",
+        "sourcePort": "RfInOut",
+        "receiverInput": "RfInOut",
+        "firmware": "A.18.00",
+        "qualifiedMinimumFirmware": "A.18.00",
+        "sameNativeFamilyLaterRevisionsAccepted": true,
+        "commissioning": {
+          "nativeGpib": true,
+          "manualSwitchingBeforeScreenChange": true,
+          "frequencyDisplay": true,
+          "ordinaryIndependentRf": true,
+          "externalPttInhibited": true,
+          "exclusiveAccess": true,
+          "cleanResponseBoundary": true,
+          "qualifiedStableSingleCarrierWithinPowerBand": true
+        }
+      }
+    ]
+  },
+  "transcriptPolicy": {
+    "configOrder": "three CONFIG writes, then three readbacks; output OFF verification precedes CONFIG",
+    "numericWriteFormat": "frequency fixed integer Hz; level invariant canonical decimal tenths",
+    "powerEndpoints": "Frozen nearest binary64 constants from80-digit10*log10(watts/0.001), inclusive; next representable outside rejected; constants published in provenance",
+    "caseFinalOutcome": "Only final successful value/error compared exactly; earlier calls must succeed; no case encodes prior failure then quarantined follow-up."
+  },
+  "cases": [
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|configure-enable-state-disable",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|configure-enable-state-true",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|disable-before-configure",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|enable-before-configure",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|reported-state-false",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|reported-state-true",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|source-frequency-and-level-min",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Settings confirmed; no physical settling/calibration or modulation claim."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|source-frequency-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Settings confirmed; no physical settling/calibration or modulation claim."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|source-frequency-below-min",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|source-level-below-min",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:DuplexOut:RfInOut|source-frequency-and-level-min",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Settings confirmed; no physical settling/calibration or modulation claim."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:DuplexOut:RfInOut|source-frequency-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Settings confirmed; no physical settling/calibration or modulation claim."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:DuplexOut:RfInOut|source-frequency-below-min",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:DuplexOut:RfInOut|source-level-below-min",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|source-rfinout-option-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Settings confirmed; no physical settling/calibration or modulation claim."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|source-rfinout-option-over-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Option007:RfInOut:RfInOut|source-rfinout-option-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Settings confirmed; no physical settling/calibration or modulation claim."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Option007:RfInOut:RfInOut|source-rfinout-option-over-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Option008:RfInOut:RfInOut|source-rfinout-option-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Settings confirmed; no physical settling/calibration or modulation claim."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Option008:RfInOut:RfInOut|source-rfinout-option-over-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Option016:RfInOut:RfInOut|source-rfinout-option-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Settings confirmed; no physical settling/calibration or modulation claim."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Option016:RfInOut:RfInOut|source-rfinout-option-over-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:DuplexOut:RfInOut|source-duplex-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Settings confirmed; no physical settling/calibration or modulation claim."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:DuplexOut:RfInOut|source-duplex-over-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:M:Standard:RfInOut:RfInOut|source-frequency-and-level-min",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Settings confirmed; no physical settling/calibration or modulation claim."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:M:Standard:RfInOut:RfInOut|source-frequency-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Settings confirmed; no physical settling/calibration or modulation claim."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:M:Standard:RfInOut:RfInOut|source-frequency-below-min",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:M:Standard:RfInOut:RfInOut|source-level-below-min",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:M:Standard:DuplexOut:RfInOut|source-frequency-and-level-min",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Settings confirmed; no physical settling/calibration or modulation claim."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:M:Standard:DuplexOut:RfInOut|source-frequency-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Settings confirmed; no physical settling/calibration or modulation claim."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:M:Standard:DuplexOut:RfInOut|source-frequency-below-min",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:M:Standard:DuplexOut:RfInOut|source-level-below-min",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:M:Standard:RfInOut:RfInOut|source-rfinout-option-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Settings confirmed; no physical settling/calibration or modulation claim."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:M:Standard:RfInOut:RfInOut|source-rfinout-option-over-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:M:Option007:RfInOut:RfInOut|source-rfinout-option-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Settings confirmed; no physical settling/calibration or modulation claim."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:M:Option007:RfInOut:RfInOut|source-rfinout-option-over-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:M:Option008:RfInOut:RfInOut|source-rfinout-option-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Settings confirmed; no physical settling/calibration or modulation claim."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:M:Option008:RfInOut:RfInOut|source-rfinout-option-over-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:M:Option016:RfInOut:RfInOut|source-rfinout-option-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Settings confirmed; no physical settling/calibration or modulation claim."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:M:Option016:RfInOut:RfInOut|source-rfinout-option-over-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:M:Standard:DuplexOut:RfInOut|source-duplex-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Settings confirmed; no physical settling/calibration or modulation claim."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:M:Standard:DuplexOut:RfInOut|source-duplex-over-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|frequency-above-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|frequency-fraction",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|level-fraction",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|frequency-zero",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|frequency-negative",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|frequency-giant",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|level-giant",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Pre-IO exact source table and integer Hz/0.1dB setting-grid validation."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:DuplexOut:RfInOut|canonical-zero-level",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E source p2"
+      ],
+      "syntheticPolicy": [
+        "Settings confirmed; no physical settling/calibration or modulation claim."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-frequency-min",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Single stable input carrier, independent model receiver envelope."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-frequency-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Single stable input carrier, independent model receiver envelope."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-frequency-below-min",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Single stable input carrier, independent model receiver envelope."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-frequency-above-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Single stable input carrier, independent model receiver envelope."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:M:Standard:RfInOut:RfInOut|receiver-frequency-min",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Single stable input carrier, independent model receiver envelope."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:M:Standard:RfInOut:RfInOut|receiver-frequency-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Single stable input carrier, independent model receiver envelope."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:M:Standard:RfInOut:RfInOut|receiver-frequency-below-min",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Single stable input carrier, independent model receiver envelope."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:M:Standard:RfInOut:RfInOut|receiver-frequency-above-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Single stable input carrier, independent model receiver envelope."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:Antenna|antenna-frequency",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Single stable input carrier, independent model receiver envelope."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:Antenna|antenna-power-unsupported",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [
+        "ANT omits TX-power capability; required-operation checks also reject before connector open."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-power-exact-min",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Power carrier band is caller commissioning precondition; no extra frequency query."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-power-exact-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Power carrier band is caller commissioning precondition; no extra frequency query."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-power-next-below-min",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Power carrier band is caller commissioning precondition; no extra frequency query."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-power-next-above-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Power carrier band is caller commissioning precondition; no extra frequency query."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Option007:RfInOut:RfInOut|receiver-power-exact-min",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Power carrier band is caller commissioning precondition; no extra frequency query."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Option007:RfInOut:RfInOut|receiver-power-exact-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Power carrier band is caller commissioning precondition; no extra frequency query."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Option007:RfInOut:RfInOut|receiver-power-next-below-min",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Power carrier band is caller commissioning precondition; no extra frequency query."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Option007:RfInOut:RfInOut|receiver-power-next-above-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Power carrier band is caller commissioning precondition; no extra frequency query."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Option008:RfInOut:RfInOut|receiver-power-exact-min",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Power carrier band is caller commissioning precondition; no extra frequency query."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Option008:RfInOut:RfInOut|receiver-power-exact-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Power carrier band is caller commissioning precondition; no extra frequency query."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Option008:RfInOut:RfInOut|receiver-power-next-below-min",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Power carrier band is caller commissioning precondition; no extra frequency query."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Option008:RfInOut:RfInOut|receiver-power-next-above-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Power carrier band is caller commissioning precondition; no extra frequency query."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Option016:RfInOut:RfInOut|receiver-power-exact-min",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Power carrier band is caller commissioning precondition; no extra frequency query."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Option016:RfInOut:RfInOut|receiver-power-exact-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Power carrier band is caller commissioning precondition; no extra frequency query."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Option016:RfInOut:RfInOut|receiver-power-next-below-min",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Power carrier band is caller commissioning precondition; no extra frequency query."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Option016:RfInOut:RfInOut|receiver-power-next-above-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Power carrier band is caller commissioning precondition; no extra frequency query."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|frequency-two-fresh-triggers",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|power-two-fresh-triggers",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-invalidates-source-ready",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [
+        "Successful receiver call clears source readiness; blocked enable emits no IO."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|reconfigure-after-receiver",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|quoted-case-ascii-space-tolerance",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [
+        "Case/outer0x20 normalization; unit bare-or-quoted tolerance is software decoder policy."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|off-required",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|manual-required",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|frequency-offset-off",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|level-offset-off",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|attenuator-hold-off",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|wrong-source-port",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|setting-frequency-mismatch",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|setting-level-mismatch",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|unit-w-known",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|unit-v-model-domain",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|unit-dbuv-model-domain",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|unit-unknown",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|quoted-only-bare",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|quoted-token-unknown",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|quote-mismatch",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|quote-nested",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|quote-interior-space",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|quoted-extra-field",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|quoted-tab",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|quoted-unicode-space",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|quoted-control",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|port-internal-space",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|setting-frequency-below-route",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [
+        "Source readbacks must lie in selected route source envelope before digital tolerance comparison."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|setting-frequency-above-route",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [
+        "Source readbacks must lie in selected route source envelope before digital tolerance comparison."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|setting-level-below-route",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [
+        "Source readbacks must lie in selected route source envelope before digital tolerance comparison."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|setting-level-above-route",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [
+        "Source readbacks must lie in selected route source envelope before digital tolerance comparison."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|setting-giant-frequency",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [
+        "Source readbacks must lie in selected route source envelope before digital tolerance comparison."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|setting-giant-level",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [
+        "Source readbacks must lie in selected route source envelope before digital tolerance comparison."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|setting-numeric-list",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [
+        "Source readbacks must lie in selected route source envelope before digital tolerance comparison."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|frequency-halfstep-inclusive",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [
+        "Inclusive halfstep setting comparison must not reject mathematically exact0.5Hz/0.05dB through binary roundoff."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|level-halfstep-inclusive",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [
+        "Inclusive halfstep setting comparison must not reject mathematically exact0.5Hz/0.05dB through binary roundoff."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|boolean-parse-on",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|boolean-parse-off",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|boolean-parse-decimal",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|boolean-parse-plus",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|boolean-parse-quoted",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|boolean-parse-two",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|boolean-parse-tab",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|boolean-parse-embedded-crlf",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-wrong-input",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-manual-tuning",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-averaging-on",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-reference-on",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-measurement-off",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-settling-fast",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-retrigger-rep",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-trigger-quoted",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-trigger-full-name",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-input-wrong-domain",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|power-unit-w",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|power-unit-v",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|power-unit-dbuv",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-numeric-empty",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Single stable input carrier, independent model receiver envelope."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-numeric-nan",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Single stable input carrier, independent model receiver envelope."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-numeric-infinity",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Single stable input carrier, independent model receiver envelope."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-numeric-timeout-example",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Single stable input carrier, independent model receiver envelope."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-numeric-huge-finite",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Single stable input carrier, independent model receiver envelope."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-numeric-quoted",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Single stable input carrier, independent model receiver envelope."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-numeric-list",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Single stable input carrier, independent model receiver envelope."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-numeric-junk",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Single stable input carrier, independent model receiver envelope."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-numeric-non-ascii",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Single stable input carrier, independent model receiver envelope."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-numeric-control",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Single stable input carrier, independent model receiver envelope."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-numeric-overlong",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Single stable input carrier, independent model receiver envelope."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|power-below-standard-min",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Power carrier band is caller commissioning precondition; no extra frequency query."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|power-above-standard-max",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80",
+        "5968-5385E receiver/power pp3,4"
+      ],
+      "syntheticPolicy": [
+        "Power carrier band is caller commissioning precondition; no extra frequency query."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-timeout",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [
+        "Immediate host fault injection; real stalled deadline and quarantined reuse belong to procedural matrix."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|receiver-transport",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [
+        "Immediate host fault injection; real stalled deadline and quarantined reuse belong to procedural matrix."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|first-write-transport",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|unsupported-Reset",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|unsupported-QueryIdentity",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp8920a|R:E:Standard:RfInOut:RfInOut|unsupported-Shutdown",
+      "model": "8920A",
+      "reconstructedSpec": "HP8920A.md",
+      "manualPages": [
+        "117-119",
+        "161-163",
+        "175",
+        "177-178",
+        "173",
+        "224-227",
+        "75-80"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    }
+  ]
+}

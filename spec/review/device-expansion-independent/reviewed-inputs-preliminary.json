@@ -1,0 +1,53 @@
+{
+  "reviewer": "expansion_spec_reviewer",
+  "stage": "independent preliminary specification review; not Council",
+  "core": "1b0704dbb2c4a9f4ffda9f6b1665de12654f672d",
+  "keysight": "c63cc025d283deb0832dbe2b9c721d8a33412160",
+  "tektronix": "787c4881636d18618f1f8a503a7be7273333064f",
+  "files": [
+    {
+      "path": "spec/33120A.md",
+      "sha256": "fe7bafb90f6eb24aab936ed0731fd0985e0c632cf63c27dfa7adddc1e43169e4"
+    },
+    {
+      "path": "spec/34401A.md",
+      "sha256": "3b95e0e2419861ad18ebd6aff664da06b59420ffb8b0ddc00d830f95e4d0bdb9"
+    },
+    {
+      "path": "spec/53132A.md",
+      "sha256": "3b4dbe87aa0ac5614b17cc6caa3210dcdd5d6b1440dc482ae6416535ca357f93"
+    },
+    {
+      "path": "spec/API-GAPS.md",
+      "sha256": "7c4239df7ecc4f35c200d34db6f49e28fa8555d3110f3523737f8446918364e5"
+    },
+    {
+      "path": "research/34401A-user.pdf",
+      "sha256": "ea7ec922d14aafce23ec7058e37bcf0ccd192423f70d75ccdf6350382ae3b419"
+    },
+    {
+      "path": "research/33120A-user.pdf",
+      "sha256": "3dd6d075bd05cc8efb86846b826656ba3548aba8c621b7045fb1c3a2a167d668"
+    },
+    {
+      "path": "research/53132A-programming.pdf",
+      "sha256": "43b7e12210c503c59acdfea728bafdf66e4c5f284009b6470ee8264b593aa703"
+    },
+    {
+      "path": "research/34980A-programming.pdf",
+      "sha256": "60677f5cfc8c2d9339d8b1a871e168fab39256c6da34fee0ffa8cf276c75ac69"
+    },
+    {
+      "path": "research/34922A-user.pdf",
+      "sha256": "dcbfa4cac94b638ee737d75788f868536a61bdd7d6fd54178c4560c9ef75477b"
+    },
+    {
+      "path": "research/34937A-user.pdf",
+      "sha256": "e96211bb871177b4d9e569e524529ce0b82569e0457decdf7f4e0f58191da926"
+    },
+    {
+      "path": "research/34950A-user.pdf",
+      "sha256": "6d205a242001e4643d1a996a4910dbc3db383aded6689698ad1bc2f56ec1bdd6"
+    }
+  ]
+}

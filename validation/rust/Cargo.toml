@@ -10,7 +10,12 @@ instrument-api="=0.2.0-alpha.1"
 instrument-runtime="=0.2.0-alpha.1"
 instrument-scpi="=0.2.0-alpha.1"
 instrument-testkit="=0.2.0-alpha.1"
-tokio={version="1",features=["rt","macros"],optional=true}
+tokio={version="1",features=["rt","macros","time"],optional=true}
 [features]
 default=[]
 async=["instrument-driver-keysight/async","instrument-api/async","instrument-runtime/async","instrument-scpi/async","instrument-testkit/async","dep:tokio"]
+
+# The large generated fixture constructor is validation data, not shipped code.
+# Keep all driver/SDK dependency crates at their normal release optimization.
+[profile.release.package.keysight-package-proof]
+opt-level=0

@@ -1,0 +1,54 @@
+{
+  "evidenceLevel": "Local source/project composition only; no NativeAOT, other-OS, public-release or hardware claim",
+  "cases": 1424,
+  "frontends": [
+    "Sync",
+    "NativeAsync",
+    "WorkerAsync",
+    "WorkerBlocking"
+  ],
+  "sdkRevision": "6524d9a3c1a1627f3fed8e4fbdca0f577220434c",
+  "sourceFileSha256": {
+    "src/message_backend.rs": "63928667038be810e97c6c0678483dc4630ef917d2c4703395f88ce9cb2a6f32",
+    "src/hp5334.rs": "1a4358b3766604b8718d6933b52ab892fb4510a9b88f44911919032cad08bb70",
+    "src/hp3497.rs": "3d5acc301b7e57a502ca3ee59ce1c1996643ed1ec20c7eaed4f6875bdf5e17c5",
+    "src/lib.rs": "c4ed3b1abac63b176d5e22df7203358a132104dec7710ed9edafd231996f494d",
+    "src/hp_radio.rs": "67b2494c8aad865c77fdc70ecbfd69525c3177b94665aa8b9d49064e2e740ffe",
+    "validation/rust/src/hp_fixture.rs": "22f8a1e7170b51cbc3bc5c0025e3b301ee20bd390964cd02d515174ebec14d8e",
+    "validation/rust/src/hp_async_proof.rs": "a64bf6f96aea57cd7e15c912cbe98d9e6d7db2f8177c2411b89245d12843589b",
+    "validation/rust/src/hp_admission_proof.rs": "01b11905e929800f52288acb7e21b599336a7f6795d7f1de2f94f379040dabe0",
+    "validation/rust/src/hp_counter_proof.rs": "6f1d2c8ef17ebb1c9b5b6da1980b292ec958f910b977516f44439ba9df1ff7d6",
+    "validation/rust/src/main.rs": "5508e82fa732a89518d634565e41a9255b6139a5c463bf1f817fb512172377ac",
+    "validation/rust/src/hp_legacy_proof.rs": "f1d835f44bad4294ce283158a38b3557cc291f631febdd1b7557dba434bafbef",
+    "dotnet/InstrumentComponents.Drivers.Keysight/MessageBackend.cs": "4bf55afb14516910b5e24512a17522583f6475ba777c55364563dd6542acef09",
+    "dotnet/InstrumentComponents.Drivers.Keysight/Hp5334.cs": "a278a998e90c9f2f1c39030ab5ab9e335cfa32d47f920802321d1730913ca635",
+    "dotnet/InstrumentComponents.Drivers.Keysight/HpRadio.cs": "39aa4d3e3b5bf3225077f1a8afa1f58ce64e4f384a6dd579fb11e0dac8321ae5",
+    "dotnet/InstrumentComponents.Drivers.Keysight/Hp3497.cs": "26d346213e4a10ee08e23a3463390bf61184702873be68c7b833bc12dd199da4",
+    "dotnet/InstrumentComponents.Drivers.Keysight/Drivers.cs": "4cb6d7cebf79605ba17da1122800d802a42899ee42ae0ee715d48704a27b765e",
+    "validation/dotnet/HpAsyncProof.cs": "30480c0462ba47f85de3adb06cee13ce63ed78b24d3be8c87b15f3145b977417",
+    "validation/dotnet/HpCounterProof.cs": "f594f1daa8e33b4fc505ae88bfdf9ac3b8fe8adb4be5f3651f217f4739e15d9c",
+    "validation/dotnet/Program.cs": "d79300681a0fccb3353ab96595040b11aa8840817b07d3841e824bcb88f7a57d",
+    "validation/dotnet/HpLegacyProof.cs": "2e434df9282139003b809c655d695be3bcbe83e2e320de991cc48d1bda0f65a3",
+    "validation/dotnet/HpFixture.cs": "158260aaa1ec3fd8a2842218c644444ed72c87e2e3da8499bdd8d455f395c7bb",
+    "validation/dotnet/HpAdmissionProof.cs": "8a207fd5cf373e39a934cea23c6ad02a49588d8973873b79759988e702fbd53d",
+    "generated/cases.rs": "467a38df6d788505cab6a94cbb8c3dfc8723f814ec65d9c64c32a88617cd1ead",
+    "generated/GeneratedCases.cs": "7a86ca52092344d63467afcff32c123f1ad1a3baa6e64e8b68fb0e8949f02942"
+  },
+  "records": [
+    {
+      "log": "validation/evidence/hp-local/source-rust-all.log",
+      "sha256": "1d2f6b0ff990c1cb5f57c4731d6af604bae2cbb4f695cc2f08262f1034bc4b18",
+      "exitCode": 0
+    },
+    {
+      "log": "validation/evidence/hp-local/source-dotnet-all.log",
+      "sha256": "a34ff3d4b32b50d177ae6e79318973c366f36d26479ca3bc0f8dd34966b71148",
+      "exitCode": 0
+    },
+    {
+      "log": "validation/evidence/hp-local/proof-clippy.log",
+      "sha256": "2e3f6694f5ae83b66be061ce9ae280edc8be041c393632e242f1b187b15e46ce",
+      "exitCode": 0
+    }
+  ]
+}

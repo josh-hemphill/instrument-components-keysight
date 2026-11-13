@@ -1,0 +1,104 @@
+{
+  "member": "B",
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "rubric": "v1",
+  "stage": "SPEC",
+  "manifestSha256": "09da4923574f14e0f92078292287890beef5c9dacdc66d96e4c30176328b3d4c",
+  "scores": {
+    "34401A": {
+      "EVIDENCE": 9.3,
+      "API": 9.3,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.1,
+      "VALIDATION": 9.1,
+      "DELIVERY": 9.0
+    },
+    "33120A": {
+      "EVIDENCE": 9.0,
+      "API": 9.1,
+      "PROTOCOL": 8.9,
+      "PARITY": 9.1,
+      "VALIDATION": 9.0,
+      "DELIVERY": 9.0
+    },
+    "53132A": {
+      "EVIDENCE": 9.3,
+      "API": 9.3,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.1,
+      "VALIDATION": 9.1,
+      "DELIVERY": 9.0
+    }
+  },
+  "votes": {
+    "34401A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "FAIL",
+      "VALIDATION": "FAIL",
+      "DELIVERY": "FAIL"
+    },
+    "33120A": {
+      "EVIDENCE": "FAIL",
+      "API": "FAIL",
+      "PROTOCOL": "FAIL",
+      "PARITY": "FAIL",
+      "VALIDATION": "FAIL",
+      "DELIVERY": "FAIL"
+    },
+    "53132A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "FAIL",
+      "VALIDATION": "FAIL",
+      "DELIVERY": "FAIL"
+    }
+  },
+  "mandatoryDefects": [
+    {
+      "item": "33120A",
+      "categories": [
+        "EVIDENCE",
+        "API",
+        "PROTOCOL",
+        "VALIDATION"
+      ],
+      "finding": "Documented OUTP:LOAD? HiZ response 9.9E+37 is positive finite and therefore Device under the guard table, but Parse under the shared >=1e30 numeric cutoff; explicit precedence is missing.",
+      "evidence": "33120A manual printed151/PDF153 and copied spec/33120A.md guard table / reply policy."
+    }
+  ],
+  "requiredChanges": [
+    {
+      "items": [
+        "33120A"
+      ],
+      "change": "Resolve known HiZ sentinel classification explicitly; add literal 9.9E+37 guard case and defined malformed-huge classification."
+    },
+    {
+      "items": [
+        "34401A",
+        "33120A",
+        "53132A"
+      ],
+      "change": "Freeze concrete per-addition shard composition/generation/commissioned-factory integration and procedural lifecycle/endpoint/pending-IO acceptance scenarios with runner entry points and expected outcomes."
+    },
+    {
+      "items": [
+        "34401A",
+        "33120A",
+        "53132A"
+      ],
+      "change": "Freeze chosen immutable SDK/tool/package pins, source/packed platform reproduction command/path, expected artifacts, external package and future release plan, active34401A replacement and documentation/regression updates."
+    }
+  ],
+  "limitations": [
+    "SPEC stage only; no implementation or physical evidence required or claimed.",
+    "Remaining3585B,34980A,34937A,34922A,34950A,TDS1002A remain pending; no nine-item completion.",
+    "No peer ballots read.",
+    "High confidence in primary-page contradiction and hashes; moderate-high in design/plan assessment."
+  ],
+  "report": "member-b.md"
+}

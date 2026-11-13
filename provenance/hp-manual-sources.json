@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "scope": "Original manufacturer manuals/datasheets, independently recovered and hash checked; URLs and hashes are authoritative; PDF copies are not included in production packages. No physical hardware evidence.",
+  "sources": [
+    {
+      "id": "hp5334ab-manual",
+      "url": "https://www.keysight.com/content/dam/keysight/en/doc/gate/user-manuals/9018-05705.pdf",
+      "sha256": "5c06d17abe8e17c74855d63dc51ee0fc340070cff347f380d715b2f367a259f1",
+      "size_bytes": 8103921,
+      "pdf_pages": 171,
+      "actual_part_number": "05334-90047",
+      "actual_publication_date": "1993-12",
+      "actual_revision": null,
+      "actual_firmware_scope": null,
+      "identity_basis": "Official errata PDF1; scanned cover programming body"
+    },
+    {
+      "id": "hp3497a-artisan-part1",
+      "url": "https://www.artisantg.com/info/Agilent_3497A_Operation_Manual_Part1.pdf",
+      "sha256": "4af9a3c98fab54ae318e357ec615e83eec8eff923cfaf5b0a8009a75a925ff16",
+      "size_bytes": 13809928,
+      "pdf_pages": 342,
+      "actual_part_number": "03497-99000",
+      "actual_publication_date": "1981-04-20",
+      "actual_revision": null,
+      "actual_firmware_scope": null,
+      "identity_basis": "Identity corroborated against official errata; mirror errata has blank fields"
+    },
+    {
+      "id": "hp3497a-official",
+      "url": "https://www.keysight.com/content/dam/keysight/en/doc/gate/user-manuals/9018-05394.pdf",
+      "sha256": "ded7abb40d35e5d0fbf8468f462a16bc10742d096bfa2cbcc502f34f24e63018",
+      "size_bytes": 32632136,
+      "pdf_pages": 681,
+      "actual_part_number": "03497-99000",
+      "actual_publication_date": "1981-04-20",
+      "actual_revision": null,
+      "actual_firmware_scope": null,
+      "identity_basis": "Official errata PDF1"
+    },
+    {
+      "id": "hp8920a-programming",
+      "url": "https://www.keysight.com/content/dam/keysight/en/doc/gate/programming-guides/9018-40244.pdf",
+      "sha256": "4fd4cce8703f91eff51702547dbfa7f2c571dd13cfef8de5742a6903f0dbf629",
+      "size_bytes": 6201629,
+      "pdf_pages": 581,
+      "actual_part_number": "08920-90220",
+      "actual_publication_date": "2000-04",
+      "actual_revision": "B",
+      "actual_firmware_scope": "A.18.00 and above",
+      "identity_basis": "Actual cover PDF1"
+    },
+    {
+      "id": "hp8920b-programming",
+      "url": "https://www.keysight.com/content/dam/keysight/en/doc/gate/programming-guides/9018-40355.pdf",
+      "sha256": "5fdeb877b2545fe20a8bd945660468263ada39febc92f3e0013160e9d2d2db7b",
+      "size_bytes": 7407310,
+      "pdf_pages": 668,
+      "actual_part_number": "08920-90222",
+      "actual_publication_date": "2000-04",
+      "actual_revision": "D",
+      "actual_firmware_scope": "B.06.00 and above",
+      "identity_basis": "Actual cover PDF1"
+    },
+    {
+      "id": "hp8921a-programming",
+      "url": "https://docs.ampnuts.ru/eevblog.docs/HP_Agilent_Keysight/HP%208921A%20Programming.pdf",
+      "sha256": "5621ab4b624bb669df5bc6621c8e689002b047019da7ad09d54ed2de234fbcbc",
+      "size_bytes": 4437862,
+      "pdf_pages": 168,
+      "actual_part_number": "08921-90023",
+      "actual_publication_date": "1994-06",
+      "actual_revision": "A",
+      "actual_firmware_scope": "A.12.01 and above",
+      "identity_basis": "Actual cover PDF1 visually inspected"
+    },
+    {
+      "id": "hp8920a-specifications",
+      "url": "https://www.testunlimited.com/pdf/Agilent-8920A-Specs.pdf",
+      "sha256": "c901c9250bf2fedfb2fbf7bc112508a261349a44a72bd07976d4b467574dba77",
+      "size_bytes": 125681,
+      "pdf_pages": 8,
+      "actual_part_number": "5968-5385E",
+      "actual_publication_date": "2000-10",
+      "actual_revision": null,
+      "actual_firmware_scope": null,
+      "identity_basis": "Publication footer PDF8"
+    },
+    {
+      "id": "hp8921a-specifications",
+      "url": "https://jbminstrumentos.com.br/site/catalogo/238/8921a_datasheet.pdf",
+      "sha256": "cc96a40de4c5d67970b73195e6d17df155a66ad2d6d14c9ea8fe94f1ae94dd83",
+      "size_bytes": 443334,
+      "pdf_pages": 16,
+      "actual_part_number": "5968-5820E",
+      "actual_publication_date": "1999-07",
+      "actual_revision": null,
+      "actual_firmware_scope": null,
+      "identity_basis": "Publication footer PDF16"
+    },
+    {
+      "id": "hp8920b-specifications",
+      "url": "https://www.sglabs.it/public/HP8920B_Specifiche.pdf",
+      "sha256": "c512f874ec1f4296aa1d7c77e48d1d44a32fa5eec8c469bee9e5cebef78a27ab",
+      "size_bytes": 988488,
+      "pdf_pages": 14,
+      "actual_part_number": "5968-1376E",
+      "actual_publication_date": "2000-11",
+      "actual_revision": null,
+      "actual_firmware_scope": null,
+      "identity_basis": "Publication footer PDF14"
+    },
+    {
+      "id": "hp8921a-user",
+      "url": "https://www.keysight.com/content/dam/keysight/en/doc/gate/user-manuals/9018-05926.pdf",
+      "sha256": "413b9b5fc06baddbcf455ba574ab4688795dc1bf7a07f0a14af96343df371548",
+      "size_bytes": 3879073,
+      "pdf_pages": 601,
+      "actual_part_number": "08921-90022",
+      "actual_publication_date": "1997-12",
+      "actual_revision": "F",
+      "actual_firmware_scope": "A.15.00 and above",
+      "identity_basis": "Actual cover PDF1; landing metadata date differs"
+    },
+    {
+      "id": "hp8921a-programming-1998",
+      "url": "https://www.ntecusa.com/docs/hp_8921A_prg.pdf",
+      "sha256": "2511b149bb9970021e6012f81aa0efed5fdb5483414fe460c7104a51075471a3",
+      "size_bytes": 4588142,
+      "pdf_pages": 605,
+      "actual_part_number": "08921-90031",
+      "actual_publication_date": "1998-12",
+      "actual_revision": "A",
+      "actual_firmware_scope": "A.15.00 and above",
+      "identity_basis": "Actual cover PDF1; numericOFF proof43 and SDC61"
+    }
+  ]
+}

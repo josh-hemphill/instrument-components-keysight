@@ -1,0 +1,435 @@
+{
+  "stage": "SPEC",
+  "round": "spec-r1",
+  "rubric": "v1",
+  "manifestSha256": "09da4923574f14e0f92078292287890beef5c9dacdc66d96e4c30176328b3d4c",
+  "completeBallots": 3,
+  "items": [
+    "34401A",
+    "33120A",
+    "53132A"
+  ],
+  "allCategoriesPass": false,
+  "gatePass": false,
+  "rows": [
+    {
+      "item": "34401A",
+      "category": "EVIDENCE",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.4,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "range": [
+        9.3,
+        9.4
+      ],
+      "votes": 3,
+      "status": "PASS"
+    },
+    {
+      "item": "34401A",
+      "category": "API",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.1,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "range": [
+        9.1,
+        9.3
+      ],
+      "votes": 2,
+      "status": "PASS"
+    },
+    {
+      "item": "34401A",
+      "category": "PROTOCOL",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "range": [
+        9.3,
+        9.3
+      ],
+      "votes": 3,
+      "status": "PASS"
+    },
+    {
+      "item": "34401A",
+      "category": "PARITY",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.1,
+        "B": 9.1,
+        "C": 9.2
+      },
+      "median": 9.1,
+      "range": [
+        9.1,
+        9.2
+      ],
+      "votes": 1,
+      "status": "FAIL"
+    },
+    {
+      "item": "34401A",
+      "category": "VALIDATION",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.0,
+        "B": 9.1,
+        "C": 9.2
+      },
+      "median": 9.1,
+      "range": [
+        9.0,
+        9.2
+      ],
+      "votes": 1,
+      "status": "FAIL"
+    },
+    {
+      "item": "34401A",
+      "category": "DELIVERY",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.0,
+        "B": 9.0,
+        "C": 9.2
+      },
+      "median": 9.0,
+      "range": [
+        9.0,
+        9.2
+      ],
+      "votes": 1,
+      "status": "FAIL"
+    },
+    {
+      "item": "33120A",
+      "category": "EVIDENCE",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.4,
+        "B": 9.0,
+        "C": 9.1
+      },
+      "median": 9.1,
+      "range": [
+        9.0,
+        9.4
+      ],
+      "votes": 1,
+      "status": "FAIL"
+    },
+    {
+      "item": "33120A",
+      "category": "API",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.1,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "range": [
+        9.1,
+        9.3
+      ],
+      "votes": 2,
+      "status": "PASS"
+    },
+    {
+      "item": "33120A",
+      "category": "PROTOCOL",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 8.9,
+        "C": 9.0
+      },
+      "median": 9.0,
+      "range": [
+        8.9,
+        9.3
+      ],
+      "votes": 1,
+      "status": "FAIL"
+    },
+    {
+      "item": "33120A",
+      "category": "PARITY",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.1,
+        "B": 9.1,
+        "C": 9.2
+      },
+      "median": 9.1,
+      "range": [
+        9.1,
+        9.2
+      ],
+      "votes": 1,
+      "status": "FAIL"
+    },
+    {
+      "item": "33120A",
+      "category": "VALIDATION",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.0,
+        "B": 9.0,
+        "C": 9.0
+      },
+      "median": 9.0,
+      "range": [
+        9.0,
+        9.0
+      ],
+      "votes": 0,
+      "status": "FAIL"
+    },
+    {
+      "item": "33120A",
+      "category": "DELIVERY",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.0,
+        "B": 9.0,
+        "C": 9.2
+      },
+      "median": 9.0,
+      "range": [
+        9.0,
+        9.2
+      ],
+      "votes": 1,
+      "status": "FAIL"
+    },
+    {
+      "item": "53132A",
+      "category": "EVIDENCE",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "range": [
+        9.3,
+        9.3
+      ],
+      "votes": 3,
+      "status": "PASS"
+    },
+    {
+      "item": "53132A",
+      "category": "API",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "range": [
+        9.3,
+        9.3
+      ],
+      "votes": 3,
+      "status": "PASS"
+    },
+    {
+      "item": "53132A",
+      "category": "PROTOCOL",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "range": [
+        9.3,
+        9.3
+      ],
+      "votes": 3,
+      "status": "PASS"
+    },
+    {
+      "item": "53132A",
+      "category": "PARITY",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.1,
+        "B": 9.1,
+        "C": 9.2
+      },
+      "median": 9.1,
+      "range": [
+        9.1,
+        9.2
+      ],
+      "votes": 1,
+      "status": "FAIL"
+    },
+    {
+      "item": "53132A",
+      "category": "VALIDATION",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.0,
+        "B": 9.1,
+        "C": 9.2
+      },
+      "median": 9.1,
+      "range": [
+        9.0,
+        9.2
+      ],
+      "votes": 1,
+      "status": "FAIL"
+    },
+    {
+      "item": "53132A",
+      "category": "DELIVERY",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.0,
+        "B": 9.0,
+        "C": 9.2
+      },
+      "median": 9.0,
+      "range": [
+        9.0,
+        9.2
+      ],
+      "votes": 1,
+      "status": "FAIL"
+    }
+  ],
+  "mandatoryDefects": [
+    {
+      "member": "B",
+      "finding": {
+        "item": "33120A",
+        "categories": [
+          "EVIDENCE",
+          "API",
+          "PROTOCOL",
+          "VALIDATION"
+        ],
+        "finding": "Documented OUTP:LOAD? HiZ response 9.9E+37 is positive finite and therefore Device under the guard table, but Parse under the shared >=1e30 numeric cutoff; explicit precedence is missing.",
+        "evidence": "33120A manual printed151/PDF153 and copied spec/33120A.md guard table / reply policy."
+      }
+    },
+    {
+      "member": "C",
+      "finding": "C-1: 33120A documented OUTP:LOAD? high-Z response 9.9E+37 is simultaneously Device under the guard table and Parse under the numeric plausibility rule; exact error precedence is ambiguous. Primary manual printed151/PDF153; copied spec/33120A.md guard and parser sections."
+    }
+  ],
+  "requiredChanges": [
+    {
+      "member": "A",
+      "finding": {
+        "id": "A-R1",
+        "priority": "P1",
+        "items": [
+          "34401A"
+        ],
+        "categories": [
+          "API"
+        ],
+        "change": "Specify the immutable per-exact-endpoint SCPI-language commissioning/admission input and its Unknown/emulation rejection before connector acquisition, with equivalent Rust/C# construction examples. The spec currently requires SCPI but does not say how this admission requirement is represented or validated."
+      }
+    },
+    {
+      "member": "A",
+      "finding": {
+        "id": "A-R2",
+        "priority": "P1",
+        "items": [
+          "34401A",
+          "33120A",
+          "53132A"
+        ],
+        "categories": [
+          "VALIDATION"
+        ],
+        "change": "Add a concrete procedural acceptance matrix with stable new-model IDs, setup, trigger and assertions for admission/capability isolation, nonfinite requests and healthy follow-up, failed-operation quarantine, concurrent serialization, owned/borrowed close, and genuinely pending query/write cancellation/deadlines. Distinguish inherited SDK proofs from required new-device integration proofs; include 33120 counterpart-query/write failures and 53132 intent preservation."
+      }
+    },
+    {
+      "member": "A",
+      "finding": {
+        "id": "A-R3",
+        "priority": "P1",
+        "items": [
+          "34401A",
+          "33120A",
+          "53132A"
+        ],
+        "categories": [
+          "PARITY",
+          "DELIVERY"
+        ],
+        "change": "Bind a concrete external delivery/validation plan to these additions: list shard composition replacement rules (especially removal of active inherited 34401 cases while preserving historical evidence/regressions), static factory/proof entry points, exact SDK/tool pins or frozen baseline reuse, generate/check/TestKit/verify-package commands, and source/packed Linux/Windows x64 x .NET8/10 acceptance matrix. Identify required future coordinated package versions separately from existing public versions. Existing baseline infrastructure is useful but not yet explicitly extended by this packet."
+      }
+    },
+    {
+      "member": "B",
+      "finding": {
+        "items": [
+          "33120A"
+        ],
+        "change": "Resolve known HiZ sentinel classification explicitly; add literal 9.9E+37 guard case and defined malformed-huge classification."
+      }
+    },
+    {
+      "member": "B",
+      "finding": {
+        "items": [
+          "34401A",
+          "33120A",
+          "53132A"
+        ],
+        "change": "Freeze concrete per-addition shard composition/generation/commissioned-factory integration and procedural lifecycle/endpoint/pending-IO acceptance scenarios with runner entry points and expected outcomes."
+      }
+    },
+    {
+      "member": "B",
+      "finding": {
+        "items": [
+          "34401A",
+          "33120A",
+          "53132A"
+        ],
+        "change": "Freeze chosen immutable SDK/tool/package pins, source/packed platform reproduction command/path, expected artifacts, external package and future release plan, active34401A replacement and documentation/regression updates."
+      }
+    },
+    {
+      "member": "C",
+      "finding": "Resolve C-1 with explicit recognition/precedence for the documented high-Z sentinel; recommended Device with quarantine and no subsequent guard/write. Cite printed151/PDF153."
+    },
+    {
+      "member": "C",
+      "finding": "Add an independently authored exact 9.9E+37 load-guard case with the chosen error and a procedural no-further-IO/quarantine assertion."
+    }
+  ],
+  "ballotSha256": {
+    "A": "e111b156249ad8d8ca95c99a9a15ae1aacb7856a7058a539959f410308b8cf1e",
+    "B": "9cef8e2c9b32a132bdd3dfe358b1987700f545d618f7f247586128651c4a8450",
+    "C": "8459014e4d14a26df78b99b7e603ae70b74975ea8902d8198c69234827898dc2"
+  }
+}

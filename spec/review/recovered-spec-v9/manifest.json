@@ -1,0 +1,124 @@
+{
+  "revision": "recovered-spec-v9",
+  "rubric": "v1",
+  "stage": "specification",
+  "models": [
+    "HP3497A",
+    "HP8920A",
+    "HP8920B",
+    "HP8921A"
+  ],
+  "files": [
+    {
+      "path": "/workspace/instrument-components-keysight/spec/legacy/HP3497A.md",
+      "sha256": "66870a951b15188d39b1126d272311860d97bd8e61122c210e5067a1d9df6fef"
+    },
+    {
+      "path": "/workspace/instrument-components-keysight/spec/legacy/HP8920A.md",
+      "sha256": "c3e32d3d577ea53e7b7a62fb6da55adb0d09b959cbbdd66b69d7db58f870be59"
+    },
+    {
+      "path": "/workspace/instrument-components-keysight/spec/legacy/HP8920B.md",
+      "sha256": "76391946421a0667707cb22d7132c63205f832b1dfd03789e1b90490c9e0d583"
+    },
+    {
+      "path": "/workspace/instrument-components-keysight/spec/legacy/HP8921A.md",
+      "sha256": "c0db97000cee047396776372aab0aab8143013c26562c6a123fba2d1a67e433c"
+    },
+    {
+      "path": "/workspace/instrument-components-keysight/spec/acceptance/review/independent-review-r4-v9-final.md",
+      "sha256": "edca45496dfcda84e88fba980df6ade617761e5a95433b4fda846e9852c9b9f7"
+    },
+    {
+      "path": "/workspace/instrument-components-keysight/spec/acceptance/review/v9-final-dispositions.json",
+      "sha256": "18e76ac474d516669789a9b3b8875c2025cf35570817bdb5f78b9788fee4e912"
+    },
+    {
+      "path": "/workspace/instrument-components-keysight/provenance/hp-manual-sources.json",
+      "sha256": "06e626e366ffa5782b43b125a79ff189533998aa269b667fa1e962be207d459e"
+    },
+    {
+      "path": "/workspace/instrument-components-keysight/spec/acceptance/power-bound-constants.json",
+      "sha256": "bb34d72f0f42e08fa1c0c4e42002239fdafe7818c7e4885d6f9f2c732bb82ae0"
+    },
+    {
+      "path": "/workspace/instrument-components-keysight/spec/acceptance/hp3497a.catalog-cases.json",
+      "sha256": "c7d7a0366f616a0e7f1026a498aea8399dc61bad2989f074a5d53d52fbb0a14f"
+    },
+    {
+      "path": "/workspace/instrument-components-keysight/spec/acceptance/hp8920b.catalog-cases.json",
+      "sha256": "c6b3755d93006c10b95e013ac0fe5e2c958c16dd6d67277441ec0e84ec065caa"
+    },
+    {
+      "path": "/workspace/instrument-components-keysight/spec/acceptance/hp8921a.catalog-cases.json",
+      "sha256": "520a3ad2796c9c8b7f1b166f855d793d05930ccc944c6955eab82d967483ee41"
+    },
+    {
+      "path": "/workspace/instrument-components-keysight/spec/acceptance/hp8920a.catalog-cases.json",
+      "sha256": "a43fbff5266efeb2872ca7102dc9b8a6f837d69b9884ac9af09c6c54bce9c5d4"
+    },
+    {
+      "path": "/workspace/instrument-components-keysight/spec/acceptance/hp3497a.provenance.json",
+      "sha256": "3d19d44fbef2dc5dfdaa6ff0cc948e644b0b91fc881cf25e867f406434a8140f"
+    },
+    {
+      "path": "/workspace/instrument-components-keysight/spec/acceptance/hp8920a.provenance.json",
+      "sha256": "56144883ecc29cc5a1af76ccd415529a2104520e21f30403f15b98a6babbd4d1"
+    },
+    {
+      "path": "/workspace/instrument-components-keysight/spec/acceptance/hp8920b.provenance.json",
+      "sha256": "4015c15b51ede9cf94569fe635c52fe7d75258942cfe14a9cc7c95f575298b15"
+    },
+    {
+      "path": "/workspace/instrument-components-keysight/spec/acceptance/hp8921a.provenance.json",
+      "sha256": "6edc5d4349e3d331d88d4d411efa3bd55e486a221013eae6ba1c31d3d788bb1c"
+    }
+  ],
+  "primaryPdfs": [
+    {
+      "path": "/workspace/scratch/instrument-components-hp/research/pdf/hp5334ab-manual.pdf",
+      "sha256": "5c06d17abe8e17c74855d63dc51ee0fc340070cff347f380d715b2f367a259f1"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-hp/research/pdf/hp3497a-artisan-part1.pdf",
+      "sha256": "4af9a3c98fab54ae318e357ec615e83eec8eff923cfaf5b0a8009a75a925ff16"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-hp/research/pdf/hp3497a-official.pdf",
+      "sha256": "ded7abb40d35e5d0fbf8468f462a16bc10742d096bfa2cbcc502f34f24e63018"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-hp/research/pdf/hp8920a-programming.pdf",
+      "sha256": "4fd4cce8703f91eff51702547dbfa7f2c571dd13cfef8de5742a6903f0dbf629"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-hp/research/pdf/hp8920b-programming.pdf",
+      "sha256": "5fdeb877b2545fe20a8bd945660468263ada39febc92f3e0013160e9d2d2db7b"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-hp/research/pdf/hp8921a-programming.pdf",
+      "sha256": "5621ab4b624bb669df5bc6621c8e689002b047019da7ad09d54ed2de234fbcbc"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-hp/research/pdf/hp8920a-specifications.pdf",
+      "sha256": "c901c9250bf2fedfb2fbf7bc112508a261349a44a72bd07976d4b467574dba77"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-hp/research/pdf/hp8921a-specifications.pdf",
+      "sha256": "cc96a40de4c5d67970b73195e6d17df155a66ad2d6d14c9ea8fe94f1ae94dd83"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-hp/research/pdf/hp8920b-specifications.pdf",
+      "sha256": "c512f874ec1f4296aa1d7c77e48d1d44a32fa5eec8c469bee9e5cebef78a27ab"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-hp/research/pdf/hp8921a-user.pdf",
+      "sha256": "413b9b5fc06baddbcf455ba574ab4688795dc1bf7a07f0a14af96343df371548"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-hp/research/pdf/hp8921a-programming-1998.pdf",
+      "sha256": "2511b149bb9970021e6012f81aa0efed5fdb5483414fe460c7104a51075471a3"
+    }
+  ],
+  "changes": "Correct3497 range success literals and accurately label synthetic parser bounds; rejectB055with006/007 per primaryavailability; A/C behavior unchanged; no previousscores carried."
+}

@@ -1,0 +1,68 @@
+{
+  "member": "A",
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "rubric": "v1",
+  "sourceManifestSha256": "13a78c6c6956e0fec18a3934a4b337d2eb3d9ea8ac2807acdb2e3e82c66bc530",
+  "evidenceManifestSha256": "4ff9bffc3d4b198ac2924a471628163f5d74401ff7489e01d0cdde88952d9c25",
+  "scores": {
+    "HP5334A": {
+      "EVIDENCE": 9.4,
+      "API": 9.4,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.5,
+      "VALIDATION": 9.5,
+      "DELIVERY": 9.3
+    },
+    "HP5334B": {
+      "EVIDENCE": 9.4,
+      "API": 9.4,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.5,
+      "VALIDATION": 9.5,
+      "DELIVERY": 9.3
+    },
+    "HP3497A": {
+      "EVIDENCE": 9.3,
+      "API": 9.3,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.5,
+      "VALIDATION": 9.5,
+      "DELIVERY": 9.3
+    },
+    "HP8920A": {
+      "EVIDENCE": 9.4,
+      "API": 9.3,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.5,
+      "VALIDATION": 9.5,
+      "DELIVERY": 9.3
+    },
+    "HP8920B": {
+      "EVIDENCE": 9.3,
+      "API": 9.3,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.5,
+      "VALIDATION": 9.5,
+      "DELIVERY": 9.3
+    },
+    "HP8921A": {
+      "EVIDENCE": 9.4,
+      "API": 9.3,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.5,
+      "VALIDATION": 9.5,
+      "DELIVERY": 9.3
+    }
+  },
+  "mandatoryDefects": [],
+  "requiredChanges": [],
+  "limitations": [
+    "No physical hardware validation: manual-backed synthetic transcripts establish declared software behavior, not hardware timing, settling, calibration, input protection or commissioning truth.",
+    "Public 0.2.0-alpha.1 lacks these additions; source/packed CI uses checksummed development feeds from immutable SDK6524d9a. A coordinated new SDK/driver version is required before publication; no merge or release is approved by this ballot.",
+    "Custom connectors must enforce finite deadlines, response allocation bounds, clean initial message boundary and completion of host access before native cancellation returns. A later stale complete frame cannot be detected reliably by the scalar API.",
+    "Fixture consumer alone is opt0 and runs on a bounded32MiB thread; driver and SDK dependencies remain opt3. Generic wrappers instantiated in that consumer can use opt0. Normal-release SDK typed consumers and supplementary original normal-release Rust proof remain separate evidence.",
+    "OpenTAP.Visa allocation ownership correction is separately tested on current main1b0704d. Vendor NativeAOT evidence does not establish that OpenTAP itself is AOT-compatible.",
+    "Fresh replacement A independently re-inspected source, primary evidence and retained artifacts; no hardware or Windows binary was executed on this Linux reviewer host. Hosted execution is evidenced by authenticated-run records and hash-joined downloaded artifacts/logs, not claimed local execution."
+  ]
+}

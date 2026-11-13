@@ -1,0 +1,16 @@
+{
+  "driverId": "tektronix.tds1002",
+  "endpointScheme": "scpi",
+  "endpointAddress": "fixture",
+  "communicationModule": "Tds2Cma",
+  "channel1Probe": "X10",
+  "channel2Probe": "X1",
+  "commissioning": "QualifiedGpibNormalModeConfirmed",
+  "readbackDefaults": {
+    "DESE": 255,
+    "ESR": 0,
+    "mainView": "MAIN",
+    "displayFormat": "YT",
+    "triggerMode": "NORMAL"
+  }
+}

@@ -1,0 +1,929 @@
+{
+  "schemaVersion": 1,
+  "reconstructedSpecSha256": "66870a951b15188d39b1126d272311860d97bd8e61122c210e5067a1d9df6fef",
+  "manual": {
+    "part": "03497-99000",
+    "revision": "April 20, 1981",
+    "url": "https://www.artisantg.com/info/Agilent_3497A_Operation_Manual_Part1.pdf",
+    "sha256": "4af9a3c98fab54ae318e357ec615e83eec8eff923cfaf5b0a8009a75a925ff16"
+  },
+  "factory": {
+    "id": "keysight.hp3497a",
+    "owned": true,
+    "option001": true,
+    "normalDvmRoutingConfirmed": true,
+    "cleanResponseBoundaryCommissioned": true,
+    "operationTimeoutMs": 1000,
+    "responseLimitBytes": 256,
+    "channels": [
+      {
+        "public": 7,
+        "slot": 0,
+        "local": 0,
+        "native": 0,
+        "module": "010",
+        "compensation": "None"
+      },
+      {
+        "public": 13,
+        "slot": 0,
+        "local": 19,
+        "native": 19,
+        "module": "010",
+        "compensation": "None"
+      },
+      {
+        "public": 29,
+        "slot": 1,
+        "local": 18,
+        "native": 38,
+        "module": "020",
+        "compensation": "Software"
+      },
+      {
+        "public": 61,
+        "slot": 4,
+        "local": 19,
+        "native": 99,
+        "module": "010",
+        "compensation": "None"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "id": "keysight.hp3497a|D|range-0.1",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288",
+        "167-168 ranges and maximum displayed magnitudes"
+      ],
+      "syntheticPolicy": [
+        "Successful synthetic acquisition literal fits selected range including documented20% overrange; not a hardware measurement."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|range-1",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288",
+        "167-168 ranges and maximum displayed magnitudes"
+      ],
+      "syntheticPolicy": [
+        "Successful synthetic acquisition literal fits selected range including documented20% overrange; not a hardware measurement."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|range-10",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|range-100",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|range-auto",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|public-13-native-19",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|public-29-native-38",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|public-61-native-99",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|negative",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|zero",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|negative-zero",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|negative-exponent",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|parser-policy-positive-120v",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Parser-policy-only boundary literal at absolute120V input limit. Not a physically plausible in-range DVM output oracle; documented100V-range maximum display119.999V."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|parser-policy-negative-120v",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Parser-policy-only boundary literal at absolute120V input limit. Not a physically plausible in-range DVM output oracle; documented100V-range maximum display119.999V."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|positive-overflow-only",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "167"
+      ],
+      "syntheticPolicy": [],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|invalid-channel-0",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Unknown or zero public channel rejected before IO."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|invalid-channel-1",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Unknown or zero public channel rejected before IO."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|invalid-channel-8",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Unknown or zero public channel rejected before IO."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|invalid-channel-100",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Unknown or zero public channel rejected before IO."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|invalid-channel-4294967295",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Unknown or zero public channel rejected before IO."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|invalid-range-0",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Only exactly 0.1,1,10,100 V or null allowed."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|invalid-range--1",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Only exactly 0.1,1,10,100 V or null allowed."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|invalid-range-0.2",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Only exactly 0.1,1,10,100 V or null allowed."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|invalid-range-0.1000000001",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Only exactly 0.1,1,10,100 V or null allowed."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|invalid-range-2",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Only exactly 0.1,1,10,100 V or null allowed."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|invalid-range-101",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Only exactly 0.1,1,10,100 V or null allowed."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-negative-overflow",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Strict 11-byte ASCII scalar; framing removed; 256-byte host response bound."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-over-120v",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Strict 11-byte ASCII scalar; framing removed; 256-byte host response bound."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-below-negative-120v",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Strict 11-byte ASCII scalar; framing removed; 256-byte host response bound."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-no-sign",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Strict 11-byte ASCII scalar; framing removed; 256-byte host response bound."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-two-integral-digits",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Strict 11-byte ASCII scalar; framing removed; 256-byte host response bound."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-four-fraction-digits",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Strict 11-byte ASCII scalar; framing removed; 256-byte host response bound."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-six-fraction-digits",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Strict 11-byte ASCII scalar; framing removed; 256-byte host response bound."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-lowercase-e",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Strict 11-byte ASCII scalar; framing removed; 256-byte host response bound."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-two-exponent-digits",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Strict 11-byte ASCII scalar; framing removed; 256-byte host response bound."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-no-exponent-sign",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Strict 11-byte ASCII scalar; framing removed; 256-byte host response bound."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-leading-space",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Strict 11-byte ASCII scalar; framing removed; 256-byte host response bound."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-trailing-space",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Strict 11-byte ASCII scalar; framing removed; 256-byte host response bound."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-extra-scalar",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Strict 11-byte ASCII scalar; framing removed; 256-byte host response bound."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-embedded-control",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Strict 11-byte ASCII scalar; framing removed; 256-byte host response bound."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-framing-not-removed",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Strict 11-byte ASCII scalar; framing removed; 256-byte host response bound."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-non-ascii",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Strict 11-byte ASCII scalar; framing removed; 256-byte host response bound."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-nan",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Strict 11-byte ASCII scalar; framing removed; 256-byte host response bound."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-infinity",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Strict 11-byte ASCII scalar; framing removed; 256-byte host response bound."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-empty",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Strict 11-byte ASCII scalar; framing removed; 256-byte host response bound."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|parse-overlong",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Strict 11-byte ASCII scalar; framing removed; 256-byte host response bound."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|timeout",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Typed host error preserved; uncertain IO quarantines; no automatic retry."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|transport",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "77",
+        "157",
+        "161-168",
+        "172-173",
+        "186",
+        "288"
+      ],
+      "syntheticPolicy": [
+        "Typed host error preserved; uncertain IO quarantines; no automatic retry."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|unsupported-DmmMeasureVoltageDc",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "45",
+        "135-136",
+        "184-194"
+      ],
+      "syntheticPolicy": [
+        "Only channel-aware DAQ DC voltage advertised."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|unsupported-SwitchCloseRoute",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "45",
+        "135-136",
+        "184-194"
+      ],
+      "syntheticPolicy": [
+        "Only channel-aware DAQ DC voltage advertised."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|unsupported-Reset",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "45",
+        "135-136",
+        "184-194"
+      ],
+      "syntheticPolicy": [
+        "Only channel-aware DAQ DC voltage advertised."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|unsupported-QueryIdentity",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "45",
+        "135-136",
+        "184-194"
+      ],
+      "syntheticPolicy": [
+        "Only channel-aware DAQ DC voltage advertised."
+      ],
+      "hardwareValidated": false
+    },
+    {
+      "id": "keysight.hp3497a|D|unsupported-Shutdown",
+      "model": "3497A",
+      "reconstructedSpec": "HP3497A.md",
+      "manualPages": [
+        "45",
+        "135-136",
+        "184-194"
+      ],
+      "syntheticPolicy": [
+        "Only channel-aware DAQ DC voltage advertised."
+      ],
+      "hardwareValidated": false
+    }
+  ],
+  "fixtureLiteralPolicy": {
+    "range0.1": {
+      "response": "+1.25000E-2",
+      "valueVolt": 0.0125
+    },
+    "range1": {
+      "response": "+1.25000E-1",
+      "valueVolt": 0.125
+    },
+    "absolute120V": "Synthetic parser policy boundary only; not a physical displayed-value oracle."
+  },
+  "correctionBatchVersion": 9
+}

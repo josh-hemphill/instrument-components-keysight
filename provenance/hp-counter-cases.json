@@ -1,0 +1,898 @@
+[
+  {
+    "case": "keysight.hp5334a|H|frequency-a",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|frequency-b",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|period-a",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|period-b-rejected",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|invalid-channel-0",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|invalid-channel-3",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|invalid-channel-4294967295",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|gate-0.001",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|gate-reapply-0.001",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|gate-99.999",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|gate-reapply-99.999",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|gate-0.01",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|gate-reapply-0.01",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|gate-reject-0",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|gate-reject--1",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|gate-reject-0.000999",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|gate-reject-100",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|reset-restores-a-and-gate",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|negative",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|zero-short",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|zero-padded",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|decimal-omitted",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|period-zero",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|frequency-overload",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|period-overload",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|parse-reject-0",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|parse-reject-1",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|parse-reject-2",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|parse-reject-3",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|parse-reject-4",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|parse-reject-5",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|parse-reject-6",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|parse-reject-7",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|parse-reject-8",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|parse-reject-9",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|parse-reject-10",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|parse-reject-11",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|parse-reject-12",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|parse-reject-13",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|parse-reject-14",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|parse-reject-15",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|parse-reject-16",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|query-timeout",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|query-transport",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|gate-write-timeout",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|reset-write-failure",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|frequency-a",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|frequency-b",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|period-a",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|period-b-rejected",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|invalid-channel-0",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|invalid-channel-3",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|invalid-channel-4294967295",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|gate-0.001",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|gate-reapply-0.001",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|gate-99.999",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|gate-reapply-99.999",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|gate-0.01",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|gate-reapply-0.01",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|gate-reject-0",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|gate-reject--1",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|gate-reject-0.000999",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|gate-reject-100",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|reset-restores-a-and-gate",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|negative",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|zero-short",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|zero-padded",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|decimal-omitted",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|period-zero",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|frequency-overload",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|period-overload",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|parse-reject-0",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|parse-reject-1",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|parse-reject-2",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|parse-reject-3",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|parse-reject-4",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|parse-reject-5",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|parse-reject-6",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|parse-reject-7",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|parse-reject-8",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|parse-reject-9",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|parse-reject-10",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|parse-reject-11",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|parse-reject-12",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|parse-reject-13",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|parse-reject-14",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|parse-reject-15",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|parse-reject-16",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|query-timeout",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|query-transport",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|gate-write-timeout",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334b|H|reset-write-failure",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-78\u201385",
+    "basis": "manual-derived engineering transaction; no hardware evidence"
+  },
+  {
+    "case": "keysight.hp5334a|H|binary64-gate-rounding-0",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-79, 3-83",
+    "basis": "Synthetic numeric-format parity regression: independently rounded exact binary64 to twelve significant digits using Decimal.from_float; not a hardware observation or precision claim."
+  },
+  {
+    "case": "keysight.hp5334a|H|binary64-gate-rounding-1",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-79, 3-83",
+    "basis": "Synthetic numeric-format parity regression: independently rounded exact binary64 to twelve significant digits using Decimal.from_float; not a hardware observation or precision claim."
+  },
+  {
+    "case": "keysight.hp5334a|H|binary64-gate-rounding-2",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-79, 3-83",
+    "basis": "Synthetic numeric-format parity regression: independently rounded exact binary64 to twelve significant digits using Decimal.from_float; not a hardware observation or precision claim."
+  },
+  {
+    "case": "keysight.hp5334a|H|binary64-gate-rounding-3",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-79, 3-83",
+    "basis": "Synthetic numeric-format parity regression: independently rounded exact binary64 to twelve significant digits using Decimal.from_float; not a hardware observation or precision claim."
+  },
+  {
+    "case": "keysight.hp5334a|H|binary64-gate-rounding-4",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-79, 3-83",
+    "basis": "Synthetic numeric-format parity regression: independently rounded exact binary64 to twelve significant digits using Decimal.from_float; not a hardware observation or precision claim."
+  },
+  {
+    "case": "keysight.hp5334a|H|binary64-gate-rounding-5",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-79, 3-83",
+    "basis": "Synthetic numeric-format parity regression: independently rounded exact binary64 to twelve significant digits using Decimal.from_float; not a hardware observation or precision claim."
+  },
+  {
+    "case": "keysight.hp5334a|H|binary64-gate-rounding-6",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-79, 3-83",
+    "basis": "Synthetic numeric-format parity regression: independently rounded exact binary64 to twelve significant digits using Decimal.from_float; not a hardware observation or precision claim."
+  },
+  {
+    "case": "keysight.hp5334b|H|binary64-gate-rounding-0",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-79, 3-83",
+    "basis": "Synthetic numeric-format parity regression: independently rounded exact binary64 to twelve significant digits using Decimal.from_float; not a hardware observation or precision claim."
+  },
+  {
+    "case": "keysight.hp5334b|H|binary64-gate-rounding-1",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-79, 3-83",
+    "basis": "Synthetic numeric-format parity regression: independently rounded exact binary64 to twelve significant digits using Decimal.from_float; not a hardware observation or precision claim."
+  },
+  {
+    "case": "keysight.hp5334b|H|binary64-gate-rounding-2",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-79, 3-83",
+    "basis": "Synthetic numeric-format parity regression: independently rounded exact binary64 to twelve significant digits using Decimal.from_float; not a hardware observation or precision claim."
+  },
+  {
+    "case": "keysight.hp5334b|H|binary64-gate-rounding-3",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-79, 3-83",
+    "basis": "Synthetic numeric-format parity regression: independently rounded exact binary64 to twelve significant digits using Decimal.from_float; not a hardware observation or precision claim."
+  },
+  {
+    "case": "keysight.hp5334b|H|binary64-gate-rounding-4",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-79, 3-83",
+    "basis": "Synthetic numeric-format parity regression: independently rounded exact binary64 to twelve significant digits using Decimal.from_float; not a hardware observation or precision claim."
+  },
+  {
+    "case": "keysight.hp5334b|H|binary64-gate-rounding-5",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-79, 3-83",
+    "basis": "Synthetic numeric-format parity regression: independently rounded exact binary64 to twelve significant digits using Decimal.from_float; not a hardware observation or precision claim."
+  },
+  {
+    "case": "keysight.hp5334b|H|binary64-gate-rounding-6",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-79, 3-83",
+    "basis": "Synthetic numeric-format parity regression: independently rounded exact binary64 to twelve significant digits using Decimal.from_float; not a hardware observation or precision claim."
+  },
+  {
+    "case": "keysight.hp5334a|H|exact-midpoint-gate-reapply-0",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-79, 3-81\u201385",
+    "basis": "Synthetic exact binary64 midpoint tie-to-even and gate reapplication regression, independently verified through both backends. Not observed hardware precision."
+  },
+  {
+    "case": "keysight.hp5334a|H|exact-midpoint-gate-reapply-1",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-79, 3-81\u201385",
+    "basis": "Synthetic exact binary64 midpoint tie-to-even and gate reapplication regression, independently verified through both backends. Not observed hardware precision."
+  },
+  {
+    "case": "keysight.hp5334a|H|period-prefix-only",
+    "model": "5334A",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-84\u201385",
+    "basis": "Synthetic malformed-period-record regression; no hardware observation."
+  },
+  {
+    "case": "keysight.hp5334b|H|exact-midpoint-gate-reapply-0",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-79, 3-81\u201385",
+    "basis": "Synthetic exact binary64 midpoint tie-to-even and gate reapplication regression, independently verified through both backends. Not observed hardware precision."
+  },
+  {
+    "case": "keysight.hp5334b|H|exact-midpoint-gate-reapply-1",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-79, 3-81\u201385",
+    "basis": "Synthetic exact binary64 midpoint tie-to-even and gate reapplication regression, independently verified through both backends. Not observed hardware precision."
+  },
+  {
+    "case": "keysight.hp5334b|H|period-prefix-only",
+    "model": "5334B",
+    "manual": "05334-90047",
+    "revision": "December 1993",
+    "printedPages": "3-84\u201385",
+    "basis": "Synthetic malformed-period-record regression; no hardware observation."
+  }
+]

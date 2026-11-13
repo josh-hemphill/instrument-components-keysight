@@ -1,0 +1,6340 @@
+{
+  "schemaVersion": 1,
+  "contractMajor": 1,
+  "description": "Independent primary-manual/spec traffic, synthetic software tests, no hardware observations. Shared fixture mapping in fixture-inventory.json.",
+  "cases": [
+    {
+      "id": "keysight.34980a|E|34950a-read-7-0",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3101)",
+          "response": "+2.50000000E+00"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:DATA:BYTE? DEC,(@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "count",
+        "value": 0
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34950a-read-7-165",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3101)",
+          "response": "+2.50000000E+00"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:DATA:BYTE? DEC,(@3101)",
+          "response": "165"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "count",
+        "value": 165
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34950a-read-7-255",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3101)",
+          "response": "+2.50000000E+00"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:DATA:BYTE? DEC,(@3101)",
+          "response": "255"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "count",
+        "value": 255
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34950a-read-7-007",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3101)",
+          "response": "+2.50000000E+00"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:DATA:BYTE? DEC,(@3101)",
+          "response": "007"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "count",
+        "value": 7
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34950a-read-29-0",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 29
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3201)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3202)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3203)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3204)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3201)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3201)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3201)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3201)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3201)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3201)",
+          "response": "+2.50000000E+00"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:DATA:BYTE? DEC,(@3201)",
+          "response": "0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "count",
+        "value": 0
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34950a-read-29-165",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 29
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3201)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3202)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3203)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3204)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3201)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3201)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3201)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3201)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3201)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3201)",
+          "response": "+2.50000000E+00"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:DATA:BYTE? DEC,(@3201)",
+          "response": "165"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "count",
+        "value": 165
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34950a-read-29-255",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 29
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3201)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3202)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3203)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3204)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3201)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3201)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3201)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3201)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3201)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3201)",
+          "response": "+2.50000000E+00"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:DATA:BYTE? DEC,(@3201)",
+          "response": "255"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "count",
+        "value": 255
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34950a-read-29-007",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 29
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3201)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3202)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3203)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3204)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3201)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3201)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3201)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3201)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3201)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3201)",
+          "response": "+2.50000000E+00"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:DATA:BYTE? DEC,(@3201)",
+          "response": "007"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "count",
+        "value": 7
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34950a-write-13-0",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:DRIV? (@3104)",
+          "response": "ACT"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:LEV? (@3104)",
+          "response": "+3.30000000E+00"
+        },
+        {
+          "kind": "write",
+          "message": ":SOUR:DIG:DATA:BYTE 0,(@3104)"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34950a-write-13-165",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:DRIV? (@3104)",
+          "response": "ACT"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:LEV? (@3104)",
+          "response": "+3.30000000E+00"
+        },
+        {
+          "kind": "write",
+          "message": ":SOUR:DIG:DATA:BYTE 165,(@3104)"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34950a-write-13-255",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 255
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:DRIV? (@3104)",
+          "response": "ACT"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:LEV? (@3104)",
+          "response": "+3.30000000E+00"
+        },
+        {
+          "kind": "write",
+          "message": ":SOUR:DIG:DATA:BYTE 255,(@3104)"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34950a-write-61-0",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 61,
+            "value": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3201)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3202)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3203)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3204)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3204)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3204)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3201)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3201)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3201)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:DRIV? (@3204)",
+          "response": "ACT"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:LEV? (@3204)",
+          "response": "+3.30000000E+00"
+        },
+        {
+          "kind": "write",
+          "message": ":SOUR:DIG:DATA:BYTE 0,(@3204)"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34950a-write-61-165",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 61,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3201)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3202)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3203)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3204)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3204)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3204)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3201)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3201)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3201)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:DRIV? (@3204)",
+          "response": "ACT"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:LEV? (@3204)",
+          "response": "+3.30000000E+00"
+        },
+        {
+          "kind": "write",
+          "message": ":SOUR:DIG:DATA:BYTE 165,(@3204)"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34950a-write-61-255",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 61,
+            "value": 255
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3201)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3202)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3203)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3204)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3204)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3204)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3201)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3201)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3201)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:DRIV? (@3204)",
+          "response": "ACT"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:LEV? (@3204)",
+          "response": "+3.30000000E+00"
+        },
+        {
+          "kind": "write",
+          "message": ":SOUR:DIG:DATA:BYTE 255,(@3204)"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34950a-invalid-read-port-0",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-invalid-read-port-8",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 8
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-invalid-read-port-13",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 13
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-invalid-read-port-61",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 61
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-invalid-write-port-0",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 0,
+            "value": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-invalid-write-port-8",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 8,
+            "value": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-invalid-write-port-7",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 7,
+            "value": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-invalid-write-port-29",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 29,
+            "value": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-invalid-byte-256",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 256
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-invalid-byte-4294967295",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 4294967295
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-invalid-byte-body-0",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3101)",
+          "response": "+2.50000000E+00"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:DATA:BYTE? DEC,(@3101)",
+          "response": "256"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-invalid-byte-body-1",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3101)",
+          "response": "+2.50000000E+00"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:DATA:BYTE? DEC,(@3101)",
+          "response": "-1"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-invalid-byte-body-2",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3101)",
+          "response": "+2.50000000E+00"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:DATA:BYTE? DEC,(@3101)",
+          "response": "+1"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-invalid-byte-body-3",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3101)",
+          "response": "+2.50000000E+00"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:DATA:BYTE? DEC,(@3101)",
+          "response": "1.0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-invalid-byte-body-4",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3101)",
+          "response": "+2.50000000E+00"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:DATA:BYTE? DEC,(@3101)",
+          "response": "1E0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-invalid-byte-body-5",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3101)",
+          "response": "+2.50000000E+00"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:DATA:BYTE? DEC,(@3101)",
+          "response": "0xFF"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-invalid-byte-body-6",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3101)",
+          "response": "+2.50000000E+00"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:DATA:BYTE? DEC,(@3101)",
+          "response": "#HFF"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-invalid-byte-body-7",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3101)",
+          "response": "+2.50000000E+00"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:DATA:BYTE? DEC,(@3101)",
+          "response": "1,2"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-invalid-byte-body-8",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3101)",
+          "response": "+2.50000000E+00"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:DATA:BYTE? DEC,(@3101)",
+          "response": " 1"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-invalid-byte-body-9",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3101)",
+          "response": "+2.50000000E+00"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:DATA:BYTE? DEC,(@3101)",
+          "response": "1 "
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-invalid-byte-body-10",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3101)",
+          "response": "+2.50000000E+00"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:DATA:BYTE? DEC,(@3101)",
+          "response": "NaN"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-invalid-byte-body-11",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3101)",
+          "response": "+2.50000000E+00"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:DATA:BYTE? DEC,(@3101)",
+          "response": "Inf"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-invalid-byte-body-12",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3101)",
+          "response": "+2.50000000E+00"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:DATA:BYTE? DEC,(@3101)",
+          "response": ""
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-guard-0-0",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "2"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-guard-0-1",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "4"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-guard-0-2",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "BYTE"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-guard-1-0",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "2"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-guard-2-0",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "4"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-guard-3-0",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "2"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-guard-4-0",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-guard-4-1",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INPUT"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-guard-5-0",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "INV"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-guard-5-1",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORMAL"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-guard-6-0",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "OFF"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-guard-6-1",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "ON"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-guard-6-2",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "NONE"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-guard-7-0",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-guard-7-1",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "ON"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-guard-8-0",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-guard-8-1",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "OFF"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-guard-9-0",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3101)",
+          "response": "+2.40000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-guard-9-1",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3101)",
+          "response": "NaN"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-failure-step-0-Transport",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-failure-step-0-Timeout",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-failure-step-1-Transport",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-failure-step-1-Timeout",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-failure-step-2-Transport",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-failure-step-2-Timeout",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-failure-step-3-Transport",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-failure-step-3-Timeout",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-failure-step-4-Transport",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-failure-step-4-Timeout",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-failure-step-5-Transport",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-failure-step-5-Timeout",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-failure-step-6-Transport",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-failure-step-6-Timeout",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-failure-step-7-Transport",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-failure-step-7-Timeout",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-failure-step-8-Transport",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-failure-step-8-Timeout",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-failure-step-9-Transport",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3101)",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-failure-step-9-Timeout",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3101)",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-failure-step-10-Transport",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3101)",
+          "response": "+2.50000000E+00"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:DATA:BYTE? DEC,(@3101)",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Input-failure-step-10-Timeout",
+      "calls": [
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3101)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3101)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3101)",
+          "response": "+2.50000000E+00"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:DATA:BYTE? DEC,(@3101)",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-guard-0-0",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "2"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-guard-0-1",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "4"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-guard-0-2",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "BYTE"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-guard-1-0",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "2"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-guard-2-0",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "4"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-guard-3-0",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "2"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-guard-4-0",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "INP"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-guard-4-1",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "INPUT"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-guard-5-0",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "INV"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-guard-5-1",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "NORMAL"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-guard-6-0",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "OFF"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-guard-6-1",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "ON"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-guard-6-2",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "NONE"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-guard-7-0",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-guard-7-1",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "ON"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-guard-8-0",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-guard-8-1",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "OFF"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-guard-9-0",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:DRIV? (@3104)",
+          "response": "OCOL"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-guard-9-1",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:DRIV? (@3104)",
+          "response": "ACTIVE"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-guard-10-0",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:DRIV? (@3104)",
+          "response": "ACT"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:LEV? (@3104)",
+          "response": "+3.20000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-guard-10-1",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:DRIV? (@3104)",
+          "response": "ACT"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:LEV? (@3104)",
+          "response": "NaN"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-failure-step-0-Transport",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-failure-step-0-Timeout",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-failure-step-1-Transport",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-failure-step-1-Timeout",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-failure-step-2-Transport",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-failure-step-2-Timeout",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-failure-step-3-Transport",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-failure-step-3-Timeout",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-failure-step-4-Transport",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-failure-step-4-Timeout",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-failure-step-5-Transport",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-failure-step-5-Timeout",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-failure-step-6-Transport",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-failure-step-6-Timeout",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-failure-step-7-Transport",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-failure-step-7-Timeout",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-failure-step-8-Transport",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-failure-step-8-Timeout",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-failure-step-9-Transport",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:DRIV? (@3104)",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-failure-step-9-Timeout",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:DRIV? (@3104)",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-failure-step-10-Transport",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:DRIV? (@3104)",
+          "response": "ACT"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:LEV? (@3104)",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-failure-step-10-Timeout",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:DRIV? (@3104)",
+          "response": "ACT"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:LEV? (@3104)",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-failure-step-11-Transport",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:DRIV? (@3104)",
+          "response": "ACT"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:LEV? (@3104)",
+          "response": "+3.30000000E+00"
+        },
+        {
+          "kind": "write",
+          "message": ":SOUR:DIG:DATA:BYTE 165,(@3104)",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34980a|E|34950a-Output-failure-step-11-Timeout",
+      "calls": [
+        {
+          "operation": "DigitalIoWriteByte",
+          "arguments": {
+            "port": 13,
+            "value": 165
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3101)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3102)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3103)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3104)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3104)",
+          "response": "OUTP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3104)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3101)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3101)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:DRIV? (@3104)",
+          "response": "ACT"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:LEV? (@3104)",
+          "response": "+3.30000000E+00"
+        },
+        {
+          "kind": "write",
+          "message": ":SOUR:DIG:DATA:BYTE 165,(@3104)",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    }
+  ]
+}

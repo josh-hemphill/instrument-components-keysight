@@ -1,0 +1,35 @@
+{
+  "skill": "https://github.com/josh-hemphill/skills/blob/main/skills/council/SKILL.md",
+  "skillSha256": "3985f5755d4720c93d4f5aa5fec0ab663aae6a59a8a70ae641b79c58b769feab",
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "members": {
+    "A": {
+      "agent": "/root/expansion_council_a",
+      "framing": "new-user interpretation"
+    },
+    "B": {
+      "agent": "/root/expansion_council_b",
+      "framing": "boundary guarantees/evidence"
+    },
+    "C": {
+      "agent": "/root/expansion_council_c",
+      "framing": "model/module/execution distinctions"
+    }
+  },
+  "rubric": "v2",
+  "round": "implementation-v2-r1",
+  "stage": "IMPLEMENTATION",
+  "target": ">=9.2 for each item/category",
+  "configuredMembers": 3,
+  "validBallots": 3,
+  "passVotesRequired": 2,
+  "aggregation": "median, full quorum; demonstrated mandatory defects block regardless of votes",
+  "manifestSha256": "43d87036abe94ce53c2d98db9e8c6ae4a74c149cb2f65c01f9ba973766794dd6",
+  "qualifiedCodeRevisions": {
+    "core": "1243881c6b91c46ff40cf0cb3cfd4598b8352409",
+    "keysight": "ac1d71a9fba87be2a1cd2bcc16c6b1888c0f0f13",
+    "tektronix": "f71ca340406370cc2467f78b604cc435752cadd8"
+  },
+  "postReviewChanges": "Only new review/evidence files; no change to any bound existing source/test/metadata input."
+}

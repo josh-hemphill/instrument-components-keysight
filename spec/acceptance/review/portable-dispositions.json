@@ -1,0 +1,30 @@
+{
+  "review": "independent-specification-r3",
+  "scope": "Recovered HP3497A/HP8920A/HP8920B/HP8921A specifications only; separate from Council; no implementation or hardware approval",
+  "models": [
+    {
+      "model": "HP3497A",
+      "specification": "spec/legacy/HP3497A.md",
+      "sha256": "300bc77fbfdf0af243db44f913250cf1b4ad179ec3bdf55abf33050ad454e7e3",
+      "disposition": "APPROVE_FOR_COUNCIL_SPECIFICATION_REVIEW"
+    },
+    {
+      "model": "HP8920A",
+      "specification": "spec/legacy/HP8920A.md",
+      "sha256": "c3e32d3d577ea53e7b7a62fb6da55adb0d09b959cbbdd66b69d7db58f870be59",
+      "disposition": "APPROVE_FOR_COUNCIL_SPECIFICATION_REVIEW"
+    },
+    {
+      "model": "HP8920B",
+      "specification": "spec/legacy/HP8920B.md",
+      "sha256": "43c1ad235ce6a805473995f9c9c90886b9db7e20328d056d2b27bb3c3700cab6",
+      "disposition": "APPROVE_FOR_COUNCIL_SPECIFICATION_REVIEW"
+    },
+    {
+      "model": "HP8921A",
+      "specification": "spec/legacy/HP8921A.md",
+      "sha256": "c0db97000cee047396776372aab0aab8143013c26562c6a123fba2d1a67e433c",
+      "disposition": "APPROVE_FOR_COUNCIL_SPECIFICATION_REVIEW"
+    }
+  ]
+}

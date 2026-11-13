@@ -1,0 +1,10 @@
+   Compiling instrument-driver-keysight v0.2.0-alpha.1 (/workspace/scratch/instrument-components-expansion-20261113/source-proof-r12)
+   Compiling keysight-package-proof v0.0.0 (/workspace/scratch/instrument-components-expansion-20261113/source-proof-r12/validation/rust)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 18.50s
+     Running `/workspace/scratch/instrument-components-expansion-20261113/source-target/debug/keysight-package-proof`
+PASS compiled Agilent composition examples: five factories, shared module parent, typed views
+PASS new Agilent factories admission/ASCII schemes,4096 bounds, nonfinite pre-IO usable follow-up, all golden error quarantine/health follow-ups and borrowed/owned lifetime
+PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine
+PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine
+PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up
+PASS Keysight package: 1859 independent cases; exact traffic, values, units, errors and resource lifetime

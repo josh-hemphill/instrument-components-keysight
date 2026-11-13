@@ -1,0 +1,54 @@
+{
+  "scope": "Targeted deadline/cancellation proof and exact-body binary-wrapper integration recheck; not final delivery grade",
+  "files": [
+    {
+      "path": "/workspace/instrument-components-keysight/validation/rust/src/hp_async_proof.rs",
+      "sha256": "0fd10be95ac766668749318b153340f0284bc188c60df17d446f1a55ddab2eb0"
+    },
+    {
+      "path": "/workspace/instrument-components-keysight/validation/dotnet/HpAsyncProof.cs",
+      "sha256": "c68df8511e27f91bcf8e80dac611dcd4ac3ef2ce8f7ce104f6df2397f22d6eb9"
+    },
+    {
+      "path": "/workspace/instrument-components-keysight/README.md",
+      "sha256": "a50cda8193fc781e15d97a2b8e7b06bf70cc30b03972aa694fb59b39e1245c5e"
+    },
+    {
+      "path": "/workspace/instrument-components/crates/instrument-core/src/scpi/session.rs",
+      "sha256": "25f44ff29ca319e0a43137208e323ab6627a965210260de41a9a069db1c62bfb"
+    },
+    {
+      "path": "/workspace/instrument-components/crates/instrument-core/src/scpi/async_session.rs",
+      "sha256": "d4ea4564a429920bbd332b787b1253de81b179235b5b87a2dc7ea31f6f19cf9c"
+    },
+    {
+      "path": "/workspace/instrument-components/crates/instrument-core/tests/message_body.rs",
+      "sha256": "7d5f1c7c9467691453f61031925e4000ab1bfb656bd0927fa9420411280f6df3"
+    },
+    {
+      "path": "/workspace/instrument-components/dotnet/src/InstrumentComponents/Scpi/ScpiSession.cs",
+      "sha256": "9225e22fa4888e0cc4ae47759ee6f409f003d79df76a1fdcf16cbf12d4e8d4a2"
+    },
+    {
+      "path": "/workspace/instrument-components/dotnet/src/InstrumentComponents/Scpi/AsyncScpiSession.cs",
+      "sha256": "96b98790349e7ecd11b3b25c3b7c90c85ff9ddee655e9662a3a396eac2a2dd10"
+    },
+    {
+      "path": "/workspace/instrument-components/dotnet/src/InstrumentComponents.OpenTap.Visa/OpenTapVisa.cs",
+      "sha256": "eb0efac4ac5a160b1ff9ee136d64a56e1c7faa1e3775c65a9aa663972d415d87"
+    },
+    {
+      "path": "/workspace/instrument-components/dotnet/tests/InstrumentComponents.Tests/MessageBodyTests.cs",
+      "sha256": "52430d1ea1316440473011f242ac07487391559e267a5662e4ca9bbfbddd1632"
+    },
+    {
+      "path": "/workspace/instrument-components/dotnet/tests/InstrumentComponents.OpenTap.Visa.Tests/OpenTapVisaCompanionTests.cs",
+      "sha256": "eaef53fd9ed475043dbe24dfbeed7c5471e5763d609bc26171a9862d9bafd1e3"
+    }
+  ],
+  "independentExecution": {
+    "command": "dotnet run --project /workspace/scratch/spec-review-recovered/query-body-block-recheck/repro.csproj --configuration Release --framework net8.0",
+    "exitCode": 0,
+    "result": "PASS 12 full/split block-wrapper rejection cases through actual sync/native QueryBody APIs"
+  }
+}
