@@ -16,8 +16,9 @@ bootstrap inputs, not public-registry evidence.
 `validate.py` creates fresh SDK/package feeds and package caches, validates
 production dependency/resource boundaries, and runs:
 
-- Every 47 IDN hint plus USB, same-IDN/USB consolidation, conflicting identity
-  evidence and equal-rank ambiguity, all without IO.
+- Every current registered identity, including all twelve new HP/Agilent/TDS
+  backends, plus synthetic metadata-only USB conflicts and equal-rank ambiguity,
+  all without IO. No retired 34401A USB mapping is asserted.
 - One 2602B backend shared by typed DMM/PSU views and one connection lifetime.
 - Every independently specified external wire case through all execution modes.
 - Rust default/async consumers and clippy, actual C# Native AOT publication and
@@ -50,3 +51,5 @@ consumer restores. The report labels `public-registry` and records actually
 consumed public package hashes separately from reference artifact hashes. This
 mode is prepared but cannot be executed while those package versions are absent.
 A bootstrap run never substitutes for this gate.
+
+The application imports all locked runner helper modules/classes under per-vendor namespaces, records transformed consumer hashes, and compares every shipped Rust implementation member to locked source. The entrypoint wrapper preserves the large Keysight fixture stack bound. Candidate and public modes remain distinct. The same workflow also executes the current explicit 34401A getting-started app; Linux/net8 records an actual package-only 0.2 to 0.3 upgrade.

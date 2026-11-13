@@ -24,10 +24,10 @@ permissions:
 jobs:
   sdk:
     if: ${{ !inputs.reuse_sdk_artifacts }}
-    uses: josh-hemphill/instrument-components/.github/workflows/driver-sdk.yml@7dd04d1fcc1442b426009ae03b87d0d988435ab4
+    uses: josh-hemphill/instrument-components/.github/workflows/driver-sdk.yml@26a349bfc4a3b86e5e1a21c004dab89fbffac104
     with:
       source_repository: josh-hemphill/instrument-components
-      source_ref: 7dd04d1fcc1442b426009ae03b87d0d988435ab4
+      source_ref: 26a349bfc4a3b86e5e1a21c004dab89fbffac104
   composition:
     needs: sdk
     if: ${{ always() && (needs.sdk.result == 'success' || (inputs.reuse_sdk_artifacts && needs.sdk.result == 'skipped')) }}
@@ -91,9 +91,21 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: josh-hemphill/instrument-components
-          ref: 7dd04d1fcc1442b426009ae03b87d0d988435ab4
+          ref: 26a349bfc4a3b86e5e1a21c004dab89fbffac104
           path: standards-bootstrap
           persist-credentials: false
+      - name: Execute current getting-started app and representative package-only upgrade
+        shell: python
+        env:
+          PROOF_FRAMEWORK: ${{ matrix.framework }}
+          PUBLIC_REGISTRY: ${{ inputs.public_registry || false }}
+        run: |
+          import os,pathlib,subprocess,sys
+          root=pathlib.Path(os.environ['RUNNER_TEMP'])
+          args=[sys.executable,'standards-bootstrap/tools/validate-public-preview.py','--output',str(root/'preview-proof'),'--framework',os.environ['PROOF_FRAMEWORK']]
+          if os.environ['PUBLIC_REGISTRY']!='true':args+=['--feeds',str(root/'composition-proof/feeds')]
+          if os.name!='nt' and os.environ['PROOF_FRAMEWORK']=='net8.0':args+=['--upgrade-from','0.2.0-alpha.1']
+          subprocess.run(args,check=True)
       - name: Pack the standards transport, then run bench self-test and config validation
         shell: python
         run: |
@@ -117,4 +129,9 @@ jobs:
             ${{ runner.temp }}/composition-proof/native/Composition*
             ${{ runner.temp }}/composition-inputs/verified-inputs.json
             ${{ runner.temp }}/bench-software/packages.lock.json
+            ${{ runner.temp }}/preview-proof/*.json
+            ${{ runner.temp }}/preview-proof/*.log
+            ${{ runner.temp }}/preview-proof/native/Preview*
+            ${{ runner.temp }}/preview-proof/upgrade-before/*.json
+            ${{ runner.temp }}/preview-proof/upgrade-before/*.log
           if-no-files-found: error
