@@ -18,11 +18,12 @@ jobs:
         with:
           python-version: '3.12'
       - run: python spec/acceptance/compose.py --check
+  # Keep workflow and SDK source pins on a merged core commit.
   sdk:
-    uses: josh-hemphill/instrument-components/.github/workflows/driver-sdk.yml@1243881c6b91c46ff40cf0cb3cfd4598b8352409
+    uses: josh-hemphill/instrument-components/.github/workflows/driver-sdk.yml@407f436e22a6ff6500665c9f4dccdbbbaaa88d0a
     with:
       source_repository: josh-hemphill/instrument-components
-      source_ref: 1243881c6b91c46ff40cf0cb3cfd4598b8352409
+      source_ref: 407f436e22a6ff6500665c9f4dccdbbbaaa88d0a
   package:
     needs: [acceptance, sdk]
-    uses: josh-hemphill/instrument-components/.github/workflows/driver-package-bootstrap.yml@1243881c6b91c46ff40cf0cb3cfd4598b8352409
+    uses: josh-hemphill/instrument-components/.github/workflows/driver-package-bootstrap.yml@407f436e22a6ff6500665c9f4dccdbbbaaa88d0a
