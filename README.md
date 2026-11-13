@@ -1,17 +1,17 @@
 # Instrument Components Keysight drivers
 
 Independently packaged Rust (`instrument-driver-keysight`) and .NET (`InstrumentComponents.Drivers.Keysight`)
-source-derived profiles, version `0.2.0-alpha.1`. These are published previews;
+source-derived profiles, coordinated release target `0.3.0-alpha.1`. Check registries and the matching release for availability;
 no devices in this library have physical bench validation yet.
 
 ## Install and try the preview
 
 ```sh
-cargo add instrument-driver-keysight@=0.2.0-alpha.1
-dotnet add package InstrumentComponents.Drivers.Keysight --version 0.2.0-alpha.1
+cargo add instrument-driver-keysight@=0.3.0-alpha.1
+dotnet add package InstrumentComponents.Drivers.Keysight --version "[0.3.0-alpha.1]"
 ```
 
-Use the [complete hardware-free Rust/C# guide](https://github.com/josh-hemphill/instrument-components/blob/72015932f9b168ac7d182fcb5ca7a367318505b8/docs-site/docs/getting-started.md) before connecting equipment. It uses exact public package versions and an in-memory development connector. Select this family's factories explicitly; adding a package never probes or opens hardware. The [published source tag](https://github.com/josh-hemphill/instrument-components-keysight/tree/driver-v0.2.0-alpha.1) contains this release; the default branch contains the merged SDK extraction. New HP additions described below are unreleased source work.
+Use the [complete hardware-free Rust/C# guide](https://github.com/josh-hemphill/instrument-components/blob/v0.3.0-alpha.1/docs-site/docs/getting-started.md) before connecting equipment. It uses exact public package versions and an in-memory development connector. Select this family's factories explicitly; adding a package never probes or opens hardware. The [release source tag](https://github.com/josh-hemphill/instrument-components-keysight/tree/driver-v0.3.0-alpha.1) selects the coordinated release once published; HP/Agilent additions below are included in the 0.3 target.
 
 
 Models and aliases are passive hints carried forward from main commit
@@ -53,7 +53,7 @@ plans. Generated Rust/C# files contain static data and require no runtime JSON.
 `provenance/source/` is historical audit evidence, excluded from production
 packages. The SDK TestKit and Tokio consumers are development-only dependencies.
 
-The public 0.2.0-alpha.1 SDK and driver packages are available on crates.io and NuGet. The release workflow tests fresh public-package consumers on Linux/Windows x64 and .NET 8/10.
+The previous 0.2.0-alpha.1 SDK and driver packages are available on crates.io and NuGet. The release workflow tests fresh public-package consumers on Linux/Windows x64 and .NET 8/10.
 
 For pre-publication development, CI also uses checksummed release-form SDK archives from
 a pinned main workflow. The consumer job checks out only this repository and
@@ -74,9 +74,9 @@ Use a `ConnectionBinding` containing the canonical driver ID, exact endpoint and
 The committed exact wire cases now execute through endpoint bindings, including sparse channel IDs, per-operation transport failures and closed-handle checks. Source evidence remains distinct from physical evidence. All model hints in this repository are in initial scope; physical validation is pending.
 
 
-## Native HP additions (unreleased)
+## Native HP subsets in the 0.3 release target
 
-Published `0.2.0-alpha.1` does **not** contain these new HP backends or the added DAQ/RF SDK contracts. This branch implements manual-derived subsets for HP5334A/B, HP3497A, HP8920A/B and HP8921A; the preceding HP review record is retained under `spec/review`; this expansion requires its own final implementation and distribution review. All remain hardware-unvalidated. No new repository is needed: HP, Agilent and Keysight implementations share this external package while core contains only neutral contracts and standard tooling. A release requires a new coordinated SDK/driver version; do not mix these sources with the existing public SDK.
+The historical `0.2.0-alpha.1` distribution does **not** contain the HP backends or added DAQ/RF contracts. The coordinated **0.3.0-alpha.1** target includes manual-derived subsets for HP 5334A/B, 3497A, 8920A/B and 8921A. Their implementation reviews are retained under `spec/review`; the current distribution gate reviews the actual new package consumers before publication. All remain hardware-unvalidated. HP, Agilent and Keysight implementations share this external package; core contains neutral contracts and standards tooling. Use the exact matching 0.3 SDK and driver versions, and check the matching release for publication status.
 
 The counters support frequency on A/B, period on A, gate time 0.001–99.999 s, logical channel selection and explicit initialization. Optional C, totalize and the remaining modes are not advertised. Each model has a distinct factory ID. Do not register these through generic SCPI fallback or infer model identity from the ambiguous native ID response. See [5334A](spec/legacy/HP5334A.md) and [5334B](spec/legacy/HP5334B.md) for exact commands, state changes and limits.
 
@@ -144,9 +144,9 @@ Both families use sync, dedicated-worker and optional true native async connecto
 The [independent acceptance shards](spec/acceptance) add481 cases (53DAQ,1528920A,1488920B,1288921A) to the112 counter and831 previous cases. Run `python spec/acceptance/compose.py --check` before the SDK's `generate-tests --check`. Expected traffic is extracted from manuals and reviewed independently of backend code; provenance, synthetic policies, option exclusions and frozen cross-language power constants are retained beside the shards. [Specification Council record](spec/review/recovered-spec-v9/RESULT.md) is separate from the required final implementation review.
 
 
-## Agilent scalar and module expansion (unreleased)
+## Agilent scalar and module subsets in the 0.3 release target
 
-This branch adds manual-derived, hardware-unvalidated subsets for **34401A,33120A,53132A,3585B and34980A with34937A/34922A/34950A**. These implementations are absent from public0.2.0-alpha.1. A coordinated new SDK/device version and passing distribution review are required before release. Register the new factories explicitly; inherited passive hints and generic profiles do not qualify these models. The old generic34401A profile has been retired to provenance and replaced with the explicit factory.
+The coordinated **0.3.0-alpha.1** target includes manual-derived, hardware-unvalidated subsets for **34401A, 33120A, 53132A, 3585B and 34980A with 34937A/34922A/34950A**. The historical 0.2 distribution excludes them. The release is subject to current package execution and distribution review; source preparation alone is not evidence of public availability. Register the explicit factories below: inherited passive hints and generic profiles do not qualify these models. The old generic 34401A profile is retained only in provenance and replaced by its explicit factory.
 
 | Device | Explicit factory | Supported subset / prerequisites |
 |---|---|---|
@@ -165,3 +165,7 @@ The compiled, hardware-free composition examples show explicit constructors, exa
 Require finite host deadlines,256-byte bounded scalar allocation and complete plain-text bodies. For these GPIB SCPI models select LF/EOI framing;3585B uses its native framing described in its specification. Reject binary wrappers before removing headers. Keep payload whitespace for strict parsing. Any uncertain IO/parse/Device failure or active cancellation quarantines the entire handle; externally resynchronize/recommission and reopen. Close is resource-only and preserves borrowed IO.
 
 The [procedural coverage map](validation/agilent-procedural-coverage.md) joins the independent requirements to executable tests. New504 manual/policy-derived cases plus1355 unaffected cases give1859 active transcripts. Spec Council grades and eventual implementation grades are distinct; hardware evidence remains absent. Neither a passing simulator nor Native AOT proves measurement performance, physical contact state or calibrated electrical behavior.
+
+## Coordinated 0.3 release
+
+The 0.3.0-alpha.1 distribution includes the current merged software implementation and uses exact matching SDK dependencies. The 0.2 exclusions and historical proof records above describe that earlier release. New device additions remain hardware-unvalidated and require explicit commissioning/configuration. Core production packages do not bundle this driver. Release workflows run Windows/Linux x64 and .NET 8/10 package consumers; the Keysight release runs the final all-five public composition gate.

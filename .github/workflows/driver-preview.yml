@@ -37,13 +37,27 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: josh-hemphill/instrument-components
+          ref: 26a349bfc4a3b86e5e1a21c004dab89fbffac104
+          path: .release-sdk
+          sparse-checkout: tools/release-package.py
+          sparse-checkout-cone-mode: false
+          persist-credentials: false
       - uses: dtolnay/rust-toolchain@stable
       - uses: rust-lang/crates-io-auth-action@v1
         if: env.CARGO_BOOTSTRAP_TOKEN == ''
         id: auth
-      - run: cargo publish -p instrument-driver-keysight
+      - run: python .release-sdk/tools/release-package.py --crate instrument-driver-keysight
         env:
           CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_BOOTSTRAP_TOKEN || steps.auth.outputs.token }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: publication-crates
+          path: publication-proof/*
+          if-no-files-found: warn
   nuget:
     needs: [validate, conformance]
     runs-on: windows-latest
@@ -55,6 +69,14 @@ jobs:
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '10.0.x'
+      - uses: actions/checkout@v4
+        with:
+          repository: josh-hemphill/instrument-components
+          ref: 26a349bfc4a3b86e5e1a21c004dab89fbffac104
+          path: .release-sdk
+          sparse-checkout: tools/release-package.py
+          sparse-checkout-cone-mode: false
+          persist-credentials: false
       - run: dotnet pack dotnet/InstrumentComponents.Drivers.Keysight/InstrumentComponents.Drivers.Keysight.csproj -c Release -o packages
       - uses: NuGet/login@v1
         id: auth
@@ -66,8 +88,14 @@ jobs:
         run: |
           $packages = @(Get-ChildItem packages -Filter '*.nupkg')
           if ($packages.Count -ne 1) { throw 'Expected one independent driver package' }
-          dotnet nuget push $packages[0].FullName --source https://api.nuget.org/v3/index.json --api-key $env:NUGET_API_KEY --skip-duplicate
+          python .release-sdk/tools/release-package.py --nuget $packages[0].FullName
           if ($LASTEXITCODE -ne 0) { throw 'NuGet push failed' }
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: publication-nuget
+          path: publication-proof/*
+          if-no-files-found: warn
   public-consumer:
     needs: [crates, nuget]
     strategy:
@@ -94,7 +122,7 @@ jobs:
         env:
           TARGET_FRAMEWORK: ${{ matrix.framework }}
         run: |
-          import os,pathlib,subprocess,json,urllib.request,urllib.error,time
+          import os,pathlib,subprocess,json,urllib.request,urllib.error,time,hashlib,tomllib,struct
           settings=json.loads(pathlib.Path('driver-package.json').read_text());version=settings['version']
           # Allow registry index propagation; no source/artifact substitute.
           for attempt in range(180):
@@ -107,15 +135,68 @@ jobs:
                   if error.code!=404:raise
               time.sleep(5)
           else:raise SystemExit('Public package versions did not become available')
-          temp=pathlib.Path(os.environ['RUNNER_TEMP']);env=dict(os.environ,CARGO_HOME=str(temp/'public-cargo'),CARGO_TARGET_DIR=str(temp/'public-target'),NUGET_PACKAGES=str(temp/'public-nuget'))
-          for feature in [[],['--features','async']]:subprocess.run(['cargo','run','--manifest-path','validation/rust/Cargo.toml','--release']+feature,env=env,check=True)
+          temp=pathlib.Path(os.environ['RUNNER_TEMP']);env=dict(os.environ,CARGO_HOME=str(temp/'public-cargo'),CARGO_TARGET_DIR=str(temp/'public-target'),NUGET_PACKAGES=str(temp/'public-nuget'),NUGET_HTTP_CACHE_PATH=str(temp/'public-nuget-http'),DOTNET_CLI_HOME=str(temp/'public-dotnet-home'))
+          proof=temp/'public-proof';proof.mkdir();records=[]
+          def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
+          def run(name,args):
+              log=proof/(name+'.log')
+              with log.open('w') as stream:result=subprocess.run(list(map(str,args)),env=env,stdout=stream,stderr=subprocess.STDOUT)
+              records.append(dict(name=name,command=list(map(str,args)),exitCode=result.returncode,log=log.name,sha256=sha(log)))
+              (proof/'execution.json').write_text(json.dumps(records,indent=2)+'\n')
+              if result.returncode:raise RuntimeError(name+': '+log.read_text(errors='replace')[-8000:])
+          for feature in [[],['--features','async']]:run('rust-async' if feature else 'rust-default',['cargo','run','--manifest-path','validation/rust/Cargo.toml','--release']+feature)
           project=pathlib.Path('validation/dotnet/DriverProof.csproj');project.write_text(project.read_text().replace('net8.0',os.environ['TARGET_FRAMEWORK']))
           rid='win-x64' if os.name=='nt' else 'linux-x64';out=temp/'public-native'
-          subprocess.run(['dotnet','publish',str(project),'-c','Release','-r',rid,'--self-contained','true','-o',str(out)],env=env,check=True)
-          subprocess.run([str(out/('DriverProof.exe' if os.name=='nt' else 'DriverProof'))],env=env,check=True)
+          run('native-publish',['dotnet','publish',str(project),'-c','Release','-r',rid,'--self-contained','true','-o',str(out)])
+          binary=out/('DriverProof.exe' if os.name=='nt' else 'DriverProof');data=binary.read_bytes()
+          if os.name=='nt':
+              offset=struct.unpack_from('<I',data,0x3c)[0]
+              if data[offset:offset+4]!=b'PE\0\0' or struct.unpack_from('<H',data,offset+4)[0]!=0x8664 or struct.unpack_from('<II',data,offset+24+112+14*8)!=(0,0):raise ValueError('Expected native x64 PE')
+          elif data[:5]!=b'\x7fELF\x02' or struct.unpack_from('<H',data,18)[0]!=62:raise ValueError('Expected native x64 ELF')
+          run('native-execute',[binary]);packages=[]
+          for row in tomllib.loads(pathlib.Path('validation/rust/Cargo.lock').read_text())['package']:
+              if not row['name'].startswith('instrument-'):continue
+              archives=list(pathlib.Path(env['CARGO_HOME']).glob('registry/cache/*/'+row['name']+'-'+row['version']+'.crate'))
+              if row['version']!=version or len(archives)!=1 or sha(archives[0])!=row['checksum']:raise ValueError('Installed public crate identity mismatch')
+              packages.append(dict(ecosystem='Cargo',name=row['name'],version=version,archiveSha256=sha(archives[0]),registryChecksum=row['checksum']))
+          assets=json.loads(pathlib.Path('validation/dotnet/obj/project.assets.json').read_text())
+          if any(row['type']!='package' for row in assets['libraries'].values()):raise ValueError('Public consumer source reference')
+          for key in assets['libraries']:
+              name,actual=key.split('/')
+              if not name.startswith('InstrumentComponents'):continue
+              archive=pathlib.Path(env['NUGET_PACKAGES'])/name.lower()/actual/(name.lower()+'.'+actual+'.nupkg')
+              if actual!=version:raise ValueError('Unexpected public NuGet version')
+              packages.append(dict(ecosystem='NuGet',name=name,version=actual,archiveSha256=sha(archive)))
+          (proof/'proof.json').write_text(json.dumps(dict(mode='fresh-public-registry',sourceCommit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),rid=rid,framework=os.environ['TARGET_FRAMEWORK'],nativeSha256=sha(binary),packages=packages,hardwareValidated=False),indent=2)+'\n')
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: public-driver-${{ matrix.os }}-${{ matrix.framework }}
+          path: |
+            ${{ runner.temp }}/public-proof/*.json
+            ${{ runner.temp }}/public-proof/*.log
+            ${{ runner.temp }}/public-native/DriverProof*
   all-five-public:
     needs: public-consumer
     uses: ./.github/workflows/composition.yml
     with:
       public_registry: true
       reuse_sdk_artifacts: true
+  github-release:
+    needs: all-five-public
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create the versioned driver prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          if gh release view "$RELEASE_TAG" --json tagName,isPrerelease,isDraft,body > existing-release.json 2>/dev/null; then
+            python -c 'import json; r=json.load(open("existing-release.json")); assert r["isPrerelease"] and not r["isDraft"] and "Hardware-unvalidated" in r["body"]'
+            echo "Existing qualified prerelease retained; package identities were checked by publishers."
+          else
+            gh release create "$RELEASE_TAG" --verify-tag --prerelease --generate-notes --notes "Hardware-unvalidated software preview. Consult the commissioned operation subsets and deferred features in the source specifications before bench use."
+          fi
