@@ -1,0 +1,39 @@
+{
+  "reviewer": "expansion_spec_reviewer",
+  "stage": "independent HP3585B specification/oracle review before Council",
+  "decision": "CLEAR_FOR_COUNCIL_SPEC_REVIEW",
+  "scope": [
+    "3585B"
+  ],
+  "requiredCurrentChanges": [],
+  "files": [
+    {
+      "path": "spec/3585B.md",
+      "sha256": "e5a65c7e63b46e9342600ef52443c5868bbb4e760416a3e1ad4c23e576f7ce62"
+    },
+    {
+      "path": "spec/acceptance/3585b.catalog-cases.json",
+      "sha256": "6a132d6920b2a816db7d7e2e3b78942f22ad840eaa35af80dbff0a6dcbfa949c"
+    },
+    {
+      "path": "spec/acceptance/build-3585b-oracle.py",
+      "sha256": "0f757b5ee4f4108b8d1136340a70a652e526fbbe078dffda18f95b5f4d58821e"
+    }
+  ],
+  "directEvidence": [
+    "ActualrenderedprimaryPDF268/272/277/221 andOCR/ownmanualresearchcandidate reviewed; nativegrammar/field widths,T6selectedpointwaitandCLvisiblemarkerdistinctionverified",
+    "Existingneutralcenter/spanpositiveconstraint checked; frozeninitialinteger1..40100000subsetavoidsincompatible0admission",
+    "Reflevelinteger-tenthsformat,-70..40relativeR12envelope,bothbandwidthdiscretesets andnoindependentsweepcompletionclaim consistentwithownmanual",
+    "D2exact12frequency+comma+11amplitude bodies,explicitpreservedspacesanddBmE-0 fixedfield;decoderrequiredtocheckdiscardedfield too",
+    "123uniquegoldens inspected withoneexpectedresult/error,allexactoperationcommands,andbothaxesmalformedfieldpolicies; authoringgeneratorreadsnoimplementation",
+    "B-PROC01..07definesstaticidentity/inventory/capabilities,ownership,healthyinvalidfollowup,parentquarantine,genuinelypendingCL/D2hosttimeout/cancel andcompatiblepacked/native matrix"
+  ],
+  "limitations": [
+    "Noobservedrawdevicewiretranscriptfound; examplesareexplicitlysyntheticdiagraminstantiations,notfabricatedbenchmeasurements",
+    "SPlocatesstoredtracepeakandcanrepresentoldtraceafterconfigurationchanges;notfreshglobalpeak acquisition",
+    "T6validatesonlyselectedmarker;doesnotprovecompletefreshsweep orunoverloaded/calibratedphysicalinput",
+    "Frozen50ohmR12/dbm/liveA/exclusiveconditionsareexternaltruthfulcommissioning;noautodetectionorinputprotection",
+    "Initial0Hz/fractionalsettings,trace/sweep/counter/noise/reset/shutdownnotadvertised",
+    "Allimplementationprocedures/actualpackedNativeAOTLinuxWindowsnet8net10executionsremainmandatorylater"
+  ]
+}

@@ -375,356 +375,6 @@ CatalogRequest::FunctionGeneratorSetFrequency { hz: -1.0 },
 ScriptStep::Close(Ok(())),
 ],
 expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
-CatalogCase { id: "keysight.34401a|B|DmmMeasureVoltageDc-0", calls: vec![
-CatalogRequest::DmmMeasureVoltageDc { range: None },
-], script: vec![
-ScriptStep::Query(":MEAS:VOLT:DC?".into(), Ok("3.3".into())),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Quantity(Quantity { value: 3.3, unit: Unit::Volt, status: MeasurementStatus::Valid })), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmMeasureVoltageDc-1", calls: vec![
-CatalogRequest::DmmMeasureVoltageDc { range: Some(2.5) },
-], script: vec![
-ScriptStep::Query(":MEAS:VOLT:DC? 2.5".into(), Ok("3.3".into())),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Quantity(Quantity { value: 3.3, unit: Unit::Volt, status: MeasurementStatus::Valid })), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmMeasureVoltageAc-0", calls: vec![
-CatalogRequest::DmmMeasureVoltageAc { range: None },
-], script: vec![
-ScriptStep::Query(":MEAS:VOLT:AC?".into(), Ok("3.3".into())),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Quantity(Quantity { value: 3.3, unit: Unit::Volt, status: MeasurementStatus::Valid })), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmMeasureVoltageAc-1", calls: vec![
-CatalogRequest::DmmMeasureVoltageAc { range: Some(2.5) },
-], script: vec![
-ScriptStep::Query(":MEAS:VOLT:AC? 2.5".into(), Ok("3.3".into())),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Quantity(Quantity { value: 3.3, unit: Unit::Volt, status: MeasurementStatus::Valid })), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmMeasureCurrentDc-0", calls: vec![
-CatalogRequest::DmmMeasureCurrentDc { range: None },
-], script: vec![
-ScriptStep::Query(":MEAS:CURR:DC?".into(), Ok("3.3".into())),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Quantity(Quantity { value: 3.3, unit: Unit::Ampere, status: MeasurementStatus::Valid })), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmMeasureCurrentDc-1", calls: vec![
-CatalogRequest::DmmMeasureCurrentDc { range: Some(2.5) },
-], script: vec![
-ScriptStep::Query(":MEAS:CURR:DC? 2.5".into(), Ok("3.3".into())),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Quantity(Quantity { value: 3.3, unit: Unit::Ampere, status: MeasurementStatus::Valid })), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmMeasureCurrentAc-0", calls: vec![
-CatalogRequest::DmmMeasureCurrentAc { range: None },
-], script: vec![
-ScriptStep::Query(":MEAS:CURR:AC?".into(), Ok("3.3".into())),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Quantity(Quantity { value: 3.3, unit: Unit::Ampere, status: MeasurementStatus::Valid })), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmMeasureCurrentAc-1", calls: vec![
-CatalogRequest::DmmMeasureCurrentAc { range: Some(2.5) },
-], script: vec![
-ScriptStep::Query(":MEAS:CURR:AC? 2.5".into(), Ok("3.3".into())),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Quantity(Quantity { value: 3.3, unit: Unit::Ampere, status: MeasurementStatus::Valid })), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmMeasureResistance-0", calls: vec![
-CatalogRequest::DmmMeasureResistance { range: None },
-], script: vec![
-ScriptStep::Query(":MEAS:RES?".into(), Ok("3.3".into())),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Quantity(Quantity { value: 3.3, unit: Unit::Ohm, status: MeasurementStatus::Valid })), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmMeasureResistance-1", calls: vec![
-CatalogRequest::DmmMeasureResistance { range: Some(2.5) },
-], script: vec![
-ScriptStep::Query(":MEAS:RES? 2.5".into(), Ok("3.3".into())),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Quantity(Quantity { value: 3.3, unit: Unit::Ohm, status: MeasurementStatus::Valid })), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmMeasureResistance2Wire-0", calls: vec![
-CatalogRequest::DmmMeasureResistance2Wire { range: None },
-], script: vec![
-ScriptStep::Query(":MEAS:RES?".into(), Ok("3.3".into())),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Quantity(Quantity { value: 3.3, unit: Unit::Ohm, status: MeasurementStatus::Valid })), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmMeasureResistance2Wire-1", calls: vec![
-CatalogRequest::DmmMeasureResistance2Wire { range: Some(2.5) },
-], script: vec![
-ScriptStep::Query(":MEAS:RES? 2.5".into(), Ok("3.3".into())),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Quantity(Quantity { value: 3.3, unit: Unit::Ohm, status: MeasurementStatus::Valid })), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmMeasureResistance4Wire-0", calls: vec![
-CatalogRequest::DmmMeasureResistance4Wire { range: None },
-], script: vec![
-ScriptStep::Query(":MEAS:FRES?".into(), Ok("3.3".into())),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Quantity(Quantity { value: 3.3, unit: Unit::Ohm, status: MeasurementStatus::Valid })), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmMeasureResistance4Wire-1", calls: vec![
-CatalogRequest::DmmMeasureResistance4Wire { range: Some(2.5) },
-], script: vec![
-ScriptStep::Query(":MEAS:FRES? 2.5".into(), Ok("3.3".into())),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Quantity(Quantity { value: 3.3, unit: Unit::Ohm, status: MeasurementStatus::Valid })), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmMeasureTemperature-0", calls: vec![
-CatalogRequest::DmmMeasureTemperature { range: None },
-], script: vec![
-ScriptStep::Query(":MEAS:TEMP?".into(), Ok("3.3".into())),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Quantity(Quantity { value: 3.3, unit: Unit::Unknown, status: MeasurementStatus::Valid })), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmMeasureTemperature-1", calls: vec![
-CatalogRequest::DmmMeasureTemperature { range: Some(2.5) },
-], script: vec![
-ScriptStep::Query(":MEAS:TEMP? 2.5".into(), Ok("3.3".into())),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Quantity(Quantity { value: 3.3, unit: Unit::Unknown, status: MeasurementStatus::Valid })), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureVoltageDc-0", calls: vec![
-CatalogRequest::DmmConfigureVoltageDc { range: None, resolution: None },
-], script: vec![
-ScriptStep::Write(":CONF:VOLT:DC".into()),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureVoltageDc-1", calls: vec![
-CatalogRequest::DmmConfigureVoltageDc { range: None, resolution: Some(2.5) },
-], script: vec![
-ScriptStep::Write(":CONF:VOLT:DC DEF,2.5".into()),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureVoltageDc-2", calls: vec![
-CatalogRequest::DmmConfigureVoltageDc { range: Some(2.5), resolution: None },
-], script: vec![
-ScriptStep::Write(":CONF:VOLT:DC 2.5".into()),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureVoltageDc-3", calls: vec![
-CatalogRequest::DmmConfigureVoltageDc { range: Some(2.5), resolution: Some(2.5) },
-], script: vec![
-ScriptStep::Write(":CONF:VOLT:DC 2.5,2.5".into()),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureVoltageAc-0", calls: vec![
-CatalogRequest::DmmConfigureVoltageAc { range: None, resolution: None },
-], script: vec![
-ScriptStep::Write(":CONF:VOLT:AC".into()),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureVoltageAc-1", calls: vec![
-CatalogRequest::DmmConfigureVoltageAc { range: None, resolution: Some(2.5) },
-], script: vec![
-ScriptStep::Write(":CONF:VOLT:AC DEF,2.5".into()),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureVoltageAc-2", calls: vec![
-CatalogRequest::DmmConfigureVoltageAc { range: Some(2.5), resolution: None },
-], script: vec![
-ScriptStep::Write(":CONF:VOLT:AC 2.5".into()),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureVoltageAc-3", calls: vec![
-CatalogRequest::DmmConfigureVoltageAc { range: Some(2.5), resolution: Some(2.5) },
-], script: vec![
-ScriptStep::Write(":CONF:VOLT:AC 2.5,2.5".into()),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureCurrentDc-0", calls: vec![
-CatalogRequest::DmmConfigureCurrentDc { range: None, resolution: None },
-], script: vec![
-ScriptStep::Write(":CONF:CURR:DC".into()),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureCurrentDc-1", calls: vec![
-CatalogRequest::DmmConfigureCurrentDc { range: None, resolution: Some(2.5) },
-], script: vec![
-ScriptStep::Write(":CONF:CURR:DC DEF,2.5".into()),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureCurrentDc-2", calls: vec![
-CatalogRequest::DmmConfigureCurrentDc { range: Some(2.5), resolution: None },
-], script: vec![
-ScriptStep::Write(":CONF:CURR:DC 2.5".into()),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureCurrentDc-3", calls: vec![
-CatalogRequest::DmmConfigureCurrentDc { range: Some(2.5), resolution: Some(2.5) },
-], script: vec![
-ScriptStep::Write(":CONF:CURR:DC 2.5,2.5".into()),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureCurrentAc-0", calls: vec![
-CatalogRequest::DmmConfigureCurrentAc { range: None, resolution: None },
-], script: vec![
-ScriptStep::Write(":CONF:CURR:AC".into()),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureCurrentAc-1", calls: vec![
-CatalogRequest::DmmConfigureCurrentAc { range: None, resolution: Some(2.5) },
-], script: vec![
-ScriptStep::Write(":CONF:CURR:AC DEF,2.5".into()),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureCurrentAc-2", calls: vec![
-CatalogRequest::DmmConfigureCurrentAc { range: Some(2.5), resolution: None },
-], script: vec![
-ScriptStep::Write(":CONF:CURR:AC 2.5".into()),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureCurrentAc-3", calls: vec![
-CatalogRequest::DmmConfigureCurrentAc { range: Some(2.5), resolution: Some(2.5) },
-], script: vec![
-ScriptStep::Write(":CONF:CURR:AC 2.5,2.5".into()),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureResistance-0", calls: vec![
-CatalogRequest::DmmConfigureResistance { range: None, resolution: None },
-], script: vec![
-ScriptStep::Write(":CONF:RES".into()),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureResistance-1", calls: vec![
-CatalogRequest::DmmConfigureResistance { range: None, resolution: Some(2.5) },
-], script: vec![
-ScriptStep::Write(":CONF:RES DEF,2.5".into()),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureResistance-2", calls: vec![
-CatalogRequest::DmmConfigureResistance { range: Some(2.5), resolution: None },
-], script: vec![
-ScriptStep::Write(":CONF:RES 2.5".into()),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureResistance-3", calls: vec![
-CatalogRequest::DmmConfigureResistance { range: Some(2.5), resolution: Some(2.5) },
-], script: vec![
-ScriptStep::Write(":CONF:RES 2.5,2.5".into()),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureResistance4Wire-0", calls: vec![
-CatalogRequest::DmmConfigureResistance4Wire { range: None, resolution: None },
-], script: vec![
-ScriptStep::Write(":CONF:FRES".into()),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureResistance4Wire-1", calls: vec![
-CatalogRequest::DmmConfigureResistance4Wire { range: None, resolution: Some(2.5) },
-], script: vec![
-ScriptStep::Write(":CONF:FRES DEF,2.5".into()),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureResistance4Wire-2", calls: vec![
-CatalogRequest::DmmConfigureResistance4Wire { range: Some(2.5), resolution: None },
-], script: vec![
-ScriptStep::Write(":CONF:FRES 2.5".into()),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureResistance4Wire-3", calls: vec![
-CatalogRequest::DmmConfigureResistance4Wire { range: Some(2.5), resolution: Some(2.5) },
-], script: vec![
-ScriptStep::Write(":CONF:FRES 2.5,2.5".into()),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmInitiate-0", calls: vec![
-CatalogRequest::DmmInitiate,
-], script: vec![
-ScriptStep::Write("INIT".into()),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmFetch-0", calls: vec![
-CatalogRequest::DmmMeasureVoltageDc { range: None },
-CatalogRequest::DmmFetch,
-], script: vec![
-ScriptStep::Query(":MEAS:VOLT:DC?".into(), Ok("3.3".into())),
-ScriptStep::Query("FETC?".into(), Ok("3.3".into())),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Quantity(Quantity { value: 3.3, unit: Unit::Volt, status: MeasurementStatus::Valid })), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmRead-0", calls: vec![
-CatalogRequest::DmmMeasureVoltageDc { range: None },
-CatalogRequest::DmmRead,
-], script: vec![
-ScriptStep::Query(":MEAS:VOLT:DC?".into(), Ok("3.3".into())),
-ScriptStep::Query("READ?".into(), Ok("3.3".into())),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Quantity(Quantity { value: 3.3, unit: Unit::Volt, status: MeasurementStatus::Valid })), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|DmmSoftwareTrigger-0", calls: vec![
-CatalogRequest::DmmSoftwareTrigger,
-], script: vec![
-ScriptStep::Write("*TRG".into()),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|QueryIdentity-0", calls: vec![
-CatalogRequest::QueryIdentity,
-], script: vec![
-ScriptStep::Query("*IDN?".into(), Ok("Validation,Device,SN,1".into())),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Identity(DeviceIdentity { manufacturer: "Validation".into(), model: "Device".into(), serial: "SN".into(), revision: "1".into() })), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|Reset-0", calls: vec![
-CatalogRequest::Reset,
-], script: vec![
-ScriptStep::Write("*RST".into()),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|Shutdown-0", calls: vec![
-CatalogRequest::Shutdown,
-], script: vec![
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Unit), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|temperature-DmmRead", calls: vec![
-CatalogRequest::DmmMeasureTemperature { range: None },
-CatalogRequest::DmmRead,
-], script: vec![
-ScriptStep::Query(":MEAS:TEMP?".into(), Ok("3.3".into())),
-ScriptStep::Query("READ?".into(), Ok("3.3".into())),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Quantity(Quantity { value: 3.3, unit: Unit::Unknown, status: MeasurementStatus::Valid })), expected_error: None },
-CatalogCase { id: "keysight.34401a|B|temperature-DmmFetch", calls: vec![
-CatalogRequest::DmmMeasureTemperature { range: None },
-CatalogRequest::DmmFetch,
-], script: vec![
-ScriptStep::Query(":MEAS:TEMP?".into(), Ok("3.3".into())),
-ScriptStep::Query("FETC?".into(), Ok("3.3".into())),
-ScriptStep::Close(Ok(())),
-],
-expected: Some(CatalogReply::Quantity(Quantity { value: 3.3, unit: Unit::Unknown, status: MeasurementStatus::Valid })), expected_error: None },
 CatalogCase { id: "keysight.34410a|B|DmmMeasureVoltageDc-0", calls: vec![
 CatalogRequest::DmmMeasureVoltageDc { range: None },
 ], script: vec![
@@ -4037,150 +3687,6 @@ ScriptStep::WriteFailure(":OUTP OFF".into(), instrument_api::DriverError::new(Er
 ScriptStep::Close(Ok(())),
 ],
 expected: None, expected_error: Some(ErrorKind::Shutdown) },
-CatalogCase { id: "keysight.34401a|B|DmmMeasureVoltageDc-0-transport-failure", calls: vec![
-CatalogRequest::DmmMeasureVoltageDc { range: None },
-], script: vec![
-ScriptStep::Query(":MEAS:VOLT:DC?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
-ScriptStep::Close(Ok(())),
-],
-expected: None, expected_error: Some(ErrorKind::Transport) },
-CatalogCase { id: "keysight.34401a|B|DmmMeasureVoltageAc-0-transport-failure", calls: vec![
-CatalogRequest::DmmMeasureVoltageAc { range: None },
-], script: vec![
-ScriptStep::Query(":MEAS:VOLT:AC?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
-ScriptStep::Close(Ok(())),
-],
-expected: None, expected_error: Some(ErrorKind::Transport) },
-CatalogCase { id: "keysight.34401a|B|DmmMeasureCurrentDc-0-transport-failure", calls: vec![
-CatalogRequest::DmmMeasureCurrentDc { range: None },
-], script: vec![
-ScriptStep::Query(":MEAS:CURR:DC?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
-ScriptStep::Close(Ok(())),
-],
-expected: None, expected_error: Some(ErrorKind::Transport) },
-CatalogCase { id: "keysight.34401a|B|DmmMeasureCurrentAc-0-transport-failure", calls: vec![
-CatalogRequest::DmmMeasureCurrentAc { range: None },
-], script: vec![
-ScriptStep::Query(":MEAS:CURR:AC?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
-ScriptStep::Close(Ok(())),
-],
-expected: None, expected_error: Some(ErrorKind::Transport) },
-CatalogCase { id: "keysight.34401a|B|DmmMeasureResistance-0-transport-failure", calls: vec![
-CatalogRequest::DmmMeasureResistance { range: None },
-], script: vec![
-ScriptStep::Query(":MEAS:RES?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
-ScriptStep::Close(Ok(())),
-],
-expected: None, expected_error: Some(ErrorKind::Transport) },
-CatalogCase { id: "keysight.34401a|B|DmmMeasureResistance2Wire-0-transport-failure", calls: vec![
-CatalogRequest::DmmMeasureResistance2Wire { range: None },
-], script: vec![
-ScriptStep::Query(":MEAS:RES?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
-ScriptStep::Close(Ok(())),
-],
-expected: None, expected_error: Some(ErrorKind::Transport) },
-CatalogCase { id: "keysight.34401a|B|DmmMeasureResistance4Wire-0-transport-failure", calls: vec![
-CatalogRequest::DmmMeasureResistance4Wire { range: None },
-], script: vec![
-ScriptStep::Query(":MEAS:FRES?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
-ScriptStep::Close(Ok(())),
-],
-expected: None, expected_error: Some(ErrorKind::Transport) },
-CatalogCase { id: "keysight.34401a|B|DmmMeasureTemperature-0-transport-failure", calls: vec![
-CatalogRequest::DmmMeasureTemperature { range: None },
-], script: vec![
-ScriptStep::Query(":MEAS:TEMP?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
-ScriptStep::Close(Ok(())),
-],
-expected: None, expected_error: Some(ErrorKind::Transport) },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureVoltageDc-0-transport-failure", calls: vec![
-CatalogRequest::DmmConfigureVoltageDc { range: None, resolution: None },
-], script: vec![
-ScriptStep::WriteFailure(":CONF:VOLT:DC".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
-ScriptStep::Close(Ok(())),
-],
-expected: None, expected_error: Some(ErrorKind::Transport) },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureVoltageAc-0-transport-failure", calls: vec![
-CatalogRequest::DmmConfigureVoltageAc { range: None, resolution: None },
-], script: vec![
-ScriptStep::WriteFailure(":CONF:VOLT:AC".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
-ScriptStep::Close(Ok(())),
-],
-expected: None, expected_error: Some(ErrorKind::Transport) },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureCurrentDc-0-transport-failure", calls: vec![
-CatalogRequest::DmmConfigureCurrentDc { range: None, resolution: None },
-], script: vec![
-ScriptStep::WriteFailure(":CONF:CURR:DC".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
-ScriptStep::Close(Ok(())),
-],
-expected: None, expected_error: Some(ErrorKind::Transport) },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureCurrentAc-0-transport-failure", calls: vec![
-CatalogRequest::DmmConfigureCurrentAc { range: None, resolution: None },
-], script: vec![
-ScriptStep::WriteFailure(":CONF:CURR:AC".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
-ScriptStep::Close(Ok(())),
-],
-expected: None, expected_error: Some(ErrorKind::Transport) },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureResistance-0-transport-failure", calls: vec![
-CatalogRequest::DmmConfigureResistance { range: None, resolution: None },
-], script: vec![
-ScriptStep::WriteFailure(":CONF:RES".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
-ScriptStep::Close(Ok(())),
-],
-expected: None, expected_error: Some(ErrorKind::Transport) },
-CatalogCase { id: "keysight.34401a|B|DmmConfigureResistance4Wire-0-transport-failure", calls: vec![
-CatalogRequest::DmmConfigureResistance4Wire { range: None, resolution: None },
-], script: vec![
-ScriptStep::WriteFailure(":CONF:FRES".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
-ScriptStep::Close(Ok(())),
-],
-expected: None, expected_error: Some(ErrorKind::Transport) },
-CatalogCase { id: "keysight.34401a|B|DmmInitiate-0-transport-failure", calls: vec![
-CatalogRequest::DmmInitiate,
-], script: vec![
-ScriptStep::WriteFailure("INIT".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
-ScriptStep::Close(Ok(())),
-],
-expected: None, expected_error: Some(ErrorKind::Transport) },
-CatalogCase { id: "keysight.34401a|B|DmmFetch-0-transport-failure", calls: vec![
-CatalogRequest::DmmMeasureVoltageDc { range: None },
-CatalogRequest::DmmFetch,
-], script: vec![
-ScriptStep::Query(":MEAS:VOLT:DC?".into(), Ok("3.3".into())),
-ScriptStep::Query("FETC?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
-ScriptStep::Close(Ok(())),
-],
-expected: None, expected_error: Some(ErrorKind::Transport) },
-CatalogCase { id: "keysight.34401a|B|DmmRead-0-transport-failure", calls: vec![
-CatalogRequest::DmmMeasureVoltageDc { range: None },
-CatalogRequest::DmmRead,
-], script: vec![
-ScriptStep::Query(":MEAS:VOLT:DC?".into(), Ok("3.3".into())),
-ScriptStep::Query("READ?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
-ScriptStep::Close(Ok(())),
-],
-expected: None, expected_error: Some(ErrorKind::Transport) },
-CatalogCase { id: "keysight.34401a|B|DmmSoftwareTrigger-0-transport-failure", calls: vec![
-CatalogRequest::DmmSoftwareTrigger,
-], script: vec![
-ScriptStep::WriteFailure("*TRG".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
-ScriptStep::Close(Ok(())),
-],
-expected: None, expected_error: Some(ErrorKind::Transport) },
-CatalogCase { id: "keysight.34401a|B|QueryIdentity-0-transport-failure", calls: vec![
-CatalogRequest::QueryIdentity,
-], script: vec![
-ScriptStep::Query("*IDN?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
-ScriptStep::Close(Ok(())),
-],
-expected: None, expected_error: Some(ErrorKind::Transport) },
-CatalogCase { id: "keysight.34401a|B|Reset-0-transport-failure", calls: vec![
-CatalogRequest::Reset,
-], script: vec![
-ScriptStep::WriteFailure("*RST".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
-ScriptStep::Close(Ok(())),
-],
-expected: None, expected_error: Some(ErrorKind::Transport) },
 CatalogCase { id: "keysight.34410a|B|DmmMeasureVoltageDc-0-transport-failure", calls: vec![
 CatalogRequest::DmmMeasureVoltageDc { range: None },
 ], script: vec![
@@ -17886,5 +17392,4757 @@ CatalogRequest::Shutdown,
 ScriptStep::Close(Ok(())),
 ],
 expected: None, expected_error: Some(ErrorKind::UnsupportedOperation) },
+CatalogCase { id: "keysight.34401a|E|VoltageDc-auto", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC? DEF,DEF".into(), Ok("+1.25000000E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1.25, unit: Unit::Volt, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|VoltageDc-maximum-range", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: Some(1000.0) },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC? 1.00000000000E+03,DEF".into(), Ok("+1.25000000E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1.25, unit: Unit::Volt, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|VoltageDc-non-nominal-range", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: Some(0.025) },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC? 2.50000000000E-02,DEF".into(), Ok("+1.25000000E-03".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.00125, unit: Unit::Volt, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|VoltageDc-overload", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC? DEF,DEF".into(), Ok("+9.90000000E+37".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.0, unit: Unit::Volt, status: MeasurementStatus::Overload })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|VoltageDc-range-zero", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: Some(0.0) },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34401a|E|VoltageDc-range-negative", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: Some(-1.0) },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34401a|E|VoltageDc-range-above-max", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: Some(1000.0009999999999) },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34401a|E|VoltageAc-auto", calls: vec![
+CatalogRequest::DmmMeasureVoltageAc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:AC? DEF,DEF".into(), Ok("+1.25000000E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1.25, unit: Unit::Volt, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|VoltageAc-maximum-range", calls: vec![
+CatalogRequest::DmmMeasureVoltageAc { range: Some(750.0) },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:AC? 7.50000000000E+02,DEF".into(), Ok("+1.25000000E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1.25, unit: Unit::Volt, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|VoltageAc-non-nominal-range", calls: vec![
+CatalogRequest::DmmMeasureVoltageAc { range: Some(0.025) },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:AC? 2.50000000000E-02,DEF".into(), Ok("+1.25000000E-03".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.00125, unit: Unit::Volt, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|VoltageAc-overload", calls: vec![
+CatalogRequest::DmmMeasureVoltageAc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:AC? DEF,DEF".into(), Ok("+9.90000000E+37".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.0, unit: Unit::Volt, status: MeasurementStatus::Overload })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|VoltageAc-range-zero", calls: vec![
+CatalogRequest::DmmMeasureVoltageAc { range: Some(0.0) },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34401a|E|VoltageAc-range-negative", calls: vec![
+CatalogRequest::DmmMeasureVoltageAc { range: Some(-1.0) },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34401a|E|VoltageAc-range-above-max", calls: vec![
+CatalogRequest::DmmMeasureVoltageAc { range: Some(750.0007499999999) },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34401a|E|CurrentDc-auto", calls: vec![
+CatalogRequest::DmmMeasureCurrentDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:CURR:DC? DEF,DEF".into(), Ok("+1.25000000E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1.25, unit: Unit::Ampere, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|CurrentDc-maximum-range", calls: vec![
+CatalogRequest::DmmMeasureCurrentDc { range: Some(3.0) },
+], script: vec![
+ScriptStep::Query(":MEAS:CURR:DC? 3.00000000000E+00,DEF".into(), Ok("+1.25000000E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1.25, unit: Unit::Ampere, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|CurrentDc-non-nominal-range", calls: vec![
+CatalogRequest::DmmMeasureCurrentDc { range: Some(0.025) },
+], script: vec![
+ScriptStep::Query(":MEAS:CURR:DC? 2.50000000000E-02,DEF".into(), Ok("+1.25000000E-03".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.00125, unit: Unit::Ampere, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|CurrentDc-overload", calls: vec![
+CatalogRequest::DmmMeasureCurrentDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:CURR:DC? DEF,DEF".into(), Ok("+9.90000000E+37".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.0, unit: Unit::Ampere, status: MeasurementStatus::Overload })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|CurrentDc-range-zero", calls: vec![
+CatalogRequest::DmmMeasureCurrentDc { range: Some(0.0) },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34401a|E|CurrentDc-range-negative", calls: vec![
+CatalogRequest::DmmMeasureCurrentDc { range: Some(-1.0) },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34401a|E|CurrentDc-range-above-max", calls: vec![
+CatalogRequest::DmmMeasureCurrentDc { range: Some(3.0000029999999995) },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34401a|E|CurrentAc-auto", calls: vec![
+CatalogRequest::DmmMeasureCurrentAc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:CURR:AC? DEF,DEF".into(), Ok("+1.25000000E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1.25, unit: Unit::Ampere, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|CurrentAc-maximum-range", calls: vec![
+CatalogRequest::DmmMeasureCurrentAc { range: Some(3.0) },
+], script: vec![
+ScriptStep::Query(":MEAS:CURR:AC? 3.00000000000E+00,DEF".into(), Ok("+1.25000000E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1.25, unit: Unit::Ampere, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|CurrentAc-non-nominal-range", calls: vec![
+CatalogRequest::DmmMeasureCurrentAc { range: Some(0.025) },
+], script: vec![
+ScriptStep::Query(":MEAS:CURR:AC? 2.50000000000E-02,DEF".into(), Ok("+1.25000000E-03".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.00125, unit: Unit::Ampere, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|CurrentAc-overload", calls: vec![
+CatalogRequest::DmmMeasureCurrentAc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:CURR:AC? DEF,DEF".into(), Ok("+9.90000000E+37".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.0, unit: Unit::Ampere, status: MeasurementStatus::Overload })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|CurrentAc-range-zero", calls: vec![
+CatalogRequest::DmmMeasureCurrentAc { range: Some(0.0) },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34401a|E|CurrentAc-range-negative", calls: vec![
+CatalogRequest::DmmMeasureCurrentAc { range: Some(-1.0) },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34401a|E|CurrentAc-range-above-max", calls: vec![
+CatalogRequest::DmmMeasureCurrentAc { range: Some(3.0000029999999995) },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34401a|E|Resistance-auto", calls: vec![
+CatalogRequest::DmmMeasureResistance { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:RES? DEF,DEF".into(), Ok("+1.25000000E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1.25, unit: Unit::Ohm, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|Resistance-maximum-range", calls: vec![
+CatalogRequest::DmmMeasureResistance { range: Some(100000000.0) },
+], script: vec![
+ScriptStep::Query(":MEAS:RES? 1.00000000000E+08,DEF".into(), Ok("+1.25000000E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1.25, unit: Unit::Ohm, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|Resistance-non-nominal-range", calls: vec![
+CatalogRequest::DmmMeasureResistance { range: Some(0.025) },
+], script: vec![
+ScriptStep::Query(":MEAS:RES? 2.50000000000E-02,DEF".into(), Ok("+1.25000000E-03".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.00125, unit: Unit::Ohm, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|Resistance-overload", calls: vec![
+CatalogRequest::DmmMeasureResistance { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:RES? DEF,DEF".into(), Ok("+9.90000000E+37".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.0, unit: Unit::Ohm, status: MeasurementStatus::Overload })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|Resistance-range-zero", calls: vec![
+CatalogRequest::DmmMeasureResistance { range: Some(0.0) },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34401a|E|Resistance-range-negative", calls: vec![
+CatalogRequest::DmmMeasureResistance { range: Some(-1.0) },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34401a|E|Resistance-range-above-max", calls: vec![
+CatalogRequest::DmmMeasureResistance { range: Some(100000099.99999999) },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34401a|E|Resistance2Wire-auto", calls: vec![
+CatalogRequest::DmmMeasureResistance2Wire { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:RES? DEF,DEF".into(), Ok("+1.25000000E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1.25, unit: Unit::Ohm, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|Resistance2Wire-maximum-range", calls: vec![
+CatalogRequest::DmmMeasureResistance2Wire { range: Some(100000000.0) },
+], script: vec![
+ScriptStep::Query(":MEAS:RES? 1.00000000000E+08,DEF".into(), Ok("+1.25000000E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1.25, unit: Unit::Ohm, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|Resistance2Wire-non-nominal-range", calls: vec![
+CatalogRequest::DmmMeasureResistance2Wire { range: Some(0.025) },
+], script: vec![
+ScriptStep::Query(":MEAS:RES? 2.50000000000E-02,DEF".into(), Ok("+1.25000000E-03".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.00125, unit: Unit::Ohm, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|Resistance2Wire-overload", calls: vec![
+CatalogRequest::DmmMeasureResistance2Wire { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:RES? DEF,DEF".into(), Ok("+9.90000000E+37".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.0, unit: Unit::Ohm, status: MeasurementStatus::Overload })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|Resistance2Wire-range-zero", calls: vec![
+CatalogRequest::DmmMeasureResistance2Wire { range: Some(0.0) },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34401a|E|Resistance2Wire-range-negative", calls: vec![
+CatalogRequest::DmmMeasureResistance2Wire { range: Some(-1.0) },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34401a|E|Resistance2Wire-range-above-max", calls: vec![
+CatalogRequest::DmmMeasureResistance2Wire { range: Some(100000099.99999999) },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34401a|E|Resistance4Wire-auto", calls: vec![
+CatalogRequest::DmmMeasureResistance4Wire { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:FRES? DEF,DEF".into(), Ok("+1.25000000E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1.25, unit: Unit::Ohm, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|Resistance4Wire-maximum-range", calls: vec![
+CatalogRequest::DmmMeasureResistance4Wire { range: Some(100000000.0) },
+], script: vec![
+ScriptStep::Query(":MEAS:FRES? 1.00000000000E+08,DEF".into(), Ok("+1.25000000E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1.25, unit: Unit::Ohm, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|Resistance4Wire-non-nominal-range", calls: vec![
+CatalogRequest::DmmMeasureResistance4Wire { range: Some(0.025) },
+], script: vec![
+ScriptStep::Query(":MEAS:FRES? 2.50000000000E-02,DEF".into(), Ok("+1.25000000E-03".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.00125, unit: Unit::Ohm, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|Resistance4Wire-overload", calls: vec![
+CatalogRequest::DmmMeasureResistance4Wire { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:FRES? DEF,DEF".into(), Ok("+9.90000000E+37".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.0, unit: Unit::Ohm, status: MeasurementStatus::Overload })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|Resistance4Wire-range-zero", calls: vec![
+CatalogRequest::DmmMeasureResistance4Wire { range: Some(0.0) },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34401a|E|Resistance4Wire-range-negative", calls: vec![
+CatalogRequest::DmmMeasureResistance4Wire { range: Some(-1.0) },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34401a|E|Resistance4Wire-range-above-max", calls: vec![
+CatalogRequest::DmmMeasureResistance4Wire { range: Some(100000099.99999999) },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34401a|E|negative", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC? DEF,DEF".into(), Ok("-1.25000000E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: -1.25, unit: Unit::Volt, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|zero", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC? DEF,DEF".into(), Ok("+0.00000000E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.0, unit: Unit::Volt, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|negative-zero", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC? DEF,DEF".into(), Ok("-0.00000000E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.0, unit: Unit::Volt, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|exponent", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC? DEF,DEF".into(), Ok("+1.25000000E-09".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1.25e-09, unit: Unit::Volt, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.34401a|E|reject-short", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC? DEF,DEF".into(), Ok("1.25".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34401a|E|reject-unsigned", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC? DEF,DEF".into(), Ok("1.25000000E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34401a|E|reject-small-exponent", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC? DEF,DEF".into(), Ok("+1.25000000E+0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34401a|E|reject-lower-e", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC? DEF,DEF".into(), Ok("+1.25000000e+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34401a|E|reject-wrong-decimal", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC? DEF,DEF".into(), Ok("+12.5000000E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34401a|E|reject-leading-space", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC? DEF,DEF".into(), Ok(" +1.25000000E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34401a|E|reject-trailing-space", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC? DEF,DEF".into(), Ok("+1.25000000E+00 ".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34401a|E|reject-csv", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC? DEF,DEF".into(), Ok("+1.25000000E+00,+2.50000000E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34401a|E|reject-negative-sentinel", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC? DEF,DEF".into(), Ok("-9.90000000E+37".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34401a|E|reject-giant", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC? DEF,DEF".into(), Ok("+1.00000000E+30".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34401a|E|reject-nan", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC? DEF,DEF".into(), Ok("NaN".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34401a|E|reject-infinity", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC? DEF,DEF".into(), Ok("Infinity".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34401a|E|reject-binary", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC? DEF,DEF".into(), Ok("#215+1.25000000E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34401a|E|reject-control", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC? DEF,DEF".into(), Ok("+1.25000000E+00\n".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34401a|E|transport", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC? DEF,DEF".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34401a|E|timeout", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC? DEF,DEF".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.33120a|E|frequency-0.0001", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 0.0001 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Ok("0".into())),
+ScriptStep::Write(":FREQ 1.00000000000E-04".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.33120a|E|frequency-1000", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Ok("0".into())),
+ScriptStep::Write(":FREQ 1.00000000000E+03".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.33120a|E|frequency-15000000", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 15000000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Ok("0".into())),
+ScriptStep::Write(":FREQ 1.50000000000E+07".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.33120a|E|amplitude-0.05", calls: vec![
+CatalogRequest::FunctionGeneratorSetAmplitude { vpp: 0.05 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":VOLT:OFFS?".into(), Ok("+0.000000E+00".into())),
+ScriptStep::Write(":VOLT 5.00000000000E-02".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.33120a|E|amplitude-2", calls: vec![
+CatalogRequest::FunctionGeneratorSetAmplitude { vpp: 2.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":VOLT:OFFS?".into(), Ok("+4.000000E+00".into())),
+ScriptStep::Write(":VOLT 2.00000000000E+00".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.33120a|E|amplitude-10", calls: vec![
+CatalogRequest::FunctionGeneratorSetAmplitude { vpp: 10.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":VOLT:OFFS?".into(), Ok("+0.000000E+00".into())),
+ScriptStep::Write(":VOLT 1.00000000000E+01".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.33120a|E|offset--4", calls: vec![
+CatalogRequest::FunctionGeneratorSetOffset { volts: -4.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":VOLT?".into(), Ok("+2.000000E+00".into())),
+ScriptStep::Write(":VOLT:OFFS -4.00000000000E+00".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.33120a|E|offset-0", calls: vec![
+CatalogRequest::FunctionGeneratorSetOffset { volts: 0.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":VOLT?".into(), Ok("+1.000000E+00".into())),
+ScriptStep::Write(":VOLT:OFFS 0.00000000000E+00".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.33120a|E|offset-4", calls: vec![
+CatalogRequest::FunctionGeneratorSetOffset { volts: 4.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":VOLT?".into(), Ok("+2.000000E+00".into())),
+ScriptStep::Write(":VOLT:OFFS 4.00000000000E+00".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.33120a|E|read-frequency", calls: vec![
+CatalogRequest::FunctionGeneratorReadFrequency,
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FREQ?".into(), Ok("+1.000000000000E+03".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1000.0, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.33120a|E|FunctionGeneratorSetFrequency-invalid-0", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 0.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.33120a|E|FunctionGeneratorSetFrequency-invalid-1", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: -1.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.33120a|E|FunctionGeneratorSetFrequency-invalid-2", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 9.99e-05 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.33120a|E|FunctionGeneratorSetFrequency-invalid-3", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 15000001.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.33120a|E|FunctionGeneratorSetAmplitude-invalid-0", calls: vec![
+CatalogRequest::FunctionGeneratorSetAmplitude { vpp: 0.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.33120a|E|FunctionGeneratorSetAmplitude-invalid-1", calls: vec![
+CatalogRequest::FunctionGeneratorSetAmplitude { vpp: -1.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.33120a|E|FunctionGeneratorSetAmplitude-invalid-2", calls: vec![
+CatalogRequest::FunctionGeneratorSetAmplitude { vpp: 0.049999 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.33120a|E|FunctionGeneratorSetAmplitude-invalid-3", calls: vec![
+CatalogRequest::FunctionGeneratorSetAmplitude { vpp: 10.001 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.33120a|E|FunctionGeneratorSetOffset-invalid-0", calls: vec![
+CatalogRequest::FunctionGeneratorSetOffset { volts: -4.000001 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.33120a|E|FunctionGeneratorSetOffset-invalid-1", calls: vec![
+CatalogRequest::FunctionGeneratorSetOffset { volts: 4.000001 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.33120a|E|guard-0-SQU", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SQU".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.33120a|E|guard-0-PULS", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("PULS".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.33120a|E|guard-1-+1.000000E+06", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+1.000000E+06".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.33120a|E|guard-1-0", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.33120a|E|guard-2-VRMS", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VRMS".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.33120a|E|guard-2-VOLTS", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VOLTS".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.33120a|E|guard-3-1", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.33120a|E|guard-4-1", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.33120a|E|guard-5-1", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.33120a|E|guard-6-1", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.33120a|E|guard-7-1", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Ok("1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.33120a|E|guard-3-ON", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("ON".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.33120a|E|guard-4-ON", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("ON".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.33120a|E|guard-5-ON", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("ON".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.33120a|E|guard-6-ON", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("ON".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.33120a|E|guard-7-ON", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Ok("ON".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.33120a|E|coupled-amplitude-rail", calls: vec![
+CatalogRequest::FunctionGeneratorSetAmplitude { vpp: 3.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":VOLT:OFFS?".into(), Ok("+3.750000E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.33120a|E|coupled-offset-small-amplitude", calls: vec![
+CatalogRequest::FunctionGeneratorSetOffset { volts: 1.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":VOLT?".into(), Ok("+1.000000E-01".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.33120a|E|coupled-rounded-wire-rail", calls: vec![
+CatalogRequest::FunctionGeneratorSetAmplitude { vpp: 2.9999999999996 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":VOLT:OFFS?".into(), Ok("3.5000000000001".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.33120a|E|read-reject-negative", calls: vec![
+CatalogRequest::FunctionGeneratorReadFrequency,
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FREQ?".into(), Ok("-1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.33120a|E|read-reject-zero", calls: vec![
+CatalogRequest::FunctionGeneratorReadFrequency,
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FREQ?".into(), Ok("0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.33120a|E|read-reject-above-max", calls: vec![
+CatalogRequest::FunctionGeneratorReadFrequency,
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FREQ?".into(), Ok("15000001".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.33120a|E|read-reject-giant", calls: vec![
+CatalogRequest::FunctionGeneratorReadFrequency,
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FREQ?".into(), Ok("1E30".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.33120a|E|read-reject-csv", calls: vec![
+CatalogRequest::FunctionGeneratorReadFrequency,
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FREQ?".into(), Ok("1,2".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.33120a|E|read-reject-leading-space", calls: vec![
+CatalogRequest::FunctionGeneratorReadFrequency,
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FREQ?".into(), Ok(" 1E3".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.33120a|E|read-reject-trailing-space", calls: vec![
+CatalogRequest::FunctionGeneratorReadFrequency,
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FREQ?".into(), Ok("1E3 ".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.33120a|E|read-reject-nan", calls: vec![
+CatalogRequest::FunctionGeneratorReadFrequency,
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FREQ?".into(), Ok("NaN".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.33120a|E|read-reject-missing-fraction", calls: vec![
+CatalogRequest::FunctionGeneratorReadFrequency,
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FREQ?".into(), Ok("1.E3".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.33120a|E|failure-step-0-Transport", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.33120a|E|failure-step-0-Timeout", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.33120a|E|failure-step-1-Transport", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.33120a|E|failure-step-1-Timeout", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.33120a|E|failure-step-2-Transport", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.33120a|E|failure-step-2-Timeout", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.33120a|E|failure-step-3-Transport", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.33120a|E|failure-step-3-Timeout", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.33120a|E|failure-step-4-Transport", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.33120a|E|failure-step-4-Timeout", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.33120a|E|failure-step-5-Transport", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.33120a|E|failure-step-5-Timeout", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.33120a|E|failure-step-6-Transport", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.33120a|E|failure-step-6-Timeout", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.33120a|E|failure-step-7-Transport", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.33120a|E|failure-step-7-Timeout", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.33120a|E|failure-step-8-Transport", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Ok("0".into())),
+ScriptStep::WriteFailure(":FREQ 1.00000000000E+03".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.33120a|E|failure-step-8-Timeout", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+5.000000E+01".into())),
+ScriptStep::Query(":VOLT:UNIT?".into(), Ok("VPP".into())),
+ScriptStep::Query(":AM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":BM:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":FSK:STAT?".into(), Ok("0".into())),
+ScriptStep::Query(":SWE:STAT?".into(), Ok("0".into())),
+ScriptStep::WriteFailure(":FREQ 1.00000000000E+03".into(), instrument_api::DriverError::new(ErrorKind::Timeout, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.33120a|E|guard-load-high-impedance-sentinel", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 1000.0 },
+], script: vec![
+ScriptStep::Query(":FUNC:SHAP?".into(), Ok("SIN".into())),
+ScriptStep::Query(":OUTP:LOAD?".into(), Ok("+9.900000E+37".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.53132a|E|Frequency-channel-1", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("+1.2500000000000E+06".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1250000.0, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.53132a|E|Period-channel-1", calls: vec![
+CatalogRequest::CounterMeasurePeriod,
+], script: vec![
+ScriptStep::Write(":CONF:PER DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("+8.0000000000000E-07".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 8e-07, unit: Unit::Second, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.53132a|E|Frequency-channel-2", calls: vec![
+CatalogRequest::CounterSelectChannel { channel: 2 },
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@2)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("+1.2500000000000E+06".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1250000.0, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.53132a|E|Period-channel-2", calls: vec![
+CatalogRequest::CounterSelectChannel { channel: 2 },
+CatalogRequest::CounterMeasurePeriod,
+], script: vec![
+ScriptStep::Write(":CONF:PER DEF,DEF,(@2)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("+8.0000000000000E-07".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 8e-07, unit: Unit::Second, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.53132a|E|gate-0.001", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 0.001 },
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.001".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("+1.2500000000000E+06".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1250000.0, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.53132a|E|gate-0.029", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 0.029 },
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.029".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("+1.2500000000000E+06".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1250000.0, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.53132a|E|gate-0.100", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 0.1 },
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("+1.2500000000000E+06".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1250000.0, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.53132a|E|gate-1000.000", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 1000.0 },
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 1000.000".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("+1.2500000000000E+06".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1250000.0, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.53132a|E|switch-intent-and-repeat", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 0.01 },
+CatalogRequest::CounterSelectChannel { channel: 2 },
+CatalogRequest::CounterMeasureFrequency,
+CatalogRequest::CounterSelectChannel { channel: 1 },
+CatalogRequest::CounterMeasurePeriod,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@2)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.010".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("+1.2500000000000E+06".into())),
+ScriptStep::Write(":CONF:PER DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.010".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("+8.0000000000000E-07".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 8e-07, unit: Unit::Second, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.53132a|E|invalid-gate-zero", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 0.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.53132a|E|invalid-gate-negative", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: -1.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.53132a|E|invalid-gate-too-small", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 0.000999 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.53132a|E|invalid-gate-off-grid", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 0.0010000000000000002 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.53132a|E|invalid-gate-too-large", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 1000.001 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.53132a|E|invalid-channel-0", calls: vec![
+CatalogRequest::CounterSelectChannel { channel: 0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.53132a|E|invalid-channel-3", calls: vec![
+CatalogRequest::CounterSelectChannel { channel: 3 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.53132a|E|invalid-channel-4294967295", calls: vec![
+CatalogRequest::CounterSelectChannel { channel: 4294967295 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.53132a|E|parse-one-digit", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("1E0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1.0, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.53132a|E|parse-unsigned", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("1.25E+3".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1250.0, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.53132a|E|parse-lower-e", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("1.25e3".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1250.0, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.53132a|E|parse-max-significant", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("1.23456789012345E+0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1.23456789012345, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.53132a|E|parse-leading-zeros", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("0001.25E+0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1.25, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.53132a|E|reject-nan-sentinel", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("+9.91E+37".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.53132a|E|reject-zero", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("0E0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.53132a|E|reject-negative", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("-1.25E3".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.53132a|E|reject-underflow", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("1E-999".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.53132a|E|reject-no-exponent", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("1.25".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.53132a|E|reject-sixteen-significant", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("1.234567890123456E+0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.53132a|E|reject-leading-space", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok(" 1E0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.53132a|E|reject-trailing-space", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("1E0 ".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.53132a|E|reject-no-frac", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("1.E0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.53132a|E|reject-no-leading", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok(".1E0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.53132a|E|reject-unit", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("1E0HZ".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.53132a|E|reject-csv", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("1E0,2E0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.53132a|E|reject-nan", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("NaN".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.53132a|E|reject-infinity", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("Inf".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.53132a|E|reject-overflow", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("1E999".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.53132a|E|reject-binary", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Ok("#131E0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.53132a|E|failure-step-0-Transport", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::WriteFailure(":CONF:FREQ DEF,DEF,(@1)".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.53132a|E|failure-step-0-Timeout", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::WriteFailure(":CONF:FREQ DEF,DEF,(@1)".into(), instrument_api::DriverError::new(ErrorKind::Timeout, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.53132a|E|failure-step-1-Transport", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::WriteFailure(":SENS:FREQ:ARM:STAR:SOUR IMM".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.53132a|E|failure-step-1-Timeout", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::WriteFailure(":SENS:FREQ:ARM:STAR:SOUR IMM".into(), instrument_api::DriverError::new(ErrorKind::Timeout, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.53132a|E|failure-step-2-Transport", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::WriteFailure(":SENS:FREQ:ARM:STOP:SOUR TIM".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.53132a|E|failure-step-2-Timeout", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::WriteFailure(":SENS:FREQ:ARM:STOP:SOUR TIM".into(), instrument_api::DriverError::new(ErrorKind::Timeout, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.53132a|E|failure-step-3-Transport", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::WriteFailure(":SENS:FREQ:ARM:STOP:TIM 0.100".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.53132a|E|failure-step-3-Timeout", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::WriteFailure(":SENS:FREQ:ARM:STOP:TIM 0.100".into(), instrument_api::DriverError::new(ErrorKind::Timeout, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.53132a|E|failure-step-4-Transport", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::WriteFailure(":FORM ASC".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.53132a|E|failure-step-4-Timeout", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::WriteFailure(":FORM ASC".into(), instrument_api::DriverError::new(ErrorKind::Timeout, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.53132a|E|failure-step-5-Transport", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.53132a|E|failure-step-5-Timeout", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Write(":CONF:FREQ DEF,DEF,(@1)".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STAR:SOUR IMM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:SOUR TIM".into()),
+ScriptStep::Write(":SENS:FREQ:ARM:STOP:TIM 0.100".into()),
+ScriptStep::Write(":FORM ASC".into()),
+ScriptStep::Query(":READ?".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34980a-invalid-SwitchCloseChannel-0", calls: vec![
+CatalogRequest::SwitchCloseChannel { channel: 0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34980a|E|34980a-invalid-SwitchCloseChannel-999", calls: vec![
+CatalogRequest::SwitchCloseChannel { channel: 999 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34980a|E|34980a-invalid-SwitchOpenChannel-0", calls: vec![
+CatalogRequest::SwitchOpenChannel { channel: 0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34980a|E|34980a-invalid-SwitchOpenChannel-999", calls: vec![
+CatalogRequest::SwitchOpenChannel { channel: 999 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34980a|E|34980a-invalid-SwitchChannelIsClosed-0", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34980a|E|34980a-invalid-SwitchChannelIsClosed-999", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 999 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34980a|E|34980a-shared-module-views", calls: vec![
+CatalogRequest::SwitchCloseChannel { channel: 7 },
+CatalogRequest::DigitalIoReadByte { port: 29 },
+CatalogRequest::SwitchChannelIsClosed { channel: 101 },
+], script: vec![
+ScriptStep::Write(":ROUT:CLOS (@1001)".into()),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3201)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3202)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3203)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3204)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3201)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3201)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3201)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3201)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3201)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3201)".into(), Ok("+2.50000000E+00".into())),
+ScriptStep::Query(":SENS:DIG:DATA:BYTE? DEC,(@3201)".into(), Ok("0".into())),
+ScriptStep::Query(":ROUT:CLOS? (@2001)".into(), Ok("0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Boolean(false)), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34937a-SwitchCloseChannel-7", calls: vec![
+CatalogRequest::SwitchCloseChannel { channel: 7 },
+], script: vec![
+ScriptStep::Write(":ROUT:CLOS (@1001)".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34937a-SwitchOpenChannel-7", calls: vec![
+CatalogRequest::SwitchOpenChannel { channel: 7 },
+], script: vec![
+ScriptStep::Write(":ROUT:OPEN (@1001)".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34937a-state-7-False", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 7 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@1001)".into(), Ok("0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Boolean(false)), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34937a-state-7-True", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 7 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@1001)".into(), Ok("1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Boolean(true)), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34937a-SwitchCloseChannel-13", calls: vec![
+CatalogRequest::SwitchCloseChannel { channel: 13 },
+], script: vec![
+ScriptStep::Write(":ROUT:CLOS (@1028)".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34937a-SwitchOpenChannel-13", calls: vec![
+CatalogRequest::SwitchOpenChannel { channel: 13 },
+], script: vec![
+ScriptStep::Write(":ROUT:OPEN (@1028)".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34937a-state-13-False", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 13 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@1028)".into(), Ok("0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Boolean(false)), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34937a-state-13-True", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 13 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@1028)".into(), Ok("1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Boolean(true)), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34937a-SwitchCloseChannel-29", calls: vec![
+CatalogRequest::SwitchCloseChannel { channel: 29 },
+], script: vec![
+ScriptStep::Write(":ROUT:CLOS (@1029)".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34937a-SwitchOpenChannel-29", calls: vec![
+CatalogRequest::SwitchOpenChannel { channel: 29 },
+], script: vec![
+ScriptStep::Write(":ROUT:OPEN (@1029)".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34937a-state-29-False", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 29 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@1029)".into(), Ok("0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Boolean(false)), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34937a-state-29-True", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 29 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@1029)".into(), Ok("1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Boolean(true)), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34937a-SwitchCloseChannel-61", calls: vec![
+CatalogRequest::SwitchCloseChannel { channel: 61 },
+], script: vec![
+ScriptStep::Write(":ROUT:CLOS (@1032)".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34937a-SwitchOpenChannel-61", calls: vec![
+CatalogRequest::SwitchOpenChannel { channel: 61 },
+], script: vec![
+ScriptStep::Write(":ROUT:OPEN (@1032)".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34937a-state-61-False", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 61 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@1032)".into(), Ok("0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Boolean(false)), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34937a-state-61-True", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 61 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@1032)".into(), Ok("1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Boolean(true)), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34937a-state-malformed-0", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 7 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@1001)".into(), Ok("ON".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34937a-state-malformed-1", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 7 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@1001)".into(), Ok("+1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34937a-state-malformed-2", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 7 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@1001)".into(), Ok("1.0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34937a-state-malformed-3", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 7 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@1001)".into(), Ok("1,0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34937a-state-malformed-4", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 7 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@1001)".into(), Ok(" 1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34937a-state-malformed-5", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 7 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@1001)".into(), Ok("1 ".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34937a-state-malformed-6", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 7 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@1001)".into(), Ok("".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34937a-state-malformed-7", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 7 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@1001)".into(), Ok("2".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34937a-state-malformed-8", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 7 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@1001)".into(), Ok("#11".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34937a-state-malformed-9", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 7 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@1001)".into(), Ok("１".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34937a-SwitchCloseChannel-Transport", calls: vec![
+CatalogRequest::SwitchCloseChannel { channel: 7 },
+], script: vec![
+ScriptStep::WriteFailure(":ROUT:CLOS (@1001)".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34937a-SwitchCloseChannel-Timeout", calls: vec![
+CatalogRequest::SwitchCloseChannel { channel: 7 },
+], script: vec![
+ScriptStep::WriteFailure(":ROUT:CLOS (@1001)".into(), instrument_api::DriverError::new(ErrorKind::Timeout, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34937a-SwitchOpenChannel-Transport", calls: vec![
+CatalogRequest::SwitchOpenChannel { channel: 7 },
+], script: vec![
+ScriptStep::WriteFailure(":ROUT:OPEN (@1001)".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34937a-SwitchOpenChannel-Timeout", calls: vec![
+CatalogRequest::SwitchOpenChannel { channel: 7 },
+], script: vec![
+ScriptStep::WriteFailure(":ROUT:OPEN (@1001)".into(), instrument_api::DriverError::new(ErrorKind::Timeout, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34937a-SwitchChannelIsClosed-Transport", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 7 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@1001)".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34937a-SwitchChannelIsClosed-Timeout", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 7 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@1001)".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34922a-SwitchCloseChannel-101", calls: vec![
+CatalogRequest::SwitchCloseChannel { channel: 101 },
+], script: vec![
+ScriptStep::Write(":ROUT:CLOS (@2001)".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34922a-SwitchOpenChannel-101", calls: vec![
+CatalogRequest::SwitchOpenChannel { channel: 101 },
+], script: vec![
+ScriptStep::Write(":ROUT:OPEN (@2001)".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34922a-state-101-False", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 101 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@2001)".into(), Ok("0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Boolean(false)), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34922a-state-101-True", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 101 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@2001)".into(), Ok("1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Boolean(true)), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34922a-SwitchCloseChannel-135", calls: vec![
+CatalogRequest::SwitchCloseChannel { channel: 135 },
+], script: vec![
+ScriptStep::Write(":ROUT:CLOS (@2035)".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34922a-SwitchOpenChannel-135", calls: vec![
+CatalogRequest::SwitchOpenChannel { channel: 135 },
+], script: vec![
+ScriptStep::Write(":ROUT:OPEN (@2035)".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34922a-state-135-False", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 135 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@2035)".into(), Ok("0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Boolean(false)), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34922a-state-135-True", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 135 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@2035)".into(), Ok("1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Boolean(true)), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34922a-SwitchCloseChannel-136", calls: vec![
+CatalogRequest::SwitchCloseChannel { channel: 136 },
+], script: vec![
+ScriptStep::Write(":ROUT:CLOS (@2036)".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34922a-SwitchOpenChannel-136", calls: vec![
+CatalogRequest::SwitchOpenChannel { channel: 136 },
+], script: vec![
+ScriptStep::Write(":ROUT:OPEN (@2036)".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34922a-state-136-False", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 136 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@2036)".into(), Ok("0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Boolean(false)), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34922a-state-136-True", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 136 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@2036)".into(), Ok("1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Boolean(true)), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34922a-SwitchCloseChannel-170", calls: vec![
+CatalogRequest::SwitchCloseChannel { channel: 170 },
+], script: vec![
+ScriptStep::Write(":ROUT:CLOS (@2070)".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34922a-SwitchOpenChannel-170", calls: vec![
+CatalogRequest::SwitchOpenChannel { channel: 170 },
+], script: vec![
+ScriptStep::Write(":ROUT:OPEN (@2070)".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34922a-state-170-False", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 170 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@2070)".into(), Ok("0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Boolean(false)), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34922a-state-170-True", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 170 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@2070)".into(), Ok("1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Boolean(true)), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34922a-state-malformed-0", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 101 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@2001)".into(), Ok("ON".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34922a-state-malformed-1", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 101 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@2001)".into(), Ok("+1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34922a-state-malformed-2", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 101 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@2001)".into(), Ok("1.0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34922a-state-malformed-3", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 101 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@2001)".into(), Ok("1,0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34922a-state-malformed-4", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 101 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@2001)".into(), Ok(" 1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34922a-state-malformed-5", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 101 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@2001)".into(), Ok("1 ".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34922a-state-malformed-6", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 101 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@2001)".into(), Ok("".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34922a-state-malformed-7", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 101 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@2001)".into(), Ok("2".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34922a-state-malformed-8", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 101 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@2001)".into(), Ok("#11".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34922a-state-malformed-9", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 101 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@2001)".into(), Ok("１".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34922a-SwitchCloseChannel-Transport", calls: vec![
+CatalogRequest::SwitchCloseChannel { channel: 101 },
+], script: vec![
+ScriptStep::WriteFailure(":ROUT:CLOS (@2001)".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34922a-SwitchCloseChannel-Timeout", calls: vec![
+CatalogRequest::SwitchCloseChannel { channel: 101 },
+], script: vec![
+ScriptStep::WriteFailure(":ROUT:CLOS (@2001)".into(), instrument_api::DriverError::new(ErrorKind::Timeout, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34922a-SwitchOpenChannel-Transport", calls: vec![
+CatalogRequest::SwitchOpenChannel { channel: 101 },
+], script: vec![
+ScriptStep::WriteFailure(":ROUT:OPEN (@2001)".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34922a-SwitchOpenChannel-Timeout", calls: vec![
+CatalogRequest::SwitchOpenChannel { channel: 101 },
+], script: vec![
+ScriptStep::WriteFailure(":ROUT:OPEN (@2001)".into(), instrument_api::DriverError::new(ErrorKind::Timeout, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34922a-SwitchChannelIsClosed-Transport", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 101 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@2001)".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34922a-SwitchChannelIsClosed-Timeout", calls: vec![
+CatalogRequest::SwitchChannelIsClosed { channel: 101 },
+], script: vec![
+ScriptStep::Query(":ROUT:CLOS? (@2001)".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34922a-same-bank-nonexclusive", calls: vec![
+CatalogRequest::SwitchCloseChannel { channel: 101 },
+CatalogRequest::SwitchCloseChannel { channel: 135 },
+CatalogRequest::SwitchChannelIsClosed { channel: 101 },
+], script: vec![
+ScriptStep::Write(":ROUT:CLOS (@2001)".into()),
+ScriptStep::Write(":ROUT:CLOS (@2035)".into()),
+ScriptStep::Query(":ROUT:CLOS? (@2001)".into(), Ok("1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Boolean(true)), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34950a-read-7-0", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3101)".into(), Ok("+2.50000000E+00".into())),
+ScriptStep::Query(":SENS:DIG:DATA:BYTE? DEC,(@3101)".into(), Ok("0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Count(0)), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34950a-read-7-165", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3101)".into(), Ok("+2.50000000E+00".into())),
+ScriptStep::Query(":SENS:DIG:DATA:BYTE? DEC,(@3101)".into(), Ok("165".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Count(165)), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34950a-read-7-255", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3101)".into(), Ok("+2.50000000E+00".into())),
+ScriptStep::Query(":SENS:DIG:DATA:BYTE? DEC,(@3101)".into(), Ok("255".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Count(255)), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34950a-read-7-007", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3101)".into(), Ok("+2.50000000E+00".into())),
+ScriptStep::Query(":SENS:DIG:DATA:BYTE? DEC,(@3101)".into(), Ok("007".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Count(7)), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34950a-read-29-0", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 29 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3201)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3202)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3203)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3204)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3201)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3201)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3201)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3201)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3201)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3201)".into(), Ok("+2.50000000E+00".into())),
+ScriptStep::Query(":SENS:DIG:DATA:BYTE? DEC,(@3201)".into(), Ok("0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Count(0)), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34950a-read-29-165", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 29 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3201)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3202)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3203)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3204)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3201)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3201)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3201)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3201)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3201)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3201)".into(), Ok("+2.50000000E+00".into())),
+ScriptStep::Query(":SENS:DIG:DATA:BYTE? DEC,(@3201)".into(), Ok("165".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Count(165)), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34950a-read-29-255", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 29 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3201)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3202)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3203)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3204)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3201)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3201)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3201)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3201)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3201)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3201)".into(), Ok("+2.50000000E+00".into())),
+ScriptStep::Query(":SENS:DIG:DATA:BYTE? DEC,(@3201)".into(), Ok("255".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Count(255)), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34950a-read-29-007", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 29 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3201)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3202)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3203)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3204)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3201)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3201)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3201)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3201)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3201)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3201)".into(), Ok("+2.50000000E+00".into())),
+ScriptStep::Query(":SENS:DIG:DATA:BYTE? DEC,(@3201)".into(), Ok("007".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Count(7)), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34950a-write-13-0", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 0 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:DRIV? (@3104)".into(), Ok("ACT".into())),
+ScriptStep::Query(":SOUR:DIG:LEV? (@3104)".into(), Ok("+3.30000000E+00".into())),
+ScriptStep::Write(":SOUR:DIG:DATA:BYTE 0,(@3104)".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34950a-write-13-165", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:DRIV? (@3104)".into(), Ok("ACT".into())),
+ScriptStep::Query(":SOUR:DIG:LEV? (@3104)".into(), Ok("+3.30000000E+00".into())),
+ScriptStep::Write(":SOUR:DIG:DATA:BYTE 165,(@3104)".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34950a-write-13-255", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 255 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:DRIV? (@3104)".into(), Ok("ACT".into())),
+ScriptStep::Query(":SOUR:DIG:LEV? (@3104)".into(), Ok("+3.30000000E+00".into())),
+ScriptStep::Write(":SOUR:DIG:DATA:BYTE 255,(@3104)".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34950a-write-61-0", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 61, value: 0 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3201)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3202)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3203)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3204)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3204)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3204)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3201)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3201)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3201)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:DRIV? (@3204)".into(), Ok("ACT".into())),
+ScriptStep::Query(":SOUR:DIG:LEV? (@3204)".into(), Ok("+3.30000000E+00".into())),
+ScriptStep::Write(":SOUR:DIG:DATA:BYTE 0,(@3204)".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34950a-write-61-165", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 61, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3201)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3202)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3203)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3204)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3204)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3204)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3201)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3201)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3201)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:DRIV? (@3204)".into(), Ok("ACT".into())),
+ScriptStep::Query(":SOUR:DIG:LEV? (@3204)".into(), Ok("+3.30000000E+00".into())),
+ScriptStep::Write(":SOUR:DIG:DATA:BYTE 165,(@3204)".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34950a-write-61-255", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 61, value: 255 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3201)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3202)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3203)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3204)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3204)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3204)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3201)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3201)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3201)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:DRIV? (@3204)".into(), Ok("ACT".into())),
+ScriptStep::Query(":SOUR:DIG:LEV? (@3204)".into(), Ok("+3.30000000E+00".into())),
+ScriptStep::Write(":SOUR:DIG:DATA:BYTE 255,(@3204)".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.34980a|E|34950a-invalid-read-port-0", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34980a|E|34950a-invalid-read-port-8", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 8 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34980a|E|34950a-invalid-read-port-13", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 13 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34980a|E|34950a-invalid-read-port-61", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 61 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34980a|E|34950a-invalid-write-port-0", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 0, value: 0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34980a|E|34950a-invalid-write-port-8", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 8, value: 0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34980a|E|34950a-invalid-write-port-7", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 7, value: 0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34980a|E|34950a-invalid-write-port-29", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 29, value: 0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34980a|E|34950a-invalid-byte-256", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 256 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34980a|E|34950a-invalid-byte-4294967295", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 4294967295 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.34980a|E|34950a-invalid-byte-body-0", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3101)".into(), Ok("+2.50000000E+00".into())),
+ScriptStep::Query(":SENS:DIG:DATA:BYTE? DEC,(@3101)".into(), Ok("256".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-invalid-byte-body-1", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3101)".into(), Ok("+2.50000000E+00".into())),
+ScriptStep::Query(":SENS:DIG:DATA:BYTE? DEC,(@3101)".into(), Ok("-1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-invalid-byte-body-2", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3101)".into(), Ok("+2.50000000E+00".into())),
+ScriptStep::Query(":SENS:DIG:DATA:BYTE? DEC,(@3101)".into(), Ok("+1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-invalid-byte-body-3", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3101)".into(), Ok("+2.50000000E+00".into())),
+ScriptStep::Query(":SENS:DIG:DATA:BYTE? DEC,(@3101)".into(), Ok("1.0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-invalid-byte-body-4", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3101)".into(), Ok("+2.50000000E+00".into())),
+ScriptStep::Query(":SENS:DIG:DATA:BYTE? DEC,(@3101)".into(), Ok("1E0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-invalid-byte-body-5", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3101)".into(), Ok("+2.50000000E+00".into())),
+ScriptStep::Query(":SENS:DIG:DATA:BYTE? DEC,(@3101)".into(), Ok("0xFF".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-invalid-byte-body-6", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3101)".into(), Ok("+2.50000000E+00".into())),
+ScriptStep::Query(":SENS:DIG:DATA:BYTE? DEC,(@3101)".into(), Ok("#HFF".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-invalid-byte-body-7", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3101)".into(), Ok("+2.50000000E+00".into())),
+ScriptStep::Query(":SENS:DIG:DATA:BYTE? DEC,(@3101)".into(), Ok("1,2".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-invalid-byte-body-8", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3101)".into(), Ok("+2.50000000E+00".into())),
+ScriptStep::Query(":SENS:DIG:DATA:BYTE? DEC,(@3101)".into(), Ok(" 1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-invalid-byte-body-9", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3101)".into(), Ok("+2.50000000E+00".into())),
+ScriptStep::Query(":SENS:DIG:DATA:BYTE? DEC,(@3101)".into(), Ok("1 ".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-invalid-byte-body-10", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3101)".into(), Ok("+2.50000000E+00".into())),
+ScriptStep::Query(":SENS:DIG:DATA:BYTE? DEC,(@3101)".into(), Ok("NaN".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-invalid-byte-body-11", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3101)".into(), Ok("+2.50000000E+00".into())),
+ScriptStep::Query(":SENS:DIG:DATA:BYTE? DEC,(@3101)".into(), Ok("Inf".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-invalid-byte-body-12", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3101)".into(), Ok("+2.50000000E+00".into())),
+ScriptStep::Query(":SENS:DIG:DATA:BYTE? DEC,(@3101)".into(), Ok("".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-guard-0-0", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("2".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-guard-0-1", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("4".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-guard-0-2", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("BYTE".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-guard-1-0", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("2".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-guard-2-0", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("4".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-guard-3-0", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("2".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-guard-4-0", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("OUTP".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-guard-4-1", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INPUT".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-guard-5-0", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("INV".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-guard-5-1", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORMAL".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-guard-6-0", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("OFF".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-guard-6-1", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("ON".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-guard-6-2", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("NONE".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-guard-7-0", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-guard-7-1", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("ON".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-guard-8-0", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-guard-8-1", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("OFF".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-guard-9-0", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3101)".into(), Ok("+2.40000000E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-guard-9-1", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3101)".into(), Ok("NaN".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-failure-step-0-Transport", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-failure-step-0-Timeout", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-failure-step-1-Transport", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-failure-step-1-Timeout", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-failure-step-2-Transport", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-failure-step-2-Timeout", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-failure-step-3-Transport", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-failure-step-3-Timeout", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-failure-step-4-Transport", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-failure-step-4-Timeout", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-failure-step-5-Transport", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-failure-step-5-Timeout", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-failure-step-6-Transport", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-failure-step-6-Timeout", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-failure-step-7-Transport", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-failure-step-7-Timeout", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-failure-step-8-Transport", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-failure-step-8-Timeout", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-failure-step-9-Transport", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3101)".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-failure-step-9-Timeout", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3101)".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-failure-step-10-Transport", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3101)".into(), Ok("+2.50000000E+00".into())),
+ScriptStep::Query(":SENS:DIG:DATA:BYTE? DEC,(@3101)".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34950a-Input-failure-step-10-Timeout", calls: vec![
+CatalogRequest::DigitalIoReadByte { port: 7 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3101)".into(), Ok("INP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3101)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SENS:DIG:THR? (@3101)".into(), Ok("+2.50000000E+00".into())),
+ScriptStep::Query(":SENS:DIG:DATA:BYTE? DEC,(@3101)".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-guard-0-0", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("2".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-guard-0-1", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("4".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-guard-0-2", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("BYTE".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-guard-1-0", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("2".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-guard-2-0", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("4".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-guard-3-0", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("2".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-guard-4-0", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("INP".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-guard-4-1", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("INPUT".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-guard-5-0", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("INV".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-guard-5-1", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("NORMAL".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-guard-6-0", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("OFF".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-guard-6-1", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("ON".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-guard-6-2", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("NONE".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-guard-7-0", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-guard-7-1", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("ON".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-guard-8-0", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-guard-8-1", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("OFF".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-guard-9-0", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:DRIV? (@3104)".into(), Ok("OCOL".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-guard-9-1", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:DRIV? (@3104)".into(), Ok("ACTIVE".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-guard-10-0", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:DRIV? (@3104)".into(), Ok("ACT".into())),
+ScriptStep::Query(":SOUR:DIG:LEV? (@3104)".into(), Ok("+3.20000000E+00".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Device) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-guard-10-1", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:DRIV? (@3104)".into(), Ok("ACT".into())),
+ScriptStep::Query(":SOUR:DIG:LEV? (@3104)".into(), Ok("NaN".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-failure-step-0-Transport", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-failure-step-0-Timeout", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-failure-step-1-Transport", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-failure-step-1-Timeout", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-failure-step-2-Transport", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-failure-step-2-Timeout", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-failure-step-3-Transport", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-failure-step-3-Timeout", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-failure-step-4-Transport", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-failure-step-4-Timeout", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-failure-step-5-Transport", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-failure-step-5-Timeout", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-failure-step-6-Transport", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-failure-step-6-Timeout", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-failure-step-7-Transport", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-failure-step-7-Timeout", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-failure-step-8-Transport", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-failure-step-8-Timeout", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-failure-step-9-Transport", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:DRIV? (@3104)".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-failure-step-9-Timeout", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:DRIV? (@3104)".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-failure-step-10-Transport", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:DRIV? (@3104)".into(), Ok("ACT".into())),
+ScriptStep::Query(":SOUR:DIG:LEV? (@3104)".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-failure-step-10-Timeout", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:DRIV? (@3104)".into(), Ok("ACT".into())),
+ScriptStep::Query(":SOUR:DIG:LEV? (@3104)".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-failure-step-11-Transport", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:DRIV? (@3104)".into(), Ok("ACT".into())),
+ScriptStep::Query(":SOUR:DIG:LEV? (@3104)".into(), Ok("+3.30000000E+00".into())),
+ScriptStep::WriteFailure(":SOUR:DIG:DATA:BYTE 165,(@3104)".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.34980a|E|34950a-Output-failure-step-11-Timeout", calls: vec![
+CatalogRequest::DigitalIoWriteByte { port: 13, value: 165 },
+], script: vec![
+ScriptStep::Query(":CONF:DIG:WIDT? (@3101)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3102)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3103)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:WIDT? (@3104)".into(), Ok("1".into())),
+ScriptStep::Query(":CONF:DIG:DIR? (@3104)".into(), Ok("OUTP".into())),
+ScriptStep::Query(":CONF:DIG:POL? (@3104)".into(), Ok("NORM".into())),
+ScriptStep::Query(":CONF:DIG:HAND:STAT? (@3101)".into(), Ok("HIMP".into())),
+ScriptStep::Query(":SENS:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:MEM:ENAB? (@3101)".into(), Ok("0".into())),
+ScriptStep::Query(":SOUR:DIG:DRIV? (@3104)".into(), Ok("ACT".into())),
+ScriptStep::Query(":SOUR:DIG:LEV? (@3104)".into(), Ok("+3.30000000E+00".into())),
+ScriptStep::WriteFailure(":SOUR:DIG:DATA:BYTE 165,(@3104)".into(), instrument_api::DriverError::new(ErrorKind::Timeout, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-1", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetCenterFrequency { hz: 1.0 },
+], script: vec![
+ScriptStep::Write("CF1HZ".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-10000000", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetCenterFrequency { hz: 10000000.0 },
+], script: vec![
+ScriptStep::Write("CF10000000HZ".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-40100000", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetCenterFrequency { hz: 40100000.0 },
+], script: vec![
+ScriptStep::Write("CF40100000HZ".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetSpan-1", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetSpan { hz: 1.0 },
+], script: vec![
+ScriptStep::Write("FS1HZ".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetSpan-5000", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetSpan { hz: 5000.0 },
+], script: vec![
+ScriptStep::Write("FS5000HZ".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetSpan-40100000", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetSpan { hz: 40100000.0 },
+], script: vec![
+ScriptStep::Write("FS40100000HZ".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-3", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRbw { hz: 3.0 },
+], script: vec![
+ScriptStep::Write("RB3HZ".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-10", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRbw { hz: 10.0 },
+], script: vec![
+ScriptStep::Write("RB10HZ".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-30", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRbw { hz: 30.0 },
+], script: vec![
+ScriptStep::Write("RB30HZ".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-100", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRbw { hz: 100.0 },
+], script: vec![
+ScriptStep::Write("RB100HZ".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-300", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRbw { hz: 300.0 },
+], script: vec![
+ScriptStep::Write("RB300HZ".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-1000", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRbw { hz: 1000.0 },
+], script: vec![
+ScriptStep::Write("RB1000HZ".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-3000", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRbw { hz: 3000.0 },
+], script: vec![
+ScriptStep::Write("RB3000HZ".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-10000", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRbw { hz: 10000.0 },
+], script: vec![
+ScriptStep::Write("RB10000HZ".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-30000", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRbw { hz: 30000.0 },
+], script: vec![
+ScriptStep::Write("RB30000HZ".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-1", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetVbw { hz: 1.0 },
+], script: vec![
+ScriptStep::Write("VB1HZ".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-3", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetVbw { hz: 3.0 },
+], script: vec![
+ScriptStep::Write("VB3HZ".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-10", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetVbw { hz: 10.0 },
+], script: vec![
+ScriptStep::Write("VB10HZ".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-30", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetVbw { hz: 30.0 },
+], script: vec![
+ScriptStep::Write("VB30HZ".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-100", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetVbw { hz: 100.0 },
+], script: vec![
+ScriptStep::Write("VB100HZ".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-300", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetVbw { hz: 300.0 },
+], script: vec![
+ScriptStep::Write("VB300HZ".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-1000", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetVbw { hz: 1000.0 },
+], script: vec![
+ScriptStep::Write("VB1000HZ".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-3000", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetVbw { hz: 3000.0 },
+], script: vec![
+ScriptStep::Write("VB3000HZ".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-10000", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetVbw { hz: 10000.0 },
+], script: vec![
+ScriptStep::Write("VB10000HZ".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-30000", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetVbw { hz: 30000.0 },
+], script: vec![
+ScriptStep::Write("VB30000HZ".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|reference--70.0", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRefLevel { dbm: -70.0 },
+], script: vec![
+ScriptStep::Write("RL-70.0DM".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|reference--20.1", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRefLevel { dbm: -20.1 },
+], script: vec![
+ScriptStep::Write("RL-20.1DM".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|reference-0.0", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRefLevel { dbm: -0.0 },
+], script: vec![
+ScriptStep::Write("RL0.0DM".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|reference-40.0", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRefLevel { dbm: 40.0 },
+], script: vec![
+ScriptStep::Write("RL40.0DM".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-invalid-0", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetCenterFrequency { hz: 0.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-invalid-1", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetCenterFrequency { hz: -1.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-invalid-2", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetCenterFrequency { hz: 1.5 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-invalid-3", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetCenterFrequency { hz: 40100001.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetSpan-invalid-0", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetSpan { hz: 0.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetSpan-invalid-1", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetSpan { hz: -1.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetSpan-invalid-2", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetSpan { hz: 1.5 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetSpan-invalid-3", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetSpan { hz: 40100001.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-invalid-0", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRbw { hz: 0.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-invalid-1", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRbw { hz: 1.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-invalid-2", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRbw { hz: 2.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-invalid-3", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRbw { hz: 5.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-invalid-4", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRbw { hz: 30001.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-invalid-0", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetVbw { hz: 0.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-invalid-1", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetVbw { hz: 2.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-invalid-2", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetVbw { hz: 5.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-invalid-3", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetVbw { hz: 30001.0 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp3585b|E|reference-invalid-0", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRefLevel { dbm: -70.1 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp3585b|E|reference-invalid-1", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRefLevel { dbm: 40.1 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp3585b|E|reference-invalid-2", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRefLevel { dbm: 0.15 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp3585b|E|reference-invalid-3", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRefLevel { dbm: 0.10000000000000002 },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keysight.hp3585b|E|stored-peak", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerPeak,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Write("SP".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|marker-X-ordinary", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  1000000.0,-  20.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 1000000.0, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|marker-Y-ordinary", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  1000000.0,-  20.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: -20.0, unit: Unit::Dbm, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|marker-X-zero", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+        0.0,+   0.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.0, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|marker-Y-zero", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+        0.0,+   0.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.0, unit: Unit::Dbm, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|marker-X-upper", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+ 40100000.0,+  30.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 40100000.0, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|marker-Y-upper", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+ 40100000.0,+  30.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 30.0, unit: Unit::Dbm, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|marker-X-negative-zero", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("-        0.0,-   0.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.0, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|marker-Y-negative-zero", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("-        0.0,-   0.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 0.0, unit: Unit::Dbm, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|marker-X-full-digit-syntax", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+040100000.0,-0020.25E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 40100000.0, unit: Unit::Hertz, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|marker-Y-full-digit-syntax", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+040100000.0,-0020.25E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: -20.25, unit: Unit::Dbm, status: MeasurementStatus::Valid })), expected_error: None },
+CatalogCase { id: "keysight.hp3585b|E|marker-X-reject-short", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  1000000.0,-  20.00E-".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-Y-reject-short", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  1000000.0,-  20.00E-".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-X-reject-long", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  1000000.0,-  20.00E-0 ".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-Y-reject-long", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  1000000.0,-  20.00E-0 ".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-X-reject-trailing-frame", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  1000000.0,-  20.00E-0\r\n".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-Y-reject-trailing-frame", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  1000000.0,-  20.00E-0\r\n".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-X-reject-csv", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  1000000.0,-  20.00E-0,0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-Y-reject-csv", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  1000000.0,-  20.00E-0,0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-X-reject-leading-space", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("   1000000.0,-  20.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-Y-reject-leading-space", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("   1000000.0,-  20.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-X-reject-freq-no-sign", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("0  1000000.0,-  20.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-Y-reject-freq-no-sign", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("0  1000000.0,-  20.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-X-reject-freq-tab", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+\t 1000000.0,-  20.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-Y-reject-freq-tab", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+\t 1000000.0,-  20.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-X-reject-freq-internal-space", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  10 0000.0,-  20.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-Y-reject-freq-internal-space", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  10 0000.0,-  20.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-X-reject-freq-no-point", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  100000000,-  20.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-Y-reject-freq-no-point", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  100000000,-  20.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-X-reject-freq-negative", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("-  1000000.0,-  20.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-Y-reject-freq-negative", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("-  1000000.0,-  20.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-X-reject-freq-outside", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+ 40100000.1,-  20.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-Y-reject-freq-outside", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+ 40100000.1,-  20.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-X-reject-comma", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  1000000.0;-  20.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-Y-reject-comma", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  1000000.0;-  20.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-X-reject-amp-no-sign", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  1000000.0,   20.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-Y-reject-amp-no-sign", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  1000000.0,   20.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-X-reject-amp-internal-space", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  1000000.0,- 2 0.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-Y-reject-amp-internal-space", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  1000000.0,- 2 0.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-X-reject-amp-no-point", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  1000000.0,-  20000E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-Y-reject-amp-no-point", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  1000000.0,-  20000E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-X-reject-amp-lower-e", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  1000000.0,-  20.00e-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-Y-reject-amp-lower-e", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  1000000.0,-  20.00e-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-X-reject-amp-exponent", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  1000000.0,-  20.00E-1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-Y-reject-amp-exponent", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  1000000.0,-  20.00E-1".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-X-reject-amp-positive-exp", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  1000000.0,-  20.00E+0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-Y-reject-amp-positive-exp", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  1000000.0,-  20.00E+0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-X-reject-unicode", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  1000000.0,-  ２０.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-Y-reject-unicode", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("+  1000000.0,-  ２０.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-X-reject-binary", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("#224+  1000000.0,-  20.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|marker-Y-reject-binary", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Ok("#224+  1000000.0,-  20.00E-0".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Parse) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-failure-0-Transport", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetCenterFrequency { hz: 10000000.0 },
+], script: vec![
+ScriptStep::WriteFailure("CF10000000HZ".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-failure-0-Timeout", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetCenterFrequency { hz: 10000000.0 },
+], script: vec![
+ScriptStep::WriteFailure("CF10000000HZ".into(), instrument_api::DriverError::new(ErrorKind::Timeout, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetSpan-failure-0-Transport", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetSpan { hz: 5000.0 },
+], script: vec![
+ScriptStep::WriteFailure("FS5000HZ".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetSpan-failure-0-Timeout", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetSpan { hz: 5000.0 },
+], script: vec![
+ScriptStep::WriteFailure("FS5000HZ".into(), instrument_api::DriverError::new(ErrorKind::Timeout, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-failure-0-Transport", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRbw { hz: 30.0 },
+], script: vec![
+ScriptStep::WriteFailure("RB30HZ".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-failure-0-Timeout", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRbw { hz: 30.0 },
+], script: vec![
+ScriptStep::WriteFailure("RB30HZ".into(), instrument_api::DriverError::new(ErrorKind::Timeout, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-failure-0-Transport", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetVbw { hz: 10.0 },
+], script: vec![
+ScriptStep::WriteFailure("VB10HZ".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-failure-0-Timeout", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetVbw { hz: 10.0 },
+], script: vec![
+ScriptStep::WriteFailure("VB10HZ".into(), instrument_api::DriverError::new(ErrorKind::Timeout, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetRefLevel-failure-0-Transport", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRefLevel { dbm: -20.0 },
+], script: vec![
+ScriptStep::WriteFailure("RL-20.0DM".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerSetRefLevel-failure-0-Timeout", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRefLevel { dbm: -20.0 },
+], script: vec![
+ScriptStep::WriteFailure("RL-20.0DM".into(), instrument_api::DriverError::new(ErrorKind::Timeout, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerMarkerPeak-failure-0-Transport", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerPeak,
+], script: vec![
+ScriptStep::WriteFailure("CL".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerMarkerPeak-failure-0-Timeout", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerPeak,
+], script: vec![
+ScriptStep::WriteFailure("CL".into(), instrument_api::DriverError::new(ErrorKind::Timeout, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerMarkerPeak-failure-1-Transport", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerPeak,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::WriteFailure("SP".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerMarkerPeak-failure-1-Timeout", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerPeak,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::WriteFailure("SP".into(), instrument_api::DriverError::new(ErrorKind::Timeout, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerMarkerX-failure-0-Transport", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::WriteFailure("CL".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerMarkerX-failure-0-Timeout", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::WriteFailure("CL".into(), instrument_api::DriverError::new(ErrorKind::Timeout, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerMarkerX-failure-1-Transport", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerMarkerX-failure-1-Timeout", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerMarkerY-failure-0-Transport", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::WriteFailure("CL".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerMarkerY-failure-0-Timeout", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::WriteFailure("CL".into(), instrument_api::DriverError::new(ErrorKind::Timeout, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerMarkerY-failure-1-Transport", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keysight.hp3585b|E|SpectrumAnalyzerMarkerY-failure-1-Timeout", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Write("CL".into()),
+ScriptStep::Query("D2,T6".into(), Err(instrument_api::DriverError::new(ErrorKind::Timeout, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Timeout) },
 ] }
 }

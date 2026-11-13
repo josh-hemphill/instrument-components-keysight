@@ -1,0 +1,2980 @@
+{
+  "schemaVersion": 1,
+  "contractMajor": 1,
+  "description": "Independent manual/spec-derived traffic, not hardware observations; generator reads no production plans. v2 adds own-manual HighZ sentinel policy.",
+  "cases": [
+    {
+      "id": "keysight.33120a|E|frequency-0.0001",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 0.0001
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "write",
+          "message": ":FREQ 1.00000000000E-04"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.33120a|E|frequency-1000",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "write",
+          "message": ":FREQ 1.00000000000E+03"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.33120a|E|frequency-15000000",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 15000000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "write",
+          "message": ":FREQ 1.50000000000E+07"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.33120a|E|amplitude-0.05",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetAmplitude",
+          "arguments": {
+            "vpp": 0.05
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:OFFS?",
+          "response": "+0.000000E+00"
+        },
+        {
+          "kind": "write",
+          "message": ":VOLT 5.00000000000E-02"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.33120a|E|amplitude-2",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetAmplitude",
+          "arguments": {
+            "vpp": 2
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:OFFS?",
+          "response": "+4.000000E+00"
+        },
+        {
+          "kind": "write",
+          "message": ":VOLT 2.00000000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.33120a|E|amplitude-10",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetAmplitude",
+          "arguments": {
+            "vpp": 10
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:OFFS?",
+          "response": "+0.000000E+00"
+        },
+        {
+          "kind": "write",
+          "message": ":VOLT 1.00000000000E+01"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.33120a|E|offset--4",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetOffset",
+          "arguments": {
+            "volts": -4
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT?",
+          "response": "+2.000000E+00"
+        },
+        {
+          "kind": "write",
+          "message": ":VOLT:OFFS -4.00000000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.33120a|E|offset-0",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetOffset",
+          "arguments": {
+            "volts": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT?",
+          "response": "+1.000000E+00"
+        },
+        {
+          "kind": "write",
+          "message": ":VOLT:OFFS 0.00000000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.33120a|E|offset-4",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetOffset",
+          "arguments": {
+            "volts": 4
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT?",
+          "response": "+2.000000E+00"
+        },
+        {
+          "kind": "write",
+          "message": ":VOLT:OFFS 4.00000000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.33120a|E|read-frequency",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorReadFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FREQ?",
+          "response": "+1.000000000000E+03"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1000,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.33120a|E|FunctionGeneratorSetFrequency-invalid-0",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.33120a|E|FunctionGeneratorSetFrequency-invalid-1",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": -1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.33120a|E|FunctionGeneratorSetFrequency-invalid-2",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 9.99e-05
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.33120a|E|FunctionGeneratorSetFrequency-invalid-3",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 15000001
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.33120a|E|FunctionGeneratorSetAmplitude-invalid-0",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetAmplitude",
+          "arguments": {
+            "vpp": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.33120a|E|FunctionGeneratorSetAmplitude-invalid-1",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetAmplitude",
+          "arguments": {
+            "vpp": -1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.33120a|E|FunctionGeneratorSetAmplitude-invalid-2",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetAmplitude",
+          "arguments": {
+            "vpp": 0.049999
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.33120a|E|FunctionGeneratorSetAmplitude-invalid-3",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetAmplitude",
+          "arguments": {
+            "vpp": 10.001
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.33120a|E|FunctionGeneratorSetOffset-invalid-0",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetOffset",
+          "arguments": {
+            "volts": -4.000001
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.33120a|E|FunctionGeneratorSetOffset-invalid-1",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetOffset",
+          "arguments": {
+            "volts": 4.000001
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.33120a|E|guard-0-SQU",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SQU"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.33120a|E|guard-0-PULS",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "PULS"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.33120a|E|guard-1-+1.000000E+06",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+1.000000E+06"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.33120a|E|guard-1-0",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.33120a|E|guard-2-VRMS",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VRMS"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.33120a|E|guard-2-VOLTS",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VOLTS"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.33120a|E|guard-3-1",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "1"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.33120a|E|guard-4-1",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "1"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.33120a|E|guard-5-1",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "1"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.33120a|E|guard-6-1",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "1"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.33120a|E|guard-7-1",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "response": "1"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.33120a|E|guard-3-ON",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "ON"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.33120a|E|guard-4-ON",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "ON"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.33120a|E|guard-5-ON",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "ON"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.33120a|E|guard-6-ON",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "ON"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.33120a|E|guard-7-ON",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "response": "ON"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.33120a|E|coupled-amplitude-rail",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetAmplitude",
+          "arguments": {
+            "vpp": 3
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:OFFS?",
+          "response": "+3.750000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.33120a|E|coupled-offset-small-amplitude",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetOffset",
+          "arguments": {
+            "volts": 1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT?",
+          "response": "+1.000000E-01"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.33120a|E|coupled-rounded-wire-rail",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetAmplitude",
+          "arguments": {
+            "vpp": 2.9999999999996
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:OFFS?",
+          "response": "3.5000000000001"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.33120a|E|read-reject-negative",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorReadFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FREQ?",
+          "response": "-1"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.33120a|E|read-reject-zero",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorReadFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FREQ?",
+          "response": "0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.33120a|E|read-reject-above-max",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorReadFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FREQ?",
+          "response": "15000001"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.33120a|E|read-reject-giant",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorReadFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FREQ?",
+          "response": "1E30"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.33120a|E|read-reject-csv",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorReadFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FREQ?",
+          "response": "1,2"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.33120a|E|read-reject-leading-space",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorReadFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FREQ?",
+          "response": " 1E3"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.33120a|E|read-reject-trailing-space",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorReadFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FREQ?",
+          "response": "1E3 "
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.33120a|E|read-reject-nan",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorReadFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FREQ?",
+          "response": "NaN"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.33120a|E|read-reject-missing-fraction",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorReadFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FREQ?",
+          "response": "1.E3"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.33120a|E|failure-step-0-Transport",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.33120a|E|failure-step-0-Timeout",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.33120a|E|failure-step-1-Transport",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.33120a|E|failure-step-1-Timeout",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.33120a|E|failure-step-2-Transport",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.33120a|E|failure-step-2-Timeout",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.33120a|E|failure-step-3-Transport",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.33120a|E|failure-step-3-Timeout",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.33120a|E|failure-step-4-Transport",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.33120a|E|failure-step-4-Timeout",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.33120a|E|failure-step-5-Transport",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.33120a|E|failure-step-5-Timeout",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.33120a|E|failure-step-6-Transport",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.33120a|E|failure-step-6-Timeout",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.33120a|E|failure-step-7-Transport",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.33120a|E|failure-step-7-Timeout",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.33120a|E|failure-step-8-Transport",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "write",
+          "message": ":FREQ 1.00000000000E+03",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.33120a|E|failure-step-8-Timeout",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+5.000000E+01"
+        },
+        {
+          "kind": "query",
+          "message": ":VOLT:UNIT?",
+          "response": "VPP"
+        },
+        {
+          "kind": "query",
+          "message": ":AM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":BM:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":FSK:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SWE:STAT?",
+          "response": "0"
+        },
+        {
+          "kind": "write",
+          "message": ":FREQ 1.00000000000E+03",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.33120a|E|guard-load-high-impedance-sentinel",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":FUNC:SHAP?",
+          "response": "SIN"
+        },
+        {
+          "kind": "query",
+          "message": ":OUTP:LOAD?",
+          "response": "+9.900000E+37"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    }
+  ]
+}

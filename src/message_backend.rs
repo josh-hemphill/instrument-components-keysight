@@ -246,5 +246,8 @@ pub(crate) fn modes(native: bool) -> BTreeSet<ExecutionMode> {
         result
     }
     #[cfg(not(feature = "async"))]
-    { let _ = native; result }
+    {
+        let _ = native;
+        result
+    }
 }

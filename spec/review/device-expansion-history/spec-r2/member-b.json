@@ -1,0 +1,71 @@
+{
+  "member": "B",
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "rubric": "v1",
+  "stage": "SPEC",
+  "manifestSha256": "bff01406c45e4bc1cfb246cd86ca05df85599add54d4249ed1816afd2e4f864e",
+  "scores": {
+    "34401A": {
+      "EVIDENCE": 9.4,
+      "API": 9.3,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.3,
+      "VALIDATION": 9.3,
+      "DELIVERY": 9.3
+    },
+    "33120A": {
+      "EVIDENCE": 9.4,
+      "API": 9.3,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.3,
+      "VALIDATION": 9.3,
+      "DELIVERY": 9.3
+    },
+    "53132A": {
+      "EVIDENCE": 9.4,
+      "API": 9.3,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.3,
+      "VALIDATION": 9.3,
+      "DELIVERY": 9.3
+    }
+  },
+  "votes": {
+    "34401A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "33120A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "53132A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    }
+  },
+  "mandatoryDefects": [],
+  "requiredChanges": [],
+  "limitations": [
+    "SPEC-stage judgment only; planned implementations and procedural/platform evidence are not claimed executed.",
+    "All six remaining requested items stay pending; no nine-item completion or implementation approval.",
+    "No hardware, calibration, physical output-transient, public availability or OpenTAP-host AOT evidence claimed.",
+    "Optional editorial refinement: align33120 load guard summary table with the detailed HighZ-only magnitude-policy exception.",
+    "No peer ballots/scores read; all18 categories independently assessed on r2.",
+    "High confidence in hashes and primary evidence; moderate-high in planned implementability."
+  ],
+  "report": "member-b.md"
+}

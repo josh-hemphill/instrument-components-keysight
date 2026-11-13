@@ -1,0 +1,329 @@
+{
+  "stage": "SPEC",
+  "round": "spec-r2",
+  "rubric": "v1",
+  "manifestSha256": "bff01406c45e4bc1cfb246cd86ca05df85599add54d4249ed1816afd2e4f864e",
+  "completeBallots": 3,
+  "items": [
+    "34401A",
+    "33120A",
+    "53132A"
+  ],
+  "allCategoriesPass": true,
+  "gatePass": true,
+  "rows": [
+    {
+      "item": "34401A",
+      "category": "EVIDENCE",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.4,
+        "B": 9.4,
+        "C": 9.3
+      },
+      "median": 9.4,
+      "range": [
+        9.3,
+        9.4
+      ],
+      "votes": 3,
+      "status": "PASS"
+    },
+    {
+      "item": "34401A",
+      "category": "API",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.4
+      },
+      "median": 9.3,
+      "range": [
+        9.3,
+        9.4
+      ],
+      "votes": 3,
+      "status": "PASS"
+    },
+    {
+      "item": "34401A",
+      "category": "PROTOCOL",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "range": [
+        9.3,
+        9.3
+      ],
+      "votes": 3,
+      "status": "PASS"
+    },
+    {
+      "item": "34401A",
+      "category": "PARITY",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "range": [
+        9.3,
+        9.3
+      ],
+      "votes": 3,
+      "status": "PASS"
+    },
+    {
+      "item": "34401A",
+      "category": "VALIDATION",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "range": [
+        9.3,
+        9.3
+      ],
+      "votes": 3,
+      "status": "PASS"
+    },
+    {
+      "item": "34401A",
+      "category": "DELIVERY",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "range": [
+        9.3,
+        9.3
+      ],
+      "votes": 3,
+      "status": "PASS"
+    },
+    {
+      "item": "33120A",
+      "category": "EVIDENCE",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.4,
+        "B": 9.4,
+        "C": 9.3
+      },
+      "median": 9.4,
+      "range": [
+        9.3,
+        9.4
+      ],
+      "votes": 3,
+      "status": "PASS"
+    },
+    {
+      "item": "33120A",
+      "category": "API",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.4
+      },
+      "median": 9.3,
+      "range": [
+        9.3,
+        9.4
+      ],
+      "votes": 3,
+      "status": "PASS"
+    },
+    {
+      "item": "33120A",
+      "category": "PROTOCOL",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.4,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "range": [
+        9.3,
+        9.4
+      ],
+      "votes": 3,
+      "status": "PASS"
+    },
+    {
+      "item": "33120A",
+      "category": "PARITY",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "range": [
+        9.3,
+        9.3
+      ],
+      "votes": 3,
+      "status": "PASS"
+    },
+    {
+      "item": "33120A",
+      "category": "VALIDATION",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "range": [
+        9.3,
+        9.3
+      ],
+      "votes": 3,
+      "status": "PASS"
+    },
+    {
+      "item": "33120A",
+      "category": "DELIVERY",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "range": [
+        9.3,
+        9.3
+      ],
+      "votes": 3,
+      "status": "PASS"
+    },
+    {
+      "item": "53132A",
+      "category": "EVIDENCE",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.4,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "range": [
+        9.3,
+        9.4
+      ],
+      "votes": 3,
+      "status": "PASS"
+    },
+    {
+      "item": "53132A",
+      "category": "API",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.4
+      },
+      "median": 9.3,
+      "range": [
+        9.3,
+        9.4
+      ],
+      "votes": 3,
+      "status": "PASS"
+    },
+    {
+      "item": "53132A",
+      "category": "PROTOCOL",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "range": [
+        9.3,
+        9.3
+      ],
+      "votes": 3,
+      "status": "PASS"
+    },
+    {
+      "item": "53132A",
+      "category": "PARITY",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "range": [
+        9.3,
+        9.3
+      ],
+      "votes": 3,
+      "status": "PASS"
+    },
+    {
+      "item": "53132A",
+      "category": "VALIDATION",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "range": [
+        9.3,
+        9.3
+      ],
+      "votes": 3,
+      "status": "PASS"
+    },
+    {
+      "item": "53132A",
+      "category": "DELIVERY",
+      "target": ">=9.2",
+      "scores": {
+        "A": 9.3,
+        "B": 9.3,
+        "C": 9.3
+      },
+      "median": 9.3,
+      "range": [
+        9.3,
+        9.3
+      ],
+      "votes": 3,
+      "status": "PASS"
+    }
+  ],
+  "mandatoryDefects": [],
+  "requiredChanges": [],
+  "ballotSha256": {
+    "A": "03c5f39f4aea14efffc36685d574c23958efaf3773950a39876e1500c1caa2af",
+    "B": "baf1aa272e1e2b53d5b26853db1d4cbda436fc9b81662e802c7d99f3597b0ed2",
+    "C": "e6e14dac8608f75439a7cf362902612448908b550bec3dc830ac13b6da35e3f5"
+  }
+}

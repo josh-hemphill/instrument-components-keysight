@@ -1,0 +1,108 @@
+{
+  "member": "A",
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "rubric": "v1",
+  "stage": "SPEC",
+  "round": "spec-r1",
+  "manifestSha256": "09da4923574f14e0f92078292287890beef5c9dacdc66d96e4c30176328b3d4c",
+  "scores": {
+    "34401A": {
+      "EVIDENCE": 9.4,
+      "API": 9.1,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.1,
+      "VALIDATION": 9.0,
+      "DELIVERY": 9.0
+    },
+    "33120A": {
+      "EVIDENCE": 9.4,
+      "API": 9.3,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.1,
+      "VALIDATION": 9.0,
+      "DELIVERY": 9.0
+    },
+    "53132A": {
+      "EVIDENCE": 9.3,
+      "API": 9.3,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.1,
+      "VALIDATION": 9.0,
+      "DELIVERY": 9.0
+    }
+  },
+  "votes": {
+    "34401A": {
+      "EVIDENCE": "PASS",
+      "API": "FAIL",
+      "PROTOCOL": "PASS",
+      "PARITY": "FAIL",
+      "VALIDATION": "FAIL",
+      "DELIVERY": "FAIL"
+    },
+    "33120A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "FAIL",
+      "VALIDATION": "FAIL",
+      "DELIVERY": "FAIL"
+    },
+    "53132A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "FAIL",
+      "VALIDATION": "FAIL",
+      "DELIVERY": "FAIL"
+    }
+  },
+  "mandatoryDefects": [],
+  "requiredChanges": [
+    {
+      "id": "A-R1",
+      "priority": "P1",
+      "items": [
+        "34401A"
+      ],
+      "categories": [
+        "API"
+      ],
+      "change": "Specify the immutable per-exact-endpoint SCPI-language commissioning/admission input and its Unknown/emulation rejection before connector acquisition, with equivalent Rust/C# construction examples. The spec currently requires SCPI but does not say how this admission requirement is represented or validated."
+    },
+    {
+      "id": "A-R2",
+      "priority": "P1",
+      "items": [
+        "34401A",
+        "33120A",
+        "53132A"
+      ],
+      "categories": [
+        "VALIDATION"
+      ],
+      "change": "Add a concrete procedural acceptance matrix with stable new-model IDs, setup, trigger and assertions for admission/capability isolation, nonfinite requests and healthy follow-up, failed-operation quarantine, concurrent serialization, owned/borrowed close, and genuinely pending query/write cancellation/deadlines. Distinguish inherited SDK proofs from required new-device integration proofs; include 33120 counterpart-query/write failures and 53132 intent preservation."
+    },
+    {
+      "id": "A-R3",
+      "priority": "P1",
+      "items": [
+        "34401A",
+        "33120A",
+        "53132A"
+      ],
+      "categories": [
+        "PARITY",
+        "DELIVERY"
+      ],
+      "change": "Bind a concrete external delivery/validation plan to these additions: list shard composition replacement rules (especially removal of active inherited 34401 cases while preserving historical evidence/regressions), static factory/proof entry points, exact SDK/tool pins or frozen baseline reuse, generate/check/TestKit/verify-package commands, and source/packed Linux/Windows x64 x .NET8/10 acceptance matrix. Identify required future coordinated package versions separately from existing public versions. Existing baseline infrastructure is useful but not yet explicitly extended by this packet."
+    }
+  ],
+  "limitations": [
+    "SPEC review only: no implementation, software execution of new backends, physical validation, merge or publication is asserted.",
+    "3585B,34980A,34937A,34922A,34950A,TDS1002A remain pending and are not graded by this ballot.",
+    "Primary pages were directly sampled for each supported protocol/range/parser family; this is not a complete rereading of all manual pages.",
+    "No peer ballots were read. Baseline repositories were read only at manifest-recorded revisions."
+  ]
+}

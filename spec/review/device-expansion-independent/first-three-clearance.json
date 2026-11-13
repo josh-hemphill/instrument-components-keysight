@@ -1,0 +1,48 @@
+{
+  "reviewer": "expansion_spec_reviewer",
+  "stage": "independent spec review before Council",
+  "decision": "CLEAR_FOR_COUNCIL_SPEC_REVIEW",
+  "requiredCurrentChanges": [],
+  "scope": [
+    "34401A",
+    "33120A",
+    "53132A"
+  ],
+  "files": [
+    {
+      "path": "spec/34401A.md",
+      "sha256": "284b1240387416e59013d3226446e46b836055ea0dde255ab71b53a6540c5040"
+    },
+    {
+      "path": "spec/33120A.md",
+      "sha256": "ca84bcf6e9918d6db2199883feba9ec1cb3c7bec88aba828f01d9fc389d49d4e"
+    },
+    {
+      "path": "spec/53132A.md",
+      "sha256": "4d241e392c4176c4de5fc031710770c1a28cdb1cdb93f21e68807658a43ddad2"
+    },
+    {
+      "path": "spec/acceptance/34401a.catalog-cases.json",
+      "sha256": "25fcc91db91dc2a7561c34fc2166587478f5a5085e27bce3c41b236843354a4d"
+    },
+    {
+      "path": "spec/acceptance/33120a.catalog-cases.json",
+      "sha256": "0fb56c481d12ce64a218f84656016528d37f4e80519959ff69f9d390fe278b8e"
+    },
+    {
+      "path": "spec/acceptance/53132a.catalog-cases.json",
+      "sha256": "7371322c6497bbe1b027ab14c7cfad8aab50d8f78d69e874afd2e8656f6e8e0f"
+    },
+    {
+      "path": "spec/acceptance/build-first-three-oracles.py",
+      "sha256": "9c9ad9bab1b76a4ef51b06d8c75dbc69549ac587f5d8bd1d65f53aeeced82ffe"
+    }
+  ],
+  "limitations": [
+    "No hardware evidence",
+    "Concrete software subsets only; deferred capabilities explicitly documented",
+    "NaN/Infinity arguments need non-JSON procedural tests in implementation",
+    "Registration, exact endpoint isolation, healthy followup after static rejection, failed-operation quarantine, real pending cancellation/deadline and ownership require procedural implementation tests beyond golden catalog cases",
+    "Full packed/native platform evidence remains implementation-stage requirement"
+  ]
+}

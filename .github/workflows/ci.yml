@@ -19,10 +19,10 @@ jobs:
           python-version: '3.12'
       - run: python spec/acceptance/compose.py --check
   sdk:
-    uses: josh-hemphill/instrument-components/.github/workflows/driver-sdk.yml@6524d9a3c1a1627f3fed8e4fbdca0f577220434c
+    uses: josh-hemphill/instrument-components/.github/workflows/driver-sdk.yml@1243881c6b91c46ff40cf0cb3cfd4598b8352409
     with:
       source_repository: josh-hemphill/instrument-components
-      source_ref: 6524d9a3c1a1627f3fed8e4fbdca0f577220434c
+      source_ref: 1243881c6b91c46ff40cf0cb3cfd4598b8352409
   package:
     needs: [acceptance, sdk]
-    uses: josh-hemphill/instrument-components/.github/workflows/driver-package-bootstrap.yml@6524d9a3c1a1627f3fed8e4fbdca0f577220434c
+    uses: josh-hemphill/instrument-components/.github/workflows/driver-package-bootstrap.yml@1243881c6b91c46ff40cf0cb3cfd4598b8352409

@@ -1,0 +1,109 @@
+{
+  "stage": "SPEC",
+  "round": "spec-r1",
+  "rubric": "v1",
+  "items": [
+    "34401A",
+    "33120A",
+    "53132A"
+  ],
+  "pendingItems": [
+    "3585B",
+    "34980A",
+    "34937A",
+    "34922A",
+    "34950A",
+    "TDS1002A"
+  ],
+  "files": [
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/spec-r1/RUBRIC-v1.md",
+      "sha256": "d0fa94b4057d31eecfae64d797a850f5089532b07a66970f00355c4227227e17"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/spec-r1/spec/API-GAPS.md",
+      "sha256": "7c4239df7ecc4f35c200d34db6f49e28fa8555d3110f3523737f8446918364e5"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/spec-r1/spec/34401A.md",
+      "sha256": "284b1240387416e59013d3226446e46b836055ea0dde255ab71b53a6540c5040"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/spec-r1/spec/33120A.md",
+      "sha256": "ca84bcf6e9918d6db2199883feba9ec1cb3c7bec88aba828f01d9fc389d49d4e"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/spec-r1/spec/53132A.md",
+      "sha256": "4d241e392c4176c4de5fc031710770c1a28cdb1cdb93f21e68807658a43ddad2"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/spec-r1/spec/33120A-frequency-table.png",
+      "sha256": "ebcfe1cba2ade2403d1cd6ecfd3b0df7be8fc73c3571ca0dd70ceba1aee9022f"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/spec-r1/spec/acceptance/34401a.catalog-cases.json",
+      "sha256": "25fcc91db91dc2a7561c34fc2166587478f5a5085e27bce3c41b236843354a4d"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/spec-r1/spec/acceptance/33120a.catalog-cases.json",
+      "sha256": "0fb56c481d12ce64a218f84656016528d37f4e80519959ff69f9d390fe278b8e"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/spec-r1/spec/acceptance/53132a.catalog-cases.json",
+      "sha256": "7371322c6497bbe1b027ab14c7cfad8aab50d8f78d69e874afd2e8656f6e8e0f"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/spec-r1/spec/acceptance/build-first-three-oracles.py",
+      "sha256": "9c9ad9bab1b76a4ef51b06d8c75dbc69549ac587f5d8bd1d65f53aeeced82ffe"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/spec-r1/research/SOURCES.json",
+      "sha256": "30fabf468920c4651a1faa40adf4a5bd9e77c5de57300c4ad31cdd8f8f07a867"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/spec-r1/review/first-three-clearance.json",
+      "sha256": "3683e43ff37c5ba86c327649fdbf0880ea75699233576a863dad0ffe8644637a"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/spec-r1/review/SPEC-REVIEW.md",
+      "sha256": "ecbb05329c47980afddd7984f2c0e37fb37742b26f90515d7cacb05ef79b02d0"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/spec-r1/review/34401A-AUDIT.md",
+      "sha256": "699a9a9b4976385c7ce55e3542a2287ab1a0c0386e8267ef466376341f8a6a47"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/research/34401A-user.pdf",
+      "sha256": "ea7ec922d14aafce23ec7058e37bcf0ccd192423f70d75ccdf6350382ae3b419"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/research/33120A-user.pdf",
+      "sha256": "3dd6d075bd05cc8efb86846b826656ba3548aba8c621b7045fb1c3a2a167d668"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/research/53132A-programming.pdf",
+      "sha256": "43b7e12210c503c59acdfea728bafdf66e4c5f284009b6470ee8264b593aa703"
+    }
+  ],
+  "baseline": {
+    "instrument-components": {
+      "head": "1b0704dbb2c4a9f4ffda9f6b1665de12654f672d",
+      "branch": "feat/legacy-hp-contracts",
+      "status": ""
+    },
+    "instrument-components-keysight": {
+      "head": "c63cc025d283deb0832dbe2b9c721d8a33412160",
+      "branch": "feat/legacy-hp-devices",
+      "status": ""
+    },
+    "instrument-components-tektronix": {
+      "head": "787c4881636d18618f1f8a503a7be7273333064f",
+      "branch": "work",
+      "status": ""
+    }
+  },
+  "limitations": [
+    "Exact Tektronix identity pending user clarification; no substitution",
+    "No implementation or hardware evidence claimed at SPEC stage"
+  ]
+}

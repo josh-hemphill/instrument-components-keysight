@@ -1,0 +1,40 @@
+{
+  "member": "A",
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "rubric": "v1",
+  "stage": "SPEC",
+  "round": "analyzer-spec-r1",
+  "manifestSha256": "8b853b3d5a22481e98558032a9997a9ba9ec30a41789ecc1eed5e4768411bec5",
+  "scores": {
+    "3585B": {
+      "EVIDENCE": 9.4,
+      "API": 9.3,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.3,
+      "VALIDATION": 9.3,
+      "DELIVERY": 9.3
+    }
+  },
+  "votes": {
+    "3585B": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    }
+  },
+  "mandatoryDefects": [],
+  "requiredChanges": [],
+  "limitations": [
+    "SPEC design/executable acceptance-plan review only; no implementation, packed/native backend execution or hardware qualification is asserted.",
+    "The123 independent replies/cases are synthetic manual-diagram instantiations, not observed device traffic; their generator reproduced byte-exact in a temporary directory.",
+    "SP selects a stored-trace peak and T6 waits only for valid selected-marker data; neither establishes an entirely fresh global sweep/physical peak.",
+    "Commissioned serial applicability, native language, fixed50OhmR12/dbm/liveA state, suitable unoverloaded input and exclusivity rely on truthful external commissioning.",
+    "No D2 overload flag is claimed; syntactically valid numeric data cannot establish physical overload/calibration status.",
+    "Primary scans were sampled for every supported command/range/parser family, not reread cover to cover. TDS1002A remains pending.",
+    "No peer ballots/scores were inspected and no production/specification files were edited."
+  ]
+}

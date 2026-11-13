@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "contractMajor": 1,
+  "description": "Independent primary-manual/spec traffic, synthetic software tests, no hardware observations. Shared fixture mapping in fixture-inventory.json.",
+  "cases": [
+    {
+      "id": "keysight.34980a|E|34980a-invalid-SwitchCloseChannel-0",
+      "calls": [
+        {
+          "operation": "SwitchCloseChannel",
+          "arguments": {
+            "channel": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34980a|E|34980a-invalid-SwitchCloseChannel-999",
+      "calls": [
+        {
+          "operation": "SwitchCloseChannel",
+          "arguments": {
+            "channel": 999
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34980a|E|34980a-invalid-SwitchOpenChannel-0",
+      "calls": [
+        {
+          "operation": "SwitchOpenChannel",
+          "arguments": {
+            "channel": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34980a|E|34980a-invalid-SwitchOpenChannel-999",
+      "calls": [
+        {
+          "operation": "SwitchOpenChannel",
+          "arguments": {
+            "channel": 999
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34980a|E|34980a-invalid-SwitchChannelIsClosed-0",
+      "calls": [
+        {
+          "operation": "SwitchChannelIsClosed",
+          "arguments": {
+            "channel": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34980a|E|34980a-invalid-SwitchChannelIsClosed-999",
+      "calls": [
+        {
+          "operation": "SwitchChannelIsClosed",
+          "arguments": {
+            "channel": 999
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34980a|E|34980a-shared-module-views",
+      "calls": [
+        {
+          "operation": "SwitchCloseChannel",
+          "arguments": {
+            "channel": 7
+          }
+        },
+        {
+          "operation": "DigitalIoReadByte",
+          "arguments": {
+            "port": 29
+          }
+        },
+        {
+          "operation": "SwitchChannelIsClosed",
+          "arguments": {
+            "channel": 101
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":ROUT:CLOS (@1001)"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3201)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3202)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3203)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:WIDT? (@3204)",
+          "response": "1"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:DIR? (@3201)",
+          "response": "INP"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:POL? (@3201)",
+          "response": "NORM"
+        },
+        {
+          "kind": "query",
+          "message": ":CONF:DIG:HAND:STAT? (@3201)",
+          "response": "HIMP"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:MEM:ENAB? (@3201)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SOUR:DIG:MEM:ENAB? (@3201)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:THR? (@3201)",
+          "response": "+2.50000000E+00"
+        },
+        {
+          "kind": "query",
+          "message": ":SENS:DIG:DATA:BYTE? DEC,(@3201)",
+          "response": "0"
+        },
+        {
+          "kind": "query",
+          "message": ":ROUT:CLOS? (@2001)",
+          "response": "0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "boolean",
+        "value": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "member": "C",
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "rubric": "v1",
+  "stage": "SPEC",
+  "manifestSha256": "74fbadf2b5b43c093e2ec6f708b42993f9e00c95fb99387433d39e95e2adfb69",
+  "scores": {
+    "34980A": {"EVIDENCE": 9.3, "API": 9.4, "PROTOCOL": 9.3, "PARITY": 9.2, "VALIDATION": 9.3, "DELIVERY": 9.2},
+    "34937A": {"EVIDENCE": 9.3, "API": 9.3, "PROTOCOL": 9.3, "PARITY": 9.2, "VALIDATION": 9.3, "DELIVERY": 9.2},
+    "34922A": {"EVIDENCE": 9.3, "API": 9.3, "PROTOCOL": 9.3, "PARITY": 9.2, "VALIDATION": 9.3, "DELIVERY": 9.2},
+    "34950A": {"EVIDENCE": 9.3, "API": 9.3, "PROTOCOL": 9.3, "PARITY": 9.2, "VALIDATION": 9.4, "DELIVERY": 9.2}
+  },
+  "votes": {
+    "34980A": {"EVIDENCE": "PASS", "API": "PASS", "PROTOCOL": "PASS", "PARITY": "PASS", "VALIDATION": "PASS", "DELIVERY": "PASS"},
+    "34937A": {"EVIDENCE": "PASS", "API": "PASS", "PROTOCOL": "PASS", "PARITY": "PASS", "VALIDATION": "PASS", "DELIVERY": "PASS"},
+    "34922A": {"EVIDENCE": "PASS", "API": "PASS", "PROTOCOL": "PASS", "PARITY": "PASS", "VALIDATION": "PASS", "DELIVERY": "PASS"},
+    "34950A": {"EVIDENCE": "PASS", "API": "PASS", "PROTOCOL": "PASS", "PARITY": "PASS", "VALIDATION": "PASS", "DELIVERY": "PASS"}
+  },
+  "mandatoryDefects": [],
+  "requiredChanges": [],
+  "limitations": [
+    "Independent fresh SPEC review only; no module implementation, hardware, calibration, packages or native execution assessed.",
+    "Manifest and all bound file/PDF hashes verified;195 cases and fixture reproduced byte-identically in isolated temporary directory, globally unique IDs and exclusive outcomes.",
+    "Five new neutral operations require a newly qualified compatible immutable SDK/tool producer; old public alpha.1 or prior first-three-only producer cannot qualify module additions.",
+    "One parent connection/lease and parent-wide quarantine/ownership are specified; actual per-module procedural execution remains implementation-stage evidence.",
+    "Fixed electrical and no-autonomous-actions policies require truthful lifetime commissioning; guards do not prove physical stability, isolation, continuity or calibrated levels.",
+    "3585B and exact TDS1002A remain pending; no nine-item completion or Tek substitution claim.",
+    "No peer ballots or scores read and no grades carried forward. Detailed category evidence and confidence are in member-c.md."
+  ]
+}
