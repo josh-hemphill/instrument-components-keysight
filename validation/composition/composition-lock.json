@@ -144,11 +144,11 @@
     {
       "vendor": "tektronix",
       "repository": "josh-hemphill/instrument-components-tektronix",
-      "sourceCommit": "00ceaae1c75732f3b6e50625ca4a525ecfb9fcd9",
-      "runId": 43518065974,
+      "sourceCommit": "0e7607332cd74655be132a058dce8f145443e94c",
+      "runId": 43520781516,
       "goldenFiles": {
         ".github/workflows/ci.yml": "e02cc8f3917d5380f9a942737a834eb4b48b4355f6fd86a76ef256aaf5ed033e",
-        "Cargo.toml": "0123d42d84076f30d6dcb512d78923aa73577858abd112bb328bf5fc442a6605",
+        "Cargo.toml": "cc0dba9995101ca722af0c764f81a063019e45d75c9cd3f690ddaa3b2cbe405b",
         "README.md": "c9a65222b14a14bc7ea0161c3d79b130f6598f38ece60aa5ab13a5d84e208fa4",
         "cases.json": "8575561c3865a7bad162f6838e83dbb61a101cadd6a0457263b20f35d67e9350",
         "dotnet/InstrumentComponents.Drivers.Tektronix/Drivers.cs": "d342b212951c45ccea5231964920f8bb1ca83743972761fa9e3bfed352c36b21",

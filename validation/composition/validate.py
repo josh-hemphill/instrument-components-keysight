@@ -19,6 +19,17 @@ def source_sha(path):
 def configure_public_registry(env,out,dotnet):
  publicCargo=out/'public-cargo-home';publicCargo.mkdir();env['CARGO_HOME']=str(publicCargo)
  (dotnet/'NuGet.Config').write_text('<configuration><packageSources><clear/><add key="nuget" value="https://api.nuget.org/v3/index.json"/></packageSources></configuration>', encoding='utf-8')
+def audit_driver_rust(directory,goldens):
+ cargo=tomllib.loads((directory/'Cargo.toml').read_text(encoding='utf-8'));package=cargo['package'];deps=cargo.get('dependencies',{})
+ if package['version']!=VERSION or package['name'] not in {'instrument-driver-'+v for v in VENDORS}:raise ValueError('Driver Rust identity boundary')
+ if set(deps)!={'instrument-api','instrument-scpi'} or any(d.get('version')!='='+VERSION or 'path' in d or 'git' in d for d in deps.values()):raise ValueError('Driver Rust dependency boundary')
+ expected={k for k in goldens if k.startswith('src/') or k=='generated/profiles.rs'}
+ members={str(p.relative_to(directory)).replace('\\','/') for p in directory.rglob('*') if p.is_file()}
+ metadata={'Cargo.toml','Cargo.toml.orig','Cargo.lock','.cargo_vcs_info.json','README.md','LICENSE-MIT','LICENSE-APACHE'}
+ if members-expected-metadata:raise ValueError('Non-production member bundled in driver: '+str(sorted(members-expected-metadata)))
+ if {n for n in members if n.startswith('src/') or n=='generated/profiles.rs'}!=expected:raise ValueError('Unmatched shipped Rust source member')
+ for file in sorted(expected):
+  if source_sha(directory/file)!=goldens[file]:raise ValueError('Rust implementation differs from locked source: '+file)
 def audit_driver_nuget(archive,name):
  with zipfile.ZipFile(archive) as z:
   names=z.namelist()
@@ -57,11 +68,7 @@ def main():
    if archive.suffix=='.crate':
     extract(archive,registry);directory=registry/(row['package']+'-'+VERSION);cargo=tomllib.loads((directory/'Cargo.toml').read_text(encoding='utf-8'));deps=cargo.get('dependencies',{})
     if set(deps)!={'instrument-api','instrument-scpi'} or any(d.get('version')!='='+VERSION or 'path' in d or 'git' in d for d in deps.values()):raise ValueError('Driver Rust dependency boundary')
-    shipped={str(p.relative_to(directory)).replace('\\','/') for p in (directory/'src').rglob('*') if p.is_file()}|{'generated/profiles.rs'}
-    if shipped!={k for k in entry['goldenFiles'] if k.startswith('src/') or k=='generated/profiles.rs'}:raise ValueError('Unmatched shipped Rust member')
-    for file in sorted(shipped):
-     if source_sha(directory/file)!=entry['goldenFiles'][file]:raise ValueError('Packaged Rust implementation differs from locked source')
-    if any('provenance' in part.parts or 'cases' in part.name.lower() for part in directory.rglob('*')):raise ValueError('Development assets bundled in driver')
+    audit_driver_rust(directory,entry['goldenFiles'])
     files={str(f.relative_to(directory)).replace('\\','/'):sha(f) for f in directory.rglob('*') if f.is_file()}
     (directory/'.cargo-checksum.json').write_text(json.dumps(dict(files=files,package=row['sha256'])), encoding='utf-8')
    else:
@@ -119,10 +126,7 @@ def main():
     if package['name'].startswith('instrument-driver-'):
      vendor=package['name'].removeprefix('instrument-driver-');entry=next(e for e in lock['drivers'] if e['vendor']==vendor)
      inspected=out/'public-inspected'/vendor;extract(archives[0],inspected);directory=inspected/(package['name']+'-'+package['version'])
-     shipped={str(p.relative_to(directory)).replace('\\','/') for p in (directory/'src').rglob('*') if p.is_file()}|{'generated/profiles.rs'}
-     if shipped!={k for k in entry['goldenFiles'] if k.startswith('src/') or k=='generated/profiles.rs'}:raise ValueError('Unmatched installed public Rust member')
-     for file in sorted(shipped):
-      if source_sha(directory/file)!=entry['goldenFiles'][file]:raise ValueError('Installed public Rust source differs from locked implementation')
+     audit_driver_rust(directory,entry['goldenFiles'])
     publicPackages.append(dict(ecosystem='Cargo',name=package['name'],version=package['version'],archiveSha256=sha(archives[0]),registryChecksum=package['checksum']))
  rid='win-x64' if os.name=='nt' else 'linux-x64';native=out/'native';publish=['dotnet','publish','Composition.csproj','-c','Release','-r',rid,'--self-contained','true','-o',native,'--configfile',dotnet/'NuGet.Config'];run('native-publish',publish,dotnet)
  assets=json.loads((dotnet/'obj/project.assets.json').read_text(encoding='utf-8'))
