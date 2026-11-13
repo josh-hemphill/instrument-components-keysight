@@ -1,0 +1,127 @@
+{
+  "reviewer": "expansion_spec_reviewer",
+  "stage": "independent final TDS1002 specification/oracle review before full9 rubricv2 Council",
+  "decision": "CLEAR_FOR_COUNCIL_SPEC_REVIEW",
+  "scope": [
+    "TDS1002 (without A/B)"
+  ],
+  "requiredCurrentChanges": [],
+  "mandatoryDefects": [],
+  "files": [
+    {
+      "path": "spec/TDS1002.md",
+      "sha256": "ad1258bac027c6628d47ef8db492acb5b83879f9b2eece12e076aaacaffc2926"
+    },
+    {
+      "path": "spec/TDS1002-COMPOSITION.md",
+      "sha256": "1b1cffe2e59c810ce7cc049a4bd579adbcf65718017a51df575d674e92ba904f"
+    },
+    {
+      "path": "spec/TDS1002-EXAMPLES.md",
+      "sha256": "82f879dc7625aa524fdaded09eea2c513b8c512346624d40baeb4d6b6d70d223"
+    },
+    {
+      "path": "spec/acceptance/tds1002.catalog-cases.json",
+      "sha256": "7d715c1416e65ffe60ae273732985f090cb569a23fa24be4ee8f91f535491393"
+    },
+    {
+      "path": "spec/acceptance/build-tds1002-oracle.py",
+      "sha256": "f455dbffa6200864547b27cdfe252554e79d072b7bdef8dccbd3c8572c9311b1"
+    },
+    {
+      "path": "spec/acceptance/tds1002-fixture.json",
+      "sha256": "02b7d1231742b2adc55fff78e6358fd80541d085f2b2a6004f735e4480e78bd6"
+    },
+    {
+      "path": "spec/acceptance/tds1002.provenance.json",
+      "sha256": "63be0ee7fdfca734d2ac31c5a28b558860d4506a403b5d5ab778a406f447d308"
+    },
+    {
+      "path": "research/TDS1002-SOURCES.json",
+      "sha256": "7e1bbe5c5c540e4fe4258dba5143cc7d97822ecdb746fa83c20fe1c7a5804053"
+    },
+    {
+      "path": "research/TDS1002-RESEARCH.md",
+      "sha256": "ebbbb5b5e815010f541ba3c82c631bd2477727adb1b8de6ad02a192abbd9d097"
+    },
+    {
+      "path": "research/TDS1002-FAQ-tool-evidence.json",
+      "sha256": "e34677c525b17c5061b77efef2c46cf098d7854e74b85285445b1c1c0b555573"
+    },
+    {
+      "path": "review/TDS1002-PRIMARY-AUDIT.md",
+      "sha256": "04dd54ff7e1cc097e56831dc9d32fcdcdd2e48b3c6ad0a742358aa05416efc6b"
+    },
+    {
+      "path": "review/TDS1002-ORACLE-CHECK.json",
+      "sha256": "fcb53a9ce5e59876d5e6f35879db61c9ec01c2a53d1c9cbe61f4e027d6588932"
+    }
+  ],
+  "primaryDocuments": [
+    {
+      "path": "research/TDS1002-programmer-071107504.pdf",
+      "partNumber": "071-1075-04",
+      "sha256": "659af48133a18ed9e0d5c3d16d5657a291edb15b3f71f69848473e9496d9d028",
+      "sourceUrl": "https://download.tek.com/manual/071107504.pdf"
+    },
+    {
+      "path": "research/TDS1002-user-071106400.pdf",
+      "partNumber": "071-1064-00",
+      "sha256": "4367b631e30b285bf3810b65df3bbf4a484ec8ebf9b1cbade60a7f03441a66f3",
+      "sourceUrl": "https://download.tek.com/manual/071106400.pdf"
+    },
+    {
+      "path": "research/TDS1002-programmer-077044401.pdf",
+      "partNumber": "077-0444-01",
+      "sha256": "e8f252e2709ff20f9593f90731851a5028946481a5553e4fed548364c52d9c71",
+      "sourceUrl": "https://download.tek.com/manual/077044401web.pdf"
+    },
+    {
+      "path": "research/TDS1002-supplement-071185801.pdf",
+      "partNumber": "071-1858-01",
+      "sha256": "2f314ea93a9e6a00ad15c7990eb038d7caf4329c946099207654e68c8144574f",
+      "sourceUrl": "https://download.tek.com/manual/071185801.pdf"
+    }
+  ],
+  "coverage": {
+    "caseCount": 334,
+    "positiveOperations": 10,
+    "nominalTimebaseSettings": 31,
+    "fixtureVerticalScaleCases": 22,
+    "proceduralRequirements": [
+      "T-PROC-01",
+      "T-PROC-02",
+      "T-PROC-03",
+      "T-PROC-04",
+      "T-PROC-05",
+      "T-PROC-06",
+      "T-PROC-07",
+      "T-PROC-08",
+      "T-PROC-09",
+      "T-PROC-10",
+      "T-PROC-11"
+    ],
+    "authoringHelperReproducesOracleAndFixtureByteExact": true,
+    "provenanceIdsMatchOracleOneToOne": true,
+    "allCasesObservedHardware": false
+  },
+  "directReviewFindingsResolved": [
+    "User confirmed exact TDS1002, qualified by own-model primary documents; CM/CMA/CMAX GPIB is admitted, while MEM serial-only, direct USB and B-model paths are excluded.",
+    "Independent native Tektronix grammar avoids generic MDO/Agilent reuse; the unsuffixed SOU query is explicitly supported by 077-0444-01 PDF page 140 optional [1] syntax in its own-applicable section.",
+    "HEAD OFF plus VERB ON avoids assumptions about headers and argument length. DESE 255 is verified before pre/post ESR 0. Read-clear and event-queue effects are documented.",
+    "Fresh records require STOP/SAMPLE/SEQUENCE/RUN/OPC, stopped-state/count 1, requested source/type/quoted-unit guards and final clean status. IMMed VALUE alone never substitutes for fresh acquisition.",
+    "Trigger View ignored setters, masked errors, Scan/XY/invisible inputs, finite-result warnings and the positive 9.9e37 invalid sentinel cannot produce Valid measurements under the declared conditions.",
+    "Integer-derived probe-scale and canonical timebase grids, strict invariant ASCII parsers, zero-Vpp validity, positive-frequency requirements and contextual sentinel handling are consistent in the two-language plan.",
+    "Explicit typed frozen construction, 1..4096 endpoint admission, module/probe/commissioning enums, selected-binding capability/native gates, lifetimes and whole-operation leases are specified.",
+    "334 literal cases, helper, fixture and provenance were independently inspected and reproduced. T-PROC01..11 specify real pending host timeouts/cancellation, ownership/quarantine/noninterleaving and packed Linux/Windows Native AOT .NET 8/10 execution."
+  ],
+  "limitations": [
+    "Specification-stage clearance only: no numeric Council ballot, implementation approval, code execution or hardware qualification.",
+    "Physical module/probe/trigger truth, suitable signals, wiring and calibration require external commissioning. Software guards provide no electrical input protection.",
+    "Measurements discard prior in-flight capture, select SAMPLE/SEQUENCE and leave the scope stopped. Run/Single are start-only. Close and failure perform no device cleanup.",
+    "HEAD/VERB changes persist. ESR reads consume status and affect event-queue history. Initial clean status may require explicit external recording/clearing of power-on or historical events.",
+    "GPIB module communication only initially. Serial/USB, trace capture, trigger setters, reset and shutdown are excluded. There is no TDS1002A/B alias.",
+    "Source and packed native execution, compiled examples and actual procedural implementation remain mandatory implementation-stage evidence.",
+    "Older Agilent and TDS1002A scope history is preserved. Final Council must use a fresh full-nine-item rubric-v2 packet without carrying forward old grades."
+  ]
+}

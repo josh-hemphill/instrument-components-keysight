@@ -1,0 +1,283 @@
+{
+  "stage": "SPEC",
+  "round": "full-spec-v2-r1",
+  "rubric": "v2",
+  "items": [
+    "34401A",
+    "33120A",
+    "53132A",
+    "3585B",
+    "34980A",
+    "34937A",
+    "34922A",
+    "34950A",
+    "TDS1002"
+  ],
+  "normativeSpecs": [
+    "spec/34401A.md",
+    "spec/33120A-v2.md",
+    "spec/53132A.md",
+    "spec/3585B.md",
+    "spec/34980A.md",
+    "spec/34937A.md",
+    "spec/34922A.md",
+    "spec/34950A.md",
+    "spec/TDS1002.md"
+  ],
+  "supplements": [
+    "spec/COMPOSITION-AND-VALIDATION.md",
+    "spec/MODULE-COMPOSITION.md",
+    "spec/TDS1002-COMPOSITION.md",
+    "spec/TDS1002-EXAMPLES.md"
+  ],
+  "authoringOnly": [
+    "spec/acceptance/33120a.catalog-cases.json"
+  ],
+  "instruction": "Fresh complete 54-cell SPEC review under v2. Grade specified concrete design and acceptance plan; no implementation/hardware claim. 33120A-v2 and its v2 oracle are normative; old66-case authoring oracle is not.",
+  "files": [
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/RUBRIC-v2.md",
+      "sha256": "11c08c58293ec2f4543a689f2f24817ca41f514812cabba75ca89f46c9c41ed5"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/prepare-source-proof.py",
+      "sha256": "dffc7e01e1259bfc7c668d3c47d4e59d152b33844155c3051e092150d7cb8c27"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/research/3585B-OCR.json",
+      "sha256": "be4d86546700383c27a06dd8480400a8f08b6aaadec5a776bac1d483ff3e4774"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/research/SOURCES.json",
+      "sha256": "30fabf468920c4651a1faa40adf4a5bd9e77c5de57300c4ad31cdd8f8f07a867"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/research/TDS1002-RESEARCH.md",
+      "sha256": "ebbbb5b5e815010f541ba3c82c631bd2477727adb1b8de6ad02a192abbd9d097"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/research/TDS1002-SOURCES.json",
+      "sha256": "7e1bbe5c5c540e4fe4258dba5143cc7d97822ecdb746fa83c20fe1c7a5804053"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/review/3585b-clearance.json",
+      "sha256": "1df2c8ec5992c86b901014a74e6b266a3bc747c9eb86a902c7464b10c143abf9"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/review/TDS1002-FINAL-SPEC-REVIEW.md",
+      "sha256": "ae3a9761640c70455556fda758e401e79027e89f5733a78b04c545d972c9e545"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/review/TDS1002-ORACLE-CHECK.json",
+      "sha256": "fcb53a9ce5e59876d5e6f35879db61c9ec01c2a53d1c9cbe61f4e027d6588932"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/review/TDS1002-PRIMARY-AUDIT.md",
+      "sha256": "04dd54ff7e1cc097e56831dc9d32fcdcdd2e48b3c6ad0a742358aa05416efc6b"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/review/TDS1002-clearance.json",
+      "sha256": "40e9bd5dc8da6f91049439e0eff15231409634d7c1dab0d09ae2fb60578ab986"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/review/first-three-v2-clearance.json",
+      "sha256": "f181147741004451db63d0f74bcf5c839d7c2c221620e8220ae94f1648754ff7"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/review/module-clearance.json",
+      "sha256": "7448413f09837e12b82b7f6f8a6e17de416ae0b230506bd5437c7ee1c82ab0f3"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/33120A-frequency-table.png",
+      "sha256": "ebcfe1cba2ade2403d1cd6ecfd3b0df7be8fc73c3571ca0dd70ceba1aee9022f"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/33120A-v2.md",
+      "sha256": "d3af6c71d928e86f1b6ab3c72049ed45875648bbc9d214da3ad601e008ac2d6d"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/34401A.md",
+      "sha256": "284b1240387416e59013d3226446e46b836055ea0dde255ab71b53a6540c5040"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/34922A.md",
+      "sha256": "1554ce40c8cd0d7af1d5669b2ec2e242e909bd3a6a3852b23bfec7409d75f828"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/34937A.md",
+      "sha256": "ec03077958e51ae9e861625e6ddf711b6ba74a4f2d1d3216cc5f1884f149e017"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/34950A.md",
+      "sha256": "c9077065532d3d399d8f63f4bef45824d3285c545c3bc22aec3c9168e18e7f80"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/34980A.md",
+      "sha256": "a08139df7ade38f09479248bec2c1f0e05dbc51ecd0cdd4573e24e05822c64d6"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/3585B.md",
+      "sha256": "e5a65c7e63b46e9342600ef52443c5868bbb4e760416a3e1ad4c23e576f7ce62"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/53132A.md",
+      "sha256": "4d241e392c4176c4de5fc031710770c1a28cdb1cdb93f21e68807658a43ddad2"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/API-GAPS.md",
+      "sha256": "7c4239df7ecc4f35c200d34db6f49e28fa8555d3110f3523737f8446918364e5"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/COMPOSITION-AND-VALIDATION.md",
+      "sha256": "9102985c328ea1c7bf8fa5aac7468727495849d79b5a560e57b0fcf4496afad6"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/MODULE-COMPOSITION.md",
+      "sha256": "77c5365fe91014831cab5e8785a5d1d35f3e07221c5bd14e7dd92c99bbe01d20"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/ORACLE-PROVENANCE.json",
+      "sha256": "9ed3238d74cb3ca80cad043f308a5ef35d9b0bfa04f21421b89cd42839015b0a"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/TDS1002-COMPOSITION.md",
+      "sha256": "1b1cffe2e59c810ce7cc049a4bd579adbcf65718017a51df575d674e92ba904f"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/TDS1002-EXAMPLES.md",
+      "sha256": "82f879dc7625aa524fdaded09eea2c513b8c512346624d40baeb4d6b6d70d223"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/TDS1002.md",
+      "sha256": "ad1258bac027c6628d47ef8db492acb5b83879f9b2eece12e076aaacaffc2926"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/acceptance/33120a-v2.catalog-cases.json",
+      "sha256": "3480025979cb23bb6b1eeddcd8338aeda8b17059be8d6088e6faba7a17f2fc13"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/acceptance/33120a.catalog-cases.json",
+      "sha256": "0fb56c481d12ce64a218f84656016528d37f4e80519959ff69f9d390fe278b8e"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/acceptance/34401a.catalog-cases.json",
+      "sha256": "25fcc91db91dc2a7561c34fc2166587478f5a5085e27bce3c41b236843354a4d"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/acceptance/34922a.catalog-cases.json",
+      "sha256": "76ebef1cd70b9f86b39120b7e6052da0ca3f8057df4e06706149816d0641afba"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/acceptance/34937a.catalog-cases.json",
+      "sha256": "8d211f0c7700ec6738f49c4b4f13f4dc6fa6420cf122a85f53c940e8e7c8b45c"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/acceptance/34950a.catalog-cases.json",
+      "sha256": "757e03356aeb61094497109f31ceff6bc32a86975cafe0e456b0d33409cff2dc"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/acceptance/34980a.catalog-cases.json",
+      "sha256": "7684962def9851c5703a11c5c166ef732f359d39cdb0c0b27ff8fd1eee78e350"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/acceptance/3585b.catalog-cases.json",
+      "sha256": "6a132d6920b2a816db7d7e2e3b78942f22ad840eaa35af80dbff0a6dcbfa949c"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/acceptance/53132a.catalog-cases.json",
+      "sha256": "7371322c6497bbe1b027ab14c7cfad8aab50d8f78d69e874afd2e8656f6e8e0f"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/acceptance/build-33120a-v2-oracle.py",
+      "sha256": "ab8de0d801cff0f8ae4892ab74cf15a1c95d031a4e1985289f606717108a6de4"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/acceptance/build-3585b-oracle.py",
+      "sha256": "0f757b5ee4f4108b8d1136340a70a652e526fbbe078dffda18f95b5f4d58821e"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/acceptance/build-first-three-oracles.py",
+      "sha256": "9c9ad9bab1b76a4ef51b06d8c75dbc69549ac587f5d8bd1d65f53aeeced82ffe"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/acceptance/build-module-oracles.py",
+      "sha256": "d667f837584874b09cf21938a223f576da6cdf456e211f82bd0853ad0b6b85a5"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/acceptance/build-tds1002-oracle.py",
+      "sha256": "f455dbffa6200864547b27cdfe252554e79d072b7bdef8dccbd3c8572c9311b1"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/acceptance/fixture-inventory.json",
+      "sha256": "45b98bce906e9811a18d8543adacc4d321572ef1db36216599c4ffd017806539"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/acceptance/tds1002-fixture.json",
+      "sha256": "02b7d1231742b2adc55fff78e6358fd80541d085f2b2a6004f735e4480e78bd6"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/acceptance/tds1002.catalog-cases.json",
+      "sha256": "7d715c1416e65ffe60ae273732985f090cb569a23fa24be4ee8f91f535491393"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/acceptance/tds1002.provenance.json",
+      "sha256": "63be0ee7fdfca734d2ac31c5a28b558860d4506a403b5d5ab778a406f447d308"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/spec/tds1002-freeze-v1.json",
+      "sha256": "3ce6d795256b059f9c91a7c001568c65e8d56655737af717d65ffb9d4a9ca7e3"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/research/33120A-user.pdf",
+      "sha256": "3dd6d075bd05cc8efb86846b826656ba3548aba8c621b7045fb1c3a2a167d668"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/research/34401A-user.pdf",
+      "sha256": "ea7ec922d14aafce23ec7058e37bcf0ccd192423f70d75ccdf6350382ae3b419"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/research/34922A-user.pdf",
+      "sha256": "dcbfa4cac94b638ee737d75788f868536a61bdd7d6fd54178c4560c9ef75477b"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/research/34937A-user.pdf",
+      "sha256": "e96211bb871177b4d9e569e524529ce0b82569e0457decdf7f4e0f58191da926"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/research/34950A-user.pdf",
+      "sha256": "6d205a242001e4643d1a996a4910dbc3db383aded6689698ad1bc2f56ec1bdd6"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/research/34980A-mainframe.pdf",
+      "sha256": "278ee557fbdd85f59e1b87bdeabedbf9bdb0dc4151784b4d9677396094934cbf"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/research/34980A-programming.pdf",
+      "sha256": "60677f5cfc8c2d9339d8b1a871e168fab39256c6da34fee0ffa8cf276c75ac69"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/research/3585B-operating.pdf",
+      "sha256": "ac28f40bf94e7ef6f411f616d014d487b1ae3bf2043c1595f756fa118feab009"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/research/53132A-programming.pdf",
+      "sha256": "43b7e12210c503c59acdfea728bafdf66e4c5f284009b6470ee8264b593aa703"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/research/TDS1002-programmer-071107504.pdf",
+      "sha256": "659af48133a18ed9e0d5c3d16d5657a291edb15b3f71f69848473e9496d9d028"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/research/TDS1002-programmer-077044401.pdf",
+      "sha256": "e8f252e2709ff20f9593f90731851a5028946481a5553e4fed548364c52d9c71"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/research/TDS1002-supplement-071185801.pdf",
+      "sha256": "2f314ea93a9e6a00ad15c7990eb038d7caf4329c946099207654e68c8144574f"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/research/TDS1002-user-071106400.pdf",
+      "sha256": "4367b631e30b285bf3810b65df3bbf4a484ec8ebf9b1cbade60a7f03441a66f3"
+    }
+  ]
+}

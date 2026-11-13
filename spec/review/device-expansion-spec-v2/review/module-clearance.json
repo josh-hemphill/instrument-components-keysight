@@ -1,0 +1,77 @@
+{
+  "reviewer": "expansion_spec_reviewer",
+  "stage": "independent module specification/oracle review before Council",
+  "decision": "CLEAR_FOR_COUNCIL_SPEC_REVIEW",
+  "scope": [
+    "34980A",
+    "34937A",
+    "34922A",
+    "34950A"
+  ],
+  "requiredCurrentChanges": [],
+  "files": [
+    {
+      "path": "spec/34980A.md",
+      "sha256": "a08139df7ade38f09479248bec2c1f0e05dbc51ecd0cdd4573e24e05822c64d6"
+    },
+    {
+      "path": "spec/34937A.md",
+      "sha256": "ec03077958e51ae9e861625e6ddf711b6ba74a4f2d1d3216cc5f1884f149e017"
+    },
+    {
+      "path": "spec/34922A.md",
+      "sha256": "1554ce40c8cd0d7af1d5669b2ec2e242e909bd3a6a3852b23bfec7409d75f828"
+    },
+    {
+      "path": "spec/34950A.md",
+      "sha256": "c9077065532d3d399d8f63f4bef45824d3285c545c3bc22aec3c9168e18e7f80"
+    },
+    {
+      "path": "spec/MODULE-COMPOSITION.md",
+      "sha256": "77c5365fe91014831cab5e8785a5d1d35f3e07221c5bd14e7dd92c99bbe01d20"
+    },
+    {
+      "path": "spec/acceptance/34980a.catalog-cases.json",
+      "sha256": "7684962def9851c5703a11c5c166ef732f359d39cdb0c0b27ff8fd1eee78e350"
+    },
+    {
+      "path": "spec/acceptance/34937a.catalog-cases.json",
+      "sha256": "8d211f0c7700ec6738f49c4b4f13f4dc6fa6420cf122a85f53c940e8e7c8b45c"
+    },
+    {
+      "path": "spec/acceptance/34922a.catalog-cases.json",
+      "sha256": "76ebef1cd70b9f86b39120b7e6052da0ca3f8057df4e06706149816d0641afba"
+    },
+    {
+      "path": "spec/acceptance/34950a.catalog-cases.json",
+      "sha256": "757e03356aeb61094497109f31ceff6bc32a86975cafe0e456b0d33409cff2dc"
+    },
+    {
+      "path": "spec/acceptance/fixture-inventory.json",
+      "sha256": "45b98bce906e9811a18d8543adacc4d321572ef1db36216599c4ffd017806539"
+    },
+    {
+      "path": "spec/acceptance/build-module-oracles.py",
+      "sha256": "d667f837584874b09cf21938a223f576da6cdf456e211f82bd0853ad0b6b85a5"
+    }
+  ],
+  "findingsResolved": [
+    "SeparateperchannelneutralSwitch operations avoid inventedmatrixpairs; no globalOpenAll onpartialinventory",
+    "Oneparentfactory/session/lease sharesrouting/digitaltransactionordering,healthandownership",
+    "34922two35latchingbanks and34937FormCNCsemantics independentlyverified fromactualownmodelmanualpages",
+    "34950widthqueryactualnumeric1/2/4, directionINP/OUTP, polarityNORM/INV, handshakeHIMP/OFF/ON andmemory0/1 ReturnFormats checked againstactualprogrammerPDF160\u2013184,596\u2013597,773\u2013774",
+    "Allfourbankwidthguards preventnonanchorbyteoperations bypassing adjacentWORD/LWOR;guardqueriesdo notchangeotherports",
+    "SENSEpreservesdirection/outputlatchandSOURCEwriteimplicitOUT understood; admittedfrozendirectionwithguardsavoidsconcealedtransitions",
+    "Fixedinputthreshold2.5/outputActive3.3policymanual-valid andexactbinary64readbackequality scopedtofixedsettings",
+    "NoAutonomousActions lifetimecommissioning nowexplicitlyexcludesMonitor/route-sequences/armedINTR/pattern/buffer/counteractions;guardreadbackdoesnotprovefuturephysicalstability",
+    "195goldencases inspected withuniqueIDs,exacttraffics andoneexpectedresult/error;fixturecommissionaffirmationmatchesnormativeNoAutonomousActions",
+    "M-PROC01..15concretebothlanguagecoverage forslot/localboundaries/immutableinventory/endpointroutecaps/sharedlease/quarantine/actualpendingIO/ownership andNativeAOTfeeds/matrix"
+  ],
+  "limitations": [
+    "Manual/simulatorsoftwaredesignonly,nophysicalbenchvalidation",
+    "34922scalarDMMacquisition/scan,analogbusrouting and34950wide/buffer/counter/direction/electricalsettings remainexplicitlydeferred",
+    "Per-modelandper-moduleproceduralproofandrealpacked/nativeexecutions required atimplementationstage",
+    "Initialfixed2.5Vinput/3.3VActiveoutputandnoautonomousactions requireexternaltruthfulcommissioning,notautodetectionorelectricalprotection",
+    "No newer-neutral-API proofmayuseoldSDK652producer;finalmodulequalificationrequiresnewcompatibleimmutableproducer/toolpins"
+  ]
+}

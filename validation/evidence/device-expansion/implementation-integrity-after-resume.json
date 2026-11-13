@@ -1,0 +1,8 @@
+{
+  "manifestSha256": "43d87036abe94ce53c2d98db9e8c6ae4a74c149cb2f65c01f9ba973766794dd6",
+  "verifiedBoundFiles": 1316,
+  "missing": [],
+  "changed": [],
+  "observedAt": "2026-11-13T20:05:21.177377+00:00",
+  "reason": "Verify preservation after transient environment starting/ready transition"
+}

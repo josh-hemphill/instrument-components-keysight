@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-13",
+  "model": "TDS1002 (exact user correction; no A/B alias)",
+  "sources": [
+    {
+      "file": "TDS1002-programmer-071107504.pdf",
+      "sha256": "659af48133a18ed9e0d5c3d16d5657a291edb15b3f71f69848473e9496d9d028",
+      "bytes": 1042580,
+      "pages": 346,
+      "partNumber": "071-1075-04",
+      "edition": "Revision04; official landing release2006-10-04",
+      "sourceUrl": "https://download.tek.com/manual/071107504.pdf",
+      "officialLandingUrl": "https://www.tek.com/en/oscilloscope/tds210-manual/tds200-tds1000-tds2000-tds1000b-tds2000b-and-tps2000-programmer",
+      "applicability": "Primary qualifying programmer manual; cover and tables17/18/21 explicitly include non-BTDS1000 with communications module."
+    },
+    {
+      "file": "TDS1002-user-071106400.pdf",
+      "sha256": "4367b631e30b285bf3810b65df3bbf4a484ec8ebf9b1cbade60a7f03441a66f3",
+      "bytes": 1300897,
+      "pages": 206,
+      "partNumber": "071-1064-00",
+      "edition": "Revision00; cover FV:v1.00 and above",
+      "sourceUrl": "https://download.tek.com/manual/071106400.pdf",
+      "officialLandingUrl": "https://www.tek.com/en/oscilloscope/tds1002-manual/tds1000-and-tds2000-series-user-manual",
+      "applicability": "Own-model manual: product tablePDF20 explicitly names TDS1002; communicationschapterPDF145ff qualifies TDS2CMA; scalar own-model examplePDF165."
+    },
+    {
+      "file": "TDS1002-programmer-077044401.pdf",
+      "sha256": "e8f252e2709ff20f9593f90731851a5028946481a5553e4fed548364c52d9c71",
+      "bytes": 1806382,
+      "pages": 265,
+      "partNumber": "077-0444-01",
+      "edition": "Revision01; later corroborating manual, not required for initial qualifying commands",
+      "sourceUrl": "https://download.tek.com/manual/077044401web.pdf",
+      "officialLandingUrl": "https://www.tek.com/en/oscilloscope/tds1000-manual",
+      "applicability": "Later shared primary manual; use only own-applicable non-B sections, not B/C/TPS-only functions."
+    },
+    {
+      "file": "TDS1002-supplement-071185801.pdf",
+      "sha256": "2f314ea93a9e6a00ad15c7990eb038d7caf4329c946099207654e68c8144574f",
+      "bytes": 108504,
+      "pages": 8,
+      "partNumber": "071-1858-01",
+      "edition": "Revision01; user-manual specifications supplement",
+      "sourceUrl": "https://download.tek.com/manual/071185801.pdf",
+      "officialLandingUrl": "https://www.tek.com/en/oscilloscope/tds1002-manual/tds1000-and-tds2000-series-supplement",
+      "applicability": "Primary supplementary specification updates; no new interface assumption."
+    }
+  ],
+  "evidenceScope": "Manual/source-derived software support; no hardware observation. Supplemental to prior frozen Agilent sources; earlier packets unchanged.",
+  "supplementalToolEvidence": {
+    "file": "TDS1002-FAQ-tool-evidence.json",
+    "sha256": "e34677c525b17c5061b77efef2c46cf098d7854e74b85285445b1c1c0b555573",
+    "type": "Retained web-tool result, not raw page HTML. Includes successful CMAX/MEM manufacturer FAQ reads and an explicitly failed retry of the CM/CMA FAQ. Primary manual tables independently establish the interfaces."
+  }
+}

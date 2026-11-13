@@ -1,0 +1,2790 @@
+{
+  "schemaVersion": 1,
+  "contractMajor": 1,
+  "description": "Independent own-manual diagram-derived SYNTHETIC native traffic; no observed hardware transcript. CL-only marker prelude; stored peak semantics.",
+  "cases": [
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-1",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetCenterFrequency",
+          "arguments": {
+            "hz": 1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CF1HZ"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-10000000",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetCenterFrequency",
+          "arguments": {
+            "hz": 10000000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CF10000000HZ"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-40100000",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetCenterFrequency",
+          "arguments": {
+            "hz": 40100000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CF40100000HZ"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetSpan-1",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetSpan",
+          "arguments": {
+            "hz": 1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "FS1HZ"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetSpan-5000",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetSpan",
+          "arguments": {
+            "hz": 5000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "FS5000HZ"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetSpan-40100000",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetSpan",
+          "arguments": {
+            "hz": 40100000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "FS40100000HZ"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-3",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRbw",
+          "arguments": {
+            "hz": 3
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "RB3HZ"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-10",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRbw",
+          "arguments": {
+            "hz": 10
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "RB10HZ"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-30",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRbw",
+          "arguments": {
+            "hz": 30
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "RB30HZ"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-100",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRbw",
+          "arguments": {
+            "hz": 100
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "RB100HZ"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-300",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRbw",
+          "arguments": {
+            "hz": 300
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "RB300HZ"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-1000",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRbw",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "RB1000HZ"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-3000",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRbw",
+          "arguments": {
+            "hz": 3000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "RB3000HZ"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-10000",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRbw",
+          "arguments": {
+            "hz": 10000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "RB10000HZ"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-30000",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRbw",
+          "arguments": {
+            "hz": 30000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "RB30000HZ"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-1",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetVbw",
+          "arguments": {
+            "hz": 1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "VB1HZ"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-3",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetVbw",
+          "arguments": {
+            "hz": 3
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "VB3HZ"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-10",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetVbw",
+          "arguments": {
+            "hz": 10
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "VB10HZ"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-30",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetVbw",
+          "arguments": {
+            "hz": 30
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "VB30HZ"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-100",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetVbw",
+          "arguments": {
+            "hz": 100
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "VB100HZ"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-300",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetVbw",
+          "arguments": {
+            "hz": 300
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "VB300HZ"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-1000",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetVbw",
+          "arguments": {
+            "hz": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "VB1000HZ"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-3000",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetVbw",
+          "arguments": {
+            "hz": 3000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "VB3000HZ"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-10000",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetVbw",
+          "arguments": {
+            "hz": 10000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "VB10000HZ"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-30000",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetVbw",
+          "arguments": {
+            "hz": 30000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "VB30000HZ"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|reference--70.0",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRefLevel",
+          "arguments": {
+            "dbm": -70
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "RL-70.0DM"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|reference--20.1",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRefLevel",
+          "arguments": {
+            "dbm": -20.1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "RL-20.1DM"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|reference-0.0",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRefLevel",
+          "arguments": {
+            "dbm": -0.0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "RL0.0DM"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|reference-40.0",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRefLevel",
+          "arguments": {
+            "dbm": 40
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "RL40.0DM"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-invalid-0",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetCenterFrequency",
+          "arguments": {
+            "hz": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-invalid-1",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetCenterFrequency",
+          "arguments": {
+            "hz": -1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-invalid-2",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetCenterFrequency",
+          "arguments": {
+            "hz": 1.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-invalid-3",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetCenterFrequency",
+          "arguments": {
+            "hz": 40100001
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetSpan-invalid-0",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetSpan",
+          "arguments": {
+            "hz": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetSpan-invalid-1",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetSpan",
+          "arguments": {
+            "hz": -1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetSpan-invalid-2",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetSpan",
+          "arguments": {
+            "hz": 1.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetSpan-invalid-3",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetSpan",
+          "arguments": {
+            "hz": 40100001
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-invalid-0",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRbw",
+          "arguments": {
+            "hz": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-invalid-1",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRbw",
+          "arguments": {
+            "hz": 1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-invalid-2",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRbw",
+          "arguments": {
+            "hz": 2
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-invalid-3",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRbw",
+          "arguments": {
+            "hz": 5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-invalid-4",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRbw",
+          "arguments": {
+            "hz": 30001
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-invalid-0",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetVbw",
+          "arguments": {
+            "hz": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-invalid-1",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetVbw",
+          "arguments": {
+            "hz": 2
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-invalid-2",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetVbw",
+          "arguments": {
+            "hz": 5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-invalid-3",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetVbw",
+          "arguments": {
+            "hz": 30001
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3585b|E|reference-invalid-0",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRefLevel",
+          "arguments": {
+            "dbm": -70.1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3585b|E|reference-invalid-1",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRefLevel",
+          "arguments": {
+            "dbm": 40.1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3585b|E|reference-invalid-2",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRefLevel",
+          "arguments": {
+            "dbm": 0.15
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3585b|E|reference-invalid-3",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRefLevel",
+          "arguments": {
+            "dbm": 0.10000000000000002
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.hp3585b|E|stored-peak",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerPeak",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "write",
+          "message": "SP"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-X-ordinary",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  1000000.0,-  20.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1000000,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-Y-ordinary",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  1000000.0,-  20.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": -20,
+        "unit": "Dbm",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-X-zero",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+        0.0,+   0.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-Y-zero",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+        0.0,+   0.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Dbm",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-X-upper",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+ 40100000.0,+  30.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 40100000,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-Y-upper",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+ 40100000.0,+  30.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 30,
+        "unit": "Dbm",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-X-negative-zero",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "-        0.0,-   0.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-Y-negative-zero",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "-        0.0,-   0.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Dbm",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-X-full-digit-syntax",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+040100000.0,-0020.25E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 40100000,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-Y-full-digit-syntax",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+040100000.0,-0020.25E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": -20.25,
+        "unit": "Dbm",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-X-reject-short",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  1000000.0,-  20.00E-"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-Y-reject-short",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  1000000.0,-  20.00E-"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-X-reject-long",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  1000000.0,-  20.00E-0 "
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-Y-reject-long",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  1000000.0,-  20.00E-0 "
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-X-reject-trailing-frame",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  1000000.0,-  20.00E-0\r\n"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-Y-reject-trailing-frame",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  1000000.0,-  20.00E-0\r\n"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-X-reject-csv",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  1000000.0,-  20.00E-0,0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-Y-reject-csv",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  1000000.0,-  20.00E-0,0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-X-reject-leading-space",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "   1000000.0,-  20.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-Y-reject-leading-space",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "   1000000.0,-  20.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-X-reject-freq-no-sign",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "0  1000000.0,-  20.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-Y-reject-freq-no-sign",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "0  1000000.0,-  20.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-X-reject-freq-tab",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+\t 1000000.0,-  20.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-Y-reject-freq-tab",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+\t 1000000.0,-  20.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-X-reject-freq-internal-space",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  10 0000.0,-  20.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-Y-reject-freq-internal-space",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  10 0000.0,-  20.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-X-reject-freq-no-point",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  100000000,-  20.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-Y-reject-freq-no-point",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  100000000,-  20.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-X-reject-freq-negative",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "-  1000000.0,-  20.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-Y-reject-freq-negative",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "-  1000000.0,-  20.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-X-reject-freq-outside",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+ 40100000.1,-  20.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-Y-reject-freq-outside",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+ 40100000.1,-  20.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-X-reject-comma",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  1000000.0;-  20.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-Y-reject-comma",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  1000000.0;-  20.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-X-reject-amp-no-sign",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  1000000.0,   20.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-Y-reject-amp-no-sign",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  1000000.0,   20.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-X-reject-amp-internal-space",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  1000000.0,- 2 0.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-Y-reject-amp-internal-space",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  1000000.0,- 2 0.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-X-reject-amp-no-point",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  1000000.0,-  20000E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-Y-reject-amp-no-point",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  1000000.0,-  20000E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-X-reject-amp-lower-e",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  1000000.0,-  20.00e-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-Y-reject-amp-lower-e",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  1000000.0,-  20.00e-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-X-reject-amp-exponent",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  1000000.0,-  20.00E-1"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-Y-reject-amp-exponent",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  1000000.0,-  20.00E-1"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-X-reject-amp-positive-exp",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  1000000.0,-  20.00E+0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-Y-reject-amp-positive-exp",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  1000000.0,-  20.00E+0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-X-reject-unicode",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  1000000.0,-  \uff12\uff10.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-Y-reject-unicode",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "+  1000000.0,-  \uff12\uff10.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-X-reject-binary",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "#224+  1000000.0,-  20.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|marker-Y-reject-binary",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "response": "#224+  1000000.0,-  20.00E-0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-failure-0-Transport",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetCenterFrequency",
+          "arguments": {
+            "hz": 10000000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CF10000000HZ",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-failure-0-Timeout",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetCenterFrequency",
+          "arguments": {
+            "hz": 10000000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CF10000000HZ",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetSpan-failure-0-Transport",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetSpan",
+          "arguments": {
+            "hz": 5000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "FS5000HZ",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetSpan-failure-0-Timeout",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetSpan",
+          "arguments": {
+            "hz": 5000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "FS5000HZ",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-failure-0-Transport",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRbw",
+          "arguments": {
+            "hz": 30
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "RB30HZ",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-failure-0-Timeout",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRbw",
+          "arguments": {
+            "hz": 30
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "RB30HZ",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-failure-0-Transport",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetVbw",
+          "arguments": {
+            "hz": 10
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "VB10HZ",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-failure-0-Timeout",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetVbw",
+          "arguments": {
+            "hz": 10
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "VB10HZ",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRefLevel-failure-0-Transport",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRefLevel",
+          "arguments": {
+            "dbm": -20
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "RL-20.0DM",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRefLevel-failure-0-Timeout",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRefLevel",
+          "arguments": {
+            "dbm": -20
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "RL-20.0DM",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerMarkerPeak-failure-0-Transport",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerPeak",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerMarkerPeak-failure-0-Timeout",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerPeak",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerMarkerPeak-failure-1-Transport",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerPeak",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "write",
+          "message": "SP",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerMarkerPeak-failure-1-Timeout",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerPeak",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "write",
+          "message": "SP",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerMarkerX-failure-0-Transport",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerMarkerX-failure-0-Timeout",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerMarkerX-failure-1-Transport",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerMarkerX-failure-1-Timeout",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerMarkerY-failure-0-Transport",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerMarkerY-failure-0-Timeout",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerMarkerY-failure-1-Transport",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.hp3585b|E|SpectrumAnalyzerMarkerY-failure-1-Timeout",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "CL"
+        },
+        {
+          "kind": "query",
+          "message": "D2,T6",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    }
+  ]
+}

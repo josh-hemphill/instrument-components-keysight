@@ -1,0 +1,49 @@
+# TDS1002 independent primary-source audit
+
+This review follows the user's correction to exact **TDS1002**, without A/B. It does not amend or relabel earlier frozen packets. Reviewer: expansion_spec_reviewer; no production edits or hardware operations.
+
+Primary qualifying programmer manual071-1075-04, officialhttps://download.tek.com/manual/071107504.pdf, SHA256659af48133a18ed9e0d5c3d16d5657a291edb15b3f71f69848473e9496d9d028. Own-model user manual071-1064-00, officialhttps://download.tek.com/manual/071106400.pdf, SHA2564367b631e30b285bf3810b65df3bbf4a484ec8ebf9b1cbade60a7f03441a66f3. Later077-0444-01and071-1858-01arecorroboration whereown-modelapplicable,notlicense toinheritB/C/TPS-onlycommands. AllactualPDFhashes/editions are inresearch/TDS1002-SOURCES.json.
+
+## Exact communication and model boundary
+
+The qualifying programmer's cover and printed1-1/1-2/2-1(PDF17/18/21) include non-BTDS1000 models using optional communications modules. Its front-matter convention explicitly includesTDS2CM andTDS2CMAX when referring toTDS2CMA. CM/CMA/CMAX admitGPIBandRS232; MEMadmitsRS232butnotGPIB. NativeUSB is not aTDS1002interface; B-seriesUSB andTEK-USB-488 documentation do not qualifyit. InitialGPIB-onlysupport canadmitexactcommissionedCM/CMA/CMAX enumvalues and explicitlydefer serialtransportwithoutclaimingserialhardwareabsence.
+
+Use a separate exactTDS1002factory in the externalTektronixrepo, noMDO/Agilentgenericcommandreuse, noTDS1002A/Balias, no inventedUSBVID/PID. Registration/openmustremainpassive. Keep onephysicalhandle andsharedlease acrossallneutralOscilloscope views.
+
+Printed2-8/PDF28statesLF+EOIresponseframing; hostmustremoveonlyframingandpreserveargumentbody. Requiresfinitepositivehostdeadlines/boundedallocation,completequeryreadbeforeanotherquery,noautomaticretry/drain/reset/deviceclear. The communicationsmodulechoice,correcthost/wiringandinitialcleanmessageboundaryareexternalcommissioningfacts.
+
+## Headers and keyword length are separate state
+
+HEADer(p2-133/PDF153) controlsresponseheaders, notIEEEcommoncommands. VERBose(p2-241/PDF261) controlskeywords in BOTHheadersandarguments. HEADerOFFalone cannot guarantee canonicalfullSAMPLE/SEQUENCEdiscretevalues. A concreteplan should normalizeHEADerOFF andVERBoseONinsideeachserializedoperationorparsebothqualifiedshort/longvariants. Documentthesecommandsas persistentglobalcommunicationformatmutations;do notsilentlyrestore/dowirecleanupafterfailure. Nativequeryconsumersmustnotstriparbitraryheaders inways thatwouldmakemalformedpayloadacceptable.
+
+## Current record versus fresh capture
+
+MEASUrement:IMMed:VALue?(p2-162/PDF182) executes the selectedmeasurementoncurrentacquiredwaveform; it doesnotbyitselfinitiateanewacquisition. The synchronizationexample(p3-11/12) explicitly distinguishesacquisitioncompletionfrommeasurementprocessing.
+
+ACQuire:STATE RUNresetsacquisitioncount/restartssequence(p2-49/50/PDF69/70). WithSTOPAfterSEQuence,theoscilloscopestopsaftermode-appropriateacquisitions:singlewaveforminSample/PeakDetect, configuredmultiplewaveformsinAverage(p2-50/51). Themanualexplicitlyrecommends*OPC?overSTATE?orTRIGger:STATE?toestablishsingle-sequencecompletion(p2-49,p2-239). Itscompleteexampleisp2-169/170(PDF189/190):STOPAfterSEQUENCE,STATEON,*OPC?returns1aftercompletion. *OPC?returns1immediatelyifnoneofthelistedoperationsispending;merelyqueryingitwithoutstartinganewsequenceisnotfreshnessproof. Unlike*OPC,*OPC?doesnotsettheESROPCbit.
+
+NUMACq?(p2-47/48/PDF67/68) returnsacquisitionssincestart,maximum2^31-1;itresetswithmanyconfigurationchangesandisalwayszeroinScanmode. AUTOtriggerat100ms/divorslowerenablesScan(p2-229,userp92);normaltriggerwaitsforvalidtrigger. The specificationmustchooseexplicitfreshness/readinesssemantics,notclaimfreshautoqueryfromstoreddata. Ifitnormalizessinglesequenceandsamplemode,documentthatmeasurementdiscardspriorin-flightcaptureandendsstopped,withoutrestoringpreviousrunningstate. Ifitpreservescapturestate,itmusthonestlylabelcurrent-recordsemanticsinstead.
+
+TriggerView,XYandScaninvalidateimmediatemeasurements. Neverimplicitlyenablechannelsorchangeexternalinputconditionsunderanapparentlypassive-readclaim. Eitherrequire/guardconditionsorstateintentionalnormalizationconcretely. Activependingacquisitionmusttimeoutevenwithnomatchingtrigger; don'treplacefinitehostdeadlineproofwithimmediatelyinjectedTimeout.
+
+## Units, invalid result and warnings
+
+Use MEASUrement:IMMed:SOUrce CH1/CH2 withoutborrowedSOURCE2/mathfeatures. TheoldermanualhasanawkwardSOURCE1syntaxannotationforB/TPS,butitsownexampleusesSOURCECH1;latercorroboration077-0444-01explicitlymarks[1]optional. PlainSOURCEissuitablecommonverifiedgrammar.
+
+MEASUrement:IMMed:UNIts?(p2-161/PDF181) returnsquotedQString"V","s"or"Hz" fornon-Bdevices. Inparticularfrequencyis"Hz",notbareHZ. CH<x>:YUNitisB/TPS-only(p2-71);donotsendittotheTDS1002. Probeattenuation1/10/100/1000isnon-Bsupported;20/50/500areB/TPS-only(p2-69). Physicalprobeandselectedattenuationmustagreeexternally.
+
+ImmediateVALUEreturnsNR3andpositive9.9E37forunavailablemeasurements(invisiblesourcechannel,Scan/XY/TriggerView,etc.). This isinvalid/notavailable, notphysicaloverload. ReturnDevice/quarantineorspecifyanhonestunavailablestatus;do notreturnValid9.9e37orOverload. Vppmaylegitimatelybezero;frequencyshouldbe strictlypositiveunderasuccessfulfrequencycontract. Grammar/finite/wholebody andunitsmustmatchbothlanguages.
+
+AfiniteVALUEdoesnotaloneproveabsenceofmeasurementwarnings. p2-162/163recommends*ESR?withEVENT?/ALLEv?tochecksuccess. Executionwarnings541lowamplitude,543lowresolution,547–549clippingareEXEbit4(p3-23/24,PDF309/310). IfthespecificationchecksESR0asqualityevidence, itmustqualifyDESE/DESER: thismaskfiltersbothSESRandeventqueue(p2-94/95,3-4/5),andmaypersistthroughpowercycleswith*PSC0. RequireDESE?255guardorannounceexplicitmasknormalization;otherwiseESR0canhideerrors. ReadingESRclearsSESRanderasesolderunreadqueueevents(p3-7/PDF293),whichis a real documentedsideeffect. No*CLS/eventdrainshouldbeinferredasautomaticrecovery. Alternativelyscopeclaimsstrictlytonumeric/units/currentrecordswithoutclaimingwarning-freequality,butmake thelimitationexplicit.
+
+## Model limits and useful initial scope
+
+UsermanualAppendixAqualifiesTDS1002timebase5ns/div..50s/divin1/2.5/5steps. HORizontal:MAIn:SCAle(p2-138)roundsotherinputs;aninitialsoftwarecontractcansupportonlycanonicalnominalstepswithstaticallyidenticalRust/C#wireformatandpreIOrejectionofneighbors. Readmain-timescalemeansmain,notwindowview.
+
+VerticalBNCscale2mV/div..5V/divisfor1X;probeattenuationchangesadmittedscaledunits(p2-69/70). Do notblindlyacceptthatfixedphysicalscaleunderunknown10Xprobe. Eitherfreeze/verifyprobeattenuationandderivebounds,orexplicitlydeferverticalconfiguration. VppmeasurementshouldverifyvoltageunitsratherthanuseB-onlychannelYUNit.
+
+Ausefulinitialsubsetcancombinefresh/current-recordVpp/frequencywithboundedmain-timebaseandexplicitRun/Stop/Singlebehavior,dependingonthefinalspecification'ssideeffectchoice. Unsupportedtriggers/waveforms/binarytraces/reset/shutdownmustremainabsentfromcapabilitiesuntilderivedandreviewed. Noelectricalprotection,bandwidth/calibrationorhardwarebenchclaimfollowsfromsuccessfulsimulation.
+
+## Required next review
+
+Freezeconcretefactory/binding/module/commissioningtypes,per-operationexacttraffic,token/numeric/errorpolicies,acquisitionstateandqualitysideeffects. Independentlyauthorgoldencasesfromthesepages,withseparateproceduralchecksforimmutable1..4096bindings,capabilitiesbeforenativeacquisition,allactualpendingwrite/querycancellation/deadlines,quarantine/ownershipandserializedwholeoperations. Source+packedRust/C#sync/native/workersandactualWindows/Linuxx64NativeAOTnet8/net10proofareimplementation-stageacceptanceconditions,notclaimsestablishedbythisaudit.

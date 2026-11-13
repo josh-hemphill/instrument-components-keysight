@@ -1,0 +1,3 @@
+    Checking instrument-driver-keysight v0.2.0-alpha.1 (/workspace/scratch/instrument-components-expansion-20261113/source-proof-r12)
+    Checking keysight-package-proof v0.0.0 (/workspace/scratch/instrument-components-expansion-20261113/source-proof-r12/validation/rust)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 7.80s
