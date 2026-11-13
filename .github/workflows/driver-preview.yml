@@ -40,7 +40,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: josh-hemphill/instrument-components
-          ref: 26a349bfc4a3b86e5e1a21c004dab89fbffac104
+          ref: 4105d6659ad46b163ca9f252cc250b01fc5e0ba8
           path: .release-sdk
           sparse-checkout: tools/release-package.py
           sparse-checkout-cone-mode: false
@@ -72,7 +72,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: josh-hemphill/instrument-components
-          ref: 26a349bfc4a3b86e5e1a21c004dab89fbffac104
+          ref: 4105d6659ad46b163ca9f252cc250b01fc5e0ba8
           path: .release-sdk
           sparse-checkout: tools/release-package.py
           sparse-checkout-cone-mode: false
