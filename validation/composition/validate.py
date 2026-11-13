@@ -18,7 +18,7 @@ def source_sha(path):
  return hashlib.sha256(path.read_bytes().replace(b'\r\n',b'\n')).hexdigest()
 def configure_public_registry(env,out,dotnet):
  publicCargo=out/'public-cargo-home';publicCargo.mkdir();env['CARGO_HOME']=str(publicCargo)
- (dotnet/'NuGet.Config').write_text('<configuration><packageSources><clear/><add key="nuget" value="https://api.nuget.org/v3/index.json"/></packageSources></configuration>')
+ (dotnet/'NuGet.Config').write_text('<configuration><packageSources><clear/><add key="nuget" value="https://api.nuget.org/v3/index.json"/></packageSources></configuration>', encoding='utf-8')
 def audit_driver_nuget(archive,name):
  with zipfile.ZipFile(archive) as z:
   names=z.namelist()
@@ -38,16 +38,16 @@ def main():
  if out==ROOT or ROOT in out.parents or out in ROOT.parents:raise ValueError('Separate output directory required')
  if out.exists() and any(out.iterdir()):raise ValueError('Empty output directory required')
  if platform.system() not in ['Linux','Windows'] or platform.machine().lower() not in ['x86_64','amd64']:raise ValueError('Native x64 Linux/Windows required')
- out.mkdir(parents=True,exist_ok=True);feed=prepare(a.sdk_artifacts,out/'feeds');lock=json.loads((ROOT/'composition-lock.json').read_text());inputs=[]
+ out.mkdir(parents=True,exist_ok=True);feed=prepare(a.sdk_artifacts,out/'feeds');lock=json.loads((ROOT/'composition-lock.json').read_text(encoding='utf-8'));inputs=[]
  if not a.development_inputs:
-  provenance=json.loads((a.driver_artifacts/'verified-inputs.json').read_text())
+  provenance=json.loads((a.driver_artifacts/'verified-inputs.json').read_text(encoding='utf-8'))
   if provenance['lockSha256']!=sha(ROOT/'composition-lock.json'):raise ValueError('Input lock mismatch')
  registry=Path(feed['cargoRegistry']);nuget=Path(feed['nugetFeed'])
  for entry in lock['drivers']:
   vendor=entry['vendor'];source=a.sources/vendor;artifact=a.driver_artifacts/vendor
   for file,expected in entry['goldenFiles'].items():
    if source_sha(source/file)!=expected:raise ValueError('Golden source hash mismatch: '+vendor+'/'+file)
-  record=json.loads((artifact/'packages.json').read_text());expected={'instrument-driver-'+vendor:'crate','InstrumentComponents.Drivers.'+vendor.title():'nupkg'}
+  record=json.loads((artifact/'packages.json').read_text(encoding='utf-8'));expected={'instrument-driver-'+vendor:'crate','InstrumentComponents.Drivers.'+vendor.title():'nupkg'}
   if record['mode']!='pinned-sdk-artifact-bootstrap' or {r['package'] for r in record['driverPackages']}!=set(expected):raise ValueError('Unexpected driver package proof')
   for row in record['driverPackages']:
    found=list(artifact.rglob(row['file']))
@@ -55,7 +55,7 @@ def main():
    archive=found[0]
    if archive.name!=row['package']+'-'+VERSION+'.crate' and archive.name!=row['package']+'.'+VERSION+'.nupkg':raise ValueError('Unexpected version')
    if archive.suffix=='.crate':
-    extract(archive,registry);directory=registry/(row['package']+'-'+VERSION);cargo=tomllib.loads((directory/'Cargo.toml').read_text());deps=cargo.get('dependencies',{})
+    extract(archive,registry);directory=registry/(row['package']+'-'+VERSION);cargo=tomllib.loads((directory/'Cargo.toml').read_text(encoding='utf-8'));deps=cargo.get('dependencies',{})
     if set(deps)!={'instrument-api','instrument-scpi'} or any(d.get('version')!='='+VERSION or 'path' in d or 'git' in d for d in deps.values()):raise ValueError('Driver Rust dependency boundary')
     shipped={str(p.relative_to(directory)).replace('\\','/') for p in (directory/'src').rglob('*') if p.is_file()}|{'generated/profiles.rs'}
     if shipped!={k for k in entry['goldenFiles'] if k.startswith('src/') or k=='generated/profiles.rs'}:raise ValueError('Unmatched shipped Rust member')
@@ -63,7 +63,7 @@ def main():
      if source_sha(directory/file)!=entry['goldenFiles'][file]:raise ValueError('Packaged Rust implementation differs from locked source')
     if any('provenance' in part.parts or 'cases' in part.name.lower() for part in directory.rglob('*')):raise ValueError('Development assets bundled in driver')
     files={str(f.relative_to(directory)).replace('\\','/'):sha(f) for f in directory.rglob('*') if f.is_file()}
-    (directory/'.cargo-checksum.json').write_text(json.dumps(dict(files=files,package=row['sha256'])))
+    (directory/'.cargo-checksum.json').write_text(json.dumps(dict(files=files,package=row['sha256'])), encoding='utf-8')
    else:
     audit_driver_nuget(archive,row['package'])
     shutil.copy2(archive,nuget)
@@ -73,27 +73,27 @@ def main():
  for file in (ROOT/'dotnet').glob('*.cs'):shutil.copy2(file,dotnet/file.name)
  for entry in lock['drivers']:
   vendor=entry['vendor'];name=vendor.title();source=a.sources/vendor
-  text=(source/'validation/rust/src/main.rs').read_text().replace('include!("../../../generated/cases.rs");','include!("../generated/'+vendor+'-cases.rs");').replace('fn main() -> Result<()>','pub fn package_proof_main() -> Result<()>').replace('crate::', 'crate::'+vendor+'::')
+  text=(source/'validation/rust/src/main.rs').read_text(encoding='utf-8').replace('include!("../../../generated/cases.rs");','include!("../generated/'+vendor+'-cases.rs");').replace('fn main() -> Result<()>','pub fn package_proof_main() -> Result<()>').replace('crate::', 'crate::'+vendor+'::')
   if vendor=='keysight':
    text+='\npub fn composed_additions(io: &Script, native: bool) -> Result<Vec<Arc<dyn DriverFactory>>> { let mut seen=BTreeSet::new(); let mut all=Vec::new(); for case in generated_cases::cases() { let id=case.id.split("|").next().unwrap(); if ["keysight.34401a","keysight.33120a","keysight.53132a","keysight.hp3585b","keysight.34980a","keysight.hp5334a","keysight.hp5334b","keysight.hp3497a","keysight.hp8920a","keysight.hp8920b","keysight.hp8921a"].contains(&id) && seen.insert(id.to_owned()) {all.extend(case_factories(&case,io,native)?);} } assert_eq!(seen.len(),11); Ok(all) }\n'
   elif vendor=='tektronix':
    text+='\npub fn composed_additions(io: &Script, native: bool) -> Result<Vec<Arc<dyn DriverFactory>>> { Ok(vec![tds_fixture::factory(io,native)?]) }\n'
-  (rust/'src'/ (vendor+'.rs')).write_text(text);shutil.copy2(source/'generated/cases.rs',rust/'generated'/(vendor+'-cases.rs'))
+  (rust/'src'/ (vendor+'.rs')).write_text(text, encoding='utf-8');shutil.copy2(source/'generated/cases.rs',rust/'generated'/(vendor+'-cases.rs'))
   helpers=rust/'src'/vendor;helpers.mkdir()
   for file in sorted((source/'validation/rust/src').rglob('*.rs')):
    if file.name=='main.rs':continue
    target=helpers/file.relative_to(source/'validation/rust/src');target.parent.mkdir(parents=True,exist_ok=True)
-   target.write_text(file.read_text().replace('crate::','crate::'+vendor+'::'))
-  text=(source/'validation/dotnet/Program.cs').read_text().replace('await Proof.Run();','namespace CompositionProof.'+name+';').replace('GeneratedDrivers.','Generated'+name+'.')
-  (dotnet/(name+'Proof.cs')).write_text(text)
+   target.write_text(file.read_text(encoding='utf-8').replace('crate::','crate::'+vendor+'::'), encoding='utf-8')
+  text=(source/'validation/dotnet/Program.cs').read_text(encoding='utf-8').replace('await Proof.Run();','namespace CompositionProof.'+name+';').replace('GeneratedDrivers.','Generated'+name+'.')
+  (dotnet/(name+'Proof.cs')).write_text(text, encoding='utf-8')
   for file in sorted((source/'validation/dotnet').rglob('*.cs')):
    if file==source/'validation/dotnet/Program.cs' or {'obj','bin'} & set(file.parts):continue
    target=dotnet/name/file.relative_to(source/'validation/dotnet');target.parent.mkdir(parents=True,exist_ok=True)
-   target.write_text('namespace CompositionProof.'+name+';\n'+file.read_text().replace('GeneratedDrivers.','Generated'+name+'.'))
-  (dotnet/(name+'Cases.cs')).write_text((source/'generated/GeneratedCases.cs').read_text().replace('namespace GeneratedDrivers','namespace Generated'+name))
+   target.write_text('namespace CompositionProof.'+name+';\n'+file.read_text(encoding='utf-8').replace('GeneratedDrivers.','Generated'+name+'.'), encoding='utf-8')
+  (dotnet/(name+'Cases.cs')).write_text((source/'generated/GeneratedCases.cs').read_text(encoding='utf-8').replace('namespace GeneratedDrivers','namespace Generated'+name), encoding='utf-8')
  names=['instrument-components','instrument-api','instrument-runtime','instrument-scpi','instrument-testkit']+['instrument-driver-'+v for v in VENDORS]
- manifest='[package]\nname="all-device-composition"\nversion="0.0.0"\nedition="2021"\npublish=false\n[workspace]\n[dependencies]\n'+''.join(n+'="='+VERSION+'"\n' for n in names)+'tokio={version="1",features=["rt","macros","time","sync"],optional=true}\n[features]\ndefault=[]\nasync=['+','.join(json.dumps(n+'/async') for n in names)+',"dep:tokio"]\n';manifest+='[profile.release.package.all-device-composition]\nopt-level=0\n';(rust/'Cargo.toml').write_text(manifest)
- template=(a.sources/'keysight/validation/dotnet/DriverProof.csproj').read_text();template=template[:template.index('<ItemGroup>')]+'<ItemGroup>'+''.join('<PackageReference Include="'+n+'" Version="['+VERSION+']"/>' for n in ['InstrumentComponents','InstrumentComponents.Runtime','InstrumentComponents.TestKit']+['InstrumentComponents.Drivers.'+v.title() for v in VENDORS])+'</ItemGroup></Project>';(dotnet/'Composition.csproj').write_text(template.replace('net8.0',a.framework))
+ manifest='[package]\nname="all-device-composition"\nversion="0.0.0"\nedition="2021"\npublish=false\n[workspace]\n[dependencies]\n'+''.join(n+'="='+VERSION+'"\n' for n in names)+'tokio={version="1",features=["rt","macros","time","sync"],optional=true}\n[features]\ndefault=[]\nasync=['+','.join(json.dumps(n+'/async') for n in names)+',"dep:tokio"]\n';manifest+='[profile.release.package.all-device-composition]\nopt-level=0\n';(rust/'Cargo.toml').write_text(manifest, encoding='utf-8')
+ template=(a.sources/'keysight/validation/dotnet/DriverProof.csproj').read_text(encoding='utf-8');template=template[:template.index('<ItemGroup>')]+'<ItemGroup>'+''.join('<PackageReference Include="'+n+'" Version="['+VERSION+']"/>' for n in ['InstrumentComponents','InstrumentComponents.Runtime','InstrumentComponents.TestKit']+['InstrumentComponents.Drivers.'+v.title() for v in VENDORS])+'</ItemGroup></Project>';(dotnet/'Composition.csproj').write_text(template.replace('net8.0',a.framework), encoding='utf-8')
  shutil.copy2(feed['nugetConfig'],dotnet/'NuGet.Config')
  env=dict(os.environ,CARGO_HOME=feed['CARGO_HOME'],CARGO_TARGET_DIR=str(out/'cargo-target'),NUGET_PACKAGES=str(out/'nuget-cache'),NUGET_HTTP_CACHE_PATH=str(out/'nuget-http-cache'),DOTNET_CLI_HOME=str(out/'dotnet-home'),DOTNET_NOLOGO='1',DOTNET_CLI_TELEMETRY_OPTOUT='1');records=[];publicPackages=[]
  if a.public_registry:
@@ -101,8 +101,8 @@ def main():
  cargoOffline=[] if a.public_registry else ['--offline']
  def run(name,cmd,cwd=out,negative=False):
   print(name,flush=True);log=out/(name+'.log')
-  with log.open('w') as stream:r=subprocess.run(list(map(str,cmd)),cwd=cwd,env=env,stdout=stream,stderr=subprocess.STDOUT)
-  text=log.read_text(errors='replace');records.append(dict(name=name,command=list(map(str,cmd)),exitCode=r.returncode,expectedFailure=negative,log=log.name,sha256=sha(log)));(out/'execution.json').write_text(json.dumps(records,indent=2)+'\n')
+  with log.open('w', encoding='utf-8') as stream:r=subprocess.run(list(map(str,cmd)),cwd=cwd,env=env,stdout=stream,stderr=subprocess.STDOUT)
+  text=log.read_text(errors='replace', encoding='utf-8');records.append(dict(name=name,command=list(map(str,cmd)),exitCode=r.returncode,expectedFailure=negative,log=log.name,sha256=sha(log)));(out/'execution.json').write_text(json.dumps(records,indent=2)+'\n', encoding='utf-8')
   if (r.returncode==0 or any(not re.search(r'\berror '+diagnostic+r'\b',text) for diagnostic in ['IL2026','IL3050'])) if negative else (r.returncode!=0 or re.search(r'\bwarning IL\d+\b',text,re.I)):raise ValueError(name+' failed:\n'+text[-10000:])
   return text
  for feature in [[],['--features','async']]:
@@ -110,7 +110,7 @@ def main():
   metadata=json.loads(run('rust-'+tag+'-metadata',['cargo','metadata']+cargoOffline+['--format-version','1']+feature,rust))
   if any(p['name'] in names and not (p.get('source') or '').startswith('registry+') for p in metadata['packages']):raise ValueError('Source implementation leaked into app')
  if a.public_registry:
-  lockData=tomllib.loads((rust/'Cargo.lock').read_text())
+  lockData=tomllib.loads((rust/'Cargo.lock').read_text(encoding='utf-8'))
   for package in lockData['package']:
    if package['name'] in names:
     if package.get('source')!='registry+https://github.com/rust-lang/crates.io-index':raise ValueError('Expected public crates.io implementation')
@@ -125,7 +125,7 @@ def main():
       if source_sha(directory/file)!=entry['goldenFiles'][file]:raise ValueError('Installed public Rust source differs from locked implementation')
     publicPackages.append(dict(ecosystem='Cargo',name=package['name'],version=package['version'],archiveSha256=sha(archives[0]),registryChecksum=package['checksum']))
  rid='win-x64' if os.name=='nt' else 'linux-x64';native=out/'native';publish=['dotnet','publish','Composition.csproj','-c','Release','-r',rid,'--self-contained','true','-o',native,'--configfile',dotnet/'NuGet.Config'];run('native-publish',publish,dotnet)
- assets=json.loads((dotnet/'obj/project.assets.json').read_text())
+ assets=json.loads((dotnet/'obj/project.assets.json').read_text(encoding='utf-8'))
  if any(v['type']!='package' for v in assets['libraries'].values()):raise ValueError('ProjectReference in app')
  if a.public_registry:
   for key in assets['libraries']:
@@ -153,9 +153,9 @@ def main():
   run('native-runtime-isolation',command)
  executedBinarySha256=sha(binary)
  consumerFiles={str(p.relative_to(out/'app')).replace('\\','/'):sha(p) for p in (out/'app').rglob('*') if p.is_file() and p.suffix in ['.rs','.cs','.csproj','.toml'] and not {'obj','bin'} & set(p.parts)}
- with (dotnet/'Program.cs').open('a') as stream:stream.write('\ninternal static class WarningProbe{[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("intentional gate")][System.Diagnostics.CodeAnalysis.RequiresDynamicCode("intentional AOT gate")]internal static void Trigger(){} internal static void Run()=>Trigger();}\n')
- path=dotnet/'Program.cs';path.write_text(path.read_text().replace('await Composition.Run();','WarningProbe.Run();await Composition.Run();'));negativePublish=list(publish);negativePublish[negativePublish.index('-o')+1]=out/'warning-native';run('negative-native-warning',negativePublish,dotnet,negative=True)
+ with (dotnet/'Program.cs').open('a', encoding='utf-8') as stream:stream.write('\ninternal static class WarningProbe{[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("intentional gate")][System.Diagnostics.CodeAnalysis.RequiresDynamicCode("intentional AOT gate")]internal static void Trigger(){} internal static void Run()=>Trigger();}\n')
+ path=dotnet/'Program.cs';path.write_text(path.read_text(encoding='utf-8').replace('await Composition.Run();','WarningProbe.Run();await Composition.Run();'), encoding='utf-8');negativePublish=list(publish);negativePublish[negativePublish.index('-o')+1]=out/'warning-native';run('negative-native-warning',negativePublish,dotnet,negative=True)
  if sha(binary)!=executedBinarySha256:raise ValueError('Negative probe changed executed binary')
- (out/'composition.json').write_text(json.dumps(dict(mode='public-registry' if a.public_registry else 'local-bootstrap-development' if a.development_inputs else 'pinned-ci-artifact-bootstrap',lockSha256=sha(ROOT/'composition-lock.json'),rid=rid,framework=a.framework,nativeExecuted=True,sha256=executedBinarySha256,referenceArtifactInputs=inputs,consumedPublicPackages=publicPackages,sdkArtifactHashes=feed['packages'],consumerFiles=consumerFiles,negativeProbeProgramSha256=sha(dotnet/'Program.cs'),hardwareValidated=False),indent=2)+'\n')
+ (out/'composition.json').write_text(json.dumps(dict(mode='public-registry' if a.public_registry else 'local-bootstrap-development' if a.development_inputs else 'pinned-ci-artifact-bootstrap',lockSha256=sha(ROOT/'composition-lock.json'),rid=rid,framework=a.framework,nativeExecuted=True,sha256=executedBinarySha256,referenceArtifactInputs=inputs,consumedPublicPackages=publicPackages,sdkArtifactHashes=feed['packages'],consumerFiles=consumerFiles,negativeProbeProgramSha256=sha(dotnet/'Program.cs'),hardwareValidated=False),indent=2)+'\n', encoding='utf-8')
  print('PASS static all-five app; '+('public-registry package execution; physical evidence remains unverified' if a.public_registry else 'bootstrap evidence only, not public registry or hardware evidence'),flush=True)
 if __name__=='__main__':main()
