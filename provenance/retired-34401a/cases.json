@@ -1,0 +1,1710 @@
+{
+  "scope": "Historical source-derived oracle, not manual/hardware qualification; replaced in active corpus.",
+  "cases": [
+    {
+      "id": "keysight.34401a|B|DmmMeasureVoltageDc-0",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC?",
+          "response": "3.3"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 3.3,
+        "unit": "Volt"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmMeasureVoltageDc-1",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC? 2.5",
+          "response": "3.3"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 3.3,
+        "unit": "Volt"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmMeasureVoltageAc-0",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageAc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:AC?",
+          "response": "3.3"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 3.3,
+        "unit": "Volt"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmMeasureVoltageAc-1",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageAc",
+          "arguments": {
+            "range": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:AC? 2.5",
+          "response": "3.3"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 3.3,
+        "unit": "Volt"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmMeasureCurrentDc-0",
+      "calls": [
+        {
+          "operation": "DmmMeasureCurrentDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:CURR:DC?",
+          "response": "3.3"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 3.3,
+        "unit": "Ampere"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmMeasureCurrentDc-1",
+      "calls": [
+        {
+          "operation": "DmmMeasureCurrentDc",
+          "arguments": {
+            "range": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:CURR:DC? 2.5",
+          "response": "3.3"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 3.3,
+        "unit": "Ampere"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmMeasureCurrentAc-0",
+      "calls": [
+        {
+          "operation": "DmmMeasureCurrentAc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:CURR:AC?",
+          "response": "3.3"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 3.3,
+        "unit": "Ampere"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmMeasureCurrentAc-1",
+      "calls": [
+        {
+          "operation": "DmmMeasureCurrentAc",
+          "arguments": {
+            "range": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:CURR:AC? 2.5",
+          "response": "3.3"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 3.3,
+        "unit": "Ampere"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmMeasureResistance-0",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:RES?",
+          "response": "3.3"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 3.3,
+        "unit": "Ohm"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmMeasureResistance-1",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance",
+          "arguments": {
+            "range": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:RES? 2.5",
+          "response": "3.3"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 3.3,
+        "unit": "Ohm"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmMeasureResistance2Wire-0",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance2Wire",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:RES?",
+          "response": "3.3"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 3.3,
+        "unit": "Ohm"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmMeasureResistance2Wire-1",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance2Wire",
+          "arguments": {
+            "range": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:RES? 2.5",
+          "response": "3.3"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 3.3,
+        "unit": "Ohm"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmMeasureResistance4Wire-0",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance4Wire",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:FRES?",
+          "response": "3.3"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 3.3,
+        "unit": "Ohm"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmMeasureResistance4Wire-1",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance4Wire",
+          "arguments": {
+            "range": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:FRES? 2.5",
+          "response": "3.3"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 3.3,
+        "unit": "Ohm"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmMeasureTemperature-0",
+      "calls": [
+        {
+          "operation": "DmmMeasureTemperature",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:TEMP?",
+          "response": "3.3"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 3.3,
+        "unit": "Unknown"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmMeasureTemperature-1",
+      "calls": [
+        {
+          "operation": "DmmMeasureTemperature",
+          "arguments": {
+            "range": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:TEMP? 2.5",
+          "response": "3.3"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 3.3,
+        "unit": "Unknown"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureVoltageDc-0",
+      "calls": [
+        {
+          "operation": "DmmConfigureVoltageDc",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:VOLT:DC"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureVoltageDc-1",
+      "calls": [
+        {
+          "operation": "DmmConfigureVoltageDc",
+          "arguments": {
+            "range": null,
+            "resolution": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:VOLT:DC DEF,2.5"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureVoltageDc-2",
+      "calls": [
+        {
+          "operation": "DmmConfigureVoltageDc",
+          "arguments": {
+            "range": 2.5,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:VOLT:DC 2.5"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureVoltageDc-3",
+      "calls": [
+        {
+          "operation": "DmmConfigureVoltageDc",
+          "arguments": {
+            "range": 2.5,
+            "resolution": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:VOLT:DC 2.5,2.5"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureVoltageAc-0",
+      "calls": [
+        {
+          "operation": "DmmConfigureVoltageAc",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:VOLT:AC"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureVoltageAc-1",
+      "calls": [
+        {
+          "operation": "DmmConfigureVoltageAc",
+          "arguments": {
+            "range": null,
+            "resolution": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:VOLT:AC DEF,2.5"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureVoltageAc-2",
+      "calls": [
+        {
+          "operation": "DmmConfigureVoltageAc",
+          "arguments": {
+            "range": 2.5,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:VOLT:AC 2.5"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureVoltageAc-3",
+      "calls": [
+        {
+          "operation": "DmmConfigureVoltageAc",
+          "arguments": {
+            "range": 2.5,
+            "resolution": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:VOLT:AC 2.5,2.5"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureCurrentDc-0",
+      "calls": [
+        {
+          "operation": "DmmConfigureCurrentDc",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:CURR:DC"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureCurrentDc-1",
+      "calls": [
+        {
+          "operation": "DmmConfigureCurrentDc",
+          "arguments": {
+            "range": null,
+            "resolution": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:CURR:DC DEF,2.5"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureCurrentDc-2",
+      "calls": [
+        {
+          "operation": "DmmConfigureCurrentDc",
+          "arguments": {
+            "range": 2.5,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:CURR:DC 2.5"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureCurrentDc-3",
+      "calls": [
+        {
+          "operation": "DmmConfigureCurrentDc",
+          "arguments": {
+            "range": 2.5,
+            "resolution": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:CURR:DC 2.5,2.5"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureCurrentAc-0",
+      "calls": [
+        {
+          "operation": "DmmConfigureCurrentAc",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:CURR:AC"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureCurrentAc-1",
+      "calls": [
+        {
+          "operation": "DmmConfigureCurrentAc",
+          "arguments": {
+            "range": null,
+            "resolution": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:CURR:AC DEF,2.5"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureCurrentAc-2",
+      "calls": [
+        {
+          "operation": "DmmConfigureCurrentAc",
+          "arguments": {
+            "range": 2.5,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:CURR:AC 2.5"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureCurrentAc-3",
+      "calls": [
+        {
+          "operation": "DmmConfigureCurrentAc",
+          "arguments": {
+            "range": 2.5,
+            "resolution": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:CURR:AC 2.5,2.5"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureResistance-0",
+      "calls": [
+        {
+          "operation": "DmmConfigureResistance",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:RES"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureResistance-1",
+      "calls": [
+        {
+          "operation": "DmmConfigureResistance",
+          "arguments": {
+            "range": null,
+            "resolution": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:RES DEF,2.5"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureResistance-2",
+      "calls": [
+        {
+          "operation": "DmmConfigureResistance",
+          "arguments": {
+            "range": 2.5,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:RES 2.5"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureResistance-3",
+      "calls": [
+        {
+          "operation": "DmmConfigureResistance",
+          "arguments": {
+            "range": 2.5,
+            "resolution": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:RES 2.5,2.5"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureResistance4Wire-0",
+      "calls": [
+        {
+          "operation": "DmmConfigureResistance4Wire",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FRES"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureResistance4Wire-1",
+      "calls": [
+        {
+          "operation": "DmmConfigureResistance4Wire",
+          "arguments": {
+            "range": null,
+            "resolution": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FRES DEF,2.5"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureResistance4Wire-2",
+      "calls": [
+        {
+          "operation": "DmmConfigureResistance4Wire",
+          "arguments": {
+            "range": 2.5,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FRES 2.5"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureResistance4Wire-3",
+      "calls": [
+        {
+          "operation": "DmmConfigureResistance4Wire",
+          "arguments": {
+            "range": 2.5,
+            "resolution": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FRES 2.5,2.5"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmInitiate-0",
+      "calls": [
+        {
+          "operation": "DmmInitiate",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "INIT"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmFetch-0",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        },
+        {
+          "operation": "DmmFetch",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC?",
+          "response": "3.3"
+        },
+        {
+          "kind": "query",
+          "message": "FETC?",
+          "response": "3.3"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 3.3,
+        "unit": "Volt"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmRead-0",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        },
+        {
+          "operation": "DmmRead",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC?",
+          "response": "3.3"
+        },
+        {
+          "kind": "query",
+          "message": "READ?",
+          "response": "3.3"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 3.3,
+        "unit": "Volt"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmSoftwareTrigger-0",
+      "calls": [
+        {
+          "operation": "DmmSoftwareTrigger",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "*TRG"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|QueryIdentity-0",
+      "calls": [
+        {
+          "operation": "QueryIdentity",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "*IDN?",
+          "response": "Validation,Device,SN,1"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "identity",
+        "manufacturer": "Validation",
+        "model": "Device",
+        "serial": "SN",
+        "revision": "1"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|Reset-0",
+      "calls": [
+        {
+          "operation": "Reset",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "*RST"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|Shutdown-0",
+      "calls": [
+        {
+          "operation": "Shutdown",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|temperature-DmmRead",
+      "calls": [
+        {
+          "operation": "DmmMeasureTemperature",
+          "arguments": {
+            "range": null
+          }
+        },
+        {
+          "operation": "DmmRead",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:TEMP?",
+          "response": "3.3"
+        },
+        {
+          "kind": "query",
+          "message": "READ?",
+          "response": "3.3"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 3.3,
+        "unit": "Unknown"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|temperature-DmmFetch",
+      "calls": [
+        {
+          "operation": "DmmMeasureTemperature",
+          "arguments": {
+            "range": null
+          }
+        },
+        {
+          "operation": "DmmFetch",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:TEMP?",
+          "response": "3.3"
+        },
+        {
+          "kind": "query",
+          "message": "FETC?",
+          "response": "3.3"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 3.3,
+        "unit": "Unknown"
+      }
+    },
+    {
+      "id": "keysight.34401a|B|DmmMeasureVoltageDc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34401a|B|DmmMeasureVoltageAc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageAc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:AC?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34401a|B|DmmMeasureCurrentDc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureCurrentDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:CURR:DC?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34401a|B|DmmMeasureCurrentAc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureCurrentAc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:CURR:AC?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34401a|B|DmmMeasureResistance-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:RES?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34401a|B|DmmMeasureResistance2Wire-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance2Wire",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:RES?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34401a|B|DmmMeasureResistance4Wire-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance4Wire",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:FRES?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34401a|B|DmmMeasureTemperature-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureTemperature",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:TEMP?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureVoltageDc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmConfigureVoltageDc",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:VOLT:DC",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureVoltageAc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmConfigureVoltageAc",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:VOLT:AC",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureCurrentDc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmConfigureCurrentDc",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:CURR:DC",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureCurrentAc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmConfigureCurrentAc",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:CURR:AC",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureResistance-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmConfigureResistance",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:RES",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34401a|B|DmmConfigureResistance4Wire-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmConfigureResistance4Wire",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FRES",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34401a|B|DmmInitiate-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmInitiate",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "INIT",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34401a|B|DmmFetch-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        },
+        {
+          "operation": "DmmFetch",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC?",
+          "response": "3.3"
+        },
+        {
+          "kind": "query",
+          "message": "FETC?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34401a|B|DmmRead-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        },
+        {
+          "operation": "DmmRead",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC?",
+          "response": "3.3"
+        },
+        {
+          "kind": "query",
+          "message": "READ?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34401a|B|DmmSoftwareTrigger-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmSoftwareTrigger",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "*TRG",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34401a|B|QueryIdentity-0-transport-failure",
+      "calls": [
+        {
+          "operation": "QueryIdentity",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "*IDN?",
+          "response": "Validation,Device,SN,1",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34401a|B|Reset-0-transport-failure",
+      "calls": [
+        {
+          "operation": "Reset",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "*RST",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    }
+  ]
+}

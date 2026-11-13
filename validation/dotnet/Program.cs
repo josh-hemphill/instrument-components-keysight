@@ -16,6 +16,10 @@ internal static class Proof {
     });
     private static DeviceCandidate Candidate=>new(new("scpi","fixture"),new());
     public static async Task Run(){
+        QualifiedExamples.Run();
+        QualifiedProof.Run();
+        await QualifiedProof.SelectedRouteAdmission();
+        await QualifiedPendingProof.Run();
         await HpCounterProof.Run();
         HpLegacyProof.Run();
         await HpAsyncProof.Run();
@@ -31,7 +35,7 @@ internal static class Proof {
             var connections=bindings?.Select(p=>new InstrumentComponents.Drivers.Keysight.ConnectionBinding(p.Key,Candidate.Endpoint,p.Value)).ToArray();
             var hpModel=test.Id.StartsWith("keysight.hp5334a|",StringComparison.Ordinal)?Hp5334Model.Hp5334A:test.Id.StartsWith("keysight.hp5334b|",StringComparison.Ordinal)?Hp5334Model.Hp5334B:(Hp5334Model?)null;
             var candidate=test.Id.StartsWith("keysight.hp",StringComparison.Ordinal)?Candidate with{Endpoint=new("hpib","fixture")}:Candidate;
-            var hpFactory=HpFixture.Factory(test.Id,script,mode==1);
+            var hpFactory=QualifiedFixture.Factory(test.Id,script,mode==1)??HpFixture.Factory(test.Id,script,mode==1);
             var factories=hpFactory is not null?new[]{hpFactory}:hpModel is {} model?new IDriverFactory[]{new Hp5334Factory(model,Hp5334Commissioning.NativeInternalGatingConfirmed,script,mode==1?script:null)}:mode==1?Vendor.NativeFactories(script,connections:connections):Vendor.Factories(script,connections:connections);
             var registry=new DriverRegistry(factories);var selection=new DriverSelection(DriverId:test.Id.Split('|')[0]);
             var sync=mode==0?registry.Open(candidate,selection):null;var native=mode==1?await registry.OpenNativeAsync(candidate,selection):null;var worker=mode>=2?await registry.OpenWorkerAsync(candidate,selection):null;

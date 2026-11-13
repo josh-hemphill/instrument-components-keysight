@@ -1,0 +1,129 @@
+{
+  "stage": "EARLY_IMPLEMENTATION_SOURCE_INSPECTION",
+  "items": [
+    "34401A",
+    "33120A",
+    "53132A",
+    "34980A",
+    "34937A",
+    "34922A",
+    "34950A",
+    "3585B"
+  ],
+  "rubric": "v1",
+  "files": [
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/implementation-source-r1/instrument-components-keysight/src/qualified_scpi.rs",
+      "sha256": "92f8a77406b6915f4bf3811913c156c5f4f33173393951e80293874fb8bafbe0"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/implementation-source-r1/instrument-components-keysight/src/hp34980.rs",
+      "sha256": "0407110cbb1cc7d4eb59ad9a528c6699f4b91ccb1f770ad86461ab1f661b07b4"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/implementation-source-r1/instrument-components-keysight/src/hp3585.rs",
+      "sha256": "8beab62747553694e84b7922580a5118e94bfaf88b0f674cb13a0c67d6a02002"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/implementation-source-r1/instrument-components-keysight/src/message_backend.rs",
+      "sha256": "63928667038be810e97c6c0678483dc4630ef917d2c4703395f88ce9cb2a6f32"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/implementation-source-r1/instrument-components-keysight/src/lib.rs",
+      "sha256": "198b9760d5c1219b34f66c421ea45f4346d22d62797e36a07139c09c6509757f"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/implementation-source-r1/instrument-components-keysight/dotnet/InstrumentComponents.Drivers.Keysight/QualifiedScpi.cs",
+      "sha256": "713562452de87e7af79d863582fee00811f38ca150016a6eb74ac8578d1013f1"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/implementation-source-r1/instrument-components-keysight/dotnet/InstrumentComponents.Drivers.Keysight/Hp34980.cs",
+      "sha256": "5dba4cca7377e43548691282f109f95bc01076a53bf61ce1c731acbfb66ad2d5"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/implementation-source-r1/instrument-components-keysight/dotnet/InstrumentComponents.Drivers.Keysight/Hp3585.cs",
+      "sha256": "e2950d2b23871fc06740b5b238db7f2efb2332c128a3b84fd0e87737a8945bb3"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/implementation-source-r1/instrument-components-keysight/dotnet/InstrumentComponents.Drivers.Keysight/MessageBackend.cs",
+      "sha256": "4bf55afb14516910b5e24512a17522583f6475ba777c55364563dd6542acef09"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/implementation-source-r1/instrument-components-keysight/dotnet/InstrumentComponents.Drivers.Keysight/Drivers.cs",
+      "sha256": "4cb6d7cebf79605ba17da1122800d802a42899ee42ae0ee715d48704a27b765e"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/implementation-source-r1/instrument-components-keysight/profiles.json",
+      "sha256": "b13a31977eb729ca1a10b9cbb7fff5504229237eebb94cae7a05c51ab6fa43d4"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/implementation-source-r1/instrument-components-keysight/cases.json",
+      "sha256": "24deb574358ce2109ac806aa7f031b7befc59b3e8f2e41fa56f390c66b7b4955"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/implementation-source-r1/instrument-components-keysight/validation/rust/src/qualified_fixture.rs",
+      "sha256": "0d6b28a04333e9b7418e207c587a200b5e0f64d9da170248469f72fa01742c6f"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/implementation-source-r1/instrument-components-keysight/validation/dotnet/QualifiedFixture.cs",
+      "sha256": "c6721a7aceedf20700b48d8a688516c6c9d35471b6f215b3273277768258bce9"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/implementation-source-r1/instrument-components-keysight/spec/acceptance/compose.py",
+      "sha256": "d392ac4fbb32c88d3a981035e529f12423707c3e9f3a5403f1f9bd365409996a"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/implementation-source-r1/instrument-components/spec/driver-operations.json",
+      "sha256": "92a9100504a06a24db6f86ec2b8cc5a6a614f8fbc6d0ffaf291570cea2160612"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/implementation-source-r1/instrument-components/tools/driver-tools/src/instrument_driver_tools/contracts.py",
+      "sha256": "e47d895bbeb2de2e3ce1d6cb66507f37afba71e0dd7b8ad55da4c264069e39d5"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/implementation-source-r1/instrument-components/tools/driver-tools/src/instrument_driver_tools/schemas/catalog.json",
+      "sha256": "47036ca1b24b31ebc9de96d7194ad0c155b6950d2f8bd62086625e453d18ae56"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/implementation-source-r1/instrument-components/tools/gen-opentap-steps.ts",
+      "sha256": "fcae4f727d4cac082e7d3f690f440e748e95dd0a85bde6fa8d734ac49ad62aca"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/implementation-source-r1/instrument-components/tools/validate-opentap-operations.ts",
+      "sha256": "862b7e8d24fd2ea161abd29b03c9ea04faf865a8a871ed9567b9a0564795b1bd"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/implementation-source-r1/instrument-components/dotnet/src/InstrumentComponents.OpenTap/DeviceInstrument.cs",
+      "sha256": "d887483dad710e9f894fa0ec0872ce22a2b24ad11cc916ac696ac1d70c0af5f3"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/implementation-source-r1/instrument-components/dotnet/src/InstrumentComponents.OpenTap/Instruments.cs",
+      "sha256": "7547dca07f21597101cded1915a709647a9c4a6d58284df397fbd7fe10401530"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/implementation-source-r1/instrument-components/dotnet/src/InstrumentComponents.OpenTap/Steps/Generated/DigitalIoSteps.g.cs",
+      "sha256": "3220e383194182d6fc4d37fa551d40454e80994672a5148390487607b60a32b2"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/implementation-source-r1/instrument-components/dotnet/src/InstrumentComponents.OpenTap/Steps/Generated/SwitchSteps.g.cs",
+      "sha256": "28757a11d703b4e96e310d95d44ed7b06b709229259db9eec1f6fed96d5ba4b6"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/implementation-source-r1/instrument-components/validation/driver-sdk/dotnet-consumer/NeutralCapabilityProof.cs",
+      "sha256": "9b798a380fb828192f3887eae7a476baf050f82c7fb9f5996183853bf9663380"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/implementation-source-r1/instrument-components/validation/driver-sdk/rust-consumer/src/neutral_classes.rs",
+      "sha256": "7137e1b703f8b909fa636c043db5b690a6a2f5e7d7bd7710e9b7d7d1c8b5fca8"
+    }
+  ],
+  "approvedSpecPackets": [
+    "../spec-r2/manifest.json",
+    "../module-spec-r1/manifest.json",
+    "../analyzer-spec-r1/manifest.json"
+  ],
+  "limitations": [
+    "No final grade requested until procedural tests, complete examples, current source regressions and compatible source/packed native platform evidence exist",
+    "Core and vendor actual worktrees may evolve; review these frozen copies for factual code findings"
+  ]
+}

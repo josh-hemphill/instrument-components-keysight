@@ -1,0 +1,1856 @@
+{
+  "schemaVersion": 1,
+  "contractMajor": 1,
+  "description": "Independent manual/spec-derived traffic, not hardware observations; generator reads no production plans.",
+  "cases": [
+    {
+      "id": "keysight.53132a|E|Frequency-channel-1",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "+1.2500000000000E+06"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1250000,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.53132a|E|Period-channel-1",
+      "calls": [
+        {
+          "operation": "CounterMeasurePeriod",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:PER DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "+8.0000000000000E-07"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 8e-07,
+        "unit": "Second",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.53132a|E|Frequency-channel-2",
+      "calls": [
+        {
+          "operation": "CounterSelectChannel",
+          "arguments": {
+            "channel": 2
+          }
+        },
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@2)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "+1.2500000000000E+06"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1250000,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.53132a|E|Period-channel-2",
+      "calls": [
+        {
+          "operation": "CounterSelectChannel",
+          "arguments": {
+            "channel": 2
+          }
+        },
+        {
+          "operation": "CounterMeasurePeriod",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:PER DEF,DEF,(@2)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "+8.0000000000000E-07"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 8e-07,
+        "unit": "Second",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.53132a|E|gate-0.001",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 0.001
+          }
+        },
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.001"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "+1.2500000000000E+06"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1250000,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.53132a|E|gate-0.029",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 0.029
+          }
+        },
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.029"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "+1.2500000000000E+06"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1250000,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.53132a|E|gate-0.100",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 0.1
+          }
+        },
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "+1.2500000000000E+06"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1250000,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.53132a|E|gate-1000.000",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 1000
+          }
+        },
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 1000.000"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "+1.2500000000000E+06"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1250000,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.53132a|E|switch-intent-and-repeat",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 0.01
+          }
+        },
+        {
+          "operation": "CounterSelectChannel",
+          "arguments": {
+            "channel": 2
+          }
+        },
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        },
+        {
+          "operation": "CounterSelectChannel",
+          "arguments": {
+            "channel": 1
+          }
+        },
+        {
+          "operation": "CounterMeasurePeriod",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@2)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.010"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "+1.2500000000000E+06"
+        },
+        {
+          "kind": "write",
+          "message": ":CONF:PER DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.010"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "+8.0000000000000E-07"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 8e-07,
+        "unit": "Second",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.53132a|E|invalid-gate-zero",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.53132a|E|invalid-gate-negative",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": -1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.53132a|E|invalid-gate-too-small",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 0.000999
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.53132a|E|invalid-gate-off-grid",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 0.0010000000000000002
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.53132a|E|invalid-gate-too-large",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 1000.001
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.53132a|E|invalid-channel-0",
+      "calls": [
+        {
+          "operation": "CounterSelectChannel",
+          "arguments": {
+            "channel": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.53132a|E|invalid-channel-3",
+      "calls": [
+        {
+          "operation": "CounterSelectChannel",
+          "arguments": {
+            "channel": 3
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.53132a|E|invalid-channel-4294967295",
+      "calls": [
+        {
+          "operation": "CounterSelectChannel",
+          "arguments": {
+            "channel": 4294967295
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.53132a|E|parse-one-digit",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "1E0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.53132a|E|parse-unsigned",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "1.25E+3"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1250,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.53132a|E|parse-lower-e",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "1.25e3"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1250,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.53132a|E|parse-max-significant",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "1.23456789012345E+0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1.23456789012345,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.53132a|E|parse-leading-zeros",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "0001.25E+0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1.25,
+        "unit": "Hertz",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.53132a|E|reject-nan-sentinel",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "+9.91E+37"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.53132a|E|reject-zero",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "0E0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.53132a|E|reject-negative",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "-1.25E3"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.53132a|E|reject-underflow",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "1E-999"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Device"
+    },
+    {
+      "id": "keysight.53132a|E|reject-no-exponent",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "1.25"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.53132a|E|reject-sixteen-significant",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "1.234567890123456E+0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.53132a|E|reject-leading-space",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": " 1E0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.53132a|E|reject-trailing-space",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "1E0 "
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.53132a|E|reject-no-frac",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "1.E0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.53132a|E|reject-no-leading",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": ".1E0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.53132a|E|reject-unit",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "1E0HZ"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.53132a|E|reject-csv",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "1E0,2E0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.53132a|E|reject-nan",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "NaN"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.53132a|E|reject-infinity",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "Inf"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.53132a|E|reject-overflow",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "1E999"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.53132a|E|reject-binary",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "response": "#131E0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.53132a|E|failure-step-0-Transport",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.53132a|E|failure-step-0-Timeout",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.53132a|E|failure-step-1-Transport",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.53132a|E|failure-step-1-Timeout",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.53132a|E|failure-step-2-Transport",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.53132a|E|failure-step-2-Timeout",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.53132a|E|failure-step-3-Transport",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.53132a|E|failure-step-3-Timeout",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.53132a|E|failure-step-4-Transport",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.53132a|E|failure-step-4-Timeout",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.53132a|E|failure-step-5-Transport",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.53132a|E|failure-step-5-Timeout",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FREQ DEF,DEF,(@1)"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STAR:SOUR IMM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:SOUR TIM"
+        },
+        {
+          "kind": "write",
+          "message": ":SENS:FREQ:ARM:STOP:TIM 0.100"
+        },
+        {
+          "kind": "write",
+          "message": ":FORM ASC"
+        },
+        {
+          "kind": "query",
+          "message": ":READ?",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    }
+  ]
+}

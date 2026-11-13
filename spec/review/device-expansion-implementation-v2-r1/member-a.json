@@ -1,0 +1,272 @@
+{
+  "member": "A",
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "rubric": "v2",
+  "stage": "IMPLEMENTATION",
+  "round": "implementation-v2-r1",
+  "manifestSha256": "43d87036abe94ce53c2d98db9e8c6ae4a74c149cb2f65c01f9ba973766794dd6",
+  "scores": {
+    "34401A": {
+      "EVIDENCE": 9.4,
+      "API": 9.4,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.5,
+      "VALIDATION": 9.4,
+      "DELIVERY": 9.4
+    },
+    "33120A": {
+      "EVIDENCE": 9.4,
+      "API": 9.4,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.5,
+      "VALIDATION": 9.4,
+      "DELIVERY": 9.4
+    },
+    "53132A": {
+      "EVIDENCE": 9.4,
+      "API": 9.4,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.5,
+      "VALIDATION": 9.4,
+      "DELIVERY": 9.4
+    },
+    "3585B": {
+      "EVIDENCE": 9.4,
+      "API": 9.4,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.5,
+      "VALIDATION": 9.4,
+      "DELIVERY": 9.4
+    },
+    "34980A": {
+      "EVIDENCE": 9.4,
+      "API": 9.5,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.5,
+      "VALIDATION": 9.4,
+      "DELIVERY": 9.4
+    },
+    "34937A": {
+      "EVIDENCE": 9.4,
+      "API": 9.4,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.5,
+      "VALIDATION": 9.4,
+      "DELIVERY": 9.4
+    },
+    "34922A": {
+      "EVIDENCE": 9.4,
+      "API": 9.4,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.5,
+      "VALIDATION": 9.4,
+      "DELIVERY": 9.4
+    },
+    "34950A": {
+      "EVIDENCE": 9.4,
+      "API": 9.4,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.5,
+      "VALIDATION": 9.4,
+      "DELIVERY": 9.3
+    },
+    "TDS1002": {
+      "EVIDENCE": 9.4,
+      "API": 9.4,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.5,
+      "VALIDATION": 9.4,
+      "DELIVERY": 9.4
+    }
+  },
+  "votes": {
+    "34401A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "33120A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "53132A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "3585B": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "34980A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "34937A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "34922A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "34950A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "TDS1002": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    }
+  },
+  "mandatoryDefects": [],
+  "requiredChanges": [],
+  "evidence": {
+    "34401A": {
+      "EVIDENCE": "Own-model/hash/page provenance, independent69-case scalar oracle and actual qualified_scpi Rust/C# decoders preserve the documented MEAS/default/range/positive-overload distinctions. Old generic34401 behavior is retired rather than called verified support.",
+      "API": "Current factories expose exactly seven neutral scalar methods with units, finite positive expected-input bounds, frozen exact endpoints and explicit SCPI commissioning. Unsupported temperature/split-phase/reset/USB hints are absent; admission now agrees on ASCII schemes.",
+      "PROTOCOL": "Actual code uses exact MEAS traffic, signed15-character parsing and overload status, pre-IO validation, shared operation lease and fail-fast quarantine. Owned/borrowed close is resource-only; actual pending read deadlines/cancellation complete without detached access.",
+      "PARITY": "Same69 golden cases and actual-factory procedures execute in Rust default/async and C# four frontends, generated/source and packed. All four hosted native cells were inspected; both packed Linux frameworks were independently re-executed.",
+      "VALIDATION": "QualifiedProof/qualified_proof instantiate the actual DMM, test every nonfinite numeric argument with usable follow-up, all golden errors with correct quarantine, ASCII/binding bounds and ownership. Pending proofs reach Active1 before cancellation and Active0 before completion.",
+      "DELIVERY": "Explicit external Keysight registration, compiled composition example, model prerequisites/deferred methods and source/packed package checks are present. Registry-only production dependencies and exact1243881 SDK feed join are verified; old public packages are explicitly excluded."
+    },
+    "33120A": {
+      "EVIDENCE": "Own-model publication/frequency glyph/load/coupling evidence joins67 independent normative cases and source. HighZ9.9e37 is a documented load state, distinct from generic parser magnitude policy and physical overload.",
+      "API": "Four typed generator methods enforce commissioned sine/50Ohm/VPP use. Always-live output, settings-only ReadFrequency and lack of enable/shutdown are accurately documented; structural and queried coupled argument errors are distinct.",
+      "PROTOCOL": "Both implementations issue all eight guards in order, check original and rounded E11 voltage pairs and classify load-specific HighZ before magnitude rejection. Post-query conflicts stop without a write and quarantine; close never disables output.",
+      "PARITY": "Rust/C# share wire formatting, guard/error/value semantics through67 golden cases and all four execution frontends. Verified source and packed NativeAOT Windows/Linux x64 net8/net10 logs/binaries include the actual generator factory.",
+      "VALIDATION": "Additional GeneratorFailurePositions covers every amplitude/offset query/write step and health follow-up; nonfinite/pre-IO versus coupled-post-IO behavior, real pending read/write cancellation/deadlines and whole-transaction ordering execute in native consumers.",
+      "DELIVERY": "External package/source bytes and dependency feeds are audited, compiled example and README disclose live output and physical commissioning, and future coordinated versions are separated from alpha.1/public availability."
+    },
+    "53132A": {
+      "EVIDENCE": "Own-applicable shared primary guide,50 literal cases and implemented CONF/arming/READ/NR3 grammar establish two-channel frequency/period support without borrowing generic53131 operations.",
+      "API": "Typed local channel/gate setters preserve prior intent on rejection, use exact millisecond-grid validation and fresh per-open state. Deferred channel3/ratio/totalize/reset remain unavailable; endpoint/capability admission is passive.",
+      "PROTOCOL": "Actual six-message transaction applies gate after CONF, forces ASCII and fresh READ. Integer-derived gate text, significant-digit/sentinel/positive-result policy and per-operation physical units agree with the approved contract.",
+      "PARITY": "Both language/frontends run50 independent cases and independent-handle/intent proofs in generated/source and packed consumers. Exact native binaries/logs for all four cells and local packed Linux8/10 reruns support parity.",
+      "VALIDATION": "Counter-intent proof rejects invalid setters, retains intended2/.010, opens a separate default1/.100 handle and executes repeated fresh frequency/period. Golden min/max/off-grid/parser cases plus real pending write/query and quarantine proofs execute.",
+      "DELIVERY": "External explicit factory, compiled typed counter example, own-model prerequisites and unsupported capabilities are documented. Matching source/package/producer identities and compatible1243881 feeds are verified without claiming new public release."
+    },
+    "3585B": {
+      "EVIDENCE": "Bound own-model scanned manual/OCR/render provenance joins123 synthetic diagram-derived cases and actual fixed-field decoder. Native ranges, serial applicability, stored peak and selected-marker validity are accurately separated from physical observation.",
+      "API": "Eight useful neutral methods have integer/discrete/tenths bounds and frozen native qualification. Stored-trace MarkerPeak and selected-point MarkerX/Y semantics remain explicit; no SCPI fallback or sweep/trace/reset capability is invented.",
+      "PROTOCOL": "Actual CL/SP or CL/D2,T6 sequences, exact24-character ASCII record, both-field validation, E-0 and frequency bounds match the manual-derived contract. Native framing/deadlines and no-clear quarantine/close behavior are specified and tested.",
+      "PARITY": "Both Rust/C# decoders/formatters consume123 cases through sync/native/two-worker frontends in source and packed native cells. Both packed Linux frameworks were independently executed; Windows proof binaries/logs were structurally/hash inspected.",
+      "VALIDATION": "Golden malformed-discarded-field cases, entry/range negatives and all error follow-ups execute. Actual pending native CL/query and independent sync/native deadline tests enforce cleanup, ownership and no transaction interleaving.",
+      "DELIVERY": "External hp3585 factory, compiled analyzer construction and README/spec document qualification, stored peak/selected refresh and synthetic evidence. Actual package source/dependency boundaries, feeds and future release limitations are retained."
+    },
+    "34980A": {
+      "EVIDENCE": "Mainframe/module primary hashes,195 module cases and exact inventory/address source distinguish real topology from caller commissioning and simulator claims. Partial inventory is not falsely described as complete hardware discovery.",
+      "API": "One parent factory/connector/handle supplies Switch/DigitalIo under one lease and shared health. Actual frozen maps validate physical/type conflicts across namespaces and selected-endpoint capability requirements before acquisition; no independent child session is opened.",
+      "PROTOCOL": "Transaction engine serializes complete guard/action operations; parse/Device/IO/cancellation uncertainty quarantines sibling views. No implicit DMM enable, scan abort, reset, globalOpenAll or direction cleanup occurs. Owned parent closes once, borrowed survives.",
+      "PARITY": "Five new neutral operations and typed/OpenTAP generation use compatible immutable1243881 SDK. Producer native consumers execute eleven added operations, including byte zero; external source/packed module consumers execute all frontends/platform cells.",
+      "VALIDATION": "Inventory/SelectedRouteAdmission exercise every module local and slot, isolated conflicts,4096/4097 bounds and mutated collections. Pending proofs execute digital-to-relay shared-parent noninterleaving/quarantine with genuine suspension and ownership checks.",
+      "DELIVERY": "Core packages contain neutral contracts and exact allowed dependencies only; module implementations stay in Keysight. Static examples, commissioning/deferred features, compiled native consumers and exact package/feed hashes establish independent distribution without publication."
+    },
+    "34937A": {
+      "EVIDENCE": "Own-model FormC/FormA/latching/no-analog-bus evidence joins32 independent cases and actual direct-path implementation. Power-failure and physical continuity are not promoted into unsupported safety guarantees.",
+      "API": "Three neutral logical-path operations and derived addresses preserve FormC common-to-NO semantics; opening selects NC rather than isolation. Sparse mapping and parent ownership are explicit, with no matrix/globalOpenAll behavior.",
+      "PROTOCOL": "Exact selected ROUTe command/query and strict0/1 decoding are implemented identically; failures affect parent health. Close emits no route changes. Actual pending relay reads/writes verify deadline/cancellation and borrowed/owned behavior.",
+      "PARITY": "New neutral methods, Rust/C# backends and32 cases execute through each source/packed frontend across four native cells using the qualified SDK. Actual archives and logs, not status summaries alone, were checked.",
+      "VALIDATION": "Full local1..32/slot1..8 admission, FormC/FormA boundary cases, malformed state/error follow-ups and parent/sibling lifecycle/concurrency procedures execute. Unaffected baseline cases remain in the1859-case corpus.",
+      "DELIVERY": "One external parent distributes the module view; compiled shared-parent example and README preserve NC/latching caveats and defer physical verification. Package source/dependency boundaries and matching SDK feeds were inspected."
+    },
+    "34922A": {
+      "EVIDENCE": "Own-model two35-channel armature banks, direct non-scanning multi-close and DMM-only pairing evidence joins33 cases and actual mapping. Neighboring FET/other mux topology is not inherited.",
+      "API": "Logical1..70 direct paths do not invent a paired endpoint or exclusive closure. Analog-bus/scanning/acquisition remain deferred; same-bank connection consequences and shared parent are documented.",
+      "PROTOCOL": "Both implementations emit only the selected ROUTe traffic, preserve earlier same-bank closures and decode strict Boolean state. Error/cancellation quarantine is parent-wide and no implicit bus/route cleanup occurs.",
+      "PARITY": "Same33 cases and typed neutral Switch operations execute in both languages/frontends and all source/packed native cells. Archived binaries/logs and both local Linux framework executions support implemented parity.",
+      "VALIDATION": "1/35/36/70 and explicit nonexclusive two-close oracle execute, alongside exhaustive valid locals/slots, otherwise-valid conflict negatives, health follow-ups and genuine pending relay read/write lifecycle checks.",
+      "DELIVERY": "External static shared-parent factory, exact topology/deferred scope docs and compiled example are present. Compatible SDK pins, registry-only production dependencies, package source identity and old-public-version limits are verified."
+    },
+    "34950A": {
+      "EVIDENCE": "Own-module/programmer evidence for bank numbering, grouped width, numeric1/2/4, HIMP, SENSE latch behavior and SOURCE implicit output joins123 independent cases and implemented guards. Electrical truth remains external commissioning.",
+      "API": "Actual neutral byte methods enforce positive logical ports, frozen direction and inclusive0\u2013255 values; zero reads/writes work while existing positive-count constraints stay intact. No proprietary topology/policy enters core.",
+      "PROTOCOL": "All four bank widths, selected direction/polarity, bank-first handshake/memory and electrical guards precede access; no hidden configuration write occurs. Strict sampled-byte parser, fail-fast Device/Parse classes and parent quarantine match the approved subset.",
+      "PARITY": "Producer typed proofs execute byte0,256 rejection and retained positive-count rejection. Both backends/frontends execute123 exact cases and procedures in source/packed Windows/Linux native cells with matching new SDK feeds.",
+      "VALIDATION": "Both banks, non-anchor guards,0/255/256, wrong directions/tokens/electrical state and every traffic failure execute. Deep-freeze mutation, selected-route isolation, actual pending writes/reads and cross-view serialization/quarantine are verified by real procedure code/logs.",
+      "DELIVERY": "Byte-only fixed-policy limitations and external parent composition are documented and packaged correctly; typed SDK proof and full corpus execute the digital calls. The compact composition example shows WriteByte as an explanatory call comment, a minor presentation limitation rather than missing conformance proof."
+    },
+    "TDS1002": {
+      "EVIDENCE": "Exact non-B model, module/probe applicability and own-manual acquisition/status/units evidence join334 independent cases, source and retained provenance. No A/B alias, direct USB or B/TPS-only operation is advertised.",
+      "API": "Ten typed operations use frozen per-endpoint module/probe/commissioning records, ASCII schemes and exact identities. Probe grids/settings, explicit acquisition/status side effects and unsupported operations are enforced before acquisition/IO as appropriate.",
+      "PROTOCOL": "Actual HEAD/VERB/DESE/pre-ESR prefix and complete guarded single-sample/OPC/count/source/type/quoted-unit/value/post-ESR transaction withhold quantities until final status success. Underflow/sentinel/domain policies and no-STOP cancellation quarantine are implemented.",
+      "PARITY": "Both C# reply paths now use SDK Numeric; ReadTimebaseScale/Vpp/frequency and all334 cases execute successfully in four source/packed NativeAOT cells. Both exact packed Linux framework binaries were independently re-executed with452 total cases and procedures.",
+      "VALIDATION": "Actual tests cover all four probe factors/two channels/nominal scales and adjacent doubles,31 timebases, invariant fr-FR parsing, endpoint isolation, every golden error health follow-up and pending HEAD/RUN/OPC/VALUE cancellation/deadlines with whole-capture serialization.",
+      "DELIVERY": "Dedicated external Tek factory, preserved118 earlier cases, compiled static application example and explicit immutable1243881 feeds are verified. Package boundaries, source identity/native logs and unreleased/public/hardware/OpenTAP distinctions are candid."
+    }
+  },
+  "independentChecks": {
+    "manifestFilesVerified": 1316,
+    "originalZipsVerified": 20,
+    "phaseExitAndLogHashesVerified": 712,
+    "nativeBinariesVerified": 28,
+    "packedRustSourceFileComparisons": 220,
+    "neutralSdkProductionPackageBoundaryChecks": 120,
+    "copiedTrackedInputsComparedToCodeRevisions": 1077,
+    "codeRevisions": {
+      "core": "1243881c6b91c46ff40cf0cb3cfd4598b8352409",
+      "keysight": "ac1d71a9fba87be2a1cd2bcc16c6b1888c0f0f13",
+      "tektronix": "f71ca340406370cc2467f78b604cc435752cadd8"
+    },
+    "activeCases": {
+      "keysight": 1859,
+      "tektronix": 452
+    },
+    "newNormativeCases": 838,
+    "localExactPackedNativeExecutions": {
+      "keysight-linux-net8.0": 0,
+      "keysight-linux-net10.0": 0,
+      "tektronix-linux-net8.0": 0,
+      "tektronix-linux-net10.0": 0
+    }
+  },
+  "confidence": "High for the declared software subset and inspected current source/package/native evidence; no physical validation confidence is asserted.",
+  "limitations": [
+    "The reviewed result is manual-derived software conformance for declared subsets, not physical bench/model/module/probe truth, input protection, contact continuity, calibration, timing or measurement performance.",
+    "Only original GitHub development-feed artifacts are qualified. Public0.2.0-alpha.1 lacks these additions; new coordinated versions and a separately authorized release remain necessary. No merge/publication is approved by this ballot.",
+    "Windows binaries were inspected with their executed hosted logs; they were not rerun locally. Both exact packed Linux frameworks for both vendors were independently rerun and exited0.",
+    "Owned/borrowed/worker/native cancellation proofs use scripted and genuinely pending synthetic hosts. Real connector/provider behavior must honor the documented framing/allocation/deadline/cancellation contract; no detached blocking thread is treated as cancelled.",
+    "Keysight fixture-only Rust opt-level0 and32MiB consumer thread are disclosed; production driver/SDK dependencies retain normal release settings. SDK/driver NativeAOT evidence does not qualify the managed OpenTAP host.",
+    "3585B SP selects stored trace data and T6 refreshes only the selected marker. TDS fresh scalar calls intentionally consume status/replace acquisition mode; cancellation may leave acquisition running and close does not restore hardware state.",
+    "Primary pages and code paths were reviewed for the declared command/parser/topology families, not every page of every manual. Current peer implementation ballots and prior numeric grades were not used."
+  ],
+  "historicalFindings": {
+    "A-SRC-01": "Resolved: current three new Rust factory ASCII validators match C#; paired NBSP/EM-space rejection/no-acquisition tests execute in source/packed native consumers.",
+    "A-TDS-SRC-01": "Resolved: both C# Scalar references changed to SDK Numeric, and affected quantity paths execute in current source/packed native artifacts."
+  }
+}

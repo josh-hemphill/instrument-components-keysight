@@ -1,0 +1,1580 @@
+{
+  "schemaVersion": 1,
+  "contractMajor": 1,
+  "description": "Independent manual/spec-derived traffic, not hardware observations; generator reads no production plans.",
+  "cases": [
+    {
+      "id": "keysight.34401a|E|VoltageDc-auto",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC? DEF,DEF",
+          "response": "+1.25000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1.25,
+        "unit": "Volt",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|VoltageDc-maximum-range",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": 1000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC? 1.00000000000E+03,DEF",
+          "response": "+1.25000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1.25,
+        "unit": "Volt",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|VoltageDc-non-nominal-range",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": 0.025
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC? 2.50000000000E-02,DEF",
+          "response": "+1.25000000E-03"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0.00125,
+        "unit": "Volt",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|VoltageDc-overload",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC? DEF,DEF",
+          "response": "+9.90000000E+37"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Volt",
+        "status": "Overload"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|VoltageDc-range-zero",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34401a|E|VoltageDc-range-negative",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": -1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34401a|E|VoltageDc-range-above-max",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": 1000.0009999999999
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34401a|E|VoltageAc-auto",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageAc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:AC? DEF,DEF",
+          "response": "+1.25000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1.25,
+        "unit": "Volt",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|VoltageAc-maximum-range",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageAc",
+          "arguments": {
+            "range": 750
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:AC? 7.50000000000E+02,DEF",
+          "response": "+1.25000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1.25,
+        "unit": "Volt",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|VoltageAc-non-nominal-range",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageAc",
+          "arguments": {
+            "range": 0.025
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:AC? 2.50000000000E-02,DEF",
+          "response": "+1.25000000E-03"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0.00125,
+        "unit": "Volt",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|VoltageAc-overload",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageAc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:AC? DEF,DEF",
+          "response": "+9.90000000E+37"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Volt",
+        "status": "Overload"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|VoltageAc-range-zero",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageAc",
+          "arguments": {
+            "range": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34401a|E|VoltageAc-range-negative",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageAc",
+          "arguments": {
+            "range": -1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34401a|E|VoltageAc-range-above-max",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageAc",
+          "arguments": {
+            "range": 750.0007499999999
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34401a|E|CurrentDc-auto",
+      "calls": [
+        {
+          "operation": "DmmMeasureCurrentDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:CURR:DC? DEF,DEF",
+          "response": "+1.25000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1.25,
+        "unit": "Ampere",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|CurrentDc-maximum-range",
+      "calls": [
+        {
+          "operation": "DmmMeasureCurrentDc",
+          "arguments": {
+            "range": 3
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:CURR:DC? 3.00000000000E+00,DEF",
+          "response": "+1.25000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1.25,
+        "unit": "Ampere",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|CurrentDc-non-nominal-range",
+      "calls": [
+        {
+          "operation": "DmmMeasureCurrentDc",
+          "arguments": {
+            "range": 0.025
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:CURR:DC? 2.50000000000E-02,DEF",
+          "response": "+1.25000000E-03"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0.00125,
+        "unit": "Ampere",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|CurrentDc-overload",
+      "calls": [
+        {
+          "operation": "DmmMeasureCurrentDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:CURR:DC? DEF,DEF",
+          "response": "+9.90000000E+37"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Ampere",
+        "status": "Overload"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|CurrentDc-range-zero",
+      "calls": [
+        {
+          "operation": "DmmMeasureCurrentDc",
+          "arguments": {
+            "range": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34401a|E|CurrentDc-range-negative",
+      "calls": [
+        {
+          "operation": "DmmMeasureCurrentDc",
+          "arguments": {
+            "range": -1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34401a|E|CurrentDc-range-above-max",
+      "calls": [
+        {
+          "operation": "DmmMeasureCurrentDc",
+          "arguments": {
+            "range": 3.0000029999999995
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34401a|E|CurrentAc-auto",
+      "calls": [
+        {
+          "operation": "DmmMeasureCurrentAc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:CURR:AC? DEF,DEF",
+          "response": "+1.25000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1.25,
+        "unit": "Ampere",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|CurrentAc-maximum-range",
+      "calls": [
+        {
+          "operation": "DmmMeasureCurrentAc",
+          "arguments": {
+            "range": 3
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:CURR:AC? 3.00000000000E+00,DEF",
+          "response": "+1.25000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1.25,
+        "unit": "Ampere",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|CurrentAc-non-nominal-range",
+      "calls": [
+        {
+          "operation": "DmmMeasureCurrentAc",
+          "arguments": {
+            "range": 0.025
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:CURR:AC? 2.50000000000E-02,DEF",
+          "response": "+1.25000000E-03"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0.00125,
+        "unit": "Ampere",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|CurrentAc-overload",
+      "calls": [
+        {
+          "operation": "DmmMeasureCurrentAc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:CURR:AC? DEF,DEF",
+          "response": "+9.90000000E+37"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Ampere",
+        "status": "Overload"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|CurrentAc-range-zero",
+      "calls": [
+        {
+          "operation": "DmmMeasureCurrentAc",
+          "arguments": {
+            "range": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34401a|E|CurrentAc-range-negative",
+      "calls": [
+        {
+          "operation": "DmmMeasureCurrentAc",
+          "arguments": {
+            "range": -1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34401a|E|CurrentAc-range-above-max",
+      "calls": [
+        {
+          "operation": "DmmMeasureCurrentAc",
+          "arguments": {
+            "range": 3.0000029999999995
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34401a|E|Resistance-auto",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:RES? DEF,DEF",
+          "response": "+1.25000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1.25,
+        "unit": "Ohm",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|Resistance-maximum-range",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance",
+          "arguments": {
+            "range": 100000000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:RES? 1.00000000000E+08,DEF",
+          "response": "+1.25000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1.25,
+        "unit": "Ohm",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|Resistance-non-nominal-range",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance",
+          "arguments": {
+            "range": 0.025
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:RES? 2.50000000000E-02,DEF",
+          "response": "+1.25000000E-03"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0.00125,
+        "unit": "Ohm",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|Resistance-overload",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:RES? DEF,DEF",
+          "response": "+9.90000000E+37"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Ohm",
+        "status": "Overload"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|Resistance-range-zero",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance",
+          "arguments": {
+            "range": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34401a|E|Resistance-range-negative",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance",
+          "arguments": {
+            "range": -1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34401a|E|Resistance-range-above-max",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance",
+          "arguments": {
+            "range": 100000099.99999999
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34401a|E|Resistance2Wire-auto",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance2Wire",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:RES? DEF,DEF",
+          "response": "+1.25000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1.25,
+        "unit": "Ohm",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|Resistance2Wire-maximum-range",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance2Wire",
+          "arguments": {
+            "range": 100000000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:RES? 1.00000000000E+08,DEF",
+          "response": "+1.25000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1.25,
+        "unit": "Ohm",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|Resistance2Wire-non-nominal-range",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance2Wire",
+          "arguments": {
+            "range": 0.025
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:RES? 2.50000000000E-02,DEF",
+          "response": "+1.25000000E-03"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0.00125,
+        "unit": "Ohm",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|Resistance2Wire-overload",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance2Wire",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:RES? DEF,DEF",
+          "response": "+9.90000000E+37"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Ohm",
+        "status": "Overload"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|Resistance2Wire-range-zero",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance2Wire",
+          "arguments": {
+            "range": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34401a|E|Resistance2Wire-range-negative",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance2Wire",
+          "arguments": {
+            "range": -1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34401a|E|Resistance2Wire-range-above-max",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance2Wire",
+          "arguments": {
+            "range": 100000099.99999999
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34401a|E|Resistance4Wire-auto",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance4Wire",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:FRES? DEF,DEF",
+          "response": "+1.25000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1.25,
+        "unit": "Ohm",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|Resistance4Wire-maximum-range",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance4Wire",
+          "arguments": {
+            "range": 100000000
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:FRES? 1.00000000000E+08,DEF",
+          "response": "+1.25000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1.25,
+        "unit": "Ohm",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|Resistance4Wire-non-nominal-range",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance4Wire",
+          "arguments": {
+            "range": 0.025
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:FRES? 2.50000000000E-02,DEF",
+          "response": "+1.25000000E-03"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0.00125,
+        "unit": "Ohm",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|Resistance4Wire-overload",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance4Wire",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:FRES? DEF,DEF",
+          "response": "+9.90000000E+37"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Ohm",
+        "status": "Overload"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|Resistance4Wire-range-zero",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance4Wire",
+          "arguments": {
+            "range": 0
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34401a|E|Resistance4Wire-range-negative",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance4Wire",
+          "arguments": {
+            "range": -1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34401a|E|Resistance4Wire-range-above-max",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance4Wire",
+          "arguments": {
+            "range": 100000099.99999999
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keysight.34401a|E|negative",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC? DEF,DEF",
+          "response": "-1.25000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": -1.25,
+        "unit": "Volt",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|zero",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC? DEF,DEF",
+          "response": "+0.00000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Volt",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|negative-zero",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC? DEF,DEF",
+          "response": "-0.00000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 0,
+        "unit": "Volt",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|exponent",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC? DEF,DEF",
+          "response": "+1.25000000E-09"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 1.25e-09,
+        "unit": "Volt",
+        "status": "Valid"
+      }
+    },
+    {
+      "id": "keysight.34401a|E|reject-short",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC? DEF,DEF",
+          "response": "1.25"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34401a|E|reject-unsigned",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC? DEF,DEF",
+          "response": "1.25000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34401a|E|reject-small-exponent",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC? DEF,DEF",
+          "response": "+1.25000000E+0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34401a|E|reject-lower-e",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC? DEF,DEF",
+          "response": "+1.25000000e+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34401a|E|reject-wrong-decimal",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC? DEF,DEF",
+          "response": "+12.5000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34401a|E|reject-leading-space",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC? DEF,DEF",
+          "response": " +1.25000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34401a|E|reject-trailing-space",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC? DEF,DEF",
+          "response": "+1.25000000E+00 "
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34401a|E|reject-csv",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC? DEF,DEF",
+          "response": "+1.25000000E+00,+2.50000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34401a|E|reject-negative-sentinel",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC? DEF,DEF",
+          "response": "-9.90000000E+37"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34401a|E|reject-giant",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC? DEF,DEF",
+          "response": "+1.00000000E+30"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34401a|E|reject-nan",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC? DEF,DEF",
+          "response": "NaN"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34401a|E|reject-infinity",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC? DEF,DEF",
+          "response": "Infinity"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34401a|E|reject-binary",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC? DEF,DEF",
+          "response": "#215+1.25000000E+00"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34401a|E|reject-control",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC? DEF,DEF",
+          "response": "+1.25000000E+00\n"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34401a|E|transport",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC? DEF,DEF",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34401a|E|timeout",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC? DEF,DEF",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    }
+  ]
+}

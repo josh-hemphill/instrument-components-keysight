@@ -1,0 +1,21 @@
+{
+  "reproducedBytes": true,
+  "caseCount": 334,
+  "operations": {
+    "OscilloscopeMeasureFrequency": 77,
+    "OscilloscopeMeasureVpp": 114,
+    "OscilloscopeReadTimebaseScale": 9,
+    "OscilloscopeRun": 4,
+    "OscilloscopeSetChannelCoupling": 16,
+    "OscilloscopeSetChannelDisplay": 9,
+    "OscilloscopeSetChannelScale": 38,
+    "OscilloscopeSetTimebaseScale": 39,
+    "OscilloscopeSingle": 5,
+    "OscilloscopeStop": 21
+  },
+  "sourceHashesVerified": true,
+  "workdir": "/workspace/scratch/instrument-components-expansion-20261113/review/tds-oracle-repro-om62ee2m",
+  "limitations": [
+    "Metachecks validateoracleconsistency,not implementationorhardwarebehavior"
+  ]
+}

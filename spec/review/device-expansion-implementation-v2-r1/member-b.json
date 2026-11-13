@@ -1,0 +1,472 @@
+{
+  "member": "B",
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "rubric": "v2",
+  "stage": "IMPLEMENTATION",
+  "round": "implementation-v2-r1",
+  "manifestSha256": "43d87036abe94ce53c2d98db9e8c6ae4a74c149cb2f65c01f9ba973766794dd6",
+  "scores": {
+    "34401A": {
+      "EVIDENCE": 9.4,
+      "API": 9.4,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.5,
+      "VALIDATION": 9.5,
+      "DELIVERY": 9.4
+    },
+    "33120A": {
+      "EVIDENCE": 9.4,
+      "API": 9.4,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.5,
+      "VALIDATION": 9.5,
+      "DELIVERY": 9.4
+    },
+    "53132A": {
+      "EVIDENCE": 9.4,
+      "API": 9.4,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.5,
+      "VALIDATION": 9.5,
+      "DELIVERY": 9.4
+    },
+    "3585B": {
+      "EVIDENCE": 9.4,
+      "API": 9.4,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.5,
+      "VALIDATION": 9.5,
+      "DELIVERY": 9.4
+    },
+    "34980A": {
+      "EVIDENCE": 9.3,
+      "API": 9.5,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.5,
+      "VALIDATION": 9.5,
+      "DELIVERY": 9.4
+    },
+    "34937A": {
+      "EVIDENCE": 9.4,
+      "API": 9.4,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.5,
+      "VALIDATION": 9.5,
+      "DELIVERY": 9.4
+    },
+    "34922A": {
+      "EVIDENCE": 9.4,
+      "API": 9.4,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.5,
+      "VALIDATION": 9.5,
+      "DELIVERY": 9.4
+    },
+    "34950A": {
+      "EVIDENCE": 9.4,
+      "API": 9.5,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.5,
+      "VALIDATION": 9.5,
+      "DELIVERY": 9.4
+    },
+    "TDS1002": {
+      "EVIDENCE": 9.4,
+      "API": 9.4,
+      "PROTOCOL": 9.5,
+      "PARITY": 9.5,
+      "VALIDATION": 9.5,
+      "DELIVERY": 9.4
+    }
+  },
+  "votes": {
+    "34401A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "33120A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "53132A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "3585B": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "34980A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "34937A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "34922A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "34950A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "TDS1002": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    }
+  },
+  "mandatoryDefects": [],
+  "requiredChanges": [],
+  "evidence": {
+    "34401A": {
+      "EVIDENCE": "Own34401-90004 manual/spec/provenance and69 independent cases are bound. Actual qualified_scpi Rust/C# replacement implements only manual-derived seven scalars, documented units/ranges/positive overload and GPIB commissioning; inherited USB/temperature/split-phase claims are removed.",
+      "API": "Actual explicit model factory exposes exactly seven DMM operations; validated copied endpoint bindings, matching commissioning and selected requirements gate acquisition. Passive alias selection and absence of native connector are exercised; old generic profile no longer coexists.",
+      "PROTOCOL": "Both implementations emit one MEAS query with explicitDEF, parse exact15-character scientific bodies, distinguish exact positive overload, reject giant/malformed responses and quarantine uncertainty. Finite connector deadline/body/framing prerequisites and resource-only close are documented and verified by host fixtures.",
+      "PARITY": "All69 model cases are part of1859 unchanged independent cases executed in both languages and all frontends, generated-source and packed, in four Linux/Windowsx64 net8/net10 cells. Actual native binaries/log hashes and package/feed joins were independently inspected; Linuxnet10 packed binary also passed locally.",
+      "VALIDATION": "Actual QualifiedProof/qualified_proof test every nonfinite range with healthy follow-up, all independent error quarantine outcomes, passive/admission/ASCII/binding bounds, copied bindings and owned/borrowed cleanup. Pending query native cancellation/deadline and whole-operation serialization run in source and packed proofs.",
+      "DELIVERY": "External Keysight source/crate/NuGet contains qualified factory, with TestKit development-only and core implementations separate. Compiled examples and README explain prerequisites/support limits, old generic retirement and no publicalpha.1 additions. Immutable1243881 tool/SDK feed and actual source/packed proof are joined."
+    },
+    "33120A": {
+      "EVIDENCE": "Own33120-90006 pages establish always-live output,50ohm accounting,100microhertz floor, coupled amplitude/offset envelope and real9.9E37HighZ. Current code and67 independent cases preserve these facts without output-disable or physical-calibration claims.",
+      "API": "Four operations and explicit continuous-sine/50ohm/VPP/output-change commissioning are implemented in both languages. Frozen endpoints and passive selection are tested. No OutputEnable/shutdown is advertised; write-only setters and read-setting semantics are documented.",
+      "PROTOCOL": "Exact guards precede action; HighZ numeric exception precedes generic magnitudeParse. Both original and rounded E11 pairs are checked. Post-query conflict produces InvalidArgument with no write and quarantines, while structural rejection preserves health. Current wrapper never emits retry/reset/output cleanup.",
+      "PARITY": "The67-case subset, actual commissioned-factory selectors, C# four frontends and Rust default/async run in every source/packed native platform cell. Package sources match frozen Rust implementation; native images/logs and12-entry feed joins were checked independently and local packed execution passed.",
+      "VALIDATION": "GeneratorFailurePositions explicitly injects Transport/Timeout at every amplitude/offset guard/counterpart/final-write position beyond the golden frequency failures. Nonfinite healthy follow-up, rounded conflicts, real pending query/write cancellation/deadline, owned/borrowed lifetime and transaction ordering execute in native proofs.",
+      "DELIVERY": "External package/documents require truthful load and authorization for live output changes; compiled typed example exercises actual factory. Old public package exclusion, exact current SDK workflow/tool pin and separate future coordinated version are explicit; packed archives contain no TestKit/runtime oracle."
+    },
+    "53132A": {
+      "EVIDENCE": "Exact53132A applicability of53131-90044, CONFIG/arming/ASCII/freshREAD and gate resolution is preserved in code/spec and50 independent cases. No53131-only aperture, channel3 or totalize behavior is imported.",
+      "API": "Current Core has per-open channel1/gate100ms intent; validated setters commit locally with no IO. Channels1/2 and frequency/period units are exact. Tests verify invalid setters preserve prior intent and a second handle receives independent defaults.",
+      "PROTOCOL": "Actual transactions reapply CONFIG before timed arming/gate/ASCII/READ. Canonical binary64 integer-millisecond equality and three-decimal wire format match; NR3 exponent/significant-digit, invalid9.91E37 and nonpositive-domain errors quarantine without bus cleanup.",
+      "PARITY": "Both languages execute all50 cases plus actual counter factory procedures in source/packed Windows/Linuxx64 net8/net10 native cells. E11/state/error semantics are equivalent; genuine native and worker paths are gated honestly and actual package/native identities inspected.",
+      "VALIDATION": "FrozenInventoryAndCounterIntent plus corpus checks repeated fresh frequency/period, grid boundaries, state preservation/default isolation and no staleFETCh. Pending native read/write, independent timers, abandonment/cancellation, ownership and whole-operation queuing execute; every error has quarantine/healthy follow-up.",
+      "DELIVERY": "External factory and compiled typed Counter example use version-pinned SDK packages without proprietary core rules. Own-model prerequisites/deferred channel3/totalize and missing-carrier timeout are documented; exact checksum-joined package proof and future-version boundary are present."
+    },
+    "3585B": {
+      "EVIDENCE": "Bound scanned03585-90017 source, OCR/render identities and native fixed-field diagrams support actualhp3585 code and123 independent synthetic cases. Serial applicability, R12/50ohm/liveA/dBm commissioning and software1Hz floor versus hardware0Hz/fractional capability are explicit.",
+      "API": "Eight native SpectrumAnalyzer operations are exposed through exacthpib/model bindings, not genericSCPI. Copied bounded endpoint admission and passive aliases are tested. Unsupported sweep/trace/reset/shutdown are absent; peak/read semantics are documented separately.",
+      "PROTOCOL": "Actual CL/SP andCL/D2,T6 match approved native protocol. Fixed24-byte record validates both fields even for one requested axis and preserves spaces; E-0 is required for dBm. Stored-traceSP is not a fresh global sweep andT6 waits only for selected marker validity. Uncertainty quarantines with resource-only close.",
+      "PARITY": "Rust/C# exact integer/tenths formatting, parser/error contracts and all123 cases execute in source/packed four-cell native matrix, including both worker paths. ASCII scheme fix is present at constructor/selection and paired rejection procedures execute; binaries/log/package sources verified.",
+      "VALIDATION": "Actual analyzer constructor bound/alias/nonfinite/error-health tests and pendingCLwrite/D2query cancellation/deadlines run. Cases include malformed discarded fields, widths/spaces/exponent/ranges; serialized multi-message marker calls are exercised. Local Linuxnet10 packed execution passed together with all other Agilent items.",
+      "DELIVERY": "Native vendor implementation/manual-derived corpus stays in Keysight package; compiled example and README disclose stored-peak/selected-point behavior and serial/mode prerequisites. Synthetic traffic and absent physical proof are explicit; compatible immutable feed/package proof is actual, without public-release claims."
+    },
+    "34980A": {
+      "EVIDENCE": "Own mainframe/programmer/module sources and independent fixture define addressedGPIB, slot/native addressing and scan-wide consequences. Current code/spec/README honestly scope internalDMM/scan/LAN/USB admission and require lifetime exclusion of autonomous actions.",
+      "API": "One parent factory/handle/lease owns all module views. Current validated frozen maps enforce slot/local bounds, namespace uniqueness, physical uniqueness, same-slot/cross-namespace types and selected-endpoint capabilities before acquisition. Core contains only five neutral operations; all module rules remain external.",
+      "PROTOCOL": "Actual MessageDevice health/lifetime is parent-wide, so guard failures quarantine relay/digital siblings. Native queuing test pauses digital transaction while relay view waits. Ownedclose is once, borrowed remains open, and no device/globalOpenAll/reset is emitted; finite connector contract is explicit.",
+      "PARITY": "New neutral schema/catalog/generated typed APIs and OpenTAP managed views are synchronized and exercised. SDK native proof executes eleven typed additions including bytezero and old-positive-count rejection. Source/packed vendor proofs use exact1243881 compatible feeds in all four native cells with no core/vendor leakage.",
+      "VALIDATION": "Inventory checks all supported locals at every slot, isolated invalid/duplicate/conflicting maps, empty inventory and deep mutation; SelectedRouteAdmission proves relay/input/output capability isolation before sync/native/worker opens. Pending sibling serialization/quarantine/ownership and1859-case corpus execute in both languages.",
+      "DELIVERY": "Actual external parent package has no fictitious module binaries/sessions; compiled shared-parent examples and prerequisites are delivered. Crate/NuGet dependencies and payloads,12-of14 SDK checksum joins and immutable producer pins were inspected. No TestKit/oracle/vendor source enters core production dependencies."
+    },
+    "34937A": {
+      "EVIDENCE": "Actual topology agrees with own guide:1\u201328FormC and29\u201332FormA, latching/no analog bus, with NC meaning of Open explicit.32 independent cases and documentation avoid continuity, fail-safe or power-cycle isolation claims.",
+      "API": "Current module is a switch capability of one34980A parent, with positive logical paths mapped to validated slot/local addresses. Three single-channel operations avoid fake matrix pairs/independent sessions/OpenAll. Exact descriptor/selected requirements and sparse mapping are exercised.",
+      "PROTOCOL": "Actual writes/query are only selectedROUT:CLOS/OPEN/CLOS?, with strict0/1 parser. Failures quarantine parent without cleanup/reset; close does not change latching states. Concurrent-view parent lock and shared lifetime are directly tested.",
+      "PARITY": "Both implementations map the same frozen module inventory and execute32 cases in all modes within source/packed four-platform vendor proofs. New neutral operations are rooted in actual SDK typed/AOT execution; actual release-form packages/native images inspected.",
+      "VALIDATION": "All FormC/FormA boundary operations, states, parser/IO failures and healthy/quarantined follow-ups run. Inventory tests cover every local/slot and type conflicts; module-specific pending relay query/write, cancellation/deadlines, oneparentowned/borrowedclose and transaction queuing execute.",
+      "DELIVERY": "External shared-parent examples and README explain FormC NC connection and partial inventory, no automatic isolation/shutdown. Production packages exclude manual/oracle/TestKit payloads; compatible new SDK feed and actual package/native proof are retained without physical-contact or release claims."
+    },
+    "34922A": {
+      "EVIDENCE": "Own printed34\u201335 evidence, actual native mapping and33 independent cases retain two35-channel latching banks, scan-only4wire pairing and nonexclusive direct routing. No neighboring reed/FET topology or power-off behavior is substituted.",
+      "API": "Current parent binding admits direct local1\u201370 positive logical paths only; analog-bus/DMM/scan/four-wire/OpenAll remain absent. Sparse IDs and per-endpoint selected capability checks are actual, with no hidden sibling expansion or separate connector.",
+      "PROTOCOL": "ROUT:CLOS/OPEN/CLOS? messages and0/1 decoding match independent cases. Two same-bank close writes occur without an implicit open. Uncertain failure quarantines sharedparent and close emits no hardware cleanup; lifetime commissioning excludes scans/monitor/autonomous actions.",
+      "PARITY": "Identical generated neutral operations and external Rust/C# mapping/parser run in every source/packed native cell. SDK/package sources and full corpus/phase/native checks independently match current immutable revisions, including actual worker/native distinctions.",
+      "VALIDATION": "33 cases include1/35/36/70, nonexclusive samebank closure and malformed/typed IO failures. Procedural inventory tests cover all70locals\u00d78slots and isolated conflicts; actual pending muxquery/write, sibling health/ownership/concurrency and immutable route/capability tests execute.",
+      "DELIVERY": "External factory, typed shared-parent example and README document external signal commoning, latching retention and deferred acquisition. Newneutralcore/package separation and exact producer/feed/artifact joins are proven; simulator/native results remain separate from physical bus/contact evidence."
+    },
+    "34950A": {
+      "EVIDENCE": "Current code/spec and123 independently extracted cases use own-model numeric1/2/4 width tokens, HIMP versusOFF, bank-first memory addressing, SENSE input versus latch and SOURCE implicit-direction behavior; fixed2.5V/Active3.3V is truthful commissioned policy.",
+      "API": "Neutral byteu32/zero-validCount and positive logicalports are generated without weakening existing positive counts. Frozen per-port input/output and selected-endpoint capability checks occur beforeIO/acquisition as appropriate. Exact0\u2013255 request checks and copied direction maps are tested.",
+      "PROTOCOL": "Actual read/write prefix checks all four bank widths, selected direction/polarity, bank-first HIMP/memory and electrical guards in order; failures stop before action. SENSE explicitDEC and SOURCE decimalbyte keep admitted width/direction. Strict sampled-byte parser/domain errors quarantine all siblings; no implicitconfiguration/cleanup.",
+      "PARITY": "New typed SDK/OpenTAP byte operations preserve zero and old count semantics. Both languages execute123 cases/all frontends and static sharedmodule views through actual source/packed native cells. Package feed/source/native binaries and no-reflection boundaries inspected.",
+      "VALIDATION": "Boundary0/255/256, direction/unknownport, allguardfailure/eachtrafficposition, strict decimal bodies and quarantine follow-ups run. Constructor tests cover all8byteports\u00d78slots and both directions; mutable direction replacement, all-bank grouping, selectedcapability isolation, pendingwrite/read and relay-sibling serialization are executed.",
+      "DELIVERY": "External module policy/docs/compiled examples disclose fixed electrical state and lifetime autonomous-action exclusion, excluding buffer/wide/direction-control APIs. Production core is neutral; independent packages contain no runtimefixtures/TestKit and all matching newSDK/archive identities are retained."
+    },
+    "TDS1002": {
+      "EVIDENCE": "Exact corrected non-BTDS1002 manual and334-case provenance are preserved; CM/CMA/CMAXGPIB andMEM/USB exclusion,1/10/100/1000 probes, NR1/NR3/quoted units andDESE/OPC/warnings are own-model backed. All118 older cases remain unchanged rather than substituting MDO behavior.",
+      "API": "Actual immutable endpoint/module/probe factory exposes precisely ten operations and exactTDS1002/TDS 1002 aliases. Constructor/admission tests cover module/probe/enum/count/ASCII/duplicates/unbound/nativeabsence and endpoint-specific probes; complete31timebase and4\u00d72\u00d711vertical grids are exercised.",
+      "PROTOCOL": "Current code performs disclosedHEAD/VERB and pre/postESR withDESE255. FreshcaptureSTOP/SAMPLE/SEQ/RUN/OPC/state/count/source/type/quotedunits/value withholds reply until finalESR0. Underflow/sentinel/domain policies match; no hidden STOP/retry/mode restoration follows cancellation. Both C# returns now use correctNumeric SDK type.",
+      "PARITY": "Corrected C# source and packed native binaries actually execute all452cases\u00d74frontends plus procedures/examples across Linux/Windowsx64 net8/net10. Rust default/async counterparts also run; archive phase/digest/feed/native/source joins independently verified and extracted Linuxnet10 packed binary passed locally.",
+      "VALIDATION": "All334 own-model cases and118 baseline cases execute unchanged. Actual procedural code covers healthy invalid follow-up, everyerrorquarantine, allprobe/timebase neighbors, fr-FR, immutable perendpoint probes, pendingHEAD/RUN/OPC/VALUE cancellation/deadlines, ownercleanup and capture/Stop noninterleaving. LateESR failures do not return finitevalue success.",
+      "DELIVERY": "External Tek implementation retains existingMDO profile/corpus and adds no model exception tocore. Compiled static examples/README disclose statusconsumption, stoppedSAMPLE/SEQ state, module/probe/trigger/deadline prerequisites and absent publicalpha.1. Exact1243881 newproducer/tool/package/native proof and futureversion boundary inspected."
+    }
+  },
+  "limitations": [
+    "Manual-derived software subsets only. No live device, installed option/module/probe truth, electrical protection, continuity/isolation, calibration or physical performance was validated.",
+    "Native and pending-host evidence uses TestKit/scripted hosts. It proves software lifetime/serialization/parser behavior, not unspecified third-party connector quality; real connectors must enforce bounded allocation, framing and finite deadlines.",
+    "Hosted Windows/Linux source/packed NativeAOT is independently inspected retained execution evidence; only the two Linuxnet10 packed binaries were additionally re-executed locally by this reviewer.",
+    "Packages use explicitly audited development feeds with0.2.0-alpha.1 development labels. Existing public0.2.0-alpha.1 does not contain these additions; coordinated new public versions/release gates remain future authorized work.",
+    "Keysight fixture-only Rust consumer uses documentedopt-level0/32MiB stack; production SDK/driver dependencies retain ordinary release settings. The result is not a claim that the large fixture harness uses default optimized stack behavior.",
+    "Core OpenTAP managed regression evidence does not establish OpenTAP-host NativeAOT compatibility.",
+    "All54 implementation cells are newly assessed under v2 on this immutable packet; no SPEC or prior numeric grades were carried forward and no peer current implementation ballots were read."
+  ],
+  "sourceIdentities": {
+    "core": "1243881c6b91c46ff40cf0cb3cfd4598b8352409",
+    "keysight": "ac1d71a9fba87be2a1cd2bcc16c6b1888c0f0f13",
+    "tektronix": "f71ca340406370cc2467f78b604cc435752cadd8"
+  },
+  "independentArchiveInspection": [
+    {
+      "family": "sdk",
+      "artifact": "driver-sdk-ubuntu-latest-net10.0.zip",
+      "digest": "6391d0b6ba2267749bcac2d50a02e584170e2194152eff994d581e9865331099",
+      "phases": 47,
+      "packages": 14,
+      "native": "ELF64-x64",
+      "typed11": true
+    },
+    {
+      "family": "sdk",
+      "artifact": "driver-sdk-ubuntu-latest-net8.0.zip",
+      "digest": "237e9531d35e63b83f2e433124497ac9bd115ea6ca2d9fd75f7c21a4b1b29d38",
+      "phases": 47,
+      "packages": 14,
+      "native": "ELF64-x64",
+      "typed11": true
+    },
+    {
+      "family": "sdk",
+      "artifact": "driver-sdk-windows-latest-net10.0.zip",
+      "digest": "eb40ea3ee83e76d2c981dd8fd3ee64e04c413e2fd60413c94c11b5b0b39ff2ff",
+      "phases": 45,
+      "packages": 14,
+      "native": "PE64-x64-noCLR",
+      "typed11": true
+    },
+    {
+      "family": "sdk",
+      "artifact": "driver-sdk-windows-latest-net8.0.zip",
+      "digest": "7b31e30d28808cac78ffa246cf74107b2215f054f9601d76a17f7f8730e9e0d2",
+      "phases": 45,
+      "packages": 14,
+      "native": "PE64-x64-noCLR",
+      "typed11": true
+    },
+    {
+      "family": "keysight",
+      "artifact": "driver-sdk-ubuntu-latest-net10.0.zip",
+      "digest": "ffb4d7e7e4dac33e45c2550667156ccd98bbcc70e1de4df436a9c7baa2d5b366",
+      "phases": 47,
+      "packages": 14,
+      "native": "ELF64-x64",
+      "typed11": true
+    },
+    {
+      "family": "keysight",
+      "artifact": "driver-sdk-ubuntu-latest-net8.0.zip",
+      "digest": "7ac5eca4c45663e73cbe71ac4c75e0db0ff2d9c30ea3a9174ac465d188561725",
+      "phases": 47,
+      "packages": 14,
+      "native": "ELF64-x64",
+      "typed11": true
+    },
+    {
+      "family": "keysight",
+      "artifact": "driver-sdk-windows-latest-net10.0.zip",
+      "digest": "26796869207f9ccc732badd3ad80198d1bf9ef8052fa3f153f27eb0c15141eb5",
+      "phases": 45,
+      "packages": 14,
+      "native": "PE64-x64-noCLR",
+      "typed11": true
+    },
+    {
+      "family": "keysight",
+      "artifact": "driver-sdk-windows-latest-net8.0.zip",
+      "digest": "8f74e422e448052b073003f158f6f18eaf69f8b98afd4d90f7c796e286e740bb",
+      "phases": 45,
+      "packages": 14,
+      "native": "PE64-x64-noCLR",
+      "typed11": true
+    },
+    {
+      "family": "keysight",
+      "artifact": "driver-proof-ubuntu-latest-net10.0.zip",
+      "digest": "59109d7a40f7f85bfdc44aa04e5966d3777238a884326cf60a1e17d9d75b1899",
+      "phases": 21,
+      "natives": [
+        "ELF64-x64",
+        "ELF64-x64"
+      ],
+      "cases": 1859,
+      "feedJoin": 12,
+      "packageSourceMatches": true
+    },
+    {
+      "family": "keysight",
+      "artifact": "driver-proof-ubuntu-latest-net8.0.zip",
+      "digest": "bd95216e5df01a24dee7d91cd45e2fa3983af98d698981d7a788cbcf25b9a794",
+      "phases": 21,
+      "natives": [
+        "ELF64-x64",
+        "ELF64-x64"
+      ],
+      "cases": 1859,
+      "feedJoin": 12,
+      "packageSourceMatches": true
+    },
+    {
+      "family": "keysight",
+      "artifact": "driver-proof-windows-latest-net10.0.zip",
+      "digest": "f279771824472053920c740977331ff7ae7c4e571b46cfd4deac58e255327ffd",
+      "phases": 19,
+      "natives": [
+        "PE64-x64-noCLR",
+        "PE64-x64-noCLR"
+      ],
+      "cases": 1859,
+      "feedJoin": 12,
+      "packageSourceMatches": true
+    },
+    {
+      "family": "keysight",
+      "artifact": "driver-proof-windows-latest-net8.0.zip",
+      "digest": "4e366cad54fe27fe40a9604bfc920450e5a9c22d02d1cac72a06b456d0040607",
+      "phases": 19,
+      "natives": [
+        "PE64-x64-noCLR",
+        "PE64-x64-noCLR"
+      ],
+      "cases": 1859,
+      "feedJoin": 12,
+      "packageSourceMatches": true
+    },
+    {
+      "family": "tektronix",
+      "artifact": "driver-sdk-ubuntu-latest-net10.0.zip",
+      "digest": "bd4e36b9df4b892659a2017149733eeb02a38e22b3d91c95201c40c7fad411de",
+      "phases": 47,
+      "packages": 14,
+      "native": "ELF64-x64",
+      "typed11": true
+    },
+    {
+      "family": "tektronix",
+      "artifact": "driver-sdk-ubuntu-latest-net8.0.zip",
+      "digest": "f989f4fb77a49164cf5fe763cd3720f3bd0219ae0685772a009e4f9b961c8d25",
+      "phases": 47,
+      "packages": 14,
+      "native": "ELF64-x64",
+      "typed11": true
+    },
+    {
+      "family": "tektronix",
+      "artifact": "driver-sdk-windows-latest-net10.0.zip",
+      "digest": "637b4e591caa8737c0c0d285c3d85bb3a1a4d26103337d0bc778d1b6c5a0e71b",
+      "phases": 45,
+      "packages": 14,
+      "native": "PE64-x64-noCLR",
+      "typed11": true
+    },
+    {
+      "family": "tektronix",
+      "artifact": "driver-sdk-windows-latest-net8.0.zip",
+      "digest": "dccc0861a20ef761e61eb481bc77c8e607e217e2fb104acb1179fe264d1f5aec",
+      "phases": 45,
+      "packages": 14,
+      "native": "PE64-x64-noCLR",
+      "typed11": true
+    },
+    {
+      "family": "tektronix",
+      "artifact": "driver-proof-ubuntu-latest-net10.0.zip",
+      "digest": "d102b287937086f9c29e73788c3fba60ea134a53fa6458307c926d3e539414a4",
+      "phases": 21,
+      "natives": [
+        "ELF64-x64",
+        "ELF64-x64"
+      ],
+      "cases": 452,
+      "feedJoin": 12,
+      "packageSourceMatches": true
+    },
+    {
+      "family": "tektronix",
+      "artifact": "driver-proof-ubuntu-latest-net8.0.zip",
+      "digest": "dfb7d4bcf8319ea42d1c818a210db7fc55fd1e85a3f697438487396f59d97f4a",
+      "phases": 21,
+      "natives": [
+        "ELF64-x64",
+        "ELF64-x64"
+      ],
+      "cases": 452,
+      "feedJoin": 12,
+      "packageSourceMatches": true
+    },
+    {
+      "family": "tektronix",
+      "artifact": "driver-proof-windows-latest-net10.0.zip",
+      "digest": "bb3ec305f3c39d4a2f91e101e28eb8d31098e544c75f6100b26bb9601992db3d",
+      "phases": 19,
+      "natives": [
+        "PE64-x64-noCLR",
+        "PE64-x64-noCLR"
+      ],
+      "cases": 452,
+      "feedJoin": 12,
+      "packageSourceMatches": true
+    },
+    {
+      "family": "tektronix",
+      "artifact": "driver-proof-windows-latest-net8.0.zip",
+      "digest": "aa8a631d547117c01563fb676ea552246ec747470ea166effe52b69b38958235",
+      "phases": 19,
+      "natives": [
+        "PE64-x64-noCLR",
+        "PE64-x64-noCLR"
+      ],
+      "cases": 452,
+      "feedJoin": 12,
+      "packageSourceMatches": true
+    }
+  ],
+  "resolvedHistory": [
+    {
+      "finding": "B-SOURCE-01 Unicode scheme admission parity",
+      "disposition": "Fixed in current three new Agilent Rust admission paths; paired NBSP/EMSPACE rejection and ASCII case/trim procedures present and execute in actual source/packed proofs."
+    },
+    {
+      "finding": "B-TDS-SOURCE-01 nonexistent CatalogReply.Scalar",
+      "disposition": "Both current C# sites useNumeric; successful source/packed native cases exercise timebase/Vpp/frequency returns. Earlier source/failing logs remain historical evidence."
+    }
+  ],
+  "confidence": "High for frozen identity, source/manual/oracle correspondence, original-archive checksum joins and native executions; software claims remain bounded by documented physical/connector limits."
+}

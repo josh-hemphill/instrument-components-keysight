@@ -1,0 +1,87 @@
+{
+  "member": "A",
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "rubric": "v1",
+  "stage": "SPEC",
+  "round": "module-spec-r1",
+  "manifestSha256": "74fbadf2b5b43c093e2ec6f708b42993f9e00c95fb99387433d39e95e2adfb69",
+  "scores": {
+    "34980A": {
+      "EVIDENCE": 9.3,
+      "API": 9.4,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.3,
+      "VALIDATION": 9.3,
+      "DELIVERY": 9.3
+    },
+    "34937A": {
+      "EVIDENCE": 9.3,
+      "API": 9.3,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.3,
+      "VALIDATION": 9.3,
+      "DELIVERY": 9.3
+    },
+    "34922A": {
+      "EVIDENCE": 9.4,
+      "API": 9.3,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.3,
+      "VALIDATION": 9.3,
+      "DELIVERY": 9.3
+    },
+    "34950A": {
+      "EVIDENCE": 9.4,
+      "API": 9.4,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.3,
+      "VALIDATION": 9.3,
+      "DELIVERY": 9.3
+    }
+  },
+  "votes": {
+    "34980A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "34937A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "34922A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "34950A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    }
+  },
+  "mandatoryDefects": [],
+  "requiredChanges": [],
+  "limitations": [
+    "SPEC design and executable acceptance-plan review only; no module implementation, packed/native backend execution or hardware qualification is asserted.",
+    "The five new neutral operations require a future qualified immutable SDK producer/tool revision before final module package qualification; the old 6524 producer cannot qualify them.",
+    "All195 golden cases and fixture were reproduced byte-exact in a fresh temporary directory; this is authoring reproducibility, not backend conformance.",
+    "Physical inventories, electrical compatibility and lifetime absence of autonomous actions rely on truthful external commissioning; guard success cannot prove them.",
+    "Primary pages were sampled for each supported command/topology/parser family, not reread cover to cover.",
+    "No peer ballots or scores were inspected. 3585B and TDS1002A remain pending; no nine-item completion claim follows."
+  ]
+}

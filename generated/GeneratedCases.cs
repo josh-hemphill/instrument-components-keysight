@@ -378,356 +378,6 @@ new FunctionGeneratorSetFrequencyRequest(-1.0),
 new ScriptStep("close", "", "", null),
 },
 null, DriverErrorKind.InvalidArgument),
-new CatalogCase("keysight.34401a|B|DmmMeasureVoltageDc-0", new CatalogRequest[] {
-new DmmMeasureVoltageDcRequest(null),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:VOLT:DC?", "3.3", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Numeric(new Quantity(3.3, Unit.Volt, MeasurementStatus.Valid))),
-new CatalogCase("keysight.34401a|B|DmmMeasureVoltageDc-1", new CatalogRequest[] {
-new DmmMeasureVoltageDcRequest(2.5),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:VOLT:DC? 2.5", "3.3", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Numeric(new Quantity(3.3, Unit.Volt, MeasurementStatus.Valid))),
-new CatalogCase("keysight.34401a|B|DmmMeasureVoltageAc-0", new CatalogRequest[] {
-new DmmMeasureVoltageAcRequest(null),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:VOLT:AC?", "3.3", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Numeric(new Quantity(3.3, Unit.Volt, MeasurementStatus.Valid))),
-new CatalogCase("keysight.34401a|B|DmmMeasureVoltageAc-1", new CatalogRequest[] {
-new DmmMeasureVoltageAcRequest(2.5),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:VOLT:AC? 2.5", "3.3", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Numeric(new Quantity(3.3, Unit.Volt, MeasurementStatus.Valid))),
-new CatalogCase("keysight.34401a|B|DmmMeasureCurrentDc-0", new CatalogRequest[] {
-new DmmMeasureCurrentDcRequest(null),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:CURR:DC?", "3.3", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Numeric(new Quantity(3.3, Unit.Ampere, MeasurementStatus.Valid))),
-new CatalogCase("keysight.34401a|B|DmmMeasureCurrentDc-1", new CatalogRequest[] {
-new DmmMeasureCurrentDcRequest(2.5),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:CURR:DC? 2.5", "3.3", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Numeric(new Quantity(3.3, Unit.Ampere, MeasurementStatus.Valid))),
-new CatalogCase("keysight.34401a|B|DmmMeasureCurrentAc-0", new CatalogRequest[] {
-new DmmMeasureCurrentAcRequest(null),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:CURR:AC?", "3.3", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Numeric(new Quantity(3.3, Unit.Ampere, MeasurementStatus.Valid))),
-new CatalogCase("keysight.34401a|B|DmmMeasureCurrentAc-1", new CatalogRequest[] {
-new DmmMeasureCurrentAcRequest(2.5),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:CURR:AC? 2.5", "3.3", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Numeric(new Quantity(3.3, Unit.Ampere, MeasurementStatus.Valid))),
-new CatalogCase("keysight.34401a|B|DmmMeasureResistance-0", new CatalogRequest[] {
-new DmmMeasureResistanceRequest(null),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:RES?", "3.3", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Numeric(new Quantity(3.3, Unit.Ohm, MeasurementStatus.Valid))),
-new CatalogCase("keysight.34401a|B|DmmMeasureResistance-1", new CatalogRequest[] {
-new DmmMeasureResistanceRequest(2.5),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:RES? 2.5", "3.3", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Numeric(new Quantity(3.3, Unit.Ohm, MeasurementStatus.Valid))),
-new CatalogCase("keysight.34401a|B|DmmMeasureResistance2Wire-0", new CatalogRequest[] {
-new DmmMeasureResistance2WireRequest(null),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:RES?", "3.3", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Numeric(new Quantity(3.3, Unit.Ohm, MeasurementStatus.Valid))),
-new CatalogCase("keysight.34401a|B|DmmMeasureResistance2Wire-1", new CatalogRequest[] {
-new DmmMeasureResistance2WireRequest(2.5),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:RES? 2.5", "3.3", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Numeric(new Quantity(3.3, Unit.Ohm, MeasurementStatus.Valid))),
-new CatalogCase("keysight.34401a|B|DmmMeasureResistance4Wire-0", new CatalogRequest[] {
-new DmmMeasureResistance4WireRequest(null),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:FRES?", "3.3", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Numeric(new Quantity(3.3, Unit.Ohm, MeasurementStatus.Valid))),
-new CatalogCase("keysight.34401a|B|DmmMeasureResistance4Wire-1", new CatalogRequest[] {
-new DmmMeasureResistance4WireRequest(2.5),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:FRES? 2.5", "3.3", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Numeric(new Quantity(3.3, Unit.Ohm, MeasurementStatus.Valid))),
-new CatalogCase("keysight.34401a|B|DmmMeasureTemperature-0", new CatalogRequest[] {
-new DmmMeasureTemperatureRequest(null),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:TEMP?", "3.3", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Numeric(new Quantity(3.3, Unit.Unknown, MeasurementStatus.Valid))),
-new CatalogCase("keysight.34401a|B|DmmMeasureTemperature-1", new CatalogRequest[] {
-new DmmMeasureTemperatureRequest(2.5),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:TEMP? 2.5", "3.3", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Numeric(new Quantity(3.3, Unit.Unknown, MeasurementStatus.Valid))),
-new CatalogCase("keysight.34401a|B|DmmConfigureVoltageDc-0", new CatalogRequest[] {
-new DmmConfigureVoltageDcRequest(null, null),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:VOLT:DC", "", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|DmmConfigureVoltageDc-1", new CatalogRequest[] {
-new DmmConfigureVoltageDcRequest(null, 2.5),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:VOLT:DC DEF,2.5", "", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|DmmConfigureVoltageDc-2", new CatalogRequest[] {
-new DmmConfigureVoltageDcRequest(2.5, null),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:VOLT:DC 2.5", "", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|DmmConfigureVoltageDc-3", new CatalogRequest[] {
-new DmmConfigureVoltageDcRequest(2.5, 2.5),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:VOLT:DC 2.5,2.5", "", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|DmmConfigureVoltageAc-0", new CatalogRequest[] {
-new DmmConfigureVoltageAcRequest(null, null),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:VOLT:AC", "", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|DmmConfigureVoltageAc-1", new CatalogRequest[] {
-new DmmConfigureVoltageAcRequest(null, 2.5),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:VOLT:AC DEF,2.5", "", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|DmmConfigureVoltageAc-2", new CatalogRequest[] {
-new DmmConfigureVoltageAcRequest(2.5, null),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:VOLT:AC 2.5", "", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|DmmConfigureVoltageAc-3", new CatalogRequest[] {
-new DmmConfigureVoltageAcRequest(2.5, 2.5),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:VOLT:AC 2.5,2.5", "", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|DmmConfigureCurrentDc-0", new CatalogRequest[] {
-new DmmConfigureCurrentDcRequest(null, null),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:CURR:DC", "", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|DmmConfigureCurrentDc-1", new CatalogRequest[] {
-new DmmConfigureCurrentDcRequest(null, 2.5),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:CURR:DC DEF,2.5", "", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|DmmConfigureCurrentDc-2", new CatalogRequest[] {
-new DmmConfigureCurrentDcRequest(2.5, null),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:CURR:DC 2.5", "", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|DmmConfigureCurrentDc-3", new CatalogRequest[] {
-new DmmConfigureCurrentDcRequest(2.5, 2.5),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:CURR:DC 2.5,2.5", "", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|DmmConfigureCurrentAc-0", new CatalogRequest[] {
-new DmmConfigureCurrentAcRequest(null, null),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:CURR:AC", "", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|DmmConfigureCurrentAc-1", new CatalogRequest[] {
-new DmmConfigureCurrentAcRequest(null, 2.5),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:CURR:AC DEF,2.5", "", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|DmmConfigureCurrentAc-2", new CatalogRequest[] {
-new DmmConfigureCurrentAcRequest(2.5, null),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:CURR:AC 2.5", "", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|DmmConfigureCurrentAc-3", new CatalogRequest[] {
-new DmmConfigureCurrentAcRequest(2.5, 2.5),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:CURR:AC 2.5,2.5", "", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|DmmConfigureResistance-0", new CatalogRequest[] {
-new DmmConfigureResistanceRequest(null, null),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:RES", "", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|DmmConfigureResistance-1", new CatalogRequest[] {
-new DmmConfigureResistanceRequest(null, 2.5),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:RES DEF,2.5", "", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|DmmConfigureResistance-2", new CatalogRequest[] {
-new DmmConfigureResistanceRequest(2.5, null),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:RES 2.5", "", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|DmmConfigureResistance-3", new CatalogRequest[] {
-new DmmConfigureResistanceRequest(2.5, 2.5),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:RES 2.5,2.5", "", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|DmmConfigureResistance4Wire-0", new CatalogRequest[] {
-new DmmConfigureResistance4WireRequest(null, null),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:FRES", "", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|DmmConfigureResistance4Wire-1", new CatalogRequest[] {
-new DmmConfigureResistance4WireRequest(null, 2.5),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:FRES DEF,2.5", "", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|DmmConfigureResistance4Wire-2", new CatalogRequest[] {
-new DmmConfigureResistance4WireRequest(2.5, null),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:FRES 2.5", "", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|DmmConfigureResistance4Wire-3", new CatalogRequest[] {
-new DmmConfigureResistance4WireRequest(2.5, 2.5),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:FRES 2.5,2.5", "", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|DmmInitiate-0", new CatalogRequest[] {
-new DmmInitiateRequest(),
-}, new ScriptStep[] {
-new ScriptStep("write", "INIT", "", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|DmmFetch-0", new CatalogRequest[] {
-new DmmMeasureVoltageDcRequest(null),
-new DmmFetchRequest(),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:VOLT:DC?", "3.3", null),
-new ScriptStep("query", "FETC?", "3.3", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Numeric(new Quantity(3.3, Unit.Volt, MeasurementStatus.Valid))),
-new CatalogCase("keysight.34401a|B|DmmRead-0", new CatalogRequest[] {
-new DmmMeasureVoltageDcRequest(null),
-new DmmReadRequest(),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:VOLT:DC?", "3.3", null),
-new ScriptStep("query", "READ?", "3.3", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Numeric(new Quantity(3.3, Unit.Volt, MeasurementStatus.Valid))),
-new CatalogCase("keysight.34401a|B|DmmSoftwareTrigger-0", new CatalogRequest[] {
-new DmmSoftwareTriggerRequest(),
-}, new ScriptStep[] {
-new ScriptStep("write", "*TRG", "", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|QueryIdentity-0", new CatalogRequest[] {
-new QueryIdentityRequest(),
-}, new ScriptStep[] {
-new ScriptStep("query", "*IDN?", "Validation,Device,SN,1", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Identity(new InstrumentComponents.Drivers.Catalog.DeviceIdentity("Validation", "Device", "SN", "1"))),
-new CatalogCase("keysight.34401a|B|Reset-0", new CatalogRequest[] {
-new ResetRequest(),
-}, new ScriptStep[] {
-new ScriptStep("write", "*RST", "", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|Shutdown-0", new CatalogRequest[] {
-new ShutdownRequest(),
-}, new ScriptStep[] {
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Empty()),
-new CatalogCase("keysight.34401a|B|temperature-DmmRead", new CatalogRequest[] {
-new DmmMeasureTemperatureRequest(null),
-new DmmReadRequest(),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:TEMP?", "3.3", null),
-new ScriptStep("query", "READ?", "3.3", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Numeric(new Quantity(3.3, Unit.Unknown, MeasurementStatus.Valid))),
-new CatalogCase("keysight.34401a|B|temperature-DmmFetch", new CatalogRequest[] {
-new DmmMeasureTemperatureRequest(null),
-new DmmFetchRequest(),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:TEMP?", "3.3", null),
-new ScriptStep("query", "FETC?", "3.3", null),
-new ScriptStep("close", "", "", null),
-},
-new CatalogReply.Numeric(new Quantity(3.3, Unit.Unknown, MeasurementStatus.Valid))),
 new CatalogCase("keysight.34410a|B|DmmMeasureVoltageDc-0", new CatalogRequest[] {
 new DmmMeasureVoltageDcRequest(null),
 }, new ScriptStep[] {
@@ -4040,150 +3690,6 @@ new ScriptStep("write", ":OUTP OFF", "", DriverErrorKind.Transport),
 new ScriptStep("close", "", "", null),
 },
 null, DriverErrorKind.Shutdown),
-new CatalogCase("keysight.34401a|B|DmmMeasureVoltageDc-0-transport-failure", new CatalogRequest[] {
-new DmmMeasureVoltageDcRequest(null),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:VOLT:DC?", "3.3", DriverErrorKind.Transport),
-new ScriptStep("close", "", "", null),
-},
-null, DriverErrorKind.Transport),
-new CatalogCase("keysight.34401a|B|DmmMeasureVoltageAc-0-transport-failure", new CatalogRequest[] {
-new DmmMeasureVoltageAcRequest(null),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:VOLT:AC?", "3.3", DriverErrorKind.Transport),
-new ScriptStep("close", "", "", null),
-},
-null, DriverErrorKind.Transport),
-new CatalogCase("keysight.34401a|B|DmmMeasureCurrentDc-0-transport-failure", new CatalogRequest[] {
-new DmmMeasureCurrentDcRequest(null),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:CURR:DC?", "3.3", DriverErrorKind.Transport),
-new ScriptStep("close", "", "", null),
-},
-null, DriverErrorKind.Transport),
-new CatalogCase("keysight.34401a|B|DmmMeasureCurrentAc-0-transport-failure", new CatalogRequest[] {
-new DmmMeasureCurrentAcRequest(null),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:CURR:AC?", "3.3", DriverErrorKind.Transport),
-new ScriptStep("close", "", "", null),
-},
-null, DriverErrorKind.Transport),
-new CatalogCase("keysight.34401a|B|DmmMeasureResistance-0-transport-failure", new CatalogRequest[] {
-new DmmMeasureResistanceRequest(null),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:RES?", "3.3", DriverErrorKind.Transport),
-new ScriptStep("close", "", "", null),
-},
-null, DriverErrorKind.Transport),
-new CatalogCase("keysight.34401a|B|DmmMeasureResistance2Wire-0-transport-failure", new CatalogRequest[] {
-new DmmMeasureResistance2WireRequest(null),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:RES?", "3.3", DriverErrorKind.Transport),
-new ScriptStep("close", "", "", null),
-},
-null, DriverErrorKind.Transport),
-new CatalogCase("keysight.34401a|B|DmmMeasureResistance4Wire-0-transport-failure", new CatalogRequest[] {
-new DmmMeasureResistance4WireRequest(null),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:FRES?", "3.3", DriverErrorKind.Transport),
-new ScriptStep("close", "", "", null),
-},
-null, DriverErrorKind.Transport),
-new CatalogCase("keysight.34401a|B|DmmMeasureTemperature-0-transport-failure", new CatalogRequest[] {
-new DmmMeasureTemperatureRequest(null),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:TEMP?", "3.3", DriverErrorKind.Transport),
-new ScriptStep("close", "", "", null),
-},
-null, DriverErrorKind.Transport),
-new CatalogCase("keysight.34401a|B|DmmConfigureVoltageDc-0-transport-failure", new CatalogRequest[] {
-new DmmConfigureVoltageDcRequest(null, null),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:VOLT:DC", "", DriverErrorKind.Transport),
-new ScriptStep("close", "", "", null),
-},
-null, DriverErrorKind.Transport),
-new CatalogCase("keysight.34401a|B|DmmConfigureVoltageAc-0-transport-failure", new CatalogRequest[] {
-new DmmConfigureVoltageAcRequest(null, null),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:VOLT:AC", "", DriverErrorKind.Transport),
-new ScriptStep("close", "", "", null),
-},
-null, DriverErrorKind.Transport),
-new CatalogCase("keysight.34401a|B|DmmConfigureCurrentDc-0-transport-failure", new CatalogRequest[] {
-new DmmConfigureCurrentDcRequest(null, null),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:CURR:DC", "", DriverErrorKind.Transport),
-new ScriptStep("close", "", "", null),
-},
-null, DriverErrorKind.Transport),
-new CatalogCase("keysight.34401a|B|DmmConfigureCurrentAc-0-transport-failure", new CatalogRequest[] {
-new DmmConfigureCurrentAcRequest(null, null),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:CURR:AC", "", DriverErrorKind.Transport),
-new ScriptStep("close", "", "", null),
-},
-null, DriverErrorKind.Transport),
-new CatalogCase("keysight.34401a|B|DmmConfigureResistance-0-transport-failure", new CatalogRequest[] {
-new DmmConfigureResistanceRequest(null, null),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:RES", "", DriverErrorKind.Transport),
-new ScriptStep("close", "", "", null),
-},
-null, DriverErrorKind.Transport),
-new CatalogCase("keysight.34401a|B|DmmConfigureResistance4Wire-0-transport-failure", new CatalogRequest[] {
-new DmmConfigureResistance4WireRequest(null, null),
-}, new ScriptStep[] {
-new ScriptStep("write", ":CONF:FRES", "", DriverErrorKind.Transport),
-new ScriptStep("close", "", "", null),
-},
-null, DriverErrorKind.Transport),
-new CatalogCase("keysight.34401a|B|DmmInitiate-0-transport-failure", new CatalogRequest[] {
-new DmmInitiateRequest(),
-}, new ScriptStep[] {
-new ScriptStep("write", "INIT", "", DriverErrorKind.Transport),
-new ScriptStep("close", "", "", null),
-},
-null, DriverErrorKind.Transport),
-new CatalogCase("keysight.34401a|B|DmmFetch-0-transport-failure", new CatalogRequest[] {
-new DmmMeasureVoltageDcRequest(null),
-new DmmFetchRequest(),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:VOLT:DC?", "3.3", null),
-new ScriptStep("query", "FETC?", "3.3", DriverErrorKind.Transport),
-new ScriptStep("close", "", "", null),
-},
-null, DriverErrorKind.Transport),
-new CatalogCase("keysight.34401a|B|DmmRead-0-transport-failure", new CatalogRequest[] {
-new DmmMeasureVoltageDcRequest(null),
-new DmmReadRequest(),
-}, new ScriptStep[] {
-new ScriptStep("query", ":MEAS:VOLT:DC?", "3.3", null),
-new ScriptStep("query", "READ?", "3.3", DriverErrorKind.Transport),
-new ScriptStep("close", "", "", null),
-},
-null, DriverErrorKind.Transport),
-new CatalogCase("keysight.34401a|B|DmmSoftwareTrigger-0-transport-failure", new CatalogRequest[] {
-new DmmSoftwareTriggerRequest(),
-}, new ScriptStep[] {
-new ScriptStep("write", "*TRG", "", DriverErrorKind.Transport),
-new ScriptStep("close", "", "", null),
-},
-null, DriverErrorKind.Transport),
-new CatalogCase("keysight.34401a|B|QueryIdentity-0-transport-failure", new CatalogRequest[] {
-new QueryIdentityRequest(),
-}, new ScriptStep[] {
-new ScriptStep("query", "*IDN?", "Validation,Device,SN,1", DriverErrorKind.Transport),
-new ScriptStep("close", "", "", null),
-},
-null, DriverErrorKind.Transport),
-new CatalogCase("keysight.34401a|B|Reset-0-transport-failure", new CatalogRequest[] {
-new ResetRequest(),
-}, new ScriptStep[] {
-new ScriptStep("write", "*RST", "", DriverErrorKind.Transport),
-new ScriptStep("close", "", "", null),
-},
-null, DriverErrorKind.Transport),
 new CatalogCase("keysight.34410a|B|DmmMeasureVoltageDc-0-transport-failure", new CatalogRequest[] {
 new DmmMeasureVoltageDcRequest(null),
 }, new ScriptStep[] {
@@ -17889,4 +17395,4756 @@ new ShutdownRequest(),
 new ScriptStep("close", "", "", null),
 },
 null, DriverErrorKind.UnsupportedOperation),
+new CatalogCase("keysight.34401a|E|VoltageDc-auto", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC? DEF,DEF", "+1.25000000E+00", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1.25, Unit.Volt, MeasurementStatus.Valid))),
+new CatalogCase("keysight.34401a|E|VoltageDc-maximum-range", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC? 1.00000000000E+03,DEF", "+1.25000000E+00", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1.25, Unit.Volt, MeasurementStatus.Valid))),
+new CatalogCase("keysight.34401a|E|VoltageDc-non-nominal-range", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(0.025),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC? 2.50000000000E-02,DEF", "+1.25000000E-03", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(0.00125, Unit.Volt, MeasurementStatus.Valid))),
+new CatalogCase("keysight.34401a|E|VoltageDc-overload", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC? DEF,DEF", "+9.90000000E+37", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(0.0, Unit.Volt, MeasurementStatus.Overload))),
+new CatalogCase("keysight.34401a|E|VoltageDc-range-zero", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(0.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34401a|E|VoltageDc-range-negative", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(-1.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34401a|E|VoltageDc-range-above-max", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(1000.0009999999999),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34401a|E|VoltageAc-auto", new CatalogRequest[] {
+new DmmMeasureVoltageAcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:AC? DEF,DEF", "+1.25000000E+00", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1.25, Unit.Volt, MeasurementStatus.Valid))),
+new CatalogCase("keysight.34401a|E|VoltageAc-maximum-range", new CatalogRequest[] {
+new DmmMeasureVoltageAcRequest(750.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:AC? 7.50000000000E+02,DEF", "+1.25000000E+00", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1.25, Unit.Volt, MeasurementStatus.Valid))),
+new CatalogCase("keysight.34401a|E|VoltageAc-non-nominal-range", new CatalogRequest[] {
+new DmmMeasureVoltageAcRequest(0.025),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:AC? 2.50000000000E-02,DEF", "+1.25000000E-03", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(0.00125, Unit.Volt, MeasurementStatus.Valid))),
+new CatalogCase("keysight.34401a|E|VoltageAc-overload", new CatalogRequest[] {
+new DmmMeasureVoltageAcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:AC? DEF,DEF", "+9.90000000E+37", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(0.0, Unit.Volt, MeasurementStatus.Overload))),
+new CatalogCase("keysight.34401a|E|VoltageAc-range-zero", new CatalogRequest[] {
+new DmmMeasureVoltageAcRequest(0.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34401a|E|VoltageAc-range-negative", new CatalogRequest[] {
+new DmmMeasureVoltageAcRequest(-1.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34401a|E|VoltageAc-range-above-max", new CatalogRequest[] {
+new DmmMeasureVoltageAcRequest(750.0007499999999),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34401a|E|CurrentDc-auto", new CatalogRequest[] {
+new DmmMeasureCurrentDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:CURR:DC? DEF,DEF", "+1.25000000E+00", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1.25, Unit.Ampere, MeasurementStatus.Valid))),
+new CatalogCase("keysight.34401a|E|CurrentDc-maximum-range", new CatalogRequest[] {
+new DmmMeasureCurrentDcRequest(3.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:CURR:DC? 3.00000000000E+00,DEF", "+1.25000000E+00", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1.25, Unit.Ampere, MeasurementStatus.Valid))),
+new CatalogCase("keysight.34401a|E|CurrentDc-non-nominal-range", new CatalogRequest[] {
+new DmmMeasureCurrentDcRequest(0.025),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:CURR:DC? 2.50000000000E-02,DEF", "+1.25000000E-03", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(0.00125, Unit.Ampere, MeasurementStatus.Valid))),
+new CatalogCase("keysight.34401a|E|CurrentDc-overload", new CatalogRequest[] {
+new DmmMeasureCurrentDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:CURR:DC? DEF,DEF", "+9.90000000E+37", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(0.0, Unit.Ampere, MeasurementStatus.Overload))),
+new CatalogCase("keysight.34401a|E|CurrentDc-range-zero", new CatalogRequest[] {
+new DmmMeasureCurrentDcRequest(0.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34401a|E|CurrentDc-range-negative", new CatalogRequest[] {
+new DmmMeasureCurrentDcRequest(-1.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34401a|E|CurrentDc-range-above-max", new CatalogRequest[] {
+new DmmMeasureCurrentDcRequest(3.0000029999999995),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34401a|E|CurrentAc-auto", new CatalogRequest[] {
+new DmmMeasureCurrentAcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:CURR:AC? DEF,DEF", "+1.25000000E+00", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1.25, Unit.Ampere, MeasurementStatus.Valid))),
+new CatalogCase("keysight.34401a|E|CurrentAc-maximum-range", new CatalogRequest[] {
+new DmmMeasureCurrentAcRequest(3.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:CURR:AC? 3.00000000000E+00,DEF", "+1.25000000E+00", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1.25, Unit.Ampere, MeasurementStatus.Valid))),
+new CatalogCase("keysight.34401a|E|CurrentAc-non-nominal-range", new CatalogRequest[] {
+new DmmMeasureCurrentAcRequest(0.025),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:CURR:AC? 2.50000000000E-02,DEF", "+1.25000000E-03", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(0.00125, Unit.Ampere, MeasurementStatus.Valid))),
+new CatalogCase("keysight.34401a|E|CurrentAc-overload", new CatalogRequest[] {
+new DmmMeasureCurrentAcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:CURR:AC? DEF,DEF", "+9.90000000E+37", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(0.0, Unit.Ampere, MeasurementStatus.Overload))),
+new CatalogCase("keysight.34401a|E|CurrentAc-range-zero", new CatalogRequest[] {
+new DmmMeasureCurrentAcRequest(0.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34401a|E|CurrentAc-range-negative", new CatalogRequest[] {
+new DmmMeasureCurrentAcRequest(-1.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34401a|E|CurrentAc-range-above-max", new CatalogRequest[] {
+new DmmMeasureCurrentAcRequest(3.0000029999999995),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34401a|E|Resistance-auto", new CatalogRequest[] {
+new DmmMeasureResistanceRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:RES? DEF,DEF", "+1.25000000E+00", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1.25, Unit.Ohm, MeasurementStatus.Valid))),
+new CatalogCase("keysight.34401a|E|Resistance-maximum-range", new CatalogRequest[] {
+new DmmMeasureResistanceRequest(100000000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:RES? 1.00000000000E+08,DEF", "+1.25000000E+00", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1.25, Unit.Ohm, MeasurementStatus.Valid))),
+new CatalogCase("keysight.34401a|E|Resistance-non-nominal-range", new CatalogRequest[] {
+new DmmMeasureResistanceRequest(0.025),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:RES? 2.50000000000E-02,DEF", "+1.25000000E-03", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(0.00125, Unit.Ohm, MeasurementStatus.Valid))),
+new CatalogCase("keysight.34401a|E|Resistance-overload", new CatalogRequest[] {
+new DmmMeasureResistanceRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:RES? DEF,DEF", "+9.90000000E+37", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(0.0, Unit.Ohm, MeasurementStatus.Overload))),
+new CatalogCase("keysight.34401a|E|Resistance-range-zero", new CatalogRequest[] {
+new DmmMeasureResistanceRequest(0.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34401a|E|Resistance-range-negative", new CatalogRequest[] {
+new DmmMeasureResistanceRequest(-1.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34401a|E|Resistance-range-above-max", new CatalogRequest[] {
+new DmmMeasureResistanceRequest(100000099.99999999),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34401a|E|Resistance2Wire-auto", new CatalogRequest[] {
+new DmmMeasureResistance2WireRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:RES? DEF,DEF", "+1.25000000E+00", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1.25, Unit.Ohm, MeasurementStatus.Valid))),
+new CatalogCase("keysight.34401a|E|Resistance2Wire-maximum-range", new CatalogRequest[] {
+new DmmMeasureResistance2WireRequest(100000000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:RES? 1.00000000000E+08,DEF", "+1.25000000E+00", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1.25, Unit.Ohm, MeasurementStatus.Valid))),
+new CatalogCase("keysight.34401a|E|Resistance2Wire-non-nominal-range", new CatalogRequest[] {
+new DmmMeasureResistance2WireRequest(0.025),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:RES? 2.50000000000E-02,DEF", "+1.25000000E-03", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(0.00125, Unit.Ohm, MeasurementStatus.Valid))),
+new CatalogCase("keysight.34401a|E|Resistance2Wire-overload", new CatalogRequest[] {
+new DmmMeasureResistance2WireRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:RES? DEF,DEF", "+9.90000000E+37", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(0.0, Unit.Ohm, MeasurementStatus.Overload))),
+new CatalogCase("keysight.34401a|E|Resistance2Wire-range-zero", new CatalogRequest[] {
+new DmmMeasureResistance2WireRequest(0.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34401a|E|Resistance2Wire-range-negative", new CatalogRequest[] {
+new DmmMeasureResistance2WireRequest(-1.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34401a|E|Resistance2Wire-range-above-max", new CatalogRequest[] {
+new DmmMeasureResistance2WireRequest(100000099.99999999),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34401a|E|Resistance4Wire-auto", new CatalogRequest[] {
+new DmmMeasureResistance4WireRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:FRES? DEF,DEF", "+1.25000000E+00", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1.25, Unit.Ohm, MeasurementStatus.Valid))),
+new CatalogCase("keysight.34401a|E|Resistance4Wire-maximum-range", new CatalogRequest[] {
+new DmmMeasureResistance4WireRequest(100000000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:FRES? 1.00000000000E+08,DEF", "+1.25000000E+00", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1.25, Unit.Ohm, MeasurementStatus.Valid))),
+new CatalogCase("keysight.34401a|E|Resistance4Wire-non-nominal-range", new CatalogRequest[] {
+new DmmMeasureResistance4WireRequest(0.025),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:FRES? 2.50000000000E-02,DEF", "+1.25000000E-03", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(0.00125, Unit.Ohm, MeasurementStatus.Valid))),
+new CatalogCase("keysight.34401a|E|Resistance4Wire-overload", new CatalogRequest[] {
+new DmmMeasureResistance4WireRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:FRES? DEF,DEF", "+9.90000000E+37", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(0.0, Unit.Ohm, MeasurementStatus.Overload))),
+new CatalogCase("keysight.34401a|E|Resistance4Wire-range-zero", new CatalogRequest[] {
+new DmmMeasureResistance4WireRequest(0.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34401a|E|Resistance4Wire-range-negative", new CatalogRequest[] {
+new DmmMeasureResistance4WireRequest(-1.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34401a|E|Resistance4Wire-range-above-max", new CatalogRequest[] {
+new DmmMeasureResistance4WireRequest(100000099.99999999),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34401a|E|negative", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC? DEF,DEF", "-1.25000000E+00", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(-1.25, Unit.Volt, MeasurementStatus.Valid))),
+new CatalogCase("keysight.34401a|E|zero", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC? DEF,DEF", "+0.00000000E+00", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(0.0, Unit.Volt, MeasurementStatus.Valid))),
+new CatalogCase("keysight.34401a|E|negative-zero", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC? DEF,DEF", "-0.00000000E+00", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(0.0, Unit.Volt, MeasurementStatus.Valid))),
+new CatalogCase("keysight.34401a|E|exponent", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC? DEF,DEF", "+1.25000000E-09", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1.25e-09, Unit.Volt, MeasurementStatus.Valid))),
+new CatalogCase("keysight.34401a|E|reject-short", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC? DEF,DEF", "1.25", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34401a|E|reject-unsigned", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC? DEF,DEF", "1.25000000E+00", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34401a|E|reject-small-exponent", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC? DEF,DEF", "+1.25000000E+0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34401a|E|reject-lower-e", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC? DEF,DEF", "+1.25000000e+00", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34401a|E|reject-wrong-decimal", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC? DEF,DEF", "+12.5000000E+00", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34401a|E|reject-leading-space", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC? DEF,DEF", " +1.25000000E+00", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34401a|E|reject-trailing-space", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC? DEF,DEF", "+1.25000000E+00 ", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34401a|E|reject-csv", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC? DEF,DEF", "+1.25000000E+00,+2.50000000E+00", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34401a|E|reject-negative-sentinel", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC? DEF,DEF", "-9.90000000E+37", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34401a|E|reject-giant", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC? DEF,DEF", "+1.00000000E+30", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34401a|E|reject-nan", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC? DEF,DEF", "NaN", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34401a|E|reject-infinity", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC? DEF,DEF", "Infinity", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34401a|E|reject-binary", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC? DEF,DEF", "#215+1.25000000E+00", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34401a|E|reject-control", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC? DEF,DEF", "+1.25000000E+00\n", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34401a|E|transport", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC? DEF,DEF", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34401a|E|timeout", new CatalogRequest[] {
+new DmmMeasureVoltageDcRequest(null),
+}, new ScriptStep[] {
+new ScriptStep("query", ":MEAS:VOLT:DC? DEF,DEF", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.33120a|E|frequency-0.0001", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(0.0001),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "0", null),
+new ScriptStep("write", ":FREQ 1.00000000000E-04", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.33120a|E|frequency-1000", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "0", null),
+new ScriptStep("write", ":FREQ 1.00000000000E+03", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.33120a|E|frequency-15000000", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(15000000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "0", null),
+new ScriptStep("write", ":FREQ 1.50000000000E+07", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.33120a|E|amplitude-0.05", new CatalogRequest[] {
+new FunctionGeneratorSetAmplitudeRequest(0.05),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "0", null),
+new ScriptStep("query", ":VOLT:OFFS?", "+0.000000E+00", null),
+new ScriptStep("write", ":VOLT 5.00000000000E-02", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.33120a|E|amplitude-2", new CatalogRequest[] {
+new FunctionGeneratorSetAmplitudeRequest(2.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "0", null),
+new ScriptStep("query", ":VOLT:OFFS?", "+4.000000E+00", null),
+new ScriptStep("write", ":VOLT 2.00000000000E+00", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.33120a|E|amplitude-10", new CatalogRequest[] {
+new FunctionGeneratorSetAmplitudeRequest(10.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "0", null),
+new ScriptStep("query", ":VOLT:OFFS?", "+0.000000E+00", null),
+new ScriptStep("write", ":VOLT 1.00000000000E+01", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.33120a|E|offset--4", new CatalogRequest[] {
+new FunctionGeneratorSetOffsetRequest(-4.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "0", null),
+new ScriptStep("query", ":VOLT?", "+2.000000E+00", null),
+new ScriptStep("write", ":VOLT:OFFS -4.00000000000E+00", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.33120a|E|offset-0", new CatalogRequest[] {
+new FunctionGeneratorSetOffsetRequest(0.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "0", null),
+new ScriptStep("query", ":VOLT?", "+1.000000E+00", null),
+new ScriptStep("write", ":VOLT:OFFS 0.00000000000E+00", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.33120a|E|offset-4", new CatalogRequest[] {
+new FunctionGeneratorSetOffsetRequest(4.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "0", null),
+new ScriptStep("query", ":VOLT?", "+2.000000E+00", null),
+new ScriptStep("write", ":VOLT:OFFS 4.00000000000E+00", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.33120a|E|read-frequency", new CatalogRequest[] {
+new FunctionGeneratorReadFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "0", null),
+new ScriptStep("query", ":FREQ?", "+1.000000000000E+03", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1000.0, Unit.Hertz, MeasurementStatus.Valid))),
+new CatalogCase("keysight.33120a|E|FunctionGeneratorSetFrequency-invalid-0", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(0.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.33120a|E|FunctionGeneratorSetFrequency-invalid-1", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(-1.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.33120a|E|FunctionGeneratorSetFrequency-invalid-2", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(9.99e-05),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.33120a|E|FunctionGeneratorSetFrequency-invalid-3", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(15000001.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.33120a|E|FunctionGeneratorSetAmplitude-invalid-0", new CatalogRequest[] {
+new FunctionGeneratorSetAmplitudeRequest(0.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.33120a|E|FunctionGeneratorSetAmplitude-invalid-1", new CatalogRequest[] {
+new FunctionGeneratorSetAmplitudeRequest(-1.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.33120a|E|FunctionGeneratorSetAmplitude-invalid-2", new CatalogRequest[] {
+new FunctionGeneratorSetAmplitudeRequest(0.049999),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.33120a|E|FunctionGeneratorSetAmplitude-invalid-3", new CatalogRequest[] {
+new FunctionGeneratorSetAmplitudeRequest(10.001),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.33120a|E|FunctionGeneratorSetOffset-invalid-0", new CatalogRequest[] {
+new FunctionGeneratorSetOffsetRequest(-4.000001),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.33120a|E|FunctionGeneratorSetOffset-invalid-1", new CatalogRequest[] {
+new FunctionGeneratorSetOffsetRequest(4.000001),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.33120a|E|guard-0-SQU", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SQU", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.33120a|E|guard-0-PULS", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "PULS", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.33120a|E|guard-1-+1.000000E+06", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+1.000000E+06", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.33120a|E|guard-1-0", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.33120a|E|guard-2-VRMS", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VRMS", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.33120a|E|guard-2-VOLTS", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VOLTS", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.33120a|E|guard-3-1", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "1", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.33120a|E|guard-4-1", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "1", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.33120a|E|guard-5-1", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "1", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.33120a|E|guard-6-1", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "1", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.33120a|E|guard-7-1", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "1", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.33120a|E|guard-3-ON", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "ON", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.33120a|E|guard-4-ON", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "ON", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.33120a|E|guard-5-ON", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "ON", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.33120a|E|guard-6-ON", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "ON", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.33120a|E|guard-7-ON", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "ON", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.33120a|E|coupled-amplitude-rail", new CatalogRequest[] {
+new FunctionGeneratorSetAmplitudeRequest(3.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "0", null),
+new ScriptStep("query", ":VOLT:OFFS?", "+3.750000E+00", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.33120a|E|coupled-offset-small-amplitude", new CatalogRequest[] {
+new FunctionGeneratorSetOffsetRequest(1.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "0", null),
+new ScriptStep("query", ":VOLT?", "+1.000000E-01", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.33120a|E|coupled-rounded-wire-rail", new CatalogRequest[] {
+new FunctionGeneratorSetAmplitudeRequest(2.9999999999996),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "0", null),
+new ScriptStep("query", ":VOLT:OFFS?", "3.5000000000001", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.33120a|E|read-reject-negative", new CatalogRequest[] {
+new FunctionGeneratorReadFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "0", null),
+new ScriptStep("query", ":FREQ?", "-1", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.33120a|E|read-reject-zero", new CatalogRequest[] {
+new FunctionGeneratorReadFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "0", null),
+new ScriptStep("query", ":FREQ?", "0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.33120a|E|read-reject-above-max", new CatalogRequest[] {
+new FunctionGeneratorReadFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "0", null),
+new ScriptStep("query", ":FREQ?", "15000001", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.33120a|E|read-reject-giant", new CatalogRequest[] {
+new FunctionGeneratorReadFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "0", null),
+new ScriptStep("query", ":FREQ?", "1E30", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.33120a|E|read-reject-csv", new CatalogRequest[] {
+new FunctionGeneratorReadFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "0", null),
+new ScriptStep("query", ":FREQ?", "1,2", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.33120a|E|read-reject-leading-space", new CatalogRequest[] {
+new FunctionGeneratorReadFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "0", null),
+new ScriptStep("query", ":FREQ?", " 1E3", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.33120a|E|read-reject-trailing-space", new CatalogRequest[] {
+new FunctionGeneratorReadFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "0", null),
+new ScriptStep("query", ":FREQ?", "1E3 ", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.33120a|E|read-reject-nan", new CatalogRequest[] {
+new FunctionGeneratorReadFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "0", null),
+new ScriptStep("query", ":FREQ?", "NaN", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.33120a|E|read-reject-missing-fraction", new CatalogRequest[] {
+new FunctionGeneratorReadFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "0", null),
+new ScriptStep("query", ":FREQ?", "1.E3", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.33120a|E|failure-step-0-Transport", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33120a|E|failure-step-0-Timeout", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.33120a|E|failure-step-1-Transport", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33120a|E|failure-step-1-Timeout", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.33120a|E|failure-step-2-Transport", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33120a|E|failure-step-2-Timeout", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.33120a|E|failure-step-3-Transport", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33120a|E|failure-step-3-Timeout", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.33120a|E|failure-step-4-Transport", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33120a|E|failure-step-4-Timeout", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.33120a|E|failure-step-5-Transport", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33120a|E|failure-step-5-Timeout", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.33120a|E|failure-step-6-Transport", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33120a|E|failure-step-6-Timeout", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.33120a|E|failure-step-7-Transport", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33120a|E|failure-step-7-Timeout", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.33120a|E|failure-step-8-Transport", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "0", null),
+new ScriptStep("write", ":FREQ 1.00000000000E+03", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.33120a|E|failure-step-8-Timeout", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+5.000000E+01", null),
+new ScriptStep("query", ":VOLT:UNIT?", "VPP", null),
+new ScriptStep("query", ":AM:STAT?", "0", null),
+new ScriptStep("query", ":FM:STAT?", "0", null),
+new ScriptStep("query", ":BM:STAT?", "0", null),
+new ScriptStep("query", ":FSK:STAT?", "0", null),
+new ScriptStep("query", ":SWE:STAT?", "0", null),
+new ScriptStep("write", ":FREQ 1.00000000000E+03", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.33120a|E|guard-load-high-impedance-sentinel", new CatalogRequest[] {
+new FunctionGeneratorSetFrequencyRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":FUNC:SHAP?", "SIN", null),
+new ScriptStep("query", ":OUTP:LOAD?", "+9.900000E+37", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.53132a|E|Frequency-channel-1", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "+1.2500000000000E+06", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1250000.0, Unit.Hertz, MeasurementStatus.Valid))),
+new CatalogCase("keysight.53132a|E|Period-channel-1", new CatalogRequest[] {
+new CounterMeasurePeriodRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:PER DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "+8.0000000000000E-07", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(8e-07, Unit.Second, MeasurementStatus.Valid))),
+new CatalogCase("keysight.53132a|E|Frequency-channel-2", new CatalogRequest[] {
+new CounterSelectChannelRequest(2),
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@2)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "+1.2500000000000E+06", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1250000.0, Unit.Hertz, MeasurementStatus.Valid))),
+new CatalogCase("keysight.53132a|E|Period-channel-2", new CatalogRequest[] {
+new CounterSelectChannelRequest(2),
+new CounterMeasurePeriodRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:PER DEF,DEF,(@2)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "+8.0000000000000E-07", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(8e-07, Unit.Second, MeasurementStatus.Valid))),
+new CatalogCase("keysight.53132a|E|gate-0.001", new CatalogRequest[] {
+new CounterSetGateTimeRequest(0.001),
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.001", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "+1.2500000000000E+06", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1250000.0, Unit.Hertz, MeasurementStatus.Valid))),
+new CatalogCase("keysight.53132a|E|gate-0.029", new CatalogRequest[] {
+new CounterSetGateTimeRequest(0.029),
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.029", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "+1.2500000000000E+06", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1250000.0, Unit.Hertz, MeasurementStatus.Valid))),
+new CatalogCase("keysight.53132a|E|gate-0.100", new CatalogRequest[] {
+new CounterSetGateTimeRequest(0.1),
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "+1.2500000000000E+06", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1250000.0, Unit.Hertz, MeasurementStatus.Valid))),
+new CatalogCase("keysight.53132a|E|gate-1000.000", new CatalogRequest[] {
+new CounterSetGateTimeRequest(1000.0),
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 1000.000", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "+1.2500000000000E+06", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1250000.0, Unit.Hertz, MeasurementStatus.Valid))),
+new CatalogCase("keysight.53132a|E|switch-intent-and-repeat", new CatalogRequest[] {
+new CounterSetGateTimeRequest(0.01),
+new CounterSelectChannelRequest(2),
+new CounterMeasureFrequencyRequest(),
+new CounterSelectChannelRequest(1),
+new CounterMeasurePeriodRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@2)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.010", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "+1.2500000000000E+06", null),
+new ScriptStep("write", ":CONF:PER DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.010", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "+8.0000000000000E-07", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(8e-07, Unit.Second, MeasurementStatus.Valid))),
+new CatalogCase("keysight.53132a|E|invalid-gate-zero", new CatalogRequest[] {
+new CounterSetGateTimeRequest(0.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.53132a|E|invalid-gate-negative", new CatalogRequest[] {
+new CounterSetGateTimeRequest(-1.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.53132a|E|invalid-gate-too-small", new CatalogRequest[] {
+new CounterSetGateTimeRequest(0.000999),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.53132a|E|invalid-gate-off-grid", new CatalogRequest[] {
+new CounterSetGateTimeRequest(0.0010000000000000002),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.53132a|E|invalid-gate-too-large", new CatalogRequest[] {
+new CounterSetGateTimeRequest(1000.001),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.53132a|E|invalid-channel-0", new CatalogRequest[] {
+new CounterSelectChannelRequest(0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.53132a|E|invalid-channel-3", new CatalogRequest[] {
+new CounterSelectChannelRequest(3),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.53132a|E|invalid-channel-4294967295", new CatalogRequest[] {
+new CounterSelectChannelRequest(4294967295),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.53132a|E|parse-one-digit", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "1E0", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1.0, Unit.Hertz, MeasurementStatus.Valid))),
+new CatalogCase("keysight.53132a|E|parse-unsigned", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "1.25E+3", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1250.0, Unit.Hertz, MeasurementStatus.Valid))),
+new CatalogCase("keysight.53132a|E|parse-lower-e", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "1.25e3", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1250.0, Unit.Hertz, MeasurementStatus.Valid))),
+new CatalogCase("keysight.53132a|E|parse-max-significant", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "1.23456789012345E+0", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1.23456789012345, Unit.Hertz, MeasurementStatus.Valid))),
+new CatalogCase("keysight.53132a|E|parse-leading-zeros", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "0001.25E+0", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1.25, Unit.Hertz, MeasurementStatus.Valid))),
+new CatalogCase("keysight.53132a|E|reject-nan-sentinel", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "+9.91E+37", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.53132a|E|reject-zero", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "0E0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.53132a|E|reject-negative", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "-1.25E3", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.53132a|E|reject-underflow", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "1E-999", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.53132a|E|reject-no-exponent", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "1.25", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.53132a|E|reject-sixteen-significant", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "1.234567890123456E+0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.53132a|E|reject-leading-space", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", " 1E0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.53132a|E|reject-trailing-space", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "1E0 ", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.53132a|E|reject-no-frac", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "1.E0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.53132a|E|reject-no-leading", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", ".1E0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.53132a|E|reject-unit", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "1E0HZ", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.53132a|E|reject-csv", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "1E0,2E0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.53132a|E|reject-nan", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "NaN", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.53132a|E|reject-infinity", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "Inf", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.53132a|E|reject-overflow", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "1E999", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.53132a|E|reject-binary", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "#131E0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.53132a|E|failure-step-0-Transport", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53132a|E|failure-step-0-Timeout", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.53132a|E|failure-step-1-Transport", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53132a|E|failure-step-1-Timeout", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.53132a|E|failure-step-2-Transport", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53132a|E|failure-step-2-Timeout", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.53132a|E|failure-step-3-Transport", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53132a|E|failure-step-3-Timeout", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.53132a|E|failure-step-4-Transport", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53132a|E|failure-step-4-Timeout", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.53132a|E|failure-step-5-Transport", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.53132a|E|failure-step-5-Timeout", new CatalogRequest[] {
+new CounterMeasureFrequencyRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", ":CONF:FREQ DEF,DEF,(@1)", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STAR:SOUR IMM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:SOUR TIM", "", null),
+new ScriptStep("write", ":SENS:FREQ:ARM:STOP:TIM 0.100", "", null),
+new ScriptStep("write", ":FORM ASC", "", null),
+new ScriptStep("query", ":READ?", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34980a-invalid-SwitchCloseChannel-0", new CatalogRequest[] {
+new SwitchCloseChannelRequest(0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34980a|E|34980a-invalid-SwitchCloseChannel-999", new CatalogRequest[] {
+new SwitchCloseChannelRequest(999),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34980a|E|34980a-invalid-SwitchOpenChannel-0", new CatalogRequest[] {
+new SwitchOpenChannelRequest(0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34980a|E|34980a-invalid-SwitchOpenChannel-999", new CatalogRequest[] {
+new SwitchOpenChannelRequest(999),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34980a|E|34980a-invalid-SwitchChannelIsClosed-0", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34980a|E|34980a-invalid-SwitchChannelIsClosed-999", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(999),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34980a|E|34980a-shared-module-views", new CatalogRequest[] {
+new SwitchCloseChannelRequest(7),
+new DigitalIoReadByteRequest(29),
+new SwitchChannelIsClosedRequest(101),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUT:CLOS (@1001)", "", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3201)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3202)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3203)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3204)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3201)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3201)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3201)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3201)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3201)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3201)", "+2.50000000E+00", null),
+new ScriptStep("query", ":SENS:DIG:DATA:BYTE? DEC,(@3201)", "0", null),
+new ScriptStep("query", ":ROUT:CLOS? (@2001)", "0", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.State(false)),
+new CatalogCase("keysight.34980a|E|34937a-SwitchCloseChannel-7", new CatalogRequest[] {
+new SwitchCloseChannelRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUT:CLOS (@1001)", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.34980a|E|34937a-SwitchOpenChannel-7", new CatalogRequest[] {
+new SwitchOpenChannelRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUT:OPEN (@1001)", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.34980a|E|34937a-state-7-False", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@1001)", "0", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.State(false)),
+new CatalogCase("keysight.34980a|E|34937a-state-7-True", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@1001)", "1", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.State(true)),
+new CatalogCase("keysight.34980a|E|34937a-SwitchCloseChannel-13", new CatalogRequest[] {
+new SwitchCloseChannelRequest(13),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUT:CLOS (@1028)", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.34980a|E|34937a-SwitchOpenChannel-13", new CatalogRequest[] {
+new SwitchOpenChannelRequest(13),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUT:OPEN (@1028)", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.34980a|E|34937a-state-13-False", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(13),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@1028)", "0", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.State(false)),
+new CatalogCase("keysight.34980a|E|34937a-state-13-True", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(13),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@1028)", "1", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.State(true)),
+new CatalogCase("keysight.34980a|E|34937a-SwitchCloseChannel-29", new CatalogRequest[] {
+new SwitchCloseChannelRequest(29),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUT:CLOS (@1029)", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.34980a|E|34937a-SwitchOpenChannel-29", new CatalogRequest[] {
+new SwitchOpenChannelRequest(29),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUT:OPEN (@1029)", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.34980a|E|34937a-state-29-False", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(29),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@1029)", "0", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.State(false)),
+new CatalogCase("keysight.34980a|E|34937a-state-29-True", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(29),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@1029)", "1", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.State(true)),
+new CatalogCase("keysight.34980a|E|34937a-SwitchCloseChannel-61", new CatalogRequest[] {
+new SwitchCloseChannelRequest(61),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUT:CLOS (@1032)", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.34980a|E|34937a-SwitchOpenChannel-61", new CatalogRequest[] {
+new SwitchOpenChannelRequest(61),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUT:OPEN (@1032)", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.34980a|E|34937a-state-61-False", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(61),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@1032)", "0", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.State(false)),
+new CatalogCase("keysight.34980a|E|34937a-state-61-True", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(61),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@1032)", "1", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.State(true)),
+new CatalogCase("keysight.34980a|E|34937a-state-malformed-0", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@1001)", "ON", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34937a-state-malformed-1", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@1001)", "+1", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34937a-state-malformed-2", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@1001)", "1.0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34937a-state-malformed-3", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@1001)", "1,0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34937a-state-malformed-4", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@1001)", " 1", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34937a-state-malformed-5", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@1001)", "1 ", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34937a-state-malformed-6", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@1001)", "", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34937a-state-malformed-7", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@1001)", "2", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34937a-state-malformed-8", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@1001)", "#11", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34937a-state-malformed-9", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@1001)", "１", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34937a-SwitchCloseChannel-Transport", new CatalogRequest[] {
+new SwitchCloseChannelRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUT:CLOS (@1001)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34937a-SwitchCloseChannel-Timeout", new CatalogRequest[] {
+new SwitchCloseChannelRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUT:CLOS (@1001)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34937a-SwitchOpenChannel-Transport", new CatalogRequest[] {
+new SwitchOpenChannelRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUT:OPEN (@1001)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34937a-SwitchOpenChannel-Timeout", new CatalogRequest[] {
+new SwitchOpenChannelRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUT:OPEN (@1001)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34937a-SwitchChannelIsClosed-Transport", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@1001)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34937a-SwitchChannelIsClosed-Timeout", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@1001)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34922a-SwitchCloseChannel-101", new CatalogRequest[] {
+new SwitchCloseChannelRequest(101),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUT:CLOS (@2001)", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.34980a|E|34922a-SwitchOpenChannel-101", new CatalogRequest[] {
+new SwitchOpenChannelRequest(101),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUT:OPEN (@2001)", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.34980a|E|34922a-state-101-False", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(101),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@2001)", "0", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.State(false)),
+new CatalogCase("keysight.34980a|E|34922a-state-101-True", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(101),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@2001)", "1", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.State(true)),
+new CatalogCase("keysight.34980a|E|34922a-SwitchCloseChannel-135", new CatalogRequest[] {
+new SwitchCloseChannelRequest(135),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUT:CLOS (@2035)", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.34980a|E|34922a-SwitchOpenChannel-135", new CatalogRequest[] {
+new SwitchOpenChannelRequest(135),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUT:OPEN (@2035)", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.34980a|E|34922a-state-135-False", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(135),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@2035)", "0", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.State(false)),
+new CatalogCase("keysight.34980a|E|34922a-state-135-True", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(135),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@2035)", "1", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.State(true)),
+new CatalogCase("keysight.34980a|E|34922a-SwitchCloseChannel-136", new CatalogRequest[] {
+new SwitchCloseChannelRequest(136),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUT:CLOS (@2036)", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.34980a|E|34922a-SwitchOpenChannel-136", new CatalogRequest[] {
+new SwitchOpenChannelRequest(136),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUT:OPEN (@2036)", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.34980a|E|34922a-state-136-False", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(136),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@2036)", "0", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.State(false)),
+new CatalogCase("keysight.34980a|E|34922a-state-136-True", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(136),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@2036)", "1", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.State(true)),
+new CatalogCase("keysight.34980a|E|34922a-SwitchCloseChannel-170", new CatalogRequest[] {
+new SwitchCloseChannelRequest(170),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUT:CLOS (@2070)", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.34980a|E|34922a-SwitchOpenChannel-170", new CatalogRequest[] {
+new SwitchOpenChannelRequest(170),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUT:OPEN (@2070)", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.34980a|E|34922a-state-170-False", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(170),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@2070)", "0", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.State(false)),
+new CatalogCase("keysight.34980a|E|34922a-state-170-True", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(170),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@2070)", "1", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.State(true)),
+new CatalogCase("keysight.34980a|E|34922a-state-malformed-0", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(101),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@2001)", "ON", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34922a-state-malformed-1", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(101),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@2001)", "+1", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34922a-state-malformed-2", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(101),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@2001)", "1.0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34922a-state-malformed-3", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(101),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@2001)", "1,0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34922a-state-malformed-4", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(101),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@2001)", " 1", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34922a-state-malformed-5", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(101),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@2001)", "1 ", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34922a-state-malformed-6", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(101),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@2001)", "", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34922a-state-malformed-7", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(101),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@2001)", "2", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34922a-state-malformed-8", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(101),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@2001)", "#11", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34922a-state-malformed-9", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(101),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@2001)", "１", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34922a-SwitchCloseChannel-Transport", new CatalogRequest[] {
+new SwitchCloseChannelRequest(101),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUT:CLOS (@2001)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34922a-SwitchCloseChannel-Timeout", new CatalogRequest[] {
+new SwitchCloseChannelRequest(101),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUT:CLOS (@2001)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34922a-SwitchOpenChannel-Transport", new CatalogRequest[] {
+new SwitchOpenChannelRequest(101),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUT:OPEN (@2001)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34922a-SwitchOpenChannel-Timeout", new CatalogRequest[] {
+new SwitchOpenChannelRequest(101),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUT:OPEN (@2001)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34922a-SwitchChannelIsClosed-Transport", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(101),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@2001)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34922a-SwitchChannelIsClosed-Timeout", new CatalogRequest[] {
+new SwitchChannelIsClosedRequest(101),
+}, new ScriptStep[] {
+new ScriptStep("query", ":ROUT:CLOS? (@2001)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34922a-same-bank-nonexclusive", new CatalogRequest[] {
+new SwitchCloseChannelRequest(101),
+new SwitchCloseChannelRequest(135),
+new SwitchChannelIsClosedRequest(101),
+}, new ScriptStep[] {
+new ScriptStep("write", ":ROUT:CLOS (@2001)", "", null),
+new ScriptStep("write", ":ROUT:CLOS (@2035)", "", null),
+new ScriptStep("query", ":ROUT:CLOS? (@2001)", "1", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.State(true)),
+new CatalogCase("keysight.34980a|E|34950a-read-7-0", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3101)", "+2.50000000E+00", null),
+new ScriptStep("query", ":SENS:DIG:DATA:BYTE? DEC,(@3101)", "0", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Count(0)),
+new CatalogCase("keysight.34980a|E|34950a-read-7-165", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3101)", "+2.50000000E+00", null),
+new ScriptStep("query", ":SENS:DIG:DATA:BYTE? DEC,(@3101)", "165", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Count(165)),
+new CatalogCase("keysight.34980a|E|34950a-read-7-255", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3101)", "+2.50000000E+00", null),
+new ScriptStep("query", ":SENS:DIG:DATA:BYTE? DEC,(@3101)", "255", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Count(255)),
+new CatalogCase("keysight.34980a|E|34950a-read-7-007", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3101)", "+2.50000000E+00", null),
+new ScriptStep("query", ":SENS:DIG:DATA:BYTE? DEC,(@3101)", "007", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Count(7)),
+new CatalogCase("keysight.34980a|E|34950a-read-29-0", new CatalogRequest[] {
+new DigitalIoReadByteRequest(29),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3201)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3202)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3203)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3204)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3201)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3201)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3201)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3201)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3201)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3201)", "+2.50000000E+00", null),
+new ScriptStep("query", ":SENS:DIG:DATA:BYTE? DEC,(@3201)", "0", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Count(0)),
+new CatalogCase("keysight.34980a|E|34950a-read-29-165", new CatalogRequest[] {
+new DigitalIoReadByteRequest(29),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3201)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3202)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3203)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3204)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3201)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3201)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3201)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3201)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3201)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3201)", "+2.50000000E+00", null),
+new ScriptStep("query", ":SENS:DIG:DATA:BYTE? DEC,(@3201)", "165", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Count(165)),
+new CatalogCase("keysight.34980a|E|34950a-read-29-255", new CatalogRequest[] {
+new DigitalIoReadByteRequest(29),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3201)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3202)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3203)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3204)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3201)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3201)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3201)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3201)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3201)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3201)", "+2.50000000E+00", null),
+new ScriptStep("query", ":SENS:DIG:DATA:BYTE? DEC,(@3201)", "255", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Count(255)),
+new CatalogCase("keysight.34980a|E|34950a-read-29-007", new CatalogRequest[] {
+new DigitalIoReadByteRequest(29),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3201)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3202)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3203)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3204)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3201)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3201)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3201)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3201)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3201)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3201)", "+2.50000000E+00", null),
+new ScriptStep("query", ":SENS:DIG:DATA:BYTE? DEC,(@3201)", "007", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Count(7)),
+new CatalogCase("keysight.34980a|E|34950a-write-13-0", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:DRIV? (@3104)", "ACT", null),
+new ScriptStep("query", ":SOUR:DIG:LEV? (@3104)", "+3.30000000E+00", null),
+new ScriptStep("write", ":SOUR:DIG:DATA:BYTE 0,(@3104)", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.34980a|E|34950a-write-13-165", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:DRIV? (@3104)", "ACT", null),
+new ScriptStep("query", ":SOUR:DIG:LEV? (@3104)", "+3.30000000E+00", null),
+new ScriptStep("write", ":SOUR:DIG:DATA:BYTE 165,(@3104)", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.34980a|E|34950a-write-13-255", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 255),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:DRIV? (@3104)", "ACT", null),
+new ScriptStep("query", ":SOUR:DIG:LEV? (@3104)", "+3.30000000E+00", null),
+new ScriptStep("write", ":SOUR:DIG:DATA:BYTE 255,(@3104)", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.34980a|E|34950a-write-61-0", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(61, 0),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3201)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3202)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3203)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3204)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3204)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3204)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3201)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3201)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3201)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:DRIV? (@3204)", "ACT", null),
+new ScriptStep("query", ":SOUR:DIG:LEV? (@3204)", "+3.30000000E+00", null),
+new ScriptStep("write", ":SOUR:DIG:DATA:BYTE 0,(@3204)", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.34980a|E|34950a-write-61-165", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(61, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3201)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3202)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3203)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3204)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3204)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3204)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3201)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3201)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3201)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:DRIV? (@3204)", "ACT", null),
+new ScriptStep("query", ":SOUR:DIG:LEV? (@3204)", "+3.30000000E+00", null),
+new ScriptStep("write", ":SOUR:DIG:DATA:BYTE 165,(@3204)", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.34980a|E|34950a-write-61-255", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(61, 255),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3201)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3202)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3203)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3204)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3204)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3204)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3201)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3201)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3201)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:DRIV? (@3204)", "ACT", null),
+new ScriptStep("query", ":SOUR:DIG:LEV? (@3204)", "+3.30000000E+00", null),
+new ScriptStep("write", ":SOUR:DIG:DATA:BYTE 255,(@3204)", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.34980a|E|34950a-invalid-read-port-0", new CatalogRequest[] {
+new DigitalIoReadByteRequest(0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34980a|E|34950a-invalid-read-port-8", new CatalogRequest[] {
+new DigitalIoReadByteRequest(8),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34980a|E|34950a-invalid-read-port-13", new CatalogRequest[] {
+new DigitalIoReadByteRequest(13),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34980a|E|34950a-invalid-read-port-61", new CatalogRequest[] {
+new DigitalIoReadByteRequest(61),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34980a|E|34950a-invalid-write-port-0", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(0, 0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34980a|E|34950a-invalid-write-port-8", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(8, 0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34980a|E|34950a-invalid-write-port-7", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(7, 0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34980a|E|34950a-invalid-write-port-29", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(29, 0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34980a|E|34950a-invalid-byte-256", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 256),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34980a|E|34950a-invalid-byte-4294967295", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 4294967295),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.34980a|E|34950a-invalid-byte-body-0", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3101)", "+2.50000000E+00", null),
+new ScriptStep("query", ":SENS:DIG:DATA:BYTE? DEC,(@3101)", "256", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-invalid-byte-body-1", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3101)", "+2.50000000E+00", null),
+new ScriptStep("query", ":SENS:DIG:DATA:BYTE? DEC,(@3101)", "-1", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-invalid-byte-body-2", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3101)", "+2.50000000E+00", null),
+new ScriptStep("query", ":SENS:DIG:DATA:BYTE? DEC,(@3101)", "+1", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-invalid-byte-body-3", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3101)", "+2.50000000E+00", null),
+new ScriptStep("query", ":SENS:DIG:DATA:BYTE? DEC,(@3101)", "1.0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-invalid-byte-body-4", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3101)", "+2.50000000E+00", null),
+new ScriptStep("query", ":SENS:DIG:DATA:BYTE? DEC,(@3101)", "1E0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-invalid-byte-body-5", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3101)", "+2.50000000E+00", null),
+new ScriptStep("query", ":SENS:DIG:DATA:BYTE? DEC,(@3101)", "0xFF", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-invalid-byte-body-6", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3101)", "+2.50000000E+00", null),
+new ScriptStep("query", ":SENS:DIG:DATA:BYTE? DEC,(@3101)", "#HFF", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-invalid-byte-body-7", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3101)", "+2.50000000E+00", null),
+new ScriptStep("query", ":SENS:DIG:DATA:BYTE? DEC,(@3101)", "1,2", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-invalid-byte-body-8", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3101)", "+2.50000000E+00", null),
+new ScriptStep("query", ":SENS:DIG:DATA:BYTE? DEC,(@3101)", " 1", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-invalid-byte-body-9", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3101)", "+2.50000000E+00", null),
+new ScriptStep("query", ":SENS:DIG:DATA:BYTE? DEC,(@3101)", "1 ", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-invalid-byte-body-10", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3101)", "+2.50000000E+00", null),
+new ScriptStep("query", ":SENS:DIG:DATA:BYTE? DEC,(@3101)", "NaN", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-invalid-byte-body-11", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3101)", "+2.50000000E+00", null),
+new ScriptStep("query", ":SENS:DIG:DATA:BYTE? DEC,(@3101)", "Inf", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-invalid-byte-body-12", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3101)", "+2.50000000E+00", null),
+new ScriptStep("query", ":SENS:DIG:DATA:BYTE? DEC,(@3101)", "", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-Input-guard-0-0", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "2", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.34980a|E|34950a-Input-guard-0-1", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "4", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.34980a|E|34950a-Input-guard-0-2", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "BYTE", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-Input-guard-1-0", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "2", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.34980a|E|34950a-Input-guard-2-0", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "4", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.34980a|E|34950a-Input-guard-3-0", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "2", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.34980a|E|34950a-Input-guard-4-0", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "OUTP", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.34980a|E|34950a-Input-guard-4-1", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INPUT", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-Input-guard-5-0", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "INV", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.34980a|E|34950a-Input-guard-5-1", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORMAL", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-Input-guard-6-0", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "OFF", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.34980a|E|34950a-Input-guard-6-1", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "ON", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.34980a|E|34950a-Input-guard-6-2", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "NONE", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-Input-guard-7-0", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "1", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.34980a|E|34950a-Input-guard-7-1", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "ON", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-Input-guard-8-0", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "1", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.34980a|E|34950a-Input-guard-8-1", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "OFF", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-Input-guard-9-0", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3101)", "+2.40000000E+00", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.34980a|E|34950a-Input-guard-9-1", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3101)", "NaN", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-Input-failure-step-0-Transport", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34950a-Input-failure-step-0-Timeout", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34950a-Input-failure-step-1-Transport", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34950a-Input-failure-step-1-Timeout", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34950a-Input-failure-step-2-Transport", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34950a-Input-failure-step-2-Timeout", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34950a-Input-failure-step-3-Transport", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34950a-Input-failure-step-3-Timeout", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34950a-Input-failure-step-4-Transport", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34950a-Input-failure-step-4-Timeout", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34950a-Input-failure-step-5-Transport", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34950a-Input-failure-step-5-Timeout", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34950a-Input-failure-step-6-Transport", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34950a-Input-failure-step-6-Timeout", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34950a-Input-failure-step-7-Transport", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34950a-Input-failure-step-7-Timeout", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34950a-Input-failure-step-8-Transport", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34950a-Input-failure-step-8-Timeout", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34950a-Input-failure-step-9-Transport", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3101)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34950a-Input-failure-step-9-Timeout", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3101)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34950a-Input-failure-step-10-Transport", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3101)", "+2.50000000E+00", null),
+new ScriptStep("query", ":SENS:DIG:DATA:BYTE? DEC,(@3101)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34950a-Input-failure-step-10-Timeout", new CatalogRequest[] {
+new DigitalIoReadByteRequest(7),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3101)", "INP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3101)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SENS:DIG:THR? (@3101)", "+2.50000000E+00", null),
+new ScriptStep("query", ":SENS:DIG:DATA:BYTE? DEC,(@3101)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34950a-Output-guard-0-0", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "2", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.34980a|E|34950a-Output-guard-0-1", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "4", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.34980a|E|34950a-Output-guard-0-2", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "BYTE", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-Output-guard-1-0", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "2", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.34980a|E|34950a-Output-guard-2-0", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "4", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.34980a|E|34950a-Output-guard-3-0", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "2", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.34980a|E|34950a-Output-guard-4-0", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "INP", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.34980a|E|34950a-Output-guard-4-1", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "INPUT", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-Output-guard-5-0", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "INV", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.34980a|E|34950a-Output-guard-5-1", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "NORMAL", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-Output-guard-6-0", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "OFF", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.34980a|E|34950a-Output-guard-6-1", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "ON", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.34980a|E|34950a-Output-guard-6-2", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "NONE", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-Output-guard-7-0", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "1", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.34980a|E|34950a-Output-guard-7-1", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "ON", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-Output-guard-8-0", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "1", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.34980a|E|34950a-Output-guard-8-1", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "OFF", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-Output-guard-9-0", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:DRIV? (@3104)", "OCOL", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.34980a|E|34950a-Output-guard-9-1", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:DRIV? (@3104)", "ACTIVE", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-Output-guard-10-0", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:DRIV? (@3104)", "ACT", null),
+new ScriptStep("query", ":SOUR:DIG:LEV? (@3104)", "+3.20000000E+00", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Device),
+new CatalogCase("keysight.34980a|E|34950a-Output-guard-10-1", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:DRIV? (@3104)", "ACT", null),
+new ScriptStep("query", ":SOUR:DIG:LEV? (@3104)", "NaN", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.34980a|E|34950a-Output-failure-step-0-Transport", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34950a-Output-failure-step-0-Timeout", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34950a-Output-failure-step-1-Transport", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34950a-Output-failure-step-1-Timeout", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34950a-Output-failure-step-2-Transport", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34950a-Output-failure-step-2-Timeout", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34950a-Output-failure-step-3-Transport", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34950a-Output-failure-step-3-Timeout", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34950a-Output-failure-step-4-Transport", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34950a-Output-failure-step-4-Timeout", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34950a-Output-failure-step-5-Transport", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34950a-Output-failure-step-5-Timeout", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34950a-Output-failure-step-6-Transport", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34950a-Output-failure-step-6-Timeout", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34950a-Output-failure-step-7-Transport", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34950a-Output-failure-step-7-Timeout", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34950a-Output-failure-step-8-Transport", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34950a-Output-failure-step-8-Timeout", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34950a-Output-failure-step-9-Transport", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:DRIV? (@3104)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34950a-Output-failure-step-9-Timeout", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:DRIV? (@3104)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34950a-Output-failure-step-10-Transport", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:DRIV? (@3104)", "ACT", null),
+new ScriptStep("query", ":SOUR:DIG:LEV? (@3104)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34950a-Output-failure-step-10-Timeout", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:DRIV? (@3104)", "ACT", null),
+new ScriptStep("query", ":SOUR:DIG:LEV? (@3104)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.34980a|E|34950a-Output-failure-step-11-Transport", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:DRIV? (@3104)", "ACT", null),
+new ScriptStep("query", ":SOUR:DIG:LEV? (@3104)", "+3.30000000E+00", null),
+new ScriptStep("write", ":SOUR:DIG:DATA:BYTE 165,(@3104)", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.34980a|E|34950a-Output-failure-step-11-Timeout", new CatalogRequest[] {
+new DigitalIoWriteByteRequest(13, 165),
+}, new ScriptStep[] {
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3101)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3102)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3103)", "1", null),
+new ScriptStep("query", ":CONF:DIG:WIDT? (@3104)", "1", null),
+new ScriptStep("query", ":CONF:DIG:DIR? (@3104)", "OUTP", null),
+new ScriptStep("query", ":CONF:DIG:POL? (@3104)", "NORM", null),
+new ScriptStep("query", ":CONF:DIG:HAND:STAT? (@3101)", "HIMP", null),
+new ScriptStep("query", ":SENS:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:MEM:ENAB? (@3101)", "0", null),
+new ScriptStep("query", ":SOUR:DIG:DRIV? (@3104)", "ACT", null),
+new ScriptStep("query", ":SOUR:DIG:LEV? (@3104)", "+3.30000000E+00", null),
+new ScriptStep("write", ":SOUR:DIG:DATA:BYTE 165,(@3104)", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-1", new CatalogRequest[] {
+new SpectrumAnalyzerSetCenterFrequencyRequest(1.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "CF1HZ", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-10000000", new CatalogRequest[] {
+new SpectrumAnalyzerSetCenterFrequencyRequest(10000000.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "CF10000000HZ", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-40100000", new CatalogRequest[] {
+new SpectrumAnalyzerSetCenterFrequencyRequest(40100000.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "CF40100000HZ", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetSpan-1", new CatalogRequest[] {
+new SpectrumAnalyzerSetSpanRequest(1.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "FS1HZ", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetSpan-5000", new CatalogRequest[] {
+new SpectrumAnalyzerSetSpanRequest(5000.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "FS5000HZ", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetSpan-40100000", new CatalogRequest[] {
+new SpectrumAnalyzerSetSpanRequest(40100000.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "FS40100000HZ", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetRbw-3", new CatalogRequest[] {
+new SpectrumAnalyzerSetRbwRequest(3.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "RB3HZ", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetRbw-10", new CatalogRequest[] {
+new SpectrumAnalyzerSetRbwRequest(10.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "RB10HZ", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetRbw-30", new CatalogRequest[] {
+new SpectrumAnalyzerSetRbwRequest(30.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "RB30HZ", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetRbw-100", new CatalogRequest[] {
+new SpectrumAnalyzerSetRbwRequest(100.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "RB100HZ", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetRbw-300", new CatalogRequest[] {
+new SpectrumAnalyzerSetRbwRequest(300.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "RB300HZ", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetRbw-1000", new CatalogRequest[] {
+new SpectrumAnalyzerSetRbwRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "RB1000HZ", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetRbw-3000", new CatalogRequest[] {
+new SpectrumAnalyzerSetRbwRequest(3000.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "RB3000HZ", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetRbw-10000", new CatalogRequest[] {
+new SpectrumAnalyzerSetRbwRequest(10000.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "RB10000HZ", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetRbw-30000", new CatalogRequest[] {
+new SpectrumAnalyzerSetRbwRequest(30000.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "RB30000HZ", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetVbw-1", new CatalogRequest[] {
+new SpectrumAnalyzerSetVbwRequest(1.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "VB1HZ", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetVbw-3", new CatalogRequest[] {
+new SpectrumAnalyzerSetVbwRequest(3.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "VB3HZ", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetVbw-10", new CatalogRequest[] {
+new SpectrumAnalyzerSetVbwRequest(10.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "VB10HZ", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetVbw-30", new CatalogRequest[] {
+new SpectrumAnalyzerSetVbwRequest(30.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "VB30HZ", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetVbw-100", new CatalogRequest[] {
+new SpectrumAnalyzerSetVbwRequest(100.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "VB100HZ", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetVbw-300", new CatalogRequest[] {
+new SpectrumAnalyzerSetVbwRequest(300.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "VB300HZ", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetVbw-1000", new CatalogRequest[] {
+new SpectrumAnalyzerSetVbwRequest(1000.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "VB1000HZ", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetVbw-3000", new CatalogRequest[] {
+new SpectrumAnalyzerSetVbwRequest(3000.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "VB3000HZ", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetVbw-10000", new CatalogRequest[] {
+new SpectrumAnalyzerSetVbwRequest(10000.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "VB10000HZ", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetVbw-30000", new CatalogRequest[] {
+new SpectrumAnalyzerSetVbwRequest(30000.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "VB30000HZ", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|reference--70.0", new CatalogRequest[] {
+new SpectrumAnalyzerSetRefLevelRequest(-70.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "RL-70.0DM", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|reference--20.1", new CatalogRequest[] {
+new SpectrumAnalyzerSetRefLevelRequest(-20.1),
+}, new ScriptStep[] {
+new ScriptStep("write", "RL-20.1DM", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|reference-0.0", new CatalogRequest[] {
+new SpectrumAnalyzerSetRefLevelRequest(-0.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "RL0.0DM", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|reference-40.0", new CatalogRequest[] {
+new SpectrumAnalyzerSetRefLevelRequest(40.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "RL40.0DM", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-invalid-0", new CatalogRequest[] {
+new SpectrumAnalyzerSetCenterFrequencyRequest(0.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-invalid-1", new CatalogRequest[] {
+new SpectrumAnalyzerSetCenterFrequencyRequest(-1.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-invalid-2", new CatalogRequest[] {
+new SpectrumAnalyzerSetCenterFrequencyRequest(1.5),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-invalid-3", new CatalogRequest[] {
+new SpectrumAnalyzerSetCenterFrequencyRequest(40100001.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetSpan-invalid-0", new CatalogRequest[] {
+new SpectrumAnalyzerSetSpanRequest(0.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetSpan-invalid-1", new CatalogRequest[] {
+new SpectrumAnalyzerSetSpanRequest(-1.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetSpan-invalid-2", new CatalogRequest[] {
+new SpectrumAnalyzerSetSpanRequest(1.5),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetSpan-invalid-3", new CatalogRequest[] {
+new SpectrumAnalyzerSetSpanRequest(40100001.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetRbw-invalid-0", new CatalogRequest[] {
+new SpectrumAnalyzerSetRbwRequest(0.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetRbw-invalid-1", new CatalogRequest[] {
+new SpectrumAnalyzerSetRbwRequest(1.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetRbw-invalid-2", new CatalogRequest[] {
+new SpectrumAnalyzerSetRbwRequest(2.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetRbw-invalid-3", new CatalogRequest[] {
+new SpectrumAnalyzerSetRbwRequest(5.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetRbw-invalid-4", new CatalogRequest[] {
+new SpectrumAnalyzerSetRbwRequest(30001.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetVbw-invalid-0", new CatalogRequest[] {
+new SpectrumAnalyzerSetVbwRequest(0.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetVbw-invalid-1", new CatalogRequest[] {
+new SpectrumAnalyzerSetVbwRequest(2.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetVbw-invalid-2", new CatalogRequest[] {
+new SpectrumAnalyzerSetVbwRequest(5.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetVbw-invalid-3", new CatalogRequest[] {
+new SpectrumAnalyzerSetVbwRequest(30001.0),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.hp3585b|E|reference-invalid-0", new CatalogRequest[] {
+new SpectrumAnalyzerSetRefLevelRequest(-70.1),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.hp3585b|E|reference-invalid-1", new CatalogRequest[] {
+new SpectrumAnalyzerSetRefLevelRequest(40.1),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.hp3585b|E|reference-invalid-2", new CatalogRequest[] {
+new SpectrumAnalyzerSetRefLevelRequest(0.15),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.hp3585b|E|reference-invalid-3", new CatalogRequest[] {
+new SpectrumAnalyzerSetRefLevelRequest(0.10000000000000002),
+}, new ScriptStep[] {
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.InvalidArgument),
+new CatalogCase("keysight.hp3585b|E|stored-peak", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerPeakRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("write", "SP", "", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Empty()),
+new CatalogCase("keysight.hp3585b|E|marker-X-ordinary", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  1000000.0,-  20.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(1000000.0, Unit.Hertz, MeasurementStatus.Valid))),
+new CatalogCase("keysight.hp3585b|E|marker-Y-ordinary", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  1000000.0,-  20.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(-20.0, Unit.Dbm, MeasurementStatus.Valid))),
+new CatalogCase("keysight.hp3585b|E|marker-X-zero", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+        0.0,+   0.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(0.0, Unit.Hertz, MeasurementStatus.Valid))),
+new CatalogCase("keysight.hp3585b|E|marker-Y-zero", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+        0.0,+   0.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(0.0, Unit.Dbm, MeasurementStatus.Valid))),
+new CatalogCase("keysight.hp3585b|E|marker-X-upper", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+ 40100000.0,+  30.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(40100000.0, Unit.Hertz, MeasurementStatus.Valid))),
+new CatalogCase("keysight.hp3585b|E|marker-Y-upper", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+ 40100000.0,+  30.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(30.0, Unit.Dbm, MeasurementStatus.Valid))),
+new CatalogCase("keysight.hp3585b|E|marker-X-negative-zero", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "-        0.0,-   0.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(0.0, Unit.Hertz, MeasurementStatus.Valid))),
+new CatalogCase("keysight.hp3585b|E|marker-Y-negative-zero", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "-        0.0,-   0.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(0.0, Unit.Dbm, MeasurementStatus.Valid))),
+new CatalogCase("keysight.hp3585b|E|marker-X-full-digit-syntax", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+040100000.0,-0020.25E-0", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(40100000.0, Unit.Hertz, MeasurementStatus.Valid))),
+new CatalogCase("keysight.hp3585b|E|marker-Y-full-digit-syntax", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+040100000.0,-0020.25E-0", null),
+new ScriptStep("close", "", "", null),
+},
+new CatalogReply.Numeric(new Quantity(-20.25, Unit.Dbm, MeasurementStatus.Valid))),
+new CatalogCase("keysight.hp3585b|E|marker-X-reject-short", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  1000000.0,-  20.00E-", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-Y-reject-short", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  1000000.0,-  20.00E-", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-X-reject-long", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  1000000.0,-  20.00E-0 ", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-Y-reject-long", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  1000000.0,-  20.00E-0 ", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-X-reject-trailing-frame", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  1000000.0,-  20.00E-0\r\n", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-Y-reject-trailing-frame", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  1000000.0,-  20.00E-0\r\n", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-X-reject-csv", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  1000000.0,-  20.00E-0,0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-Y-reject-csv", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  1000000.0,-  20.00E-0,0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-X-reject-leading-space", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "   1000000.0,-  20.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-Y-reject-leading-space", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "   1000000.0,-  20.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-X-reject-freq-no-sign", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "0  1000000.0,-  20.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-Y-reject-freq-no-sign", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "0  1000000.0,-  20.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-X-reject-freq-tab", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+\t 1000000.0,-  20.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-Y-reject-freq-tab", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+\t 1000000.0,-  20.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-X-reject-freq-internal-space", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  10 0000.0,-  20.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-Y-reject-freq-internal-space", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  10 0000.0,-  20.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-X-reject-freq-no-point", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  100000000,-  20.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-Y-reject-freq-no-point", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  100000000,-  20.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-X-reject-freq-negative", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "-  1000000.0,-  20.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-Y-reject-freq-negative", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "-  1000000.0,-  20.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-X-reject-freq-outside", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+ 40100000.1,-  20.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-Y-reject-freq-outside", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+ 40100000.1,-  20.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-X-reject-comma", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  1000000.0;-  20.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-Y-reject-comma", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  1000000.0;-  20.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-X-reject-amp-no-sign", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  1000000.0,   20.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-Y-reject-amp-no-sign", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  1000000.0,   20.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-X-reject-amp-internal-space", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  1000000.0,- 2 0.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-Y-reject-amp-internal-space", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  1000000.0,- 2 0.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-X-reject-amp-no-point", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  1000000.0,-  20000E-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-Y-reject-amp-no-point", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  1000000.0,-  20000E-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-X-reject-amp-lower-e", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  1000000.0,-  20.00e-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-Y-reject-amp-lower-e", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  1000000.0,-  20.00e-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-X-reject-amp-exponent", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  1000000.0,-  20.00E-1", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-Y-reject-amp-exponent", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  1000000.0,-  20.00E-1", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-X-reject-amp-positive-exp", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  1000000.0,-  20.00E+0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-Y-reject-amp-positive-exp", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  1000000.0,-  20.00E+0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-X-reject-unicode", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  1000000.0,-  ２０.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-Y-reject-unicode", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "+  1000000.0,-  ２０.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-X-reject-binary", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "#224+  1000000.0,-  20.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|marker-Y-reject-binary", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "#224+  1000000.0,-  20.00E-0", null),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Parse),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-failure-0-Transport", new CatalogRequest[] {
+new SpectrumAnalyzerSetCenterFrequencyRequest(10000000.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "CF10000000HZ", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-failure-0-Timeout", new CatalogRequest[] {
+new SpectrumAnalyzerSetCenterFrequencyRequest(10000000.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "CF10000000HZ", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetSpan-failure-0-Transport", new CatalogRequest[] {
+new SpectrumAnalyzerSetSpanRequest(5000.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "FS5000HZ", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetSpan-failure-0-Timeout", new CatalogRequest[] {
+new SpectrumAnalyzerSetSpanRequest(5000.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "FS5000HZ", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetRbw-failure-0-Transport", new CatalogRequest[] {
+new SpectrumAnalyzerSetRbwRequest(30.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "RB30HZ", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetRbw-failure-0-Timeout", new CatalogRequest[] {
+new SpectrumAnalyzerSetRbwRequest(30.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "RB30HZ", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetVbw-failure-0-Transport", new CatalogRequest[] {
+new SpectrumAnalyzerSetVbwRequest(10.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "VB10HZ", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetVbw-failure-0-Timeout", new CatalogRequest[] {
+new SpectrumAnalyzerSetVbwRequest(10.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "VB10HZ", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetRefLevel-failure-0-Transport", new CatalogRequest[] {
+new SpectrumAnalyzerSetRefLevelRequest(-20.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "RL-20.0DM", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerSetRefLevel-failure-0-Timeout", new CatalogRequest[] {
+new SpectrumAnalyzerSetRefLevelRequest(-20.0),
+}, new ScriptStep[] {
+new ScriptStep("write", "RL-20.0DM", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerMarkerPeak-failure-0-Transport", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerPeakRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerMarkerPeak-failure-0-Timeout", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerPeakRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerMarkerPeak-failure-1-Transport", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerPeakRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("write", "SP", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerMarkerPeak-failure-1-Timeout", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerPeakRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("write", "SP", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerMarkerX-failure-0-Transport", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerMarkerX-failure-0-Timeout", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerMarkerX-failure-1-Transport", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerMarkerX-failure-1-Timeout", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerXRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerMarkerY-failure-0-Transport", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerMarkerY-failure-0-Timeout", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerMarkerY-failure-1-Transport", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "", DriverErrorKind.Transport),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Transport),
+new CatalogCase("keysight.hp3585b|E|SpectrumAnalyzerMarkerY-failure-1-Timeout", new CatalogRequest[] {
+new SpectrumAnalyzerMarkerYRequest(),
+}, new ScriptStep[] {
+new ScriptStep("write", "CL", "", null),
+new ScriptStep("query", "D2,T6", "", DriverErrorKind.Timeout),
+new ScriptStep("close", "", "", null),
+},
+null, DriverErrorKind.Timeout),
 }; }

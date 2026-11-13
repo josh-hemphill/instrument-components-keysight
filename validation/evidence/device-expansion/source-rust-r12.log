@@ -1,0 +1,17 @@
+    Updating crates.io index
+     Locking 12 packages to highest compatible versions
+   Compiling instrument-driver-keysight v0.2.0-alpha.1 (/workspace/scratch/instrument-components-expansion-20261113/source-proof-r12)
+   Compiling keysight-package-proof v0.0.0 (/workspace/scratch/instrument-components-expansion-20261113/source-proof-r12/validation/rust)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 20.77s
+     Running `/workspace/scratch/instrument-components-expansion-20261113/source-target/debug/keysight-package-proof`
+PASS compiled Agilent composition examples: five factories, shared module parent, typed views
+PASS new Agilent factories admission/ASCII schemes,4096 bounds, nonfinite pre-IO usable follow-up, all golden error quarantine/health follow-ups and borrowed/owned lifetime
+PASS HP5334A/B passive selection, commissioning, nonfinite arguments, borrowed/owned lifecycle and quarantine
+PASS HP3497A/8920A/8920B/8921A procedural inventory, firmware, route capabilities, ownership and fail-fast quarantine
+PASS HP isolated inventory invariants,4097 unique route bounds, native-mode absence, valid inventory after caller mutation and RF nonfinite pre-IO usable follow-up
+PASS selected mainframe endpoint capabilities before sync/native/worker acquisition; native absence; immutable inventory and isolated counter intent
+PASS all eight Agilent items: actual pending native reads/writes, independent sync/native deadlines, abandonment cleanup, owned/borrowed lifetime and whole-operation/sibling-view serialization
+PASS HP5334A/B native cancellation before and during IO; quarantine and no detached host accesses
+PASS all six HP models native abandonment, owned/borrowed lifetime and independent pending-read deadlines; all RF models pending-write cancellation/deadlines (sync/native); no detached access or retries
+PASS HP selected-route admission before native/worker acquisition; no unbound or ANT capability fallback
+PASS Keysight package: 1859 independent cases; exact traffic, values, units, errors and resource lifetime

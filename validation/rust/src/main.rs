@@ -14,6 +14,11 @@ mod hp_async_proof;
 mod hp_counter_proof;
 mod hp_fixture;
 mod hp_legacy_proof;
+mod qualified_examples;
+mod qualified_fixture;
+#[cfg(feature = "async")]
+mod qualified_pending_proof;
+mod qualified_proof;
 fn bindings() -> Result<BTreeMap<String, InventoryBinding>> {
     Ok(driver::profiles()?
         .into_iter()
@@ -159,6 +164,9 @@ fn case_factories(
     script: &Script,
     native: bool,
 ) -> Result<Vec<Arc<dyn DriverFactory>>> {
+    if let Some(factory) = qualified_fixture::factory(case.id, script, native)? {
+        return Ok(vec![factory]);
+    }
     if let Some(factory) = hp_fixture::factory(case.id, script, native)? {
         return Ok(vec![factory]);
     }
@@ -194,6 +202,8 @@ fn case_factories(
 }
 
 fn synchronous() -> Result<()> {
+    qualified_examples::run()?;
+    qualified_proof::synchronous()?;
     identities()?;
     hp_counter_proof::synchronous()?;
     hp_legacy_proof::synchronous()?;
@@ -227,6 +237,8 @@ fn synchronous() -> Result<()> {
 }
 #[cfg(feature = "async")]
 async fn asynchronous() -> Result<()> {
+    qualified_proof::selected_route_admission().await?;
+    qualified_pending_proof::run().await?;
     hp_counter_proof::asynchronous().await?;
     hp_async_proof::run().await?;
     hp_admission_proof::asynchronous().await?;

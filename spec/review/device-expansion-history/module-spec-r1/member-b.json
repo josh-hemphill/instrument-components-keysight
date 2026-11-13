@@ -1,0 +1,87 @@
+{
+  "member": "B",
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "rubric": "v1",
+  "stage": "SPEC",
+  "manifestSha256": "74fbadf2b5b43c093e2ec6f708b42993f9e00c95fb99387433d39e95e2adfb69",
+  "scores": {
+    "34980A": {
+      "EVIDENCE": 9.3,
+      "API": 9.4,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.3,
+      "VALIDATION": 9.3,
+      "DELIVERY": 9.2
+    },
+    "34937A": {
+      "EVIDENCE": 9.4,
+      "API": 9.3,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.3,
+      "VALIDATION": 9.3,
+      "DELIVERY": 9.2
+    },
+    "34922A": {
+      "EVIDENCE": 9.4,
+      "API": 9.3,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.3,
+      "VALIDATION": 9.3,
+      "DELIVERY": 9.2
+    },
+    "34950A": {
+      "EVIDENCE": 9.4,
+      "API": 9.4,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.3,
+      "VALIDATION": 9.3,
+      "DELIVERY": 9.2
+    }
+  },
+  "votes": {
+    "34980A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "34937A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "34922A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "34950A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    }
+  },
+  "mandatoryDefects": [],
+  "requiredChanges": [],
+  "limitations": [
+    "SPEC-only assessment; no implementation/native/platform/hardware execution is claimed.",
+    "Five new neutral operations require a new compatible qualified immutable SDK producer/tool/catalog before implementation qualification; old6524 producer and publicalpha.1 do not supply them.",
+    "Truthful lifetime commissioning excludes autonomous external/interrupt/pattern/buffer actions; guards are current-state evidence, not physical stability or protection.",
+    "3585B and exactTDS1002A remain pending; earlier three-item records are separate; no nine-item completion.",
+    "No peer ballots/scores read; no grade carryforward.",
+    "High confidence in primary evidence, artifact hashes and boundary semantics; moderate-high in planned implementation feasibility."
+  ],
+  "report": "member-b.md"
+}

@@ -1,0 +1,75 @@
+{
+  "stage": "SPEC",
+  "round": "analyzer-spec-r1",
+  "rubric": "v1",
+  "items": [
+    "3585B"
+  ],
+  "pendingItems": [
+    "TDS1002A"
+  ],
+  "normativeSpecs": [
+    "spec/3585B.md"
+  ],
+  "files": [
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/analyzer-spec-r1/RUBRIC-v1.md",
+      "sha256": "d0fa94b4057d31eecfae64d797a850f5089532b07a66970f00355c4227227e17"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/analyzer-spec-r1/spec/COMPOSITION-AND-VALIDATION.md",
+      "sha256": "9102985c328ea1c7bf8fa5aac7468727495849d79b5a560e57b0fcf4496afad6"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/analyzer-spec-r1/research/SOURCES.json",
+      "sha256": "30fabf468920c4651a1faa40adf4a5bd9e77c5de57300c4ad31cdd8f8f07a867"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/analyzer-spec-r1/research/3585B-OCR.json",
+      "sha256": "be4d86546700383c27a06dd8480400a8f08b6aaadec5a776bac1d483ff3e4774"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/analyzer-spec-r1/review/3585b-clearance.json",
+      "sha256": "1df2c8ec5992c86b901014a74e6b266a3bc747c9eb86a902c7464b10c143abf9"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/analyzer-spec-r1/spec/3585B.md",
+      "sha256": "e5a65c7e63b46e9342600ef52443c5868bbb4e760416a3e1ad4c23e576f7ce62"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/analyzer-spec-r1/spec/acceptance/3585b.catalog-cases.json",
+      "sha256": "6a132d6920b2a816db7d7e2e3b78942f22ad840eaa35af80dbff0a6dcbfa949c"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/analyzer-spec-r1/spec/acceptance/build-3585b-oracle.py",
+      "sha256": "0f757b5ee4f4108b8d1136340a70a652e526fbbe078dffda18f95b5f4d58821e"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/research/3585B-operating.pdf",
+      "sha256": "ac28f40bf94e7ef6f411f616d014d487b1ae3bf2043c1595f756fa118feab009"
+    }
+  ],
+  "baseline": {
+    "instrument-components": {
+      "head": "1b0704dbb2c4a9f4ffda9f6b1665de12654f672d",
+      "branch": "feat/legacy-hp-contracts",
+      "status": ""
+    },
+    "instrument-components-keysight": {
+      "head": "c63cc025d283deb0832dbe2b9c721d8a33412160",
+      "branch": "feat/legacy-hp-devices",
+      "status": ""
+    },
+    "instrument-components-tektronix": {
+      "head": "787c4881636d18618f1f8a503a7be7273333064f",
+      "branch": "work",
+      "status": ""
+    }
+  },
+  "limitations": [
+    "Manufacturer manual is scanned; actualpagePNG/OCRpaths in sourceOCRmanifest remain accessible scratchresearch/3585-ocr",
+    "All replyexamples are explicitlysynthetic instantiations ofmanualformatdiagram; no rawdevice/hardwareclaim",
+    "First3onlyconstructor in supporting plan does not override3585specificfactory",
+    "No implementation or hardware evidence claimed at SPEC stage"
+  ]
+}

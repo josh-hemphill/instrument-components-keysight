@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "driverId": "keysight.34980a",
+  "endpointScheme": "scpi",
+  "endpointAddress": "fixture",
+  "modules": [
+    {
+      "slot": 1,
+      "model": "34937A"
+    },
+    {
+      "slot": 2,
+      "model": "34922A"
+    },
+    {
+      "slot": 3,
+      "model": "34950A"
+    }
+  ],
+  "switches": [
+    {
+      "channel": 7,
+      "slot": 1,
+      "local": 1
+    },
+    {
+      "channel": 13,
+      "slot": 1,
+      "local": 28
+    },
+    {
+      "channel": 29,
+      "slot": 1,
+      "local": 29
+    },
+    {
+      "channel": 61,
+      "slot": 1,
+      "local": 32
+    },
+    {
+      "channel": 101,
+      "slot": 2,
+      "local": 1
+    },
+    {
+      "channel": 135,
+      "slot": 2,
+      "local": 35
+    },
+    {
+      "channel": 136,
+      "slot": 2,
+      "local": 36
+    },
+    {
+      "channel": 170,
+      "slot": 2,
+      "local": 70
+    }
+  ],
+  "digitalPorts": [
+    {
+      "port": 7,
+      "slot": 3,
+      "local": 101,
+      "direction": "Input"
+    },
+    {
+      "port": 13,
+      "slot": 3,
+      "local": 104,
+      "direction": "Output"
+    },
+    {
+      "port": 29,
+      "slot": 3,
+      "local": 201,
+      "direction": "Input"
+    },
+    {
+      "port": 61,
+      "slot": 3,
+      "local": 204,
+      "direction": "Output"
+    }
+  ],
+  "commissioning": {
+    "exclusiveMainframeNoScan": true,
+    "noAutonomousActionsThroughoutLifetime": true,
+    "normalPolarity": true,
+    "allByteWidths": true,
+    "handshakeHighImpedance": true,
+    "memoryInputOutputDisabled": true,
+    "inputThresholdVolts": 2.5,
+    "outputDrive": "Active",
+    "outputHighVolts": 3.3
+  }
+}

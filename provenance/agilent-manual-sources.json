@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-13",
+  "sources": [
+    {
+      "file": "34401A-user.pdf",
+      "sha256": "ea7ec922d14aafce23ec7058e37bcf0ccd192423f70d75ccdf6350382ae3b419",
+      "bytes": 3194370,
+      "pages": 246,
+      "partNumber": "34401-90004",
+      "edition": "Edition10,August2014",
+      "models": [
+        "34401A"
+      ],
+      "sourceUrl": "https://www.keysight.com/content/dam/keysight/en/doc/gate/user-manuals/9018-01063.pdf",
+      "officialLandingUrl": "https://www.keysight.com/us/en/assets/9018-01063/user-manuals/9018-01063.pdf",
+      "provenance": "Primary manufacturer publication downloaded from official manufacturer domain; content signature checked; own-model applicability checked from text; no hardware evidence."
+    },
+    {
+      "file": "33120A-user.pdf",
+      "sha256": "3dd6d075bd05cc8efb86846b826656ba3548aba8c621b7045fb1c3a2a167d668",
+      "bytes": 4124737,
+      "pages": 312,
+      "partNumber": "33120-90006",
+      "edition": "Edition6,March2002",
+      "models": [
+        "33120A"
+      ],
+      "sourceUrl": "https://www.keysight.com/content/dam/keysight/en/doc/gate/user-manuals/9018-04436.pdf",
+      "officialLandingUrl": "https://www.keysight.com/us/en/assets/9018-04436/user-manuals/9018-04436.pdf",
+      "provenance": "Primary manufacturer publication downloaded from official manufacturer domain; content signature checked; own-model applicability checked from text; no hardware evidence."
+    },
+    {
+      "file": "53132A-programming.pdf",
+      "sha256": "43b7e12210c503c59acdfea728bafdf66e4c5f284009b6470ee8264b593aa703",
+      "bytes": 1350874,
+      "pages": 328,
+      "partNumber": "53131-90044",
+      "edition": "PrintedOctober2006;copyright1996\u20132006",
+      "models": [
+        "53131A",
+        "53132A"
+      ],
+      "sourceUrl": "https://www.keysight.com/content/dam/keysight/en/doc/gate/programming-guides/9018-01066.pdf",
+      "officialLandingUrl": "https://www.keysight.com/us/en/assets/9018-01066/programming-guides/9018-01066.pdf",
+      "provenance": "Primary manufacturer publication downloaded from official manufacturer domain; content signature checked; own-model applicability checked from text; no hardware evidence."
+    },
+    {
+      "file": "3585B-operating.pdf",
+      "sha256": "ac28f40bf94e7ef6f411f616d014d487b1ae3bf2043c1595f756fa118feab009",
+      "bytes": 14595731,
+      "pages": 393,
+      "partNumber": "03585-90017",
+      "edition": "October1990;serial3008A00860andgreater",
+      "models": [
+        "3585B"
+      ],
+      "sourceUrl": "https://www.keysight.com/content/dam/keysight/en/doc/gate/user-manuals/9018-05816.pdf",
+      "officialLandingUrl": "https://www.keysight.com/us/en/assets/9018-05816/user-manuals/9018-05816.pdf",
+      "provenance": "Primary manufacturer publication downloaded from official manufacturer domain; content signature checked; own-model applicability checked from text; no hardware evidence."
+    },
+    {
+      "file": "34980A-programming.pdf",
+      "sha256": "60677f5cfc8c2d9339d8b1a871e168fab39256c6da34fee0ffa8cf276c75ac69",
+      "bytes": 10310885,
+      "pages": 1106,
+      "partNumber": "9018-61230",
+      "edition": "OfficialcurrentPDFexport;publicationlandinglists2025-03-14;noeditionnumberstatedintitle",
+      "models": [
+        "34980A",
+        "34922A",
+        "34937A",
+        "34950A"
+      ],
+      "sourceUrl": "https://www.keysight.com/us/en/assets/9018-61230/programming-guides/9018-61230.pdf?success=true",
+      "officialLandingUrl": "https://www.keysight.com/us/en/assets/9018-61230/programming-guides/9018-61230.pdf",
+      "provenance": "Primary manufacturer publication downloaded from official manufacturer domain; content signature checked; own-model applicability checked from text; no hardware evidence."
+    },
+    {
+      "file": "34922A-user.pdf",
+      "sha256": "dcbfa4cac94b638ee737d75788f868536a61bdd7d6fd54178c4560c9ef75477b",
+      "bytes": 4025187,
+      "pages": 93,
+      "partNumber": "34980-90021",
+      "edition": "Edition6,February2025",
+      "models": [
+        "34921A",
+        "34922A",
+        "34923A",
+        "34924A",
+        "34925A"
+      ],
+      "sourceUrl": "https://www.keysight.com/content/dam/keysight/en/doc/gate/user-manuals/9018-02147.pdf",
+      "officialLandingUrl": "https://www.keysight.com/us/en/assets/9018-02147/user-manuals/9018-02147.pdf",
+      "provenance": "Primary manufacturer publication downloaded from official manufacturer domain; content signature checked; own-model applicability checked from text; no hardware evidence."
+    },
+    {
+      "file": "34937A-user.pdf",
+      "sha256": "e96211bb871177b4d9e569e524529ce0b82569e0457decdf7f4e0f58191da926",
+      "bytes": 2325488,
+      "pages": 49,
+      "partNumber": "34980-90037",
+      "edition": "Edition5,February2025",
+      "models": [
+        "34937A",
+        "34938A",
+        "34939A"
+      ],
+      "sourceUrl": "https://www.keysight.com/content/dam/keysight/en/doc/gate/user-manuals/9018-02150.pdf",
+      "officialLandingUrl": "https://www.keysight.com/us/en/assets/9018-02150/user-manuals/9018-02150.pdf",
+      "provenance": "Primary manufacturer publication downloaded from official manufacturer domain; content signature checked; own-model applicability checked from text; no hardware evidence."
+    },
+    {
+      "file": "34950A-user.pdf",
+      "sha256": "6d205a242001e4643d1a996a4910dbc3db383aded6689698ad1bc2f56ec1bdd6",
+      "bytes": 1043136,
+      "pages": 51,
+      "partNumber": "34980-90050",
+      "edition": "Edition4,August2022",
+      "models": [
+        "34950A"
+      ],
+      "sourceUrl": "https://www.keysight.com/content/dam/keysight/en/doc/gate/user-manuals/9018-02154.pdf",
+      "officialLandingUrl": "https://www.keysight.com/us/en/assets/9018-02154/user-manuals/9018-02154.pdf",
+      "provenance": "Primary manufacturer publication downloaded from official manufacturer domain; content signature checked; own-model applicability checked from text; no hardware evidence."
+    },
+    {
+      "file": "34980A-mainframe.pdf",
+      "sha256": "278ee557fbdd85f59e1b87bdeabedbf9bdb0dc4151784b4d9677396094934cbf",
+      "bytes": 7681969,
+      "pages": 269,
+      "partNumber": "34980-90005",
+      "edition": "Edition14,February2025",
+      "models": [
+        "34980A"
+      ],
+      "sourceUrl": "https://www.keysight.com/content/dam/keysight/en/doc/gate/user-manuals/9018-02146.pdf",
+      "officialLandingUrl": "https://www.keysight.com/us/en/assets/9018-02146/user-manuals/9018-02146.pdf",
+      "provenance": "Primary manufacturer publication; actualPDF signature verified; nohardwareevidence"
+    }
+  ],
+  "unresolved": [
+    "Exact Tektronix TDS1002A identity not present in located official applicability lists; do not alias toTDS1002/TDS1002B.",
+    "3585B scanned primary manual: native commands require inspected page images/OCR crosscheck."
+  ]
+}

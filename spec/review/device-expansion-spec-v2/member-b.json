@@ -1,0 +1,243 @@
+{
+  "member": "B",
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "rubric": "v2",
+  "stage": "SPEC",
+  "round": "full-spec-v2-r1",
+  "manifestSha256": "c52c37b13a460ea7e5c86916d1d51c9377fc8e9f11848347a3727581f5208a76",
+  "scores": {
+    "34401A": {
+      "EVIDENCE": 9.4,
+      "API": 9.3,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.3,
+      "VALIDATION": 9.3,
+      "DELIVERY": 9.3
+    },
+    "33120A": {
+      "EVIDENCE": 9.4,
+      "API": 9.3,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.3,
+      "VALIDATION": 9.3,
+      "DELIVERY": 9.3
+    },
+    "53132A": {
+      "EVIDENCE": 9.4,
+      "API": 9.3,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.3,
+      "VALIDATION": 9.3,
+      "DELIVERY": 9.3
+    },
+    "3585B": {
+      "EVIDENCE": 9.4,
+      "API": 9.3,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.3,
+      "VALIDATION": 9.2,
+      "DELIVERY": 9.2
+    },
+    "34980A": {
+      "EVIDENCE": 9.3,
+      "API": 9.4,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.3,
+      "VALIDATION": 9.3,
+      "DELIVERY": 9.2
+    },
+    "34937A": {
+      "EVIDENCE": 9.4,
+      "API": 9.3,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.3,
+      "VALIDATION": 9.3,
+      "DELIVERY": 9.2
+    },
+    "34922A": {
+      "EVIDENCE": 9.4,
+      "API": 9.3,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.3,
+      "VALIDATION": 9.3,
+      "DELIVERY": 9.2
+    },
+    "34950A": {
+      "EVIDENCE": 9.4,
+      "API": 9.4,
+      "PROTOCOL": 9.3,
+      "PARITY": 9.3,
+      "VALIDATION": 9.3,
+      "DELIVERY": 9.2
+    },
+    "TDS1002": {
+      "EVIDENCE": 9.4,
+      "API": 9.4,
+      "PROTOCOL": 9.4,
+      "PARITY": 9.3,
+      "VALIDATION": 9.4,
+      "DELIVERY": 9.3
+    }
+  },
+  "votes": {
+    "34401A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "33120A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "53132A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "3585B": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "34980A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "34937A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "34922A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "34950A": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    },
+    "TDS1002": {
+      "EVIDENCE": "PASS",
+      "API": "PASS",
+      "PROTOCOL": "PASS",
+      "PARITY": "PASS",
+      "VALIDATION": "PASS",
+      "DELIVERY": "PASS"
+    }
+  },
+  "mandatoryDefects": [],
+  "requiredChanges": [],
+  "evidence": {
+    "34401A": {
+      "EVIDENCE": "34401-90004 Edition10 is own-model evidence; MEAS/default/range semantics, fixed scalar grammar and positive overload are traceable to printed112\u2013118,159,61. Temperature/USB inheritance is excluded.",
+      "API": "Seven typed DMM methods map to six physical functions with explicit two-wire alias and per-call units. Frozen commissioned endpoint binding and required-capability/native checks precede acquisition; old generic registration is replaced.",
+      "PROTOCOL": "One explicit-DEF query, E11 formatting, strict15-character grammar, positive-only overload,256-byte/LF host contract, finite deadline and whole-operation lease/quarantine/owned-borrowed close are concrete.",
+      "PARITY": "Corresponding Rust/C# factory and method/error contracts use actual-model selectors, real native admission and SDK workers. Shared plan specifies source/packed Linux/Windowsx64 net8/net10 NativeAOT and warning gates.",
+      "VALIDATION": "69 independent cases cover every exposed scalar method, auto/explicit/non-nominal/max ranges, units/status, invalid boundaries and parser/IO failures. Q-PROC01\u201311 add actual-factory admission, immutable bindings, health/lifetime/concurrency and pending IO.",
+      "DELIVERY": "External Keysight qualified factory, historical retention of69 retired cases/profile, explicit removal from active registration, generator/TestKit commands, checksum-joined package proof and future public-version boundary are specified."
+    },
+    "33120A": {
+      "EVIDENCE": "33120-90006 Edition6 supports exact commands, always-live output, fixed50ohm source/load-accounting distinction and coupled voltage restrictions; rendered frequency table confirms100microhertz. Printed151 explicitly establishes9.9E37 HighZ.",
+      "API": "Four typed generator operations use a frozen authorized continuous-sine/50ohm/VPP endpoint. Guards preserve external mode truth. No output-enable/shutdown fiction; write completion and setting-read semantics are explicit.",
+      "PROTOCOL": "Guard order, load-specific HighZ Device precedence, strict numeric policy, original-and-rounded coupled checks and post-query InvalidArgument/quarantine are unambiguous. Configuration writes explicitly change the live output; close releases only resources.",
+      "PARITY": "Rust/C# constructors, guards, E11 and error/health semantics are shared. Actual commissioned-factory selectors join the same corpus to all frontends and source/packed platform/AOT plan.",
+      "VALIDATION": "67 independent cases include real HighZ, endpoints, guard failures, rounded-wire conflicts and every traffic failure position; Q-PROC06/09\u201311 require no-write conflict, quarantine, pending native IO and serialized groups.",
+      "DELIVERY": "External package, physical-load/output-change prerequisites, supported/deferred modes and publicalpha.1 exclusion are documented. Shared exact producer/bootstrap tool strategy and coordinated future-version/native qualification are concrete."
+    },
+    "53132A": {
+      "EVIDENCE": "53131-90044 explicitly includes53132A; inspected frequency/period CONFIG, arming, ASCII and gate sections support the exact subset, distinct from adjacent-model aperture/totalize guesses.",
+      "API": "Channel1/2, local gate/channel setters, defaults, fixed operation units and deferred optionalchannel3 are explicit. Exact endpoint commissioning and capability/mode checks are frozen before acquisition.",
+      "PROTOCOL": "CONFIG then immediate-start/timed-stop/gate/ASCII/freshREAD avoids stale fetch and overwritten gate settings. Canonical binary64 millisecond grid, NR3 significant digits and invalid-result/positive-domain rules are specified.",
+      "PARITY": "Both language contracts use equivalent state/error semantics and real native versus worker gating. Actual factory selectors and source/packed NativeAOT Linux/Windowsx64 .NET8/10 plan are explicit.",
+      "VALIDATION": "50 golden cases exercise channels/units/grid/parser/each failure position. Q-PROC12 requires state-preserving invalid setters, fresh repeated reads and independent handle defaults; common pending/lifetime procedures apply.",
+      "DELIVERY": "External Keysight addition uses existing neutral Counter operations. Pinned compatible bootstrap path, generation/TestKit/package commands, checksum/artifact evidence and future coordinated release are specified without public availability claims."
+    },
+    "3585B": {
+      "EVIDENCE": "Own03585-90017 serial-applicable source is hash-bound with render/OCR provenance. Actual diagrams/commands support fixed fields, dBm, CL/SP and D2/T6. Software1Hz floor is distinguished from hardware0Hz/fractional ability.",
+      "API": "Eight neutral operations and exact nativehpib identity use bounded immutable commissioned endpoints. R12/50ohm/liveA/absolute-dBm policy and unsupported sweep/trace/reset/shutdown are explicit.",
+      "PROTOCOL": "Exact24-character D2 validates both fields including discarded axis. CL-only visibility change, stored-trace SP and selected-marker T6 have honest freshness boundaries. Significant spaces, CRLF/EOI and finite pending bus waits are covered.",
+      "PARITY": "Matching language construction, integer/tenths formatting and fixed-field errors use genuine native/worker modes; external source/packed matrix and compatible coordinated SDK qualification apply.",
+      "VALIDATION": "123 independent synthetic cases cover all operations/discrete bandwidths, range/grid boundaries, both axes/malformed discarded fields and traffic failures. B-PROC adds actual admission, pendingCL/query, health/ownership and physical-claim documentation.",
+      "DELIVERY": "Native implementation/parser/cases stay in external Keysight, with synthetic fixtures clearly labeled. Source/packed external-tool/TestKit proof and coordinated compatible SDK/public-version distinction are specified; hardware remains future evidence."
+    },
+    "34980A": {
+      "EVIDENCE": "Own mainframe/programmer and module manuals support addressedGPIB, topology and scan-wide effects. PhysicalLAN/USB exist but initial admission is explicitlyGPIB; no DMM/discovery expansion is inferred.",
+      "API": "One factory/physical handle/SDK lease owns all module views. Validated slot/local-derived addresses, namespace uniqueness and cross-slot-type conflict checks freeze per-endpoint capabilities before acquisition; proprietary rules stay external.",
+      "PROTOCOL": "Whole guard/action transactions share parent serialization, health/quarantine and one owned/borrowed lifetime. Lifetime no-autonomous-actions commissioning handles future external triggers that readback cannot exclude; no globalOpenAll/reset/cleanup.",
+      "PARITY": "Five neutral generated operations and corresponding Rust/C# module construction/modes are specified. A new compatible immutable SDK/tool/catalog producer is mandatory; old6524 cannot qualify these modules.",
+      "VALIDATION": "7 parent cases plus independent module shards and M-PROC01\u201315 cover shared-view mapping, per-endpoint capability isolation, deep-freeze/slot conflicts, sibling quarantine, one close, pending native IO and noninterleaving.",
+      "DELIVERY": "Core gains only neutral operations/tooling; implementation/addresses/oracles stay external. New immutable producer/checksum-joined source/packed matrix and coordinated future versions are mandatory later evidence, not claimed complete now."
+    },
+    "34937A": {
+      "EVIDENCE": "Own guide printed15/17/20/22 and common ROUT descriptions support28FormC/4FormA, latching/no analog buses and commanded-state queries, with no invented power-fail isolation.",
+      "API": "Three typed single-path operations map local1\u201332 to the parent. FormC open means NC connection, not circuit isolation; no invented matrix pairs, module session, OpenAll or shutdown.",
+      "PROTOCOL": "Exact addressedROUT writes/query and strict0/1 replies affect only the declared path. Failures quarantine parent; close emits no hardware cleanup. NC consequences and latching state remain explicit.",
+      "PARITY": "Both languages share generated neutral single-channel operations, parent lifetime and native/worker admission. Actual module cases/procedures must run source/packed across native platform matrix.",
+      "VALIDATION": "32 cases cover FormC/FormA boundaries and each operation, states/parser/IO failures. M-PROC adds every valid local/slot, invalid/duplicate/type conflicts, shared serialization/quarantine and NC/no-cleanup documentation.",
+      "DELIVERY": "Distributed as a documented capability of the existing external mainframe factory, with prerequisites/deferred behavior. New qualified neutral producer and checksum-joined package/native proof precede final implementation/public qualification."
+    },
+    "34922A": {
+      "EVIDENCE": "Own34922A printed34\u201335 supports two35-channel latching banks, non-scanning multiple closures, scan-only four-wire pairing and power retention; neighboring reed/FET behavior is excluded.",
+      "API": "Direct two-wire single-path operations map local1\u201370 through one parent. Analog bus/DMM/scan/four-wire/OpenAll remain deferred; partial logical inventories cannot silently expand scope.",
+      "PROTOCOL": "ExactROUT grammar and strict state tokens are specified. Same-bank closes intentionally do not open others; shared quarantine/ownership and no hidden route/bus recovery preserve declared effects.",
+      "PARITY": "Identical generated channel operations and external mappings apply to Rust/C# all frontends, with new compatible SDK producer and source/packed platform qualification.",
+      "VALIDATION": "33 independent cases exercise1/35/36/70, both state values, malformed/IO responses and sequential same-bank closes without open. M-PROC supplies isolated topology/admission/parent lifetime/pending IO tests.",
+      "DELIVERY": "External parent capability documents signal commoning/nonexclusive closures, power retention and deferred acquisition. Core/vendor boundary and future compatible producer/package/native release plan are explicit."
+    },
+    "34950A": {
+      "EVIDENCE": "Own programmer sections160\u2013185,568\u2013570,596\u2013597,756\u2013774 support numeric width counts, bank-first memory/HIMP, SENSE latch distinction, SOURCE direction effects and fixed electrical policy.",
+      "API": "Neutral positive port/u32 byte requests and zero-valid Count keep topology outside core. Frozen per-port direction/read-write capability gating and0\u2013255 validation are explicit; no hidden setters/group transition.",
+      "PROTOCOL": "All four bank width guards prevent non-anchor bypass, followed by exact direction/polarity/HIMP/memory/electrical guards. SENSE DEC input and SOURCE decimal output stop at first error; strict byte grammar and parent quarantine apply.",
+      "PARITY": "Zero semantics and five neutral operations are generated identically in both languages; real native/worker modes and source/packed AOT matrix require the newly qualified compatible SDK/tool producer.",
+      "VALIDATION": "123 cases cover banks, selected-versus-first addresses, zero/255/256, direction/guard failures, strict sampled-byte parser and all IO positions. M-PROC adds all local boundaries, grouping/immutability/shared lease and pending IO.",
+      "DELIVERY": "Fixed-byte2.5V/3.3VActive commissioning and lifetime autonomous-action exclusion are documented external prerequisites. Wide/buffer/counter/direction configuration stays deferred; new neutral packages and external implementation require checksum-joined qualification."
+    },
+    "TDS1002": {
+      "EVIDENCE": "Exact user-corrected non-BTDS1002 is named in own user manual071-1064-00; qualifying071-1075-04 tables explicitly supportCM/CMA/CMAXGPIB, notMEMGPIB/USB. Probe, state, unit, status and OPC pages directly support the declared subset; later SOURCE[1] clarification is corroboration only.",
+      "API": "Ten existing neutral scope operations use immutable module/probe/commissioning endpoint configuration with1\u20134096 bounds and selected capability/mode checks. Exact TDS1002/TDS 1002 aliases excludeA/B; probes and scaled nominal grids are model-specific external rules.",
+      "PROTOCOL": "HEAD/VERB global changes and ESR read-clear effects are disclosed;DESE255 prevents masked-error success. Fresh scalarsSTOP/SAMPLE/SEQUENCE/RUN/OPC, verify state/count/source/type/quoted units, parse value and require finalESR0. Sentinel/underflow/domain/error rules and stopped-afterward semantics avoid stale/warning Valid results.",
+      "PARITY": "Corresponding Rust/C# constructors, integer-derived probe scales, literal timebase grids, exact traffic/errors and genuine native/worker gates are specified. External generator/TestKit and compatible immutable-feed source/packed Linux/Windowsx64 .NET8/10 NativeAOT/warning matrix are concrete.",
+      "VALIDATION": "334 independently authored cases reproduce byte-for-byte with fixture, cover31 timebases,22 fixture scales, all10 supported operations, repeated fresh captures and every measurement IO/guard position. T-PROC01\u201311 adds full probe/endpoint grids, nonfinite inputs, healthy rejection, real pending prefix/RUN/OPC/VALUE cancellation/deadlines, serialization and ownership.",
+      "DELIVERY": "Implementation/optional-module/probe grammar stays in external Tektronix and preserves oldMDO corpus. Rust/C# composition examples disclose persistent status/mode changes and external connector prerequisites; oldpublicalpha.1 is excluded. Compatible producer/checksum-joined source/packed/native and compiled examples remain required implementation evidence."
+    }
+  },
+  "limitations": [
+    "SPEC-only judgment of proposed design/manual evidence/executable acceptance plan; no implementation, actual procedural/platform/native/package execution or hardware validation is inferred.",
+    "Installed interfaces/modules/probes, source serial/firmware applicability, electrical conditions and lifetime exclusive commissioning are application-asserted; guards do not prove physical truth/protection/calibration.",
+    "Compatible new immutable SDK/tool producer and generated schema/catalog, actual source/packed consumers, NativeAOT binaries and checksum/log joins remain mandatory implementation evidence for the complete expansion.",
+    "3585B raw records and full control scripts are synthetic; SP is stored-trace selection and T6 is selected-marker validity, not fresh-global sweep.",
+    "TDS1002 fresh scalar operations intentionally alter acquisition/communication/status state; missing triggers may time out and cancellation can leave acquisition running. No automatic cleanup/recovery is authorized.",
+    "Implementation-source findings and any claimed fixes require their own updated frozen implementation review; they are not final implementation grades or waived by this SPEC ballot.",
+    "No peer scores/ballots read; all54 cells independently reassessed from this fullv2 packet without v1 grade carryforward."
+  ],
+  "confidence": "High for frozen identity/manual-backed protocol and independent corpus checks; moderate-high for planned implementation and final platform/package feasibility."
+}

@@ -1,0 +1,743 @@
+{
+  "schemaVersion": 1,
+  "contractMajor": 1,
+  "description": "Independent primary-manual/spec traffic, synthetic software tests, no hardware observations. Shared fixture mapping in fixture-inventory.json.",
+  "cases": [
+    {
+      "id": "keysight.34980a|E|34937a-SwitchCloseChannel-7",
+      "calls": [
+        {
+          "operation": "SwitchCloseChannel",
+          "arguments": {
+            "channel": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":ROUT:CLOS (@1001)"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34937a-SwitchOpenChannel-7",
+      "calls": [
+        {
+          "operation": "SwitchOpenChannel",
+          "arguments": {
+            "channel": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":ROUT:OPEN (@1001)"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34937a-state-7-False",
+      "calls": [
+        {
+          "operation": "SwitchChannelIsClosed",
+          "arguments": {
+            "channel": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":ROUT:CLOS? (@1001)",
+          "response": "0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "boolean",
+        "value": false
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34937a-state-7-True",
+      "calls": [
+        {
+          "operation": "SwitchChannelIsClosed",
+          "arguments": {
+            "channel": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":ROUT:CLOS? (@1001)",
+          "response": "1"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "boolean",
+        "value": true
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34937a-SwitchCloseChannel-13",
+      "calls": [
+        {
+          "operation": "SwitchCloseChannel",
+          "arguments": {
+            "channel": 13
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":ROUT:CLOS (@1028)"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34937a-SwitchOpenChannel-13",
+      "calls": [
+        {
+          "operation": "SwitchOpenChannel",
+          "arguments": {
+            "channel": 13
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":ROUT:OPEN (@1028)"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34937a-state-13-False",
+      "calls": [
+        {
+          "operation": "SwitchChannelIsClosed",
+          "arguments": {
+            "channel": 13
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":ROUT:CLOS? (@1028)",
+          "response": "0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "boolean",
+        "value": false
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34937a-state-13-True",
+      "calls": [
+        {
+          "operation": "SwitchChannelIsClosed",
+          "arguments": {
+            "channel": 13
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":ROUT:CLOS? (@1028)",
+          "response": "1"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "boolean",
+        "value": true
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34937a-SwitchCloseChannel-29",
+      "calls": [
+        {
+          "operation": "SwitchCloseChannel",
+          "arguments": {
+            "channel": 29
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":ROUT:CLOS (@1029)"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34937a-SwitchOpenChannel-29",
+      "calls": [
+        {
+          "operation": "SwitchOpenChannel",
+          "arguments": {
+            "channel": 29
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":ROUT:OPEN (@1029)"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34937a-state-29-False",
+      "calls": [
+        {
+          "operation": "SwitchChannelIsClosed",
+          "arguments": {
+            "channel": 29
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":ROUT:CLOS? (@1029)",
+          "response": "0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "boolean",
+        "value": false
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34937a-state-29-True",
+      "calls": [
+        {
+          "operation": "SwitchChannelIsClosed",
+          "arguments": {
+            "channel": 29
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":ROUT:CLOS? (@1029)",
+          "response": "1"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "boolean",
+        "value": true
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34937a-SwitchCloseChannel-61",
+      "calls": [
+        {
+          "operation": "SwitchCloseChannel",
+          "arguments": {
+            "channel": 61
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":ROUT:CLOS (@1032)"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34937a-SwitchOpenChannel-61",
+      "calls": [
+        {
+          "operation": "SwitchOpenChannel",
+          "arguments": {
+            "channel": 61
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":ROUT:OPEN (@1032)"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34937a-state-61-False",
+      "calls": [
+        {
+          "operation": "SwitchChannelIsClosed",
+          "arguments": {
+            "channel": 61
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":ROUT:CLOS? (@1032)",
+          "response": "0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "boolean",
+        "value": false
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34937a-state-61-True",
+      "calls": [
+        {
+          "operation": "SwitchChannelIsClosed",
+          "arguments": {
+            "channel": 61
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":ROUT:CLOS? (@1032)",
+          "response": "1"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "boolean",
+        "value": true
+      }
+    },
+    {
+      "id": "keysight.34980a|E|34937a-state-malformed-0",
+      "calls": [
+        {
+          "operation": "SwitchChannelIsClosed",
+          "arguments": {
+            "channel": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":ROUT:CLOS? (@1001)",
+          "response": "ON"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34937a-state-malformed-1",
+      "calls": [
+        {
+          "operation": "SwitchChannelIsClosed",
+          "arguments": {
+            "channel": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":ROUT:CLOS? (@1001)",
+          "response": "+1"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34937a-state-malformed-2",
+      "calls": [
+        {
+          "operation": "SwitchChannelIsClosed",
+          "arguments": {
+            "channel": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":ROUT:CLOS? (@1001)",
+          "response": "1.0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34937a-state-malformed-3",
+      "calls": [
+        {
+          "operation": "SwitchChannelIsClosed",
+          "arguments": {
+            "channel": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":ROUT:CLOS? (@1001)",
+          "response": "1,0"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34937a-state-malformed-4",
+      "calls": [
+        {
+          "operation": "SwitchChannelIsClosed",
+          "arguments": {
+            "channel": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":ROUT:CLOS? (@1001)",
+          "response": " 1"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34937a-state-malformed-5",
+      "calls": [
+        {
+          "operation": "SwitchChannelIsClosed",
+          "arguments": {
+            "channel": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":ROUT:CLOS? (@1001)",
+          "response": "1 "
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34937a-state-malformed-6",
+      "calls": [
+        {
+          "operation": "SwitchChannelIsClosed",
+          "arguments": {
+            "channel": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":ROUT:CLOS? (@1001)",
+          "response": ""
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34937a-state-malformed-7",
+      "calls": [
+        {
+          "operation": "SwitchChannelIsClosed",
+          "arguments": {
+            "channel": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":ROUT:CLOS? (@1001)",
+          "response": "2"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34937a-state-malformed-8",
+      "calls": [
+        {
+          "operation": "SwitchChannelIsClosed",
+          "arguments": {
+            "channel": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":ROUT:CLOS? (@1001)",
+          "response": "#11"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34937a-state-malformed-9",
+      "calls": [
+        {
+          "operation": "SwitchChannelIsClosed",
+          "arguments": {
+            "channel": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":ROUT:CLOS? (@1001)",
+          "response": "\uff11"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Parse"
+    },
+    {
+      "id": "keysight.34980a|E|34937a-SwitchCloseChannel-Transport",
+      "calls": [
+        {
+          "operation": "SwitchCloseChannel",
+          "arguments": {
+            "channel": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":ROUT:CLOS (@1001)",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34980a|E|34937a-SwitchCloseChannel-Timeout",
+      "calls": [
+        {
+          "operation": "SwitchCloseChannel",
+          "arguments": {
+            "channel": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":ROUT:CLOS (@1001)",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.34980a|E|34937a-SwitchOpenChannel-Transport",
+      "calls": [
+        {
+          "operation": "SwitchOpenChannel",
+          "arguments": {
+            "channel": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":ROUT:OPEN (@1001)",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34980a|E|34937a-SwitchOpenChannel-Timeout",
+      "calls": [
+        {
+          "operation": "SwitchOpenChannel",
+          "arguments": {
+            "channel": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":ROUT:OPEN (@1001)",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    },
+    {
+      "id": "keysight.34980a|E|34937a-SwitchChannelIsClosed-Transport",
+      "calls": [
+        {
+          "operation": "SwitchChannelIsClosed",
+          "arguments": {
+            "channel": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":ROUT:CLOS? (@1001)",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keysight.34980a|E|34937a-SwitchChannelIsClosed-Timeout",
+      "calls": [
+        {
+          "operation": "SwitchChannelIsClosed",
+          "arguments": {
+            "channel": 7
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":ROUT:CLOS? (@1001)",
+          "error": "Timeout"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Timeout"
+    }
+  ]
+}

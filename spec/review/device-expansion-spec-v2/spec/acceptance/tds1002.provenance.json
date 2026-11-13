@@ -1,0 +1,1791 @@
+{
+  "schemaVersion": 1,
+  "model": "TDS1002 (without A/B)",
+  "oracle": "tds1002.catalog-cases.json",
+  "oracleSha256": "7d715c1416e65ffe60ae273732985f090cb569a23fa24be4ee8f91f535491393",
+  "caseCount": 334,
+  "sourceManifest": "research/TDS1002-SOURCES.json",
+  "sourceManifestSha256": "7e1bbe5c5c540e4fe4258dba5143cc7d97822ecdb746fa83c20fe1c7a5804053",
+  "sources": [
+    {
+      "file": "TDS1002-programmer-071107504.pdf",
+      "sha256": "659af48133a18ed9e0d5c3d16d5657a291edb15b3f71f69848473e9496d9d028",
+      "bytes": 1042580,
+      "pages": 346,
+      "partNumber": "071-1075-04",
+      "edition": "Revision04; official landing release2006-10-04",
+      "sourceUrl": "https://download.tek.com/manual/071107504.pdf",
+      "officialLandingUrl": "https://www.tek.com/en/oscilloscope/tds210-manual/tds200-tds1000-tds2000-tds1000b-tds2000b-and-tps2000-programmer",
+      "applicability": "Primary qualifying programmer manual; cover and tables17/18/21 explicitly include non-BTDS1000 with communications module."
+    },
+    {
+      "file": "TDS1002-user-071106400.pdf",
+      "sha256": "4367b631e30b285bf3810b65df3bbf4a484ec8ebf9b1cbade60a7f03441a66f3",
+      "bytes": 1300897,
+      "pages": 206,
+      "partNumber": "071-1064-00",
+      "edition": "Revision00; cover FV:v1.00 and above",
+      "sourceUrl": "https://download.tek.com/manual/071106400.pdf",
+      "officialLandingUrl": "https://www.tek.com/en/oscilloscope/tds1002-manual/tds1000-and-tds2000-series-user-manual",
+      "applicability": "Own-model manual: product tablePDF20 explicitly names TDS1002; communicationschapterPDF145ff qualifies TDS2CMA; scalar own-model examplePDF165."
+    },
+    {
+      "file": "TDS1002-programmer-077044401.pdf",
+      "sha256": "e8f252e2709ff20f9593f90731851a5028946481a5553e4fed548364c52d9c71",
+      "bytes": 1806382,
+      "pages": 265,
+      "partNumber": "077-0444-01",
+      "edition": "Revision01; later corroborating manual, not required for initial qualifying commands",
+      "sourceUrl": "https://download.tek.com/manual/077044401web.pdf",
+      "officialLandingUrl": "https://www.tek.com/en/oscilloscope/tds1000-manual",
+      "applicability": "Later shared primary manual; use only own-applicable non-B sections, not B/C/TPS-only functions."
+    },
+    {
+      "file": "TDS1002-supplement-071185801.pdf",
+      "sha256": "2f314ea93a9e6a00ad15c7990eb038d7caf4329c946099207654e68c8144574f",
+      "bytes": 108504,
+      "pages": 8,
+      "partNumber": "071-1858-01",
+      "edition": "Revision01; user-manual specifications supplement",
+      "sourceUrl": "https://download.tek.com/manual/071185801.pdf",
+      "officialLandingUrl": "https://www.tek.com/en/oscilloscope/tds1002-manual/tds1000-and-tds2000-series-supplement",
+      "applicability": "Primary supplementary specification updates; no new interface assumption."
+    }
+  ],
+  "pageDomains": [
+    {
+      "partNumber": "071-1075-04",
+      "printedPages": [
+        "1-1",
+        "1-2",
+        "2-49",
+        "2-50",
+        "2-51",
+        "2-68",
+        "2-69",
+        "2-70",
+        "2-94",
+        "2-95",
+        "2-133",
+        "2-138",
+        "2-141",
+        "2-157",
+        "2-158",
+        "2-159",
+        "2-160",
+        "2-161",
+        "2-162",
+        "2-163",
+        "2-169",
+        "2-170",
+        "2-241",
+        "3-4",
+        "3-5",
+        "3-6",
+        "3-7",
+        "3-8",
+        "3-23",
+        "3-24"
+      ],
+      "facts": "Exact Tek roots, module/interface distinctions, probe/acquisition/format/unit domains, OPC and status/warning semantics."
+    },
+    {
+      "partNumber": "071-1064-00",
+      "printedPages": [
+        147,
+        153,
+        154,
+        155,
+        156
+      ],
+      "facts": "Own-TDS1002 source/PK2 example5.16E0, connected10X probe, voltage and main timebase ranges."
+    },
+    {
+      "partNumber": "077-0444-01",
+      "printedPages": [
+        "2-124"
+      ],
+      "pdfPages": [
+        140
+      ],
+      "facts": "Own-applicable explicit optional[1] source query grammar; no B-only MATH/SOURCE2 inference."
+    }
+  ],
+  "provenanceLimits": [
+    "All scripts and negative/error/state fixtures are software synthetic, not observed bench transcripts.",
+    "5.16E0 and28.75E6 values are published manual examples; incorporating them in a scripted new-acquisition sequence does not imply that exact full sequence was printed or executed on hardware.",
+    "Page lists support protocol domains, not a claim malformed bodies or every argument policy are manufacturer fixtures."
+  ],
+  "cases": [
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-0",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-1",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-2",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-3",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-4",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-5",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-6",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-7",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-8",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-9",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-10",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-11",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-12",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-13",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-14",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-15",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-16",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-17",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-18",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-19",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-20",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-21",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-22",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-23",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-24",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-25",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-26",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-27",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-28",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-29",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-nominal-30",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-read-minimum",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-read-ordinary",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-read-maximum",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-1-scale-2mv",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-1-scale-5mv",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-1-scale-10mv",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-1-scale-20mv",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-1-scale-50mv",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-1-scale-100mv",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-1-scale-200mv",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-1-scale-500mv",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-1-scale-1000mv",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-1-scale-2000mv",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-1-scale-5000mv",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-1-display-False",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-1-display-True",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-1-coupling-AC",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-1-coupling-DC",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-1-coupling-GND",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-1-fresh-Vpp",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-1-fresh-Frequency",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-2-scale-2mv",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-2-scale-5mv",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-2-scale-10mv",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-2-scale-20mv",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-2-scale-50mv",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-2-scale-100mv",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-2-scale-200mv",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-2-scale-500mv",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-2-scale-1000mv",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-2-scale-2000mv",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-2-scale-5000mv",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-2-display-False",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-2-display-True",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-2-coupling-AC",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-2-coupling-DC",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-2-coupling-GND",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-2-fresh-Vpp",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|channel-2-fresh-Frequency",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|acquisition-Run",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|acquisition-Stop",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|acquisition-Single",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|repeat-measurements-are-fresh",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|single-is-start-only-then-fresh-restart",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|invalid-timebase-0",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|invalid-timebase--1",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|invalid-timebase-4.999e-09",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|invalid-timebase-50.0001",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|invalid-timebase-1.0000000000000002e-06",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeSetChannelScale-invalid-channel-0",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeSetChannelDisplay-invalid-channel-0",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeSetChannelCoupling-invalid-channel-0",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeMeasureVpp-invalid-channel-0",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeMeasureFrequency-invalid-channel-0",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeSetChannelScale-invalid-channel-3",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeSetChannelDisplay-invalid-channel-3",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeSetChannelCoupling-invalid-channel-3",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeMeasureVpp-invalid-channel-3",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeMeasureFrequency-invalid-channel-3",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeSetChannelScale-invalid-channel-4294967295",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeSetChannelDisplay-invalid-channel-4294967295",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeSetChannelCoupling-invalid-channel-4294967295",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeMeasureVpp-invalid-channel-4294967295",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeMeasureFrequency-invalid-channel-4294967295",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|invalid-channel-1-scale-0",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|invalid-channel-1-scale-1",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|invalid-channel-1-scale-2",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|invalid-channel-1-scale-3",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|invalid-channel-1-scale-4",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|invalid-channel-2-scale-0",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|invalid-channel-2-scale-1",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|invalid-channel-2-scale-2",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|invalid-channel-2-scale-3",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|invalid-channel-2-scale-4",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|invalid-coupling-ac",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|invalid-coupling-Ac",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|invalid-coupling-GROUND",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|invalid-coupling-DCX",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|invalid-coupling-1",
+      "classification": "synthetic API-domain rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|deferred-operation-0",
+      "classification": "explicitly deferred capability policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|deferred-operation-1",
+      "classification": "explicitly deferred capability policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|deferred-operation-2",
+      "classification": "explicitly deferred capability policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|deferred-operation-3",
+      "classification": "explicitly deferred capability policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|dese-reject-0",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|dese-reject-1",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|dese-reject-2",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|dese-reject-3",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|dese-reject-4",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|dese-reject-5",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|dese-reject-6",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|dese-reject-7",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|pre-esr-command-error",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|pre-esr-execution-warning",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|pre-esr-power-on",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|pre-esr-malformed-0",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|pre-esr-malformed-1",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|pre-esr-malformed-2",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|pre-esr-malformed-3",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|pre-esr-malformed-4",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|pre-esr-malformed-5",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|signed-register-nr1",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|post-esr-warning",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|post-esr-ignored-set-trigger-view",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|post-esr-command-error",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-4-0",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-4-1",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-4-2",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-5-0",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-5-1",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-6-0",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-6-1",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-7-0",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-7-1",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-8-0",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-8-1",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-11-0",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-11-1",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-11-2",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-13-0",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-13-1",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-15-0",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-15-1",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-16-0",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-16-1",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-17-0",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-17-1",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-17-2",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-17-3",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-20-0",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-20-1",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-21-0",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-21-1",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-21-2",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-22-0",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-22-1",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-22-2",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|measure-guard-22-3",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-scalar-ordinary",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-scalar-lower-e",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-scalar-signed",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-scalar-leading-zeros",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-zero",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-scalar-reject-invalid-sentinel",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-scalar-reject-negative",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-scalar-reject-negative-sentinel",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-scalar-reject-giant",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-scalar-reject-plain-decimal",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-scalar-reject-leading-space",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-scalar-reject-trailing-space",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-scalar-reject-missing-leading",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-scalar-reject-missing-fraction",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-scalar-reject-csv",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-scalar-reject-header",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-scalar-reject-binary",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-scalar-reject-nan",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-scalar-reject-infinity",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-scalar-reject-overflow",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-scalar-reject-underflow",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-scalar-ordinary",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-scalar-lower-e",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-scalar-signed",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-scalar-leading-zeros",
+      "classification": "manual-derived synthetic control/result case",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-zero",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-scalar-reject-invalid-sentinel",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-scalar-reject-negative",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-scalar-reject-negative-sentinel",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-scalar-reject-giant",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-scalar-reject-plain-decimal",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-scalar-reject-leading-space",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-scalar-reject-trailing-space",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-scalar-reject-missing-leading",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-scalar-reject-missing-fraction",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-scalar-reject-csv",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-scalar-reject-header",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-scalar-reject-binary",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-scalar-reject-nan",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-scalar-reject-infinity",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-scalar-reject-overflow",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-scalar-reject-underflow",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-read-reject-4-210",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-read-reject-5-211",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-read-reject-5-212",
+      "classification": "manual domain/status/sentinel with synthetic device-state rejection",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-read-reject-5-213",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-read-reject-5-214",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|timebase-read-reject-5-215",
+      "classification": "synthetic strict parser rejection policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-0-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-0-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-1-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-1-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-2-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-2-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-3-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-3-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-4-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-4-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-5-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-5-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-6-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-6-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-7-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-7-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-8-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-8-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-9-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-9-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-10-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-10-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-11-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-11-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-12-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-12-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-13-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-13-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-14-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-14-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-15-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-15-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-16-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-16-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-17-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-17-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-18-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-18-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-19-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-19-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-20-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-20-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-21-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-21-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-22-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-22-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-23-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-23-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-24-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Vpp-failure-step-24-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-0-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-0-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-1-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-1-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-2-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-2-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-3-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-3-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-4-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-4-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-5-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-5-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-6-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-6-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-7-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-7-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-8-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-8-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-9-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-9-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-10-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-10-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-11-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-11-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-12-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-12-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-13-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-13-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-14-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-14-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-15-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-15-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-16-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-16-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-17-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-17-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-18-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-18-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-19-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-19-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-20-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-20-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-21-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-21-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-22-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-22-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-23-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-23-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-24-Transport",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|Frequency-failure-step-24-Timeout",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeSetTimebaseScale-action-failure-4",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeSetTimebaseScale-action-failure-5",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeSetTimebaseScale-action-failure-6",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeSetChannelScale-action-failure-4",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeSetChannelScale-action-failure-5",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeSetChannelScale-action-failure-6",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeSetChannelDisplay-action-failure-4",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeSetChannelDisplay-action-failure-5",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeSetChannelCoupling-action-failure-4",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeSetChannelCoupling-action-failure-5",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeRun-action-failure-4",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeRun-action-failure-5",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeRun-action-failure-6",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeStop-action-failure-4",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeStop-action-failure-5",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeSingle-action-failure-4",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeSingle-action-failure-5",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    },
+    {
+      "id": "tektronix.tds1002|E|OscilloscopeSingle-action-failure-6",
+      "classification": "synthetic injected host IO error policy",
+      "observedHardware": false
+    }
+  ]
+}

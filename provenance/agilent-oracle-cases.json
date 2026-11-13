@@ -1,0 +1,2770 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Independent source/software-policy index; no record is an observed hardware transcript. Page lists describe supporting domains, not a claim every malformed input is in the manual.",
+  "items": [
+    {
+      "model": "34401a",
+      "oracle": "34401a.catalog-cases.json",
+      "oracleSha256": "25fcc91db91dc2a7561c34fc2166587478f5a5085e27bce3c41b236843354a4d",
+      "source": {
+        "file": "34401A-user.pdf",
+        "sha256": "ea7ec922d14aafce23ec7058e37bcf0ccd192423f70d75ccdf6350382ae3b419",
+        "partNumber": "34401-90004",
+        "sourceUrl": "https://www.keysight.com/content/dam/keysight/en/doc/gate/user-manuals/9018-01063.pdf"
+      },
+      "pages": [
+        112,
+        113,
+        114,
+        117,
+        118,
+        159
+      ],
+      "facts": [
+        "MEAS grammar/preset single read",
+        "fixed scalar format and positive overload"
+      ],
+      "caseCount": 69,
+      "cases": [
+        {
+          "id": "keysight.34401a|E|VoltageDc-auto",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|VoltageDc-maximum-range",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|VoltageDc-non-nominal-range",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|VoltageDc-overload",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|VoltageDc-range-zero",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|VoltageDc-range-negative",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|VoltageDc-range-above-max",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|VoltageAc-auto",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|VoltageAc-maximum-range",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|VoltageAc-non-nominal-range",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|VoltageAc-overload",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|VoltageAc-range-zero",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|VoltageAc-range-negative",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|VoltageAc-range-above-max",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|CurrentDc-auto",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|CurrentDc-maximum-range",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|CurrentDc-non-nominal-range",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|CurrentDc-overload",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|CurrentDc-range-zero",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|CurrentDc-range-negative",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|CurrentDc-range-above-max",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|CurrentAc-auto",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|CurrentAc-maximum-range",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|CurrentAc-non-nominal-range",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|CurrentAc-overload",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|CurrentAc-range-zero",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|CurrentAc-range-negative",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|CurrentAc-range-above-max",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|Resistance-auto",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|Resistance-maximum-range",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|Resistance-non-nominal-range",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|Resistance-overload",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|Resistance-range-zero",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|Resistance-range-negative",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|Resistance-range-above-max",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|Resistance2Wire-auto",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|Resistance2Wire-maximum-range",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|Resistance2Wire-non-nominal-range",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|Resistance2Wire-overload",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|Resistance2Wire-range-zero",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|Resistance2Wire-range-negative",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|Resistance2Wire-range-above-max",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|Resistance4Wire-auto",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|Resistance4Wire-maximum-range",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|Resistance4Wire-non-nominal-range",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|Resistance4Wire-overload",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|Resistance4Wire-range-zero",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|Resistance4Wire-range-negative",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|Resistance4Wire-range-above-max",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|negative",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|zero",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|negative-zero",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|exponent",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|reject-short",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|reject-unsigned",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|reject-small-exponent",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|reject-lower-e",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|reject-wrong-decimal",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|reject-leading-space",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|reject-trailing-space",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|reject-csv",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|reject-negative-sentinel",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|reject-giant",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|reject-nan",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|reject-infinity",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|reject-binary",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|reject-control",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34401a|E|timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        }
+      ]
+    },
+    {
+      "model": "33120a",
+      "oracle": "33120a-v2.catalog-cases.json",
+      "oracleSha256": "3480025979cb23bb6b1eeddcd8338aeda8b17059be8d6088e6faba7a17f2fc13",
+      "source": {
+        "file": "33120A-user.pdf",
+        "sha256": "3dd6d075bd05cc8efb86846b826656ba3548aba8c621b7045fb1c3a2a167d668",
+        "partNumber": "33120-90006",
+        "sourceUrl": "https://www.keysight.com/content/dam/keysight/en/doc/gate/user-manuals/9018-04436.pdf"
+      },
+      "pages": [
+        57,
+        59,
+        62,
+        64,
+        65,
+        128,
+        129,
+        130,
+        131,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151
+      ],
+      "facts": [
+        "own-model no-SOUR commands",
+        "continuous sine guard tokens and paired voltage policies",
+        "high impedance numeric sentinel"
+      ],
+      "caseCount": 67,
+      "cases": [
+        {
+          "id": "keysight.33120a|E|frequency-0.0001",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|frequency-1000",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|frequency-15000000",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|amplitude-0.05",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|amplitude-2",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|amplitude-10",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|offset--4",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|offset-0",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|offset-4",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|read-frequency",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|FunctionGeneratorSetFrequency-invalid-0",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|FunctionGeneratorSetFrequency-invalid-1",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|FunctionGeneratorSetFrequency-invalid-2",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|FunctionGeneratorSetFrequency-invalid-3",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|FunctionGeneratorSetAmplitude-invalid-0",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|FunctionGeneratorSetAmplitude-invalid-1",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|FunctionGeneratorSetAmplitude-invalid-2",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|FunctionGeneratorSetAmplitude-invalid-3",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|FunctionGeneratorSetOffset-invalid-0",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|FunctionGeneratorSetOffset-invalid-1",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|guard-0-SQU",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|guard-0-PULS",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|guard-1-+1.000000E+06",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|guard-1-0",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|guard-2-VRMS",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|guard-2-VOLTS",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|guard-3-1",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|guard-4-1",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|guard-5-1",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|guard-6-1",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|guard-7-1",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|guard-3-ON",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|guard-4-ON",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|guard-5-ON",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|guard-6-ON",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|guard-7-ON",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|coupled-amplitude-rail",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|coupled-offset-small-amplitude",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|coupled-rounded-wire-rail",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|read-reject-negative",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|read-reject-zero",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|read-reject-above-max",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|read-reject-giant",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|read-reject-csv",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|read-reject-leading-space",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|read-reject-trailing-space",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|read-reject-nan",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|read-reject-missing-fraction",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|failure-step-0-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|failure-step-0-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|failure-step-1-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|failure-step-1-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|failure-step-2-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|failure-step-2-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|failure-step-3-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|failure-step-3-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|failure-step-4-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|failure-step-4-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|failure-step-5-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|failure-step-5-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|failure-step-6-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|failure-step-6-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|failure-step-7-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|failure-step-7-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|failure-step-8-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|failure-step-8-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.33120a|E|guard-load-high-impedance-sentinel",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        }
+      ]
+    },
+    {
+      "model": "53132a",
+      "oracle": "53132a.catalog-cases.json",
+      "oracleSha256": "7371322c6497bbe1b027ab14c7cfad8aab50d8f78d69e874afd2e8656f6e8e0f",
+      "source": {
+        "file": "53132A-programming.pdf",
+        "sha256": "43b7e12210c503c59acdfea728bafdf66e4c5f284009b6470ee8264b593aa703",
+        "partNumber": "53131-90044",
+        "sourceUrl": "https://www.keysight.com/content/dam/keysight/en/doc/gate/programming-guides/9018-01066.pdf"
+      },
+      "pages": [
+        "4-41",
+        "4-53",
+        "4-54",
+        "4-57",
+        "4-58",
+        "4-63",
+        "4-64",
+        "4-68",
+        "4-69",
+        "4-87"
+      ],
+      "facts": [
+        "CONFIG defaults and explicit source list",
+        "time arm and READ fresh acquisition",
+        "NR3 and invalid-result sentinel"
+      ],
+      "caseCount": 50,
+      "cases": [
+        {
+          "id": "keysight.53132a|E|Frequency-channel-1",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|Period-channel-1",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|Frequency-channel-2",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|Period-channel-2",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|gate-0.001",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|gate-0.029",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|gate-0.100",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|gate-1000.000",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|switch-intent-and-repeat",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|invalid-gate-zero",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|invalid-gate-negative",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|invalid-gate-too-small",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|invalid-gate-off-grid",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|invalid-gate-too-large",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|invalid-channel-0",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|invalid-channel-3",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|invalid-channel-4294967295",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|parse-one-digit",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|parse-unsigned",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|parse-lower-e",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|parse-max-significant",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|parse-leading-zeros",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|reject-nan-sentinel",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|reject-zero",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|reject-negative",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|reject-underflow",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|reject-no-exponent",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|reject-sixteen-significant",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|reject-leading-space",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|reject-trailing-space",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|reject-no-frac",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|reject-no-leading",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|reject-unit",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|reject-csv",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|reject-nan",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|reject-infinity",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|reject-overflow",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|reject-binary",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|failure-step-0-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|failure-step-0-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|failure-step-1-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|failure-step-1-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|failure-step-2-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|failure-step-2-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|failure-step-3-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|failure-step-3-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|failure-step-4-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|failure-step-4-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|failure-step-5-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.53132a|E|failure-step-5-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        }
+      ]
+    },
+    {
+      "model": "34980a",
+      "oracle": "34980a.catalog-cases.json",
+      "oracleSha256": "7684962def9851c5703a11c5c166ef732f359d39cdb0c0b27ff8fd1eee78e350",
+      "source": {
+        "file": "34980A-programming.pdf",
+        "sha256": "60677f5cfc8c2d9339d8b1a871e168fab39256c6da34fee0ffa8cf276c75ac69",
+        "partNumber": "9018-61230",
+        "sourceUrl": "https://www.keysight.com/us/en/assets/9018-61230/programming-guides/9018-61230.pdf?success=true"
+      },
+      "pages": [
+        160,
+        161,
+        175,
+        176,
+        181,
+        183,
+        184,
+        568,
+        569,
+        596,
+        597,
+        756,
+        757,
+        759,
+        769,
+        773,
+        774
+      ],
+      "facts": [
+        "parent composition/shared lease",
+        "module-specific own-manual commands and return formats"
+      ],
+      "caseCount": 7,
+      "cases": [
+        {
+          "id": "keysight.34980a|E|34980a-invalid-SwitchCloseChannel-0",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34980a-invalid-SwitchCloseChannel-999",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34980a-invalid-SwitchOpenChannel-0",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34980a-invalid-SwitchOpenChannel-999",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34980a-invalid-SwitchChannelIsClosed-0",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34980a-invalid-SwitchChannelIsClosed-999",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34980a-shared-module-views",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        }
+      ]
+    },
+    {
+      "model": "34937a",
+      "oracle": "34937a.catalog-cases.json",
+      "oracleSha256": "8d211f0c7700ec6738f49c4b4f13f4dc6fa6420cf122a85f53c940e8e7c8b45c",
+      "source": {
+        "file": "34937A-user.pdf",
+        "sha256": "e96211bb871177b4d9e569e524529ce0b82569e0457decdf7f4e0f58191da926",
+        "partNumber": "34980-90037",
+        "sourceUrl": "https://www.keysight.com/content/dam/keysight/en/doc/gate/user-manuals/9018-02150.pdf"
+      },
+      "pages": [
+        15,
+        20
+      ],
+      "facts": [
+        "FormC and FormA mapping",
+        "ROUT switching grammar"
+      ],
+      "caseCount": 32,
+      "cases": [
+        {
+          "id": "keysight.34980a|E|34937a-SwitchCloseChannel-7",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-SwitchOpenChannel-7",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-state-7-False",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-state-7-True",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-SwitchCloseChannel-13",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-SwitchOpenChannel-13",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-state-13-False",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-state-13-True",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-SwitchCloseChannel-29",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-SwitchOpenChannel-29",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-state-29-False",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-state-29-True",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-SwitchCloseChannel-61",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-SwitchOpenChannel-61",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-state-61-False",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-state-61-True",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-state-malformed-0",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-state-malformed-1",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-state-malformed-2",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-state-malformed-3",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-state-malformed-4",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-state-malformed-5",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-state-malformed-6",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-state-malformed-7",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-state-malformed-8",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-state-malformed-9",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-SwitchCloseChannel-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-SwitchCloseChannel-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-SwitchOpenChannel-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-SwitchOpenChannel-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-SwitchChannelIsClosed-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34937a-SwitchChannelIsClosed-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        }
+      ]
+    },
+    {
+      "model": "34922a",
+      "oracle": "34922a.catalog-cases.json",
+      "oracleSha256": "76ebef1cd70b9f86b39120b7e6052da0ca3f8057df4e06706149816d0641afba",
+      "source": {
+        "file": "34922A-user.pdf",
+        "sha256": "dcbfa4cac94b638ee737d75788f868536a61bdd7d6fd54178c4560c9ef75477b",
+        "partNumber": "34980-90021",
+        "sourceUrl": "https://www.keysight.com/content/dam/keysight/en/doc/gate/user-manuals/9018-02147.pdf"
+      },
+      "pages": [
+        21,
+        22,
+        34,
+        35
+      ],
+      "facts": [
+        "two35 latching bank mapping",
+        "direct nonexclusive ROUT switching"
+      ],
+      "caseCount": 33,
+      "cases": [
+        {
+          "id": "keysight.34980a|E|34922a-SwitchCloseChannel-101",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-SwitchOpenChannel-101",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-state-101-False",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-state-101-True",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-SwitchCloseChannel-135",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-SwitchOpenChannel-135",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-state-135-False",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-state-135-True",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-SwitchCloseChannel-136",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-SwitchOpenChannel-136",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-state-136-False",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-state-136-True",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-SwitchCloseChannel-170",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-SwitchOpenChannel-170",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-state-170-False",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-state-170-True",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-state-malformed-0",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-state-malformed-1",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-state-malformed-2",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-state-malformed-3",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-state-malformed-4",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-state-malformed-5",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-state-malformed-6",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-state-malformed-7",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-state-malformed-8",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-state-malformed-9",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-SwitchCloseChannel-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-SwitchCloseChannel-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-SwitchOpenChannel-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-SwitchOpenChannel-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-SwitchChannelIsClosed-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-SwitchChannelIsClosed-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34922a-same-bank-nonexclusive",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        }
+      ]
+    },
+    {
+      "model": "34950a",
+      "oracle": "34950a.catalog-cases.json",
+      "oracleSha256": "757e03356aeb61094497109f31ceff6bc32a86975cafe0e456b0d33409cff2dc",
+      "source": {
+        "file": "34980A-programming.pdf",
+        "sha256": "60677f5cfc8c2d9339d8b1a871e168fab39256c6da34fee0ffa8cf276c75ac69",
+        "partNumber": "9018-61230",
+        "sourceUrl": "https://www.keysight.com/us/en/assets/9018-61230/programming-guides/9018-61230.pdf?success=true"
+      },
+      "pages": [
+        160,
+        161,
+        175,
+        176,
+        181,
+        183,
+        184,
+        568,
+        569,
+        596,
+        597,
+        756,
+        757,
+        759,
+        769,
+        773,
+        774
+      ],
+      "facts": [
+        "all-bank BYTE/direction/polarity/handshake/memory guards",
+        "input threshold/output drive and level guards",
+        "sample input vs output latch distinction"
+      ],
+      "caseCount": 123,
+      "cases": [
+        {
+          "id": "keysight.34980a|E|34950a-read-7-0",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-read-7-165",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-read-7-255",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-read-7-007",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-read-29-0",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-read-29-165",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-read-29-255",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-read-29-007",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-write-13-0",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-write-13-165",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-write-13-255",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-write-61-0",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-write-61-165",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-write-61-255",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-invalid-read-port-0",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-invalid-read-port-8",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-invalid-read-port-13",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-invalid-read-port-61",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-invalid-write-port-0",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-invalid-write-port-8",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-invalid-write-port-7",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-invalid-write-port-29",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-invalid-byte-256",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-invalid-byte-4294967295",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-invalid-byte-body-0",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-invalid-byte-body-1",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-invalid-byte-body-2",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-invalid-byte-body-3",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-invalid-byte-body-4",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-invalid-byte-body-5",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-invalid-byte-body-6",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-invalid-byte-body-7",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-invalid-byte-body-8",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-invalid-byte-body-9",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-invalid-byte-body-10",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-invalid-byte-body-11",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-invalid-byte-body-12",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-guard-0-0",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-guard-0-1",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-guard-0-2",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-guard-1-0",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-guard-2-0",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-guard-3-0",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-guard-4-0",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-guard-4-1",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-guard-5-0",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-guard-5-1",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-guard-6-0",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-guard-6-1",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-guard-6-2",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-guard-7-0",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-guard-7-1",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-guard-8-0",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-guard-8-1",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-guard-9-0",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-guard-9-1",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-failure-step-0-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-failure-step-0-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-failure-step-1-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-failure-step-1-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-failure-step-2-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-failure-step-2-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-failure-step-3-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-failure-step-3-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-failure-step-4-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-failure-step-4-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-failure-step-5-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-failure-step-5-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-failure-step-6-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-failure-step-6-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-failure-step-7-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-failure-step-7-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-failure-step-8-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-failure-step-8-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-failure-step-9-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-failure-step-9-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-failure-step-10-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Input-failure-step-10-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-guard-0-0",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-guard-0-1",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-guard-0-2",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-guard-1-0",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-guard-2-0",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-guard-3-0",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-guard-4-0",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-guard-4-1",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-guard-5-0",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-guard-5-1",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-guard-6-0",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-guard-6-1",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-guard-6-2",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-guard-7-0",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-guard-7-1",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-guard-8-0",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-guard-8-1",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-guard-9-0",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-guard-9-1",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-guard-10-0",
+          "classification": "manual token/sentinel domain plus synthetic device-state rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-guard-10-1",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-failure-step-0-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-failure-step-0-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-failure-step-1-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-failure-step-1-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-failure-step-2-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-failure-step-2-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-failure-step-3-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-failure-step-3-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-failure-step-4-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-failure-step-4-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-failure-step-5-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-failure-step-5-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-failure-step-6-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-failure-step-6-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-failure-step-7-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-failure-step-7-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-failure-step-8-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-failure-step-8-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-failure-step-9-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-failure-step-9-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-failure-step-10-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-failure-step-10-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-failure-step-11-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.34980a|E|34950a-Output-failure-step-11-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        }
+      ]
+    },
+    {
+      "model": "hp3585b",
+      "oracle": "3585b.catalog-cases.json",
+      "oracleSha256": "6a132d6920b2a816db7d7e2e3b78942f22ad840eaa35af80dbff0a6dcbfa949c",
+      "source": {
+        "file": "3585B-operating.pdf",
+        "sha256": "ac28f40bf94e7ef6f411f616d014d487b1ae3bf2043c1595f756fa118feab009",
+        "partNumber": "03585-90017",
+        "sourceUrl": "https://www.keysight.com/content/dam/keysight/en/doc/gate/user-manuals/9018-05816.pdf"
+      },
+      "pages": [
+        "PDF174-177",
+        "PDF211-215",
+        "PDF221",
+        "PDF251",
+        "PDF268",
+        "PDF271-274",
+        "PDF277",
+        "PDF292"
+      ],
+      "facts": [
+        "native CF/FS/RB/VB/RL/SP control",
+        "fixed-field D2 diagrams and T6 selected-marker freshness",
+        "record bodies are synthetic diagram instantiations"
+      ],
+      "caseCount": 123,
+      "cases": [
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-1",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-10000000",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-40100000",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetSpan-1",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetSpan-5000",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetSpan-40100000",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-3",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-10",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-30",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-100",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-300",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-1000",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-3000",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-10000",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-30000",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-1",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-3",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-10",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-30",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-100",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-300",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-1000",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-3000",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-10000",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-30000",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|reference--70.0",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|reference--20.1",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|reference-0.0",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|reference-40.0",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-invalid-0",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-invalid-1",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-invalid-2",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-invalid-3",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetSpan-invalid-0",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetSpan-invalid-1",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetSpan-invalid-2",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetSpan-invalid-3",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-invalid-0",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-invalid-1",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-invalid-2",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-invalid-3",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-invalid-4",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-invalid-0",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-invalid-1",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-invalid-2",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-invalid-3",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|reference-invalid-0",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|reference-invalid-1",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|reference-invalid-2",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|reference-invalid-3",
+          "classification": "synthetic argument/inventory rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|stored-peak",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-X-ordinary",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-Y-ordinary",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-X-zero",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-Y-zero",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-X-upper",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-Y-upper",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-X-negative-zero",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-Y-negative-zero",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-X-full-digit-syntax",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-Y-full-digit-syntax",
+          "classification": "manual-derived synthetic command/result case",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-X-reject-short",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-Y-reject-short",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-X-reject-long",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-Y-reject-long",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-X-reject-trailing-frame",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-Y-reject-trailing-frame",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-X-reject-csv",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-Y-reject-csv",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-X-reject-leading-space",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-Y-reject-leading-space",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-X-reject-freq-no-sign",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-Y-reject-freq-no-sign",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-X-reject-freq-tab",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-Y-reject-freq-tab",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-X-reject-freq-internal-space",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-Y-reject-freq-internal-space",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-X-reject-freq-no-point",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-Y-reject-freq-no-point",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-X-reject-freq-negative",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-Y-reject-freq-negative",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-X-reject-freq-outside",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-Y-reject-freq-outside",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-X-reject-comma",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-Y-reject-comma",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-X-reject-amp-no-sign",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-Y-reject-amp-no-sign",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-X-reject-amp-internal-space",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-Y-reject-amp-internal-space",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-X-reject-amp-no-point",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-Y-reject-amp-no-point",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-X-reject-amp-lower-e",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-Y-reject-amp-lower-e",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-X-reject-amp-exponent",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-Y-reject-amp-exponent",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-X-reject-amp-positive-exp",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-Y-reject-amp-positive-exp",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-X-reject-unicode",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-Y-reject-unicode",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-X-reject-binary",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|marker-Y-reject-binary",
+          "classification": "synthetic parser rejection policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-failure-0-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetCenterFrequency-failure-0-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetSpan-failure-0-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetSpan-failure-0-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-failure-0-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRbw-failure-0-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-failure-0-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetVbw-failure-0-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRefLevel-failure-0-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerSetRefLevel-failure-0-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerMarkerPeak-failure-0-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerMarkerPeak-failure-0-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerMarkerPeak-failure-1-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerMarkerPeak-failure-1-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerMarkerX-failure-0-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerMarkerX-failure-0-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerMarkerX-failure-1-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerMarkerX-failure-1-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerMarkerY-failure-0-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerMarkerY-failure-0-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerMarkerY-failure-1-Transport",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        },
+        {
+          "id": "keysight.hp3585b|E|SpectrumAnalyzerMarkerY-failure-1-Timeout",
+          "classification": "synthetic injected host error/lifetime policy",
+          "observedHardware": false
+        }
+      ]
+    }
+  ]
+}
