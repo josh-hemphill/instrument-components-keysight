@@ -18,6 +18,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: python spec/acceptance/compose.py --check
+      - run: python validation/composition/test-qualification-logs.py
   # Keep workflow and SDK source pins on a merged core commit.
   sdk:
     uses: josh-hemphill/instrument-components/.github/workflows/driver-sdk.yml@4105d6659ad46b163ca9f252cc250b01fc5e0ba8

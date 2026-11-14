@@ -179,5 +179,11 @@
         "validation/rust/src/tds_proof.rs": "58fddd1a626664354f557ec08d820a0ed2632215b17e9747d1c0a2c379eb5228"
       }
     }
-  ]
+  ],
+  "qualificationHelpers": {
+    "repository": "josh-hemphill/instrument-components",
+    "previewHelperCommit": "52e8f118952f97cbac68cb180d1cc0e528484623",
+    "payloadCommit": "4105d6659ad46b163ca9f252cc250b01fc5e0ba8",
+    "loggerSha256": "a484e89c48f959bf3cdb30080cd1deb8c029942dfcf972b5a1129aca846863ac"
+  }
 }

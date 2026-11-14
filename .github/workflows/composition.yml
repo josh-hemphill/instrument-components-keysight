@@ -94,6 +94,16 @@ jobs:
           ref: 4105d6659ad46b163ca9f252cc250b01fc5e0ba8
           path: standards-bootstrap
           persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: josh-hemphill/instrument-components
+          ref: 52e8f118952f97cbac68cb180d1cc0e528484623
+          path: preview-helper
+          sparse-checkout: |
+            tools/validate-public-preview.py
+            tools/qualification_logs.py
+          sparse-checkout-cone-mode: false
+          persist-credentials: false
       - name: Execute current getting-started app and representative package-only upgrade
         shell: python
         env:
@@ -102,7 +112,7 @@ jobs:
         run: |
           import os,pathlib,subprocess,sys
           root=pathlib.Path(os.environ['RUNNER_TEMP'])
-          args=[sys.executable,'standards-bootstrap/tools/validate-public-preview.py','--output',str(root/'preview-proof'),'--framework',os.environ['PROOF_FRAMEWORK']]
+          args=[sys.executable,'preview-helper/tools/validate-public-preview.py','--source-root',str(pathlib.Path('standards-bootstrap').resolve()),'--output',str(root/'preview-proof'),'--framework',os.environ['PROOF_FRAMEWORK']]
           if os.environ['PUBLIC_REGISTRY']!='true':args+=['--feeds',str(root/'composition-proof/feeds')]
           if os.name!='nt' and os.environ['PROOF_FRAMEWORK']=='net8.0':args+=['--upgrade-from','0.2.0-alpha.1']
           subprocess.run(args,check=True)
