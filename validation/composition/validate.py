@@ -52,7 +52,8 @@ def main():
  if platform.system() not in ['Linux','Windows'] or platform.machine().lower() not in ['x86_64','amd64']:raise ValueError('Native x64 Linux/Windows required')
  out.mkdir(parents=True,exist_ok=True);feed=prepare(a.sdk_artifacts,out/'feeds');lock=json.loads((ROOT/'composition-lock.json').read_text(encoding='utf-8'))
  helpers=lock['qualificationHelpers']
- if helpers['payloadCommit']!=lock['sdkCommit'] or source_sha(ROOT/'qualification_logs.py')!=helpers['loggerSha256']:raise ValueError('Qualification helper/payload/logger lock mismatch');inputs=[]
+ if helpers['payloadCommit']!=lock['sdkCommit'] or source_sha(ROOT/'qualification_logs.py')!=helpers['loggerSha256']:raise ValueError('Qualification helper/payload/logger lock mismatch')
+ inputs=[]
  if not a.development_inputs:
   provenance=json.loads((a.driver_artifacts/'verified-inputs.json').read_text(encoding='utf-8'))
   if provenance['lockSha256']!=sha(ROOT/'composition-lock.json'):raise ValueError('Input lock mismatch')
