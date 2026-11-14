@@ -94,15 +94,33 @@ jobs:
           ref: 4105d6659ad46b163ca9f252cc250b01fc5e0ba8
           path: standards-bootstrap
           persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: josh-hemphill/instrument-components
+          ref: f9ec63cc0b144d29e3650438dd55c2994c142f42
+          path: preview-helper
+          sparse-checkout: |
+            .gitignore
+            tools/validate-public-preview.py
+            tools/qualification_logs.py
+          sparse-checkout-cone-mode: false
+          persist-credentials: false
       - name: Execute current getting-started app and representative package-only upgrade
         shell: python
         env:
+          PYTHONDONTWRITEBYTECODE: '1'
           PROOF_FRAMEWORK: ${{ matrix.framework }}
           PUBLIC_REGISTRY: ${{ inputs.public_registry || false }}
         run: |
           import os,pathlib,subprocess,sys
           root=pathlib.Path(os.environ['RUNNER_TEMP'])
-          args=[sys.executable,'standards-bootstrap/tools/validate-public-preview.py','--output',str(root/'preview-proof'),'--framework',os.environ['PROOF_FRAMEWORK']]
+          import json,hashlib
+          helpers=json.loads(pathlib.Path('validation/composition/composition-lock.json').read_text(encoding='utf-8'))['qualificationHelpers']
+          for directory,key in [('standards-bootstrap','payloadCommit'),('preview-helper','previewHelperCommit')]:
+              if subprocess.check_output(['git','rev-parse','HEAD'],cwd=directory,text=True).strip()!=helpers[key]:raise ValueError('Preview source/helper commit mismatch')
+          for path in ['preview-helper/tools/qualification_logs.py','validation/composition/qualification_logs.py']:
+              if hashlib.sha256(pathlib.Path(path).read_bytes().replace(b'\r\n',b'\n')).hexdigest()!=helpers['loggerSha256']:raise ValueError('Qualification logger differs from lock')
+          args=[sys.executable,'preview-helper/tools/validate-public-preview.py','--source-root',str(pathlib.Path('standards-bootstrap').resolve()),'--output',str(root/'preview-proof'),'--framework',os.environ['PROOF_FRAMEWORK']]
           if os.environ['PUBLIC_REGISTRY']!='true':args+=['--feeds',str(root/'composition-proof/feeds')]
           if os.name!='nt' and os.environ['PROOF_FRAMEWORK']=='net8.0':args+=['--upgrade-from','0.2.0-alpha.1']
           subprocess.run(args,check=True)

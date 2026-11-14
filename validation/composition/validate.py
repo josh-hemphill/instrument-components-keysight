@@ -9,6 +9,7 @@ import argparse,hashlib,json,os,platform,re,shutil,struct,subprocess,tomllib,zip
 from pathlib import Path
 import xml.etree.ElementTree as ET
 from instrument_driver_tools.feeds import prepare,extract,VERSION
+from qualification_logs import execute_logged
 ROOT=Path(__file__).resolve().parent
 VENDORS=['keysight','keithley','rigol','siglent','tektronix']
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -49,7 +50,10 @@ def main():
  if out==ROOT or ROOT in out.parents or out in ROOT.parents:raise ValueError('Separate output directory required')
  if out.exists() and any(out.iterdir()):raise ValueError('Empty output directory required')
  if platform.system() not in ['Linux','Windows'] or platform.machine().lower() not in ['x86_64','amd64']:raise ValueError('Native x64 Linux/Windows required')
- out.mkdir(parents=True,exist_ok=True);feed=prepare(a.sdk_artifacts,out/'feeds');lock=json.loads((ROOT/'composition-lock.json').read_text(encoding='utf-8'));inputs=[]
+ out.mkdir(parents=True,exist_ok=True);feed=prepare(a.sdk_artifacts,out/'feeds');lock=json.loads((ROOT/'composition-lock.json').read_text(encoding='utf-8'))
+ helpers=lock['qualificationHelpers']
+ if helpers['payloadCommit']!=lock['sdkCommit'] or source_sha(ROOT/'qualification_logs.py')!=helpers['loggerSha256']:raise ValueError('Qualification helper/payload/logger lock mismatch')
+ inputs=[]
  if not a.development_inputs:
   provenance=json.loads((a.driver_artifacts/'verified-inputs.json').read_text(encoding='utf-8'))
   if provenance['lockSha256']!=sha(ROOT/'composition-lock.json'):raise ValueError('Input lock mismatch')
@@ -106,15 +110,16 @@ def main():
  if a.public_registry:
   configure_public_registry(env,out,dotnet)
  cargoOffline=[] if a.public_registry else ['--offline']
- def run(name,cmd,cwd=out,negative=False):
-  print(name,flush=True);log=out/(name+'.log')
-  with log.open('w', encoding='utf-8') as stream:r=subprocess.run(list(map(str,cmd)),cwd=cwd,env=env,stdout=stream,stderr=subprocess.STDOUT)
-  text=log.read_text(errors='replace', encoding='utf-8');records.append(dict(name=name,command=list(map(str,cmd)),exitCode=r.returncode,expectedFailure=negative,log=log.name,sha256=sha(log)));(out/'execution.json').write_text(json.dumps(records,indent=2)+'\n', encoding='utf-8')
-  if (r.returncode==0 or any(not re.search(r'\berror '+diagnostic+r'\b',text) for diagnostic in ['IL2026','IL3050'])) if negative else (r.returncode!=0 or re.search(r'\bwarning IL\d+\b',text,re.I)):raise ValueError(name+' failed:\n'+text[-10000:])
+ def run(name,cmd,cwd=out,negative=False,structured_output=False):
+  print(name,flush=True);phase=execute_logged(name,cmd,cwd=cwd,env=env,output=out,structured_output=structured_output);phase['expectedFailure']=negative
+  text=(out/phase['log']).read_text(errors='replace',encoding='utf-8');diagnostic=(out/phase['stderrLog']).read_text(errors='replace',encoding='utf-8') if 'stderrLog' in phase else '';combined=text+diagnostic
+  records.append(phase);(out/'execution.json').write_text(json.dumps(records,indent=2)+'\n',encoding='utf-8')
+  if (phase['exitCode']==0 or any(not re.search(r'\berror '+code+r'\b',combined) for code in ['IL2026','IL3050'])) if negative else (phase['exitCode']!=0 or re.search(r'\bwarning IL\d+\b',combined,re.I)):raise ValueError(name+' failed:\n'+combined[-10000:])
   return text
+
  for feature in [[],['--features','async']]:
   tag='async' if feature else 'default';run('rust-'+tag,['cargo','run']+cargoOffline+['--release']+feature,rust);run('rust-'+tag+'-clippy',['cargo','clippy']+cargoOffline+['--release']+feature+['--','-D','warnings'],rust)
-  metadata=json.loads(run('rust-'+tag+'-metadata',['cargo','metadata']+cargoOffline+['--format-version','1']+feature,rust))
+  metadata=json.loads(run('rust-'+tag+'-metadata',['cargo','metadata']+cargoOffline+['--format-version','1']+feature,rust,structured_output=True))
   if any(p['name'] in names and not (p.get('source') or '').startswith('registry+') for p in metadata['packages']):raise ValueError('Source implementation leaked into app')
  if a.public_registry:
   lockData=tomllib.loads((rust/'Cargo.lock').read_text(encoding='utf-8'))
@@ -160,6 +165,6 @@ def main():
  with (dotnet/'Program.cs').open('a', encoding='utf-8') as stream:stream.write('\ninternal static class WarningProbe{[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("intentional gate")][System.Diagnostics.CodeAnalysis.RequiresDynamicCode("intentional AOT gate")]internal static void Trigger(){} internal static void Run()=>Trigger();}\n')
  path=dotnet/'Program.cs';path.write_text(path.read_text(encoding='utf-8').replace('await Composition.Run();','WarningProbe.Run();await Composition.Run();'), encoding='utf-8');negativePublish=list(publish);negativePublish[negativePublish.index('-o')+1]=out/'warning-native';run('negative-native-warning',negativePublish,dotnet,negative=True)
  if sha(binary)!=executedBinarySha256:raise ValueError('Negative probe changed executed binary')
- (out/'composition.json').write_text(json.dumps(dict(mode='public-registry' if a.public_registry else 'local-bootstrap-development' if a.development_inputs else 'pinned-ci-artifact-bootstrap',lockSha256=sha(ROOT/'composition-lock.json'),rid=rid,framework=a.framework,nativeExecuted=True,sha256=executedBinarySha256,referenceArtifactInputs=inputs,consumedPublicPackages=publicPackages,sdkArtifactHashes=feed['packages'],consumerFiles=consumerFiles,negativeProbeProgramSha256=sha(dotnet/'Program.cs'),hardwareValidated=False),indent=2)+'\n', encoding='utf-8')
+ (out/'composition.json').write_text(json.dumps(dict(helperSourceCommit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(), loggerSha256=sha(ROOT/'qualification_logs.py'), mode='public-registry' if a.public_registry else 'local-bootstrap-development' if a.development_inputs else 'pinned-ci-artifact-bootstrap',lockSha256=sha(ROOT/'composition-lock.json'),rid=rid,framework=a.framework,nativeExecuted=True,sha256=executedBinarySha256,referenceArtifactInputs=inputs,consumedPublicPackages=publicPackages,sdkArtifactHashes=feed['packages'],consumerFiles=consumerFiles,negativeProbeProgramSha256=sha(dotnet/'Program.cs'),hardwareValidated=False),indent=2)+'\n', encoding='utf-8')
  print('PASS static all-five app; '+('public-registry package execution; physical evidence remains unverified' if a.public_registry else 'bootstrap evidence only, not public registry or hardware evidence'),flush=True)
 if __name__=='__main__':main()
