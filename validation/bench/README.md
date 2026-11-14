@@ -6,11 +6,7 @@ It is a bench host, separate from the Native AOT application proof in
 commands for some model hints, including the 2602B, are source evidence only;
 review device manuals and each driver's provenance before physical execution.
 
-This branch includes unpublished response-limit APIs. Before corrected packages
-are published, the composition workflow supplies isolated candidate feeds and
-records their exact hashes; its bench self-test uses those feeds. A restore of
-public alpha.1 alone cannot compile the updated adapter. Prepare new version pins
-and use the commands below only after the corrected preview is public.
+This host targets the exact coordinated 0.3.0-alpha.1 packages. Check the matching releases for public availability. Candidate composition runs use isolated checksummed feeds. The example and fake self-test use the preserved generic 34410A profile. Qualified HP/Agilent/TDS factories require explicit commissioning and are exercised by the separate package/composition fixtures; this bench host's generic factory list does not register them. A 34410A scripted result does not qualify physical 34410A behavior.
 
 From the repository root, after that release:
 

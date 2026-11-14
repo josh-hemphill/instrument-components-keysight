@@ -1,6 +1,6 @@
 {
   "ApprovedForHardware": false,
-  "DriverId": "keysight.34401a",
+  "DriverId": "keysight.34410a",
   "Resource": "<operator-reviewed VISA address>",
   "TimeoutMs": 5000,
   "Operator": "",
@@ -16,6 +16,6 @@
     }
   ],
   "ExpectedManufacturer": "Keysight Technologies",
-  "ExpectedModel": "34401A",
+  "ExpectedModel": "34410A",
   "ExpectedSerial": null
 }

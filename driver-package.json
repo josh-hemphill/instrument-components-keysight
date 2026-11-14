@@ -3,6 +3,6 @@
   "rustPackage": "instrument-driver-keysight",
   "nugetPackage": "InstrumentComponents.Drivers.Keysight",
   "dotnetProject": "dotnet/InstrumentComponents.Drivers.Keysight/InstrumentComponents.Drivers.Keysight.csproj",
-  "version": "0.2.0-alpha.1",
+  "version": "0.3.0-alpha.1",
   "hardwareValidated": false
 }

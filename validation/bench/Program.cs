@@ -74,9 +74,9 @@ internal static class Bench{
   foreach(var unit in new[]{"999","1","ConfiguredDmm","ConfiguredPower","Unknown","Temperature","volt"}){
    try{Validate(new(){DriverId="fixture",Resource="fixture",Steps=[new(){Operation="DmmMeasureVoltageDc",ExpectedUnit=unit,Minimum=0,Maximum=2}]});throw new InvalidOperationException("Invalid physical unit accepted");}catch(ArgumentException){}
   }
-  var io=new SelfConnector();var registry=new DriverRegistry(Factories(io));var candidate=new DeviceCandidate(new("scpi","self-test"),new());using var h=registry.Open(candidate,new(DriverId:"keysight.34401a"));
-  var identity=h.Invoke(new QueryIdentityRequest()).IntoIdentity();var step=new BenchStep{Operation="DmmMeasureVoltageDc",ExpectedUnit="Volt",Minimum=1.2,Maximum=1.3};Validate(new(){DriverId="keysight.34401a",Resource="fixture",Steps=[step]});
-  if(identity.Model!="34401A"||!Evaluate(step,h.Invoke(Request(step))).Passed)throw new InvalidOperationException("Bench evaluator");h.Close();if(io.Calls!=3)throw new InvalidOperationException("Unexpected bench traffic");Console.WriteLine("PASS bench executable self-test; no VISA session opened");return 0;}
+  var io=new SelfConnector();var registry=new DriverRegistry(Factories(io));var candidate=new DeviceCandidate(new("scpi","self-test"),new());using var h=registry.Open(candidate,new(DriverId:"keysight.34410a"));
+  var identity=h.Invoke(new QueryIdentityRequest()).IntoIdentity();var step=new BenchStep{Operation="DmmMeasureVoltageDc",ExpectedUnit="Volt",Minimum=1.2,Maximum=1.3};Validate(new(){DriverId="keysight.34410a",Resource="fixture",Steps=[step]});
+  if(identity.Model!="34410A"||!Evaluate(step,h.Invoke(Request(step))).Passed)throw new InvalidOperationException("Bench evaluator");h.Close();if(io.Calls!=3)throw new InvalidOperationException("Unexpected bench traffic");Console.WriteLine("PASS bench executable self-test; no VISA session opened");return 0;}
  private static void CheckBoundedConnector(){
   var opener=new BoundedOpener();var connector=new BenchConnector(1000,[],opener);
   using var io=connector.Open(new(new(new("scpi","TCPIP0::192.0.2.1::inst0::INSTR"),new()),ConnectionOwnership.Owned));
@@ -97,7 +97,7 @@ internal static class Bench{
  private sealed class NoIo:IScpiConnector{public IMessageIo Open(DriverOpenContext context)=>throw new InvalidOperationException("Validation must not open IO");}
  private sealed class SelfConnector:IScpiConnector,IMessageIo{
   internal int Calls;public IMessageIo Open(DriverOpenContext context)=>this;public void Write(string message)=>throw new InvalidOperationException("Unexpected write");
-  public string Query(string message)=>++Calls switch{1 when message=="*IDN?"=>"Keysight Technologies,34401A,self-test,fixture",2 when message==":MEAS:VOLT:DC?"=>"1.25",_=>throw new InvalidOperationException("Unexpected query")};public void Dispose()=>Calls++;
+  public string Query(string message)=>++Calls switch{1 when message=="*IDN?"=>"Keysight Technologies,34410A,self-test,fixture",2 when message==":MEAS:VOLT:DC?"=>"1.25",_=>throw new InvalidOperationException("Unexpected query")};public void Dispose()=>Calls++;
  }
 }
 internal sealed class BenchConnector(int timeoutMs,List<BenchTraffic> traffic,ISessionOpener? opener=null):IScpiConnector{
