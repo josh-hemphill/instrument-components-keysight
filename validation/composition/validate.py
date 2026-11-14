@@ -50,7 +50,9 @@ def main():
  if out==ROOT or ROOT in out.parents or out in ROOT.parents:raise ValueError('Separate output directory required')
  if out.exists() and any(out.iterdir()):raise ValueError('Empty output directory required')
  if platform.system() not in ['Linux','Windows'] or platform.machine().lower() not in ['x86_64','amd64']:raise ValueError('Native x64 Linux/Windows required')
- out.mkdir(parents=True,exist_ok=True);feed=prepare(a.sdk_artifacts,out/'feeds');lock=json.loads((ROOT/'composition-lock.json').read_text(encoding='utf-8'));inputs=[]
+ out.mkdir(parents=True,exist_ok=True);feed=prepare(a.sdk_artifacts,out/'feeds');lock=json.loads((ROOT/'composition-lock.json').read_text(encoding='utf-8'))
+ helpers=lock['qualificationHelpers']
+ if helpers['payloadCommit']!=lock['sdkCommit'] or source_sha(ROOT/'qualification_logs.py')!=helpers['loggerSha256']:raise ValueError('Qualification helper/payload/logger lock mismatch');inputs=[]
  if not a.development_inputs:
   provenance=json.loads((a.driver_artifacts/'verified-inputs.json').read_text(encoding='utf-8'))
   if provenance['lockSha256']!=sha(ROOT/'composition-lock.json'):raise ValueError('Input lock mismatch')
@@ -162,6 +164,6 @@ def main():
  with (dotnet/'Program.cs').open('a', encoding='utf-8') as stream:stream.write('\ninternal static class WarningProbe{[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("intentional gate")][System.Diagnostics.CodeAnalysis.RequiresDynamicCode("intentional AOT gate")]internal static void Trigger(){} internal static void Run()=>Trigger();}\n')
  path=dotnet/'Program.cs';path.write_text(path.read_text(encoding='utf-8').replace('await Composition.Run();','WarningProbe.Run();await Composition.Run();'), encoding='utf-8');negativePublish=list(publish);negativePublish[negativePublish.index('-o')+1]=out/'warning-native';run('negative-native-warning',negativePublish,dotnet,negative=True)
  if sha(binary)!=executedBinarySha256:raise ValueError('Negative probe changed executed binary')
- (out/'composition.json').write_text(json.dumps(dict(helperSourceCommit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(), loggerSha256=sha(ROOT/'qualification_logs.py'), mode='public-registry' if a.public_registry else 'local-bootstrap-development' if a.development_inputs else 'pinned-ci-artifact-bootstrap',lockSha256=sha(ROOT/'composition-lock.json'),rid=rid,framework=a.framework,nativeExecuted=True,sha256=executedBinarySha256,referenceArtifactInputs=inputs,consumedPublicPackages=publicPackages,sdkArtifactHashes=feed['packages'],consumerFiles=consumerFiles,negativeProbeProgramSha256=sha(dotnet/'Program.cs'),hardwareValidated=False),indent=2)+'\n', encoding='utf-8')
+ (out/'composition.json').write_text(json.dumps(dict(helperSourceCommit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(), loggerSha256=sha(ROOT/'qualification_logs.py'), mode='public-registry' if a.public_registry else 'local-bootstrap-development' if a.development_inputs else 'pinned-ci-artifact-bootstrap',lockSha256=sha(ROOT/'composition-lock.json'),rid=rid,framework=a.framework,nativeExecuted=True,sha256=executedBinarySha256,referenceArtifactInputs=inputs,consumedPublicPackages=publicPackages,sdkArtifactHashes=feed['packages'],consumerFiles=consumerFiles,negativeProbeProgramSha256=sha(dotnet/'Program.cs'),hardwareValidated=False),indent=2)+'\n', encoding='utf-8')
  print('PASS static all-five app; '+('public-registry package execution; physical evidence remains unverified' if a.public_registry else 'bootstrap evidence only, not public registry or hardware evidence'),flush=True)
 if __name__=='__main__':main()

@@ -112,6 +112,12 @@ jobs:
         run: |
           import os,pathlib,subprocess,sys
           root=pathlib.Path(os.environ['RUNNER_TEMP'])
+          import json,hashlib
+          helpers=json.loads(pathlib.Path('validation/composition/composition-lock.json').read_text(encoding='utf-8'))['qualificationHelpers']
+          for directory,key in [('standards-bootstrap','payloadCommit'),('preview-helper','previewHelperCommit')]:
+              if subprocess.check_output(['git','rev-parse','HEAD'],cwd=directory,text=True).strip()!=helpers[key]:raise ValueError('Preview source/helper commit mismatch')
+          for path in ['preview-helper/tools/qualification_logs.py','validation/composition/qualification_logs.py']:
+              if hashlib.sha256(pathlib.Path(path).read_bytes().replace(b'\r\n',b'\n')).hexdigest()!=helpers['loggerSha256']:raise ValueError('Qualification logger differs from lock')
           args=[sys.executable,'preview-helper/tools/validate-public-preview.py','--source-root',str(pathlib.Path('standards-bootstrap').resolve()),'--output',str(root/'preview-proof'),'--framework',os.environ['PROOF_FRAMEWORK']]
           if os.environ['PUBLIC_REGISTRY']!='true':args+=['--feeds',str(root/'composition-proof/feeds')]
           if os.name!='nt' and os.environ['PROOF_FRAMEWORK']=='net8.0':args+=['--upgrade-from','0.2.0-alpha.1']
