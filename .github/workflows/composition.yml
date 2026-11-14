@@ -97,9 +97,10 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: josh-hemphill/instrument-components
-          ref: 52e8f118952f97cbac68cb180d1cc0e528484623
+          ref: f9ec63cc0b144d29e3650438dd55c2994c142f42
           path: preview-helper
           sparse-checkout: |
+            .gitignore
             tools/validate-public-preview.py
             tools/qualification_logs.py
           sparse-checkout-cone-mode: false
@@ -107,6 +108,7 @@ jobs:
       - name: Execute current getting-started app and representative package-only upgrade
         shell: python
         env:
+          PYTHONDONTWRITEBYTECODE: '1'
           PROOF_FRAMEWORK: ${{ matrix.framework }}
           PUBLIC_REGISTRY: ${{ inputs.public_registry || false }}
         run: |
